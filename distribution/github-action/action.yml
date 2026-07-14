@@ -11,6 +11,12 @@ outputs:
   ci-request-path:
     description: Absolute path to workflow/commit binding metadata that the publisher should attest.
     value: ${{ steps.paths.outputs.ci-request-path }}
+  structure-status:
+    description: Structural profile result from the receipt (`pass` or `fail`).
+    value: ${{ steps.paths.outputs.structure-status }}
+  decision-status:
+    description: Receipt decision status; a reported structural failure remains evidence.
+    value: ${{ steps.paths.outputs.decision-status }}
 runs:
   using: composite
   steps:
@@ -25,8 +31,15 @@ runs:
         VOUCHSPEC_EXPECTED_COMMIT: ${{ github.sha }}
       run: |
         set -euo pipefail
-        test "$(git -C "$GITHUB_WORKSPACE" rev-parse HEAD)" = "$VOUCHSPEC_EXPECTED_COMMIT"
-        test -z "$(git -C "$GITHUB_WORKSPACE" status --porcelain=v1 --untracked-files=all)"
+        actual_commit="$(git -C "$GITHUB_WORKSPACE" rev-parse HEAD)"
+        if [[ "$actual_commit" != "$VOUCHSPEC_EXPECTED_COMMIT" ]]; then
+          echo "VouchSpec requires the checked-out HEAD to equal GITHUB_SHA." >&2
+          exit 1
+        fi
+        if [[ -n "$(git -C "$GITHUB_WORKSPACE" status --porcelain=v1 --untracked-files=all)" ]]; then
+          echo "VouchSpec requires a clean checkout. Run it before build steps that modify the workspace." >&2
+          exit 1
+        fi
     - name: Generate exact Git-bound receipt draft
       shell: bash
       env:
@@ -34,10 +47,21 @@ runs:
       run: |
         set -euo pipefail
         mkdir -p "$RUNNER_TEMP/vouchspec-publisher-ci"
+        set +e
         vouchspec inspect-git "$GITHUB_WORKSPACE/$VOUCHSPEC_SKILL_PATH" \
           --repository-root "$GITHUB_WORKSPACE" \
           --compact \
           --output "$RUNNER_TEMP/vouchspec-publisher-ci/receipt.json"
+        inspection_status=$?
+        set -e
+        case "$inspection_status" in
+          0|2) ;;
+          *)
+            echo "VouchSpec inspection failed operationally with exit code $inspection_status." >&2
+            exit "$inspection_status"
+            ;;
+        esac
+        test -s "$RUNNER_TEMP/vouchspec-publisher-ci/receipt.json"
     - name: Record workflow and receipt binding
       id: paths
       shell: bash
@@ -60,6 +84,7 @@ runs:
 
         root = Path(os.environ["RUNNER_TEMP"]) / "vouchspec-publisher-ci"
         receipt = root / "receipt.json"
+        receipt_value = json.loads(receipt.read_text(encoding="utf-8"))
         statement = {
             "schema_version": "1.0.0",
             "profile": "vouchspec-publisher-ci-request-v1",
@@ -79,4 +104,6 @@ runs:
         with output.open("a", encoding="utf-8", newline="\n") as stream:
             stream.write(f"receipt-path={receipt}\n")
             stream.write(f"ci-request-path={request}\n")
+            stream.write(f"structure-status={receipt_value['format_validation']['status']}\n")
+            stream.write(f"decision-status={receipt_value['decision']['status']}\n")
         PY

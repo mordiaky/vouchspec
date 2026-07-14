@@ -17,10 +17,17 @@ def test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expres
     assert any("rev-parse HEAD" in script and "status --porcelain" in script for script in runs)
     generate_step = action["runs"]["steps"][2]
     assert generate_step["env"]["VOUCHSPEC_SKILL_PATH"] == "${{ inputs.skill-path }}"
+    assert 'case "$inspection_status"' in generate_step["run"]
+    assert "0|2" in generate_step["run"]
+    assert "exit \"$inspection_status\"" in generate_step["run"]
     binding_step = action["runs"]["steps"][3]
     assert binding_step["env"]["VOUCHSPEC_COMMIT"] == "${{ github.sha }}"
     assert binding_step["env"]["VOUCHSPEC_WORKFLOW_REF"] == "${{ github.workflow_ref }}"
     assert "receipt_sha256" in binding_step["run"]
+    assert "structure-status=" in binding_step["run"]
+    assert "decision-status=" in binding_step["run"]
+    assert action["outputs"]["structure-status"]["value"] == "${{ steps.paths.outputs.structure-status }}"
+    assert action["outputs"]["decision-status"]["value"] == "${{ steps.paths.outputs.decision-status }}"
     assert "PUBLISHER_CI_ATTESTED" not in action_path.read_text(encoding="utf-8")
 
 
