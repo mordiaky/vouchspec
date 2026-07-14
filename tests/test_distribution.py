@@ -15,6 +15,15 @@ def test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expres
     assert all("${{ inputs." not in script and "${{ github." not in script for script in runs)
     assert any("inspect-git" in script and "--repository-root" in script for script in runs)
     assert any("rev-parse HEAD" in script and "status --porcelain" in script for script in runs)
+    install_step = action["runs"]["steps"][0]
+    assert "--require-hashes" in install_step["run"]
+    assert "--only-binary=:all:" in install_step["run"]
+    assert "requirements-linux-x86_64-py311.lock" in install_step["run"]
+    assert "pip install \"$VOUCHSPEC_ACTION_PATH/../..\"" not in install_step["run"]
+    lock = (ROOT / "distribution" / "github-action" / "requirements-linux-x86_64-py311.lock").read_text(
+        encoding="utf-8"
+    )
+    assert "--hash=sha256:" in lock
     generate_step = action["runs"]["steps"][2]
     assert generate_step["env"]["VOUCHSPEC_SKILL_PATH"] == "${{ inputs.skill-path }}"
     assert 'case "$inspection_status"' in generate_step["run"]
@@ -37,6 +46,8 @@ def test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intak
     assert discovery["stage"] == "A_PUBLIC_ARTIFACT_INDEX"
     assert discovery["trust"]["root_keyid"] == "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4"
     assert discovery["mcp"]["transport"] == "stdio"
+    assert discovery["publisher_ci_action"].endswith("@47a43ae00cf9ca9eb6c401285a8e4bb673db6ebd")
+    assert discovery["publisher_ci_demo"] == "https://github.com/mordiaky/vouchspec-demo"
     assert set(discovery["mcp"]["tools"]) == {
         "search_receipts",
         "get_receipt",

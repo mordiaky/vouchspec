@@ -29,7 +29,8 @@
       "get_price_quote"
     ]
   },
-  "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@4404b7a9a2d3dc45b621ea694d2ca7ad666b9898",
+  "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@47a43ae00cf9ca9eb6c401285a8e4bb673db6ebd",
+  "publisher_ci_demo": "https://github.com/mordiaky/vouchspec-demo",
   "evidence_labels": [
     "DIGEST_PINNED",
     "STRUCTURE_VALIDATED",
@@ -46,7 +47,7 @@
   "pricing": {
     "catalog_search_usd": "0.00",
     "receipt_retrieval_usd": "0.00",
-    "fresh_public_static_validation_usd": "0.10",
+    "fresh_public_static_validation_usd": "49.00",
     "fresh_validation_availability": "stage_b_not_orderable",
     "settlement_available": false
   }

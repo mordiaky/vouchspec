@@ -14,6 +14,7 @@ from .api import create_server
 from .catalog_api import create_catalog_server
 from .catalog_builder import build_catalog_drafts, finalize_catalog_lifecycle, sign_catalog_drafts
 from .catalog_mcp import run_catalog_mcp_server
+from .commerce import build_fresh_validation_quote, load_strict_commerce_json
 from .errors import CapabilityProofError
 from .lifecycle import LifecycleSequenceStore, evaluate_receipt_lifecycle_with_state, sign_lifecycle_feed
 from .mcp_server import run_mcp_server
@@ -51,6 +52,13 @@ def _build_parser() -> argparse.ArgumentParser:
     inspect_git_parser.add_argument("--expires-in-days", type=int, default=7)
     inspect_git_parser.add_argument("--output", type=Path)
     inspect_git_parser.add_argument("--compact", action="store_true")
+
+    quote_parser = subparsers.add_parser(
+        "quote-fresh-validation", help="validate a constrained Stage B request and print a non-orderable quote preview"
+    )
+    quote_parser.add_argument("request", type=Path, help="JSON request file")
+    quote_parser.add_argument("--quote-id", help="deterministic q_<24 hex> identifier for testing")
+    quote_parser.add_argument("--generated-at", help="timezone-aware ISO 8601 timestamp for reproducible output")
 
     serve_parser = subparsers.add_parser("serve", help="run the root-confined loopback JSON API")
     serve_parser.add_argument("--allow-root", type=Path, required=True)
@@ -180,6 +188,15 @@ def main(argv: list[str] | None = None) -> int:
             )
             _write_receipt(receipt, args.output, args.compact, args.path)
             return 0 if receipt["format_validation"]["status"] == "pass" else 2
+        if args.command == "quote-fresh-validation":
+            request = load_strict_commerce_json(args.request.read_text(encoding="utf-8"))
+            generated_at = None
+            if args.generated_at:
+                normalized = args.generated_at[:-1] + "+00:00" if args.generated_at.endswith("Z") else args.generated_at
+                generated_at = datetime.fromisoformat(normalized)
+            quote = build_fresh_validation_quote(request, generated_at=generated_at, quote_id=args.quote_id)
+            print(json.dumps(quote, sort_keys=True, separators=(",", ":")))
+            return 0
         if args.command == "serve":
             server = create_server(args.allow_root, args.port)
             host, port = server.server_address

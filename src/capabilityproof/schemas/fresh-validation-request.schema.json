@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vouchspec:schema:fresh-validation-request:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "operation", "source", "profile", "max_price", "delivery_id"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "operation": {"const": "fresh_public_static_validation"},
+    "profile": {"const": "vouchspec-public-static-v1"},
+    "delivery_id": {"type": "string", "pattern": "^[A-Za-z0-9_-]{8,64}$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["host", "owner", "repository", "commit", "skill_path"],
+      "properties": {
+        "host": {"const": "github.com"},
+        "owner": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"},
+        "repository": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,99}$"},
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "skill_path": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1024,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,99}(?:/[A-Za-z0-9][A-Za-z0-9._-]{0,99}){0,31}$"
+        }
+      }
+    },
+    "max_price": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currency", "amount_minor"],
+      "properties": {
+        "currency": {"const": "usd"},
+        "amount_minor": {"type": "integer", "minimum": 0, "maximum": 1000000}
+      }
+    }
+  }
+}

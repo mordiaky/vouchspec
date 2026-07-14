@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vouchspec:schema:fresh-validation-quote:1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "service", "quote_id", "operation", "request_digest", "currency",
+    "amount_minor", "amount", "generated_at", "expires_at", "quote_status", "availability",
+    "orderable", "settlement_available", "payment_options", "deliverable", "hard_limits",
+    "refund_conditions", "non_refund_condition", "live_gates", "quote_digest"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "service": {"const": "VouchSpec"},
+    "quote_id": {"type": "string", "pattern": "^q_[0-9a-f]{24}$"},
+    "operation": {"const": "fresh_public_static_validation"},
+    "request_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "currency": {"const": "usd"},
+    "amount_minor": {"const": 4900},
+    "amount": {"const": "49.00"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "expires_at": {"type": "string", "format": "date-time"},
+    "quote_status": {"enum": ["preview_account_and_worker_not_live", "declined_max_price"]},
+    "availability": {"const": "stage_b_worker_and_payment_activation_required"},
+    "orderable": {"const": false},
+    "settlement_available": {"const": false},
+    "payment_options": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["provider", "status"],
+          "properties": {
+            "provider": {"const": "stripe_checkout"},
+            "status": {"const": "account_activation_required"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["provider", "status"],
+          "properties": {
+            "provider": {"const": "x402"},
+            "status": {"const": "secondary_not_enabled"}
+          }
+        }
+      ],
+      "items": false
+    },
+    "deliverable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "source", "profile", "delivery_id", "execution", "evidence_not_promised"],
+      "properties": {
+        "type": {"const": "signed_exact_version_static_receipt"},
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["host", "owner", "repository", "commit", "skill_path"],
+          "properties": {
+            "host": {"const": "github.com"},
+            "owner": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"},
+            "repository": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]{0,99}$"},
+            "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+            "skill_path": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1024,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,99}(?:/[A-Za-z0-9][A-Za-z0-9._-]{0,99}){0,31}$"
+            }
+          }
+        },
+        "profile": {"const": "vouchspec-public-static-v1"},
+        "delivery_id": {"type": "string", "pattern": "^[A-Za-z0-9_-]{8,64}$"},
+        "execution": {"const": "artifact_content_not_executed"},
+        "evidence_not_promised": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "prefixItems": [
+            {"const": "universal_safety"},
+            {"const": "malware_free"},
+            {"const": "runtime_behavior"},
+            {"const": "publisher_identity"}
+          ],
+          "items": false
+        }
+      }
+    },
+    "hard_limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_total_bytes", "files", "individual_file_bytes", "directory_depth", "worker_wall_seconds"],
+      "properties": {
+        "artifact_total_bytes": {"const": 25000000},
+        "files": {"const": 1000},
+        "individual_file_bytes": {"const": 2000000},
+        "directory_depth": {"const": 32},
+        "worker_wall_seconds": {"const": 60}
+      }
+    },
+    "refund_conditions": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "prefixItems": [
+        {"const": "duplicate_charge"},
+        {"const": "payment_settled_but_job_never_started_due_to_vouchspec_failure"},
+        {"const": "job_failed_before_a_signed_receipt_was_produced"},
+        {"const": "unsupported_request_accepted_due_to_vouchspec_validation_defect"},
+        {"const": "invalid_signature_or_wrong_source_commit_path_or_digest_after_one_automatic_rerun"}
+      ],
+      "items": false
+    },
+    "non_refund_condition": {"const": "an accurately reported structural or static finding is the purchased result"},
+    "live_gates": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {"const": "allowlisted immutable fetcher and isolated no-egress worker"},
+        {"const": "separate constrained signing service"},
+        {"const": "activated payment account and verified webhook secret"},
+        {"const": "idempotent order store and provider reconciliation"}
+      ],
+      "items": false
+    },
+    "quote_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}
