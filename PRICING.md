@@ -1,12 +1,11 @@
-# Pricing hypotheses
+# Pricing experiments
 
-| Product | Price | Status |
+| Product | Full-price test | Evidence status |
 |---|---:|---|
-| Basic search / public metadata | Free | Planned |
-| Existing cached receipt | USD $0.01 | Hypothesis; not enabled |
-| Fresh publisher Level 1–3 release receipt | USD $19 | First paid-offer hypothesis |
-| Small-team policy pilot, up to five receipts | USD $99 | Secondary hypothesis |
-| Dynamic sandbox or continuous monitoring | Not offered | Deferred until cost/safety measured |
+| Basic public metadata / cached sample | Free | Local sample exists; no public service |
+| Portable public release receipt | USD $19 one-time | Transaction-untested; generic scan framing rejected |
+| Policy-ready team pack, up to five receipts | USD $99 one-time | Transaction-untested; blocked on authorized/private intake |
+| Dynamic sandbox or continuous monitoring | Not offered | Deferred until cost, safety, and demand are measured |
 
-Payment never changes evidence-based ranking or finding severity.
-
+Only settled, non-refunded purchases by unaffiliated customers count as demand. Payment never
+changes evidence ranking or finding severity.

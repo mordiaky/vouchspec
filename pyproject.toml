@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.46.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capabilityproof"
+version = "0.1.0"
+description = "Exact-version, machine-readable evidence for Agent Skills"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "CapabilityProof" }]
+dependencies = [
+  "mcp==1.28.1",
+  "PyYAML==6.0.3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "jsonschema==4.26.0",
+  "pytest==9.0.3",
+]
+
+[project.scripts]
+capabilityproof = "capabilityproof.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+capabilityproof = ["schemas/*.json"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]

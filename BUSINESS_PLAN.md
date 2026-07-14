@@ -2,117 +2,100 @@
 
 ## Executive summary
 
-CapabilityProof is an independent, machine-readable evidence layer that agents consult
-before acquiring or using an external Agent Skill. The initial scope is intentionally
-limited to exact versions of directories containing `SKILL.md`.
+`CapabilityProof` is an internal codename for an independent, registry-neutral evidence
+layer that agents and teams can consult before acquiring or activating an Agent Skill. The
+initial artifact scope is one exact directory containing `SKILL.md`.
 
-## Target customer
+The commercial wedge is a **portable exact-byte policy receipt**, not another scanner,
+directory, score, badge, or manual security service.
 
-Initial customers are Agent Skill publishers and small teams that operate coding or
-document agents and need a reproducible installation gate. Autonomous agents are an API
-interface and future per-call buyer, not the only early revenue source.
+## Customer and problem
 
-## Problem
+The first hypothesized buyers are Agent Skill publishers and small teams operating coding
+or document agents. Discovery and format validation alone do not establish exact-byte
+identity, source provenance, inferred requirements, static risk evidence, compatibility,
+runtime behavior, or task performance. Current primary-source research supports the
+security/provenance problem but supplies no direct willingness-to-pay evidence.
 
-Discovery and format validation do not establish provenance, requested permissions,
-static risk indicators, compatibility, observed behavior, or task performance. Operators
-need evidence tied to exact bytes rather than promotional descriptions.
+## Competition and differentiation
 
-## Existing alternatives
+Official validation, GitHub release workflows, Cisco, Snyk, NVIDIA SkillSpector, skills.sh,
+Tessl, SkillProof, ClawHub, Socket, GitHub attestations, and OpenSSF provide strong free or
+bundled substitutes. Evidence and pricing are recorded in
+`research/market-and-competitor-evidence.md` and
+`research/standards-and-name-evidence.md`.
 
-Official registries, specification validators, security scanners, and internal manual
-review are upstream or partial alternatives. Current facts and prices are recorded in
-`research/market-evidence.md`; no competitive claim is considered verified until cited there.
+The testable gap is a stable, independent, registry-neutral record containing a complete
+file inventory, exact digests, source/blob evidence, declared-versus-inferred requirements,
+deterministic rule findings, coverage, methodology/policy versions, limitations, expiry,
+and machine policy semantics.
 
-## Initial offer
+## Current product evidence
 
-Produce an exact-version Capability Receipt containing structural validation, SHA-256
-provenance, normalized metadata, referenced-file closure, declared/runtime-relevant
-requirements inferred from text, and transparent static findings. The initial product
-does **not** execute the artifact or guarantee safety.
+The local v0.1 prototype accepts a controlled public or synthetic directory. It creates an
+immutable in-memory byte snapshot, validates selected Agent Skills rules, closes local
+references, extracts requirements/dependencies, runs transparent static rules, and emits a
+strict-schema receipt. Git mode compares every file with its raw blob at the recorded
+commit. It never fetches or executes artifact content.
+
+The receipt uses a documented deterministic JSON profile, not RFC 8785 JCS. It is explicitly
+digest-only and unauthenticated. The loopback HTTP, MCP stdio, CI action, and verify-before-
+install skill are local developer integrations only.
 
 ## Deliverables and exclusions
 
-Deliverables: canonical JSON receipt, concise human summary, machine-readable findings,
-and a reproducible command/API call. Excluded from the first offer: sandbox execution,
-malware guarantees, legal advice, runtime certification, and task-performance benchmarking.
+Proposed deliverables are a JSON receipt, short human summary, reproducible invocation,
+and exact policy decision inputs. Exclusions: sandbox execution, malware guarantees,
+publisher identity, legal advice, penetration testing, runtime certification, task/trigger
+evaluation, custom consulting, calls, and unlimited support.
 
-## Provisional pricing hypothesis
+## Pricing experiments, not claims
 
-- Free: basic search and cached public metadata.
-- USD $19 one-time: publisher-funded fresh Level 1–3 release receipt.
-- USD $99 one-time pilot: small-team policy pack plus up to five fresh Level 1–3 receipts.
+- USD $19 one-time: retained only as a full-price experiment for a portable public release
+  receipt. Desk research rejected a generic paid scan as the default offer.
+- USD $99 one-time: retained only as a full-price policy-ready small-team experiment after
+  private/authorized external intake is safe.
 
-Pricing is a test hypothesis, not evidence of market willingness to pay.
+No price is validated. Only settled purchases by unaffiliated buyers count.
 
-## Acquisition
+## Acquisition experiment
 
-Start with a public, truthful sample receipt and a free verify-before-install skill.
-Publisher CI and targeted permission-based outreach follow only after the sample and
-fulfillment path pass QA. No bulk outreach or pay-to-rank.
+After a distinctive public name and external-safe delivery path exist, expose a truthful
+self-service page and run capped qualified-visitor tests:
 
-## Sales and fulfillment
+- Publisher receipt succeeds at 2 or more full-price USD $19 purchases from 25 qualified
+  publisher page viewers. Zero purchases at 25 rejects that offer; fewer than 25 views are
+  inconclusive.
+- Team policy pack succeeds at 1 or more full-price USD $99 purchase from 15 qualified team
+  page viewers. Zero at 15 rejects that offer; fewer than 15 views are inconclusive.
 
-A customer submits a public repository URL or archive plus desired evidence level. The
-system resolves immutable bytes, quotes the exact scope/price, produces the receipt,
-runs QA, and returns JSON. Any unsupported or unsafe-to-process input is rejected without
-execution.
+Clicks, replies, waitlists, GitHub stars, security-study prevalence, and vendor launches do
+not count as payment evidence.
 
-## Tools and direct costs
+## Fulfillment boundary
 
-The evidence MVP uses local Python and Git with no paid dependency. Direct cost is
-currently USD $0 plus unmetered host/model time; paid infrastructure is deferred until
-external usage requires it.
+Current fulfillment is an audited local proof for controlled public/synthetic artifacts,
+not a customer service. An external service must accept one bounded immutable raw ZIP byte
+stream, parse it in a killable isolated no-egress worker, authenticate and authorize every
+operation, sign JCS payloads with an isolated key, and support key/receipt invalidation.
+Remote paths, URLs, repositories, base64 artifacts, and mutable fetch targets remain banned.
 
-## Contribution margin estimate
+## Economics and compliance
 
-Unknown until measured. The working hypothesis is positive margin for cached Level 1–3
-receipts because validation is deterministic and non-executing. Time and compute will be
-measured before accepting payment.
+Spend is USD $0 and measured revenue is USD $0. Contribution margin is unknown until a real
+delivery occurs. No customer, payment, contract, account, recurring service, or financial
+rail exists. Only public/synthetic inputs have been used; artifact code was never executed;
+the sample receipt redistributes no artifact bytes and makes no license interpretation.
 
-## Compliance and data handling
+## Stop and pivot rules
 
-Only public artifacts or customer-authorized inputs are accepted. Store minimal request
-metadata. Never execute submitted code on the host, never collect credentials, respect
-licenses, bind claims to digests, publish limitations, and separate sponsorship.
-
-## Validation evidence
-
-Owner-provided business thesis is recorded as unsourced strategic input. Current external
-evidence belongs in `research/`; executable product evidence belongs in `receipts/` and
-test logs.
-
-## Assumptions
-
-See `ASSUMPTIONS.md`.
-
-## 14-day execution plan
-
-1. Produce and verify the real-artifact evidence MVP.
-2. Publish the schema, methodology, sample receipt, and free local verifier.
-3. Identify ten relevant publishers/teams and test the exact paid-release offer.
-4. Measure qualified engagement and willingness to submit an artifact or pay.
-
-## 30-day operating plan
-
-Iterate only from observed use: improve parsers, add CI, add safe fetching, and add
-payment after a real buyer path exists. Defer sandboxing and broad registries until the
-Level 1–3 wedge converts.
-
-## Pivot criteria
-
-Modify or stop if 25 qualified publisher/team contacts produce no artifact submissions or
-specific product feedback, 50 produce no paid-pilot signal, the evidence duplicates a
-free incumbent without a defensible workflow advantage, or safe fulfillment cannot fit
-the budget.
-
-## First three-customer strategy
-
-Sell one narrow release receipt to skill publishers and one small-team policy pilot to
-agent operators. Target three unrelated buyers; never simulate revenue.
+Reject the respective offer at 0/25 qualified publisher views or 0/15 qualified team views.
+Stop external launch if any P0/P1 security finding remains, safe fulfillment cannot fit the
+budget, or the portable-policy wedge is indistinguishable from a free incumbent workflow.
 
 ## Automation path
 
-Local deterministic inspector → hosted queued validator → publisher CI → cached search →
-restricted sandbox observation → performance evaluation → continuous monitoring.
-
+Local deterministic evidence -> immutable upload intake -> isolated worker -> signed receipt
+verification -> publisher CI -> policy consumption -> cached public search. Sandboxed runtime
+observation, task evaluation, continuous monitoring, ARD/MCP Registry adapters, and x402 are
+deferred until demand and safety evidence justify them.

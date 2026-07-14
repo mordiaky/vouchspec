@@ -1,17 +1,57 @@
 # Decision log
 
-## 2026-07-13 — Select CapabilityProof and narrow the first scope
+## 2026-07-13 - Select the Agent Skills exact-version wedge
 
-- **Decision:** Build exact-version evidence for Agent Skills containing `SKILL.md`.
-- **Alternatives considered:** Broad AI artifact directory; MCP-first scanner; marketplace.
-- **Evidence:** Owner-selected thesis; external evidence review is in progress.
-- **Reason:** A bounded artifact format permits a zero-spend, deterministic proof quickly.
-- **Constraint:** Do not pivot back to a conventional manual service business.
+- **Decision:** Build machine-readable evidence for one exact Agent Skill directory containing `SKILL.md`.
+- **Reason:** The owner selected a machine-native evidence business; a bounded artifact permits a zero-spend proof.
+- **Constraint:** Do not pivot to a conventional manual service.
 
-## 2026-07-13 — First slice is non-executing Level 1–3 analysis
+## 2026-07-13 - First slice is non-executing Level 1-3 evidence
 
-- **Decision:** Parse bytes, hash the artifact, validate structure, extract requirements,
-  and emit static findings without importing or running artifact content.
-- **Reason:** This produces evidence without violating the host-isolation boundary.
-- **Deferred:** Sandboxing, trigger/task evaluation, payment, monitoring, and broad discovery.
+- **Decision:** Snapshot and hash bytes, validate structure, close references, extract
+  requirements/dependencies, and emit transparent static findings without importing,
+  rendering, fetching, or executing artifact content.
+- **Deferred:** Sandboxing, trigger/task evaluation, monitoring, broad discovery, and live payment.
 
+## 2026-07-13 - Position as a portable policy receipt
+
+- **Decision:** Test an independent, registry-neutral exact-byte policy record rather than
+  another scanner, badge, catalog, or single vendor score.
+- **Evidence:** Strong free substitutes and no direct willingness-to-pay evidence in the
+  market/competitor memo.
+
+## 2026-07-13 - Prices remain transaction experiments
+
+- **Decision:** Reject USD $19 as a validated generic-scan offer; retain USD $19 public
+  receipt and USD $99 policy pack only as full-price experiments with explicit 2/25 and 1/15
+  success gates.
+
+## 2026-07-13 - Keep CapabilityProof as an internal codename
+
+- **Decision:** Choose a distinctive name before any public package, domain, badge, namespace,
+  or marketplace listing.
+- **Evidence:** SkillProof occupies the same Agent Skills category and the exact compound has
+  prior agent-identity use. This is practical conflict evidence, not legal clearance.
+
+## 2026-07-13 - Local proof is not an external service
+
+- **Decision:** Permit only controlled public/synthetic local artifacts in v0.1. Loopback HTTP,
+  MCP stdio, CI, and the sample receipt are developer evidence.
+- **Launch block:** No public/paid artifact intake until raw immutable ZIP capture, isolated
+  no-egress workers, auth/TLS/tenant controls, RFC 8785 JCS, isolated signing/authenticated
+  verification key, rotation/revocation/invalidation, and hostile regression evidence pass.
+
+## 2026-07-13 - Close independent audit findings before accepting E-001
+
+- **Decision:** Treat the Windows junction escape as P0 and the stdout, remote-query,
+  parser-bound, MCP isolation, CI interpolation, and schema/claim defects as release blockers.
+- **Result:** Reparse/junction and hard-link rejection, parser restrictions, derived-output
+  caps, MCP structured-only artifact output, deterministic UTF-8 output, strict schema,
+  digest-only disclosure, raw Git blob binding, and corresponding regressions now pass.
+
+## 2026-07-13 - Do not grant a public code license autonomously
+
+- **Decision:** Remove the draft Apache-2.0 declarations from the internal package and
+  bundled skill. No public license, package publication, or distribution is authorized.
+- **Reason:** Selecting distribution terms is a material legal commitment reserved for
+  owner approval by the operating charter.

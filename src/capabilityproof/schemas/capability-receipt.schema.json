@@ -1,0 +1,449 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:capabilityproof:schema:capability-receipt:1.0.0",
+  "title": "CapabilityProof local Agent Skill evidence receipt",
+  "description": "Digest-only, unauthenticated evidence for one local Agent Skill directory snapshot; not a safety certification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "schema_uri",
+    "schema_sha256",
+    "receipt_profile",
+    "integrity_assurance",
+    "artifact",
+    "provenance",
+    "format_validation",
+    "license_evidence",
+    "static_analysis",
+    "evidence_levels",
+    "decision",
+    "validity",
+    "policy",
+    "methodology",
+    "limitations",
+    "receipt_id",
+    "integrity"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "schema_uri": { "const": "urn:capabilityproof:schema:capability-receipt:1.0.0" },
+    "schema_sha256": { "$ref": "#/$defs/sha256" },
+    "receipt_profile": { "const": "capabilityproof-local-agent-skill-receipt-v0.1.0" },
+    "integrity_assurance": { "const": "digest-only-unauthenticated" },
+    "receipt_id": { "type": "string", "pattern": "^cpr_[0-9a-f]{24}$" },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "root_directory", "claims_untrusted", "digest", "file_count", "total_bytes", "files", "scope"],
+      "properties": {
+        "type": { "const": "agent-skill" },
+        "root_directory": { "type": "string", "minLength": 1, "maxLength": 255 },
+        "claims_untrusted": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["notice", "name", "description", "compatibility", "allowed_tools"],
+          "properties": {
+            "notice": { "type": "string", "minLength": 1, "maxLength": 200 },
+            "name": { "type": ["string", "null"], "maxLength": 64 },
+            "description": { "type": ["string", "null"], "maxLength": 1024 },
+            "compatibility": { "type": ["string", "null"], "maxLength": 500 },
+            "allowed_tools": { "type": ["string", "null"], "maxLength": 1000 }
+          }
+        },
+        "digest": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["algorithm", "sha256"],
+          "properties": {
+            "algorithm": { "const": "capabilityproof-directory-sha256-v1" },
+            "sha256": { "$ref": "#/$defs/sha256" }
+          }
+        },
+        "file_count": { "type": "integer", "minimum": 0, "maximum": 1000 },
+        "total_bytes": { "type": "integer", "minimum": 0, "maximum": 25000000 },
+        "files": {
+          "type": "array",
+          "maxItems": 1000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "size", "sha256"],
+            "properties": {
+              "path": { "$ref": "#/$defs/path" },
+              "size": { "type": "integer", "minimum": 0, "maximum": 2000000 },
+              "sha256": { "$ref": "#/$defs/sha256" }
+            }
+          }
+        },
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "capture_mode",
+            "analysis_snapshot",
+            "capture_consistency",
+            "capture_started_at",
+            "capture_completed_at",
+            "capture_timestamp_source",
+            "excluded_paths",
+            "symlink_policy",
+            "reparse_point_policy",
+            "hardlink_policy",
+            "special_file_policy"
+          ],
+          "properties": {
+            "capture_mode": { "const": "non-atomic-local-directory-snapshot" },
+            "analysis_snapshot": { "const": "immutable-in-memory-file-bytes" },
+            "capture_consistency": { "type": "string", "minLength": 1, "maxLength": 200 },
+            "capture_started_at": { "type": "string", "format": "date-time" },
+            "capture_completed_at": { "type": "string", "format": "date-time" },
+            "capture_timestamp_source": { "enum": ["system-clock", "caller-supplied-reproducibility-override"] },
+            "excluded_paths": { "type": "array", "maxItems": 20, "items": { "$ref": "#/$defs/path" } },
+            "symlink_policy": { "const": "rejected" },
+            "reparse_point_policy": { "const": "rejected" },
+            "hardlink_policy": { "const": "rejected" },
+            "special_file_policy": { "const": "rejected" }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["content_digest_pinned", "source_repository", "source_commit", "artifact_path", "source_verification", "publisher_identity"],
+      "properties": {
+        "content_digest_pinned": { "const": true },
+        "source_repository": { "type": "string", "minLength": 1, "maxLength": 2048 },
+        "source_commit": { "oneOf": [{ "const": "not-checked" }, { "type": "string", "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$" }] },
+        "artifact_path": { "anyOf": [{ "const": "not-checked" }, { "$ref": "#/$defs/path" }] },
+        "source_verification": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["status"],
+              "properties": { "status": { "const": "not-performed" } }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["status", "method"],
+              "properties": {
+                "status": { "const": "completed" },
+                "method": { "const": "exact-local-git-blob-match-v1" }
+              }
+            }
+          ]
+        },
+        "publisher_identity": { "const": "not-checked" }
+      }
+    },
+    "format_validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["standard", "standard_url", "status", "findings", "local_references", "external_references_untrusted"],
+      "properties": {
+        "standard": { "const": "Agent Skills" },
+        "standard_url": { "const": "https://agentskills.io/specification" },
+        "status": { "enum": ["pass", "fail"] },
+        "findings": { "type": "array", "maxItems": 500, "items": { "$ref": "#/$defs/structuralFinding" } },
+        "local_references": { "type": "array", "maxItems": 1000, "items": { "$ref": "#/$defs/localReference" } },
+        "external_references_untrusted": { "type": "array", "maxItems": 1000, "items": { "type": "string", "maxLength": 500 } }
+      }
+    },
+    "license_evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["declared_claim_untrusted", "license_files", "interpretation"],
+      "properties": {
+        "declared_claim_untrusted": { "type": ["string", "null"], "maxLength": 500 },
+        "license_files": { "type": "array", "maxItems": 100, "items": { "$ref": "#/$defs/path" } },
+        "interpretation": { "const": "presence or declaration only; legal terms were not interpreted" }
+      }
+    },
+    "static_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "engine", "summary", "findings", "skipped_text_files", "coverage", "inferred_requirements", "dependencies", "manifest_parse_failures", "script_languages", "referenced_hosts"],
+      "properties": {
+        "status": { "const": "completed" },
+        "engine": { "const": "capabilityproof-static-v0.1.0" },
+        "summary": { "$ref": "#/$defs/staticSummary" },
+        "findings": { "type": "array", "maxItems": 500, "items": { "$ref": "#/$defs/staticFinding" } },
+        "skipped_text_files": { "type": "array", "maxItems": 1000, "items": { "$ref": "#/$defs/skippedFile" } },
+        "coverage": { "$ref": "#/$defs/coverage" },
+        "inferred_requirements": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["filesystem_read", "filesystem_write", "process_spawn", "network", "secrets"],
+          "properties": {
+            "filesystem_read": { "$ref": "#/$defs/requirementSignal" },
+            "filesystem_write": { "$ref": "#/$defs/requirementSignal" },
+            "process_spawn": { "$ref": "#/$defs/requirementSignal" },
+            "network": { "$ref": "#/$defs/requirementSignal" },
+            "secrets": { "$ref": "#/$defs/requirementSignal" }
+          }
+        },
+        "dependencies": { "type": "array", "maxItems": 1000, "items": { "$ref": "#/$defs/dependency" } },
+        "manifest_parse_failures": { "type": "array", "maxItems": 1000, "items": { "$ref": "#/$defs/manifestParseFailure" } },
+        "script_languages": { "type": "array", "maxItems": 1000, "items": { "type": "string", "minLength": 1, "maxLength": 100 } },
+        "referenced_hosts": { "type": "array", "maxItems": 500, "items": { "type": "string", "minLength": 1, "maxLength": 253 } }
+      }
+    },
+    "evidence_levels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["highest_contiguous_level", "completed_checks", "levels"],
+      "properties": {
+        "highest_contiguous_level": { "type": "integer", "minimum": 0, "maximum": 3 },
+        "completed_checks": { "type": "array", "minItems": 3, "maxItems": 4, "items": { "type": "integer", "minimum": 0, "maximum": 3 } },
+        "levels": { "type": "array", "minItems": 7, "maxItems": 7, "items": { "$ref": "#/$defs/evidenceLevel" } }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "meaning"],
+      "properties": {
+        "status": { "enum": ["reject-structural", "review-required", "eligible-for-policy-evaluation"] },
+        "meaning": { "type": "string", "minLength": 1, "maxLength": 300 }
+      }
+    },
+    "validity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generated_at", "expires_at", "invalidation"],
+      "properties": {
+        "generated_at": { "type": "string", "format": "date-time" },
+        "expires_at": { "type": "string", "format": "date-time" },
+        "invalidation": { "type": "string", "minLength": 1, "maxLength": 200 }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile", "limits", "profile_sha256"],
+      "properties": {
+        "profile": { "const": "capabilityproof-local-static-policy-v0.1.0" },
+        "limits": { "$ref": "#/$defs/scanLimits" },
+        "profile_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "methodology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name", "version", "structural_profile", "static_ruleset", "static_ruleset_sha256",
+        "reference_dependency_lock_sha256", "runtime", "artifact_execution", "network_observation",
+        "publisher_verification", "task_evaluation", "profile_sha256"
+      ],
+      "properties": {
+        "name": { "const": "CapabilityProof non-executing Agent Skill inspection" },
+        "version": { "const": "0.1.0" },
+        "structural_profile": { "const": "agent-skills-structural-v0.1.0" },
+        "static_ruleset": { "const": "capabilityproof-static-v0.1.0" },
+        "static_ruleset_sha256": { "$ref": "#/$defs/sha256" },
+        "reference_dependency_lock_sha256": { "$ref": "#/$defs/sha256" },
+        "runtime": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["implementation", "python", "pyyaml", "mcp"],
+          "properties": {
+            "implementation": { "type": "string", "minLength": 1, "maxLength": 50 },
+            "python": { "type": "string", "minLength": 1, "maxLength": 50 },
+            "pyyaml": { "type": "string", "minLength": 1, "maxLength": 50 },
+            "mcp": { "type": "string", "minLength": 1, "maxLength": 50 }
+          }
+        },
+        "artifact_execution": { "const": "not-performed" },
+        "network_observation": { "const": "not-performed" },
+        "publisher_verification": { "const": "not-performed" },
+        "task_evaluation": { "const": "not-performed" },
+        "profile_sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "limitations": { "type": "array", "minItems": 1, "maxItems": 30, "items": { "type": "string", "minLength": 1, "maxLength": 500 } },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profile", "deterministic_json_profile", "evidence_sha256", "signature", "replacement_warning"],
+      "properties": {
+        "profile": { "const": "capabilityproof-digest-only-v1" },
+        "deterministic_json_profile": { "type": "string", "pattern": "^capabilityproof-sorted-json-v1:.*not RFC 8785 JCS$", "maxLength": 300 },
+        "evidence_sha256": { "$ref": "#/$defs/sha256" },
+        "signature": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "reason"],
+          "properties": {
+            "status": { "const": "not-configured" },
+            "reason": { "type": "string", "minLength": 1, "maxLength": 200 }
+          }
+        },
+        "replacement_warning": { "type": "string", "minLength": 1, "maxLength": 300 }
+      }
+    }
+  },
+  "$defs": {
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "path": { "type": "string", "minLength": 1, "maxLength": 1024 },
+    "structuralFinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "severity", "message"],
+      "properties": {
+        "rule_id": { "type": "string", "pattern": "^AS[0-9]{3}$" },
+        "severity": { "enum": ["error", "warning"] },
+        "message": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "line": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "localReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "line", "kind", "status"],
+      "properties": {
+        "path": { "$ref": "#/$defs/path" },
+        "line": { "type": "integer", "minimum": 1 },
+        "kind": { "enum": ["markdown-link", "example-link", "resource-candidate"] },
+        "status": { "enum": ["present", "missing", "outside-root", "unresolved-example", "unresolved-candidate"] }
+      }
+    },
+    "staticSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["critical", "high", "medium", "low", "total"],
+      "properties": {
+        "critical": { "type": "integer", "minimum": 0, "maximum": 500 },
+        "high": { "type": "integer", "minimum": 0, "maximum": 500 },
+        "medium": { "type": "integer", "minimum": 0, "maximum": 500 },
+        "low": { "type": "integer", "minimum": 0, "maximum": 500 },
+        "total": { "type": "integer", "minimum": 0, "maximum": 500 }
+      }
+    },
+    "staticFinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rule_id", "category", "severity", "message", "path", "line", "evidence_excerpt", "evidence_type"],
+      "properties": {
+        "rule_id": { "type": "string", "pattern": "^CP[0-9]{3}$" },
+        "category": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "severity": { "enum": ["critical", "high", "medium", "low", "info"] },
+        "message": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "path": { "$ref": "#/$defs/path" },
+        "line": { "type": "integer", "minimum": 1 },
+        "evidence_excerpt": { "type": "string", "maxLength": 241 },
+        "evidence_type": { "const": "static-text-match" }
+      }
+    },
+    "skippedFile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "reason"],
+      "properties": {
+        "path": { "$ref": "#/$defs/path" },
+        "reason": { "enum": ["text-size-limit", "non-utf8"] }
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "files_in_snapshot", "finding_limit_reached", "max_findings", "per_rule_limit_reached", "max_findings_per_rule", "dependency_limit_reached",
+        "max_dependencies", "referenced_host_limit_reached", "max_referenced_hosts", "malformed_url_count"
+      ],
+      "properties": {
+        "files_in_snapshot": { "type": "integer", "minimum": 0, "maximum": 1000 },
+        "finding_limit_reached": { "type": "boolean" },
+        "max_findings": { "type": "integer", "minimum": 1 },
+        "per_rule_limit_reached": { "type": "boolean" },
+        "max_findings_per_rule": { "type": "integer", "minimum": 1 },
+        "dependency_limit_reached": { "type": "boolean" },
+        "max_dependencies": { "type": "integer", "minimum": 1 },
+        "referenced_host_limit_reached": { "type": "boolean" },
+        "max_referenced_hosts": { "type": "integer", "minimum": 1 },
+        "malformed_url_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "requirementSignal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "evidence", "evidence_limit_reached", "max_evidence", "interpretation"],
+      "properties": {
+        "status": { "enum": ["indicated", "not-detected"] },
+        "evidence": { "type": "array", "maxItems": 20, "items": { "$ref": "#/$defs/requirementEvidence" } },
+        "evidence_limit_reached": { "type": "boolean" },
+        "max_evidence": { "type": "integer", "minimum": 1 },
+        "interpretation": { "const": "static indicator only; not observed runtime behavior" }
+      }
+    },
+    "requirementEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "line", "excerpt"],
+      "properties": {
+        "path": { "$ref": "#/$defs/path" },
+        "line": { "type": "integer", "minimum": 1 },
+        "excerpt": { "type": "string", "maxLength": 141 }
+      }
+    },
+    "dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ecosystem", "declaration", "source_path"],
+      "properties": {
+        "ecosystem": { "enum": ["python", "node", "rust"] },
+        "declaration": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "source_path": { "$ref": "#/$defs/path" }
+      }
+    },
+    "manifestParseFailure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "manifest", "reason"],
+      "properties": {
+        "path": { "$ref": "#/$defs/path" },
+        "manifest": { "enum": ["pyproject.toml", "package.json", "Cargo.toml"] },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 100 }
+      }
+    },
+    "evidenceLevel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "name", "status"],
+      "properties": {
+        "level": { "type": "integer", "minimum": 0, "maximum": 6 },
+        "name": { "type": "string", "minLength": 1, "maxLength": 100 },
+        "status": { "enum": ["completed", "completed-pass", "completed-fail", "partial", "not-run"] },
+        "evidence": { "type": "string", "minLength": 1, "maxLength": 300 }
+      }
+    },
+    "scanLimits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "max_files", "max_entries", "max_directories", "max_depth", "max_path_bytes", "max_references",
+        "max_dependencies", "max_referenced_hosts", "max_requirement_evidence_per_kind", "max_total_bytes",
+        "max_file_bytes", "max_skill_md_bytes", "max_text_bytes", "max_findings", "max_findings_per_rule"
+      ],
+      "properties": {
+        "max_files": { "type": "integer", "minimum": 1 },
+        "max_entries": { "type": "integer", "minimum": 1 },
+        "max_directories": { "type": "integer", "minimum": 1 },
+        "max_depth": { "type": "integer", "minimum": 1 },
+        "max_path_bytes": { "type": "integer", "minimum": 1 },
+        "max_references": { "type": "integer", "minimum": 1 },
+        "max_dependencies": { "type": "integer", "minimum": 1 },
+        "max_referenced_hosts": { "type": "integer", "minimum": 1 },
+        "max_requirement_evidence_per_kind": { "type": "integer", "minimum": 1 },
+        "max_total_bytes": { "type": "integer", "minimum": 1 },
+        "max_file_bytes": { "type": "integer", "minimum": 1 },
+        "max_skill_md_bytes": { "type": "integer", "minimum": 1 },
+        "max_text_bytes": { "type": "integer", "minimum": 1 },
+        "max_findings": { "type": "integer", "minimum": 1 },
+        "max_findings_per_rule": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

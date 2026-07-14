@@ -1,6 +1,5 @@
 # Next action
 
-Complete E-001: build the non-executing inspector, test it against adversarial local
-fixtures, resolve one permitted public Agent Skill to immutable bytes, and preserve a
-deterministic Capability Receipt plus independent review evidence.
-
+Resolve the working-name conflict, then specify and test the smallest external-safe raw ZIP
+intake and isolated no-egress worker profile. Do not publish, accept third-party artifacts,
+or open a paid path until those controls and the signature/authentication gates pass.

@@ -1,55 +1,45 @@
-# Initial offer — exact-version Agent Skill evidence
+# Offer hypothesis - portable exact-byte Agent Skill policy receipt
 
 ## For whom
 
 Agent Skill publishers and small teams operating coding or document agents.
 
-## Problem solved
+## Customer outcome
 
-A discovered `SKILL.md` package may be correctly formatted while still hiding broad
-requirements, mutable downloads, dangerous instructions, or unclear provenance.
+A registry-neutral machine decision record for one exact Agent Skill version: complete file
+inventory and digest, source/blob evidence when available, structural findings, declared and
+inferred requirements, dependency and host evidence, deterministic risk-rule findings,
+coverage/unknowns, methodology/policy versions, limitations, timestamp, and expiry.
 
-## Customer receives
+## Current proof versus sellable delivery
 
-- One canonical JSON Capability Receipt for exact submitted bytes.
-- SHA-256 digest and file inventory.
-- Structural/specification findings.
-- Extracted dependencies, commands, file/network/secrets indicators, and referenced files.
-- Transparent static-risk findings with locations and evidence excerpts.
-- Test timestamp, methodology version, evidence level, limitations, and expiry.
+The audited v0.1 proof handles only controlled public/synthetic local directories and emits
+an unsigned digest-only receipt. It is not yet offered for sale. External delivery remains
+blocked on immutable upload intake, worker isolation/no-egress, authentication/TLS/tenant
+controls, JCS/signing/key lifecycle, invalidation, public naming, terms/privacy, and payment.
 
-## Customer provides
+## Full-price transaction hypotheses
 
-A public, licensed repository/version or an artifact they are authorized to submit.
-No credentials, private owner files, or production access.
+- USD $19 for one portable public release receipt.
+- USD $99 for a policy-ready team pack of up to five receipts, only after authorized/private
+  input handling is safe.
 
-## Delivery
-
-Provisional: machine-readable response after deterministic validation. Delivery time will
-be published only after E-001 measures it.
-
-## Price
-
-Provisional validation hypothesis: USD $19 for a publisher-funded Level 1–3 release receipt.
-
-## Included
-
-Non-executing structural, provenance, requirement, and static-risk evidence for one exact version.
+These are falsifiable price tests, not established value or demand.
 
 ## Excluded
 
-Sandbox execution, runtime guarantee, penetration testing, legal/license advice, universal
-safety certification, custom consulting, calls, and unlimited support.
+Artifact execution, publisher verification, malware-free or safety certification, runtime or
+compatibility guarantees, penetration testing, legal/license advice, calls, custom consulting,
+and unlimited support.
 
 ## Acceptance criteria
 
-The receipt parses against the published schema, identifies exact input bytes, lists every
-checked file, exposes findings with locations, and reproduces byte-for-byte when volatile
-timestamps are fixed by the test harness.
+The JSON validates against the pinned schema, passes semantic integrity verification, lists
+all captured files and coverage limits, binds exact source bytes when provenance is claimed,
+and regenerates byte-for-byte when volatile timestamps are supplied by the test harness.
 
-## Remediation and refund hypothesis
+## Defect remedy hypothesis
 
-If the delivered JSON is malformed or references the wrong artifact digest, rerun once at
-no charge; if still defective, refund the validation charge. Findings are evidence under
-stated conditions, not a promise that no defect or malicious behavior exists.
-
+If delivered JSON is malformed or bound to the wrong artifact digest, rerun once at no charge;
+if still defective, refund the charge. Findings remain evidence under stated conditions, not
+a promise that no harmful behavior exists.
