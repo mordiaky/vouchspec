@@ -46,7 +46,7 @@ def test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intak
     assert discovery["stage"] == "A_PUBLIC_ARTIFACT_INDEX"
     assert discovery["trust"]["root_keyid"] == "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4"
     assert discovery["mcp"]["transport"] == "stdio"
-    assert discovery["publisher_ci_action"].endswith("@ed812a19184d3fa388d854f71b72fb4aa78e2712")
+    assert discovery["publisher_ci_action"].endswith("@ed812a14cbc62333d59bac319f79d897f14d1b64")
     assert discovery["publisher_ci_demo"] == "https://github.com/mordiaky/vouchspec-demo"
     assert set(discovery["mcp"]["tools"]) == {
         "search_receipts",

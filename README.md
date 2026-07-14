@@ -53,7 +53,7 @@ Use the action at its immutable evidence-preserving snapshot:
 
 ```yaml
 - id: vouchspec
-  uses: mordiaky/vouchspec/distribution/github-action@ed812a19184d3fa388d854f71b72fb4aa78e2712
+  uses: mordiaky/vouchspec/distribution/github-action@ed812a14cbc62333d59bac319f79d897f14d1b64
   with:
     skill-path: path/to/skill
 ```

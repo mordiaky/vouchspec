@@ -7,7 +7,7 @@ evidence. The complete public example and its attestations are in
 Pin the action by full commit SHA:
 
 ```yaml
-- uses: mordiaky/vouchspec/distribution/github-action@ed812a19184d3fa388d854f71b72fb4aa78e2712
+- uses: mordiaky/vouchspec/distribution/github-action@ed812a14cbc62333d59bac319f79d897f14d1b64
   with:
     skill-path: path/to/skill
 ```
@@ -55,7 +55,7 @@ jobs:
         with:
           python-version: "3.11"
       - id: vouchspec
-        uses: mordiaky/vouchspec/distribution/github-action@ed812a19184d3fa388d854f71b72fb4aa78e2712
+        uses: mordiaky/vouchspec/distribution/github-action@ed812a14cbc62333d59bac319f79d897f14d1b64
         with:
           skill-path: path/to/skill
       - uses: actions/attest@a1948c3f048ba23858d222213b7c278aabede763 # v4
