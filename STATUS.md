@@ -1,7 +1,7 @@
 # Operating status
 
-- **Stage:** Stage A implementation and 25-artifact signed catalog complete locally; public
-  external deployment and usage/payment acceptance tests remain open.
+- **Stage:** Stage A public static distribution and installable stdio MCP are live; external
+  usage, publisher CI, and payment acceptance tests remain open.
 - **Provisional public name:** `VouchSpec` — $0 obvious-conflict screen complete; no formal
   legal or trademark clearance.
 - **Internal compatibility name:** `CapabilityProof` remains in package/module paths during
@@ -22,8 +22,11 @@
 - **Delivery obligations:** None.
 - **Stage A boundary:** read-only public metadata/receipts; no uploads, private repositories,
   confidential content, or artifact execution.
-- **Open alpha acceptance:** live REST, live MCP, external publisher CI, 10 external machine
-  requests including three repeats, one genuine settled machine-paid request, and measured
-  operating cost.
-- **Next action:** publish the read-only catalog plus independently pinnable root fingerprint,
-  make MCP installation public, and start legitimate machine-request measurement.
+- **Public delivery:** GitHub-managed TLS serves exact signed catalog bytes with CORS; the
+  repository provides an installable stdio MCP. An out-of-band Gist publishes exact root and
+  issuer JWKs, with the documented same-account compromise caveat. Product CI passed publicly.
+- **Open alpha acceptance:** one genuinely external publisher CI attestation, 10 legitimate
+  external machine requests including three repeats, one genuine settled machine-paid
+  request, and measured operating cost.
+- **Next action:** recruit machine-readable external CI/usage without calls or manual jobs;
+  do not count operator-owned smoke traffic as demand.

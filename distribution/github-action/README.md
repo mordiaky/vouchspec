@@ -1,7 +1,14 @@
 # VouchSpec publisher CI profile
 
-This source action is not yet published. A publisher must pin the VouchSpec action by full
-commit SHA. The action confirms that `GITHUB_SHA` equals the clean checkout, runs
+The source action is public. A publisher must pin it by full commit SHA:
+
+```yaml
+- uses: mordiaky/vouchspec/distribution/github-action@4404b7a9a2d3dc45b621ea694d2ca7ad666b9898
+  with:
+    skill-path: path/to/skill
+```
+
+The action confirms that `GITHUB_SHA` equals the clean checkout, runs
 `inspect-git` against the exact repository bytes, and emits:
 
 - `receipt.json` — an inner receipt draft bound to repository, commit, path, and digest;

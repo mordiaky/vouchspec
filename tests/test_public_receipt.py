@@ -27,6 +27,8 @@ def test_checked_in_public_catalog_has_25_signed_immutable_receipts_from_12_owne
     issuer_jwk = json.loads(store.issuer_jwk_bytes())
     root_jwk = json.loads(store.root_jwk_bytes())
     assert jwk_thumbprint(root_jwk) == PINNED_ROOT_KEYID
+    assert (ROOT / "distribution" / "trust" / "root.jwk.json").read_bytes() == store.root_jwk_bytes()
+    assert (ROOT / "distribution" / "trust" / "issuer.jwk.json").read_bytes() == store.issuer_jwk_bytes()
     lifecycle_envelope = store.lifecycle_envelope_bytes()
     feed, _ = verify_lifecycle_envelope(lifecycle_envelope, root_jwk)
 

@@ -24,9 +24,11 @@
 
 ## Before live Stage A acceptance
 
-- [ ] Read-only REST is live behind managed TLS.
-- [ ] Read-only MCP retrieval is live/installable.
-- [ ] Public root/issuer key fingerprints are pinned through an independent channel.
+- [x] Exact signed read-only catalog resources are live through GitHub-managed TLS/CORS;
+  writes are rejected and dynamic search is performed locally from the signed index.
+- [x] Read-only stdio MCP retrieval is publicly installable and passed a public-clone smoke.
+- [x] Public root/issuer JWKs and fingerprints are published in a separate public Gist;
+  same-account compromise remains an explicit limitation.
 - [ ] One external publisher repository emits a commit/workflow-bound CI attestation.
 - [ ] Ten legitimate external machine requests occur, including three repeats.
 - [ ] One genuine machine-initiated paid request settles after a machine-readable quote.

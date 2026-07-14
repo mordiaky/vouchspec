@@ -21,13 +21,13 @@
 - **B-012:** Close independent P0-P2 review findings for key-role separation, startup
   rollback persistence, immutable verified-index reads, cross-process sequence state, and
   public claim language.
+- **B-013:** Publish exact signed catalog bytes through GitHub-managed TLS/CORS and publish
+  root/issuer JWKs plus thumbprints through a separate public Gist.
+- **B-014:** Publish the repository/install path for the read-only stdio MCP and pass a clean
+  public-clone installation/tool-discovery smoke test.
 
 ## Next — smallest safe external alpha
 
-- **B-013:** Publish the read-only REST catalog behind managed TLS and make its public key
-  fingerprint available through an independent channel.
-- **B-014:** Publish/install the read-only MCP retrieval route and measure legitimate machine
-  requests without accepting artifacts.
 - **B-015:** Upgrade the GitHub action to a publisher-operated, commit-bound attestation
   profile and verify one genuinely external repository. Label only this profile
   `PUBLISHER_CI_ATTESTED`.

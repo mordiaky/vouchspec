@@ -14,6 +14,20 @@ This is evidence, not a safety certification. Six of the 25 real-world skills fa
 one current structural rule; they remain indexed with the failure evidence and are not
 labeled `STRUCTURE_VALIDATED`.
 
+## Public Stage A distribution
+
+- Repository and install source: <https://github.com/mordiaky/vouchspec>
+- Signed index over managed TLS: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json>
+- Root-signed lifecycle feed: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json>
+- Out-of-band root/issuer key publication: <https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1>
+
+The static distribution returns the exact checked-in signed bytes with CORS enabled and
+rejects writes. Download the signed index, filter it locally, then retrieve a receipt by ID
+from `catalog/public/receipts/`. For immutable retrieval, replace `main` with release commit
+`4404b7a9a2d3dc45b621ea694d2ca7ad666b9898`. The out-of-band Gist is separate from the
+repository but shares its GitHub account, so an account-level compromise still requires a
+new trusted channel.
+
 ## Product stages
 
 - **Stage A — public artifact index (current):** selected public artifacts only; signed
@@ -84,6 +98,17 @@ snapshot; deploy a new lifecycle/index generation by restarting the process. The
 observed root-feed sequence and its payload digest are persisted with a cross-process lock.
 
 ## Read-only catalog MCP
+
+Public install:
+
+```powershell
+git clone https://github.com/mordiaky/vouchspec.git
+cd vouchspec
+python -m venv .venv
+.venv\Scripts\python -m pip install .
+.venv\Scripts\vouchspec mcp-catalog --catalog-root catalog\public `
+  --trusted-root-key C:\independently-provisioned\root.jwk.json
+```
 
 ```powershell
 vouchspec mcp-catalog --catalog-root catalog\public `

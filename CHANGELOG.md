@@ -15,6 +15,9 @@ Stage A alpha candidate under the provisional public name `VouchSpec`.
   tooling, and separated collection, issuer-signing, and recovery-root phases.
 - Added a machine-readable public price/availability response; paid orders and settlement
   remain disabled.
+- Published exact signed catalog resources through GitHub-managed TLS/CORS, an installable
+  stdio MCP source, a commit-pinned publisher CI action, and a separate public root/issuer
+  JWK fingerprint Gist. Operator-owned smoke traffic is not counted as external demand.
 - Deferred private repositories, arbitrary uploads, authentication, tenant storage, and
   executable sandboxing beyond Stage A.
 

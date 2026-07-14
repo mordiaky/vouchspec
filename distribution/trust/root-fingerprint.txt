@@ -1,0 +1,29 @@
+VouchSpec Stage A recovery-root fingerprint statement
+Published: 2026-07-14T05:55:00Z
+Provisional public name: VouchSpec
+
+RFC 7638 SHA-256 JWK thumbprint (base64url):
+zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4
+
+RFC 8037 public JWK:
+{"crv":"Ed25519","kty":"OKP","x":"Sl6FVZyKKRu982kL3podFJXddFx07uP1HsSzKLTZCYg"}
+
+Root-authorized receipt issuer RFC 7638 thumbprint:
+Q0EBNE_1fY4jjTLAHn8nDZKdxppYmH1DkKOpV8gukDo
+
+Issuer RFC 8037 public JWK:
+{"crv":"Ed25519","kty":"OKP","x":"1sypiOALzMIOBakpqQedUK1wZKBxX7vax4wCGqmrvCA"}
+
+Reviewed release commit:
+4404b7a9a2d3dc45b621ea694d2ca7ad666b9898
+
+Immutable discovery copy:
+https://raw.githubusercontent.com/mordiaky/vouchspec/4404b7a9a2d3dc45b621ea694d2ca7ad666b9898/catalog/public/keys/root.jwk.json
+
+Immutable issuer discovery copy:
+https://raw.githubusercontent.com/mordiaky/vouchspec/4404b7a9a2d3dc45b621ea694d2ca7ad666b9898/catalog/public/keys/issuer.jwk.json
+
+The catalog-bundled JWK is discovery material. Pin the thumbprint from an out-of-band
+source before treating lifecycle state as authenticated. This statement is intended as a
+separate publication object, but it shares the same GitHub account as the catalog and is
+not an independent security principal.
