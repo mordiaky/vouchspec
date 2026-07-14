@@ -1,42 +1,50 @@
 # Managed Stage B deployment boundary
 
-This directory is preparation, not a deployment claim. The checked-in commerce listener remains
-loopback-only and live-disabled; it supports the fake provider by default and an explicit
-Stripe-test mode for integration verification. Do not expose it directly or set
-`VOUCHSPEC_STRIPE_LIVE_CHECKOUT_ENABLED=true` from this repository.
+The managed **testnet** service is deployed at `https://vouchspec-sandbox.plyrium.com`. It uses
+the Plyrium web edge for the public tenant/quote/order/x402/result/receipt/status API and a private
+leased GitHub Actions fulfillment worker. The Python loopback and Stripe-test commands in this
+repository remain local regression harnesses; they are not the production architecture or
+VouchSpec launch rail.
 
-The managed service must preserve these boundaries before the connected Stripe-test path is
-made public or any live order is accepted:
+## Deployed testnet invariants
 
-1. Terminate HTTPS at a managed edge and forward only to `127.0.0.1`. Enforce source-aware and
-   global request limits, body limits, timeouts, and connection limits at that edge. The
-   application must continue ignoring untrusted forwarded-client headers.
-2. Preserve Stripe webhook request bytes exactly. Route only
-   `POST /v1/commerce/webhooks/stripe` to the adapter, pass the single `Stripe-Signature` header
-   unchanged, return non-2xx for retryable or already-processing reconciliation, and never use
-   browser redirects to authorize work. Ordinary API traffic and webhook traffic retain
-   separate application rate-limit buckets so one cannot consume the other's local capacity.
-3. Inject API key, mode-specific webhook secret, authentication pepper, delivery secret, and
-   signing-key reference from a secret manager. Do not place secret values in manifests, image
-   layers, command arguments, source, logs, or the commerce database.
-4. Configure and persist one expected Stripe account ID per environment. Test and live accounts
-   use different databases, webhook endpoints/secrets, and service configuration. The adapter
-   re-retrieves and verifies the enabled account at startup.
-5. Restrict the SQLite database and backups to the service identity. Verify restore, integrity,
-   retention, and redacted audit aggregation before taking orders. Never clone test state into
-   live or reuse tenant/token hashing secrets between environments.
-6. Run networked Git intake in a disposable volume with a kernel-enforced quota. Keep the
-   existing exact-commit, logical-size, timeout, cleanup, and archive controls as defense in
-   depth. The inspection worker remains no-egress with no writable host mount.
-7. Provision the issuer key only in a separate no-network signing role with an immutable worker
-   image allowlist. Keep the lifecycle recovery-root private key offline; the online role sees
-   only unsigned drafts, public JWKs, and exact signed envelopes.
-8. Publish the latest root-signed paid lifecycle envelope with every result and monitor feed
-   expiry, sequence, signer status, disputes/refunds, backup health, worker failures, and webhook
-   retry backlog without recording credentials or customer secrets.
+1. The edge terminates managed HTTPS, rejects cross-site mutation, enforces strict body/framing
+   rules and public/tenant rate limits, and returns redacted errors.
+2. Tenant API keys and delivery capabilities are shown once and stored only as keyed digests.
+   Quotes, orders, x402 payments, results, rotation, and revocation are tenant bound.
+3. The public payment route accepts only x402 v2 `exact`, Base Sepolia, 1.00 test USDC, and the
+   configured receiver. Testnet activity is always excluded from commercial counters.
+4. Settlement uses a durable processing lease and a recorded recovery checkpoint. Replays,
+   conflicting payloads, concurrent settlement, and ambiguous recovery fail closed.
+5. The networked fetch role receives only public immutable GitHub coordinates. The inspection
+   container has no egress and no writable host mount.
+6. The separate signer container receives encrypted signing material and bounded evidence but no
+   buyer credential, delivery capability, payment/wallet key, or worker API token. It re-verifies
+   the exact freeze/worker/source/image bindings before signing.
+7. Authenticated result bytes are published verbatim under a content-addressed public receipt
+   URL. Receipt bytes are immutable; current invalidation state is a separate no-store URL.
+8. GitHub workflow failure alerts remain enabled. Empty-queue polling claims first and skips
+   checkout, dependency installation, Docker build, and secret materialization when no job exists.
 
-Required non-secret configuration names are documented in [`.env.example`](../.env.example).
-Leave live activation false while provisioning. The next verification is a complete
-noncommercial test-card flow from authenticated order through signed delivery, paid lifecycle,
-refund/dispute checks, and Balance Transaction availability. Only after that test and the
-controls above pass may live Checkout receive a separate explicit activation acknowledgement.
+## Mainnet activation boundary
+
+Mainnet is a separate environment, not a flag applied to testnet state:
+
+1. Use separate live receiver/wallet policy, facilitator/network allowlist, application secrets,
+   tenant credentials, database, signing policy, and monitoring. Never copy test objects into live.
+2. Keep payment/wallet credentials out of the worker and signer. Only the public payment boundary
+   talks to the x402 facilitator; fulfillment starts from a durable paid-order lease.
+3. Preserve the settlement recovery checkpoint and prove retry after facilitator timeout/unknown
+   outcomes without double settlement or double fulfillment.
+4. Implement the disclosed automatic onchain remedy/refund operation, record its transaction and
+   cost, and remove returned/reversed/disputed amounts from settled gross.
+5. Run networked Git intake in disposable storage with a kernel-enforced quota while preserving
+   exact-commit, logical-size, timeout, extraction, and cleanup controls.
+6. Reconcile chain/facilitator, worker, storage, delivery, and remedy costs for every order and
+   refuse fulfillment that cannot retain positive contribution at the signed quote.
+7. Publish the issuer key and content-addressed receipt/invalidation contract before accepting
+   value, then monitor receipt status, settlement recovery, worker failures, delivery, and
+   accounting without recording credentials.
+
+The launch strategy remains agent-to-agent only. Mainnet activation must not add a card form,
+hosted checkout, call, meeting, manual review, or manual delivery.

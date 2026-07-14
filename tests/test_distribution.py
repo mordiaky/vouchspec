@@ -40,11 +40,13 @@ def test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expres
     assert "PUBLISHER_CI_ATTESTED" not in action_path.read_text(encoding="utf-8")
 
 
-def test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intake() -> None:
+def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() -> None:
     discovery = json.loads((ROOT / "distribution" / "discovery.json").read_text(encoding="utf-8"))
     assert discovery["service"] == "VouchSpec"
-    assert discovery["stage"] == "A_PUBLIC_ARTIFACT_INDEX"
+    assert discovery["stage"] == "B_PUBLIC_X402_SANDBOX"
+    assert discovery["internal_codename_replaced"] is True
     assert discovery["trust"]["root_keyid"] == "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4"
+    assert discovery["trust"]["sandbox_issuer_keyid"] == "PWGCY2HpACKhufnSBjbf2zwMzThqxyPTz_MAwCyJ0I0"
     assert discovery["mcp"]["transport"] == "stdio"
     assert discovery["publisher_ci_action"].endswith("@ed812a14cbc62333d59bac319f79d897f14d1b64")
     assert discovery["publisher_ci_demo"] == "https://github.com/mordiaky/vouchspec-demo"
@@ -55,15 +57,35 @@ def test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intak
         "get_verification_material",
         "get_price_quote",
     }
-    assert discovery["boundary"] == {
-        "artifact_submissions_accepted": False,
-        "private_content_accepted": False,
-        "artifact_code_executed": False,
-        "paid_orders_accepted": False,
-        "human_call_required": False,
+    assert discovery["api"]["base_url"] == "https://vouchspec-sandbox.plyrium.com"
+    assert discovery["api"]["agent_only"] is True
+    assert discovery["api"]["self_service_registration"] is True
+    assert discovery["api"]["authentication"]["delivery_header"] == "X-VouchSpec-Delivery-Token"
+    assert discovery["x402"] == {
+        "version": 2,
+        "scheme": "exact",
+        "network": "eip155:84532",
+        "asset": "USDC",
+        "sandbox_amount": "1.00",
+        "sandbox_atomic_amount": "1000000",
+        "payment_required_header": "PAYMENT-REQUIRED",
+        "payment_signature_header": "PAYMENT-SIGNATURE",
+        "payment_response_header": "PAYMENT-RESPONSE",
+        "testnet_settlement_available": True,
+        "mainnet_settlement_available": False,
+        "human_checkout": False,
+        "sandbox_activity_counts_for_goal": False,
     }
-    assert discovery["pricing"]["fresh_validation_availability"] == "stage_b_not_orderable"
-    assert discovery["pricing"]["settlement_available"] is False
+    assert discovery["boundary"]["artifact_submissions_accepted"] is False
+    assert discovery["boundary"]["public_github_coordinates_accepted"] is True
+    assert discovery["boundary"]["paid_testnet_orders_accepted"] is True
+    assert discovery["boundary"]["paid_mainnet_orders_accepted"] is False
+    assert discovery["boundary"]["human_call_required"] is False
+    assert discovery["receipts"]["cacheable"] is True
+    assert discovery["receipts"]["shareable"] is True
+    assert discovery["receipts"]["invalidation_status_is_separate"] is True
+    assert discovery["pricing"]["sandbox_fresh_validation_test_usdc"] == "1.00"
+    assert discovery["pricing"]["commercial_fresh_validation_hypothesis_usd"] == "49.00"
 
 
 def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands() -> None:

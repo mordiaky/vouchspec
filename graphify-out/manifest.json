@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "tests/test_distribution.py": {
-    "mtime": 1784052124.610647,
-    "ast_hash": "bbcf2ac34a2d8b1d31d471b8b50f4903",
+    "mtime": 1784055733.280028,
+    "ast_hash": "815fb335bdf96caf5f75f2e5491d4299",
     "semantic_hash": ""
   },
   "tests/test_inspector.py": {
@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "GOAL_EVIDENCE.md": {
-    "mtime": 1784045264.9046528,
-    "ast_hash": "512954526d0ebeae1cd3555ee05b9fb4",
+    "mtime": 1784058052.4407969,
+    "ast_hash": "ddbc5dd7b823cc8fbf2bcc1c714a796e",
     "semantic_hash": ""
   },
   "HUMAN_ACTIONS.md": {
@@ -170,23 +170,23 @@
     "semantic_hash": ""
   },
   "NEXT_ACTION.md": {
-    "mtime": 1784045264.9056525,
-    "ast_hash": "3fac4acac47fa5049ad4b23915b3296e",
+    "mtime": 1784058052.4418,
+    "ast_hash": "c4790684ef6e9a2c7fd6e271e56ef988",
     "semantic_hash": ""
   },
   "OFFER.md": {
-    "mtime": 1784040310.0578496,
-    "ast_hash": "e5448acbc648e510cdb8123c197b9327",
+    "mtime": 1784055891.6849744,
+    "ast_hash": "8f971b791dbc53214e0b9031d45ca7c3",
     "semantic_hash": ""
   },
   "PRICING.md": {
-    "mtime": 1784034327.0814984,
-    "ast_hash": "e69eb21889296ec77085a5e8293ba8c2",
+    "mtime": 1784055891.6829753,
+    "ast_hash": "1abedc42d822267ea77eae6a0f8f1b1d",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1784041982.223769,
-    "ast_hash": "62418dc7d3c80741ef3ab5585bba73dc",
+    "mtime": 1784055834.4773462,
+    "ast_hash": "d9c6bee51f6fab6a4e59eff0cdc0e104",
     "semantic_hash": ""
   },
   "RISK_REGISTER.md": {
@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "STATUS.md": {
-    "mtime": 1784045264.903653,
-    "ast_hash": "71c51695ee4d0edfcc5cb217b1addc54",
+    "mtime": 1784058052.4407969,
+    "ast_hash": "ed1991db392d2c172b62273db85ebefc",
     "semantic_hash": ""
   },
   "analytics/README.md": {
@@ -230,8 +230,8 @@
     "semantic_hash": ""
   },
   "fulfillment/README.md": {
-    "mtime": 1784034327.089518,
-    "ast_hash": "43a8c21ced9682caa11cac76d860d706",
+    "mtime": 1784055733.280028,
+    "ast_hash": "d865ab5b3987e1f3c2b39aa138e3b86f",
     "semantic_hash": ""
   },
   "logs/2026-07-13-e001-verification.md": {
@@ -555,8 +555,8 @@
     "semantic_hash": ""
   },
   "distribution/discovery.json": {
-    "mtime": 1784031187.66069,
-    "ast_hash": "bf1e2ca2ad24be46b3beabaac1145775",
+    "mtime": 1784055733.2795238,
+    "ast_hash": "1d0929b7c4758de218acf7bd924a7b58",
     "semantic_hash": ""
   },
   "analytics/dashboard.json": {
@@ -590,8 +590,8 @@
     "semantic_hash": ""
   },
   "docs/payment-flow.md": {
-    "mtime": 1784040310.0633652,
-    "ast_hash": "04c882ec521f1d56c7a0832b91511d18",
+    "mtime": 1784055955.8816848,
+    "ast_hash": "94f18f4f0d48e353f11d9c01ada6b87b",
     "semantic_hash": ""
   },
   "docs/refund-policy.md": {
@@ -650,13 +650,13 @@
     "semantic_hash": ""
   },
   "docs/stage-b-operations.md": {
-    "mtime": 1784040310.0633652,
-    "ast_hash": "7a02242e1ab3f94cc7152b8459d7c338",
+    "mtime": 1784056009.152238,
+    "ast_hash": "a751bf5931a5dd11c4750e5aafbd741a",
     "semantic_hash": ""
   },
   "docs/stage-b-security-review.md": {
-    "mtime": 1784041982.228278,
-    "ast_hash": "44c51ed2b3182e33d49a839656d2912e",
+    "mtime": 1784056066.9716072,
+    "ast_hash": "1bb64c43d8ab579410ac69a88de08205",
     "semantic_hash": ""
   },
   "src/capabilityproof/commerce_access.py": {
@@ -705,8 +705,8 @@
     "semantic_hash": ""
   },
   "deploy/README.md": {
-    "mtime": 1784041982.2272725,
-    "ast_hash": "579bc916089bc722852fc63c41f4c9c2",
+    "mtime": 1784056066.9701033,
+    "ast_hash": "d0e551ee4a2dc65b5683ec643813b36e",
     "semantic_hash": ""
   },
   "logs/2026-07-14-stripe-http-test-probe.md": {
@@ -720,12 +720,12 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/hosted_worker.py": {
-    "mtime": 1784055209.336486,
+    "mtime": 1784055352.7632642,
     "ast_hash": "6af2baafe7d158999f90391e1453d56b",
     "semantic_hash": ""
   },
   "tests/test_hosted_worker.py": {
-    "mtime": 1784055216.3897607,
+    "mtime": 1784055352.7642646,
     "ast_hash": "1d74087ce43972bc5beaec96a760ded2",
     "semantic_hash": ""
   },
@@ -735,7 +735,7 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/stage_b_signer_cli.py": {
-    "mtime": 1784055209.335486,
+    "mtime": 1784055352.7642646,
     "ast_hash": "7e03f85ffafd159502a641143d6982d1",
     "semantic_hash": ""
   }

@@ -17,6 +17,9 @@ labeled `STRUCTURE_VALIDATED`.
 
 - Repository and install source: <https://github.com/mordiaky/vouchspec>
 - Machine-readable discovery: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/distribution/discovery.json>
+- Managed agent API: <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/health>
+- Managed API discovery: <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/discovery>
+- Agent quickstart: <https://vouchspec-sandbox.plyrium.com/vouchspec>
 - Signed index over managed TLS: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json>
 - Root-signed lifecycle feed: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json>
 - Out-of-band root/issuer key publication: <https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1>
@@ -30,15 +33,14 @@ new trusted channel.
 
 ## Product stages
 
-- **Stage A — public artifact index (current):** selected public artifacts only; signed
+- **Stage A — public artifact index (live):** selected public artifacts only; signed
   receipts and read-only REST/MCP retrieval; no uploads, private repositories, or
   customer-confidential content.
-- **Stage B — public repository validation (sandbox-ready, not public):** allowlisted public
+- **Stage B — public repository validation (public testnet sandbox):** allowlisted public
   host, full commit, explicit subdirectory, bounded immutable retrieval, isolated no-egress
-  worker, constrained signing, a durable commerce ledger, an account-bound Stripe Checkout
-  adapter, offline-root paid-receipt lifecycle publication, and a loopback-only authenticated
-  tenant/order/result API with a Stripe-test exact-body webhook path. Public deployment, live
-  order intake, and settlement remain disabled.
+  worker, separate no-egress signing, durable tenant/order/payment state, an authenticated
+  managed API, and exact x402 settlement using test USDC on Base Sepolia. Testnet orders are
+  self-service and fully fulfilled; mainnet settlement remains disabled.
 - **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
   tenant isolation, deletion policy, and expanded legal/incident controls only after
   demand and revenue justify them.
@@ -124,25 +126,49 @@ proxy with platform ingress limits. Each process serves one fully verified immut
 snapshot; deploy a new lifecycle/index generation by restarting the process. The highest
 observed root-feed sequence and its payload digest are persisted with a cross-process lock.
 
-The price-card route reports the current paid-product hypothesis without accepting an order.
-For a strict request-specific preview:
+The local catalog price-card route reports the commercial price hypothesis without accepting
+an order. For a strict request-specific local preview:
 
 ```powershell
 vouchspec quote-fresh-validation docs\examples\fresh-validation-request.json
 ```
 
-The preview validates an allowlisted public host, full immutable commit, explicit skill path,
-profile, maximum price and delivery ID. It returns the exact USD $49.00 hypothesis,
-deliverable, hard limits, refund conditions and remaining gates with `orderable: false`.
-The internal sandbox can exercise an explicitly nonsettling order, but it cannot count as a
-buyer, request, or revenue. See the [Stage B operating boundary](docs/stage-b-operations.md),
+The preview validates the same request shape used by the managed API. The public sandbox price
+is deliberately faucet-sized at **1.00 test USDC**; the commercial mainnet price remains an
+unvalidated **USD $49.00 hypothesis**.
+
+## Agent-only x402 sandbox
+
+The public service at `https://vouchspec-sandbox.plyrium.com` has no card form, hosted checkout,
+or human approval step. An agent:
+
+1. accepts terms version `vouchspec-stage-b-2026-07-14` at
+   `POST /api/vouchspec/v1/tenants` and stores the one-time tenant bearer key;
+2. sends the strict fresh-validation request to `POST /api/vouchspec/v1/quotes` with
+   `Authorization` and a unique `Idempotency-Key`;
+3. creates an order at `POST /api/vouchspec/v1/orders` and stores the returned delivery token;
+4. calls the order's `purchase_path`, reads the x402 v2 `PAYMENT-REQUIRED` challenge, signs the
+   exact 1.00 test-USDC payment on Base Sepolia, and retries with `PAYMENT-SIGNATURE`;
+5. polls the authenticated order, retrieves the exact DSSE result, and verifies it with the
+   public issuer JWK.
+
+Successful envelopes are also published at a content-addressed unauthenticated URL. Agents may
+cache and share those immutable bytes. Invalidation is intentionally separate: check the
+corresponding no-store `/status` URL each time the receipt is used for a new decision. The
+[machine-readable discovery document](distribution/discovery.json) contains all route templates,
+headers, network, price, trust, caching, and product-boundary fields.
+
+The hosted proof is owner-controlled and testnet-only, so it demonstrates mechanics but counts
+as no customer, request, buyer, or revenue. See the [Stage B operating boundary](docs/stage-b-operations.md),
 [payment flow](docs/payment-flow.md), [managed deployment boundary](deploy/README.md), and
 [refund policy](docs/refund-policy.md).
 
-The authenticated commerce boundary is runnable only on loopback. It stores
-keyed credential digests, never plaintext tokens, and binds each quote and order to one
-opaque tenant. Generate two distinct 32-byte secrets with an approved secret manager, expose
-their hex values only to the process, then provision one sandbox credential:
+## Local commerce harness
+
+The repository still includes a loopback harness for regression and security testing. It stores
+keyed credential digests, never plaintext tokens, and binds each quote and order to one opaque
+tenant. Generate two distinct 32-byte secrets with an approved secret manager, expose their hex
+values only to the process, then provision one local sandbox credential:
 
 ```powershell
 $env:VOUCHSPEC_AUTH_PEPPER_HEX = '<64 hex characters>'
@@ -151,24 +177,20 @@ vouchspec provision-commerce-tenant --database C:\vouchspec\sandbox-commerce.db
 vouchspec serve-commerce-sandbox --database C:\vouchspec\sandbox-commerce.db --port 8789
 ```
 
-The API binds to `127.0.0.1`, has no CORS allowance, and exposes authenticated quote, order,
+The local API binds to `127.0.0.1`, has no CORS allowance, and exposes authenticated quote, order,
 status, signed-result, capability-rotation, and capability-revocation routes. Its fake payment
 rail never settles and every resulting order remains `counts_for_goal: false`.
 
-An explicitly nonsettling Stripe-test variant reads every credential and redirect URL from
-named environment variables, creates authenticated hosted Checkout Sessions, and accepts only
-the exact body plus one `Stripe-Signature` header at
-`POST /v1/commerce/webhooks/stripe`:
+An explicitly nonsettling Stripe-test adapter remains available for regression coverage only.
+It is not the VouchSpec launch rail and is not exposed by the managed agent service:
 
 ```powershell
 vouchspec serve-commerce-stripe-test `
   --database C:\vouchspec\stripe-test-commerce.db --port 8789
 ```
 
-The command is not authorization to expose the built-in listener directly. The managed edge
-must preserve webhook bytes and enforce source/global limits before loopback forwarding. Live
-activation additionally requires separate live state and secrets, a kernel-quota fetch volume,
-and the production signer described in [the deployment boundary](deploy/README.md).
+Do not expose that built-in listener directly. Mainnet activation uses x402, separate live state
+and secrets, and the live gates in [the deployment boundary](deploy/README.md).
 
 ## Read-only catalog MCP
 
@@ -190,8 +212,8 @@ vouchspec mcp-catalog --catalog-root catalog\public `
 
 Tools are `search_receipts`, `get_receipt`, `get_receipt_status`,
 `get_verification_material`, and `get_price_quote`. They accept identifiers, search text,
-and named price-card operations only, not artifact content. Paid operations are reported as
-not orderable until their separate safety and settlement gates exist.
+and named price-card operations only, not artifact content. This local read-only MCP does not
+place paid orders; agents use the managed x402 API for fresh validation.
 
 ## Local inspector and builder
 

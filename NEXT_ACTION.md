@@ -1,15 +1,18 @@
 # Next action
 
-Convert one of the two still-open publisher proposals into a genuine external integration
-while qualifying the next carefully targeted publisher prospect after the daily new-contact
-cap resets. The
-immutable fetcher, no-egress worker, constrained signer, durable ledger, fake-provider sandbox,
-reviewed Stripe adapter, and offline-root paid-receipt lifecycle are complete. Authenticated
-Stripe-test quote/order creation and an exact-body webhook route now pass locally, including one
-real HTTP-path Checkout that was expired unpaid. `michtio/craftcms-claude-skills#10` was
-closed as not planned and no longer counts as an open proposal. Next deploy this connected test
-boundary behind managed TLS/ingress with a mode-specific webhook endpoint, then provision the
-production signer and kernel-quota fetch volume. The authenticated tenant/order/result API is
-still loopback-only and not externally deployed. Count only independently
-attributable external integrations, requests, and settled payments; owned demo, sandbox,
-CI, monitoring, and smoke traffic remain excluded.
+Distribute the live canonical discovery contract only to qualified agent publishers and runtimes
+whose packaged or generated artifact bytes are not already fully covered by Git-native
+provenance. Convert genuine unrelated integrations into retained use, and count only
+independently attributable external requests. Owner, demo, CI, smoke, monitor, and
+controlled-wallet traffic remains excluded.
+
+The contract is public at
+`https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/discovery`. It exposes self-service
+credential registration, strict quote/order schemas, x402 v2 headers, Base Sepolia, the 1.00
+test-USDC sandbox price, issuer key, content-addressed receipt URLs, and separate live
+invalidation status.
+
+In parallel, prepare the already-proven flow for Base mainnet without adding any human/card
+checkout. Mainnet stays fail-closed until live receiving-wallet, facilitator, recovery,
+refund/remedy, cost accounting, isolated worker/signer, and public invalidation behavior pass the
+same automated gates. No owner action is currently required.

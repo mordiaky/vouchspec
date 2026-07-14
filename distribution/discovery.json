@@ -1,10 +1,50 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "service": "VouchSpec",
-  "stage": "A_PUBLIC_ARTIFACT_INDEX",
+  "stage": "B_PUBLIC_X402_SANDBOX",
   "provisional_name": true,
+  "internal_codename_replaced": true,
   "repository": "https://github.com/mordiaky/vouchspec",
   "release": "https://github.com/mordiaky/vouchspec/releases/tag/v0.2.0",
+  "documentation": "https://vouchspec-sandbox.plyrium.com/vouchspec",
+  "api": {
+    "base_url": "https://vouchspec-sandbox.plyrium.com",
+    "environment": "test",
+    "agent_only": true,
+    "self_service_registration": true,
+    "health": "/api/vouchspec/v1/health",
+    "discovery": "/api/vouchspec/v1/discovery",
+    "registration": "/api/vouchspec/v1/tenants",
+    "quotes": "/api/vouchspec/v1/quotes",
+    "orders": "/api/vouchspec/v1/orders",
+    "purchase_template": "/api/vouchspec/v1/orders/{order_id}/purchase",
+    "order_template": "/api/vouchspec/v1/orders/{order_id}",
+    "result_template": "/api/vouchspec/v1/orders/{order_id}/result",
+    "receipt_template": "/api/vouchspec/v1/receipts/{sha256_hex}",
+    "receipt_status_template": "/api/vouchspec/v1/receipts/{sha256_hex}/status",
+    "issuer_key": "/api/vouchspec/v1/keys/issuer",
+    "authentication": {
+      "scheme": "Bearer",
+      "tenant_api_key_shown_once": true,
+      "delivery_header": "X-VouchSpec-Delivery-Token",
+      "idempotency_header": "Idempotency-Key"
+    }
+  },
+  "x402": {
+    "version": 2,
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "asset": "USDC",
+    "sandbox_amount": "1.00",
+    "sandbox_atomic_amount": "1000000",
+    "payment_required_header": "PAYMENT-REQUIRED",
+    "payment_signature_header": "PAYMENT-SIGNATURE",
+    "payment_response_header": "PAYMENT-RESPONSE",
+    "testnet_settlement_available": true,
+    "mainnet_settlement_available": false,
+    "human_checkout": false,
+    "sandbox_activity_counts_for_goal": false
+  },
   "catalog": {
     "signed_index": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json",
     "root_signed_lifecycle": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json",
@@ -14,8 +54,20 @@
   "trust": {
     "out_of_band_jwks": "https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1",
     "root_keyid": "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4",
-    "issuer_keyid": "Q0EBNE_1fY4jjTLAHn8nDZKdxppYmH1DkKOpV8gukDo",
-    "limitation": "The Gist is separate from the repository but shares the same GitHub account."
+    "catalog_issuer_keyid": "Q0EBNE_1fY4jjTLAHn8nDZKdxppYmH1DkKOpV8gukDo",
+    "sandbox_issuer_keyid": "PWGCY2HpACKhufnSBjbf2zwMzThqxyPTz_MAwCyJ0I0",
+    "sandbox_issuer_jwk": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/keys/issuer",
+    "limitation": "The catalog Gist is separate from the repository but shares the same GitHub account. Pin trust material through an independently controlled channel for higher assurance."
+  },
+  "receipts": {
+    "format": "application/vnd.dsse.envelope.v1+json",
+    "addressing": "sha256_of_exact_envelope_bytes",
+    "cacheable": true,
+    "shareable": true,
+    "cache_control": "public, max-age=31536000, immutable",
+    "invalidation_status_is_separate": true,
+    "status_cache_control": "no-store",
+    "verification_rule": "Verify the exact cached DSSE bytes and issuer key, then fetch the separate live status before relying on the receipt."
   },
   "mcp": {
     "transport": "stdio",
@@ -39,16 +91,19 @@
   ],
   "boundary": {
     "artifact_submissions_accepted": false,
+    "public_github_coordinates_accepted": true,
     "private_content_accepted": false,
     "artifact_code_executed": false,
-    "paid_orders_accepted": false,
+    "paid_testnet_orders_accepted": true,
+    "paid_mainnet_orders_accepted": false,
     "human_call_required": false
   },
   "pricing": {
     "catalog_search_usd": "0.00",
     "receipt_retrieval_usd": "0.00",
-    "fresh_public_static_validation_usd": "49.00",
-    "fresh_validation_availability": "stage_b_not_orderable",
-    "settlement_available": false
+    "sandbox_fresh_validation_test_usdc": "1.00",
+    "commercial_fresh_validation_hypothesis_usd": "49.00",
+    "sandbox_orderable": true,
+    "commercial_orderable": false
   }
 }

@@ -1,122 +1,107 @@
-# VouchSpec payment and reconciliation flow
+# VouchSpec agent-only payment and reconciliation flow
 
-Status: provider-neutral fulfillment plus an account-bound Stripe adapter are implemented and
-test-mode Checkout creation has been exercised against the authorized Stripe sandbox. The
-authenticated HTTP boundary still uses the fake nonsettling rail; live/public orders remain
-disabled.
+Status: the managed public sandbox accepts self-service agent registrations and exact x402 v2
+payments using test USDC on Base Sepolia. A settled testnet payment autonomously queues the
+immutable-source job, delivers a signed result, publishes cacheable receipt bytes, and exposes
+separate live invalidation status. There is no card form, hosted checkout, human approval, or
+manual delivery. Mainnet remains fail-closed.
 
-## Provider decision
+## Payment decision
 
-Stripe Checkout is the primary launch rail. It has no setup or monthly fee, supports hosted
-checkout, webhooks, refunds and balance-transaction reconciliation, and is familiar to
-developer buyers. x402 is the planned secondary machine-native rail after the conventional
-path is proven. Paddle is the fallback if merchant-of-record tax handling later outweighs
-its higher 5% + $0.50 fee.
+x402 is the only VouchSpec launch rail. It keeps the buyer and seller as software: an
+authenticated agent requests a protected HTTP resource, receives `402 Payment Required`, signs
+the exact payment, retries the same resource, and receives a settlement proof. The checked-in
+Stripe adapter is retained for regression/research only and is not connected to the managed API.
 
-Current official sources (accessed 2026-07-14):
+Current protocol references:
 
-- [Stripe pricing](https://stripe.com/pricing)
-- [Stripe Checkout lifecycle](https://docs.stripe.com/payments/checkout/how-checkout-works)
-- [Stripe account and sandbox behavior](https://docs.stripe.com/get-started/account)
-- [Stripe webhook requirements](https://docs.stripe.com/webhooks)
-- [Stripe refund API](https://docs.stripe.com/api/refunds/create)
-- [Stripe balance transactions](https://docs.stripe.com/api/balance_transactions)
-- [Stripe currency minimums](https://docs.stripe.com/currencies)
 - [Coinbase x402 flow](https://docs.cdp.coinbase.com/x402/core-concepts/how-it-works)
 - [Coinbase x402 facilitator](https://docs.cdp.coinbase.com/x402/core-concepts/facilitator)
 - [Coinbase x402 refund limitation](https://docs.cdp.coinbase.com/x402/support/faq)
-- [Paddle pricing](https://www.paddle.com/pricing)
-- [Paddle sandbox](https://developer.paddle.com/sdks/sandbox/)
 
-## Machine contract
+## Public machine contract
 
-1. A caller prepares the strict JSON request documented by
-   `fresh-validation-request.schema.json`.
-2. `vouchspec quote-fresh-validation REQUEST.json` validates the allowlisted public host,
-   full immutable commit, explicit skill path, profile, maximum price and delivery ID.
-3. The public preview returns USD 49.00, exact deliverable, limits, expiry, refund conditions,
-   payment options and remaining live gates. It is explicitly `orderable: false` today.
-4. The local HTTP sandbox uses only the deterministic fake provider. The separate reviewed
-   adapter can persist a Stripe test-mode quote/order. Both remain nonsettling and
-   `counts_for_goal: false`.
-5. The adapter persists the immutable quote and order before creating a Stripe Checkout
-   Session. The stored amount—not a client-returned amount—is authoritative.
-6. The Checkout Session and PaymentIntent carry only opaque `order_id`, `quote_id`, and the
-   configured Stripe account ID. Creation uses a deterministic SDK idempotency key.
-7. The service fulfills only after an authenticated webhook and server-side retrieval of the
-   Checkout Session and PaymentIntent confirm live mode, amount, currency, metadata and paid
-   status. Browser redirects never authorize work.
-8. Duplicate or out-of-order provider events are persisted, deduplicated by immutable event
-   ID, and reconciled as predecessor states arrive.
-9. The result endpoint returns the signed receipt and verification material. The service
-   records direct compute, provider costs, processing fee, delivery and refund status.
-10. A daily reconciliation pass reads the charge Balance Transaction. Revenue counts as
-   settled only when provider funds are available and remain non-refunded/non-disputed.
+Base URL: `https://vouchspec-sandbox.plyrium.com`
+
+1. `POST /api/vouchspec/v1/tenants` with the current machine terms acceptance. The response
+   returns an opaque tenant API key once; the service stores only a keyed digest.
+2. `POST /api/vouchspec/v1/quotes` with `Authorization: Bearer ...`, a unique
+   `Idempotency-Key`, and the strict `fresh_public_static_validation` request. The request pins
+   `github.com`, repository owner/name, a full lowercase commit, exact portable skill path,
+   fixed profile, maximum price, and opaque delivery ID.
+3. The sandbox quote is exactly 1.00 test USDC and is explicitly non-revenue. The separate
+   commercial hypothesis is USD $49 equivalent USDC; it is not mainnet-orderable today.
+4. `POST /api/vouchspec/v1/orders` with the quote ID and a new tenant-scoped idempotency key.
+   The response returns the order, a one-time order delivery token, and its purchase path.
+5. `GET` the purchase path with the bearer key and `X-VouchSpec-Delivery-Token`. Without a
+   payment it returns 402 and an x402 v2 `PAYMENT-REQUIRED` challenge for exact USDC on
+   `eip155:84532`.
+6. The agent signs that exact payment and retries the identical request with
+   `PAYMENT-SIGNATURE`. A successful settlement returns `PAYMENT-RESPONSE` and 202 while the
+   fulfillment lease is queued.
+7. A private authenticated worker lease freezes the exact Git commit and subdirectory. Static
+   inspection runs in a pinned no-egress, read-only container. A separate no-egress signer
+   re-verifies the bounded evidence before producing the DSSE envelope.
+8. The agent polls `GET /api/vouchspec/v1/orders/{order_id}` using both credentials, then reads
+   `/result` when delivered. The authenticated result is `no-store`.
+9. The same exact envelope bytes are published without credentials at the returned
+   content-addressed `/receipts/{sha256_hex}` URL with a one-year immutable cache policy.
+10. Every new reliance decision checks the separate `/receipts/{sha256_hex}/status` resource.
+    Receipt bytes never change; the no-store status can report invalidation or lifecycle change.
+
+The [machine discovery document](../distribution/discovery.json) contains the route templates,
+headers, network, issuer key, caching semantics, prices, and trust boundary in JSON.
 
 ## Independent state dimensions
 
-Order state and payment state are separate. A captured card can authorize a bounded job,
-while commercial revenue remains unsettled until provider availability.
+Order, payment, fulfillment, delivery, and commercial accounting remain separate. Testnet chain
+settlement authorizes work but is never revenue and never starts the commercial 14-day clock.
+The durable store uses tenant-bound idempotency, one settlement record per order, leased payment
+processing, a pre-settlement recovery checkpoint, and exact settlement/order binding to prevent
+replay or concurrent double fulfillment.
 
-Order: `checkout_pending -> payment_pending -> queued -> running -> delivered`, with explicit
-`payment_failed`, `fulfillment_failed`, and `cancelled` terminals.
+Delivery capabilities expire after 30 days and may be rotated or revoked. The order and result
+endpoints require both the tenant API key and order capability. Content-addressed public receipt
+bytes need neither credential because they are non-secret evidence; the separate status endpoint
+is what carries live invalidation.
 
-Payment: `pending -> captured -> available`, with explicit `failed`, `refund_pending ->
-refunded`, and `disputed` terminals.
+## Hosted proof
 
-The implementation rejects every transition not explicitly listed in
-`capabilityproof.commerce`. The durable SQLite implementation is in
-`capabilityproof.commerce_store`; it refuses to open one database under a different
-`sandbox`/`live` environment.
+On 2026-07-14, owner-controlled order `ord_01b1e85f188649a6b68e2dd2` completed the public
+flow. Base Sepolia transaction
+`0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11` settled exactly 1.00
+test USDC. The leased worker and signer delivered receipt `cpr_2bb3259dd33d0cbadf7580dc` with
+envelope digest `sha256:f76d3c36a611bf304e6d87ff02331e0298282ed449a335b5704d54bedb0c0c53`.
+The signature verified with issuer key `PWGCY2HpACKhufnSBjbf2zwMzThqxyPTz_MAwCyJ0I0`; the
+public bytes exactly matched the authenticated result and live status returned `CURRENT`.
 
-The sandbox HTTP boundary in `capabilityproof.commerce_api` uses
-`capabilityproof.commerce_access` to authenticate keyed-digest API credentials, scope
-idempotency and every quote/order to one tenant, require an expiring order capability for
-status/result reads, and record rotation/revocation/result-publication audit events without
-plaintext credentials. It still connects only to the fake nonsettling provider.
+This proof is deliberately marked `counts_for_goal: false`. It is not an external request,
+customer, buyer, payment, revenue, or adoption event.
 
-## Stripe adapter and webhook security
+## Accounting and remedies
 
-`StripePaymentAdapter` pins `stripe==15.3.0` and API version `2026-06-24.dahlia`, verifies the
-credential against an expected enabled account ID, creates exact hosted Checkout Sessions, and
-never persists the API key, webhook secret, or Checkout URL. Official SDK verification consumes
-the exact raw webhook bytes. Signed events are allowlisted, content-bound to immutable event IDs,
-deduplicated, and recovered through a bounded processing lease after a crash. Financial state is
-derived only after server-side retrieval and cross-binding of the Checkout Session,
-PaymentIntent, Charge, and Balance Transaction. Partial refunds, future-dated availability,
-account/environment mismatches, and ambiguous objects fail closed.
+Every order records the immutable quote, chain/payment identifiers, fulfillment events, direct
+cost fields, envelope/receipt identifiers, delivery state, remedy state, and contribution impact.
+Only an unrelated buyer's Base mainnet settlement may become revenue, and only after exclusion
+of owner/related/test funds and any refund, reversal, dispute, or unresolved remedy.
 
-On 2026-07-14 the authorized test credential passed account binding and created a USD $49.00
-`livemode=false` Checkout Session. Reconciliation found no PaymentIntent before payment; the
-session was then expired unpaid. The live credential was checked read-only and belongs to a
-separate enabled account whose configured business URL is `www.plyrium.com`. No charge or
-commercial metric resulted. No Stripe listener or public webhook route is exposed yet.
+x402 does not supply a card-style refund object. Before mainnet activation VouchSpec must make
+the disclosed automatic remedy executable as an onchain return/payment operation, record its
+transaction and costs, and prevent the refunded amount from counting toward settled gross.
 
-## Paid receipt lifecycle
+## Remaining mainnet gates
 
-Delivered Stage B receipts can be exactly covered by an unsigned online draft, transferred to
-the existing offline `sign-lifecycle` root-signing command, and atomically imported with
-`publish-paid-lifecycle`. Publication binds the recovery-root key, exact envelope, contiguous
-sequence, delivered receipt/order IDs, and exact issuer-key set. Rollback, equal-sequence
-equivocation, root replacement, signer removal, restoration of retired/compromised keys, and
-reversal of terminal receipt states are rejected. `export-paid-lifecycle` returns the exact
-latest signed envelope; the online database never receives root private material.
+- Configure a separate live receiving identity, mainnet facilitator/network allowlist, live
+  secrets, and isolated live database. Test and live objects must never share state.
+- Exercise settlement recovery against mainnet-compatible RPC/facilitator behavior without
+  weakening the current fail-closed checkpoint and replay controls.
+- Implement and test the automatic onchain remedy/refund path, including duplicate settlement,
+  fulfillment failure, invalid signature, and wrong source/commit/path/digest cases.
+- Reconcile actual chain/facilitator, worker, storage, delivery, and remedy costs per order and
+  refuse work that cannot retain positive contribution at the quoted price.
+- Run a genuine unrelated agent purchase, preserve its attribution evidence, and count it only
+  after the settlement and exclusion rules pass.
 
-## Remaining live gates
-
-- Managed-HTTPS deployment of the implemented authenticated quote/order/result boundary,
-  including trusted-edge source limits, secret-manager provisioning, restricted database
-  permissions, and automated real-buyer credential issuance/recovery.
-- Connect the reviewed Stripe adapter to authenticated quote/order creation and an exact-body
-  Stripe webhook route, provision a mode-specific webhook endpoint/secret, and complete one
-  noncommercial test-card payment through Balance Transaction reconciliation.
-- Operational no-network signing role with an owner-controlled production issuer key and
-  allowlisted production image.
-- Managed ephemeral fetch storage with a kernel-enforced quota.
-- Only after those controls are deployed, enable live Checkout explicitly and process a genuine
-  purchase. Test, owner, related-party, pending, reversed, refunded, and disputed activity must
-  remain excluded from commercial counters.
-
-The immutable fetcher, no-egress worker, constrained signing gate, durable event/cost store,
-authenticated sandbox API, and sandbox end-to-end fulfillment are complete. Their limits and proof are documented in
-[Stage B operations](stage-b-operations.md).
+The worker, signer, immutable receipt publication, invalidation, and public self-service API are
+already hosted and proven on testnet. Mainnet enablement must change payment environment and
+accounting—not reintroduce humans or broaden accepted artifact inputs.
