@@ -18,13 +18,41 @@ jobs:
     timeout-minutes: 12
     environment: vouchspec-testnet
     steps:
-      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
-      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+      - name: Claim one paid job before allocating build work
+        id: claim
+        env:
+          VOUCHSPEC_API_BASE_URL: ${{ vars.VOUCHSPEC_API_BASE_URL }}
+          VOUCHSPEC_WORKER_TOKEN: ${{ secrets.VOUCHSPEC_WORKER_TOKEN }}
+        run: |
+          set -euo pipefail
+          claim_file="$RUNNER_TEMP/vouchspec-claim-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.json"
+          echo "VOUCHSPEC_PRECLAIMED_JOB=$claim_file" >> "$GITHUB_ENV"
+          worker_token="${VOUCHSPEC_WORKER_TOKEN//$'\r'/}"
+          worker_token="${worker_token//$'\n'/}"
+          status="$(curl --proto '=https' --tlsv1.2 --noproxy '*' \
+            --connect-timeout 10 --max-time 30 --max-redirs 0 --max-filesize 1000000 \
+            --silent --show-error --output "$claim_file" --write-out '%{http_code}' \
+            --request POST "$VOUCHSPEC_API_BASE_URL/api/vouchspec/v1/internal/fulfillment/claim" \
+            --header "Authorization: Bearer $worker_token" \
+            --header 'Content-Type: application/json' \
+            --header 'Accept: application/json' \
+            --header 'X-VouchSpec-Worker-Id: github-actions-stage-b' \
+            --data-binary '{"worker_version":"vouchspec-stage-b-worker-v1"}')"
+          case "$status" in
+            200) test -s "$claim_file"; echo "has_job=true" >> "$GITHUB_OUTPUT" ;;
+            204) test ! -s "$claim_file"; echo "has_job=false" >> "$GITHUB_OUTPUT" ;;
+            *) rm -f -- "$claim_file"; exit 1 ;;
+          esac
+      - if: steps.claim.outputs.has_job == 'true'
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - if: steps.claim.outputs.has_job == 'true'
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with:
           python-version: "3.11"
           cache: pip
           cache-dependency-path: distribution/github-action/requirements-linux-x86_64-py311.lock
       - name: Install hash-locked host runtime
+        if: steps.claim.outputs.has_job == 'true'
         run: |
           set -euo pipefail
           python -m pip install \
@@ -34,6 +62,7 @@ jobs:
             -r distribution/github-action/requirements-linux-x86_64-py311.lock
           python -m pip install --no-deps --no-build-isolation .
       - name: Build immutable local worker image
+        if: steps.claim.outputs.has_job == 'true'
         id: worker-image
         run: |
           set -euo pipefail
@@ -43,6 +72,7 @@ jobs:
           case "$image" in sha256:????????????????????????????????????????????????????????????????) ;; *) exit 1 ;; esac
           echo "image=$image" >> "$GITHUB_OUTPUT"
       - name: Materialize encrypted signing key
+        if: steps.claim.outputs.has_job == 'true'
         env:
           ISSUER_PRIVATE_KEY_B64: ${{ secrets.VOUCHSPEC_ISSUER_PRIVATE_KEY_B64 }}
           ISSUER_PASSPHRASE_B64: ${{ secrets.VOUCHSPEC_ISSUER_PASSPHRASE_B64 }}
@@ -59,6 +89,7 @@ jobs:
           echo "VOUCHSPEC_SECRET_DIR=$secret_dir" >> "$GITHUB_ENV"
           echo "VOUCHSPEC_WORK_ROOT=$work_root" >> "$GITHUB_ENV"
       - name: Claim, isolate, sign, and deliver one paid request
+        if: steps.claim.outputs.has_job == 'true'
         env:
           PYTHONPATH: ${{ github.workspace }}/src
           VOUCHSPEC_API_BASE_URL: ${{ vars.VOUCHSPEC_API_BASE_URL }}
@@ -73,6 +104,6 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
-          for path in "${VOUCHSPEC_SECRET_DIR:-}" "${VOUCHSPEC_WORK_ROOT:-}"; do
+          for path in "${VOUCHSPEC_SECRET_DIR:-}" "${VOUCHSPEC_WORK_ROOT:-}" "${VOUCHSPEC_PRECLAIMED_JOB:-}"; do
             case "$path" in "$RUNNER_TEMP"/vouchspec-*) rm -rf -- "$path" ;; "") ;; *) exit 1 ;; esac
           done
