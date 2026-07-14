@@ -81,6 +81,8 @@ def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_com
     assert "--max-redirs 0" in workflow
     assert "--max-filesize 1000000" in workflow
     assert "VOUCHSPEC_PRECLAIMED_JOB" in workflow
+    assert "VouchSpec claim HTTP status: $status" in workflow
+    assert '[[ "$status" == "204" ]]' in workflow
     assert "VOUCHSPEC_ISSUER_PRIVATE_KEY_B64" in workflow
     assert "VOUCHSPEC_WORKER_TOKEN" in workflow
     assert "--network host" not in workflow

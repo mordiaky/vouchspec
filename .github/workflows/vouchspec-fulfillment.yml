@@ -38,11 +38,21 @@ jobs:
             --header 'Accept: application/json' \
             --header 'X-VouchSpec-Worker-Id: github-actions-stage-b' \
             --data-binary '{"worker_version":"vouchspec-stage-b-worker-v1"}')"
-          case "$status" in
-            200) test -s "$claim_file"; echo "has_job=true" >> "$GITHUB_OUTPUT" ;;
-            204) test ! -s "$claim_file"; echo "has_job=false" >> "$GITHUB_OUTPUT" ;;
-            *) rm -f -- "$claim_file"; exit 1 ;;
-          esac
+          echo "VouchSpec claim HTTP status: $status"
+          if [[ "$status" == "200" ]]; then
+            if [[ ! -s "$claim_file" ]]; then
+              echo "VouchSpec returned 200 without a claim document." >&2
+              exit 1
+            fi
+            echo "has_job=true" >> "$GITHUB_OUTPUT"
+          elif [[ "$status" == "204" ]]; then
+            rm -f -- "$claim_file"
+            echo "has_job=false" >> "$GITHUB_OUTPUT"
+          else
+            rm -f -- "$claim_file"
+            echo "VouchSpec claim returned unexpected HTTP status $status." >&2
+            exit 1
+          fi
       - if: steps.claim.outputs.has_job == 'true'
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
       - if: steps.claim.outputs.has_job == 'true'
