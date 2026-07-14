@@ -25,9 +25,9 @@
     "verified_integrations": 0,
     "owned_demo": "https://github.com/mordiaky/vouchspec-demo",
     "owned_demo_counts": false,
-    "qualified_prospects": 1,
-    "contacts": 1,
-    "open_proposals": ["https://github.com/supabase/agent-skills/issues/136"]
+    "qualified_prospects": 2,
+    "contacts": 2,
+    "open_proposals": ["https://github.com/supabase/agent-skills/issues/136", "https://github.com/K-Dense-AI/scientific-agent-skills/issues/211"]
   },
   "machine_use": {
     "required_requests": 100,
@@ -87,10 +87,10 @@
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Convert the first qualified publisher proposal into a retained external integration",
+    "Convert one of the two qualified publisher proposals into a retained external integration",
     "Implement authenticated delivery-token API and real Stripe adapter",
     "Reduce payment activation to the minimum unavoidable owner credential gate"
   ],
-  "last_checkpoint_time": "2026-07-14T13:02:04Z",
+  "last_checkpoint_time": "2026-07-14T13:07:43Z",
   "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, and the latest public issue/demo runs. Preserve all exclusion rules and the no-upload/no-execution boundary."
 }

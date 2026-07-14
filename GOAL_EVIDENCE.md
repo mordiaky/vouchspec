@@ -1,7 +1,7 @@
 # Goal evidence
 
-The goal is **not achieved**. Public Stage A is live and the first tailored external adoption
-proposal has been made, but there are no qualifying external integrations, requests, buyers,
+The goal is **not achieved**. Public Stage A is live and two tailored external adoption
+proposals have been made, but there are no qualifying external integrations, requests, buyers,
 payments, or autonomous paid-operation days. The owned demo and all operator/CI/monitoring
 traffic are explicitly excluded.
 
@@ -32,7 +32,7 @@ traffic are explicitly excluded.
 | 23 | Fourteen consecutive autonomous days after first settled payment | Pending: clock not started |
 | 24 | Monitoring through recovery/support/financial logging runs during that period | Pending |
 | 25 | No ordinary order requires a call, review, meeting, or manual delivery | Partial: sandbox order was fully autonomous; no genuine order yet |
-| 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has one contact |
+| 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has two contacts but no response/integration |
 | 27 | One paid fulfillment process completes more than one real order | Pending: 0 |
 | 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: discovery/integration/quote/verify and Stage B operations documented; public purchase disabled |
 | 29 | Independent goal-auditor inspects complete evidence | Pending until tests 1-28 have evidence |
@@ -47,7 +47,8 @@ traffic are explicitly excluded.
 - Public GitHub-managed TLS/CORS distribution and a public installable read-only stdio MCP.
 - Public owned demo run `29331787790` with pass/failure matrix assertions and four independently
   verified workflow-bound attestations. It proves integration mechanics only.
-- One public, repository-specific proposal to an unrelated publisher. It proves outreach only.
+- Two public, repository-specific proposals to unrelated publishers: Supabase issue `136` and
+  K-Dense issue `211`. They prove outreach only; both are open without maintainer response.
 - One complete Stage B sandbox order: exact GitHub commit freeze, no-egress/no-host-write
   Docker worker, constrained DSSE signing, all direct-cost fields, event reconciliation, and
   delivery. `fulfillment/stage-b-sandbox-proof.json` marks it operator-owned,
@@ -57,4 +58,7 @@ traffic are explicitly excluded.
 
 Evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
 `CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, public CI/attestation URLs, and the
-final independent audit when eligible.
+final independent audit when eligible. Current public engineering/adoption references include
+`https://github.com/mordiaky/vouchspec/actions/runs/29335063432`,
+`https://github.com/supabase/agent-skills/issues/136`, and
+`https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`.

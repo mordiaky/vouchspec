@@ -7,8 +7,10 @@
   passes and structural failures; a complete public demo is available at
   `https://github.com/mordiaky/vouchspec-demo`. Run `29331787790` passed both cases and all
   four downloaded files passed independent GitHub attestation verification.
-- **External adoption:** 0 / 3 retained unrelated integrations. One tailored proposal is open
-  at `https://github.com/supabase/agent-skills/issues/136`; an issue is outreach, not adoption.
+- **External adoption:** 0 / 3 retained unrelated integrations. Two tailored proposals are
+  open at `https://github.com/supabase/agent-skills/issues/136` and
+  `https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`; issues are outreach,
+  not adoption. Neither has a maintainer response yet.
 - **External machine use:** 0 / 100 legitimate requests; 0 / 10 sources; 0 / 20 repeat
   requests; 0 / 5 repeat sources.
 - **Commerce:** the first product is a USD $49 exact-version public static validation. Its
@@ -25,7 +27,9 @@
   owner-controlled identity, business, payout, and provider credentials.
 - **Boundary:** public immutable sources only; no uploads, private repositories, confidential
   content, or artifact execution.
+- **Verification:** commit `1c92d347232c26e090752ca61a3744f872b0f86c` is public and Linux CI
+  run `29335063432` passed.
 
-Next: publish the sandbox-ready Stage B code and proof, follow the first unrelated adoption
-proposal, perform the next permitted repository-specific adoption action, and implement the
-authenticated delivery-token API plus real Stripe adapter before requesting payment activation.
+Next: follow both unrelated adoption proposals, continue the rules-limited publisher channel,
+and implement the authenticated delivery-token API plus real Stripe adapter before requesting
+payment activation.
