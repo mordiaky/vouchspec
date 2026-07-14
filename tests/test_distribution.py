@@ -64,3 +64,18 @@ def test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intak
     }
     assert discovery["pricing"]["fresh_validation_availability"] == "stage_b_not_orderable"
     assert discovery["pricing"]["settlement_available"] is False
+
+
+def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands() -> None:
+    workflow_path = ROOT / ".github" / "workflows" / "vouchspec-fulfillment.yml"
+    workflow = workflow_path.read_text(encoding="utf-8")
+    assert "pull_request" not in workflow
+    assert "environment: vouchspec-testnet" in workflow
+    assert 'cron: "*/5 * * * *"' in workflow
+    assert "permissions:\n  contents: read" in workflow
+    assert "--require-hashes" in workflow
+    assert "python -I -m capabilityproof.hosted_worker" in workflow
+    assert "VOUCHSPEC_ISSUER_PRIVATE_KEY_B64" in workflow
+    assert "VOUCHSPEC_WORKER_TOKEN" in workflow
+    assert "--network host" not in workflow
+    assert "wallet" not in workflow.lower()
