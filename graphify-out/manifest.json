@@ -1,0 +1,332 @@
+{
+  "STATE.json": {
+    "mtime": 1784001566.8788557,
+    "ast_hash": "eeb9920a7af774918dfdd2eec6606421",
+    "semantic_hash": ""
+  },
+  "receipts/public/openai-skill-creator-49f948faa9258a0c61caceaf225e179651397431.json": {
+    "mtime": 1784001424.2437105,
+    "ast_hash": "790e9349c9471f432decfd26803f25c2",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/__init__.py": {
+    "mtime": 1783999233.0886614,
+    "ast_hash": "1ff024ae1cea2d78dd078e3669b4f90d",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/__main__.py": {
+    "mtime": 1784002214.847669,
+    "ast_hash": "5109ab95441454c3d40c9321c4c146b7",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/api.py": {
+    "mtime": 1784001144.6634278,
+    "ast_hash": "533322346d82df8662cde8b6ba9f947c",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/cli.py": {
+    "mtime": 1784000366.577498,
+    "ast_hash": "f09ec1e846d1d5beb2edde615c2f28d5",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/errors.py": {
+    "mtime": 1784002214.847669,
+    "ast_hash": "7377020947b4caca7e32d53ae5c1616f",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/mcp_server.py": {
+    "mtime": 1784000677.5157986,
+    "ast_hash": "f454bcb2f23223420d1b574b4e574211",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/provenance.py": {
+    "mtime": 1784001024.5661495,
+    "ast_hash": "63fb012e99d14db70bc5597cc13dbeca",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/receipt.py": {
+    "mtime": 1784001191.289282,
+    "ast_hash": "32527df99ffbd208db164716b3843597",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/schemas/capability-receipt.schema.json": {
+    "mtime": 1784001191.289282,
+    "ast_hash": "799436042c95b82a730814bc5727bf58",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/skill.py": {
+    "mtime": 1784001391.972289,
+    "ast_hash": "ecd98a05cc6e9407953bd19721a30c66",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/snapshot.py": {
+    "mtime": 1784001191.2882814,
+    "ast_hash": "60bc282782dd732d8ec89f95524a8b62",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/static_analysis.py": {
+    "mtime": 1784001112.6229393,
+    "ast_hash": "4bbdfa292e2a5f4c4b54c58e890fcde9",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/risky-skill/scripts/danger.py": {
+    "mtime": 1784002214.8501766,
+    "ast_hash": "65207c458d30766f693489ba55ec2712",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/valid-skill/scripts/normalize.py": {
+    "mtime": 1784002214.8526936,
+    "ast_hash": "0848ad4f8521c40f0f7aa905757f7554",
+    "semantic_hash": ""
+  },
+  "tests/test_api.py": {
+    "mtime": 1784001144.6644292,
+    "ast_hash": "d92ab3769bdcc92fa5010637e7fb1a95",
+    "semantic_hash": ""
+  },
+  "tests/test_distribution.py": {
+    "mtime": 1784000602.001429,
+    "ast_hash": "8840d9c1b561dd8d8a763b0d540d5543",
+    "semantic_hash": ""
+  },
+  "tests/test_inspector.py": {
+    "mtime": 1784001391.9732876,
+    "ast_hash": "f4781f3baecf3321f3f4b20e59fdccdb",
+    "semantic_hash": ""
+  },
+  "tests/test_mcp.py": {
+    "mtime": 1784000637.67475,
+    "ast_hash": "ca9414bd612c3635bc19ff23d5e1df5c",
+    "semantic_hash": ""
+  },
+  "tests/test_provenance.py": {
+    "mtime": 1784001024.56815,
+    "ast_hash": "658028b777159db71683cae0b5e785a4",
+    "semantic_hash": ""
+  },
+  "tests/test_public_receipt.py": {
+    "mtime": 1784001441.1871002,
+    "ast_hash": "2b20f39c71c020d71b6ad32b8bb78a60",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1784002214.8441565,
+    "ast_hash": "e30ebbbbb0686b2ea791a898bce0c83c",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1784002059.1389894,
+    "ast_hash": "8487b458513909bd6a7be465d4c1086d",
+    "semantic_hash": ""
+  },
+  "ASSUMPTIONS.md": {
+    "mtime": 1784001638.5406501,
+    "ast_hash": "c6f7ec87d6cf03be2f8ebc221f5a2c86",
+    "semantic_hash": ""
+  },
+  "BACKLOG.md": {
+    "mtime": 1784001638.5431542,
+    "ast_hash": "a0de5d2797b2bab9f7b69f547a188421",
+    "semantic_hash": ""
+  },
+  "BUSINESS_PLAN.md": {
+    "mtime": 1784001605.6937773,
+    "ast_hash": "89c3489b023ee8ccc4d32e901279f0f4",
+    "semantic_hash": ""
+  },
+  "CHARTER.md": {
+    "mtime": 1783998016.6731741,
+    "ast_hash": "5e491249da096346017d0de0a11c8829",
+    "semantic_hash": ""
+  },
+  "COMPLIANCE_CHECKLIST.md": {
+    "mtime": 1784002136.7375243,
+    "ast_hash": "94deb63fbf5153890605206f6b5173b7",
+    "semantic_hash": ""
+  },
+  "COPYRIGHT.md": {
+    "mtime": 1783998016.6741736,
+    "ast_hash": "e74c6a1e5645116e534a5e5d9f2bc5b4",
+    "semantic_hash": ""
+  },
+  "CUSTOMER_FEEDBACK.md": {
+    "mtime": 1783998016.6741736,
+    "ast_hash": "d4ec1b79095f7d7d81f3c02c528e4536",
+    "semantic_hash": ""
+  },
+  "DECISIONS.md": {
+    "mtime": 1784002136.7365212,
+    "ast_hash": "ede8c5f033330b7ec27e02376f6e8cb0",
+    "semantic_hash": ""
+  },
+  "GOAL.md": {
+    "mtime": 1783998016.6751733,
+    "ast_hash": "dde0ed61bdebb399bc1f26cb2e7e24bb",
+    "semantic_hash": ""
+  },
+  "GOAL_EVIDENCE.md": {
+    "mtime": 1784001757.9414752,
+    "ast_hash": "fdb993832ff79cc741e8ddb1da5e20a8",
+    "semantic_hash": ""
+  },
+  "HUMAN_ACTIONS.md": {
+    "mtime": 1783998016.6756756,
+    "ast_hash": "2a235e4dfbda994197323ef1a3bc3c3e",
+    "semantic_hash": ""
+  },
+  "NEXT_ACTION.md": {
+    "mtime": 1784001566.88036,
+    "ast_hash": "217afb3e3d242ac96db54555c8b60e6c",
+    "semantic_hash": ""
+  },
+  "OFFER.md": {
+    "mtime": 1784001605.696282,
+    "ast_hash": "3fa6a17da29d3cfa29415a2cf38b2bc2",
+    "semantic_hash": ""
+  },
+  "PRICING.md": {
+    "mtime": 1784001605.6977973,
+    "ast_hash": "31a0eb467aa1ba4442dd10da0be5a983",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1784001280.2688787,
+    "ast_hash": "37d9ee5d3b8ff466143d3edf57b9982b",
+    "semantic_hash": ""
+  },
+  "RISK_REGISTER.md": {
+    "mtime": 1784001678.6315026,
+    "ast_hash": "5bbb7e878c2befe94ea9ed17a92a126a",
+    "semantic_hash": ""
+  },
+  "STATUS.md": {
+    "mtime": 1784001566.8778577,
+    "ast_hash": "d19af8749fbbe04731185394217f8cb3",
+    "semantic_hash": ""
+  },
+  "analytics/README.md": {
+    "mtime": 1783998016.6786835,
+    "ast_hash": "93efc2149df149150cba5d4606e18c79",
+    "semantic_hash": ""
+  },
+  "backups/README.md": {
+    "mtime": 1783998016.6796887,
+    "ast_hash": "ad5f4c2550b071d6b21f2fe3ca94b2a0",
+    "semantic_hash": ""
+  },
+  "distribution/github-action/README.md": {
+    "mtime": 1784000366.578504,
+    "ast_hash": "acdea22ec689e0d1e827faf32c3c54f6",
+    "semantic_hash": ""
+  },
+  "distribution/github-action/action.yml": {
+    "mtime": 1784000366.577498,
+    "ast_hash": "1cc3e6889781ffef34e7563270505b87",
+    "semantic_hash": ""
+  },
+  "distribution/verify-before-install/SKILL.md": {
+    "mtime": 1784002136.7360187,
+    "ast_hash": "0aec15a42ccc669ada11902b5f6c92d8",
+    "semantic_hash": ""
+  },
+  "docs/methodology.md": {
+    "mtime": 1784001867.6364777,
+    "ast_hash": "1ac3374da9efdcc294857fa4d234f01c",
+    "semantic_hash": ""
+  },
+  "fulfillment/README.md": {
+    "mtime": 1784002059.1399899,
+    "ast_hash": "6109b3288517d153bb4700d500c7cc8e",
+    "semantic_hash": ""
+  },
+  "logs/2026-07-13-e001-verification.md": {
+    "mtime": 1784001757.9414752,
+    "ast_hash": "2d1b8ea6574a5fac4b896178e9917c8d",
+    "semantic_hash": ""
+  },
+  "logs/2026-07-13-initialization.md": {
+    "mtime": 1783998016.6806877,
+    "ast_hash": "4bac2b91d28133e7d9c835a795c30157",
+    "semantic_hash": ""
+  },
+  "marketing/README.md": {
+    "mtime": 1783998016.6806877,
+    "ast_hash": "dfa6003386a8f7bc7ae81c4aa84de947",
+    "semantic_hash": ""
+  },
+  "product/README.md": {
+    "mtime": 1783998016.6816883,
+    "ast_hash": "d9b8f6fa7d64f2dc971340819ecb584e",
+    "semantic_hash": ""
+  },
+  "receipts/public/openai-skill-creator-49f948faa9258a0c61caceaf225e179651397431.md": {
+    "mtime": 1784001757.9424748,
+    "ast_hash": "65a7d078e43d3be042f973ff4af4d937",
+    "semantic_hash": ""
+  },
+  "research/README.md": {
+    "mtime": 1783998016.682688,
+    "ast_hash": "24a73eae77e8b488aadd5d5561c53685",
+    "semantic_hash": ""
+  },
+  "research/independent-mvp-review.md": {
+    "mtime": 1784002214.8451607,
+    "ast_hash": "b519cc146cccbddc0b9a21dffd51bef6",
+    "semantic_hash": ""
+  },
+  "research/market-and-competitor-evidence.md": {
+    "mtime": 1784002214.846161,
+    "ast_hash": "d593cc15123073ecee1d57f08758bef7",
+    "semantic_hash": ""
+  },
+  "research/mvp-threat-model.md": {
+    "mtime": 1783998990.1848152,
+    "ast_hash": "07d7e3f5e9282512e8580534a12203cf",
+    "semantic_hash": ""
+  },
+  "research/standards-and-name-evidence.md": {
+    "mtime": 1784002214.846664,
+    "ast_hash": "696b7b93605d45ec74442edfa8de3da9",
+    "semantic_hash": ""
+  },
+  "sops/README.md": {
+    "mtime": 1783998016.682688,
+    "ast_hash": "fccc25adc187dc34adee289ea64ebebb",
+    "semantic_hash": ""
+  },
+  "sops/demand-experiment.md": {
+    "mtime": 1784001757.9445465,
+    "ast_hash": "0caa9eeb1311135f88e6d514aff7fbb7",
+    "semantic_hash": ""
+  },
+  "sops/local-validation-and-delivery.md": {
+    "mtime": 1784001757.94398,
+    "ast_hash": "5b10984c1ca137318507c56d868249c0",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/invalid-skill/SKILL.md": {
+    "mtime": 1784002214.8486702,
+    "ast_hash": "18d97d2579ffa1aa217184557ee7e1e6",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/risky-skill/SKILL.md": {
+    "mtime": 1784002214.8496706,
+    "ast_hash": "3696d08b2082887ac3e5b30e86d874cc",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/valid-skill/SKILL.md": {
+    "mtime": 1784002214.8511856,
+    "ast_hash": "360719c0b3e286b0dcf6a0db9e9c39d9",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/valid-skill/references/guide.md": {
+    "mtime": 1784002214.8511856,
+    "ast_hash": "820f95d162778da517ac9b4ff28d8f94",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/valid-skill/requirements.txt": {
+    "mtime": 1784002214.8511856,
+    "ast_hash": "81a81da828f2d031e7228c90836ea610",
+    "semantic_hash": ""
+  }
+}
