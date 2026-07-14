@@ -1,20 +1,18 @@
 # Human actions
 
-No owner action is currently required. Public distribution, demonstration, targeted adoption,
-safe Stage B engineering, provider-neutral commerce contracts, and local/sandbox tests can
-continue autonomously.
+No owner action is currently required. Public distribution, targeted adoption, safe Stage B
+engineering, CDP Bazaar verification, and local/sandbox tests can continue autonomously.
 
-The bounded worker, order system, authenticated tenant/order/result sandbox, reviewed Stripe
-adapter, and offline-root paid-receipt lifecycle are ready. The owner has authorized the existing
-Stripe credentials stored outside the repository; both test and live account identities
-were verified without copying secrets, and the live account reports charges and payouts enabled.
-No additional owner input is needed while the managed deployment/webhook integration is built.
+The bounded worker, order system, tenant/order/result sandbox, official CDP-facilitated one-call
+x402 route, and offline-root paid-receipt lifecycle are ready. A dedicated read-only CDP server
+key is encrypted in the branch-scoped Vercel environment; no wallet seed or CDP wallet secret is
+present in the application. Stripe remains regression-only and is not a customer purchase path.
 
-The next unavoidable owner gate, if Stripe presents one, is limited to an interactive dashboard
-confirmation that cannot be completed through the existing authenticated account (for example a
-new production webhook, terms, or tax setting). Live MCP Registry or GitHub Marketplace
-publication may separately require owner authentication or terms acceptance; neither will be
-inferred or performed prematurely.
+The next unavoidable owner gate, if any, is limited to interactive authentication, terms, or a
+financial-account action that cannot be completed through the existing authorized sessions. Live
+MCP Registry or GitHub Marketplace publication may separately require owner authentication or
+terms acceptance; neither will be inferred or performed prematurely.
 
-Delaying those future actions will delay live settlement or listing, but does not block current
-engineering, publisher adoption work, documentation, monitoring, or evidence collection.
+Delaying those future actions will delay mainnet settlement or marketplace publication, but does
+not block current testnet engineering, Bazaar seeding, publisher adoption, monitoring, or evidence
+collection.

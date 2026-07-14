@@ -7,6 +7,27 @@ Stripe/loopback launch assessment; the Stripe adapter remains regression-only.
 
 ## Closed launch findings
 
+### Anonymous Bazaar intake and deterministic credential bootstrap
+
+- **Risk:** removing tenant registration before payment could create an unauthenticated resource
+  allocation surface, let one authorization adopt another request, or disclose a settled buyer's
+  tenant and delivery capabilities.
+- **Control:** the route rate-limits before parsing; accepts only bounded strict JSON and immutable
+  public GitHub coordinates; allocates durable objects only after CDP verification; derives tenant,
+  quote, order, API-key, and delivery-token identities from a domain-separated HMAC of the signed
+  payment authorization; binds retries to the exact stored request digest and payment payload; and
+  returns capabilities only to the same payment proof. Capabilities are no-store bearer values,
+  stored only as keyed digests, expiring, rotatable, revocable, and tenant-bound.
+
+### CDP facilitator credential and wallet separation
+
+- **Risk:** a Coinbase credential with wallet custody or transfer rights in the web application
+  could turn an endpoint compromise into a funds compromise.
+- **Control:** the branch-scoped Vercel deployment contains only a dedicated CDP API key ID and
+  secret used to authenticate facilitator `verify` and `settle`. The key is read-only. No wallet
+  seed, private key, or `CDP_WALLET_SECRET` is configured, documented as acceptable, or passed to
+  fulfillment. The application fails closed when the CDP credentials are absent or malformed.
+
 ### Cross-tenant order or result access
 
 - **Risk:** enumeration or credential reuse could disclose another tenant's request or result.
@@ -63,6 +84,14 @@ Stripe/loopback launch assessment; the Stripe adapter remains regression-only.
   fixed; run `29359911240` completed successfully. Alerts remain enabled only for failed runs.
 
 ## Residual mainnet gates
+
+### Bazaar listing awaits its first CDP settlement
+
+CDP indexes a Bazaar-enabled seller only after the first successful settlement through the CDP
+facilitator. The live route's HTTP 402 response and Bazaar metadata are verified, and an invalid
+authorization is rejected without settlement, but public Bazaar search does not yet return the
+endpoint. Complete one owner-controlled Base-Sepolia settlement, exclude it from all goal and
+revenue counters, verify fulfillment and receipt status, and then verify the public listing.
 
 ### Onchain remedies are not yet executable
 

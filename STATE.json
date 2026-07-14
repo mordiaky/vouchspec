@@ -3,7 +3,7 @@
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
   "goal_status": "active_not_achieved",
-  "stage": "stage_a_public_live_stage_b_authenticated_stripe_http_test_proven_not_public",
+  "stage": "stage_a_public_live_stage_b_agent_only_x402_cdp_bazaar_intake_live",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
     "excluded": ["arbitrary uploads", "private repositories", "confidential content", "artifact execution"]
@@ -44,14 +44,16 @@
     "product": "fresh_public_static_validation",
     "price_currency": "USD",
     "price_amount": "49.00",
-    "request_contract": "implemented_strict_preview_tenant_bound_authenticated_sandbox",
-    "quote_orderable": false,
-    "settlement_available": false,
+    "request_contract": "public_strict_one_call_agent_only_x402_bazaar_intake",
+    "quote_orderable": true,
+    "settlement_available": true,
     "sandbox_fulfillment": "complete_signed_delivery_excluded_from_metrics",
-    "primary_provider": "stripe_checkout",
-    "secondary_provider": "x402",
-    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/provider-event/cost store", "fake-provider sandbox delivery", "loopback authenticated tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "account-bound pinned Stripe adapter with server-retrieved payment-chain reconciliation", "authenticated Stripe-test quote/order and exact-body webhook HTTP boundary", "owner-authorized real unpaid Stripe test Checkout probes including one through the HTTP boundary", "offline-root paid receipt lifecycle with monotonic invalidation", "enabled owner Stripe account identity and payout boundary verified read-only"],
-    "remaining_gates": ["managed TLS deployment of the connected boundary with trusted-edge source limits secret manager restricted database and audit aggregation", "kernel-quota-enforced ephemeral network-fetch scratch volume", "mode-specific public Stripe test webhook endpoint and complete test-card reconciliation", "operational production signing role"]
+    "primary_provider": "x402_cdp_facilitator",
+    "secondary_provider": "none_agent_only",
+    "bazaar_catalog_status": "metadata_live_first_cdp_settlement_pending",
+    "stripe_status": "regression_only_not_a_purchase_path",
+    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/payment/cost store", "managed TLS public sandbox", "strict tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "anonymous-before-payment one-call x402 intake", "official x402 Bazaar metadata extension", "authenticated CDP facilitator verify and settle boundary", "deterministic payment-derived tenant and delivery bootstrap", "payment replay and settlement recovery binding", "branch-scoped encrypted CDP server credential without wallet custody", "offline-root paid receipt lifecycle with monotonic invalidation", "public immutable cacheable receipt and separate no-store invalidation status"],
+    "remaining_gates": ["first excluded CDP settlement and public Bazaar indexing confirmation", "kernel-quota-enforced ephemeral network-fetch scratch volume", "mainnet duplicate-settlement and objective-failure remedy transactions", "mode-separated mainnet receiver facilitator secrets database issuer monitoring and ledger", "operational production signing role"]
   },
   "commercial_metrics": {
     "required_buyers": 3,
@@ -74,8 +76,13 @@
   "acceptance": {
     "tests_total": 30,
     "all_pass": false,
-    "engineering_tests_passed": 130,
+    "engineering_tests_passed": 136,
     "engineering_tests_skipped": 1,
+    "connected_repository_tests_passed": 169,
+    "connected_repository_production_build": "passed",
+    "connected_repository_production_dependency_vulnerabilities": 0,
+    "sandbox_deployment_commit": "f84449fbf2b825b46a08582666ea1a09f7bd1654",
+    "sandbox_bazaar_402_probe": "passed",
     "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29344373148",
     "public_ci_commit": "dc2af81ebbebebeb1dc4f6078a1172508325d6dd",
     "public_ci_status": "passed",
@@ -85,15 +92,15 @@
   "current_blockers": [
     "No unrelated external repository has retained a VouchSpec integration",
     "No legitimate external machine use is recorded",
-    "Stage B authenticated Stripe-test API is loopback-only and has no managed public deployment or public webhook endpoint",
+    "CDP Bazaar will not index the live endpoint until its first successful CDP-facilitated settlement",
     "No genuine purchase or settled revenue exists"
   ],
   "human_actions_requested": [],
   "top_next_actions": [
+    "Complete one owner-excluded Base-Sepolia payment through the CDP-facilitated one-call route and verify Bazaar indexing",
     "Convert one of the two still-open publisher proposals into a retained external integration or qualify the next repository-specific prospect",
-    "Deploy the connected Stripe-test API behind managed TLS and a mode-specific webhook endpoint",
-    "Prepare the production signing role and kernel-quota fetch volume without enabling live Checkout prematurely"
+    "Prepare mainnet remedies environment separation production signing and kernel-quota fetch volume without enabling live settlement prematurely"
   ],
-  "last_checkpoint_time": "2026-07-14T16:05:27Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-stripe-http-test-probe.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Supabase issue 136 and K-Dense issue 211 remain open outreach only; michtio issue 10 was declined and closed as not planned. The Stripe adapter is connected to authenticated quote/order creation and the exact-body webhook path in loopback test mode; next deploy that boundary behind managed TLS with separate public test webhook state, restricted durable storage, and no live activation."
+  "last_checkpoint_time": "2026-07-14T22:08:21Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-x402-bazaar-launch.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Supabase issue 136 and K-Dense issue 211 remain open outreach only; michtio issue 10 was declined and closed as not planned. The live branch-scoped sandbox exposes POST /api/vouchspec/v1/validate with official Bazaar metadata and authenticated CDP facilitator verification. Complete one owner-excluded CDP testnet settlement to trigger indexing, verify the listing and signed receipt, then pursue genuine unrelated agent integrations. Stripe is regression-only and must not become a human/card purchase path."
 }

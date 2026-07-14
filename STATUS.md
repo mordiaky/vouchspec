@@ -3,10 +3,19 @@
 - **Goal:** active and not achieved.
 - **Public product:** Stage A catalog/retrieval/verification is live. Stage B is a public,
   self-service, agent-only x402 sandbox at `https://vouchspec-sandbox.plyrium.com`; it accepts
-  immutable public GitHub coordinates and has no human checkout path.
+  immutable public GitHub coordinates and has no human checkout path. Agents can now purchase in
+  one call at `POST /api/vouchspec/v1/validate` without registering or authenticating first.
 - **Stage B payment:** exact x402 v2 payment using test USDC on Base Sepolia. The sandbox price
-  is 1.00 test USDC so faucet-funded agents can exercise the complete flow. The commercial
-  price remains an unvalidated USD $49 hypothesis. Mainnet is fail-closed.
+  is 1.00 test USDC so faucet-funded agents can exercise the complete flow. The one-call route
+  verifies and settles through Coinbase's authenticated CDP facilitator and declares the official
+  x402 Bazaar extension. The commercial price remains an unvalidated USD $49 hypothesis.
+  Mainnet is fail-closed.
+- **CDP/Bazaar launch:** deployment `f84449fbf2b825b46a08582666ea1a09f7bd1654` is live. Hosted
+  health reports Bazaar readiness; a valid anonymous request returns HTTP 402 with one exact
+  Base-Sepolia requirement for 1.00 test USDC, the canonical sandbox URL, and `extensions.bazaar`.
+  A syntactically valid but invalid-signature probe was rejected with HTTP 402 and did not settle.
+  CDP's public Bazaar search does not list the endpoint yet because CDP catalogs a seller only
+  after its first successful CDP-facilitated settlement. No registration claim is made yet.
 - **Hosted fulfillment proof:** owner-controlled order `ord_01b1e85f188649a6b68e2dd2` settled
   on Base Sepolia in transaction
   `0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11`, traversed the leased
@@ -32,12 +41,17 @@
   contribution margin is not yet proven by a genuine paid order.
 - **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
   commercial payment.
-- **Owner action:** none currently required.
+- **Owner action:** none currently required. The next controlled CDP settlement, if used only to
+  seed Bazaar indexing, remains owner/test traffic and must stay excluded from every goal counter.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
-- **Verification:** 136 tests pass with one explicit Windows symlink-privilege skip. The latest
-  hosted paid-flow workflow run succeeded at commit `13c65f3dc36a099c0d45aa36aa08b58b3d738371`.
+- **Verification:** the connected Plyrium repository passes typecheck, 169 tests, private-address,
+  public-route, transaction, and migration audits, a production build, and a zero-vulnerability
+  production dependency audit. The CapabilityProof suite still has 136 passes and one explicit
+  Windows symlink-privilege skip. The latest hosted paid-flow workflow run succeeded at commit
+  `13c65f3dc36a099c0d45aa36aa08b58b3d738371`.
 
-Next: acquire unrelated agent integrations that can discover and exercise the public sandbox
-without owner involvement. Mainnet activation must preserve the same tenant,
+Next: complete one explicitly excluded CDP testnet settlement to trigger Bazaar indexing, verify
+the public listing, then acquire unrelated agent integrations that discover and exercise the
+sandbox without owner involvement. Mainnet activation must preserve the same tenant,
 settlement-recovery, no-egress, signing, receipt, invalidation, and honest-accounting boundaries.
