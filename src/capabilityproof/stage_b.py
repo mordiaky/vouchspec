@@ -135,6 +135,16 @@ def _safe_git_environment() -> dict[str, str]:
     return environment
 
 
+def _safe_docker_environment() -> dict[str, str]:
+    """Give the Docker client only connection/runtime state, never buyer or worker secrets."""
+
+    keep = (
+        "PATH", "HOME", "TMPDIR", "SYSTEMROOT", "WINDIR", "COMSPEC", "PATHEXT",
+        "DOCKER_HOST", "DOCKER_CONTEXT", "DOCKER_TLS_VERIFY", "DOCKER_CERT_PATH",
+    )
+    return {key: os.environ[key] for key in keep if key in os.environ}
+
+
 def _read_bounded(
     stream: BinaryIO,
     limit: int,
@@ -614,6 +624,7 @@ class DockerNoEgressWorker:
                 timeout_seconds=timeout_seconds,
                 stdout_limit=MAX_WORKER_RECEIPT_BYTES,
                 code="isolated_worker_failed",
+                environment=_safe_docker_environment(),
             )
         except Exception:
             subprocess.run(
@@ -621,6 +632,7 @@ class DockerNoEgressWorker:
                 stdin=subprocess.DEVNULL,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
+                env=_safe_docker_environment(),
                 timeout=10,
                 check=False,
             )

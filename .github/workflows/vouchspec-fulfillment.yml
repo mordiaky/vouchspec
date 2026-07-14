@@ -1,0 +1,78 @@
+name: VouchSpec x402 fulfillment
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vouchspec-testnet-fulfillment
+  cancel-in-progress: false
+
+jobs:
+  fulfill-one-paid-order:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    environment: vouchspec-testnet
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: distribution/github-action/requirements-linux-x86_64-py311.lock
+      - name: Install hash-locked host runtime
+        run: |
+          set -euo pipefail
+          python -m pip install \
+            --disable-pip-version-check \
+            --only-binary=:all: \
+            --require-hashes \
+            -r distribution/github-action/requirements-linux-x86_64-py311.lock
+          python -m pip install --no-deps --no-build-isolation .
+      - name: Build immutable local worker image
+        id: worker-image
+        run: |
+          set -euo pipefail
+          docker build --pull --tag "vouchspec-stage-b-worker:${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --file distribution/stage-b-worker/Dockerfile .
+          image="$(docker image inspect "vouchspec-stage-b-worker:${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" --format '{{.Id}}')"
+          case "$image" in sha256:????????????????????????????????????????????????????????????????) ;; *) exit 1 ;; esac
+          echo "image=$image" >> "$GITHUB_OUTPUT"
+      - name: Materialize encrypted signing key
+        env:
+          ISSUER_PRIVATE_KEY_B64: ${{ secrets.VOUCHSPEC_ISSUER_PRIVATE_KEY_B64 }}
+          ISSUER_PASSPHRASE_B64: ${{ secrets.VOUCHSPEC_ISSUER_PASSPHRASE_B64 }}
+        run: |
+          set -euo pipefail
+          umask 077
+          secret_dir="$RUNNER_TEMP/vouchspec-issuer-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          work_root="$RUNNER_TEMP/vouchspec-work-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          mkdir "$secret_dir"
+          printf '%s' "$ISSUER_PRIVATE_KEY_B64" | base64 --decode > "$secret_dir/issuer-private.pem"
+          printf '%s' "$ISSUER_PASSPHRASE_B64" | base64 --decode > "$secret_dir/issuer-passphrase"
+          test -s "$secret_dir/issuer-private.pem"
+          test -s "$secret_dir/issuer-passphrase"
+          echo "VOUCHSPEC_SECRET_DIR=$secret_dir" >> "$GITHUB_ENV"
+          echo "VOUCHSPEC_WORK_ROOT=$work_root" >> "$GITHUB_ENV"
+      - name: Claim, isolate, sign, and deliver one paid request
+        env:
+          PYTHONPATH: ${{ github.workspace }}/src
+          VOUCHSPEC_API_BASE_URL: ${{ vars.VOUCHSPEC_API_BASE_URL }}
+          VOUCHSPEC_WORKER_TOKEN: ${{ secrets.VOUCHSPEC_WORKER_TOKEN }}
+          VOUCHSPEC_WORKER_ID: github-actions-stage-b
+          VOUCHSPEC_WORKER_IMAGE: ${{ steps.worker-image.outputs.image }}
+          VOUCHSPEC_ISSUER_PRIVATE_KEY: ${{ env.VOUCHSPEC_SECRET_DIR }}/issuer-private.pem
+          VOUCHSPEC_ISSUER_PASSPHRASE: ${{ env.VOUCHSPEC_SECRET_DIR }}/issuer-passphrase
+          VOUCHSPEC_ISSUER_PUBLIC_KEY: ${{ github.workspace }}/distribution/trust/stage-b-issuer.jwk.json
+        run: python -I -m capabilityproof.hosted_worker
+      - name: Remove ephemeral worker material
+        if: always()
+        run: |
+          set -euo pipefail
+          for path in "${VOUCHSPEC_SECRET_DIR:-}" "${VOUCHSPEC_WORK_ROOT:-}"; do
+            case "$path" in "$RUNNER_TEMP"/vouchspec-*) rm -rf -- "$path" ;; "") ;; *) exit 1 ;; esac
+          done

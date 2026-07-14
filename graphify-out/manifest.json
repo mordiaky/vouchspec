@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "tests/test_distribution.py": {
-    "mtime": 1784031187.6646912,
-    "ast_hash": "01c7b5647cfa856e88a02ab47c3fc86e",
+    "mtime": 1784050308.1951942,
+    "ast_hash": "24865b884651c2a95f3321165e328b9b",
     "semantic_hash": ""
   },
   "tests/test_inspector.py": {
@@ -625,8 +625,8 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/stage_b.py": {
-    "mtime": 1784034327.1210852,
-    "ast_hash": "791d0e873afd9212b5f3475056c01641",
+    "mtime": 1784050308.1896904,
+    "ast_hash": "24302531102cdf41b834ca6e27be6eb6",
     "semantic_hash": ""
   },
   "src/capabilityproof/stage_b_signer.py": {
@@ -712,6 +712,26 @@
   "logs/2026-07-14-stripe-http-test-probe.md": {
     "mtime": 1784041982.2448134,
     "ast_hash": "fd39083b659a2ea633e2de42961d5320",
+    "semantic_hash": ""
+  },
+  "distribution/trust/stage-b-issuer.jwk.json": {
+    "mtime": 1784050308.1926877,
+    "ast_hash": "e4dbfaa398e945162725ae93aadba474",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/hosted_worker.py": {
+    "mtime": 1784050345.494044,
+    "ast_hash": "585b06a32b960bf3d20b04b7f1ddeb68",
+    "semantic_hash": ""
+  },
+  "tests/test_hosted_worker.py": {
+    "mtime": 1784050308.1941912,
+    "ast_hash": "9e9a70d0fa7363e4b72c1518ddcacd04",
+    "semantic_hash": ""
+  },
+  ".github/workflows/vouchspec-fulfillment.yml": {
+    "mtime": 1784050592.94927,
+    "ast_hash": "4a2b483db9feb2d8dca4cc83fa3af7e2",
     "semantic_hash": ""
   }
 }
