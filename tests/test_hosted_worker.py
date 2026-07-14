@@ -7,6 +7,7 @@ from capabilityproof.hosted_worker import (
     HostedWorkerError,
     _normalize_api_base_url,
     _parse_claim,
+    _load_preclaimed_job,
     build_no_egress_signer_command,
 )
 from capabilityproof.stage_b import FrozenSource
@@ -59,6 +60,29 @@ def test_claim_contract_is_exact_and_lease_bound() -> None:
     value["job"]["unexpected"] = True
     with pytest.raises(HostedWorkerError):
         _parse_claim(value)
+
+
+def test_preclaimed_job_is_revalidated_before_any_artifact_work(tmp_path: Path) -> None:
+    value = {
+        "worker_version": "vouchspec-stage-b-worker-v1",
+        "lease_seconds": 1_200,
+        "job": {
+            "order_id": "ord_" + "1" * 24,
+            "lease_token": "11111111-1111-4111-8111-111111111111",
+            "attempt": 1,
+            "request_digest": "sha256:" + "2" * 64,
+            "request": REQUEST,
+            "paid_at": "2026-07-14T12:00:00Z",
+            "claimed_at": "2026-07-14T12:00:01Z",
+        },
+    }
+    path = tmp_path / "claim.json"
+    import json
+    path.write_text(json.dumps(value), encoding="utf-8")
+    assert _load_preclaimed_job(path)["order_id"] == value["job"]["order_id"]
+    path.write_text('{"worker_version":"duplicate","worker_version":"duplicate"}', encoding="utf-8")
+    with pytest.raises(HostedWorkerError):
+        _load_preclaimed_job(path)
 
 
 def test_signer_command_is_separate_no_egress_and_receives_only_read_only_inputs(tmp_path: Path) -> None:

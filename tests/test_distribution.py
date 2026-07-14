@@ -75,6 +75,12 @@ def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_com
     assert "permissions:\n  contents: read" in workflow
     assert "--require-hashes" in workflow
     assert "python -I -m capabilityproof.hosted_worker" in workflow
+    assert "Claim one paid job before allocating build work" in workflow
+    assert "steps.claim.outputs.has_job == 'true'" in workflow
+    assert workflow.index("Claim one paid job before allocating build work") < workflow.index("actions/checkout")
+    assert "--max-redirs 0" in workflow
+    assert "--max-filesize 1000000" in workflow
+    assert "VOUCHSPEC_PRECLAIMED_JOB" in workflow
     assert "VOUCHSPEC_ISSUER_PRIVATE_KEY_B64" in workflow
     assert "VOUCHSPEC_WORKER_TOKEN" in workflow
     assert "--network host" not in workflow

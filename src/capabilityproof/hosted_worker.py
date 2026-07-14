@@ -70,6 +70,7 @@ class HostedWorkerConfig:
     issuer_passphrase: Path
     issuer_public_key: Path
     work_root: Path
+    preclaimed_job: Path | None = None
 
     @classmethod
     def from_environment(cls) -> "HostedWorkerConfig":
@@ -100,6 +101,11 @@ class HostedWorkerConfig:
             issuer_passphrase=Path(required["VOUCHSPEC_ISSUER_PASSPHRASE"]),
             issuer_public_key=Path(required["VOUCHSPEC_ISSUER_PUBLIC_KEY"]),
             work_root=Path(required["VOUCHSPEC_WORK_ROOT"]),
+            preclaimed_job=(
+                Path(os.environ["VOUCHSPEC_PRECLAIMED_JOB"])
+                if os.environ.get("VOUCHSPEC_PRECLAIMED_JOB", "").strip()
+                else None
+            ),
         )
         config.validate()
         return config
@@ -147,6 +153,23 @@ class HostedWorkerConfig:
                 "hosted worker output root already exists",
                 code="worker_configuration_invalid",
             )
+        if self.preclaimed_job is not None:
+            try:
+                metadata = self.preclaimed_job.lstat()
+            except OSError as exc:
+                raise HostedWorkerError(
+                    "preclaimed worker job is unavailable",
+                    code="worker_configuration_invalid",
+                ) from exc
+            if (
+                self.preclaimed_job.is_symlink()
+                or not self.preclaimed_job.is_file()
+                or not 1 <= metadata.st_size <= MAX_API_RESPONSE_BYTES
+            ):
+                raise HostedWorkerError(
+                    "preclaimed worker job is invalid",
+                    code="worker_configuration_invalid",
+                )
 
 
 class _NoRedirect(HTTPRedirectHandler):
@@ -276,6 +299,15 @@ def _claim(config: HostedWorkerConfig) -> dict[str, Any] | None:
     )
     if value is None:
         return None
+    return _parse_claim(value)
+
+
+def _load_preclaimed_job(path: Path) -> dict[str, Any]:
+    try:
+        raw = path.read_bytes()
+        value = load_strict_commerce_json(raw.decode("utf-8", errors="strict"))
+    except (OSError, UnicodeError, CapabilityProofError) as exc:
+        raise HostedWorkerError("preclaimed worker job is invalid", code="worker_claim_invalid") from exc
     return _parse_claim(value)
 
 
@@ -439,7 +471,7 @@ def _complete(
 def run_once(config: HostedWorkerConfig) -> dict[str, Any]:
     config.validate()
     config.work_root.mkdir(mode=0o700, parents=True)
-    job = _claim(config)
+    job = _load_preclaimed_job(config.preclaimed_job) if config.preclaimed_job else _claim(config)
     if job is None:
         return {"status": "idle"}
     completion_attempted = False
