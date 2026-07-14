@@ -7,11 +7,12 @@
   passes and structural failures; a complete public demo is available at
   `https://github.com/mordiaky/vouchspec-demo`. Run `29331787790` passed both cases and all
   four downloaded files passed independent GitHub attestation verification.
-- **External adoption:** 0 / 3 retained unrelated integrations. Three tailored proposals are
-  open at `https://github.com/supabase/agent-skills/issues/136`,
-  `https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`, and
-  `https://github.com/michtio/craftcms-claude-skills/issues/10`; issues are outreach, not
-  adoption. None has a maintainer response yet. The three-new-contact daily cap is reached.
+- **External adoption:** 0 / 3 retained unrelated integrations. Two tailored proposals remain
+  open at `https://github.com/supabase/agent-skills/issues/136` and
+  `https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`; issues are outreach,
+  not adoption, and neither has a maintainer response yet. `michtio/craftcms-claude-skills#10`
+  was closed by the maintainer as not planned on 2026-07-14. The three-new-contact daily cap
+  is reached.
 - **External machine use:** 0 / 100 legitimate requests; 0 / 10 sources; 0 / 20 repeat
   requests; 0 / 5 repeat sources.
 - **Commerce:** the first product is a USD $49 exact-version public static validation. Its
@@ -39,12 +40,12 @@
 - **Boundary:** public immutable sources only; no uploads, private repositories, confidential
   content, or artifact execution.
 - **Verification:** local isolated verification passes 130 tests with one explicit Windows
-  symlink-privilege skip. Public Linux CI run `29342266720` passed at commit
-  `ff78ba5fda4290cf824d4d708fecf27a882df9e4`, including package installation, the full test
-  suite, and a CLI receipt smoke test.
+  symlink-privilege skip. Public Linux CI run `29344373148` passed at commit
+  `dc2af81ebbebebeb1dc4f6078a1172508325d6dd` with zero annotations, including package
+  installation, the full test suite, and a CLI receipt smoke test.
 
-Next: follow all three unrelated adoption proposals without an unsolicited same-day follow-up,
-resume the rules-limited publisher channel after its daily cap resets, and deploy the connected
-Stripe-test boundary behind managed TLS with a mode-specific public webhook endpoint and
-restricted durable state. Live Checkout remains off until that deployment, the production
-signer, and kernel fetch quota are verified.
+Next: wait on the two still-open unrelated adoption proposals without an unsolicited same-day
+follow-up, qualify the next rules-compliant publisher prospect after the daily cap resets, and
+deploy the connected Stripe-test boundary behind managed TLS with a mode-specific public webhook
+endpoint and restricted durable state. Live Checkout remains off until that deployment, the
+production signer, and kernel fetch quota are verified.

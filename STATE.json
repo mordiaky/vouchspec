@@ -27,7 +27,7 @@
     "owned_demo_counts": false,
     "qualified_prospects": 3,
     "contacts": 3,
-    "open_proposals": ["https://github.com/supabase/agent-skills/issues/136", "https://github.com/K-Dense-AI/scientific-agent-skills/issues/211", "https://github.com/michtio/craftcms-claude-skills/issues/10"]
+    "open_proposals": ["https://github.com/supabase/agent-skills/issues/136", "https://github.com/K-Dense-AI/scientific-agent-skills/issues/211"]
   },
   "machine_use": {
     "required_requests": 100,
@@ -76,8 +76,8 @@
     "all_pass": false,
     "engineering_tests_passed": 130,
     "engineering_tests_skipped": 1,
-    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29342266720",
-    "public_ci_commit": "ff78ba5fda4290cf824d4d708fecf27a882df9e4",
+    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29344373148",
+    "public_ci_commit": "dc2af81ebbebebeb1dc4f6078a1172508325d6dd",
     "public_ci_status": "passed",
     "evidence_file": "GOAL_EVIDENCE.md",
     "independent_final_audit": "pending"
@@ -90,10 +90,10 @@
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Convert one of the three qualified publisher proposals into a retained external integration",
+    "Convert one of the two still-open publisher proposals into a retained external integration or qualify the next repository-specific prospect",
     "Deploy the connected Stripe-test API behind managed TLS and a mode-specific webhook endpoint",
     "Prepare the production signing role and kernel-quota fetch volume without enabling live Checkout prematurely"
   ],
-  "last_checkpoint_time": "2026-07-14T15:04:01Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-stripe-http-test-probe.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. The Stripe adapter is connected to authenticated quote/order creation and the exact-body webhook path in loopback test mode; next deploy that boundary behind managed TLS with separate public test webhook state, restricted durable storage, and no live activation."
+  "last_checkpoint_time": "2026-07-14T16:05:27Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-stripe-http-test-probe.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Supabase issue 136 and K-Dense issue 211 remain open outreach only; michtio issue 10 was declined and closed as not planned. The Stripe adapter is connected to authenticated quote/order creation and the exact-body webhook path in loopback test mode; next deploy that boundary behind managed TLS with separate public test webhook state, restricted durable storage, and no live activation."
 }

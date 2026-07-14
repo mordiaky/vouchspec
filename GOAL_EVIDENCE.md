@@ -32,7 +32,7 @@ traffic are explicitly excluded.
 | 23 | Fourteen consecutive autonomous days after first settled payment | Pending: clock not started |
 | 24 | Monitoring through recovery/support/financial logging runs during that period | Pending |
 | 25 | No ordinary order requires a call, review, meeting, or manual delivery | Partial: authenticated sandbox order and result delivery were fully autonomous; no genuine order yet |
-| 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has two contacts but no response/integration |
+| 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has three qualified contacts, one explicit decline, and no response/integration from the two still-open proposals |
 | 27 | One paid fulfillment process completes more than one real order | Pending: 0 |
 | 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: authenticated sandbox quote/order/result plus Stripe-test Checkout/webhook, paid lifecycle, discovery/integration/verify/operations are documented; public deployment and credential issuance remain disabled |
 | 29 | Independent goal-auditor inspects complete evidence | Pending until tests 1-28 have evidence |
@@ -47,9 +47,9 @@ traffic are explicitly excluded.
 - Public GitHub-managed TLS/CORS distribution and a public installable read-only stdio MCP.
 - Public owned demo run `29331787790` with pass/failure matrix assertions and four independently
   verified workflow-bound attestations. It proves integration mechanics only.
-- Three public, repository-specific proposals to unrelated publishers: Supabase issue `136`,
-  K-Dense issue `211`, and michtio issue `10`. They prove outreach only; all are open without
-  maintainer response.
+- Three public, repository-specific proposals were made to unrelated publishers: Supabase issue
+  `136` and K-Dense issue `211` remain open without maintainer response, while michtio issue
+  `10` was declined and closed as not planned. They prove outreach only.
 - One complete Stage B sandbox order: exact GitHub commit freeze, no-egress/no-host-write
   Docker worker, constrained DSSE signing, all direct-cost fields, event reconciliation, and
   delivery. `fulfillment/stage-b-sandbox-proof.json` marks it operator-owned,
@@ -69,14 +69,14 @@ traffic are explicitly excluded.
   revocation, and irreversible retired/compromised issuer state.
 - 130 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
   skipped for missing host privilege; Linux-container and hostile tree/archive/path tests pass.
-- Public Linux CI run `29342266720` passed at commit
-  `ff78ba5fda4290cf824d4d708fecf27a882df9e4`, including package installation, the full test
-  suite, and a CLI receipt smoke test.
+- Public Linux CI run `29344373148` passed at commit
+  `dc2af81ebbebebeb1dc4f6078a1172508325d6dd` with zero annotations, including package
+  installation, the full test suite, and a CLI receipt smoke test.
 
 Evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
 `CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, public CI/attestation URLs, and the
 final independent audit when eligible. Current public engineering/adoption references include
-`https://github.com/mordiaky/vouchspec/actions/runs/29342266720`,
+`https://github.com/mordiaky/vouchspec/actions/runs/29344373148`,
 `https://github.com/supabase/agent-skills/issues/136`, and
 `https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`, and
 `https://github.com/michtio/craftcms-claude-skills/issues/10`.

@@ -1,16 +1,16 @@
-# Graph Report - capabilityproof-stripe-http  (2026-07-14)
+# Graph Report - capabilityproof  (2026-07-14)
 
 ## Corpus Check
-- 139 files · ~77,502 words
+- 139 files · ~77,583 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1607 nodes · 3310 edges · 132 communities (102 shown, 30 thin omitted)
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 413 edges (avg confidence: 0.5)
+- 1607 nodes · 3296 edges · 141 communities (111 shown, 30 thin omitted)
+- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 413 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `37a6ff8a`
+- Built from commit: `dc2af81e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -137,38 +137,46 @@
 - [[_COMMUNITY_Community 121|Community 121]]
 - [[_COMMUNITY_Community 122|Community 122]]
 - [[_COMMUNITY_Community 123|Community 123]]
+- [[_COMMUNITY_Community 124|Community 124]]
 - [[_COMMUNITY_Community 125|Community 125]]
 - [[_COMMUNITY_Community 126|Community 126]]
 - [[_COMMUNITY_Community 127|Community 127]]
+- [[_COMMUNITY_Community 128|Community 128]]
 - [[_COMMUNITY_Community 129|Community 129]]
 - [[_COMMUNITY_Community 130|Community 130]]
 - [[_COMMUNITY_Community 131|Community 131]]
+- [[_COMMUNITY_Community 132|Community 132]]
 - [[_COMMUNITY_Community 133|Community 133]]
 - [[_COMMUNITY_Community 134|Community 134]]
+- [[_COMMUNITY_Community 135|Community 135]]
+- [[_COMMUNITY_Community 137|Community 137]]
+- [[_COMMUNITY_Community 138|Community 138]]
+- [[_COMMUNITY_Community 139|Community 139]]
+- [[_COMMUNITY_Community 140|Community 140]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `InputRejected` - 249 edges
-2. `CommerceStore` - 81 edges
-3. `CommerceAccessStore` - 56 edges
-4. `ScanLimits` - 53 edges
+2. `CommerceStore` - 78 edges
+3. `ScanLimits` - 56 edges
+4. `CommerceAccessStore` - 54 edges
 5. `main()` - 45 edges
-6. `StripePaymentAdapter` - 43 edges
-7. `PathRejected` - 42 edges
-8. `inspect_skill()` - 41 edges
-9. `CapabilityProofError` - 37 edges
-10. `FakePaymentProvider` - 33 edges
+6. `PathRejected` - 44 edges
+7. `inspect_skill()` - 41 edges
+8. `StripePaymentAdapter` - 41 edges
+9. `CapabilityProofError` - 35 edges
+10. `FakePaymentProvider` - 32 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Ed25519PrivateKey` --uses--> `InputRejected`  [INFERRED]
   tests/test_signing.py → src/capabilityproof/errors.py
-- `Path` --uses--> `CatalogStore`  [INFERRED]
-  tests/test_catalog.py → src/capabilityproof/catalog.py
-- `Path` --uses--> `VerifiedCatalog`  [INFERRED]
-  tests/test_catalog.py → src/capabilityproof/catalog_runtime.py
 - `test_cli_provisions_sandbox_key_from_secret_environment_without_persisting_it()` --calls--> `main()`  [EXTRACTED]
   tests/test_commerce_api.py → src/capabilityproof/cli.py
 - `test_quote_cli_emits_machine_readable_preview()` --calls--> `main()`  [EXTRACTED]
   tests/test_commerce.py → src/capabilityproof/cli.py
+- `test_quote_cli_rejects_duplicate_request_keys()` --calls--> `main()`  [EXTRACTED]
+  tests/test_commerce.py → src/capabilityproof/cli.py
+- `test_state_transitions_fail_closed_and_settlement_is_separate_from_delivery()` --calls--> `require_transition()`  [EXTRACTED]
+  tests/test_commerce.py → src/capabilityproof/commerce.py
 
 ## Import Cycles
 - 1-file cycle: `src/capabilityproof/receipt.py -> src/capabilityproof/receipt.py`
@@ -183,19 +191,19 @@
 - 1-file cycle: `src/capabilityproof/snapshot.py -> src/capabilityproof/snapshot.py`
 - 1-file cycle: `src/capabilityproof/lifecycle.py -> src/capabilityproof/lifecycle.py`
 
-## Communities (132 total, 30 thin omitted)
+## Communities (141 total, 30 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.05
-Nodes (89): VouchSpec exact-version Agent Skill evidence engine., _git(), ProvenanceEvidence, Controlled local Git provenance checks without fetching or executing artifact co, _safe_git_environment(), _sanitize_remote(), _verify_commit_blobs(), verify_git_provenance() (+81 more)
+Cohesion: 0.09
+Nodes (51): VouchSpec exact-version Agent Skill evidence engine., ProvenanceEvidence, _decision(), deterministic_json(), inspect_git_skill(), inspect_skill(), _iso(), _levels() (+43 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.04
 Nodes (44): 1. Input forms and immutable capture, 2. Central MVP limits, 3. ZIP, path, and filesystem rules, 4. Parser and rule-engine rules, 5. Worker containment and side-effect controls, 6. Output, evidence, logging, and privacy, A. Non-execution and containment, Assets to protect (+36 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.18
-Nodes (25): _b64_decode(), _b64url_decode(), _b64url_no_pad(), dsse_pae(), jwk_thumbprint(), public_key_from_jwk(), DSSE v1 receipt envelopes signed with Ed25519.  The signature covers the exact r, Sign exact payload bytes using the Stage A one-signature DSSE profile. (+17 more)
+Cohesion: 0.26
+Nodes (16): _b64_decode(), _b64url_decode(), _b64url_no_pad(), jwk_thumbprint(), load_public_jwk(), public_key_from_jwk(), DSSE v1 receipt envelopes signed with Ed25519.  The signature covers the exact r, Sign exact payload bytes using the Stage A one-signature DSSE profile. (+8 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.18
@@ -210,8 +218,8 @@ Cohesion: 0.15
 Nodes (13): additionalProperties, properties, required, type, maximum, minimum, type, maxItems (+5 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.08
-Nodes (37): _as_dict(), _aware_datetime(), _bounded_int(), _canonical(), _configured_url(), _epoch_time(), _metadata(), _parse_time() (+29 more)
+Cohesion: 0.14
+Nodes (24): _as_dict(), _aware_datetime(), _bounded_int(), _canonical(), _configured_url(), _epoch_time(), _metadata(), _parse_time() (+16 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.09
@@ -254,8 +262,8 @@ Cohesion: 0.14
 Nodes (14): maxLength, type, const, additionalProperties, properties, required, type, items (+6 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.17
-Nodes (10): build_catalog_mcp_server(), Trusted read-only MCP retrieval surface for the Stage A public catalog., run_catalog_mcp_server(), Trusted runtime view over a signed catalog and root-signed lifecycle feed., Immutable in-memory view of one fully verified on-disk catalog generation., VerifiedCatalog, FastMCP, Path (+2 more)
+Cohesion: 0.21
+Nodes (26): BinaryIO, LimitExceeded, PathRejected, Public error types with stable machine-readable codes., collect_snapshot(), _entry_identity(), FileData, _inventory_signature() (+18 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.05
@@ -263,23 +271,23 @@ Nodes (41): pattern, type, additionalProperties, properties, required, type, pat
 
 ### Community 19 - "Community 19"
 Cohesion: 0.17
-Nodes (12): $defs, path, sha256, staticFinding, maxLength, minLength, type, pattern (+4 more)
+Nodes (12): $defs, path, sha256, staticSummary, maxLength, minLength, type, pattern (+4 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.12
-Nodes (18): CommerceAccessStore, _format_timestamp(), _parse_timestamp(), Tenant and capability access controls for the constrained commerce boundary.  Th, Keyed-digest tenant, quote, order, and result authorization state., _token_bytes(), _urlsafe(), _utc_now() (+10 more)
+Cohesion: 0.15
+Nodes (16): CommerceAccessStore, _format_timestamp(), _parse_timestamp(), Tenant and capability access controls for the constrained commerce boundary.  Th, Keyed-digest tenant, quote, order, and result authorization state., _token_bytes(), _urlsafe(), _utc_now() (+8 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.12
-Nodes (16): maxItems, type, additionalProperties, properties, required, type, items, maxItems (+8 more)
+Cohesion: 0.17
+Nodes (12): maxItems, type, additionalProperties, properties, required, type, external_references_untrusted, format_validation (+4 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.20
 Nodes (14): items, maxLength, minLength, type, items, maxItems, minItems, type (+6 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.08
-Nodes (28): $ref, items, maxItems, type, const, items, maxItems, type (+20 more)
+Cohesion: 0.14
+Nodes (14): $ref, const, coverage, engine, referenced_hosts, static_analysis, summary, maxItems (+6 more)
 
 ### Community 24 - "Community 24"
 Cohesion: 0.14
@@ -290,23 +298,23 @@ Cohesion: 0.13
 Nodes (15): $ref, $ref, additionalProperties, properties, required, type, $ref, $ref (+7 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.11
-Nodes (18): const, properties, integrity_assurance, receipt_id, receipt_profile, schema_sha256, schema_uri, schema_version (+10 more)
+Cohesion: 0.14
+Nodes (14): const, properties, integrity_assurance, receipt_id, receipt_profile, schema_sha256, schema_uri, schema_version (+6 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.33
 Nodes (6): properties, $ref, path, sha256, size, $ref
 
 ### Community 28 - "Community 28"
-Cohesion: 0.29
-Nodes (7): localReference, enum, additionalProperties, properties, required, type, kind
+Cohesion: 0.20
+Nodes (10): localReference, enum, additionalProperties, properties, required, type, kind, status (+2 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.09
 Nodes (22): const, const, const, format, type, const, const, const (+14 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.15
+Cohesion: 0.17
 Nodes (20): _atomic_replace(), _envelope_keyid(), evaluate_receipt_lifecycle(), evaluate_receipt_lifecycle_with_state(), _exclusive_file_lock(), Root-signed receipt and issuer-key lifecycle state., Verify both signatures and conservatively derive current lifecycle state., Replace state, tolerating only transient Windows sharing violations. (+12 more)
 
 ### Community 31 - "Community 31"
@@ -318,24 +326,24 @@ Cohesion: 0.25
 Nodes (7): additionalProperties, description, $id, required, $schema, title, type
 
 ### Community 33 - "Community 33"
-Cohesion: 0.17
-Nodes (12): additionalProperties, properties, required, type, maxLength, minLength, type, decision (+4 more)
+Cohesion: 0.22
+Nodes (9): additionalProperties, properties, required, type, maxLength, minLength, type, decision (+1 more)
 
 ### Community 34 - "Community 34"
 Cohesion: 0.29
 Nodes (6): Authentication and lifecycle, Checks, Evidence labels, Explicit non-claims and publication content, Profiles and scope, VouchSpec static evidence methodology v0.2
 
 ### Community 35 - "Community 35"
-Cohesion: 0.20
-Nodes (9): Evidence labels, Local inspector and builder, Product stages, Public Stage A distribution, Publisher CI — complete self-service example, Read-only catalog API, Read-only catalog MCP, Verify a public receipt independently (+1 more)
+Cohesion: 0.10
+Nodes (20): 2026-07-13 - Authenticate exact receipt bytes with DSSE and Ed25519, 2026-07-13 - Close independent audit findings before accepting E-001, 2026-07-13 - Correct launch sequencing to Stage A, B, and C, 2026-07-13 - Do not grant a public code license autonomously, 2026-07-13 - First slice is non-executing Level 1-3 evidence, 2026-07-13 - Keep CapabilityProof as an internal codename, 2026-07-13 - Local proof is not an external service, 2026-07-13 - Make repository checkout bytes deterministic (+12 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.50
-Nodes (4): staticSummary, additionalProperties, required, type
+Cohesion: 0.20
+Nodes (13): _adapter(), _Endpoint, _event_body(), _FakeStripeClient, _signature(), test_configuration_fails_closed_for_mode_and_live_activation(), test_cross_binding_partial_refund_and_future_availability_fail_closed(), test_full_refund_and_dispute_are_terminal_negative_or_nonsettled_states() (+5 more)
 
 ### Community 38 - "Community 38"
-Cohesion: 0.19
-Nodes (9): CatalogStore, filter_catalog_entries(), Read-only Stage A catalog storage and validation., Filter an already validated catalog snapshot without rereading disk., validate_catalog_index(), validate_receipt_id(), Any, Path (+1 more)
+Cohesion: 0.07
+Nodes (33): BoundedCatalogServer, create_catalog_server(), make_catalog_handler(), Bounded loopback HTTP retrieval API for the Stage A catalog., CatalogStore, filter_catalog_entries(), build_catalog_mcp_server(), Trusted read-only MCP retrieval surface for the Stage A public catalog. (+25 more)
 
 ### Community 39 - "Community 39"
 Cohesion: 0.17
@@ -346,12 +354,12 @@ Cohesion: 0.40
 Nodes (4): Authorized scope, Procedure, Stage A catalog build and evidence-delivery SOP, Stop conditions
 
 ### Community 41 - "Community 41"
-Cohesion: 0.22
-Nodes (10): const, const, const, command, payload_type, profile, verification_order, properties (+2 more)
+Cohesion: 0.15
+Nodes (14): const, const, const, command, payload_type, profile, signature, verification_order (+6 more)
 
 ### Community 42 - "Community 42"
-Cohesion: 0.09
-Nodes (34): BoundedCommerceServer, CommerceApiLimits, create_commerce_server(), make_commerce_handler(), _public_order(), Authenticated loopback HTTP boundary for sandbox Stage B commerce.  The server i, Small single-process limiter for the loopback application boundary., SlidingWindowRateLimiter (+26 more)
+Cohesion: 0.06
+Nodes (52): create_server(), make_handler(), _no_duplicate_object(), Small loopback-only JSON API around the deterministic inspector., _validate_request(), BoundedCommerceServer, CommerceApiLimits, create_commerce_server() (+44 more)
 
 ### Community 43 - "Community 43"
 Cohesion: 0.13
@@ -367,7 +375,7 @@ Nodes (4): maxLength, minLength, type, category
 
 ### Community 46 - "Community 46"
 Cohesion: 0.20
-Nodes (23): ArgumentParser, _build_parser(), _commerce_environment_value(), _commerce_secret(), main(), _passphrase(), Command-line entry point., _strict_json_file() (+15 more)
+Nodes (19): ArgumentParser, _build_parser(), _commerce_environment_value(), _commerce_secret(), main(), _passphrase(), Command-line entry point., _strict_json_file() (+11 more)
 
 ### Community 48 - "Community 48"
 Cohesion: 0.22
@@ -390,8 +398,8 @@ Cohesion: 0.29
 Nodes (7): items, maxItems, minItems, type, maximum, minimum, completed_checks
 
 ### Community 54 - "Community 54"
-Cohesion: 0.05
-Nodes (91): BinaryIO, create_server(), make_handler(), _no_duplicate_object(), Small loopback-only JSON API around the deterministic inspector., _validate_request(), LimitExceeded, PathRejected (+83 more)
+Cohesion: 0.16
+Nodes (24): _canonical(), _enforce_repository_disk_limit(), _extract_verified_archive(), freeze_public_source(), FrozenSource, _git(), _manifest_digest(), _parse_tree_listing() (+16 more)
 
 ### Community 56 - "Community 56"
 Cohesion: 0.13
@@ -414,24 +422,24 @@ Cohesion: 0.33
 Nodes (5): additionalProperties, $id, required, $schema, type
 
 ### Community 63 - "Community 63"
-Cohesion: 0.10
-Nodes (20): 2026-07-13 - Authenticate exact receipt bytes with DSSE and Ed25519, 2026-07-13 - Close independent audit findings before accepting E-001, 2026-07-13 - Correct launch sequencing to Stage A, B, and C, 2026-07-13 - Do not grant a public code license autonomously, 2026-07-13 - First slice is non-executing Level 1-3 evidence, 2026-07-13 - Keep CapabilityProof as an internal codename, 2026-07-13 - Local proof is not an external service, 2026-07-13 - Make repository checkout bytes deterministic (+12 more)
+Cohesion: 0.25
+Nodes (17): _git_blob(), _make_frozen(), _make_worker_output(), Path, _tar(), test_archive_is_manually_extracted_and_bound_to_git_blobs(), test_archive_rejects_traversal_links_and_blob_mismatch(), test_frozen_source_is_rehashed_and_preserves_real_root_name() (+9 more)
 
 ### Community 67 - "Community 67"
-Cohesion: 0.18
-Nodes (11): maxLength, pattern, type, $ref, properties, deterministic_json_profile, evidence_sha256, replacement_warning (+3 more)
+Cohesion: 0.13
+Nodes (15): maxLength, pattern, type, $ref, additionalProperties, properties, required, type (+7 more)
 
 ### Community 68 - "Community 68"
 Cohesion: 0.33
 Nodes (6): items, maxItems, minItems, prefixItems, type, live_gates
 
 ### Community 70 - "Community 70"
-Cohesion: 0.22
-Nodes (20): build_catalog_drafts(), _checkout(), finalize_catalog_lifecycle(), _iso(), load_source_manifest(), Separated collection, issuer-signing, and root-lifecycle build phases., Networked/keyless phase: checkout public commits and emit unsigned receipt draft, No-network issuer phase: validate drafts and sign exact receipt/index bytes. (+12 more)
+Cohesion: 0.23
+Nodes (17): build_catalog_drafts(), _checkout(), finalize_catalog_lifecycle(), _iso(), load_source_manifest(), Separated collection, issuer-signing, and root-lifecycle build phases., Networked/keyless phase: checkout public commits and emit unsigned receipt draft, No-network issuer phase: validate drafts and sign exact receipt/index bytes. (+9 more)
 
 ### Community 73 - "Community 73"
-Cohesion: 0.36
-Nodes (14): LifecycleSequenceStore, Persist the highest root-feed sequence outside mutable catalog storage., public_jwk(), Ed25519PublicKey, _documents(), _feed_envelope(), Ed25519PrivateKey, Path (+6 more)
+Cohesion: 0.41
+Nodes (13): LifecycleSequenceStore, Persist the highest root-feed sequence outside mutable catalog storage., public_jwk(), _documents(), _feed_envelope(), Ed25519PrivateKey, Path, _record_sequence_worker() (+5 more)
 
 ### Community 76 - "Community 76"
 Cohesion: 0.29
@@ -447,7 +455,7 @@ Nodes (7): Constrained signing gate for receipts produced by verified Stage B wo
 
 ### Community 82 - "Community 82"
 Cohesion: 0.22
-Nodes (9): maxLength, minLength, type, implementation, pyyaml, maxLength, minLength, type (+1 more)
+Nodes (9): maxLength, minLength, type, implementation, python, maxLength, minLength, type (+1 more)
 
 ### Community 83 - "Community 83"
 Cohesion: 0.33
@@ -466,28 +474,28 @@ Cohesion: 0.40
 Nodes (4): Decision, Evidence, Payment provider decision — 2026-07-14, Pricing implication
 
 ### Community 87 - "Community 87"
-Cohesion: 0.50
-Nodes (4): additionalProperties, required, type, integrity
+Cohesion: 0.24
+Nodes (15): ParsedSkill, Snapshot, analyze_static(), _decode_text(), _dependency_records(), _is_text_candidate(), Transparent text and manifest indicators; never imports or executes artifact con, _redact() (+7 more)
 
 ### Community 88 - "Community 88"
-Cohesion: 0.50
-Nodes (4): maximum, minimum, type, low
+Cohesion: 0.25
+Nodes (16): _construct_unique_mapping(), _extract_references(), _finding(), _normalize_link_target(), _parse_frontmatter(), parse_skill(), Strict, bounded parsing and structural checks for Agent Skills., Safe YAML loader that rejects ambiguous duplicate mapping keys. (+8 more)
 
 ### Community 89 - "Community 89"
 Cohesion: 0.50
 Nodes (3): Automatic refund, Fresh-validation refund policy, Not a refund condition
 
 ### Community 91 - "Community 91"
-Cohesion: 0.50
-Nodes (3): Operating charter, Owner controls, Product-specific boundaries
+Cohesion: 0.14
+Nodes (14): items, maxItems, type, $ref, items, items, maxItems, type (+6 more)
 
 ### Community 92 - "Community 92"
 Cohesion: 0.15
 Nodes (13): additionalProperties, properties, required, type, authentication, public_distribution_requirement, signature_verification, maxLength (+5 more)
 
 ### Community 93 - "Community 93"
-Cohesion: 0.50
-Nodes (3): 0.2.0 - 2026-07-13, Changelog, Unreleased
+Cohesion: 0.32
+Nodes (11): dsse_pae(), Authenticate an envelope and return both parsed receipt and exact signed bytes., Return the DSSE v1 pre-authentication encoding., verify_receipt_envelope(), _material(), Ed25519PrivateKey, test_dsse_pae_known_shape_and_exact_signed_bytes_round_trip(), test_duplicate_envelope_keys_and_signature_count_fail_profile() (+3 more)
 
 ### Community 94 - "Community 94"
 Cohesion: 0.33
@@ -514,8 +522,8 @@ Cohesion: 0.67
 Nodes (3): request_digest, pattern, type
 
 ### Community 100 - "Community 100"
-Cohesion: 0.33
-Nodes (5): Completed foundations, Deferred Stage C, Evidence-driven operation, Now — external adoption and safe orderability, Prioritized backlog
+Cohesion: 0.27
+Nodes (8): build_mcp_server(), Official Python SDK MCP stdio surface., run_mcp_server(), ScanLimits, FastMCP, Path, ScanLimits, test_mcp_registers_expected_tools_and_calls_inspector()
 
 ### Community 101 - "Community 101"
 Cohesion: 0.50
@@ -530,24 +538,36 @@ Cohesion: 0.50
 Nodes (4): maxLength, minLength, type, notice
 
 ### Community 104 - "Community 104"
-Cohesion: 0.18
-Nodes (15): BoundedCatalogServer, create_catalog_server(), make_catalog_handler(), Bounded loopback HTTP retrieval API for the Stage A catalog., ThreadingHTTPServer, Any, BaseHTTPRequestHandler, Path (+7 more)
+Cohesion: 0.20
+Nodes (9): Evidence labels, Local inspector and builder, Product stages, Public Stage A distribution, Publisher CI — complete self-service example, Read-only catalog API, Read-only catalog MCP, Verify a public receipt independently (+1 more)
 
 ### Community 105 - "Community 105"
-Cohesion: 0.50
-Nodes (4): python, maxLength, minLength, type
+Cohesion: 0.44
+Nodes (8): _git(), Controlled local Git provenance checks without fetching or executing artifact co, _safe_git_environment(), _sanitize_remote(), _verify_commit_blobs(), verify_git_provenance(), Path, Snapshot
 
 ### Community 106 - "Community 106"
-Cohesion: 0.50
-Nodes (4): signature, additionalProperties, required, type
+Cohesion: 0.52
+Nodes (6): _bound_order(), _stores(), test_access_secrets_are_bounded_distinct_and_environment_bound(), test_api_keys_are_keyed_digests_and_support_rotation_and_revocation(), test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded(), test_tenant_quote_and_order_bindings_hide_cross_tenant_objects()
 
 ### Community 107 - "Community 107"
 Cohesion: 0.50
 Nodes (4): runtime, additionalProperties, required, type
 
-### Community 113 - "Community 113"
+### Community 109 - "Community 109"
 Cohesion: 0.29
 Nodes (6): Before Stage B orderability, Commercial evidence, Compliance and trust checklist, Deferred Stage C, External adoption, Live Stage A
+
+### Community 110 - "Community 110"
+Cohesion: 0.33
+Nodes (5): Completed foundations, Deferred Stage C, Evidence-driven operation, Now — external adoption and safe orderability, Prioritized backlog
+
+### Community 111 - "Community 111"
+Cohesion: 0.50
+Nodes (3): 0.2.0 - 2026-07-13, Changelog, Unreleased
+
+### Community 113 - "Community 113"
+Cohesion: 0.50
+Nodes (3): Operating charter, Owner controls, Product-specific boundaries
 
 ### Community 114 - "Community 114"
 Cohesion: 0.50
@@ -581,9 +601,29 @@ Nodes (4): scope, additionalProperties, required, type
 Cohesion: 0.50
 Nodes (4): total_bytes, maximum, minimum, type
 
+### Community 124 - "Community 124"
+Cohesion: 0.50
+Nodes (4): staticFinding, additionalProperties, required, type
+
 ### Community 126 - "Community 126"
 Cohesion: 0.67
 Nodes (3): format, type, capture_completed_at
+
+### Community 128 - "Community 128"
+Cohesion: 0.50
+Nodes (4): items, maxItems, type, findings
+
+### Community 131 - "Community 131"
+Cohesion: 0.50
+Nodes (4): maximum, minimum, type, high
+
+### Community 132 - "Community 132"
+Cohesion: 0.50
+Nodes (4): items, maxItems, type, manifest_parse_failures
+
+### Community 135 - "Community 135"
+Cohesion: 0.50
+Nodes (4): pyyaml, maxLength, minLength, type
 
 ## Knowledge Gaps
 - **573 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+568 more)
@@ -593,9 +633,9 @@ Nodes (3): format, type, capture_completed_at
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `InputRejected` connect `Community 70` to `Community 0`, `Community 2`, `Community 38`, `Community 6`, `Community 104`, `Community 73`, `Community 42`, `Community 43`, `Community 46`, `Community 17`, `Community 50`, `Community 81`, `Community 20`, `Community 54`, `Community 24`, `Community 30`?**
-  _High betweenness centrality (0.121) - this node is a cross-community bridge._
-- **Why does `properties` connect `Community 26` to `Community 32`, `Community 33`, `Community 3`, `Community 5`, `Community 101`, `Community 11`, `Community 15`, `Community 16`, `Community 49`, `Community 48`, `Community 21`, `Community 22`, `Community 87`, `Community 92`?**
+- **Why does `InputRejected` connect `Community 20` to `Community 0`, `Community 2`, `Community 6`, `Community 17`, `Community 24`, `Community 30`, `Community 37`, `Community 38`, `Community 42`, `Community 43`, `Community 46`, `Community 50`, `Community 54`, `Community 63`, `Community 70`, `Community 73`, `Community 81`, `Community 87`, `Community 93`, `Community 100`, `Community 105`?**
+  _High betweenness centrality (0.124) - this node is a cross-community bridge._
+- **Why does `properties` connect `Community 26` to `Community 32`, `Community 33`, `Community 3`, `Community 67`, `Community 5`, `Community 101`, `Community 11`, `Community 15`, `Community 16`, `Community 49`, `Community 48`, `Community 21`, `Community 22`, `Community 23`, `Community 92`?**
   _High betweenness centrality (0.050) - this node is a cross-community bridge._
 - **Why does `properties` connect `Community 3` to `Community 10`, `Community 76`, `Community 121`, `Community 122`, `Community 123`, `Community 94`?**
   _High betweenness centrality (0.025) - this node is a cross-community bridge._
@@ -603,7 +643,7 @@ _Questions this graph is uniquely positioned to answer:_
   _`InputRejected` has 116 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 41 inferred relationships involving `CommerceStore` (e.g. with `ArgumentParser` and `BoundedCommerceServer`) actually correct?**
   _`CommerceStore` has 41 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 22 inferred relationships involving `CommerceAccessStore` (e.g. with `ArgumentParser` and `InputRejected`) actually correct?**
-  _`CommerceAccessStore` has 22 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 39 inferred relationships involving `ScanLimits` (e.g. with `BinaryIO` and `ParsedSkill`) actually correct?**
   _`ScanLimits` has 39 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 22 inferred relationships involving `CommerceAccessStore` (e.g. with `ArgumentParser` and `InputRejected`) actually correct?**
+  _`CommerceAccessStore` has 22 INFERRED edges - model-reasoned connections that need verification._
