@@ -720,13 +720,13 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/hosted_worker.py": {
-    "mtime": 1784054656.4029295,
-    "ast_hash": "3412f1277ddfcf57bf7fb0e17b3bb3db",
+    "mtime": 1784054929.2993288,
+    "ast_hash": "5c2032473b6f1cacdd6bf837d8d9ef8a",
     "semantic_hash": ""
   },
   "tests/test_hosted_worker.py": {
-    "mtime": 1784054656.404942,
-    "ast_hash": "5742e241ed64346e3f341290807c8dd6",
+    "mtime": 1784054929.3008332,
+    "ast_hash": "899d774bdd09615a9fc47c076094c9e1",
     "semantic_hash": ""
   },
   ".github/workflows/vouchspec-fulfillment.yml": {

@@ -65,6 +65,20 @@ _SAFE_SIGNER_FAILURES = {
     ("signing_gate_failed", "signing self-verification changed payload bytes"): "isolated_signer_self_verification",
     ("signing_gate_failed", "signed output could not be written"): "isolated_signer_output_write",
 }
+_SAFE_SIGNER_RUNTIME_MARKERS = (
+    (b"permission denied", "isolated_signer_container_permission"),
+    (b"read-only file system", "isolated_signer_container_readonly"),
+    (b"invalid mount config", "isolated_signer_container_mount"),
+    (b"mounts denied", "isolated_signer_container_mount"),
+    (b"unable to find user", "isolated_signer_container_user"),
+    (b"no such image", "isolated_signer_container_image"),
+    (b"no such file or directory", "isolated_signer_container_path"),
+    (b"modulenotfounderror", "isolated_signer_runtime_import"),
+    (b"importerror", "isolated_signer_runtime_import"),
+    (b"unrecognized arguments", "isolated_signer_cli_arguments"),
+    (b"docker: error response from daemon", "isolated_signer_container_runtime"),
+    (b"traceback (most recent call last)", "isolated_signer_runtime_exception"),
+)
 
 
 class HostedWorkerError(CapabilityProofError):
@@ -101,6 +115,10 @@ def _safe_signer_failure_code(stderr: bytes) -> str | None:
             continue
         mapped = _SAFE_SIGNER_FAILURES.get((code, message))
         if mapped is not None:
+            return mapped
+    lowered = stderr.lower()
+    for marker, mapped in _SAFE_SIGNER_RUNTIME_MARKERS:
+        if marker in lowered:
             return mapped
     return None
 

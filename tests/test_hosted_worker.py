@@ -54,6 +54,12 @@ def test_signer_diagnostics_emit_only_allowlisted_codes() -> None:
         b'bounded runtime warning\n{"error":{"code":"signing_gate_failed","message":"worker timing evidence is inconsistent"}}\n'
     ) == "isolated_signer_timing_evidence"
     assert _safe_signer_failure_code(
+        b'docker: Error response from daemon: unable to find user 1001: no matching entries in passwd file'
+    ) == "isolated_signer_container_user"
+    assert _safe_signer_failure_code(
+        b'Traceback (most recent call last):\nModuleNotFoundError: No module named capabilityproof'
+    ) == "isolated_signer_runtime_import"
+    assert _safe_signer_failure_code(
         b'{"error":{"code":"signing_gate_failed","message":"secret=/tmp/private.pem"}}'
     ) is None
     assert _safe_signer_failure_code(
