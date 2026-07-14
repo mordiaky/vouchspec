@@ -76,7 +76,11 @@ commerce store, provider-event path, and planned public order/result boundary.
   API keys, webhook secrets, raw webhook bodies, and Checkout URLs are not persisted.
 - **Evidence:** focused mock tests cover replay, conflict, reordering, cross-binding, account
   mismatch, refund/dispute, fee/availability, and lease recovery. An owner-authorized real
-  Stripe test session was created, reconciled unpaid, and expired without a charge.
+  Stripe test session was created, reconciled unpaid, and expired without a charge. The
+  authenticated HTTP boundary now creates Stripe-test quotes and Checkout Sessions, preserves
+  exact webhook bytes, rejects duplicate/missing signature headers, isolates webhook rate-limit
+  capacity, and maps in-progress/retryable processing to non-2xx responses. A second bounded
+  real test probe traversed the HTTP quote/order path and was immediately expired unpaid.
 
 ### Critical — capability revocation did not invalidate downloaded paid receipts
 
@@ -93,8 +97,8 @@ commerce store, provider-event path, and planned public order/result boundary.
 
 ### High — authenticated API is not externally deployed or operationally provisioned
 
-- **Current exposure:** the new server is sandbox-only, loopback-only, fake-provider-only, and
-  absent from the public Stage A distribution.
+- **Current exposure:** the server is sandbox-only, loopback-only, and absent from the public
+  Stage A distribution. Its explicit Stripe mode is test-only; live stores are refused.
 - **Exploit if exposed directly:** plaintext transport, proxy/client-IP confusion, unaggregated
   auth abuse, weak filesystem secret permissions, or multi-instance limit bypass.
 - **Required live fix:** managed TLS and ingress request limits, source-aware rate limiting at
@@ -103,17 +107,18 @@ commerce store, provider-event path, and planned public order/result boundary.
   recovery. The application intentionally ignores forwarded client-IP headers; the edge must
   enforce source limits before forwarding to loopback.
 
-### High — reviewed Stripe adapter is not connected to the public service boundary
+### High — connected Stripe boundary is not behind a managed public edge
 
-- **Current exposure:** none; the authenticated HTTP listener remains loopback/sandbox-only and
-  still uses the deterministic fake provider.
+- **Current exposure:** none; the authenticated HTTP listener remains loopback/sandbox-only.
+  Fake-provider and Stripe-test modes are explicit, and live stores remain refused.
 - **Exploit if connected carelessly:** a proxy could alter exact webhook bytes, return success
   for an in-progress reconciliation, expose a Checkout URL across tenants, or let test/live
   credentials share state.
-- **Required live fix:** connect quote/order creation and the exact-body webhook route behind
+- **Required live fix:** deploy the connected quote/order and exact-body webhook routes behind
   managed TLS/ingress, configure a mode-specific endpoint and secret, preserve separate expected
-  test/live account IDs and databases, map retryable/in-progress events to non-2xx responses,
-  and complete an unpaid-to-available test-card flow before explicit live activation.
+  test/live account IDs and databases, and complete an unpaid-to-available test-card flow before
+  explicit live activation. The local handler already returns non-2xx for retryable/in-progress
+  reconciliation; the edge must pass those responses through unchanged.
 
 ### High — production signing role/key is not provisioned
 

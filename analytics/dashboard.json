@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-07-14T14:46:26Z",
+  "as_of": "2026-07-14T15:04:01Z",
   "goal_achieved": false,
   "publisher_integrations": {"verified": 0, "required": 3},
   "machine_requests": {"verified": 0, "required": 100},
@@ -19,7 +19,7 @@
     "signed_deliveries": 1,
     "settled_revenue_usd": "0.00",
     "counts_for_goal": false,
-    "engineering_tests_passed": 128,
+    "engineering_tests_passed": 130,
     "engineering_tests_skipped": 1,
     "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29342266720",
     "public_ci_commit": "ff78ba5fda4290cf824d4d708fecf27a882df9e4",
@@ -27,8 +27,10 @@
   },
   "stripe_test_probe": {
     "account_identity_verified": true,
-    "checkout_sessions_created": 1,
-    "checkout_sessions_expired_unpaid": 1,
+    "checkout_sessions_created": 2,
+    "checkout_sessions_expired_unpaid": 2,
+    "authenticated_http_checkout_probes": 1,
+    "exact_body_webhook_route_tested": true,
     "charges_created": 0,
     "counts_for_goal": false
   },

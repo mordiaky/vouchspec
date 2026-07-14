@@ -3,7 +3,7 @@
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
   "goal_status": "active_not_achieved",
-  "stage": "stage_a_public_live_stage_b_stripe_test_and_paid_lifecycle_proven_not_public",
+  "stage": "stage_a_public_live_stage_b_authenticated_stripe_http_test_proven_not_public",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
     "excluded": ["arbitrary uploads", "private repositories", "confidential content", "artifact execution"]
@@ -50,8 +50,8 @@
     "sandbox_fulfillment": "complete_signed_delivery_excluded_from_metrics",
     "primary_provider": "stripe_checkout",
     "secondary_provider": "x402",
-    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/provider-event/cost store", "fake-provider sandbox delivery", "loopback authenticated tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "account-bound pinned Stripe adapter with server-retrieved payment-chain reconciliation", "owner-authorized real unpaid Stripe test Checkout probe", "offline-root paid receipt lifecycle with monotonic invalidation", "enabled owner Stripe account identity and payout boundary verified read-only"],
-    "remaining_gates": ["managed TLS deployment with trusted-edge source limits secret manager restricted database and audit aggregation", "kernel-quota-enforced ephemeral network-fetch scratch volume", "connect the reviewed Stripe adapter to authenticated order and exact-body webhook routes", "mode-specific Stripe webhook endpoint and complete test-card reconciliation", "operational production signing role"]
+    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/provider-event/cost store", "fake-provider sandbox delivery", "loopback authenticated tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "account-bound pinned Stripe adapter with server-retrieved payment-chain reconciliation", "authenticated Stripe-test quote/order and exact-body webhook HTTP boundary", "owner-authorized real unpaid Stripe test Checkout probes including one through the HTTP boundary", "offline-root paid receipt lifecycle with monotonic invalidation", "enabled owner Stripe account identity and payout boundary verified read-only"],
+    "remaining_gates": ["managed TLS deployment of the connected boundary with trusted-edge source limits secret manager restricted database and audit aggregation", "kernel-quota-enforced ephemeral network-fetch scratch volume", "mode-specific public Stripe test webhook endpoint and complete test-card reconciliation", "operational production signing role"]
   },
   "commercial_metrics": {
     "required_buyers": 3,
@@ -74,7 +74,7 @@
   "acceptance": {
     "tests_total": 30,
     "all_pass": false,
-    "engineering_tests_passed": 128,
+    "engineering_tests_passed": 130,
     "engineering_tests_skipped": 1,
     "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29342266720",
     "public_ci_commit": "ff78ba5fda4290cf824d4d708fecf27a882df9e4",
@@ -85,15 +85,15 @@
   "current_blockers": [
     "No unrelated external repository has retained a VouchSpec integration",
     "No legitimate external machine use is recorded",
-    "Stage B authenticated API is sandbox-only and has no managed public deployment or connected Stripe webhook route",
+    "Stage B authenticated Stripe-test API is loopback-only and has no managed public deployment or public webhook endpoint",
     "No genuine purchase or settled revenue exists"
   ],
   "human_actions_requested": [],
   "top_next_actions": [
     "Convert one of the three qualified publisher proposals into a retained external integration",
-    "Connect the reviewed Stripe adapter to the authenticated order and exact-body webhook boundary",
-    "Prepare managed deployment and a production signing role without enabling live Checkout prematurely"
+    "Deploy the connected Stripe-test API behind managed TLS and a mode-specific webhook endpoint",
+    "Prepare the production signing role and kernel-quota fetch volume without enabling live Checkout prematurely"
   ],
-  "last_checkpoint_time": "2026-07-14T14:46:26Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-stripe-test-probe.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. The Stripe adapter and paid lifecycle are implemented; next connect them to a managed exact-body HTTP/webhook boundary without exposing the sandbox listener or enabling live Checkout prematurely."
+  "last_checkpoint_time": "2026-07-14T15:04:01Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-stripe-http-test-probe.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. The Stripe adapter is connected to authenticated quote/order creation and the exact-body webhook path in loopback test mode; next deploy that boundary behind managed TLS with separate public test webhook state, restricted durable storage, and no live activation."
 }

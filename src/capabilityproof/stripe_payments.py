@@ -312,7 +312,6 @@ class StripePaymentAdapter:
 
         if not _IDEMPOTENCY.fullmatch(idempotency_key):
             raise InputRejected("invalid Stripe idempotency key", code="invalid_commerce_request")
-        observed = _aware_datetime(now, "Stripe checkout timestamp")
         quote = self.store.create_quote(
             request_value,
             quote_id=quote_id,
@@ -326,6 +325,28 @@ class StripePaymentAdapter:
             buyer_reference=buyer_reference,
             now=now,
         )
+        return self.prepare_order_checkout(
+            order["order_id"],
+            now=now,
+        )
+
+    @property
+    def live_checkout_enabled(self) -> bool:
+        """Return the explicit activation state without exposing any credential material."""
+
+        return self._live_checkout_enabled
+
+    def prepare_order_checkout(
+        self,
+        order_id: str,
+        *,
+        now: datetime,
+    ) -> dict[str, Any]:
+        """Create or retrieve Checkout for an already authenticated, tenant-bound order."""
+
+        observed = _aware_datetime(now, "Stripe checkout timestamp")
+        order = self.store.get_order(order_id)
+        quote = self.store.get_quote(order["quote_id"])
         if order["provider"] != "stripe":
             raise InputRejected("order is not bound to Stripe", code="invalid_commerce_request")
         if order["provider_checkout_id"] is not None:
@@ -335,7 +356,7 @@ class StripePaymentAdapter:
 
         expires_at = int(_parse_time(quote["expires_at"]).timestamp())
         checkout_key = "vouchspec_" + hashlib.sha256(
-            f"{self.store.environment}\0{order['order_id']}\0{idempotency_key}".encode("utf-8")
+            f"{self.store.environment}\0{self._account_id}\0{order['order_id']}\0{order['quote_id']}".encode("utf-8")
         ).hexdigest()
         params = {
             "mode": "payment",

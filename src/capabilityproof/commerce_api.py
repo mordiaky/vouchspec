@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 import hashlib
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
+import re
 import threading
 import time
 from typing import Any
@@ -22,6 +23,7 @@ from .commerce import load_strict_commerce_json
 from .commerce_access import CommerceAccessStore
 from .commerce_store import CommerceStore, FakePaymentProvider
 from .errors import CapabilityProofError, InputRejected
+from .stripe_payments import MAX_STRIPE_WEBHOOK_BYTES, StripePaymentAdapter
 
 
 CONNECTION_TIMEOUT_SECONDS = 5
@@ -30,6 +32,7 @@ CONNECTION_TIMEOUT_SECONDS = 5
 @dataclass(frozen=True)
 class CommerceApiLimits:
     max_body_bytes: int = 16_384
+    max_webhook_body_bytes: int = MAX_STRIPE_WEBHOOK_BYTES
     max_active_connections: int = 32
     window_seconds: int = 60
     global_requests_per_window: int = 240
@@ -41,6 +44,7 @@ class CommerceApiLimits:
     def __post_init__(self) -> None:
         values = {
             "max_body_bytes": (self.max_body_bytes, 256, 65_536),
+            "max_webhook_body_bytes": (self.max_webhook_body_bytes, 1_024, MAX_STRIPE_WEBHOOK_BYTES),
             "max_active_connections": (self.max_active_connections, 1, 256),
             "window_seconds": (self.window_seconds, 1, 3_600),
             "global_requests_per_window": (self.global_requests_per_window, 1, 100_000),
@@ -142,13 +146,14 @@ def make_commerce_handler(
     store: CommerceStore,
     access: CommerceAccessStore,
     *,
+    stripe_adapter: StripePaymentAdapter | None = None,
     limits: CommerceApiLimits | None = None,
     now_source: Callable[[], datetime] | None = None,
 ) -> type[BaseHTTPRequestHandler]:
     settings = limits or CommerceApiLimits()
     rate_limiter = SlidingWindowRateLimiter(settings.window_seconds)
     clock = now_source or (lambda: datetime.now(timezone.utc))
-    payment_provider = FakePaymentProvider(store)
+    fake_payment_provider = FakePaymentProvider(store) if stripe_adapter is None else None
     creation_lock = threading.Lock()
 
     class VouchSpecCommerceHandler(BaseHTTPRequestHandler):
@@ -196,11 +201,11 @@ def make_commerce_handler(
             ).encode("utf-8")
             self._send_bytes(status, body, extra_headers=extra_headers)
 
-        def _apply_public_limits(self) -> None:
+        def _apply_public_limits(self, scope: str = "api") -> None:
             client_ip = str(self.client_address[0])
-            if not rate_limiter.allow("global", settings.global_requests_per_window):
+            if not rate_limiter.allow(scope + ":global", settings.global_requests_per_window):
                 raise InputRejected("request rate exceeded", code="rate_limited")
-            if not rate_limiter.allow("ip:" + client_ip, settings.ip_requests_per_window):
+            if not rate_limiter.allow(scope + ":ip:" + client_ip, settings.ip_requests_per_window):
                 raise InputRejected("request rate exceeded", code="rate_limited")
 
         def _authenticate(self) -> str:
@@ -232,7 +237,7 @@ def make_commerce_handler(
                 raise InputRejected("query strings and encoded commerce paths are not accepted", code="invalid_commerce_request")
             return parsed.path
 
-        def _read_json(self) -> Any:
+        def _read_body(self, *, maximum_bytes: int) -> bytes:
             if self.headers.get_all("Transfer-Encoding", failobj=[]):
                 raise InputRejected("transfer encoding is not accepted", code="invalid_commerce_request")
             content_types = self.headers.get_all("Content-Type", failobj=[])
@@ -243,14 +248,21 @@ def make_commerce_handler(
                     code="invalid_commerce_request",
                 )
             try:
-                length = int(lengths[0])
-            except ValueError as exc:
-                raise InputRejected("Content-Length is invalid", code="invalid_commerce_request") from exc
-            if not 1 <= length <= settings.max_body_bytes:
+                valid_length = bool(re.fullmatch(r"[1-9][0-9]{0,5}", lengths[0]))
+            except TypeError:
+                valid_length = False
+            if not valid_length:
+                raise InputRejected("Content-Length is invalid", code="invalid_commerce_request")
+            length = int(lengths[0])
+            if not 1 <= length <= maximum_bytes:
                 raise InputRejected("request body size is invalid", code="invalid_commerce_request")
             body = self.rfile.read(length)
             if len(body) != length:
                 raise InputRejected("request body is incomplete", code="invalid_commerce_request")
+            return body
+
+        def _read_json(self) -> Any:
+            body = self._read_body(maximum_bytes=settings.max_body_bytes)
             try:
                 text = body.decode("utf-8", errors="strict")
             except UnicodeDecodeError as exc:
@@ -277,6 +289,13 @@ def make_commerce_handler(
             elif code == "rate_limited":
                 status, public_code, message = 429, "rate_limited", "request rate exceeded"
                 headers["Retry-After"] = str(settings.window_seconds)
+            elif code in {"stripe_api_error", "stripe_event_processing"}:
+                status, public_code, message = 503, "stripe_temporarily_unavailable", "payment processing is temporarily unavailable"
+                headers["Retry-After"] = "10"
+            elif code in {"invalid_webhook_signature", "invalid_stripe_event", "invalid_stripe_object"}:
+                status, public_code, message = 400, "invalid_stripe_webhook", "webhook was rejected"
+            elif code == "stripe_event_conflict":
+                status, public_code, message = 409, code, "webhook event conflicts with recorded state"
             elif code in {
                 "idempotency_conflict",
                 "quote_already_used",
@@ -300,6 +319,7 @@ def make_commerce_handler(
                         {
                             "service": "vouchspec-commerce",
                             "environment": "sandbox",
+                            "payment_provider": "stripe_test" if stripe_adapter is not None else "fake",
                             "live_settlement": False,
                             "status": "ok",
                             "version": "0.2.0",
@@ -335,8 +355,36 @@ def make_commerce_handler(
 
         def do_POST(self) -> None:  # noqa: N802
             try:
-                self._apply_public_limits()
                 route = self._route()
+                if route == "/v1/commerce/webhooks/stripe":
+                    self._apply_public_limits("stripe-webhook")
+                    if stripe_adapter is None:
+                        self._send(404, {"error": {"code": "not_found", "message": "route not found"}})
+                        return
+                    signatures = self.headers.get_all("Stripe-Signature", failobj=[])
+                    if len(signatures) != 1:
+                        raise InputRejected(
+                            "exactly one Stripe-Signature header is required",
+                            code="invalid_webhook_signature",
+                        )
+                    raw_body = self._read_body(maximum_bytes=settings.max_webhook_body_bytes)
+                    result = stripe_adapter.process_webhook(raw_body, signatures[0])
+                    if result["status"] in {"processed", "ignored"}:
+                        self._send(
+                            200,
+                            {
+                                "received": True,
+                                "duplicate": bool(result["duplicate"]),
+                                "status": result["status"],
+                            },
+                        )
+                    else:
+                        raise InputRejected(
+                            "Stripe webhook reached a terminal rejected state",
+                            code="invalid_stripe_event",
+                        )
+                    return
+                self._apply_public_limits()
                 tenant_id = self._authenticate()
                 now = clock()
                 timestamp = _timestamp(now)
@@ -353,7 +401,17 @@ def make_commerce_handler(
                             raise InputRejected(
                                 "tenant quote storage limit reached", code="resource_limit"
                             )
-                        quote = store.create_quote(request, quote_id=quote_id, generated_at=now)
+                        quote = store.create_quote(
+                            request,
+                            quote_id=quote_id,
+                            generated_at=now,
+                            payment_provider="stripe" if stripe_adapter is not None else "fake",
+                            live_checkout_enabled=(
+                                stripe_adapter.live_checkout_enabled
+                                if stripe_adapter is not None
+                                else False
+                            ),
+                        )
                         if quote["orderable"]:
                             access.bind_quote(
                                 tenant_id,
@@ -396,7 +454,26 @@ def make_commerce_handler(
                     token_state = access.authorize_order(
                         tenant_id, order["order_id"], delivery_token, now=now
                     )
-                    order = payment_provider.create_checkout(order["order_id"], occurred_at=timestamp)
+                    if stripe_adapter is None:
+                        assert fake_payment_provider is not None
+                        order = fake_payment_provider.create_checkout(
+                            order["order_id"], occurred_at=timestamp
+                        )
+                        payment = {
+                            "provider": "fake",
+                            "environment": "sandbox",
+                            "settles": False,
+                        }
+                    else:
+                        checkout = stripe_adapter.prepare_order_checkout(
+                            order["order_id"],
+                            now=now,
+                        )
+                        order = checkout["order"]
+                        payment = checkout["checkout"] | {
+                            "environment": stripe_adapter.mode,
+                            "settles": stripe_adapter.mode == "live",
+                        }
                     self._send(
                         201,
                         {
@@ -404,7 +481,7 @@ def make_commerce_handler(
                             "delivery_token": delivery_token,
                             "delivery_token_expires_at": token_state["token_expires_at"],
                             "delivery_token_notice": "store securely; required with the tenant API key",
-                            "payment": {"provider": "fake", "environment": "sandbox", "settles": False},
+                            "payment": payment,
                         },
                     )
                     return
@@ -473,6 +550,7 @@ def create_commerce_server(
     access: CommerceAccessStore,
     port: int,
     *,
+    stripe_adapter: StripePaymentAdapter | None = None,
     limits: CommerceApiLimits | None = None,
     now_source: Callable[[], datetime] | None = None,
 ) -> BoundedCommerceServer:
@@ -480,12 +558,20 @@ def create_commerce_server(
         raise InputRejected("live commerce API is not enabled", code="commerce_live_not_enabled")
     if store.path != access.path:
         raise ValueError("commerce and access stores must share one SQLite file")
+    if stripe_adapter is not None and stripe_adapter.store.path != store.path:
+        raise ValueError("Stripe adapter and commerce API must share one SQLite file")
     if isinstance(port, bool) or not isinstance(port, int) or not 0 <= port <= 65_535:
         raise ValueError("port must be from 0 through 65535")
     settings = limits or CommerceApiLimits()
     server = BoundedCommerceServer(
         ("127.0.0.1", port),
-        make_commerce_handler(store, access, limits=settings, now_source=now_source),
+        make_commerce_handler(
+            store,
+            access,
+            stripe_adapter=stripe_adapter,
+            limits=settings,
+            now_source=now_source,
+        ),
         max_active=settings.max_active_connections,
     )
     server.daemon_threads = True

@@ -36,7 +36,8 @@
   tenant; require an expiring, rotatable, revocable order capability; store no plaintext token.
 - [x] Bound the loopback commerce API by body, connection, time, rate, tenant storage, and
   exact-result digest, with generic object errors and security-state audit events.
-- [ ] Reconcile payment server-side; never fulfill from a browser redirect.
+- [x] Reconcile payment server-side from the retrieved Session, PaymentIntent, Charge, and
+  Balance Transaction chain; never fulfill from a browser redirect or webhook object alone.
 - [x] Complete Linux CI and cross-OS deterministic/adversarial verification for the current
   sandbox boundary; one Windows symlink-creation test remains an explicit host-privilege skip.
 - [ ] Deploy the sandbox-reviewed API behind managed TLS, source-aware ingress limits, secret

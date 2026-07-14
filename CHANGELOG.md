@@ -30,6 +30,10 @@
   verification, crash-recoverable event deduplication, server-retrieved payment-chain
   reconciliation, and strict refund/dispute/availability handling. A real unpaid test-mode
   Session was created and expired; live HTTP intake remains disabled.
+- Connect Stripe test mode to authenticated tenant quote/order creation and a dedicated
+  exact-body webhook route, with immutable-order-derived Checkout idempotency, separate webhook
+  rate-limit capacity, retry-safe non-2xx responses, and a real HTTP-path Checkout probe that
+  was expired unpaid. The loopback server still refuses live stores.
 - Add offline-root paid-receipt lifecycle draft, publication, evaluation, and export commands
   with exact delivered-receipt/signer coverage, root/sequence binding, historical state, and
   irreversible supersession/revocation/key-compromise controls.

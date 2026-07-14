@@ -65,6 +65,77 @@ def _running_api(tmp_path, *, limits=None):
         thread.join(timeout=5)
 
 
+class _StripeApiStub:
+    mode = "test"
+    live_checkout_enabled = False
+
+    def __init__(self, store):
+        self.store = store
+        self.webhook_calls = []
+        self.webhook_error = None
+
+    def prepare_order_checkout(self, order_id, *, now):
+        occurred_at = now.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace(
+            "+00:00", "Z"
+        )
+        order = self.store.attach_checkout(
+            order_id,
+            "cs_test_1234567890ABCDEFG",
+            occurred_at=occurred_at,
+        )
+        return {
+            "order": order,
+            "checkout": {
+                "provider": "stripe_checkout",
+                "checkout_id": "cs_test_1234567890ABCDEFG",
+                "url": "https://checkout.stripe.com/c/pay/cs_test_1234567890ABCDEFG",
+                "expires_at": "2026-07-14T15:30:00Z",
+                "livemode": False,
+            },
+        }
+
+    def process_webhook(self, raw_body, signature_header):
+        self.webhook_calls.append((raw_body, signature_header))
+        if self.webhook_error is not None:
+            raise self.webhook_error
+        return {
+            "event_id": "evt_1234567890ABCDEFG",
+            "duplicate": False,
+            "status": "processed",
+            "order_id": None,
+        }
+
+
+@contextmanager
+def _running_stripe_api(tmp_path, *, limits=None):
+    path = tmp_path / "commerce.db"
+    store = CommerceStore(path, environment="sandbox")
+    access = CommerceAccessStore(
+        path,
+        environment="sandbox",
+        auth_pepper=AUTH_PEPPER,
+        delivery_secret=DELIVERY_SECRET,
+    )
+    credential = access.provision_tenant(tenant_id="ten_" + "3" * 24)
+    adapter = _StripeApiStub(store)
+    server = create_commerce_server(
+        store,
+        access,
+        0,
+        stripe_adapter=adapter,
+        limits=limits,
+        now_source=lambda: NOW,
+    )
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        yield server.server_address, store, access, credential, adapter
+    finally:
+        server.shutdown()
+        server.server_close()
+        thread.join(timeout=5)
+
+
 def _request(address, method, path, *, body=b"", headers=None):
     connection = HTTPConnection(*address, timeout=5)
     connection.request(method, path, body=body, headers=headers or {})
@@ -187,6 +258,77 @@ def test_authenticated_api_binds_tenant_quote_order_and_sanitizes_output(tmp_pat
 
         _, second_created, _ = _create_order(address, second)
         assert second_created["order"]["order_id"] != order_id
+
+
+def test_authenticated_stripe_test_checkout_and_exact_body_webhook_are_wired(tmp_path) -> None:
+    limits = CommerceApiLimits(ip_requests_per_window=3)
+    with _running_stripe_api(tmp_path, limits=limits) as (address, store, _, credential, adapter):
+        status, _, body = _request(address, "GET", "/health")
+        assert status == 200
+        assert json.loads(body)["payment_provider"] == "stripe_test"
+
+        quote, created, headers = _create_order(address, credential)
+        assert quote["payment_options"] == [{"provider": "stripe_checkout", "status": "test_mode"}]
+        assert created["payment"] == {
+            "checkout_id": "cs_test_1234567890ABCDEFG",
+            "environment": "test",
+            "expires_at": "2026-07-14T15:30:00Z",
+            "livemode": False,
+            "provider": "stripe_checkout",
+            "settles": False,
+            "url": "https://checkout.stripe.com/c/pay/cs_test_1234567890ABCDEFG",
+        }
+        assert "no-store" in headers["cache-control"]
+        assert b"checkout.stripe.com" not in store.path.read_bytes()
+
+        raw_body = b'{ "opaque": [1, 2], "spacing": "preserved" }\n'
+        status, _, body = _request(
+            address,
+            "POST",
+            "/v1/commerce/webhooks/stripe",
+            body=raw_body,
+            headers={
+                "Content-Type": "application/json",
+                "Stripe-Signature": "t=123,v1=abcdef",
+            },
+        )
+        assert status == 200
+        assert json.loads(body) == {"duplicate": False, "received": True, "status": "processed"}
+        assert adapter.webhook_calls == [(raw_body, "t=123,v1=abcdef")]
+        assert b"opaque" not in store.path.read_bytes()
+
+
+def test_stripe_webhook_rejects_missing_signature_and_retries_in_progress_event(tmp_path) -> None:
+    with _running_stripe_api(tmp_path) as (address, _, _, _, adapter):
+        raw_body = b'{"id":"evt_1234567890ABCDEFG"}'
+        status, _, body = _request(
+            address,
+            "POST",
+            "/v1/commerce/webhooks/stripe",
+            body=raw_body,
+            headers={"Content-Type": "application/json"},
+        )
+        assert status == 400
+        assert json.loads(body)["error"]["code"] == "invalid_stripe_webhook"
+        assert adapter.webhook_calls == []
+
+        adapter.webhook_error = InputRejected(
+            "reconciliation already running",
+            code="stripe_event_processing",
+        )
+        status, headers, body = _request(
+            address,
+            "POST",
+            "/v1/commerce/webhooks/stripe",
+            body=raw_body,
+            headers={
+                "Content-Type": "application/json",
+                "Stripe-Signature": "t=123,v1=abcdef",
+            },
+        )
+        assert status == 503
+        assert headers["retry-after"] == "10"
+        assert json.loads(body)["error"]["code"] == "stripe_temporarily_unavailable"
 
 
 def test_delivery_capability_rotation_and_revocation_take_effect_immediately(tmp_path) -> None:
@@ -341,6 +483,18 @@ def test_duplicate_auth_headers_and_slow_bodies_do_not_cross_the_boundary(tmp_pa
         connection.endheaders(b"{}")
         response = connection.getresponse()
         assert response.status == 401
+        response.read()
+        connection.close()
+
+        connection = HTTPConnection(*address, timeout=5)
+        connection.putrequest("POST", "/v1/commerce/quotes")
+        connection.putheader("Authorization", "Bearer " + first["api_key"])
+        connection.putheader("Content-Type", "application/json")
+        connection.putheader("Content-Length", "+2")
+        connection.putheader("Idempotency-Key", "quote_attempt_noncanonical_length")
+        connection.endheaders(b"{}")
+        response = connection.getresponse()
+        assert response.status == 422
         response.read()
         connection.close()
 

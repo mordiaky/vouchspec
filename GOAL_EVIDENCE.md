@@ -21,7 +21,7 @@ traffic are explicitly excluded.
 | 12 | Repeat requests from five sources after their first real use | Pending: 0 / 5 |
 | 13 | Exclude owner, CI, monitor, tests, controlled accounts, related parties, fake repeats | Pass as accounting policy; external operation unproven |
 | 14 | One genuine machine-readable paid request completes | Pending: 0 |
-| 15 | Software can quote, price, explain, pay, receive, verify, and continue autonomously | Partial: authenticated quote/order/status/result, real Stripe test Checkout creation/reconciliation, paid lifecycle, and complete signed sandbox delivery work; connected public/live payment remains disabled |
+| 15 | Software can quote, price, explain, pay, receive, verify, and continue autonomously | Partial: authenticated Stripe-test quote/order/Checkout, exact-body webhook, status/result, paid lifecycle, and complete signed sandbox delivery work; managed public/live payment remains disabled |
 | 16 | Three unrelated external buyers settle | Pending: 0 / 3 |
 | 17 | At least USD $500 settled gross external revenue | Pending: USD $0 / $500 |
 | 18 | Exclude owner/related/test/pending/reversed/refunded/simulated revenue | Pass as accounting policy; no revenue recorded |
@@ -34,7 +34,7 @@ traffic are explicitly excluded.
 | 25 | No ordinary order requires a call, review, meeting, or manual delivery | Partial: authenticated sandbox order and result delivery were fully autonomous; no genuine order yet |
 | 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has two contacts but no response/integration |
 | 27 | One paid fulfillment process completes more than one real order | Pending: 0 |
-| 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: authenticated sandbox quote/order/result, Stripe Checkout core, paid lifecycle, discovery/integration/verify/operations are documented; public payment and credential issuance remain disabled |
+| 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: authenticated sandbox quote/order/result plus Stripe-test Checkout/webhook, paid lifecycle, discovery/integration/verify/operations are documented; public deployment and credential issuance remain disabled |
 | 29 | Independent goal-auditor inspects complete evidence | Pending until tests 1-28 have evidence |
 | 30 | Auditor confirms every genuineness, financial, operational, security, and claims test | Pending |
 
@@ -59,13 +59,15 @@ traffic are explicitly excluded.
   isolation, quotas, audit events, exact signed-result delivery, and live-store refusal.
 - The pinned Stripe adapter is bound to an expected enabled account, stores no API/webhook
   secrets or Checkout URL, and reconciles only server-retrieved Session, PaymentIntent, Charge,
-  and Balance Transaction state. An owner-authorized real USD $49 test Session was created,
-  observed unpaid without a PaymentIntent, and expired. It is excluded from every commercial
-  counter; see `logs/2026-07-14-stripe-test-probe.md`.
+  and Balance Transaction state. The authenticated HTTP boundary now creates exact tenant-bound
+  Stripe-test Checkout Sessions and preserves raw webhook bytes with retry-safe responses. An
+  owner-authorized real USD $49 Session traversed this HTTP path and was immediately expired
+  unpaid. It is excluded from every commercial counter; see
+  `logs/2026-07-14-stripe-http-test-probe.md`.
 - Paid Stage B lifecycle tests cover exact receipt/signer coverage, offline-root publication,
   historical state, expiry, rollback, equivocation, root replacement, supersession, evaluator
   revocation, and irreversible retired/compromised issuer state.
-- 128 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
+- 130 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
   skipped for missing host privilege; Linux-container and hostile tree/archive/path tests pass.
 - Public Linux CI run `29342266720` passed at commit
   `ff78ba5fda4290cf824d4d708fecf27a882df9e4`, including package installation, the full test

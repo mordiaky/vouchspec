@@ -39,6 +39,7 @@ from .signing import (
 from .snapshot import resolve_allowed_path
 from .stage_b import DockerNoEgressWorker, freeze_public_source
 from .stage_b_signer import sign_verified_worker_result
+from .stripe_payments import StripePaymentAdapter
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -122,6 +123,32 @@ def _build_parser() -> argparse.ArgumentParser:
     commerce_server_parser.add_argument("--auth-pepper-env", default="VOUCHSPEC_AUTH_PEPPER_HEX")
     commerce_server_parser.add_argument(
         "--delivery-secret-env", default="VOUCHSPEC_DELIVERY_SECRET_HEX"
+    )
+
+    stripe_commerce_parser = subparsers.add_parser(
+        "serve-commerce-stripe-test",
+        help="run the authenticated Stripe-test commerce API on loopback",
+    )
+    stripe_commerce_parser.add_argument("--database", type=Path, required=True)
+    stripe_commerce_parser.add_argument("--port", type=int, default=8789)
+    stripe_commerce_parser.add_argument("--auth-pepper-env", default="VOUCHSPEC_AUTH_PEPPER_HEX")
+    stripe_commerce_parser.add_argument(
+        "--delivery-secret-env", default="VOUCHSPEC_DELIVERY_SECRET_HEX"
+    )
+    stripe_commerce_parser.add_argument(
+        "--stripe-secret-key-env", default="VOUCHSPEC_STRIPE_SECRET_KEY"
+    )
+    stripe_commerce_parser.add_argument(
+        "--stripe-webhook-secret-env", default="VOUCHSPEC_STRIPE_WEBHOOK_SECRET"
+    )
+    stripe_commerce_parser.add_argument(
+        "--stripe-account-id-env", default="VOUCHSPEC_STRIPE_ACCOUNT_ID"
+    )
+    stripe_commerce_parser.add_argument(
+        "--stripe-success-url-env", default="VOUCHSPEC_STRIPE_SUCCESS_URL"
+    )
+    stripe_commerce_parser.add_argument(
+        "--stripe-cancel-url-env", default="VOUCHSPEC_STRIPE_CANCEL_URL"
     )
 
     serve_parser = subparsers.add_parser("serve", help="run the root-confined loopback JSON API")
@@ -330,6 +357,23 @@ def _commerce_secret(environment_name: str) -> bytes:
     return bytes.fromhex(raw)
 
 
+def _commerce_environment_value(environment_name: str) -> str:
+    if not isinstance(environment_name, str) or not re.fullmatch(r"[A-Z][A-Z0-9_]{0,63}", environment_name):
+        raise CapabilityProofError("commerce environment name is invalid", code="invalid_arguments")
+    raw = os.environ.get(environment_name)
+    if raw is None:
+        raise CapabilityProofError(
+            f"required commerce environment variable is not set: {environment_name}",
+            code="missing_secret",
+        )
+    if not 1 <= len(raw) <= 4_096 or any(ord(character) < 0x20 or ord(character) == 0x7F for character in raw):
+        raise CapabilityProofError(
+            f"commerce environment variable is invalid: {environment_name}",
+            code="invalid_secret",
+        )
+    return raw
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _build_parser().parse_args(argv)
     try:
@@ -397,7 +441,11 @@ def main(argv: list[str] | None = None) -> int:
             )
             print(json.dumps(report, sort_keys=True, separators=(",", ":")))
             return 0
-        if args.command in {"provision-commerce-tenant", "serve-commerce-sandbox"}:
+        if args.command in {
+            "provision-commerce-tenant",
+            "serve-commerce-sandbox",
+            "serve-commerce-stripe-test",
+        }:
             commerce_store = CommerceStore(
                 args.database.expanduser().resolve(strict=False), environment="sandbox"
             )
@@ -412,12 +460,26 @@ def main(argv: list[str] | None = None) -> int:
                 print(json.dumps(credential, sort_keys=True, separators=(",", ":")))
                 print("Store this sandbox API key securely; it is not persisted in plaintext.", file=sys.stderr)
                 return 0
-            server = create_commerce_server(commerce_store, access_store, args.port)
-            host, port = server.server_address
-            print(
-                f"VouchSpec nonsettling commerce sandbox listening on http://{host}:{port}",
-                file=sys.stderr,
+            stripe_adapter = None
+            if args.command == "serve-commerce-stripe-test":
+                stripe_adapter = StripePaymentAdapter(
+                    commerce_store,
+                    mode="test",
+                    api_key=_commerce_environment_value(args.stripe_secret_key_env),
+                    webhook_secret=_commerce_environment_value(args.stripe_webhook_secret_env),
+                    expected_account_id=_commerce_environment_value(args.stripe_account_id_env),
+                    success_url=_commerce_environment_value(args.stripe_success_url_env),
+                    cancel_url=_commerce_environment_value(args.stripe_cancel_url_env),
+                )
+            server = create_commerce_server(
+                commerce_store,
+                access_store,
+                args.port,
+                stripe_adapter=stripe_adapter,
             )
+            host, port = server.server_address
+            provider = "Stripe test" if stripe_adapter is not None else "fake nonsettling"
+            print(f"VouchSpec {provider} commerce sandbox listening on http://{host}:{port}", file=sys.stderr)
             server.serve_forever()
             return 0
         if args.command == "prepare-paid-lifecycle":

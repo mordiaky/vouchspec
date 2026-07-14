@@ -1,18 +1,21 @@
 # Managed Stage B deployment boundary
 
 This directory is preparation, not a deployment claim. The checked-in commerce listener remains
-loopback-only and fake-provider-only. Do not expose it directly or set
+loopback-only and live-disabled; it supports the fake provider by default and an explicit
+Stripe-test mode for integration verification. Do not expose it directly or set
 `VOUCHSPEC_STRIPE_LIVE_CHECKOUT_ENABLED=true` from this repository.
 
-The managed service must preserve these boundaries before the reviewed Stripe adapter is wired
-to order creation:
+The managed service must preserve these boundaries before the connected Stripe-test path is
+made public or any live order is accepted:
 
 1. Terminate HTTPS at a managed edge and forward only to `127.0.0.1`. Enforce source-aware and
    global request limits, body limits, timeouts, and connection limits at that edge. The
    application must continue ignoring untrusted forwarded-client headers.
-2. Preserve Stripe webhook request bytes exactly. Route only the dedicated webhook path to the
-   adapter, pass the single `Stripe-Signature` header unchanged, return non-2xx for retryable or
-   already-processing reconciliation, and never use browser redirects to authorize work.
+2. Preserve Stripe webhook request bytes exactly. Route only
+   `POST /v1/commerce/webhooks/stripe` to the adapter, pass the single `Stripe-Signature` header
+   unchanged, return non-2xx for retryable or already-processing reconciliation, and never use
+   browser redirects to authorize work. Ordinary API traffic and webhook traffic retain
+   separate application rate-limit buckets so one cannot consume the other's local capacity.
 3. Inject API key, mode-specific webhook secret, authentication pepper, delivery secret, and
    signing-key reference from a secret manager. Do not place secret values in manifests, image
    layers, command arguments, source, logs, or the commerce database.

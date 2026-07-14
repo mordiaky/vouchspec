@@ -152,3 +152,18 @@
   exact envelope, but only the offline recovery-root role signs it. Root replacement, rollback,
   equivocation, incomplete receipt/signer coverage, and terminal-state restoration fail closed.
 - **Boundary:** This verifies the payment/lifecycle core, not a public service or settled sale.
+
+## 2026-07-14 - Connect Stripe only in explicit loopback test mode
+
+- **Decision:** Inject the reviewed Stripe adapter into the existing authenticated commerce
+  server only when the operator selects `serve-commerce-stripe-test`. Keep the fake provider as
+  the default and continue refusing every live store.
+- **Security shape:** create quotes and orders only after tenant authentication; derive Stripe
+  idempotency solely from the immutable stored account/order/quote binding; preserve webhook
+  bytes exactly; require one signature header; separate webhook rate capacity from API traffic;
+  and return non-2xx for retryable or already-processing reconciliation.
+- **Evidence:** 130 local tests pass. One real USD $49 test Checkout traversed the HTTP quote and
+  order routes, reported non-live/nonsettling, and was immediately expired unpaid. The secret
+  and Checkout URL were absent from the disposable database.
+- **Boundary:** This is not a deployment or sale. Managed TLS, a mode-specific public test
+  endpoint, restricted durable state, kernel fetch quota, and production signing remain gates.

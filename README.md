@@ -37,8 +37,8 @@ new trusted channel.
   host, full commit, explicit subdirectory, bounded immutable retrieval, isolated no-egress
   worker, constrained signing, a durable commerce ledger, an account-bound Stripe Checkout
   adapter, offline-root paid-receipt lifecycle publication, and a loopback-only authenticated
-  tenant/order/result sandbox API. Public deployment, live order intake, and settlement remain
-  disabled.
+  tenant/order/result API with a Stripe-test exact-body webhook path. Public deployment, live
+  order intake, and settlement remain disabled.
 - **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
   tenant isolation, deletion policy, and expanded legal/incident controls only after
   demand and revenue justify them.
@@ -139,7 +139,7 @@ buyer, request, or revenue. See the [Stage B operating boundary](docs/stage-b-op
 [payment flow](docs/payment-flow.md), [managed deployment boundary](deploy/README.md), and
 [refund policy](docs/refund-policy.md).
 
-The authenticated commerce boundary is runnable only in the nonsettling sandbox. It stores
+The authenticated commerce boundary is runnable only on loopback. It stores
 keyed credential digests, never plaintext tokens, and binds each quote and order to one
 opaque tenant. Generate two distinct 32-byte secrets with an approved secret manager, expose
 their hex values only to the process, then provision one sandbox credential:
@@ -153,10 +153,22 @@ vouchspec serve-commerce-sandbox --database C:\vouchspec\sandbox-commerce.db --p
 
 The API binds to `127.0.0.1`, has no CORS allowance, and exposes authenticated quote, order,
 status, signed-result, capability-rotation, and capability-revocation routes. Its fake payment
-rail never settles and every resulting order remains `counts_for_goal: false`. The command is
-not authorization to expose the built-in HTTP listener directly; a future external deployment
-still requires managed TLS/ingress controls, wiring the reviewed Stripe adapter to an exact-body
-webhook route, kernel fetch quota, and a separate production signer.
+rail never settles and every resulting order remains `counts_for_goal: false`.
+
+An explicitly nonsettling Stripe-test variant reads every credential and redirect URL from
+named environment variables, creates authenticated hosted Checkout Sessions, and accepts only
+the exact body plus one `Stripe-Signature` header at
+`POST /v1/commerce/webhooks/stripe`:
+
+```powershell
+vouchspec serve-commerce-stripe-test `
+  --database C:\vouchspec\stripe-test-commerce.db --port 8789
+```
+
+The command is not authorization to expose the built-in listener directly. The managed edge
+must preserve webhook bytes and enforce source/global limits before loopback forwarding. Live
+activation additionally requires separate live state and secrets, a kernel-quota fetch volume,
+and the production signer described in [the deployment boundary](deploy/README.md).
 
 ## Read-only catalog MCP
 

@@ -41,9 +41,11 @@
 - **B-033:** prepare deployment manifests for managed TLS, trusted-edge source limits,
   kernel-quota fetch storage, secret-manager injection, restricted database permissions,
   backups, and redacted audit aggregation without exposing the sandbox listener.
-- **B-034:** connect the reviewed Stripe adapter to authenticated order creation and an
-  exact-body webhook route behind the managed edge; map retryable/in-progress processing to
-  non-2xx responses and complete one unpaid-to-available test-card flow before live activation.
+- **B-034:** local connection is complete: authenticated Stripe-test quote/order creation,
+  exact-body webhook intake, isolated webhook rate capacity, and retryable/in-progress non-2xx
+  responses pass tests and one real HTTP-path Checkout expired unpaid. Deploy this boundary
+  behind the managed edge with a mode-specific test endpoint, then complete one
+  unpaid-to-available test-card flow before live activation.
 
 ## Evidence-driven operation
 

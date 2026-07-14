@@ -21,12 +21,14 @@
   tenant-binds quotes/orders/results, stores keyed credential digests, scopes idempotency,
   expires/rotates/revokes delivery capabilities, enforces framing/rate/storage limits, and
   returns only the exact digest-bound signed envelope. A pinned, expected-account-bound Stripe
-  adapter now creates hosted Checkout Sessions and reconciles only server-retrieved Session,
-  PaymentIntent, Charge, and Balance Transaction state; an owner-authorized real USD $49 test
-  Session was created, reconciled unpaid, and expired. Offline-root paid-receipt lifecycle
-  publication now provides exact coverage and irreversible invalidation. All sandbox/test
-  activity remains excluded. Public checkout remains disabled pending managed deployment,
-  exact-body HTTP/webhook wiring, kernel fetch quota, and a production signing role.
+  adapter now creates authenticated tenant-bound Checkout Sessions and reconciles only
+  server-retrieved Session, PaymentIntent, Charge, and Balance Transaction state. The loopback
+  API has a dedicated exact-body webhook route, separate webhook rate-limit capacity, strict
+  signature-header handling, and non-2xx retry signaling. A real USD $49 Stripe test Session
+  was created through this HTTP path and immediately expired unpaid; all sandbox/test activity
+  remains excluded. Offline-root paid-receipt lifecycle publication provides exact coverage and
+  irreversible invalidation. Public checkout remains disabled pending managed deployment, a
+  public test webhook endpoint, kernel fetch quota, and a production signing role.
 - **Revenue:** 0 / 3 unrelated settled buyers; USD $0 / $500 settled gross; 0 repeat buyers.
 - **Economics:** USD $0 spend; USD $100 lifetime owner-funded budget remaining. No paid-order
   margin exists yet.
@@ -36,13 +38,13 @@
   live account reports charges and payouts enabled.
 - **Boundary:** public immutable sources only; no uploads, private repositories, confidential
   content, or artifact execution.
-- **Verification:** local isolated verification passes 128 tests with one explicit Windows
+- **Verification:** local isolated verification passes 130 tests with one explicit Windows
   symlink-privilege skip. Public Linux CI run `29342266720` passed at commit
   `ff78ba5fda4290cf824d4d708fecf27a882df9e4`, including package installation, the full test
   suite, and a CLI receipt smoke test.
 
 Next: follow all three unrelated adoption proposals without an unsolicited same-day follow-up,
-resume the rules-limited publisher channel after its daily cap resets, and connect the reviewed
-Stripe adapter to the authenticated order and exact-body webhook boundary behind managed
-deployment controls. Live Checkout remains off until that boundary, the production signer, and
-kernel fetch quota are verified.
+resume the rules-limited publisher channel after its daily cap resets, and deploy the connected
+Stripe-test boundary behind managed TLS with a mode-specific public webhook endpoint and
+restricted durable state. Live Checkout remains off until that deployment, the production
+signer, and kernel fetch quota are verified.
