@@ -37,8 +37,8 @@
 - **Boundary:** public immutable sources only; no uploads, private repositories, confidential
   content, or artifact execution.
 - **Verification:** local isolated verification passes 128 tests with one explicit Windows
-  symlink-privilege skip. Public Linux CI run `29338263172` passed at commit
-  `d5ed89f2630648a58531aff84006432dfd0ef5e7`, including package installation, the full test
+  symlink-privilege skip. Public Linux CI run `29342266720` passed at commit
+  `ff78ba5fda4290cf824d4d708fecf27a882df9e4`, including package installation, the full test
   suite, and a CLI receipt smoke test.
 
 Next: follow all three unrelated adoption proposals without an unsolicited same-day follow-up,

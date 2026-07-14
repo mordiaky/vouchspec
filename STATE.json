@@ -76,8 +76,8 @@
     "all_pass": false,
     "engineering_tests_passed": 128,
     "engineering_tests_skipped": 1,
-    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29338263172",
-    "public_ci_commit": "d5ed89f2630648a58531aff84006432dfd0ef5e7",
+    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29342266720",
+    "public_ci_commit": "ff78ba5fda4290cf824d4d708fecf27a882df9e4",
     "public_ci_status": "passed",
     "evidence_file": "GOAL_EVIDENCE.md",
     "independent_final_audit": "pending"
@@ -94,6 +94,6 @@
     "Connect the reviewed Stripe adapter to the authenticated order and exact-body webhook boundary",
     "Prepare managed deployment and a production signing role without enabling live Checkout prematurely"
   ],
-  "last_checkpoint_time": "2026-07-14T14:39:32Z",
+  "last_checkpoint_time": "2026-07-14T14:46:26Z",
   "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-stripe-test-probe.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. The Stripe adapter and paid lifecycle are implemented; next connect them to a managed exact-body HTTP/webhook boundary without exposing the sandbox listener or enabling live Checkout prematurely."
 }
