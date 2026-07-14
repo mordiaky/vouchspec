@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "selection": "Stage A deliberately selected public Agent Skills",
+  "sources": [
+    {"repository_owner":"anthropics","repository":"https://github.com/anthropics/skills.git","commit":"9d2f1ae187231d8199c64b5b762e1bdf2244733d","artifact_path":"skills/algorithmic-art"},
+    {"repository_owner":"anthropics","repository":"https://github.com/anthropics/skills.git","commit":"9d2f1ae187231d8199c64b5b762e1bdf2244733d","artifact_path":"skills/internal-comms"},
+    {"repository_owner":"openai","repository":"https://github.com/openai/skills.git","commit":"49f948faa9258a0c61caceaf225e179651397431","artifact_path":"skills/.curated/security-threat-model"},
+    {"repository_owner":"openai","repository":"https://github.com/openai/skills.git","commit":"49f948faa9258a0c61caceaf225e179651397431","artifact_path":"skills/.curated/define-goal"},
+    {"repository_owner":"openai","repository":"https://github.com/openai/skills.git","commit":"49f948faa9258a0c61caceaf225e179651397431","artifact_path":"skills/.curated/security-best-practices"},
+    {"repository_owner":"microsoft","repository":"https://github.com/microsoft/skills.git","commit":"dc543aa59048cb7d0faeb91c79f3a0ab405ec952","artifact_path":".github/skills/copilot-sdk"},
+    {"repository_owner":"microsoft","repository":"https://github.com/microsoft/skills.git","commit":"dc543aa59048cb7d0faeb91c79f3a0ab405ec952","artifact_path":".github/skills/kql"},
+    {"repository_owner":"NVIDIA","repository":"https://github.com/NVIDIA/skills.git","commit":"9559272b38d9e1dd9668cf746a87d1c5949c9a25","artifact_path":"skills/tilegym-cutile-python"},
+    {"repository_owner":"NVIDIA","repository":"https://github.com/NVIDIA/skills.git","commit":"9559272b38d9e1dd9668cf746a87d1c5949c9a25","artifact_path":"skills/vss-summarize-video"},
+    {"repository_owner":"supabase","repository":"https://github.com/supabase/agent-skills.git","commit":"1ad9aaeb49caafd9e95c0a91116f71890eebbc53","artifact_path":"skills/supabase-postgres-best-practices"},
+    {"repository_owner":"supabase","repository":"https://github.com/supabase/agent-skills.git","commit":"1ad9aaeb49caafd9e95c0a91116f71890eebbc53","artifact_path":"skills/supabase"},
+    {"repository_owner":"cloudflare","repository":"https://github.com/cloudflare/skills.git","commit":"70215303d44a81a0db3219428f4825b604fc6061","artifact_path":"skills/durable-objects"},
+    {"repository_owner":"cloudflare","repository":"https://github.com/cloudflare/skills.git","commit":"70215303d44a81a0db3219428f4825b604fc6061","artifact_path":"skills/workers-best-practices"},
+    {"repository_owner":"vercel-labs","repository":"https://github.com/vercel-labs/agent-skills.git","commit":"f8a72b9603728bb92a217a879b7e62e43ad76c81","artifact_path":"skills/deploy-to-vercel"},
+    {"repository_owner":"vercel-labs","repository":"https://github.com/vercel-labs/agent-skills.git","commit":"f8a72b9603728bb92a217a879b7e62e43ad76c81","artifact_path":"skills/web-design-guidelines"},
+    {"repository_owner":"huggingface","repository":"https://github.com/huggingface/skills.git","commit":"52d324945107f68d06d561743cf26194bdbf9cf8","artifact_path":"skills/huggingface-datasets"},
+    {"repository_owner":"huggingface","repository":"https://github.com/huggingface/skills.git","commit":"52d324945107f68d06d561743cf26194bdbf9cf8","artifact_path":"skills/transformers-js"},
+    {"repository_owner":"neondatabase","repository":"https://github.com/neondatabase/agent-skills.git","commit":"0dd3586fb31af7bd8fe9bff5e1ca7d65cc6e7fc4","artifact_path":"skills/neon-postgres"},
+    {"repository_owner":"neondatabase","repository":"https://github.com/neondatabase/agent-skills.git","commit":"0dd3586fb31af7bd8fe9bff5e1ca7d65cc6e7fc4","artifact_path":"skills/neon-functions"},
+    {"repository_owner":"elastic","repository":"https://github.com/elastic/agent-skills.git","commit":"96736bec4aa27f236580a3fefc4b14582f0f8aa0","artifact_path":"plugins/observability/skills/k8s-investigation"},
+    {"repository_owner":"elastic","repository":"https://github.com/elastic/agent-skills.git","commit":"96736bec4aa27f236580a3fefc4b14582f0f8aa0","artifact_path":"plugins/observability/skills/logs-search"},
+    {"repository_owner":"awslabs","repository":"https://github.com/awslabs/agent-plugins.git","commit":"fe6b948e86dc8f15fe4c3095d13f461d0f4666f1","artifact_path":"plugins/aws-serverless/skills/api-gateway"},
+    {"repository_owner":"awslabs","repository":"https://github.com/awslabs/agent-plugins.git","commit":"fe6b948e86dc8f15fe4c3095d13f461d0f4666f1","artifact_path":"plugins/databases-on-aws/skills/dsql"},
+    {"repository_owner":"getsentry","repository":"https://github.com/getsentry/sentry-for-ai.git","commit":"7141b957648e437dde4bf8fcec0ecb406ff0f05d","artifact_path":"src/skills/sentry-debug-issue"},
+    {"repository_owner":"getsentry","repository":"https://github.com/getsentry/sentry-for-ai.git","commit":"7141b957648e437dde4bf8fcec0ecb406ff0f05d","artifact_path":"src/skills/sentry-setup-ai-monitoring"}
+  ]
+}

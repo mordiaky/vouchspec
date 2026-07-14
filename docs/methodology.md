@@ -1,64 +1,85 @@
-# CapabilityProof v0.1 methodology
+# VouchSpec static evidence methodology v0.2
 
-## Scope and security profile
+## Profiles and scope
 
-The scanner accepts one local directory containing `SKILL.md`. This mode is limited to
-controlled public or synthetic artifacts. It inventories regular files; rejects symbolic
-links, Windows reparse points/junctions, hard links, and special files; enforces bounded
-entry, directory, depth, path, byte, reference, finding, dependency, and evidence limits;
-and excludes only version-control metadata directories from the artifact scope.
+The scanner accepts one local directory containing `SKILL.md`. It inventories bounded
+regular files; rejects symlinks, Windows reparse points/junctions, hard links, and special
+files; and excludes only version-control metadata from artifact scope. It never installs,
+imports, renders, or executes artifact content.
 
-The loopback HTTP and MCP stdio surfaces are local developer integrations. They are not an
-external intake, customer-data, or production security boundary.
+The local `inspect`/`inspect-git` commands and developer HTTP/MCP surfaces are not a remote
+customer-input boundary. Stage A uses a separate builder that deliberately clones only
+manifest-selected public HTTPS GitHub repositories at full 40-character commits. The
+scanner never follows artifact-declared URLs or references.
+
+Stage A receipt generation runs in three separate processes:
+
+1. a networked **keyless collector** checks out public commits and emits bounded receipt
+   drafts;
+2. a no-network **issuer signer** validates draft schema/integrity and signs receipt and
+   catalog-index bytes;
+3. an offline **recovery root** authorizes the issuer and signs only lifecycle metadata.
+
+Private repositories, uploads, customer-confidential content, and artifact execution are
+outside Stage A.
 
 ## Checks
 
-1. **Snapshot:** opened-handle identity checks, post-capture re-enumeration, sorted relative
-   paths, per-file SHA-256, and a length-prefixed directory digest bind analysis to immutable
-   in-memory bytes. Local directory capture remains non-atomic and says so in the receipt.
-2. **Structure:** YAML is parsed with a duplicate-key-rejecting `SafeLoader` after
-   frontmatter, alias, depth, and node limits. Published Agent Skills field constraints are
-   checked deterministically. Parser/coverage limits fail closed or force review.
-3. **References:** local Markdown and common skill-resource references must remain inside
-   the inventory. URI-like local references fail; external references lose credentials and
-   query strings and are never fetched.
-4. **Static review:** fixed rule IDs scan bounded UTF-8 text. Matches are indicators, not
-   observed runtime behavior. Evidence excerpts are length-limited and secret-redacted.
-   Dependency-manifest parse failures and all truncation states are machine-readable.
-5. **Receipt:** artifact-derived strings are labeled untrusted. Results list limitations,
-   expiry, completed/not-run levels, coverage, capture timing source, policy/methodology
-   digests, runtime versions, and a deterministic evidence SHA-256.
+1. **Snapshot:** opened-handle identity checks, post-capture re-enumeration, sorted paths,
+   per-file SHA-256, and a length-prefixed directory digest bind analysis to one byte set.
+2. **Structure:** duplicate-key-rejecting restricted YAML plus bounded Agent Skills field,
+   name, and reference rules. Failures remain signed evidence; they are not silently hidden.
+3. **References:** local references are resolved only against the captured inventory.
+   External references have credentials/query strings removed and are never fetched.
+4. **Static review:** fixed rule IDs scan bounded UTF-8 text. Excerpts are length-limited and
+   secret-redacted. Findings are indicators, not observed behavior.
+5. **Receipt:** exact digest/commit, profiles, runtime, issue counts, coverage, environment,
+   limitations, issuance/expiry, and tested/not-tested fields are machine-readable.
 
-The receipt serialization profile is sorted compact UTF-8 JSON with `ensure_ascii=false`
-and `allow_nan=false`. The exact profile string is carried in every receipt. It is not RFC
-8785 JCS.
+The inner receipt serialization is sorted compact UTF-8 JSON with `ensure_ascii=false` and
+`allow_nan=false`. It is explicitly not RFC 8785 JCS. DSSE signs the exact bytes, so
+signature verification never reconstructs JSON.
 
-## Git provenance option
+## Evidence labels
 
-The optional local Git path verifies that the artifact is inside the repository top level,
-the snapshot file set exactly equals tracked files, every captured byte sequence equals its
-raw `HEAD` blob, no submodule is in scope, and `HEAD` plus a credential/query-redacted origin
-identify the source. It never fetches.
+- `DIGEST_PINNED`: an exact directory digest is present.
+- `STRUCTURE_VALIDATED`: the current structural profile passed; absent on a failure.
+- `STATIC_INSPECTION_COMPLETED`: bounded static analysis completed with coverage recorded.
+- `INDEPENDENT_STATIC_SCAN`: VouchSpec's curated operator-run Git profile produced it.
+- `PUBLISHER_CI_ATTESTED`: reserved for a separately verified publisher CI attestation.
+- `SANDBOX_BEHAVIOR_OBSERVED` and `TASK_EVALUATED`: reserved for later profiles.
 
-The Git subprocess environment disables hooks, external diff, fsmonitor, untracked cache,
-global/system config, credentials, pagers, and prompts. Only controlled plumbing commands
-are used. This does not verify publisher identity or repository ownership.
+No generic `VERIFIED` status is emitted. Git byte/commit equality does not verify publisher
+identity or repository ownership.
 
-## Integrity limits
+## Authentication and lifecycle
 
-The receipt binds the complete scan-limit profile, structural/static profile identifiers,
-static ruleset digest, runtime versions, schema digest, and reference dependency-lock
-digest. The lock digest identifies the tested reference environment but cannot prove that
-a runtime was installed from that lock.
+Public receipts are DSSE v1.0.2 envelopes signed with Ed25519. Public keys use RFC 8037 JWK;
+`keyid` is an RFC 7638 thumbprint and only a lookup hint. A client must pin the recovery-root
+thumbprint through an independent trusted channel; the key bundled with the catalog is
+discovery material only.
 
-Receipts are `digest-only-unauthenticated`. Anyone replacing a receipt can recompute its
-hash and ID. External/public issuance requires a different immutable-envelope, isolated
-worker, JCS, signature, authenticated-key, authentication, tenant-isolation, rotation,
-revocation, and invalidation profile.
+The root-signed feed has an expiring validity window and monotonically increasing sequence.
+Verifiers persist the highest accepted sequence outside mutable catalog storage. State is
+max-merged under a cross-process file lock and records the signed feed payload digest so an
+equal-sequence conflicting feed is rejected. Catalog services persist the sequence during
+startup, verify every index-to-receipt binding, and serve one immutable in-memory snapshot;
+a new catalog generation requires a process restart.
+The verifier reports `CURRENT`, `SUPERSEDED`, `EXPIRED`, `REVOKED_EVALUATOR_DEFECT`,
+`REVOKED_KEY_COMPROMISE`, or `SIGNATURE_VALID_LIFECYCLE_UNKNOWN` for a valid receipt whose
+feed is missing, stale, or rolled back. A compromised issuer revokes every receipt from that
+key because issuance timestamps are signer-asserted, not trusted timestamps.
 
-## Explicit non-claims
+An immutable receipt remains evidence only about its exact digest. Any artifact byte/path
+change requires a new receipt.
 
-The MVP does not verify publisher identity, signatures, runtime compatibility, absence of
-malware, task performance, trigger quality, network behavior, or safety in other
-environments. It does not execute content. A clean result means only that listed rules did
-not detect a listed pattern in files that were actually scanned.
+## Explicit non-claims and publication content
+
+VouchSpec does not verify publisher identity, absence of malware, runtime compatibility,
+task performance, trigger quality, network behavior, license meaning, or safety. A clean
+static result means only that listed checks did not find listed indicators within recorded
+coverage.
+
+The catalog distributes no original artifact files, archives, or executable payloads.
+Receipts do contain bounded artifact-derived metadata, paths, hashes, references, and
+redacted static-analysis excerpts.

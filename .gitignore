@@ -11,5 +11,8 @@ build/
 .env.*
 !.env.example
 receipts/private/
+catalog/drafts/
+.vouchspec/
+*.private.pem
+*.passphrase
 graphify-out/.graphify_*.json
-

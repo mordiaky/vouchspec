@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:capabilityproof:schema:capability-receipt:1.0.0",
-  "title": "CapabilityProof local Agent Skill evidence receipt",
-  "description": "Digest-only, unauthenticated evidence for one local Agent Skill directory snapshot; not a safety certification.",
+  "$id": "urn:vouchspec:schema:capability-receipt:1.1.0",
+  "title": "VouchSpec Agent Skill static evidence receipt",
+  "description": "Exact-byte static evidence intended for authentication inside a DSSE envelope; not a safety certification.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -16,21 +16,23 @@
     "format_validation",
     "license_evidence",
     "static_analysis",
+    "evidence_labels",
     "evidence_levels",
     "decision",
     "validity",
     "policy",
     "methodology",
+    "authentication",
     "limitations",
     "receipt_id",
     "integrity"
   ],
   "properties": {
-    "schema_version": { "const": "1.0.0" },
-    "schema_uri": { "const": "urn:capabilityproof:schema:capability-receipt:1.0.0" },
+    "schema_version": { "const": "1.1.0" },
+    "schema_uri": { "const": "urn:vouchspec:schema:capability-receipt:1.1.0" },
     "schema_sha256": { "$ref": "#/$defs/sha256" },
-    "receipt_profile": { "const": "capabilityproof-local-agent-skill-receipt-v0.1.0" },
-    "integrity_assurance": { "const": "digest-only-unauthenticated" },
+    "receipt_profile": { "const": "vouchspec-agent-skill-static-receipt-v0.2.0" },
+    "integrity_assurance": { "const": "payload-digest-requires-external-dsse" },
     "receipt_id": { "type": "string", "pattern": "^cpr_[0-9a-f]{24}$" },
     "artifact": {
       "type": "object",
@@ -191,6 +193,23 @@
         "referenced_hosts": { "type": "array", "maxItems": 500, "items": { "type": "string", "minLength": 1, "maxLength": 253 } }
       }
     },
+    "evidence_labels": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 7,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "DIGEST_PINNED",
+          "STRUCTURE_VALIDATED",
+          "STATIC_INSPECTION_COMPLETED",
+          "PUBLISHER_CI_ATTESTED",
+          "INDEPENDENT_STATIC_SCAN",
+          "SANDBOX_BEHAVIOR_OBSERVED",
+          "TASK_EVALUATED"
+        ]
+      }
+    },
     "evidence_levels": {
       "type": "object",
       "additionalProperties": false,
@@ -239,8 +258,8 @@
         "publisher_verification", "task_evaluation", "profile_sha256"
       ],
       "properties": {
-        "name": { "const": "CapabilityProof non-executing Agent Skill inspection" },
-        "version": { "const": "0.1.0" },
+        "name": { "const": "VouchSpec non-executing Agent Skill inspection" },
+        "version": { "const": "0.2.0" },
         "structural_profile": { "const": "agent-skills-structural-v0.1.0" },
         "static_ruleset": { "const": "capabilityproof-static-v0.1.0" },
         "static_ruleset_sha256": { "$ref": "#/$defs/sha256" },
@@ -263,22 +282,42 @@
         "profile_sha256": { "$ref": "#/$defs/sha256" }
       }
     },
+    "authentication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["public_distribution_requirement", "signature_verification"],
+      "properties": {
+        "public_distribution_requirement": { "type": "string", "minLength": 1, "maxLength": 300 },
+        "signature_verification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["profile", "payload_type", "verification_order", "command"],
+          "properties": {
+            "profile": { "const": "dsse-v1.0.2-ed25519" },
+            "payload_type": { "const": "application/vnd.vouchspec.capability-receipt.v1+json" },
+            "verification_order": { "const": "authenticate decoded payload bytes before parsing JSON" },
+            "command": { "const": "capabilityproof verify ENVELOPE --key PUBLIC_JWK" }
+          }
+        }
+      }
+    },
     "limitations": { "type": "array", "minItems": 1, "maxItems": 30, "items": { "type": "string", "minLength": 1, "maxLength": 500 } },
     "integrity": {
       "type": "object",
       "additionalProperties": false,
       "required": ["profile", "deterministic_json_profile", "evidence_sha256", "signature", "replacement_warning"],
       "properties": {
-        "profile": { "const": "capabilityproof-digest-only-v1" },
+        "profile": { "const": "capabilityproof-payload-digest-v2" },
         "deterministic_json_profile": { "type": "string", "pattern": "^capabilityproof-sorted-json-v1:.*not RFC 8785 JCS$", "maxLength": 300 },
         "evidence_sha256": { "$ref": "#/$defs/sha256" },
         "signature": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["status", "reason"],
+          "required": ["status", "profile", "payload_type"],
           "properties": {
-            "status": { "const": "not-configured" },
-            "reason": { "type": "string", "minLength": 1, "maxLength": 200 }
+            "status": { "const": "external-envelope-required" },
+            "profile": { "const": "dsse-v1.0.2-ed25519" },
+            "payload_type": { "const": "application/vnd.vouchspec.capability-receipt.v1+json" }
           }
         },
         "replacement_warning": { "type": "string", "minLength": 1, "maxLength": 300 }

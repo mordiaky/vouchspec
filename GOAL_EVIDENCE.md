@@ -1,50 +1,64 @@
 # Goal evidence
 
-The charter goal is **not achieved**. Current verified business facts are USD $0 owner-funded
-spend, USD $0 settled revenue, zero customers, zero external contacts, no live acquisition or
-payment path, and no customer delivery.
+The charter goal is **not achieved**: USD $0 spend, USD $0 settled revenue, zero customers,
+zero external machine requests, no live endpoint, no external CI integration, and no payment
+rail or customer delivery.
 
-## Product proof accepted for the current local scope
+## Stage A product evidence
 
-- Public source: OpenAI `skills` commit `49f948faa9258a0c61caceaf225e179651397431`,
-  path `skills/.system/skill-creator`.
-- Exact artifact: 7 files, 56,734 bytes, directory digest
-  `8145c5d9c0acc1926a17757a3ee68083ddcf813e9fc313894f8ae08b36a2efc4`.
-- Receipt: `cpr_b37e70baa4bf79bb8cdb3425`; evidence digest
-  `b37e70baa4bf79bb8cdb3425ae53bf944ee549f00cea76e264743f9887fc2fed`;
-  file SHA-256 `F08EE57A1377C196557F1688A4FF7CC340A721A522580E1E4CABF749C775347C`.
-- Result: format pass, contiguous Level 3, 0 structural findings, 0 risk-rule findings;
-  filesystem-read, filesystem-write, and process indicators are inferred, not observed.
-- Reproducibility: two fixed-time Git/blob-bound regenerations were byte-identical.
-- Verification: strict schema and semantic integrity pass; MCP protocol `2025-11-25` smoke
-  pass; 34 tests pass, 1 ordinary Windows symlink test skips for host privilege while native
-  Windows junction and hard-link regressions pass.
-- Independent local-MVP review: pass with no remaining P0-P2 local-profile finding.
-- Integrity limit: receipt is explicitly digest-only unauthenticated and local-only.
+- Provisional beta name: `VouchSpec`; $0 obvious-conflict screen complete; no formal legal or
+  trademark clearance.
+- Corpus: 25 deliberately selected public Agent Skill artifacts at full Git commits across
+  12 GitHub repository owners; 251 listed files and 2,044,855 source bytes were independently
+  reproduced in the first audit.
+- Outcomes: 19 structural passes, six signed structural failures, zero skipped artifacts.
+- Claims: all 25 carry `DIGEST_PINNED`, `STATIC_INSPECTION_COMPLETED`, and
+  `INDEPENDENT_STATIC_SCAN`; only the 19 passes carry `STRUCTURE_VALIDATED`.
+- Authentication: every exact receipt payload is in a DSSE v1.0.2 Ed25519 envelope; the
+  catalog index is issuer-signed; a separate recovery root signs issuer authorization and
+  lifecycle state.
+- Isolation: collection is networked and keyless; issuer signing is a separate no-network
+  phase; recovery-root signing is a separate offline lifecycle-only phase. Rotated keys were
+  generated after the original combined-process review finding.
+- Trust: root key ID is pinned separately in the verification tests and must be distributed
+  independently in production. Bundled keys are discovery material only.
+- Lifecycle: current/superseded/expired/evaluator-defect/key-compromise plus conservative
+  stale/rollback unknown; highest accepted sequence persists outside catalog storage.
+- Interfaces: read-only REST and MCP are implemented and tested locally, not deployed.
+- Boundary: no uploads/private artifacts/customer content; no artifact code execution. The
+  catalog distributes no original artifact files or executable payloads, but receipts contain
+  bounded artifact-derived metadata and redacted excerpts.
+- Verification suite: 53 tests pass; one ordinary Windows symlink test skips because the host
+  lacks symlink privilege, while Windows junction and hard-link regressions pass. Stage B
+  remains blocked on Linux-equivalent and full adversarial/cross-OS coverage.
 
-Evidence files: `receipts/public/`, `logs/2026-07-13-e001-verification.md`, and
-`research/independent-mvp-review.md`.
+Evidence: `catalog/public/`, `catalog/sources.json`, `tests/test_public_receipt.py`,
+`tests/test_signing.py`, `tests/test_lifecycle.py`, and `tests/test_catalog.py`.
 
-## Charter acceptance tests
+## External alpha acceptance
 
-| # | Acceptance test | Status | Evidence / missing proof |
-|---:|---|---|---|
-| 1 | Specific customer segment and problem | Partial | Segment and problem documented; buyer urgency/demand unvalidated. |
-| 2 | Opportunity supported by current evidence | Partial | Problem and substitutes supported by cited primary sources; commercial opportunity unproven. |
-| 3 | Complete offer | Partial | Narrow deliverable/exclusions/defect remedy drafted; not externally deliverable or live. |
-| 4 | Live acquisition path | Fail/pending | Nothing published; no qualified traffic. |
-| 5 | Working sales and payment path | Fail/pending | No payment/KYC/account or checkout; approval and launch gates pending. |
-| 6 | Three unaffiliated paying customers | Fail/pending | 0 customers. |
-| 7 | At least USD $500 settled gross revenue | Fail/pending | USD $0 settled. |
-| 8 | Successful delivery to paying customers | Fail/pending | No customer delivery. |
-| 9 | Delivery quality checks | Partial/pass locally | Local MVP tests, real receipt, determinism, and independent review pass; no external/customer QA. |
-| 10 | Revenue is external and genuine | Fail/pending | No revenue. |
-| 11 | Positive contribution margin | Fail/pending | No paid unit or measured customer delivery. |
-| 12 | Owner spending within USD $100 | Pass | `BUDGET.csv`: USD $0 spent; USD $100 remains. |
-| 13 | Complete material records | Pass for current stage | State, decisions, budget, revenue, experiments, risks, compliance, evidence, and logs current. |
-| 14 | Repeatable acquisition process | Fail/pending | E-002 cannot start before launch readiness. |
-| 15 | Repeatable fulfillment process | Partial | Deterministic local SOP exists; external hostile-input fulfillment absent. |
-| 16 | Independent goal audit | Fail/pending | Local MVP audit passed; full business-goal audit cannot pass before customers/revenue/delivery. |
+| # | Test | Status |
+|---:|---|---|
+| 1 | Provisional public name selected | Pass locally |
+| 2 | At least 25 public skills indexed | Pass: 25 |
+| 3 | At least 10 repository-owner namespaces | Pass: 12; publisher identity and corporate independence remain unverified |
+| 4 | Exact commits and content digests | Pass locally |
+| 5 | Receipts cryptographically signed | Pass locally: 25 |
+| 6 | Public verification method works | Implemented locally; not publicly reachable |
+| 7 | REST retrieval live | Pending |
+| 8 | MCP retrieval live | Pending |
+| 9 | One external repository uses publisher CI route | Pending |
+| 10 | Ten legitimate external machine requests | Pending: 0 |
+| 11 | Three repeat external requests | Pending: 0 |
+| 12 | One genuine machine-paid settlement | Pending: USD $0 |
+| 13 | Actual compute/infrastructure cost recorded | Local cost $0; hosted unit cost pending |
+| 14 | No arbitrary upload/private artifact | Pass locally |
+| 15 | No owner call/meeting/routine manual fulfillment | Pass locally; external operation unproven |
 
-No completion, revenue, customer, safety, production-readiness, or demand claim is authorized by
-the local product proof.
+## Charter acceptance
+
+The segment/problem and offer are documented, local Stage A fulfillment is automated, and
+records/budget controls are current. Acquisition, payment, three unaffiliated customers,
+USD $500 settled gross, customer delivery, positive margin, repeatability, and final
+independent goal audit all remain pending. No completion, demand, revenue, safety, or
+production-readiness claim follows from the local product proof.

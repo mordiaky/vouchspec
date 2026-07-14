@@ -1,5 +1,7 @@
 # Next action
 
-Resolve the working-name conflict, then specify and test the smallest external-safe raw ZIP
-intake and isolated no-egress worker profile. Do not publish, accept third-party artifacts,
-or open a paid path until those controls and the signature/authentication gates pass.
+Deploy only the independently reviewed read-only REST/MCP retrieval surfaces behind managed
+TLS and publish the root fingerprint through a separate public channel. Do not add uploads, private
+repositories, confidential content, or general Stage C infrastructure. After retrieval is
+live, bind one external publisher CI attestation and measure 10 legitimate machine requests,
+three repeat requests, actual cost, and one genuine machine-paid settlement.

@@ -2,16 +2,18 @@
 
 | ID | Risk | Severity | Control | Status |
 |---|---|---|---|---|
-| R-001 | Evidence is mistaken for a safety guarantee. | High | Exact digest, method, coverage, limitations, expiry, and no safe/certified label. | Active |
-| R-002 | Hostile artifacts exploit the validator or escape the root. | High | Non-execution, bounded parsing, no-follow/reparse/hard-link rejection, opened-handle checks, re-enumeration, hostile regressions. | Local profile reviewed; external blocked |
-| R-003 | Static rules produce false positives or false negatives. | High | Rule IDs, locations, bounded redacted evidence, coverage signals, and explicit not-detected semantics. | Active |
-| R-004 | Working name conflicts with an existing product/category. | High | Internal codename only; distinctive-name screen before public use; no legal-clearance claim. | Confirmed practical conflict |
-| R-005 | Free scanners/registries make the offer noncommercial. | High | Portable policy-receipt wedge and strict full-price 2/25, 1/15 transaction gates. | Competitive pressure confirmed; demand unvalidated |
-| R-006 | License or privacy constraints prohibit processing/redistribution. | High | Public/synthetic or authorized inputs only; return evidence rather than artifact bytes; no license interpretation. | Active; external private intake blocked |
-| R-007 | Receipt is replaced, forged, or stale. | High | Current receipt explicitly digest-only unauthenticated; external issuance blocked until JCS signing, authenticated key, rotation/revocation, and invalidation. | Local disclosure complete; external control absent |
-| R-008 | Scope consumes budget before demand. | Medium | USD $0 local proof, one artifact format, explicit deferrals and stop rules. | Controlled |
-| R-009 | Deterministic JSON is misrepresented as RFC 8785 canonicalization. | High | Versioned profile string explicitly says not JCS; docs use deterministic terminology. | Controlled locally |
-| R-010 | External HTTP/MCP exposes host paths, tenants, or resources. | Critical | No external service; require immutable uploads, auth/TLS/object authorization, isolation, rate/queue limits, and remote MCP profile. | Launch blocker |
-| R-011 | Git provenance is mistaken for publisher identity. | High | Raw commit-blob equality is separate from publisher/ownership, which remains not checked. | Controlled by schema/limitations |
-| R-012 | Reference dependency lock does not describe actual runtime. | Medium | Record runtime package versions and state that lock digest is reference evidence, not installation proof. | Active limitation |
-| R-013 | Git line-ending conversion changes byte-addressed receipts or methodology inputs. | High | Repository-wide LF checkout policy, explicit receipt/schema/lock attributes, fixed file hashes, and regression coverage. | Controlled |
+| R-001 | Evidence is mistaken for a safety guarantee. | High | Explicit labels, digest, method, tested/not-tested fields, limitations, expiry, and no generic verified/safe badge. | Active |
+| R-002 | Static rules miss harmful behavior or flag benign material. | High | Rule IDs, bounded evidence, coverage, transparent issue counts, and no runtime claim. | Active |
+| R-003 | A signed receipt or lifecycle document is forged, replaced, stale, rolled back, or equivocated. | Critical | Exact-byte DSSE/Ed25519, externally configured root JWK, distinct issuer/root keys, expiring root feed, startup sequence+digest persistence, process lock, conservative compromise revocation, mutation tests. | Implemented and independently reviewed; independent-channel root publication pending |
+| R-004 | Signing secret reaches source, logs, or the public service. | Critical | Encrypted issuer/root PKCS#8 files outside repository, restrictive ACLs, no secret CLI arguments/output, separate root role. | Implemented locally; operational review pending |
+| R-005 | `VouchSpec` conflicts with an existing name or mark. | High | Provisional low-obvious-conflict screen; no clearance claim or material brand spend. | Active |
+| R-006 | Public metadata processing or publication infringes license/privacy interests. | High | Selected public sources; no original files/archives/executables redistributed; bounded metadata/excerpts disclosed; no license interpretation. | Active |
+| R-007 | Catalog metadata is substituted even though receipt signatures remain valid. | High | Issuer-signed exact index bytes, root-authorized issuer, full index-to-receipt binding, immutable verified process snapshot, externally configured root, persistent sequence state, and managed TLS. | Implemented and independently reviewed; independent-channel root publication pending |
+| R-008 | Stage A accidentally grows an artifact upload or confidential-data path. | Critical | GET-only catalog API, retrieval-only MCP identifiers/search, POST returns 405, boundary tests. | Controlled locally |
+| R-009 | Git source binding is mistaken for publisher identity. | High | Receipt separates exact commit/blob evidence from publisher identity, which remains not checked. | Controlled by schema/limitations |
+| R-010 | Six structurally failing artifacts are mistaken for passing. | High | Omit `STRUCTURE_VALIDATED`; keep findings and decision in signed receipt; disclose 19 pass/6 fail. | Controlled |
+| R-011 | Built-in public HTTP server lacks TLS or production hardening. | High | Deploy behind managed TLS/proxy; expose only public immutable data; measure/rate-limit at platform boundary. | External deployment gate |
+| R-012 | Free substitutes eliminate willingness to pay. | High | Free search/retrieval, micropriced fresh/comparison/issuance tests, real settlement gate. | Demand unvalidated |
+| R-013 | Linux/cross-OS/archive security is assumed from Windows local tests. | Critical for Stage B | Stage B blocked on Linux-equivalent suite, adversarial fixture matrix, determinism, and explicit skipped-test accounting. | Stage B gate; not a Stage A retrieval gate |
+| R-014 | Dependency lock does not prove the executing runtime. | Medium | Record runtime versions and describe lock hash as reference evidence only. | Active limitation |
+| R-015 | LF conversion changes signed files. | High | Repository LF policy, catalog/schema/lock attributes, full-catalog verification tests. | Controlled |

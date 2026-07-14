@@ -1,91 +1,122 @@
-# CapabilityProof
+# VouchSpec
 
-CapabilityProof (an internal working name) turns an exact Agent Skill directory into a
-machine-readable evidence receipt. Version `0.1.0` hashes files, validates `SKILL.md`,
-checks local references, extracts dependencies and requirement signals, and runs
-transparent text/code rules. It does **not** install, import, render, or execute the
-artifact, and it does not claim that an artifact is safe.
+VouchSpec is the provisional public-beta name for an independent evidence index for exact
+Agent Skill versions. `CapabilityProof` remains the internal package/codename during the
+transition. The name passed a $0 obvious-conflict screen; it has not received legal or
+trademark clearance.
 
-This is a **local-development evidence prototype** for controlled public or synthetic
-artifacts. It is not an external intake service and must not receive customer/private or
-otherwise untrusted third-party inputs. External launch remains blocked on immutable
-raw-byte upload, isolated no-egress workers, authentication/TLS, tenant controls, RFC 8785
-JCS, signatures, authenticated keys, rotation/revocation, and invalidation.
+The current Stage A catalog contains **25 deliberately selected public Agent Skills across
+12 GitHub repository owners**. Every entry is pinned to a full Git commit and exact directory digest,
+statically inspected without executing artifact code, wrapped in a DSSE v1.0.2 envelope,
+and signed with Ed25519. A separate root key signs the machine-readable lifecycle feed.
 
-## What exists now
+This is evidence, not a safety certification. Six of the 25 real-world skills fail at least
+one current structural rule; they remain indexed with the failure evidence and are not
+labeled `STRUCTURE_VALIDATED`.
 
-- Bounded, re-enumerated local directory snapshot and SHA-256 digest.
-- Rejection of symbolic links, Windows reparse points/junctions, hard links, and special files.
-- Agent Skills frontmatter validation for the published fields and duplicate-key rejection.
-- Referenced-file containment and existence checks.
-- Static risk-rule findings, inferred requirements, dependency evidence, and explicit coverage limits.
-- Versioned deterministic-JSON evidence hash with digest-only, unauthenticated status.
-- Local CLI, loopback developer HTTP API, and official-SDK MCP stdio tool.
-- Windows junction/hard-link regressions, hostile parser fixtures, and contract tests.
+## Product stages
 
-## Local use
+- **Stage A — public artifact index (current):** selected public artifacts only; signed
+  receipts and read-only REST/MCP retrieval; no uploads, private repositories, or
+  customer-confidential content.
+- **Stage B — public repository validation (later):** allowlisted public host, full commit,
+  explicit subdirectory, bounded immutable retrieval, isolated worker, and signed result.
+- **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
+  tenant isolation, deletion policy, and expanded legal/incident controls only after
+  demand and revenue justify them.
+
+Stage C is not a prerequisite for Stage A or B. No arbitrary upload route exists in the
+Stage A server or MCP tools.
+
+## Evidence labels
+
+Receipts use explicit labels, never a generic `VERIFIED` badge:
+
+- `DIGEST_PINNED`
+- `STRUCTURE_VALIDATED` (only when the structural profile passes)
+- `STATIC_INSPECTION_COMPLETED`
+- `INDEPENDENT_STATIC_SCAN` (only for the curated operator-run profile)
+
+`PUBLISHER_CI_ATTESTED`, `SANDBOX_BEHAVIOR_OBSERVED`, and `TASK_EVALUATED` are reserved for
+separate evidence that has actually been produced. Static inspection never implies them.
+
+## Verify a public receipt independently
+
+The verifier authenticates the exact decoded receipt bytes before parsing JSON, validates
+the receipt schema and inner consistency digest, then optionally applies the root-signed
+lifecycle feed.
+
+```powershell
+vouchspec verify catalog\public\receipts\RECEIPT_ID.dsse.json `
+  --key catalog\public\keys\issuer.jwk.json `
+  --lifecycle catalog\public\lifecycle.dsse.json `
+  --root-key catalog\public\keys\root.jwk.json
+```
+
+Lifecycle results are `CURRENT`, `SUPERSEDED`, `EXPIRED`,
+`REVOKED_EVALUATOR_DEFECT`, `REVOKED_KEY_COMPROMISE`, or the conservative
+`SIGNATURE_VALID_LIFECYCLE_UNKNOWN`. The signing key ID is only a lookup hint; the public
+JWK must be obtained or pinned through an independently trusted path.
+
+## Read-only catalog API
+
+```powershell
+vouchspec serve-catalog --catalog-root catalog\public --port 8788 `
+  --trusted-root-key C:\independently-provisioned\root.jwk.json
+```
+
+Available `GET` routes:
+
+- `/health`
+- `/v1/index` (issuer-signed DSSE index envelope)
+- `/v1/quote?operation=...` (price/availability response; paid orders remain disabled)
+- `/v1/receipts?q=...&repository_owner=...&limit=...`
+- `/v1/receipts/{receipt_id}`
+- `/v1/receipts/{receipt_id}/status`
+- `/v1/lifecycle`
+- `/v1/keys/root`
+- `/v1/keys/issuer`
+
+All `POST` requests receive `405 read_only`. The built-in server is connection-bounded,
+deadline-enforced, and loopback-only; a public deployment must place it behind a managed TLS
+proxy with platform ingress limits. Each process serves one fully verified immutable catalog
+snapshot; deploy a new lifecycle/index generation by restarting the process. The highest
+observed root-feed sequence and its payload digest are persisted with a cross-process lock.
+
+## Read-only catalog MCP
+
+```powershell
+vouchspec mcp-catalog --catalog-root catalog\public `
+  --trusted-root-key C:\independently-provisioned\root.jwk.json
+```
+
+Tools are `search_receipts`, `get_receipt`, `get_receipt_status`,
+`get_verification_material`, and `get_price_quote`. They accept identifiers, search text,
+and named price-card operations only, not artifact content. Paid operations are reported as
+not orderable until their separate safety and settlement gates exist.
+
+## Local inspector and builder
+
+Development install:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -e ".[dev]"
-.venv\Scripts\capabilityproof inspect C:\path\to\skill --output receipt.json
 ```
 
-For Level 2 source/commit evidence, use a controlled local Git checkout. This command
-does not fetch. It verifies that the complete inspected file set is tracked and that every
-captured file exactly equals its raw blob at `HEAD`:
+The compatibility command `capabilityproof` remains available alongside `vouchspec`.
 
 ```powershell
-.venv\Scripts\capabilityproof inspect-git C:\checkout\skills\example `
+vouchspec inspect C:\path\to\skill --output receipt.json
+vouchspec inspect-git C:\checkout\skills\example `
   --repository-root C:\checkout --output receipt.json
 ```
 
-For a byte-reproducible receipt, supply a fixed timezone-aware timestamp. The receipt
-labels capture times as a caller-supplied reproducibility override in this mode.
-
-```powershell
-.venv\Scripts\capabilityproof inspect C:\path\to\skill `
-  --generated-at 2026-07-14T03:00:00Z --compact
-```
-
-## Local developer HTTP
-
-The developer HTTP server binds only to loopback, uses bounded threaded requests, and
-requires an explicit allowed root. Client paths must be relative to that root. This is a
-local integration surface, not a remote service.
-
-```powershell
-.venv\Scripts\capabilityproof serve --allow-root C:\approved\skills --port 8787
-```
-
-```http
-POST /v1/inspect
-Content-Type: application/json
-
-{"path":"pdf-processing","generated_at":"2026-07-14T03:00:00Z","expires_in_days":7}
-```
-
-## Local MCP stdio
-
-```powershell
-.venv\Scripts\capabilityproof mcp --allow-root C:\approved\skills
-```
-
-The stdio server exposes `inspect_skill` and `get_methodology`. Artifact-derived strings
-appear only in structured receipt content and remain untrusted data. The current SDK
-surface has no external-service authentication or tenant boundary.
-
-## Evidence semantics
-
-`highest_contiguous_level` is conservative. A local scan can complete Level 1 structural
-validation and Level 3 static review while Level 2 publisher/source identity remains
-unchecked; in that case the highest contiguous level remains 1. "Not detected" never means
-"absent," and static review never means "safe."
-
-The local snapshot is non-atomic but re-enumerated and checked against opened file handles.
-The receipt is unsigned: its digest detects standalone payload changes, but an attacker
-replacing the receipt can recompute the digest and receipt ID. Its named JSON profile is
-fully specified and explicitly **not** RFC 8785 JCS.
+Local inspection never installs, imports, renders, or executes artifact content. The
+checked-in catalog builder accepts only the curated manifest and public HTTPS GitHub
+repositories at full 40-character commits. Collection is keyless, issuer signing is a
+separate no-network phase, and recovery-root lifecycle signing is a separate offline phase.
+Encrypted private keys stay outside this repository; only RFC 8037 public JWKs are published.
 
 See [methodology](docs/methodology.md), the
 [receipt schema](src/capabilityproof/schemas/capability-receipt.schema.json), and the

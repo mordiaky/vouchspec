@@ -1,11 +1,15 @@
-# Pricing experiments
+# Pricing hypotheses
 
-| Product | Full-price test | Evidence status |
+| Product | Initial price | Evidence status |
 |---|---:|---|
-| Basic public metadata / cached sample | Free | Local sample exists; no public service |
-| Portable public release receipt | USD $19 one-time | Transaction-untested; generic scan framing rejected |
-| Policy-ready team pack, up to five receipts | USD $99 one-time | Transaction-untested; blocked on authorized/private intake |
-| Dynamic sandbox or continuous monitoring | Not offered | Deferred until cost, safety, and demand are measured |
+| Public search | Free | 25-entry local catalog built; external usage unmeasured |
+| Existing signed receipt retrieval | Free or near-free | External usage unmeasured |
+| Receipt comparison | USD $0.005–$0.01 | Transaction-untested |
+| Fresh static validation | USD $0.05–$0.25 | Transaction-untested; Stage B worker not live |
+| Signed receipt issuance | USD $0.10–$0.50 | Transaction-untested |
+| Continuous public-artifact monitoring | USD $2–$10 monthly | Deferred pending cost/demand |
+| Independent sandbox analysis | Cost-based later | Not offered |
 
-Only settled, non-refunded purchases by unaffiliated customers count as demand. Payment never
-changes evidence ranking or finding severity.
+The service must return a machine-readable quote before payment. Only genuine settled,
+non-refunded transactions by unaffiliated callers count. Payment never changes evidence
+labels, ranking, or severity.

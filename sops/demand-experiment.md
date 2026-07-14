@@ -1,23 +1,26 @@
-# E-002 full-price demand experiment SOP
+# E-003 machine-native external alpha SOP
 
-Status: blocked until public naming, external-safe fulfillment, public terms/privacy, and
-approved payment/KYC gates pass.
+Status: blocked only until the Stage A independent P0-P2 review closes and read-only
+retrieval is deployed behind managed TLS.
 
-## Qualified units
+## Qualified events
 
-- Publisher unit: a unique qualified Agent Skill publisher who views the exact USD $19 public
-  release-receipt offer.
-- Team unit: a unique qualified small agent team who views the exact USD $99 policy-pack offer.
-- Purchase: settled, non-refunded money from an unaffiliated buyer after truthful scope and
-  exclusions are shown. Internal, owner, affiliate, coupon/free, or simulated payments do not count.
+- A legitimate request is a non-test retrieval/search/status call from an external machine
+  integration or unaffiliated caller.
+- A repeat is a later legitimate request from the same integration/caller, privacy-preserving
+  identifier, or externally verifiable workflow.
+- A paid request is machine-initiated, receives a machine-readable quote, settles nonzero
+  unaffiliated money, and is not owner/affiliate/simulated activity.
 
-## Decision rules
+## Acceptance
 
-- Accept publisher signal at 2 or more purchases among 25 qualified viewers.
-- Reject the USD $19 publisher offer at 0 purchases among 25; 1/25 is weak and requires one
-  bounded follow-up cohort. Fewer than 25 qualified views are inconclusive.
-- Accept team signal at 1 or more purchases among 15 qualified viewers.
-- Reject the USD $99 team offer at 0/15. Fewer than 15 qualified views are inconclusive.
+Record at least 10 legitimate external machine requests, three repeats, one external
+publisher CI integration, one settled machine-paid request, and actual compute,
+infrastructure, fee, refund, and contribution-margin evidence. Routine work must require no
+call, meeting, demo, or manual job approval.
 
-Log views, eligibility, purchases, settlement/refund status, delivery result, direct cost,
-support burden, and opt-outs without storing unnecessary personal data.
+## Boundary
+
+No arbitrary upload, private repository, confidential content, or dynamic execution. Free
+search/retrieval does not require an account. Paid hypotheses use a quote and one-time token;
+no payment may change evidence labels or finding severity.

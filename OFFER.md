@@ -1,45 +1,34 @@
-# Offer hypothesis - portable exact-byte Agent Skill policy receipt
+# Offer hypothesis — VouchSpec exact-byte evidence
 
-## For whom
+## Free Stage A offer
 
-Agent Skill publishers and small teams operating coding or document agents.
+Machines can search and retrieve signed receipts for deliberately selected public Agent
+Skills. Each receipt identifies the full source commit, artifact path and digest, scanner
+and profile versions, environment, issue counts, what was and was not tested, issuance and
+expiry, limitations, and signature-verification method. REST and MCP are read-only.
 
-## Customer outcome
+## Paid machine-transaction hypotheses
 
-A registry-neutral machine decision record for one exact Agent Skill version: complete file
-inventory and digest, source/blob evidence when available, structural findings, declared and
-inferred requirements, dependency and host evidence, deterministic risk-rule findings,
-coverage/unknowns, methodology/policy versions, limitations, timestamp, and expiry.
+| Operation | Initial hypothesis |
+|---|---:|
+| Receipt comparison | USD $0.005–$0.01 |
+| Fresh static validation | USD $0.05–$0.25 |
+| Signed receipt issuance | USD $0.10–$0.50 |
+| Continuous public-artifact monitoring | USD $2–$10 monthly |
 
-## Current proof versus sellable delivery
+A machine-readable quote comes first. Payment or a signed paid-job token may authorize one
+routine job without an account, call, meeting, demo, or manual approval. No price is yet
+validated and no payment path is live.
 
-The audited v0.1 proof handles only controlled public/synthetic local directories and emits
-an unsigned digest-only receipt. It is not yet offered for sale. External delivery remains
-blocked on immutable upload intake, worker isolation/no-egress, authentication/TLS/tenant
-controls, JCS/signing/key lifecycle, invalidation, public naming, terms/privacy, and payment.
+## Current boundary
 
-## Full-price transaction hypotheses
-
-- USD $19 for one portable public release receipt.
-- USD $99 for a policy-ready team pack of up to five receipts, only after authorized/private
-  input handling is safe.
-
-These are falsifiable price tests, not established value or demand.
-
-## Excluded
-
-Artifact execution, publisher verification, malware-free or safety certification, runtime or
-compatibility guarantees, penetration testing, legal/license advice, calls, custom consulting,
-and unlimited support.
-
-## Acceptance criteria
-
-The JSON validates against the pinned schema, passes semantic integrity verification, lists
-all captured files and coverage limits, binds exact source bytes when provenance is claimed,
-and regenerates byte-for-byte when volatile timestamps are supplied by the test harness.
+Stage A accepts no customer artifacts. Fresh validation in the public alpha will use only a
+separately safe public-repository profile. Private repositories, arbitrary ZIPs, customer
+confidential content, dynamic execution, malware-free claims, publisher identity claims,
+legal advice, custom consulting, and unlimited support are excluded.
 
 ## Defect remedy hypothesis
 
-If delivered JSON is malformed or bound to the wrong artifact digest, rerun once at no charge;
-if still defective, refund the charge. Findings remain evidence under stated conditions, not
-a promise that no harmful behavior exists.
+For a paid machine request, malformed JSON, an invalid signature, or a receipt bound to the
+wrong source/digest triggers one automatic rerun and then a refund. A correct receipt may
+still contain failures; findings are evidence, not a promise that an artifact is safe.

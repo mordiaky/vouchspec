@@ -1,26 +1,64 @@
 {
-  "schema_version": 1,
-  "business_stage": "local_evidence_mvp_verified_external_launch_blocked",
-  "selected_business": "CapabilityProof (internal codename; public name TBD)",
-  "selected_offer": "Registry-neutral, independent, exact-byte policy receipt for one Agent Skill version",
-  "current_goal": "Reach every charter acceptance test without overstating the verified local MVP or commercial demand",
-  "acceptance_tests": {
-    "specific_segment_and_problem": "documented_problem_supported_segment_demand_unvalidated",
-    "opportunity_supported_by_current_evidence": "problem_supported_commercial_demand_unproven",
-    "complete_offer": "draft_revised_not_live",
-    "live_acquisition_path": "pending_launch_readiness",
-    "working_sales_and_payment_path": "pending_owner_approval_and_launch_readiness",
-    "three_unaffiliated_paying_customers": "pending",
-    "settled_gross_revenue_500": "pending",
+  "schema_version": 2,
+  "business_stage": "stage_a_constrained_alpha_candidate_local_not_live",
+  "product_stage": "A_PUBLIC_ARTIFACT_INDEX",
+  "selected_business": "VouchSpec public Agent Skill evidence index (provisional beta name; CapabilityProof internal engine)",
+  "selected_offer": "Free signed receipt search/retrieval plus machine-priced comparison, fresh public static validation, and signed issuance hypotheses",
+  "current_goal": "Complete the smallest safe external Stage A launch and produce genuine machine usage and settled payment evidence",
+  "name": {
+    "provisional_public_name": "VouchSpec",
+    "internal_codename": "CapabilityProof",
+    "screen": "zero-cost obvious-conflict screen complete",
+    "legal_or_trademark_clearance": false,
+    "material_brand_investment_authorized": false
+  },
+  "catalog": {
+    "entries": 25,
+    "repository_owner_namespaces": 12,
+    "structural_passes": 19,
+    "structural_failures": 6,
+    "skipped_artifacts": 0,
+    "artifact_code_executed": false,
+    "customer_uploads_accepted": false,
+    "private_artifacts_processed": false,
+    "signed_receipts": 25,
+    "rest_retrieval": "implemented_local_not_live",
+    "mcp_retrieval": "implemented_local_not_live"
+  },
+  "signing": {
+    "receipt_profile": "DSSE v1.0.2 exact-byte envelope with Ed25519",
+    "public_key_format": "RFC 8037 JWK",
+    "key_id": "RFC 7638 SHA-256 JWK thumbprint",
+    "lifecycle": "separate root-signed feed with expiry and monotonic sequence",
+    "private_keys": "encrypted and stored outside source control and normal logs",
+    "independent_verifier": "implemented_local_not_publicly_reachable"
+  },
+  "external_alpha_acceptance": {
+    "1_provisional_public_name_selected": "passing_local",
+    "2_at_least_25_public_skills": "passing_local_25",
+    "3_at_least_10_repository_owner_namespaces": "passing_local_12_identity_and_independence_unverified",
+    "4_exact_commits_and_content_digests": "passing_local",
+    "5_receipts_cryptographically_signed": "passing_local_25",
+    "6_public_verification_method": "implemented_local_not_publicly_reachable",
+    "7_rest_retrieval_live": "pending",
+    "8_mcp_retrieval_live": "pending",
+    "9_external_repository_uses_ci_action": "pending",
+    "10_ten_legitimate_external_machine_requests": "pending_0",
+    "11_three_repeat_external_requests": "pending_0",
+    "12_one_genuine_machine_paid_settlement": "pending_0",
+    "13_actual_compute_and_infrastructure_cost_recorded": "local_build_cost_0_hosted_cost_pending",
+    "14_no_arbitrary_upload_or_private_artifact": "passing_local",
+    "15_no_owner_call_meeting_or_routine_manual_fulfillment": "passing_local_external_operation_unproven"
+  },
+  "charter_acceptance": {
+    "three_unaffiliated_paying_customers": "pending_0",
+    "settled_gross_revenue_500": "pending_0",
     "successful_delivery": "pending_no_customer_delivery",
-    "delivery_quality_checks": "local_mvp_34_passed_1_platform_skip_independent_review_pass",
-    "revenue_is_external_and_genuine": "pending",
     "positive_contribution_margin": "pending",
     "owner_spending_within_100": "passing_zero_spend",
-    "complete_material_records": "passing_for_current_stage",
     "repeatable_acquisition_process": "pending",
-    "repeatable_fulfillment_process": "local_prototype_verified_not_customer_validated",
-    "independent_audit_pass": "local_mvp_scope_pass_external_and_goal_audits_pending"
+    "repeatable_fulfillment_process": "local_stage_a_automated_external_unproven",
+    "independent_audit_pass": "stage_a_p0_p2_signing_catalog_review_closed"
   },
   "cash_budget_remaining_usd": 100.0,
   "owner_funded_spending_usd": 0.0,
@@ -33,29 +71,45 @@
     "contacted": 0,
     "responses": 0,
     "proposals": 0,
-    "wins": 0
+    "wins": 0,
+    "external_machine_requests": 0,
+    "repeat_external_machine_requests": 0,
+    "external_ci_integrations": 0
   },
   "completed_experiments": [
-    "E-001 real public Agent Skill receipt generation and independent local-MVP review"
+    "E-001 bounded local Agent Skill receipt and independent local-MVP review",
+    "E-002 25-skill 12-source-organization signed Stage A catalog build"
   ],
   "active_experiments": [],
   "planned_experiments": [
-    "E-002 full-price portable receipt and policy-pack transaction test after launch readiness"
+    "E-003 live read-only Stage A retrieval, external CI, machine-usage, and microtransaction acceptance"
   ],
   "current_blockers": [
-    "CapabilityProof is conflicted as a public name",
-    "No immutable external upload or isolated no-egress worker",
-    "No external authentication, TLS, authorization, or tenant isolation",
-    "No RFC 8785 JCS signature, authenticated key, rotation, revocation, or invalidation",
-    "No approved payment/KYC path"
+    "Read-only REST and MCP are not publicly reachable behind managed TLS",
+    "No genuinely external publisher CI attestation has been verified",
+    "No external machine usage or repeat usage has occurred",
+    "No lawful machine-payment/KYC rail exists and no paid request has settled"
+  ],
+  "stage_b_gates": [
+    "Allowlisted public-host immutable retrieval and isolated non-executing worker",
+    "Production-equivalent Linux suite across 20-50 skills and at least 10 source organizations",
+    "Full adversarial archive/path/Unicode/collision/limit/permission fixture matrix",
+    "Supported cross-OS deterministic receipt evidence with every skip recorded"
+  ],
+  "stage_c_deferred": [
+    "Private repositories",
+    "Arbitrary uploads",
+    "Customer-confidential content",
+    "Tenant storage and deletion policies",
+    "General customer authentication and expanded incident/legal controls"
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Select and screen a distinctive public name before publishing a package, domain, badge, or namespace",
-    "Specify and regression-test raw ZIP intake plus an isolated no-egress worker profile",
-    "Build a truthful static demand-test page locally without accepting artifacts or payment"
+    "Deploy read-only REST/MCP and publish independently pinnable public key fingerprints",
+    "Verify one external publisher CI attestation and begin machine-request/cost measurement",
+    "Convert the non-orderable price response into a payable quote only after the Stage B worker and lawful payment rail exist"
   ],
-  "last_verified_external_state": "No external CapabilityProof asset has been published, no customer contacted, no payment path opened, and no money spent.",
-  "last_checkpoint_time": "2026-07-13T21:16:51-07:00",
-  "exact_resume_instruction": "Read CHARTER.md, GOAL.md, STATE.json, STATUS.md, BACKLOG.md, NEXT_ACTION.md, BUDGET.csv, REVENUE.csv, EXPERIMENTS.csv, CRM.csv, HUMAN_ACTIONS.md, logs/2026-07-13-e001-verification.md, and research/independent-mvp-review.md. Preserve the local-only boundary; continue the public-name and external-safe intake gate without publishing, accepting artifacts, opening payment accounts, or spending unless separately authorized."
+  "last_verified_external_state": "No VouchSpec endpoint is live, no external CI repository is integrated, no external machine request or customer exists, no payment path is open, and no money has been spent or collected.",
+  "last_checkpoint_time": "2026-07-13T22:43:00-07:00",
+  "exact_resume_instruction": "Read CHARTER.md, STATE.json, STATUS.md, BACKLOG.md, NEXT_ACTION.md, catalog/public/build-report.json, and the latest Stage A review. Preserve the Stage A read-only boundary; do not make private/arbitrary upload infrastructure the launch prerequisite."
 }

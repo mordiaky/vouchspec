@@ -3,6 +3,7 @@
 
 # Public receipts are byte-addressed evidence. Keep the critical bindings explicit.
 receipts/public/*.json text eol=lf
+catalog/public/**/*.json text eol=lf
 
 # These files are hashed into every receipt's methodology record.
 requirements.lock text eol=lf

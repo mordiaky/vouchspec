@@ -1,29 +1,52 @@
 # Compliance and trust checklist
 
-## Current local proof
+## Stage A local implementation
 
-- [x] Product does not claim universal safety, certification, malware freedom, or publisher identity.
-- [x] Artifact content is not imported, rendered, fetched, installed, or executed.
-- [x] Inputs used are controlled public or synthetic artifacts; no customer/private data.
-- [x] No credentials, sensitive personal data, payment, financial account, recurring service, contract, or spend.
-- [x] No public code license or package publication has been authorized; draft license declarations were removed.
-- [x] Receipt is exact about digest-only unauthenticated integrity and replacement risk.
-- [x] Git preserves LF bytes for public receipts and every schema/lock file hashed into them.
-- [x] Local snapshot rejects symlinks, Windows reparse points/junctions, hard links, and special files.
-- [x] Local HTTP is loopback/root-confined/body-bounded/threaded/timed; MCP stdio keeps artifact text out of unstructured content.
-- [x] Independent local code/security/claims review completed with no remaining P0-P2 local finding.
-- [x] Obvious public-name conflict search completed; result requires rename and is not legal clearance.
-- [x] Real sample records a license-file presence only, redistributes no artifact bytes, and makes no legal interpretation.
-- [x] Paid placement is separate from evidence ranking and finding severity.
+- [x] `VouchSpec` is recorded as provisional and not legally/trademark cleared.
+- [x] Catalog contains 25 deliberately selected public skills across 12 GitHub repository owners; publisher identity is not claimed.
+- [x] Every source uses a full immutable Git commit and exact artifact subdirectory.
+- [x] No original artifact files, archives, or executable payloads are redistributed;
+  receipts contain bounded artifact-derived metadata and static-analysis excerpts.
+- [x] Artifact content was not installed, imported, rendered, or executed.
+- [x] No upload, private-repository, or customer-confidential input route exists.
+- [x] Receipts use explicit factual labels and never a generic `VERIFIED` status.
+- [x] Six structural failures remain visible and lack `STRUCTURE_VALIDATED`.
+- [x] DSSE v1.0.2 signs exact receipt bytes with Ed25519 before JSON parsing.
+- [x] RFC 8037 public JWKs and an independent CLI verifier are included.
+- [x] Encrypted issuer/root private keys and passphrases are outside source and normal logs.
+- [x] Separate root-signed lifecycle feed supports current, superseded, expired,
+  evaluator-defect revocation, key-compromise revocation, staleness, and rollback handling.
+- [x] REST and MCP catalog surfaces are read-only; POST is rejected.
+- [x] Paid placement cannot change evidence labels, ranking, or severity.
+- [x] No spend, payment, contract, account, recurring infrastructure, or customer obligation.
+- [x] Independent P0-P2 signing/catalog/claims review closed; no remaining finding after
+  distinct-key, startup-persistence, immutable-snapshot, and process-safe sequence fixes.
 
-## Required before any external/public artifact intake
+## Before live Stage A acceptance
 
-- [ ] Distinctive public name selected and appropriate human legal/trademark review completed before material investment.
-- [ ] One raw ZIP byte-stream profile with immutable capture, archive/path/bomb limits, cleanup, and no URL/repository/path fields.
-- [ ] Killable unprivileged worker, OS-enforced no egress, no secrets/signing key, quotas, timeout/cancel recovery, and hostile corpus.
-- [ ] TLS, authentication, object authorization, tenant isolation, uniform errors, rate/concurrency/queue/header/body/time limits.
-- [ ] Bounded remote MCP profile with Origin/version/auth/capability/output isolation tests.
-- [ ] RFC 8785 JCS, isolated signature, authenticated verification key, rotation/revocation, receipt/method invalidation, and verifier tests.
-- [ ] Dependency advisory review and hashed cross-platform production lock.
-- [ ] Public terms, privacy/retention policy, jurisdiction-specific obligations, refund policy, and customer authorization language.
-- [ ] Owner approval for payment/KYC, financial accounts, contracts, recurring infrastructure, or spend beyond charter authority.
+- [ ] Read-only REST is live behind managed TLS.
+- [ ] Read-only MCP retrieval is live/installable.
+- [ ] Public root/issuer key fingerprints are pinned through an independent channel.
+- [ ] One external publisher repository emits a commit/workflow-bound CI attestation.
+- [ ] Ten legitimate external machine requests occur, including three repeats.
+- [ ] One genuine machine-initiated paid request settles after a machine-readable quote.
+- [ ] Compute, infrastructure, fees, and contribution margin are recorded.
+- [ ] No owner call, customer meeting, or routine manual fulfillment is required.
+
+## Before Stage B public-repository validation
+
+- [ ] Allowlist public source hosts; require full commit and explicit subdirectory.
+- [ ] Enforce streamed byte, individual file, count, depth, time, queue, and output limits.
+- [ ] Freeze/hash all retrieved bytes before static analysis in an isolated non-executing worker.
+- [ ] Run the full production-equivalent Linux suite across 20–50 public skills and at least
+  10 repository-owner namespaces; do not infer publisher identity or independence.
+- [ ] Cover traversal, absolute paths, symlinks, hard links, duplicate paths, case/Unicode
+  collisions, archive bombs, excessive counts/sizes, malformed metadata, recursive
+  references, hidden executables, credential requests, downloads, and permissions.
+- [ ] Verify supported cross-OS determinism and record every skipped test.
+
+## Deferred Stage C
+
+Private storage, general authentication, tenant isolation, secure arbitrary uploads,
+deletion/retention policy, expanded terms/privacy, and incident response remain deferred
+until external demand and revenue justify them.

@@ -63,3 +63,36 @@
 - **Reason:** A Windows checkout converted those files to CRLF after merge, changing the
   receipt file hash and methodology input digests. The checked-in file-hash contract must
   survive a fresh checkout on every supported host.
+
+## 2026-07-13 - Correct launch sequencing to Stage A, B, and C
+
+- **Decision:** Launch first as a read-only index of deliberately selected public artifacts;
+  place allowlisted public-repository validation in Stage B; defer private and arbitrary
+  uploads to Stage C until demand and revenue justify them.
+- **Reason:** Public arbitrary upload remains unsafe, but its controls are not prerequisites
+  for serving signed evidence about operator-selected public artifacts.
+
+## 2026-07-13 - Select VouchSpec as the provisional beta name
+
+- **Decision:** Use `VouchSpec` for the constrained public beta and retain `CapabilityProof`
+  only as the internal engine/package compatibility name.
+- **Evidence:** A $0 obvious-conflict screen found no exact indexed product, GitHub repository,
+  account, PyPI package, npm package, or DNS record in the checked set.
+- **Qualification:** This is not legal, trademark, entity-name, handle, or domain clearance.
+
+## 2026-07-13 - Authenticate exact receipt bytes with DSSE and Ed25519
+
+- **Decision:** Put the exact receipt payload bytes in a DSSE v1.0.2 envelope and sign DSSE
+  PAE with Ed25519; publish RFC 8037 JWKs using RFC 7638 thumbprints.
+- **Reason:** Verification authenticates bytes before JSON parsing and never reconstructs
+  ambiguous JSON. RFC 8785 JCS is not a cryptographic prerequisite for this profile.
+- **Lifecycle:** A separate recovery/root key signs issuer-key and receipt state. A compromised
+  issuer key revokes every receipt from that key because issuance timestamps are not trusted.
+
+## 2026-07-13 - Preserve failed public artifacts as evidence
+
+- **Decision:** Index all 25 selected public skills even when a current structural rule fails;
+  omit `STRUCTURE_VALIDATED` and publish the signed findings rather than silently replacing
+  or hiding the artifact.
+- **Result:** 25 signed receipts across 12 source organizations: 19 structural passes, six
+  explicit failures, and zero skipped artifacts.

@@ -2,30 +2,53 @@
 
 ## Completed
 
-- **B-001:** Current standards, competitors, pricing, and obvious name-conflict evidence.
-- **B-002:** Deterministic local inspector and strict receipt contract for Agent Skills.
-- **B-003:** Local loopback HTTP and MCP stdio integrations.
-- **B-004:** Independent local-profile code/security/claims review; all reported P0-P2 local
-  findings resolved and regression-tested.
-- **B-005:** Local methodology, sample receipt, verify-before-install skill, and CI prototype.
+- **B-001:** Current standards, competitors, initial pricing, and naming-conflict evidence.
+- **B-002:** Bounded deterministic local inspector and strict Agent Skill receipt schema.
+- **B-003:** Root-confined local inspector HTTP and MCP integrations.
+- **B-004:** Independent local-profile code/security/claims review and regression closure.
+- **B-005:** Local methodology, sample, verify-before-install skill, and CI prototype.
+- **B-006:** Select `VouchSpec` as the provisional beta name after a $0 obvious-conflict
+  screen; record that it is not formal legal/trademark clearance.
+- **B-007:** Define Stage A/B/C so private/arbitrary upload work is not a launch prerequisite.
+- **B-008:** Implement DSSE v1.0.2 Ed25519 receipt signing over exact bytes, RFC 8037 public
+  JWKs, independent CLI verification, and mutation tests.
+- **B-009:** Implement a separate root-signed lifecycle/key feed with current, superseded,
+  expired, evaluator-defect-revoked, key-compromise-revoked, stale, and rollback behavior.
+- **B-010:** Build 25 signed public-skill receipts across 12 GitHub repository owners with zero skipped
+  artifacts and no artifact execution, upload, or private content.
+- **B-011:** Implement read-only catalog REST and MCP retrieval with no artifact submission
+  route.
+- **B-012:** Close independent P0-P2 review findings for key-role separation, startup
+  rollback persistence, immutable verified-index reads, cross-process sequence state, and
+  public claim language.
 
-## Next
+## Next — smallest safe external alpha
 
-- **B-006:** Generate and primary-source-screen distinctive public-name candidates; select a
-  working candidate without claiming legal clearance. Cost USD $0.
-- **B-007:** Specify and implement bounded raw ZIP ingestion into a private immutable job blob.
-- **B-008:** Demonstrate a killable unprivileged worker with OS-enforced no egress, quotas,
-  secret-free environment, cleanup, and hostile archive/path tests.
-- **B-009:** Implement RFC 8785 JCS payloads, isolated Ed25519 signing, authenticated verifier
-  key, rotation/revocation, and receipt/method invalidation.
-- **B-010:** Add external auth/TLS/object authorization/tenant isolation and bounded remote MCP
-  only after B-007 through B-009 pass.
-- **B-011:** Build a truthful static demand-test page locally; publish only after naming and
-  launch gates.
-- **B-012:** Establish a one-time payment/KYC path only with required owner approval.
-- **B-013:** Run capped E-002 full-price transaction tests.
+- **B-013:** Publish the read-only REST catalog behind managed TLS and make its public key
+  fingerprint available through an independent channel.
+- **B-014:** Publish/install the read-only MCP retrieval route and measure legitimate machine
+  requests without accepting artifacts.
+- **B-015:** Upgrade the GitHub action to a publisher-operated, commit-bound attestation
+  profile and verify one genuinely external repository. Label only this profile
+  `PUBLISHER_CI_ATTESTED`.
+- **B-016:** Convert the implemented machine-readable, non-orderable price-card response
+  into a payable quote contract only after the Stage B worker and a lawful owner-linked
+  payment/KYC rail exist.
+- **B-017:** Run the external alpha until 10 legitimate machine requests, three repeat
+  requests, and one genuine settled machine-initiated paid request occur; record compute and
+  infrastructure cost.
 
-## Deferred
+## Before Stage B
 
-Dynamic sandbox observation, trigger/task evaluation, continuous monitoring, broad crawling,
-ARD/MCP Registry adapters, x402, marketplace transactions, and compatibility labs.
+- **B-018:** Expand to 20–50 varied public skills and run the complete suite in the
+  production-equivalent Linux environment.
+- **B-019:** Add the full safe adversarial archive/path/Unicode/collision/limit/permission
+  fixture matrix and cross-OS deterministic-receipt checks; record every skip.
+- **B-020:** Implement allowlisted public-host retrieval, full immutable commit and explicit
+  subdirectory validation, bounded byte freezing, and isolated non-executing workers.
+
+## Deferred Stage C
+
+Private repositories, arbitrary uploads, customer-confidential content, tenant storage,
+deletion workflows, general authentication, dynamic execution, and expanded incident/legal
+controls remain deferred until genuine demand and revenue justify them.

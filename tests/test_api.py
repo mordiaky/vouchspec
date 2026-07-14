@@ -57,7 +57,7 @@ def test_health_is_non_sensitive() -> None:
         response = connection.getresponse()
         payload = json.loads(response.read().decode("utf-8"))
         assert response.status == 200
-        assert payload == {"service": "capabilityproof", "status": "ok", "version": "0.1.0"}
+        assert payload == {"service": "vouchspec", "status": "ok", "version": "0.2.0"}
         assert str(FIXTURES) not in json.dumps(payload)
     finally:
         server.shutdown()

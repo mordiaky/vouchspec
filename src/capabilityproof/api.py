@@ -48,7 +48,7 @@ def make_handler(allowed_root: Path, limits: ScanLimits | None = None) -> type[B
     limits = limits or ScanLimits()
 
     class CapabilityProofHandler(BaseHTTPRequestHandler):
-        server_version = "CapabilityProof/0.1"
+        server_version = "VouchSpec/0.2"
         sys_version = ""
 
         def setup(self) -> None:
@@ -75,7 +75,7 @@ def make_handler(allowed_root: Path, limits: ScanLimits | None = None) -> type[B
 
         def do_GET(self) -> None:  # noqa: N802
             if self.path == "/health":
-                self._send(200, {"status": "ok", "service": "capabilityproof", "version": "0.1.0"})
+                self._send(200, {"status": "ok", "service": "vouchspec", "version": "0.2.0"})
             else:
                 self._send(404, {"error": {"code": "not_found", "message": "route not found"}})
 

@@ -4,12 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "capabilityproof"
-version = "0.1.0"
-description = "Exact-version, machine-readable evidence for Agent Skills"
+version = "0.2.0"
+description = "VouchSpec exact-version signed evidence for public Agent Skills"
 readme = "README.md"
 requires-python = ">=3.11"
-authors = [{ name = "CapabilityProof" }]
+authors = [{ name = "VouchSpec" }]
 dependencies = [
+  "cryptography==49.0.0",
+  "jsonschema==4.26.0",
   "mcp==1.28.1",
   "PyYAML==6.0.3",
 ]
@@ -22,6 +24,7 @@ dev = [
 
 [project.scripts]
 capabilityproof = "capabilityproof.cli:main"
+vouchspec = "capabilityproof.cli:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

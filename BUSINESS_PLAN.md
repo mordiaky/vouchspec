@@ -1,101 +1,94 @@
-# CapabilityProof living business plan
+# VouchSpec living business plan
 
 ## Executive summary
 
-`CapabilityProof` is an internal codename for an independent, registry-neutral evidence
-layer that agents and teams can consult before acquiring or activating an Agent Skill. The
-initial artifact scope is one exact directory containing `SKILL.md`.
+VouchSpec (provisional beta name; no formal legal/trademark clearance) is an independent,
+registry-neutral evidence layer that machines can consult before acquiring or activating an
+Agent Skill. The commercial wedge is a portable exact-byte receipt, not a generic scanner,
+badge, directory, or manual security service.
 
-The commercial wedge is a **portable exact-byte policy receipt**, not another scanner,
-directory, score, badge, or manual security service.
+The launch sequence is deliberately constrained: prove usage first with a read-only index
+of selected public artifacts; add bounded public-repository validation only after its worker
+profile passes; defer private and arbitrary inputs until demand and revenue justify them.
 
 ## Customer and problem
 
-The first hypothesized buyers are Agent Skill publishers and small teams operating coding
-or document agents. Discovery and format validation alone do not establish exact-byte
-identity, source provenance, inferred requirements, static risk evidence, compatibility,
-runtime behavior, or task performance. Current primary-source research supports the
-security/provenance problem but supplies no direct willingness-to-pay evidence.
+The first hypothesized users are Agent Skill publishers and automated agent/tooling systems.
+Discovery and format validation alone do not establish exact-byte identity, immutable source
+coordinates, inferred requirements, static findings, test scope, or lifecycle. Current
+research supports the provenance/security problem but not willingness to pay.
 
-## Competition and differentiation
+## Product stages
 
-Official validation, GitHub release workflows, Cisco, Snyk, NVIDIA SkillSpector, skills.sh,
-Tessl, SkillProof, ClawHub, Socket, GitHub attestations, and OpenSSF provide strong free or
-bundled substitutes. Evidence and pricing are recorded in
-`research/market-and-competitor-evidence.md` and
-`research/standards-and-name-evidence.md`.
+### Stage A — public artifact index (current)
 
-The testable gap is a stable, independent, registry-neutral record containing a complete
-file inventory, exact digests, source/blob evidence, declared-versus-inferred requirements,
-deterministic rule findings, coverage, methodology/policy versions, limitations, expiry,
-and machine policy semantics.
+- Deliberately select public Agent Skills.
+- Resolve a full immutable commit and exact subdirectory.
+- Publish signed machine-readable receipts and a root-signed lifecycle feed.
+- Expose read-only REST and MCP retrieval.
+- Accept no uploads, private repositories, customer-confidential content, or artifact code
+  execution.
 
-## Current product evidence
+The initial local catalog contains 25 skills across 12 GitHub repository owners. Nineteen pass the current
+structural profile; six remain indexed with explicit structural failures. Every receipt is
+signed, digest-bound, and labeled by the evidence actually produced.
 
-The local v0.1 prototype accepts a controlled public or synthetic directory. It creates an
-immutable in-memory byte snapshot, validates selected Agent Skills rules, closes local
-references, extracts requirements/dependencies, runs transparent static rules, and emits a
-strict-schema receipt. Git mode compares every file with its raw blob at the recorded
-commit. It never fetches or executes artifact content.
+### Stage B — public repository validation (later)
 
-The receipt uses a documented deterministic JSON profile, not RFC 8785 JCS. It is explicitly
-digest-only and unauthenticated. The loopback HTTP, MCP stdio, CI action, and verify-before-
-install skill are local developer integrations only.
+Accept only an allowlisted public host, full immutable commit, and explicit skill path;
+enforce byte/file/depth/time bounds; freeze and hash bytes before analysis; run in an
+isolated worker; return a signed receipt. Do not execute artifact scripts under this static
+profile.
 
-## Deliverables and exclusions
+### Stage C — private and arbitrary inputs (deferred)
 
-Proposed deliverables are a JSON receipt, short human summary, reproducible invocation,
-and exact policy decision inputs. Exclusions: sandbox execution, malware guarantees,
-publisher identity, legal advice, penetration testing, runtime certification, task/trigger
-evaluation, custom consulting, calls, and unlimited support.
+Private storage, tenant isolation, customer authentication, upload/deletion policies,
+expanded legal terms, and incident response are justified only by external demand and
+revenue. Stage C is not a dependency of Stage A or B.
 
-## Pricing experiments, not claims
+## Differentiation and claims
 
-- USD $19 one-time: retained only as a full-price experiment for a portable public release
-  receipt. Desk research rejected a generic paid scan as the default offer.
-- USD $99 one-time: retained only as a full-price policy-ready small-team experiment after
-  private/authorized external intake is safe.
+Receipts contain source/blob evidence, a complete bounded file inventory, exact digest,
+transparent issue counts, coverage, environment, method/policy versions, issuance/expiry,
+explicit limitations, and lifecycle. Labels are factual: `DIGEST_PINNED`,
+`STRUCTURE_VALIDATED`, `STATIC_INSPECTION_COMPLETED`, `INDEPENDENT_STATIC_SCAN`, and only
+later when evidenced, `PUBLISHER_CI_ATTESTED`, `SANDBOX_BEHAVIOR_OBSERVED`, or
+`TASK_EVALUATED`. VouchSpec never emits a generic `VERIFIED` status.
 
-No price is validated. Only settled purchases by unaffiliated buyers count.
+DSSE v1.0.2 authenticates the exact receipt bytes with Ed25519. The inner deterministic
+JSON format remains explicitly non-JCS; cryptographic verification does not reconstruct
+JSON. A separate recovery/root key signs receipt and issuer-key lifecycle state.
 
-## Acquisition experiment
+## Pricing hypotheses
 
-After a distinctive public name and external-safe delivery path exist, expose a truthful
-self-service page and run capped qualified-visitor tests:
+- Public search: free.
+- Existing receipt retrieval: free or near-free.
+- Receipt comparison: USD $0.005–$0.01.
+- Fresh static validation: USD $0.05–$0.25.
+- Signed receipt issuance: USD $0.10–$0.50.
+- Continuous artifact monitoring: USD $2–$10 monthly.
+- Independent sandbox analysis: later, priced from measured compute cost.
 
-- Publisher receipt succeeds at 2 or more full-price USD $19 purchases from 25 qualified
-  publisher page viewers. Zero purchases at 25 rejects that offer; fewer than 25 views are
-  inconclusive.
-- Team policy pack succeeds at 1 or more full-price USD $99 purchase from 15 qualified team
-  page viewers. Zero at 15 rejects that offer; fewer than 15 views are inconclusive.
+These are machine-transaction experiments, not validated prices. Payment never changes
+findings or evidence ranking. A machine-readable quote precedes payment; a settlement or
+signed paid-job token may authorize one job without a conventional customer account.
 
-Clicks, replies, waitlists, GitHub stars, security-study prevalence, and vendor launches do
-not count as payment evidence.
+## External alpha acceptance
 
-## Fulfillment boundary
+The milestone passes only when the provisional name, 25-skill/10-source-organization signed catalog,
+public verifier, live REST and MCP, one external publisher CI integration, 10 legitimate
+external machine requests including three repeats, one genuine settled machine-paid
+request, and actual cost evidence all exist. Routine jobs require no owner call, meeting,
+demo, or manual approval.
 
-Current fulfillment is an audited local proof for controlled public/synthetic artifacts,
-not a customer service. An external service must accept one bounded immutable raw ZIP byte
-stream, parse it in a killable isolated no-egress worker, authenticate and authorize every
-operation, sign JCS payloads with an isolated key, and support key/receipt invalidation.
-Remote paths, URLs, repositories, base64 artifacts, and mutable fetch targets remain banned.
+## Economics, compliance, and stop rules
 
-## Economics and compliance
+Spend and revenue are both USD $0. No customer, contract, payment rail, recurring service,
+or delivery obligation exists. Only deliberately selected public artifacts have been
+processed. No original artifact file or executable payload is redistributed, but signed
+receipts contain bounded artifact-derived metadata and redacted evidence excerpts.
 
-Spend is USD $0 and measured revenue is USD $0. Contribution margin is unknown until a real
-delivery occurs. No customer, payment, contract, account, recurring service, or financial
-rail exists. Only public/synthetic inputs have been used; artifact code was never executed;
-the sample receipt redistributes no artifact bytes and makes no license interpretation.
-
-## Stop and pivot rules
-
-Reject the respective offer at 0/25 qualified publisher views or 0/15 qualified team views.
-Stop external launch if any P0/P1 security finding remains, safe fulfillment cannot fit the
-budget, or the portable-policy wedge is indistinguishable from a free incumbent workflow.
-
-## Automation path
-
-Local deterministic evidence -> immutable upload intake -> isolated worker -> signed receipt
-verification -> publisher CI -> policy consumption -> cached public search. Sandboxed runtime
-observation, task evaluation, continuous monitoring, ARD/MCP Registry adapters, and x402 are
-deferred until demand and safety evidence justify them.
+Stop public alpha for any unresolved P0/P1 security defect, forged/stale lifecycle behavior,
+artifact-content intake route, false evidence label, or inability to keep routine
+fulfillment autonomous. Reject a price/offer only from real machine transaction evidence,
+not clicks, stars, waitlists, or simulated payments.
