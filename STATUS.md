@@ -33,8 +33,9 @@
 - **Boundary:** public immutable sources only; no uploads, private repositories, confidential
   content, or artifact execution.
 - **Verification:** local isolated verification passes 114 tests with one explicit Windows
-  symlink-privilege skip. Public CI refresh for this change is pending; prior run
-  `29335330180` passed at commit `6c73742efafb314a1d1b6ba2e98ef66d4912f2a1`.
+  symlink-privilege skip. Public Linux CI run `29338263172` passed at commit
+  `d5ed89f2630648a58531aff84006432dfd0ef5e7`, including package installation, the full test
+  suite, and a CLI receipt smoke test.
 
 Next: follow all three unrelated adoption proposals without an unsolicited same-day follow-up,
 resume the rules-limited publisher channel after its daily cap resets,

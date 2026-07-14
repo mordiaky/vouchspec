@@ -59,11 +59,14 @@ traffic are explicitly excluded.
   isolation, quotas, audit events, exact signed-result delivery, and live-store refusal.
 - 114 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
   skipped for missing host privilege; Linux-container and hostile tree/archive/path tests pass.
+- Public Linux CI run `29338263172` passed at commit
+  `d5ed89f2630648a58531aff84006432dfd0ef5e7`, including package installation, the full test
+  suite, and a CLI receipt smoke test.
 
 Evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
 `CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, public CI/attestation URLs, and the
 final independent audit when eligible. Current public engineering/adoption references include
-`https://github.com/mordiaky/vouchspec/actions/runs/29335063432`,
+`https://github.com/mordiaky/vouchspec/actions/runs/29338263172`,
 `https://github.com/supabase/agent-skills/issues/136`, and
 `https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`, and
 `https://github.com/michtio/craftcms-claude-skills/issues/10`.
