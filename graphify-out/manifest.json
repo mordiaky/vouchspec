@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "tests/test_distribution.py": {
-    "mtime": 1784051566.4667344,
-    "ast_hash": "4fccc1701cb327bb1cabf1aa63ae5bb5",
+    "mtime": 1784052124.610647,
+    "ast_hash": "bbcf2ac34a2d8b1d31d471b8b50f4903",
     "semantic_hash": ""
   },
   "tests/test_inspector.py": {
@@ -625,8 +625,8 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/stage_b.py": {
-    "mtime": 1784051215.1971464,
-    "ast_hash": "24302531102cdf41b834ca6e27be6eb6",
+    "mtime": 1784054248.9036164,
+    "ast_hash": "935f19991a63455bd76ac10009eef5e2",
     "semantic_hash": ""
   },
   "src/capabilityproof/stage_b_signer.py": {
@@ -720,18 +720,18 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/hosted_worker.py": {
-    "mtime": 1784051566.4638731,
-    "ast_hash": "2d4b0c06c23d00c0570c6668f9edbe47",
+    "mtime": 1784054248.9046159,
+    "ast_hash": "894abe8db09bddf2cf27370765aaa64e",
     "semantic_hash": ""
   },
   "tests/test_hosted_worker.py": {
-    "mtime": 1784051566.4656827,
-    "ast_hash": "9734780d53e15efaee4b8f49232489e3",
+    "mtime": 1784054265.7223551,
+    "ast_hash": "9064ed6c55edef3cbaa3d39a57638876",
     "semantic_hash": ""
   },
   ".github/workflows/vouchspec-fulfillment.yml": {
-    "mtime": 1784051566.4651592,
-    "ast_hash": "39e1a9b78d800e717be14c6f36ce8f07",
+    "mtime": 1784052124.6081417,
+    "ast_hash": "7ac7a073bf4df3b212d0b9a7f3222813",
     "semantic_hash": ""
   }
 }
