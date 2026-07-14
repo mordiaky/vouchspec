@@ -1,16 +1,16 @@
 # Graph Report - capabilityproof  (2026-07-14)
 
 ## Corpus Check
-- 142 files · ~80,243 words
+- 142 files · ~80,344 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1648 nodes · 3460 edges · 133 communities (102 shown, 31 thin omitted)
+- 1648 nodes · 3460 edges · 134 communities (103 shown, 31 thin omitted)
 - Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 440 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `885a7098`
+- Built from commit: `df69d012`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -84,14 +84,17 @@
 - [[_COMMUNITY_Community 67|Community 67]]
 - [[_COMMUNITY_Community 68|Community 68]]
 - [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
 - [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
 - [[_COMMUNITY_Community 74|Community 74]]
 - [[_COMMUNITY_Community 75|Community 75]]
 - [[_COMMUNITY_Community 76|Community 76]]
 - [[_COMMUNITY_Community 78|Community 78]]
 - [[_COMMUNITY_Community 79|Community 79]]
 - [[_COMMUNITY_Community 80|Community 80]]
+- [[_COMMUNITY_Community 81|Community 81]]
 - [[_COMMUNITY_Community 82|Community 82]]
 - [[_COMMUNITY_Community 83|Community 83]]
 - [[_COMMUNITY_Community 84|Community 84]]
@@ -134,11 +137,9 @@
 - [[_COMMUNITY_Community 125|Community 125]]
 - [[_COMMUNITY_Community 126|Community 126]]
 - [[_COMMUNITY_Community 127|Community 127]]
-- [[_COMMUNITY_Community 128|Community 128]]
 - [[_COMMUNITY_Community 129|Community 129]]
 - [[_COMMUNITY_Community 130|Community 130]]
 - [[_COMMUNITY_Community 131|Community 131]]
-- [[_COMMUNITY_Community 132|Community 132]]
 - [[_COMMUNITY_Community 133|Community 133]]
 - [[_COMMUNITY_Community 134|Community 134]]
 - [[_COMMUNITY_Community 135|Community 135]]
@@ -184,7 +185,7 @@
 - 1-file cycle: `src/capabilityproof/snapshot.py -> src/capabilityproof/snapshot.py`
 - 1-file cycle: `src/capabilityproof/lifecycle.py -> src/capabilityproof/lifecycle.py`
 
-## Communities (133 total, 31 thin omitted)
+## Communities (134 total, 31 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.11
@@ -231,8 +232,8 @@ Cohesion: 0.20
 Nodes (10): maxLength, type, properties, maxLength, type, maxLength, type, allowed_tools (+2 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.11
-Nodes (19): anyOf, const, artifact_path, content_digest_pinned, provenance, publisher_identity, source_commit, source_repository (+11 more)
+Cohesion: 0.13
+Nodes (15): anyOf, const, artifact_path, content_digest_pinned, publisher_identity, source_commit, source_repository, source_verification (+7 more)
 
 ### Community 12 - "Community 12"
 Cohesion: 0.04
@@ -271,12 +272,12 @@ Cohesion: 0.14
 Nodes (17): _no_duplicate_object(), Small loopback-only JSON API around the deterministic inspector., _validate_request(), CommerceAccessStore, _format_timestamp(), _parse_timestamp(), Tenant and capability access controls for the constrained commerce boundary.  Th, Keyed-digest tenant, quote, order, and result authorization state. (+9 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.17
-Nodes (12): maxItems, type, additionalProperties, properties, required, type, external_references_untrusted, format_validation (+4 more)
+Cohesion: 0.12
+Nodes (16): maxItems, type, items, maxItems, type, additionalProperties, properties, required (+8 more)
 
 ### Community 22 - "Community 22"
-Cohesion: 0.20
-Nodes (14): items, maxLength, minLength, type, items, maxItems, minItems, type (+6 more)
+Cohesion: 0.31
+Nodes (10): items, maxLength, minLength, type, items, script_languages, items, items (+2 more)
 
 ### Community 23 - "Community 23"
 Cohesion: 0.14
@@ -418,6 +419,14 @@ Nodes (60): ArgumentParser, _build_parser(), _commerce_environment_value(), _com
 Cohesion: 0.33
 Nodes (6): items, maxItems, minItems, prefixItems, type, live_gates
 
+### Community 70 - "Community 70"
+Cohesion: 0.50
+Nodes (4): maxItems, minItems, type, limitations
+
+### Community 73 - "Community 73"
+Cohesion: 0.50
+Nodes (4): items, maxItems, type, local_references
+
 ### Community 76 - "Community 76"
 Cohesion: 0.29
 Nodes (7): const, additionalProperties, properties, required, type, algorithm, digest
@@ -425,6 +434,10 @@ Nodes (7): const, additionalProperties, properties, required, type, algorithm, d
 ### Community 80 - "Community 80"
 Cohesion: 0.33
 Nodes (6): items, maxItems, minItems, prefixItems, type, payment_options
+
+### Community 81 - "Community 81"
+Cohesion: 0.50
+Nodes (4): provenance, additionalProperties, required, type
 
 ### Community 82 - "Community 82"
 Cohesion: 0.22
@@ -570,17 +583,9 @@ Nodes (4): staticFinding, additionalProperties, required, type
 Cohesion: 0.50
 Nodes (4): total, maximum, minimum, type
 
-### Community 128 - "Community 128"
-Cohesion: 0.50
-Nodes (4): items, maxItems, type, findings
-
 ### Community 131 - "Community 131"
 Cohesion: 0.50
 Nodes (4): validity, additionalProperties, required, type
-
-### Community 132 - "Community 132"
-Cohesion: 0.50
-Nodes (4): items, maxItems, type, manifest_parse_failures
 
 ### Community 135 - "Community 135"
 Cohesion: 0.50
@@ -596,7 +601,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `InputRejected` connect `Community 20` to `Community 0`, `Community 67`, `Community 100`, `Community 37`, `Community 38`, `Community 6`, `Community 105`, `Community 42`, `Community 43`, `Community 46`, `Community 17`, `Community 50`, `Community 87`, `Community 30`, `Community 63`?**
   _High betweenness centrality (0.128) - this node is a cross-community bridge._
-- **Why does `properties` connect `Community 26` to `Community 32`, `Community 33`, `Community 3`, `Community 131`, `Community 5`, `Community 101`, `Community 41`, `Community 11`, `Community 16`, `Community 49`, `Community 48`, `Community 21`, `Community 22`, `Community 23`?**
+- **Why does `properties` connect `Community 26` to `Community 32`, `Community 33`, `Community 3`, `Community 131`, `Community 5`, `Community 70`, `Community 101`, `Community 41`, `Community 16`, `Community 49`, `Community 48`, `Community 81`, `Community 21`, `Community 23`?**
   _High betweenness centrality (0.051) - this node is a cross-community bridge._
 - **Why does `properties` connect `Community 121` to `Community 3`, `Community 76`, `Community 122`, `Community 123`, `Community 93`, `Community 94`, `Community 95`?**
   _High betweenness centrality (0.025) - this node is a cross-community bridge._
