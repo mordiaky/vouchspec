@@ -51,6 +51,9 @@ def test_signer_diagnostics_emit_only_allowlisted_codes() -> None:
         b'{"error":{"code":"invalid_key","message":"private key or passphrase is invalid"}}'
     ) == "isolated_signer_invalid_key"
     assert _safe_signer_failure_code(
+        b'bounded runtime warning\n{"error":{"code":"signing_gate_failed","message":"worker timing evidence is inconsistent"}}\n'
+    ) == "isolated_signer_timing_evidence"
+    assert _safe_signer_failure_code(
         b'{"error":{"code":"signing_gate_failed","message":"secret=/tmp/private.pem"}}'
     ) is None
     assert _safe_signer_failure_code(

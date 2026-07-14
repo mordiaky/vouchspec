@@ -80,19 +80,29 @@ def _safe_signer_failure_code(stderr: bytes) -> str | None:
     if not stderr or len(stderr) > 16_384:
         return None
     try:
-        value = json.loads(stderr.decode("utf-8", errors="strict"))
-    except (UnicodeError, json.JSONDecodeError):
+        lines = stderr.decode("utf-8", errors="strict").splitlines()
+    except UnicodeError:
         return None
-    if not isinstance(value, dict) or set(value) != {"error"}:
-        return None
-    error = value["error"]
-    if not isinstance(error, dict) or set(error) != {"code", "message"}:
-        return None
-    code = error["code"]
-    message = error["message"]
-    if not isinstance(code, str) or not isinstance(message, str):
-        return None
-    return _SAFE_SIGNER_FAILURES.get((code, message))
+    for line in reversed(lines):
+        if not line or len(line) > 4_096:
+            continue
+        try:
+            value = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(value, dict) or set(value) != {"error"}:
+            continue
+        error = value["error"]
+        if not isinstance(error, dict) or set(error) != {"code", "message"}:
+            continue
+        code = error["code"]
+        message = error["message"]
+        if not isinstance(code, str) or not isinstance(message, str):
+            continue
+        mapped = _SAFE_SIGNER_FAILURES.get((code, message))
+        if mapped is not None:
+            return mapped
+    return None
 
 
 @dataclass(frozen=True)
