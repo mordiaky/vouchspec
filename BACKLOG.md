@@ -16,6 +16,13 @@
   order/payment state separation, and provider-neutral preparation implemented without keys.
 - **B-019:** current official MCP Registry and GitHub Actions Marketplace routes reviewed;
   premature or terms-bearing submissions correctly withheld.
+- **B-022:** GitHub-only immutable retrieval, complete tree/blob/archive verification, bounded
+  no-egress/no-host-write worker, and constrained signing boundary are sandbox-proven.
+- **B-023:** environment-bound quote/order/payment/event/cost/refund/delivery ledger and fake
+  provider pass duplicate, reordering, idempotency, and exclusion tests.
+- **B-031:** loopback sandbox quote/order/status/result API now has keyed-digest authentication,
+  minimal tenant isolation, scoped idempotency, expiring/rotatable/revocable delivery
+  capabilities, quotas/rate/framing controls, audit events, and exact signed-result delivery.
 
 ## Now — external adoption and safe orderability
 
@@ -23,14 +30,15 @@
   immutable-pinned workflow if invited. Count only an external retained run.
 - **B-021:** continue low-volume, contribution-rule-compliant, repository-specific outreach to
   highly relevant publishers until three unrelated integrations exist.
-- **B-022:** implement allowlisted GitHub immutable retrieval with byte/count/depth/time limits,
-  an isolated no-egress non-executing worker, and a separate constrained signing boundary.
-- **B-023:** implement an idempotent quote/order/payment/provider-event/cost ledger with a fake
-  gateway, reconciliation, duplicate/out-of-order event tests, and refund state.
 - **B-024:** prepare Stripe sandbox activation to the last unavoidable credential gate; then ask
   the owner once for the minimum identity/account/payout inputs.
 - **B-025:** package the public MCP server in a Registry-supported public format, validate
   `server.json`, and request owner authentication only when publication is otherwise ready.
+- **B-032:** add root-authorized monotonic lifecycle status/invalidation for paid Stage B
+  receipts and test rollback, equivocation, expiry, evaluator-defect, and key-compromise paths.
+- **B-033:** prepare deployment manifests for managed TLS, trusted-edge source limits,
+  kernel-quota fetch storage, secret-manager injection, restricted database permissions,
+  backups, and redacted audit aggregation without exposing the sandbox listener.
 
 ## Evidence-driven operation
 

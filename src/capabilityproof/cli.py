@@ -7,7 +7,9 @@ from datetime import datetime, timezone
 import getpass
 from importlib.resources import files
 import json
+import os
 from pathlib import Path
+import re
 import sys
 
 from .api import create_server
@@ -15,6 +17,9 @@ from .catalog_api import create_catalog_server
 from .catalog_builder import build_catalog_drafts, finalize_catalog_lifecycle, sign_catalog_drafts
 from .catalog_mcp import run_catalog_mcp_server
 from .commerce import build_fresh_validation_quote, load_strict_commerce_json
+from .commerce_access import CommerceAccessStore
+from .commerce_api import create_commerce_server
+from .commerce_store import CommerceStore
 from .errors import CapabilityProofError
 from .lifecycle import LifecycleSequenceStore, evaluate_receipt_lifecycle_with_state, sign_lifecycle_feed
 from .mcp_server import run_mcp_server
@@ -93,6 +98,28 @@ def _build_parser() -> argparse.ArgumentParser:
     stage_b_sign_parser.add_argument("--passphrase-file", type=Path)
     stage_b_sign_parser.add_argument("--allowed-worker-image", action="append", required=True)
     stage_b_sign_parser.add_argument("--output", type=Path, required=True)
+
+    provision_commerce_parser = subparsers.add_parser(
+        "provision-commerce-tenant",
+        help="provision one sandbox tenant and print its API key exactly once",
+    )
+    provision_commerce_parser.add_argument("--database", type=Path, required=True)
+    provision_commerce_parser.add_argument("--tenant-id")
+    provision_commerce_parser.add_argument("--auth-pepper-env", default="VOUCHSPEC_AUTH_PEPPER_HEX")
+    provision_commerce_parser.add_argument(
+        "--delivery-secret-env", default="VOUCHSPEC_DELIVERY_SECRET_HEX"
+    )
+
+    commerce_server_parser = subparsers.add_parser(
+        "serve-commerce-sandbox",
+        help="run the authenticated nonsettling commerce API on loopback",
+    )
+    commerce_server_parser.add_argument("--database", type=Path, required=True)
+    commerce_server_parser.add_argument("--port", type=int, default=8789)
+    commerce_server_parser.add_argument("--auth-pepper-env", default="VOUCHSPEC_AUTH_PEPPER_HEX")
+    commerce_server_parser.add_argument(
+        "--delivery-secret-env", default="VOUCHSPEC_DELIVERY_SECRET_HEX"
+    )
 
     serve_parser = subparsers.add_parser("serve", help="run the root-confined loopback JSON API")
     serve_parser.add_argument("--allow-root", type=Path, required=True)
@@ -205,6 +232,23 @@ def _write_json_file(path: Path, value: dict) -> None:
     target.write_bytes((json.dumps(value, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8"))
 
 
+def _commerce_secret(environment_name: str) -> bytes:
+    if not isinstance(environment_name, str) or not re.fullmatch(r"[A-Z][A-Z0-9_]{0,63}", environment_name):
+        raise CapabilityProofError("commerce secret environment name is invalid", code="invalid_arguments")
+    raw = os.environ.get(environment_name)
+    if raw is None:
+        raise CapabilityProofError(
+            f"required commerce secret environment variable is not set: {environment_name}",
+            code="missing_secret",
+        )
+    if not re.fullmatch(r"[0-9a-fA-F]{64}", raw):
+        raise CapabilityProofError(
+            f"commerce secret environment variable must contain exactly 32 bytes as hex: {environment_name}",
+            code="invalid_secret",
+        )
+    return bytes.fromhex(raw)
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _build_parser().parse_args(argv)
     try:
@@ -271,6 +315,29 @@ def main(argv: list[str] | None = None) -> int:
                 allowed_image_references=set(args.allowed_worker_image),
             )
             print(json.dumps(report, sort_keys=True, separators=(",", ":")))
+            return 0
+        if args.command in {"provision-commerce-tenant", "serve-commerce-sandbox"}:
+            commerce_store = CommerceStore(
+                args.database.expanduser().resolve(strict=False), environment="sandbox"
+            )
+            access_store = CommerceAccessStore(
+                commerce_store.path,
+                environment="sandbox",
+                auth_pepper=_commerce_secret(args.auth_pepper_env),
+                delivery_secret=_commerce_secret(args.delivery_secret_env),
+            )
+            if args.command == "provision-commerce-tenant":
+                credential = access_store.provision_tenant(tenant_id=args.tenant_id)
+                print(json.dumps(credential, sort_keys=True, separators=(",", ":")))
+                print("Store this sandbox API key securely; it is not persisted in plaintext.", file=sys.stderr)
+                return 0
+            server = create_commerce_server(commerce_store, access_store, args.port)
+            host, port = server.server_address
+            print(
+                f"VouchSpec nonsettling commerce sandbox listening on http://{host}:{port}",
+                file=sys.stderr,
+            )
+            server.serve_forever()
             return 0
         if args.command == "serve":
             server = create_server(args.allow_root, args.port)

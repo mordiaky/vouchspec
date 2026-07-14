@@ -123,3 +123,18 @@
   root-action repository is eligible.
 - **Authority boundary:** The owner, not the autonomous agent, will authenticate or accept new
   platform agreements only after all technical eligibility work is complete.
+
+## 2026-07-14 - Use minimal tenant isolation and two-part delivery authorization
+
+- **Decision:** Keep Stage B public-source-only, but bind every sandbox quote/order/result to
+  one opaque tenant. Require both an API key and a separate order capability for status/result
+  reads; store each only as a keyed digest under distinct environment-bound secrets.
+- **Reason:** Object-level authorization is necessary even though private repositories and
+  general user accounts remain out of scope. Tenant-scoped idempotency prevents one buyer's
+  common retry key from colliding with another's.
+- **Capability lifecycle:** order capabilities are retry-safe, environment-specific, valid for
+  30 days, and immediately rotatable/revocable. Security-state changes are audited without
+  recording tokens or IP addresses.
+- **Boundary:** the server is loopback and sandbox only. This does not authorize public
+  exposure or live settlement; managed TLS/ingress, secret operations, Stripe reconciliation,
+  paid-receipt lifecycle, and production signing remain launch gates.

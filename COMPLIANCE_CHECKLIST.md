@@ -26,14 +26,22 @@
   POSIX skill path, profile, buyer maximum, and opaque delivery ID.
 - [x] Quote states exact $49 price, deliverable, exclusions, limits, refunds, and disabled gates.
 - [x] Order and payment states are separate; exact-body Stripe webhook authentication is tested.
-- [ ] Fetch only allowlisted public immutable sources with streamed limits.
-- [ ] Freeze/hash bytes before analysis in an isolated, no-egress, non-executing worker.
-- [ ] Enforce file/count/depth/size/time/queue/output limits and adversarial path/archive tests.
-- [ ] Use a separate constrained signing service with no worker access to private keys.
-- [ ] Persist immutable quotes, idempotent orders, unique provider events, costs, fees, refunds,
+- [x] Fetch only allowlisted public immutable sources with streamed limits.
+- [x] Freeze/hash bytes before analysis in an isolated, no-egress, non-executing worker.
+- [x] Enforce file/count/depth/size/time/queue/output limits and adversarial path/archive tests.
+- [x] Use a separate constrained signing service with no worker access to private keys.
+- [x] Persist immutable quotes, idempotent orders, unique provider events, costs, fees, refunds,
   disputes, receipts, and deliveries.
+- [x] Authenticate keyed-digest sandbox API credentials; bind quotes/orders/results to one
+  tenant; require an expiring, rotatable, revocable order capability; store no plaintext token.
+- [x] Bound the loopback commerce API by body, connection, time, rate, tenant storage, and
+  exact-result digest, with generic object errors and security-state audit events.
 - [ ] Reconcile payment server-side; never fulfill from a browser redirect.
-- [ ] Complete production-equivalent Linux and cross-OS deterministic verification.
+- [x] Complete Linux CI and cross-OS deterministic/adversarial verification for the current
+  sandbox boundary; one Windows symlink-creation test remains an explicit host-privilege skip.
+- [ ] Deploy the sandbox-reviewed API behind managed TLS, source-aware ingress limits, secret
+  management, restricted database permissions, and redacted audit aggregation.
+- [ ] Publish monotonic signed lifecycle status/invalidation for newly paid Stage B receipts.
 - [ ] Activate live payment only after the owner supplies legally controlled provider identity,
   payout, and secrets.
 
@@ -49,5 +57,6 @@
 
 ## Deferred Stage C
 
-Private repositories, arbitrary uploads, confidential customer content, broad authentication,
-general multi-tenant storage, and artifact execution remain out of scope.
+Private repositories, arbitrary uploads, confidential customer content, broad user-profile or
+organization-account storage, and artifact execution remain out of scope. Stage B uses only
+the minimal opaque tenant binding needed to prevent cross-buyer quote/order/result access.

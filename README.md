@@ -35,8 +35,9 @@ new trusted channel.
   customer-confidential content.
 - **Stage B — public repository validation (sandbox-ready, not public):** allowlisted public
   host, full commit, explicit subdirectory, bounded immutable retrieval, isolated no-egress
-  worker, constrained signing, and a durable nonsettling commerce ledger. Live order intake
-  and settlement remain disabled.
+  worker, constrained signing, a durable nonsettling commerce ledger, and a loopback-only
+  authenticated tenant/order/result API with expiring revocable delivery capabilities. Live
+  deployment, order intake, and settlement remain disabled.
 - **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
   tenant isolation, deletion policy, and expanded legal/incident controls only after
   demand and revenue justify them.
@@ -135,6 +136,25 @@ deliverable, hard limits, refund conditions and remaining gates with `orderable:
 The internal sandbox can exercise an explicitly nonsettling order, but it cannot count as a
 buyer, request, or revenue. See the [Stage B operating boundary](docs/stage-b-operations.md),
 [payment flow](docs/payment-flow.md), and [refund policy](docs/refund-policy.md).
+
+The authenticated commerce boundary is runnable only in the nonsettling sandbox. It stores
+keyed credential digests, never plaintext tokens, and binds each quote and order to one
+opaque tenant. Generate two distinct 32-byte secrets with an approved secret manager, expose
+their hex values only to the process, then provision one sandbox credential:
+
+```powershell
+$env:VOUCHSPEC_AUTH_PEPPER_HEX = '<64 hex characters>'
+$env:VOUCHSPEC_DELIVERY_SECRET_HEX = '<different 64 hex characters>'
+vouchspec provision-commerce-tenant --database C:\vouchspec\sandbox-commerce.db
+vouchspec serve-commerce-sandbox --database C:\vouchspec\sandbox-commerce.db --port 8789
+```
+
+The API binds to `127.0.0.1`, has no CORS allowance, and exposes authenticated quote, order,
+status, signed-result, capability-rotation, and capability-revocation routes. Its fake payment
+rail never settles and every resulting order remains `counts_for_goal: false`. The command is
+not authorization to expose the built-in HTTP listener directly; a future external deployment
+still requires managed TLS/ingress controls, a real payment adapter, kernel fetch quota, and a
+separate production signer.
 
 ## Read-only catalog MCP
 

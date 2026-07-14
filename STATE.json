@@ -3,7 +3,7 @@
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
   "goal_status": "active_not_achieved",
-  "stage": "stage_a_public_live_stage_b_nonsettling_sandbox_proven",
+  "stage": "stage_a_public_live_stage_b_authenticated_nonsettling_sandbox_proven",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
     "excluded": ["arbitrary uploads", "private repositories", "confidential content", "artifact execution"]
@@ -25,9 +25,9 @@
     "verified_integrations": 0,
     "owned_demo": "https://github.com/mordiaky/vouchspec-demo",
     "owned_demo_counts": false,
-    "qualified_prospects": 2,
-    "contacts": 2,
-    "open_proposals": ["https://github.com/supabase/agent-skills/issues/136", "https://github.com/K-Dense-AI/scientific-agent-skills/issues/211"]
+    "qualified_prospects": 3,
+    "contacts": 3,
+    "open_proposals": ["https://github.com/supabase/agent-skills/issues/136", "https://github.com/K-Dense-AI/scientific-agent-skills/issues/211", "https://github.com/michtio/craftcms-claude-skills/issues/10"]
   },
   "machine_use": {
     "required_requests": 100,
@@ -44,14 +44,14 @@
     "product": "fresh_public_static_validation",
     "price_currency": "USD",
     "price_amount": "49.00",
-    "request_contract": "implemented_strict_preview_and_environment_bound_sandbox",
+    "request_contract": "implemented_strict_preview_tenant_bound_authenticated_sandbox",
     "quote_orderable": false,
     "settlement_available": false,
     "sandbox_fulfillment": "complete_signed_delivery_excluded_from_metrics",
     "primary_provider": "stripe_checkout",
     "secondary_provider": "x402",
-    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/provider-event/cost store", "fake-provider sandbox delivery"],
-    "remaining_gates": ["authenticated rate-limited public API and delivery token", "kernel-quota-enforced ephemeral network-fetch scratch volume", "real Stripe adapter and test-mode reconciliation", "operational production signing role", "activated owner payment account"]
+    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/provider-event/cost store", "fake-provider sandbox delivery", "loopback authenticated tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability"],
+    "remaining_gates": ["managed TLS deployment with trusted-edge source limits secret manager restricted database and audit aggregation", "kernel-quota-enforced ephemeral network-fetch scratch volume", "real Stripe adapter and test-mode reconciliation", "paid Stage B receipt lifecycle invalidation", "operational production signing role", "activated owner payment account"]
   },
   "commercial_metrics": {
     "required_buyers": 3,
@@ -74,7 +74,7 @@
   "acceptance": {
     "tests_total": 30,
     "all_pass": false,
-    "engineering_tests_passed": 102,
+    "engineering_tests_passed": 114,
     "engineering_tests_skipped": 1,
     "evidence_file": "GOAL_EVIDENCE.md",
     "independent_final_audit": "pending"
@@ -82,15 +82,15 @@
   "current_blockers": [
     "No unrelated external repository has retained a VouchSpec integration",
     "No legitimate external machine use is recorded",
-    "Stage B has no authenticated public API or real Stripe adapter",
+    "Stage B authenticated API is sandbox-only and has no managed public deployment real Stripe adapter or paid receipt lifecycle",
     "No live owner-linked payment account or settled unrelated revenue exists"
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Convert one of the two qualified publisher proposals into a retained external integration",
-    "Implement authenticated delivery-token API and real Stripe adapter",
+    "Convert one of the three qualified publisher proposals into a retained external integration",
+    "Implement real Stripe adapter paid-receipt lifecycle and managed deployment preparation",
     "Reduce payment activation to the minimum unavoidable owner credential gate"
   ],
-  "last_checkpoint_time": "2026-07-14T13:07:43Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, and the latest public issue/demo runs. Preserve all exclusion rules and the no-upload/no-execution boundary."
+  "last_checkpoint_time": "2026-07-14T13:44:59Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Continue with the real Stripe adapter and paid-receipt lifecycle; do not expose the sandbox listener."
 }

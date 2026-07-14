@@ -66,6 +66,12 @@ The implementation rejects every transition not explicitly listed in
 `capabilityproof.commerce_store`; it refuses to open one database under a different
 `sandbox`/`live` environment.
 
+The sandbox HTTP boundary in `capabilityproof.commerce_api` uses
+`capabilityproof.commerce_access` to authenticate keyed-digest API credentials, scope
+idempotency and every quote/order to one tenant, require an expiring order capability for
+status/result reads, and record rotation/revocation/result-publication audit events without
+plaintext credentials. It still connects only to the fake nonsettling provider.
+
 ## Webhook security prepared locally
 
 `verify_stripe_webhook_signature` authenticates the exact raw request bytes, accepts key
@@ -75,7 +81,9 @@ fake sandbox adapter is connected. No Stripe listener or webhook route is expose
 
 ## Remaining live gates
 
-- Authenticated, rate-limited HTTPS quote/order/result service with opaque delivery tokens.
+- Managed-HTTPS deployment of the implemented authenticated quote/order/result boundary,
+  including trusted-edge source limits, secret-manager provisioning, restricted database
+  permissions, and automated real-buyer credential issuance/recovery.
 - Real Stripe Checkout creation, server-side object retrieval, webhook normalization, and
   balance-transaction reconciliation adapter.
 - Operational no-network signing role with an owner-controlled production issuer key and
@@ -84,5 +92,5 @@ fake sandbox adapter is connected. No Stripe listener or webhook route is expose
 - End-to-end Stripe test-mode tests, then a live unrelated-party transaction.
 
 The immutable fetcher, no-egress worker, constrained signing gate, durable event/cost store,
-and sandbox end-to-end fulfillment are complete. Their limits and proof are documented in
+authenticated sandbox API, and sandbox end-to-end fulfillment are complete. Their limits and proof are documented in
 [Stage B operations](stage-b-operations.md).

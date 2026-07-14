@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 import hashlib
 from pathlib import Path
-from typing import Any
+from typing import Any, TYPE_CHECKING
 
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
@@ -15,6 +15,9 @@ from .errors import InputRejected
 from .receipt import deterministic_json
 from .stage_b import DockerNoEgressWorker, freeze_public_source
 from .stage_b_signer import sign_verified_worker_result
+
+if TYPE_CHECKING:
+    from .commerce_access import CommerceAccessStore
 
 
 def _utc_now() -> str:
@@ -30,12 +33,14 @@ class SandboxFulfillmentCoordinator:
         *,
         worker: DockerNoEgressWorker,
         signing_key: Ed25519PrivateKey,
+        access_store: CommerceAccessStore | None = None,
     ) -> None:
         if store.environment != "sandbox":
             raise ValueError("sandbox coordinator requires a sandbox commerce store")
         self.store = store
         self.worker = worker
         self.signing_key = signing_key
+        self.access_store = access_store
 
     def fulfill(
         self,
@@ -48,6 +53,13 @@ class SandboxFulfillmentCoordinator:
     ) -> dict[str, Any]:
         order = self.store.get_order(order_id)
         if order["order_status"] == OrderStatus.DELIVERED.value:
+            if self.access_store is not None:
+                envelope_path = (
+                    delivery_root.expanduser().resolve(strict=False)
+                    / order_id
+                    / "receipt.dsse.json"
+                )
+                self.access_store.publish_result(order_id, envelope_path.read_bytes())
             return order
         if (
             order["order_status"] != OrderStatus.QUEUED.value
@@ -106,7 +118,7 @@ class SandboxFulfillmentCoordinator:
                 "artifact_execution": "not_performed",
             }
             (job_root / "delivery-manifest.json").write_bytes(deterministic_json(delivery_manifest) + b"\n")
-            return self.store.deliver(
+            delivered = self.store.deliver(
                 order_id,
                 receipt_id=signing["receipt_id"],
                 receipt_sha256=signing["receipt_sha256"],
@@ -115,6 +127,9 @@ class SandboxFulfillmentCoordinator:
                 source_reference=source_reference,
                 occurred_at=_utc_now(),
             )
+            if self.access_store is not None:
+                self.access_store.publish_result(order_id, envelope_path.read_bytes())
+            return delivered
         except Exception:
             try:
                 current = self.store.get_order(order_id)

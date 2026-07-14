@@ -12,6 +12,7 @@ import pytest
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
 from capabilityproof.errors import InputRejected, PathRejected
+from capabilityproof.commerce_access import CommerceAccessStore
 from capabilityproof.commerce_store import CommerceStore, DIRECT_COST_CATEGORIES, FakePaymentProvider
 from capabilityproof.fulfillment import SandboxFulfillmentCoordinator
 from capabilityproof.provenance import ProvenanceEvidence
@@ -346,13 +347,26 @@ def test_sandbox_coordinator_completes_signed_nonsettling_delivery(tmp_path: Pat
     frozen = verify_frozen_source(frozen_root)
 
     store = CommerceStore(tmp_path / "commerce.db", environment="sandbox")
+    access = CommerceAccessStore(
+        store.path,
+        environment="sandbox",
+        auth_pepper=bytes.fromhex("31" * 32),
+        delivery_secret=bytes.fromhex("42" * 32),
+    )
+    tenant = access.provision_tenant(tenant_id="ten_" + "1" * 24)
     now = datetime(2026, 7, 14, 12, 0, tzinfo=timezone.utc)
     quote = store.create_quote(REQUEST, quote_id="q_0123456789abcdef01234567", generated_at=now)
+    access.bind_quote(
+        tenant["tenant_id"], quote["quote_id"], idempotency_key="quote_attempt_001"
+    )
     order = store.create_order(
         quote["quote_id"],
         idempotency_key="order_attempt_001",
-        buyer_reference="buyer_test_001",
+        buyer_reference=tenant["tenant_id"],
         now=now + timedelta(minutes=1),
+    )
+    delivery_token = access.bind_order(
+        tenant["tenant_id"], order["order_id"], quote["quote_id"]
     )
     provider = FakePaymentProvider(store)
     provider.create_checkout(order["order_id"], occurred_at="2026-07-14T12:01:00Z")
@@ -371,7 +385,9 @@ def test_sandbox_coordinator_completes_signed_nonsettling_delivery(tmp_path: Pat
 
     monkeypatch.setattr("capabilityproof.fulfillment.freeze_public_source", lambda *_args, **_kwargs: frozen)
     key = Ed25519PrivateKey.from_private_bytes(bytes.fromhex("1f" * 32))
-    coordinator = SandboxFulfillmentCoordinator(store, worker=FakeWorker(), signing_key=key)
+    coordinator = SandboxFulfillmentCoordinator(
+        store, worker=FakeWorker(), signing_key=key, access_store=access
+    )
     costs = {category: 0 for category in DIRECT_COST_CATEGORIES}
     delivered = coordinator.fulfill(
         order["order_id"],
@@ -388,6 +404,9 @@ def test_sandbox_coordinator_completes_signed_nonsettling_delivery(tmp_path: Pat
     )
     assert manifest["counts_for_goal"] is False
     assert manifest["settlement_status"] == "sandbox_nonsettling"
+    assert access.get_result(tenant["tenant_id"], order["order_id"], delivery_token) == (
+        tmp_path / "deliveries" / order["order_id"] / "receipt.dsse.json"
+    ).read_bytes()
 
 
 def test_checked_in_sandbox_proof_cannot_be_mistaken_for_commercial_evidence() -> None:

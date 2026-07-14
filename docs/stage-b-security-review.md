@@ -44,17 +44,38 @@ commerce store, provider-event path, and planned public order/result boundary.
   and re-verifies isolation fields, source/freeze/receipt digests, timing, provenance,
   no-execution claim, and exact signed payload bytes.
 
+### High — unauthenticated order/result boundary would expose cross-customer objects
+
+- **Affected boundary:** Stage B quote, order, status, and signed-result HTTP routes.
+- **Exploit scenario:** anonymous queue exhaustion, credential replay, quote/order enumeration,
+  cross-tenant result disclosure, token leakage through URLs/logs, or indefinite reuse of a
+  stolen delivery token.
+- **Fix:** added a loopback-only sandbox server that refuses live stores. API credentials and
+  delivery capabilities are stored only as HMAC-SHA-256 digests under distinct 32-byte
+  secrets whose non-secret key identifiers are environment-bound in SQLite. Quotes and orders
+  are bound to one opaque tenant; order/result access requires both credentials. Delivery
+  capabilities are environment-specific, retry-safe, expire after 30 days, and support
+  immediate rotation/revocation with old-token rejection.
+- **Additional controls:** exact duplicate-key-rejecting JSON and framing, 16 KiB body limit,
+  bounded connections/deadlines, global/direct-peer/tenant rate limits, per-tenant hard storage
+  ceilings, no CORS, no-store headers, generic object errors, sanitized order output, exact
+  envelope-digest result publication, and credential-free security-state audit events. Slow
+  bodies, duplicate auth headers, cross-tenant access, expiry, rotation, revocation, result
+  rebinding, quota exhaustion, and live-store startup are covered by tests.
+
 ## Open launch gates
 
-### High — no authenticated public quote/order/result API
+### High — authenticated API is not externally deployed or operationally provisioned
 
-- **Current exposure:** none; Stage B commands are local and public Stage A rejects writes.
-- **Exploit if exposed prematurely:** order enumeration, result disclosure, object-level access
-  bypass, anonymous queue exhaustion, or cross-customer delivery.
-- **Required fix:** managed TLS, strict request schemas, per-source and global rate limits,
-  hashed high-entropy one-time delivery tokens, constant-time token checks, object-level order
-  authorization, generic errors, bounded request bodies, audit events, and expiration. The
-  public-only first product does not need a general tenant/account system.
+- **Current exposure:** the new server is sandbox-only, loopback-only, fake-provider-only, and
+  absent from the public Stage A distribution.
+- **Exploit if exposed directly:** plaintext transport, proxy/client-IP confusion, unaggregated
+  auth abuse, weak filesystem secret permissions, or multi-instance limit bypass.
+- **Required live fix:** managed TLS and ingress request limits, source-aware rate limiting at
+  the trusted edge, redacted audit aggregation, secret-manager injection, service-identity-only
+  database permissions, backup/restore verification, and automated buyer credential issuance/
+  recovery. The application intentionally ignores forwarded client-IP headers; the edge must
+  enforce source limits before forwarding to loopback.
 
 ### High — no authenticated real Stripe adapter or server-side object retrieval
 
@@ -74,6 +95,17 @@ commerce store, provider-event path, and planned public order/result boundary.
   no-network signing role, immutable worker-image allowlist, rotation/revocation runbook, and
   public trust publication before any live receipt is returned.
 
+### High — paid Stage B receipt lifecycle invalidation is not published
+
+- **Current control:** order delivery capabilities can expire, rotate, or revoke immediately;
+  Stage A receipts already use the root-signed lifecycle feed.
+- **Residual scenario:** revoking result access does not tell a buyer that a previously
+  downloaded paid receipt was superseded or invalidated because of evaluator defect or key
+  compromise.
+- **Required fix:** bind paid Stage B receipt IDs to a root-authorized monotonic lifecycle
+  publication, reuse the conservative Stage A status vocabulary, and test rollback,
+  equivocation, expiry, key-compromise, and evaluator-defect invalidation before live delivery.
+
 ### Medium — networked Git scratch disk lacks a kernel quota in local proof
 
 - **Current control:** GitHub-only HTTPS URL, `tree:0` partial fetch, 90-second process timeout,
@@ -86,7 +118,9 @@ commerce store, provider-event path, and planned public order/result boundary.
 
 ## Secrets and privacy conclusion
 
-No customer secret, repository credential, signing key, payment key, or webhook secret is
-passed to the worker. The accepted artifact is public and the store holds only bounded public
-source coordinates plus opaque buyer/delivery identifiers. Private repositories, uploads,
-credentials, and customer-confidential content remain rejected.
+No customer secret, repository credential, signing key, payment key, API key, delivery token,
+or webhook secret is passed to the worker. Plaintext API keys and delivery capabilities are
+not stored in SQLite or application audit events. The accepted artifact is public and the
+store holds only bounded public source coordinates, keyed credential digests, opaque tenant
+identifiers, immutable signed-result bytes, and non-secret audit metadata. Private
+repositories, uploads, credentials, and customer-confidential content remain rejected.

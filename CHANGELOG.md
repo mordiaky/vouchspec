@@ -18,6 +18,13 @@
 - Add a constrained exact-byte Stage B signing gate, environment-bound SQLite commerce ledger,
   out-of-order/duplicate provider-event reconciliation, complete direct-cost accounting, and
   a fully delivered fake-provider sandbox proof that is permanently excluded from revenue.
+- Add a sandbox-only authenticated commerce API with HMAC-digest API credentials, minimal
+  tenant isolation, tenant-scoped idempotency, expiring/rotatable/revocable order capabilities,
+  exact signed-result retrieval, bounded concurrency/body/rate/storage controls, generic
+  object errors, and credential-free security-state audit events.
+- Add retry-safe automatic publication of the exact signed envelope from the sandbox
+  fulfillment coordinator and secret-environment CLI commands for local tenant provisioning
+  and loopback service operation. Live stores and real settlement remain fail-closed.
 - Replace the old external-alpha counters with the authoritative 30-test autonomous
   commercial goal and explicit exclusion accounting.
 
