@@ -12,7 +12,7 @@
 - **Pipeline:** 0 qualified, 0 contacted, 0 proposals, 0 wins.
 - **Product evidence:** 25 signed receipts across 12 GitHub repository-owner namespaces
   (publisher identity and corporate independence unverified), 19 structural passes,
-  6 explicit structural failures, zero skipped catalog artifacts, 53 tests passed and one
+  6 explicit structural failures, zero skipped catalog artifacts, 54 current-main tests passed and one
   ordinary Windows symlink test skipped for unavailable host privilege. Native Windows
   junction and hard-link regressions pass.
 - **Cryptographic evidence:** DSSE v1.0.2/Ed25519 exact-byte envelopes; public issuer/root

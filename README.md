@@ -17,6 +17,7 @@ labeled `STRUCTURE_VALIDATED`.
 ## Public Stage A distribution
 
 - Repository and install source: <https://github.com/mordiaky/vouchspec>
+- Machine-readable discovery: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/distribution/discovery.json>
 - Signed index over managed TLS: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json>
 - Root-signed lifecycle feed: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json>
 - Out-of-band root/issuer key publication: <https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1>

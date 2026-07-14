@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "service": "VouchSpec",
+  "stage": "A_PUBLIC_ARTIFACT_INDEX",
+  "provisional_name": true,
+  "repository": "https://github.com/mordiaky/vouchspec",
+  "release": "https://github.com/mordiaky/vouchspec/releases/tag/v0.2.0",
+  "catalog": {
+    "signed_index": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json",
+    "root_signed_lifecycle": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json",
+    "receipt_template": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/receipts/{receipt_id}.dsse.json",
+    "immutable_base": "https://raw.githubusercontent.com/mordiaky/vouchspec/4404b7a9a2d3dc45b621ea694d2ca7ad666b9898/catalog/public/"
+  },
+  "trust": {
+    "out_of_band_jwks": "https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1",
+    "root_keyid": "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4",
+    "issuer_keyid": "Q0EBNE_1fY4jjTLAHn8nDZKdxppYmH1DkKOpV8gukDo",
+    "limitation": "The Gist is separate from the repository but shares the same GitHub account."
+  },
+  "mcp": {
+    "transport": "stdio",
+    "install": "git clone https://github.com/mordiaky/vouchspec.git && python -m pip install ./vouchspec",
+    "command": "vouchspec mcp-catalog --catalog-root ./vouchspec/catalog/public --trusted-root-key /independently/pinned/root.jwk.json",
+    "tools": [
+      "search_receipts",
+      "get_receipt",
+      "get_receipt_status",
+      "get_verification_material",
+      "get_price_quote"
+    ]
+  },
+  "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@4404b7a9a2d3dc45b621ea694d2ca7ad666b9898",
+  "evidence_labels": [
+    "DIGEST_PINNED",
+    "STRUCTURE_VALIDATED",
+    "STATIC_INSPECTION_COMPLETED",
+    "INDEPENDENT_STATIC_SCAN"
+  ],
+  "boundary": {
+    "artifact_submissions_accepted": false,
+    "private_content_accepted": false,
+    "artifact_code_executed": false,
+    "paid_orders_accepted": false,
+    "human_call_required": false
+  },
+  "pricing": {
+    "catalog_search_usd": "0.00",
+    "receipt_retrieval_usd": "0.00",
+    "fresh_public_static_validation_usd": "0.10",
+    "fresh_validation_availability": "stage_b_not_orderable",
+    "settlement_available": false
+  }
+}

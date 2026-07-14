@@ -30,7 +30,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_main",
-      "community": 2,
+      "community": 24,
       "norm_label": "__main__.py"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "community": 0,
+      "community": 24,
       "norm_label": "api.py"
     },
     {
@@ -50,7 +50,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "capabilityproof_api_no_duplicate_object",
-      "community": 0,
+      "community": 24,
       "norm_label": "_no_duplicate_object()"
     },
     {
@@ -60,7 +60,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_any",
-      "community": 0,
+      "community": 24,
       "norm_label": "any"
     },
     {
@@ -70,7 +70,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "capabilityproof_api_validate_request",
-      "community": 0,
+      "community": 24,
       "norm_label": "_validate_request()"
     },
     {
@@ -120,7 +120,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "capabilityproof_api_create_server",
-      "community": 0,
+      "community": 24,
       "norm_label": "create_server()"
     },
     {
@@ -130,7 +130,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_threadinghttpserver",
-      "community": 0,
+      "community": 24,
       "norm_label": "threadinghttpserver"
     },
     {
@@ -140,7 +140,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_api_rationale_1",
-      "community": 0,
+      "community": 24,
       "norm_label": "small loopback-only json api around the deterministic inspector."
     },
     {
@@ -350,7 +350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "community": 20,
+      "community": 24,
       "norm_label": "catalog_api.py"
     },
     {
@@ -360,7 +360,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver",
-      "community": 20,
+      "community": 24,
       "norm_label": "boundedcatalogserver"
     },
     {
@@ -370,7 +370,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver_init",
-      "community": 20,
+      "community": 24,
       "norm_label": ".__init__()"
     },
     {
@@ -380,7 +380,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_api_py_any",
-      "community": 20,
+      "community": 24,
       "norm_label": "any"
     },
     {
@@ -390,7 +390,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver_process_request",
-      "community": 20,
+      "community": 24,
       "norm_label": ".process_request()"
     },
     {
@@ -400,7 +400,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver_process_request_thread",
-      "community": 20,
+      "community": 24,
       "norm_label": ".process_request_thread()"
     },
     {
@@ -410,7 +410,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_make_catalog_handler",
-      "community": 20,
+      "community": 24,
       "norm_label": "make_catalog_handler()"
     },
     {
@@ -420,7 +420,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_api_py_path",
-      "community": 20,
+      "community": 24,
       "norm_label": "path"
     },
     {
@@ -430,7 +430,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_api_py_basehttprequesthandler",
-      "community": 20,
+      "community": 24,
       "norm_label": "basehttprequesthandler"
     },
     {
@@ -440,7 +440,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_create_catalog_server",
-      "community": 20,
+      "community": 24,
       "norm_label": "create_catalog_server()"
     },
     {
@@ -450,7 +450,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_rationale_1",
-      "community": 20,
+      "community": 24,
       "norm_label": "bounded loopback http retrieval api for the stage a catalog."
     },
     {
@@ -690,7 +690,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "community": 20,
+      "community": 2,
       "norm_label": "catalog_runtime.py"
     },
     {
@@ -810,7 +810,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_rationale_1",
-      "community": 20,
+      "community": 2,
       "norm_label": "trusted runtime view over a signed catalog and root-signed lifecycle feed."
     },
     {
@@ -830,7 +830,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "community": 2,
+      "community": 24,
       "norm_label": "cli.py"
     },
     {
@@ -840,7 +840,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "capabilityproof_cli_build_parser",
-      "community": 2,
+      "community": 24,
       "norm_label": "_build_parser()"
     },
     {
@@ -850,7 +850,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "argumentparser",
-      "community": 2,
+      "community": 24,
       "norm_label": "argumentparser"
     },
     {
@@ -860,7 +860,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "capabilityproof_cli_write_receipt",
-      "community": 2,
+      "community": 24,
       "norm_label": "_write_receipt()"
     },
     {
@@ -870,7 +870,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "src_capabilityproof_cli_py_path",
-      "community": 2,
+      "community": 24,
       "norm_label": "path"
     },
     {
@@ -880,7 +880,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "capabilityproof_cli_passphrase",
-      "community": 2,
+      "community": 24,
       "norm_label": "_passphrase()"
     },
     {
@@ -890,7 +890,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "capabilityproof_cli_write_json_file",
-      "community": 2,
+      "community": 24,
       "norm_label": "_write_json_file()"
     },
     {
@@ -900,7 +900,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "capabilityproof_cli_main",
-      "community": 2,
+      "community": 24,
       "norm_label": "main()"
     },
     {
@@ -910,7 +910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_cli_rationale_1",
-      "community": 2,
+      "community": 24,
       "norm_label": "command-line entry point."
     },
     {
@@ -930,7 +930,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "capabilityproof_errors_capabilityprooferror",
-      "community": 2,
+      "community": 24,
       "norm_label": "capabilityprooferror"
     },
     {
@@ -940,7 +940,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "exception",
-      "community": 2,
+      "community": 24,
       "norm_label": "exception"
     },
     {
@@ -950,7 +950,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "capabilityproof_errors_capabilityprooferror_init",
-      "community": 2,
+      "community": 24,
       "norm_label": ".__init__()"
     },
     {
@@ -960,7 +960,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_errors_inputrejected",
-      "community": 0,
+      "community": 2,
       "norm_label": "inputrejected"
     },
     {
@@ -1000,7 +1000,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "capabilityproof_errors_rationale_5",
-      "community": 2,
+      "community": 24,
       "norm_label": "base class for an expected, non-secret operational error."
     },
     {
@@ -1320,7 +1320,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py",
-      "community": 20,
+      "community": 24,
       "norm_label": "pricing.py"
     },
     {
@@ -1330,7 +1330,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_pricing_price_quote",
-      "community": 20,
+      "community": 24,
       "norm_label": "price_quote()"
     },
     {
@@ -1340,7 +1340,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_capabilityproof_pricing_py_any",
-      "community": 20,
+      "community": 24,
       "norm_label": "any"
     },
     {
@@ -1350,7 +1350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_pricing_rationale_1",
-      "community": 20,
+      "community": 24,
       "norm_label": "machine-readable stage a price hypotheses without order or payment intake."
     },
     {
@@ -1370,7 +1370,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_provenance_provenanceevidence",
-      "community": 0,
+      "community": 6,
       "norm_label": "provenanceevidence"
     },
     {
@@ -1620,7 +1620,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_scanlimits",
-      "community": 0,
+      "community": 6,
       "norm_label": "scanlimits"
     },
     {
@@ -1630,7 +1630,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "provenanceevidence",
-      "community": 0,
+      "community": 6,
       "norm_label": "provenanceevidence"
     },
     {
@@ -1640,7 +1640,7 @@
       "source_location": "L314",
       "_origin": "ast",
       "id": "capabilityproof_receipt_inspect_git_skill",
-      "community": 24,
+      "community": 6,
       "norm_label": "inspect_git_skill()"
     },
     {
@@ -1670,7 +1670,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "capabilityproof_receipt_rationale_323",
-      "community": 24,
+      "community": 6,
       "norm_label": "inspect bytes and independently bind them to a clean local git commit."
     },
     {
@@ -1900,7 +1900,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_artifact",
-      "community": 3,
+      "community": 86,
       "norm_label": "artifact"
     },
     {
@@ -1910,7 +1910,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_artifact_type",
-      "community": 3,
+      "community": 86,
       "norm_label": "type"
     },
     {
@@ -1920,7 +1920,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_artifact_additionalproperties",
-      "community": 3,
+      "community": 86,
       "norm_label": "additionalproperties"
     },
     {
@@ -1930,7 +1930,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_artifact_required",
-      "community": 3,
+      "community": 86,
       "norm_label": "required"
     },
     {
@@ -1940,7 +1940,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_artifact_properties",
-      "community": 3,
+      "community": 36,
       "norm_label": "properties"
     },
     {
@@ -1950,7 +1950,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_type",
-      "community": 3,
+      "community": 36,
       "norm_label": "type"
     },
     {
@@ -1960,7 +1960,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_type_const",
-      "community": 3,
+      "community": 36,
       "norm_label": "const"
     },
     {
@@ -1970,7 +1970,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_root_directory",
-      "community": 3,
+      "community": 36,
       "norm_label": "root_directory"
     },
     {
@@ -1980,7 +1980,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_root_directory_type",
-      "community": 3,
+      "community": 36,
       "norm_label": "type"
     },
     {
@@ -1990,7 +1990,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_root_directory_minlength",
-      "community": 3,
+      "community": 36,
       "norm_label": "minlength"
     },
     {
@@ -2000,7 +2000,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_root_directory_maxlength",
-      "community": 3,
+      "community": 36,
       "norm_label": "maxlength"
     },
     {
@@ -2010,7 +2010,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_claims_untrusted",
-      "community": 10,
+      "community": 87,
       "norm_label": "claims_untrusted"
     },
     {
@@ -2020,7 +2020,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_claims_untrusted_type",
-      "community": 10,
+      "community": 87,
       "norm_label": "type"
     },
     {
@@ -2030,7 +2030,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_claims_untrusted_additionalproperties",
-      "community": 10,
+      "community": 87,
       "norm_label": "additionalproperties"
     },
     {
@@ -2040,7 +2040,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_claims_untrusted_required",
-      "community": 10,
+      "community": 87,
       "norm_label": "required"
     },
     {
@@ -2060,7 +2060,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_notice",
-      "community": 10,
+      "community": 92,
       "norm_label": "notice"
     },
     {
@@ -2070,7 +2070,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_notice_type",
-      "community": 10,
+      "community": 92,
       "norm_label": "type"
     },
     {
@@ -2080,7 +2080,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_notice_minlength",
-      "community": 10,
+      "community": 92,
       "norm_label": "minlength"
     },
     {
@@ -2090,7 +2090,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_notice_maxlength",
-      "community": 10,
+      "community": 92,
       "norm_label": "maxlength"
     },
     {
@@ -2100,7 +2100,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_name",
-      "community": 10,
+      "community": 91,
       "norm_label": "name"
     },
     {
@@ -2110,7 +2110,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_name_type",
-      "community": 10,
+      "community": 91,
       "norm_label": "type"
     },
     {
@@ -2120,7 +2120,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_name_maxlength",
-      "community": 10,
+      "community": 91,
       "norm_label": "maxlength"
     },
     {
@@ -2290,7 +2290,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_sha256",
-      "community": 3,
+      "community": 83,
       "norm_label": "sha256"
     },
     {
@@ -2300,7 +2300,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_sha256_ref",
-      "community": 3,
+      "community": 83,
       "norm_label": "$ref"
     },
     {
@@ -2310,7 +2310,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_file_count",
-      "community": 3,
+      "community": 88,
       "norm_label": "file_count"
     },
     {
@@ -2320,7 +2320,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_file_count_type",
-      "community": 3,
+      "community": 88,
       "norm_label": "type"
     },
     {
@@ -2330,7 +2330,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_file_count_minimum",
-      "community": 3,
+      "community": 88,
       "norm_label": "minimum"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_file_count_maximum",
-      "community": 3,
+      "community": 88,
       "norm_label": "maximum"
     },
     {
@@ -2350,7 +2350,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_total_bytes",
-      "community": 3,
+      "community": 94,
       "norm_label": "total_bytes"
     },
     {
@@ -2360,7 +2360,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_bytes_type",
-      "community": 3,
+      "community": 94,
       "norm_label": "type"
     },
     {
@@ -2370,7 +2370,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_bytes_minimum",
-      "community": 3,
+      "community": 94,
       "norm_label": "minimum"
     },
     {
@@ -2380,7 +2380,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_bytes_maximum",
-      "community": 3,
+      "community": 94,
       "norm_label": "maximum"
     },
     {
@@ -2390,7 +2390,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_files",
-      "community": 3,
+      "community": 56,
       "norm_label": "files"
     },
     {
@@ -2400,7 +2400,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_files_type",
-      "community": 3,
+      "community": 56,
       "norm_label": "type"
     },
     {
@@ -2410,7 +2410,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_files_maxitems",
-      "community": 3,
+      "community": 56,
       "norm_label": "maxitems"
     },
     {
@@ -2420,7 +2420,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_files_items",
-      "community": 3,
+      "community": 56,
       "norm_label": "items"
     },
     {
@@ -2440,7 +2440,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_additionalproperties",
-      "community": 3,
+      "community": 56,
       "norm_label": "additionalproperties"
     },
     {
@@ -2450,7 +2450,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_required",
-      "community": 3,
+      "community": 56,
       "norm_label": "required"
     },
     {
@@ -2460,7 +2460,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_properties",
-      "community": 3,
+      "community": 83,
       "norm_label": "properties"
     },
     {
@@ -2470,7 +2470,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_path",
-      "community": 3,
+      "community": 83,
       "norm_label": "path"
     },
     {
@@ -2480,7 +2480,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_size",
-      "community": 3,
+      "community": 83,
       "norm_label": "size"
     },
     {
@@ -2490,7 +2490,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_scope",
-      "community": 3,
+      "community": 93,
       "norm_label": "scope"
     },
     {
@@ -2500,7 +2500,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_scope_type",
-      "community": 3,
+      "community": 93,
       "norm_label": "type"
     },
     {
@@ -2510,7 +2510,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_scope_additionalproperties",
-      "community": 3,
+      "community": 93,
       "norm_label": "additionalproperties"
     },
     {
@@ -2520,7 +2520,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_scope_required",
-      "community": 3,
+      "community": 93,
       "norm_label": "required"
     },
     {
@@ -3120,7 +3120,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_findings",
-      "community": 27,
+      "community": 89,
       "norm_label": "findings"
     },
     {
@@ -3130,7 +3130,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_type",
-      "community": 27,
+      "community": 89,
       "norm_label": "type"
     },
     {
@@ -3140,7 +3140,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_maxitems",
-      "community": 27,
+      "community": 89,
       "norm_label": "maxitems"
     },
     {
@@ -3150,7 +3150,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_items",
-      "community": 27,
+      "community": 89,
       "norm_label": "items"
     },
     {
@@ -3170,7 +3170,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_local_references",
-      "community": 21,
+      "community": 27,
       "norm_label": "local_references"
     },
     {
@@ -3180,7 +3180,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_type",
-      "community": 21,
+      "community": 27,
       "norm_label": "type"
     },
     {
@@ -3190,7 +3190,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_maxitems",
-      "community": 21,
+      "community": 27,
       "norm_label": "maxitems"
     },
     {
@@ -3200,7 +3200,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_items",
-      "community": 21,
+      "community": 27,
       "norm_label": "items"
     },
     {
@@ -3500,7 +3500,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_skipped_text_files",
-      "community": 83,
+      "community": 27,
       "norm_label": "skipped_text_files"
     },
     {
@@ -3510,7 +3510,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_skipped_text_files_type",
-      "community": 83,
+      "community": 27,
       "norm_label": "type"
     },
     {
@@ -3520,7 +3520,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_skipped_text_files_maxitems",
-      "community": 83,
+      "community": 27,
       "norm_label": "maxitems"
     },
     {
@@ -3530,7 +3530,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_skipped_text_files_items",
-      "community": 83,
+      "community": 27,
       "norm_label": "items"
     },
     {
@@ -3750,7 +3750,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_manifest_parse_failures",
-      "community": 27,
+      "community": 90,
       "norm_label": "manifest_parse_failures"
     },
     {
@@ -3760,7 +3760,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_type",
-      "community": 27,
+      "community": 90,
       "norm_label": "type"
     },
     {
@@ -3770,7 +3770,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_maxitems",
-      "community": 27,
+      "community": 90,
       "norm_label": "maxitems"
     },
     {
@@ -3780,7 +3780,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_items",
-      "community": 27,
+      "community": 90,
       "norm_label": "items"
     },
     {
@@ -3790,7 +3790,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_script_languages",
-      "community": 22,
+      "community": 23,
       "norm_label": "script_languages"
     },
     {
@@ -3800,7 +3800,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_script_languages_type",
-      "community": 22,
+      "community": 23,
       "norm_label": "type"
     },
     {
@@ -3810,7 +3810,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_script_languages_maxitems",
-      "community": 22,
+      "community": 23,
       "norm_label": "maxitems"
     },
     {
@@ -3840,7 +3840,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_referenced_hosts",
-      "community": 23,
+      "community": 22,
       "norm_label": "referenced_hosts"
     },
     {
@@ -3850,7 +3850,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_referenced_hosts_type",
-      "community": 23,
+      "community": 22,
       "norm_label": "type"
     },
     {
@@ -3860,7 +3860,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_referenced_hosts_maxitems",
-      "community": 23,
+      "community": 22,
       "norm_label": "maxitems"
     },
     {
@@ -4040,7 +4040,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_completed_checks",
-      "community": 5,
+      "community": 52,
       "norm_label": "completed_checks"
     },
     {
@@ -4050,7 +4050,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_completed_checks_type",
-      "community": 5,
+      "community": 52,
       "norm_label": "type"
     },
     {
@@ -4060,7 +4060,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_completed_checks_minitems",
-      "community": 5,
+      "community": 52,
       "norm_label": "minitems"
     },
     {
@@ -4070,7 +4070,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_completed_checks_maxitems",
-      "community": 5,
+      "community": 52,
       "norm_label": "maxitems"
     },
     {
@@ -4080,7 +4080,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_completed_checks_items",
-      "community": 5,
+      "community": 52,
       "norm_label": "items"
     },
     {
@@ -4090,7 +4090,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_minimum",
-      "community": 5,
+      "community": 52,
       "norm_label": "minimum"
     },
     {
@@ -4100,7 +4100,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_maximum",
-      "community": 5,
+      "community": 52,
       "norm_label": "maximum"
     },
     {
@@ -4560,7 +4560,7 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_name_const",
-      "community": 10,
+      "community": 91,
       "norm_label": "const"
     },
     {
@@ -5160,7 +5160,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_limitations",
-      "community": 52,
+      "community": 22,
       "norm_label": "limitations"
     },
     {
@@ -5170,7 +5170,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_type",
-      "community": 52,
+      "community": 22,
       "norm_label": "type"
     },
     {
@@ -5180,7 +5180,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_minitems",
-      "community": 52,
+      "community": 22,
       "norm_label": "minitems"
     },
     {
@@ -5190,7 +5190,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_maxitems",
-      "community": 52,
+      "community": 22,
       "norm_label": "maxitems"
     },
     {
@@ -5630,7 +5630,7 @@
       "source_location": "L338",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_line",
-      "community": 28,
+      "community": 96,
       "norm_label": "line"
     },
     {
@@ -5640,7 +5640,7 @@
       "source_location": "L338",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_line_type",
-      "community": 28,
+      "community": 96,
       "norm_label": "type"
     },
     {
@@ -5650,7 +5650,7 @@
       "source_location": "L338",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_line_minimum",
-      "community": 28,
+      "community": 96,
       "norm_label": "minimum"
     },
     {
@@ -5660,7 +5660,7 @@
       "source_location": "L341",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_defs_localreference",
-      "community": 36,
+      "community": 28,
       "norm_label": "localreference"
     },
     {
@@ -5670,7 +5670,7 @@
       "source_location": "L342",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_localreference_type",
-      "community": 36,
+      "community": 28,
       "norm_label": "type"
     },
     {
@@ -5680,7 +5680,7 @@
       "source_location": "L343",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_localreference_additionalproperties",
-      "community": 36,
+      "community": 28,
       "norm_label": "additionalproperties"
     },
     {
@@ -5690,7 +5690,7 @@
       "source_location": "L344",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_localreference_required",
-      "community": 36,
+      "community": 28,
       "norm_label": "required"
     },
     {
@@ -5710,7 +5710,7 @@
       "source_location": "L346",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_path_ref",
-      "community": 3,
+      "community": 83,
       "norm_label": "$ref"
     },
     {
@@ -6820,7 +6820,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "capabilityproof_static_analysis_static_ruleset_sha256",
-      "community": 0,
+      "community": 6,
       "norm_label": "static_ruleset_sha256()"
     },
     {
@@ -6980,7 +6980,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "community": 20,
+      "community": 24,
       "norm_label": "test_api.py"
     },
     {
@@ -6990,7 +6990,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_api_request",
-      "community": 20,
+      "community": 24,
       "norm_label": "_request()"
     },
     {
@@ -7000,7 +7000,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "httpconnection",
-      "community": 20,
+      "community": 24,
       "norm_label": "httpconnection"
     },
     {
@@ -7010,7 +7010,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_test_api_test_http_inspect_and_path_confinement",
-      "community": 20,
+      "community": 24,
       "norm_label": "test_http_inspect_and_path_confinement()"
     },
     {
@@ -7020,7 +7020,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "tests_test_api_test_health_is_non_sensitive",
-      "community": 20,
+      "community": 24,
       "norm_label": "test_health_is_non_sensitive()"
     },
     {
@@ -7030,7 +7030,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "tests_test_api_test_incomplete_request_does_not_block_other_loopback_clients",
-      "community": 20,
+      "community": 24,
       "norm_label": "test_incomplete_request_does_not_block_other_loopback_clients()"
     },
     {
@@ -7129,7 +7129,7 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_distribution_py",
+      "id": "tests_test_distribution",
       "community": 77,
       "norm_label": "test_distribution.py"
     },
@@ -7137,11 +7137,21 @@
       "label": "test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "tests_test_distribution_test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell",
       "community": 77,
       "norm_label": "test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell()"
+    },
+    {
+      "label": "test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intake()",
+      "file_type": "code",
+      "source_file": "tests/test_distribution.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "tests_test_distribution_test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intake",
+      "community": 77,
+      "norm_label": "test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intake()"
     },
     {
       "label": "test_inspector.py",
@@ -7500,7 +7510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_provenance",
-      "community": 24,
+      "community": 6,
       "norm_label": "test_provenance.py"
     },
     {
@@ -7510,7 +7520,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_git",
-      "community": 24,
+      "community": 6,
       "norm_label": "_git()"
     },
     {
@@ -7520,7 +7530,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_py_path",
-      "community": 24,
+      "community": 6,
       "norm_label": "path"
     },
     {
@@ -7530,7 +7540,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_provenance_repository",
-      "community": 24,
+      "community": 6,
       "norm_label": "_repository()"
     },
     {
@@ -7540,7 +7550,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_provenance_test_clean_git_skill_reaches_level_three_with_exact_commit",
-      "community": 24,
+      "community": 6,
       "norm_label": "test_clean_git_skill_reaches_level_three_with_exact_commit()"
     },
     {
@@ -7550,7 +7560,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_provenance_test_untracked_or_changed_skill_is_not_given_provenance",
-      "community": 24,
+      "community": 6,
       "norm_label": "test_untracked_or_changed_skill_is_not_given_provenance()"
     },
     {
@@ -7560,7 +7570,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_provenance_test_modified_tracked_bytes_are_not_given_provenance",
-      "community": 24,
+      "community": 6,
       "norm_label": "test_modified_tracked_bytes_are_not_given_provenance()"
     },
     {
@@ -7570,7 +7580,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_credentials_are_not_written_to_receipt",
-      "community": 24,
+      "community": 6,
       "norm_label": "test_remote_credentials_are_not_written_to_receipt()"
     },
     {
@@ -7580,7 +7590,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_query_credentials_are_not_written_to_receipt",
-      "community": 24,
+      "community": 6,
       "norm_label": "test_remote_query_credentials_are_not_written_to_receipt()"
     },
     {
@@ -7590,7 +7600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_public_receipt",
-      "community": 2,
+      "community": 97,
       "norm_label": "test_public_receipt.py"
     },
     {
@@ -7610,7 +7620,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_public_catalog_contains_no_signing_secrets_or_private_keys",
-      "community": 2,
+      "community": 97,
       "norm_label": "test_public_catalog_contains_no_signing_secrets_or_private_keys()"
     },
     {
@@ -7620,7 +7630,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_git_preserves_every_byte_hashed_or_signed_into_public_receipts",
-      "community": 2,
+      "community": 97,
       "norm_label": "test_git_preserves_every_byte_hashed_or_signed_into_public_receipts()"
     },
     {
@@ -7929,8 +7939,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_changelog_md",
-      "community": 56,
+      "id": "changelog",
+      "community": 95,
       "norm_label": "changelog.md"
     },
     {
@@ -7939,8 +7949,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "stage_a_alpha_changelog_changelog",
-      "community": 56,
+      "id": "changelog_changelog",
+      "community": 95,
       "norm_label": "changelog"
     },
     {
@@ -7949,8 +7959,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "stage_a_alpha_changelog_0_2_0_2026_07_13",
-      "community": 56,
+      "id": "changelog_0_2_0_2026_07_13",
+      "community": 95,
       "norm_label": "0.2.0 - 2026-07-13"
     },
     {
@@ -8467,7 +8477,7 @@
       "label": "Product stages",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "readme_product_stages",
       "community": 35,
@@ -8477,7 +8487,7 @@
       "label": "Evidence labels",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "readme_evidence_labels",
       "community": 35,
@@ -8487,7 +8497,7 @@
       "label": "Verify a public receipt independently",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L57",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "readme_verify_a_public_receipt_independently",
       "community": 35,
@@ -8497,7 +8507,7 @@
       "label": "Read-only catalog API",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "readme_read_only_catalog_api",
       "community": 35,
@@ -8507,7 +8517,7 @@
       "label": "Read-only catalog MCP",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L100",
+      "source_location": "L101",
       "_origin": "ast",
       "id": "readme_read_only_catalog_mcp",
       "community": 35,
@@ -8517,7 +8527,7 @@
       "label": "Local inspector and builder",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L124",
       "_origin": "ast",
       "id": "readme_local_inspector_and_builder",
       "community": 35,
@@ -9962,9 +9972,9 @@
       "source_file": "src/capabilityproof/__init__.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_init_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py"
     },
     {
       "relation": "rationale_for",
@@ -9972,9 +9982,9 @@
       "source_file": "src/capabilityproof/__init__.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_init_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_init_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_init_py"
     },
     {
       "relation": "imports",
@@ -9983,9 +9993,9 @@
       "source_file": "src/capabilityproof/__main__.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_main",
-      "target": "capabilityproof_cli_main",
-      "confidence_score": 1.0
+      "target": "capabilityproof_cli_main"
     },
     {
       "relation": "imports_from",
@@ -9994,9 +10004,9 @@
       "source_file": "src/capabilityproof/api.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py"
     },
     {
       "relation": "contains",
@@ -10004,9 +10014,9 @@
       "source_file": "src/capabilityproof/api.py",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "target": "capabilityproof_api_create_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_api_create_server"
     },
     {
       "relation": "contains",
@@ -10014,9 +10024,9 @@
       "source_file": "src/capabilityproof/api.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "target": "capabilityproof_api_make_handler",
-      "confidence_score": 1.0
+      "target": "capabilityproof_api_make_handler"
     },
     {
       "relation": "contains",
@@ -10024,9 +10034,9 @@
       "source_file": "src/capabilityproof/api.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "target": "capabilityproof_api_no_duplicate_object",
-      "confidence_score": 1.0
+      "target": "capabilityproof_api_no_duplicate_object"
     },
     {
       "relation": "contains",
@@ -10034,9 +10044,9 @@
       "source_file": "src/capabilityproof/api.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "target": "capabilityproof_api_validate_request",
-      "confidence_score": 1.0
+      "target": "capabilityproof_api_validate_request"
     },
     {
       "relation": "imports_from",
@@ -10045,9 +10055,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py"
     },
     {
       "relation": "rationale_for",
@@ -10055,9 +10065,9 @@
       "source_file": "src/capabilityproof/api.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_api_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py"
     },
     {
       "relation": "references",
@@ -10474,9 +10484,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py"
     },
     {
       "relation": "imports_from",
@@ -10485,9 +10495,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py"
     },
     {
       "relation": "imports_from",
@@ -10496,9 +10506,9 @@
       "source_file": "src/capabilityproof/catalog.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -10506,9 +10516,9 @@
       "source_file": "src/capabilityproof/catalog.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "target": "capabilityproof_catalog_catalogstore",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_catalogstore"
     },
     {
       "relation": "contains",
@@ -10516,9 +10526,9 @@
       "source_file": "src/capabilityproof/catalog.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "target": "capabilityproof_catalog_filter_catalog_entries",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_filter_catalog_entries"
     },
     {
       "relation": "contains",
@@ -10526,9 +10536,9 @@
       "source_file": "src/capabilityproof/catalog.py",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "target": "capabilityproof_catalog_validate_catalog_index",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_validate_catalog_index"
     },
     {
       "relation": "contains",
@@ -10536,9 +10546,9 @@
       "source_file": "src/capabilityproof/catalog.py",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "target": "capabilityproof_catalog_validate_receipt_id",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_validate_receipt_id"
     },
     {
       "relation": "imports_from",
@@ -10547,9 +10557,9 @@
       "source_file": "src/capabilityproof/catalog_runtime.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py"
     },
     {
       "relation": "rationale_for",
@@ -10557,9 +10567,9 @@
       "source_file": "src/capabilityproof/catalog.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_catalog_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py"
     },
     {
       "relation": "method",
@@ -11250,9 +11260,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py"
     },
     {
       "relation": "imports_from",
@@ -11261,9 +11271,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py"
     },
     {
       "relation": "imports_from",
@@ -11272,9 +11282,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -11282,9 +11292,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "capabilityproof_catalog_api_boundedcatalogserver",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_api_boundedcatalogserver"
     },
     {
       "relation": "contains",
@@ -11292,9 +11302,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L152",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "capabilityproof_catalog_api_create_catalog_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_api_create_catalog_server"
     },
     {
       "relation": "contains",
@@ -11302,9 +11312,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "target": "capabilityproof_catalog_api_make_catalog_handler",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_api_make_catalog_handler"
     },
     {
       "relation": "imports_from",
@@ -11313,9 +11323,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py"
     },
     {
       "relation": "rationale_for",
@@ -11323,9 +11333,9 @@
       "source_file": "src/capabilityproof/catalog_api.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_catalog_api_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py"
     },
     {
       "relation": "method",
@@ -11649,9 +11659,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py"
     },
     {
       "relation": "imports_from",
@@ -11660,9 +11670,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py"
     },
     {
       "relation": "imports_from",
@@ -11671,9 +11681,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -11681,9 +11691,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_build_catalog_drafts",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_build_catalog_drafts"
     },
     {
       "relation": "contains",
@@ -11691,9 +11701,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_checkout",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_checkout"
     },
     {
       "relation": "contains",
@@ -11701,9 +11711,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L262",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_finalize_catalog_lifecycle",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_finalize_catalog_lifecycle"
     },
     {
       "relation": "contains",
@@ -11711,9 +11721,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_iso",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_iso"
     },
     {
       "relation": "contains",
@@ -11721,9 +11731,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_load_source_manifest",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_load_source_manifest"
     },
     {
       "relation": "contains",
@@ -11731,9 +11741,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_repository_identity",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_repository_identity"
     },
     {
       "relation": "contains",
@@ -11741,9 +11751,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_run_git",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_run_git"
     },
     {
       "relation": "contains",
@@ -11751,9 +11761,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L204",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "capabilityproof_catalog_builder_sign_catalog_drafts",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_builder_sign_catalog_drafts"
     },
     {
       "relation": "imports_from",
@@ -11762,9 +11772,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "target": "src_capabilityproof_catalog_builder_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_capabilityproof_catalog_builder_py_datetime"
     },
     {
       "relation": "imports_from",
@@ -11773,9 +11783,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py"
     },
     {
       "relation": "rationale_for",
@@ -11783,9 +11793,9 @@
       "source_file": "src/capabilityproof/catalog_builder.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_catalog_builder_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_builder_py"
     },
     {
       "relation": "calls",
@@ -12425,9 +12435,9 @@
       "source_file": "src/capabilityproof/catalog_mcp.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py"
     },
     {
       "relation": "imports_from",
@@ -12436,9 +12446,9 @@
       "source_file": "src/capabilityproof/catalog_mcp.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py"
     },
     {
       "relation": "imports_from",
@@ -12447,9 +12457,9 @@
       "source_file": "src/capabilityproof/catalog_mcp.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -12457,9 +12467,9 @@
       "source_file": "src/capabilityproof/catalog_mcp.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "target": "capabilityproof_catalog_mcp_build_catalog_mcp_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_mcp_build_catalog_mcp_server"
     },
     {
       "relation": "contains",
@@ -12467,9 +12477,9 @@
       "source_file": "src/capabilityproof/catalog_mcp.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "target": "capabilityproof_catalog_mcp_run_catalog_mcp_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_mcp_run_catalog_mcp_server"
     },
     {
       "relation": "imports_from",
@@ -12478,9 +12488,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py"
     },
     {
       "relation": "rationale_for",
@@ -12488,9 +12498,9 @@
       "source_file": "src/capabilityproof/catalog_mcp.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_catalog_mcp_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py"
     },
     {
       "relation": "calls",
@@ -12618,9 +12628,9 @@
       "source_file": "src/capabilityproof/catalog_runtime.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py"
     },
     {
       "relation": "imports_from",
@@ -12629,9 +12639,9 @@
       "source_file": "src/capabilityproof/catalog_runtime.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -12639,9 +12649,9 @@
       "source_file": "src/capabilityproof/catalog_runtime.py",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "target": "capabilityproof_catalog_runtime_verifiedcatalog",
-      "confidence_score": 1.0
+      "target": "capabilityproof_catalog_runtime_verifiedcatalog"
     },
     {
       "relation": "rationale_for",
@@ -12649,9 +12659,9 @@
       "source_file": "src/capabilityproof/catalog_runtime.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_catalog_runtime_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py"
     },
     {
       "relation": "rationale_for",
@@ -13051,9 +13061,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py"
     },
     {
       "relation": "imports_from",
@@ -13062,9 +13072,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py"
     },
     {
       "relation": "imports_from",
@@ -13073,9 +13083,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -13083,9 +13093,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "capabilityproof_cli_build_parser",
-      "confidence_score": 1.0
+      "target": "capabilityproof_cli_build_parser"
     },
     {
       "relation": "contains",
@@ -13093,9 +13103,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "capabilityproof_cli_main",
-      "confidence_score": 1.0
+      "target": "capabilityproof_cli_main"
     },
     {
       "relation": "contains",
@@ -13103,9 +13113,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "capabilityproof_cli_passphrase",
-      "confidence_score": 1.0
+      "target": "capabilityproof_cli_passphrase"
     },
     {
       "relation": "contains",
@@ -13113,9 +13123,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "capabilityproof_cli_write_json_file",
-      "confidence_score": 1.0
+      "target": "capabilityproof_cli_write_json_file"
     },
     {
       "relation": "contains",
@@ -13123,9 +13133,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "target": "capabilityproof_cli_write_receipt",
-      "confidence_score": 1.0
+      "target": "capabilityproof_cli_write_receipt"
     },
     {
       "relation": "rationale_for",
@@ -13133,9 +13143,9 @@
       "source_file": "src/capabilityproof/cli.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_cli_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_cli_py"
     },
     {
       "relation": "references",
@@ -13470,9 +13480,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "imports_from",
@@ -13481,9 +13491,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "imports_from",
@@ -13492,9 +13502,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "contains",
@@ -13502,9 +13512,9 @@
       "source_file": "src/capabilityproof/errors.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_errors",
-      "target": "capabilityproof_errors_capabilityprooferror",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_capabilityprooferror"
     },
     {
       "relation": "contains",
@@ -13512,9 +13522,9 @@
       "source_file": "src/capabilityproof/errors.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_errors",
-      "target": "capabilityproof_errors_inputrejected",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_inputrejected"
     },
     {
       "relation": "contains",
@@ -13522,9 +13532,9 @@
       "source_file": "src/capabilityproof/errors.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_errors",
-      "target": "capabilityproof_errors_limitexceeded",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_limitexceeded"
     },
     {
       "relation": "contains",
@@ -13532,9 +13542,9 @@
       "source_file": "src/capabilityproof/errors.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_errors",
-      "target": "capabilityproof_errors_pathrejected",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_pathrejected"
     },
     {
       "relation": "rationale_for",
@@ -13542,9 +13552,9 @@
       "source_file": "src/capabilityproof/errors.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_errors_rationale_1",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "imports_from",
@@ -13553,9 +13563,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "imports_from",
@@ -13564,9 +13574,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "imports_from",
@@ -13575,9 +13585,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "imports_from",
@@ -13586,9 +13596,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "capabilityproof_errors",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors"
     },
     {
       "relation": "method",
@@ -13755,9 +13765,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_errors_inputrejected",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_inputrejected"
     },
     {
       "relation": "calls",
@@ -13996,9 +14006,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_errors_inputrejected",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_inputrejected"
     },
     {
       "relation": "calls",
@@ -14339,9 +14349,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_errors_limitexceeded",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_limitexceeded"
     },
     {
       "relation": "calls",
@@ -14452,9 +14462,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_errors_pathrejected",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_pathrejected"
     },
     {
       "relation": "uses",
@@ -14484,9 +14494,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_errors_pathrejected",
-      "confidence_score": 1.0
+      "target": "capabilityproof_errors_pathrejected"
     },
     {
       "relation": "calls",
@@ -14650,9 +14660,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "contains",
@@ -14660,9 +14670,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L263",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_envelope_keyid",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_envelope_keyid"
     },
     {
       "relation": "contains",
@@ -14670,9 +14680,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_evaluate_receipt_lifecycle",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_evaluate_receipt_lifecycle"
     },
     {
       "relation": "contains",
@@ -14680,9 +14690,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L351",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_evaluate_receipt_lifecycle_with_state",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_evaluate_receipt_lifecycle_with_state"
     },
     {
       "relation": "contains",
@@ -14690,9 +14700,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_exclusive_file_lock",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_exclusive_file_lock"
     },
     {
       "relation": "contains",
@@ -14700,9 +14710,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_lifecyclesequencestore",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_lifecyclesequencestore"
     },
     {
       "relation": "contains",
@@ -14710,9 +14720,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_shared_thread_lock",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_shared_thread_lock"
     },
     {
       "relation": "contains",
@@ -14720,9 +14730,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L246",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_sign_lifecycle_feed",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_sign_lifecycle_feed"
     },
     {
       "relation": "contains",
@@ -14730,9 +14740,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_time",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_time"
     },
     {
       "relation": "contains",
@@ -14740,9 +14750,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L184",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_validate_lifecycle_feed",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_validate_lifecycle_feed"
     },
     {
       "relation": "contains",
@@ -14750,9 +14760,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "capabilityproof_lifecycle_verify_lifecycle_envelope",
-      "confidence_score": 1.0
+      "target": "capabilityproof_lifecycle_verify_lifecycle_envelope"
     },
     {
       "relation": "imports_from",
@@ -14761,9 +14771,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "target": "src_capabilityproof_lifecycle_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_capabilityproof_lifecycle_py_datetime"
     },
     {
       "relation": "rationale_for",
@@ -14771,9 +14781,9 @@
       "source_file": "src/capabilityproof/lifecycle.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_lifecycle_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_lifecycle_py"
     },
     {
       "relation": "calls",
@@ -15475,9 +15485,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_mcp_server_build_mcp_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_server_build_mcp_server"
     },
     {
       "relation": "contains",
@@ -15485,9 +15495,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_mcp_server_run_mcp_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_server_run_mcp_server"
     },
     {
       "relation": "imports",
@@ -15496,9 +15506,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_receipt_inspect_skill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_inspect_skill"
     },
     {
       "relation": "imports_from",
@@ -15507,9 +15517,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot"
     },
     {
       "relation": "imports",
@@ -15518,9 +15528,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_snapshot_resolve_allowed_path",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_resolve_allowed_path"
     },
     {
       "relation": "imports",
@@ -15529,9 +15539,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_snapshot_resolve_operator_root",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_resolve_operator_root"
     },
     {
       "relation": "imports",
@@ -15540,9 +15550,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server",
-      "target": "capabilityproof_snapshot_scanlimits",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_scanlimits"
     },
     {
       "relation": "rationale_for",
@@ -15550,9 +15560,9 @@
       "source_file": "src/capabilityproof/mcp_server.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_server_rationale_1",
-      "target": "capabilityproof_mcp_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_server"
     },
     {
       "relation": "imports_from",
@@ -15561,9 +15571,9 @@
       "source_file": "tests/test_mcp.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_mcp",
-      "target": "capabilityproof_mcp_server",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_server"
     },
     {
       "relation": "calls",
@@ -15711,9 +15721,9 @@
       "source_file": "src/capabilityproof/pricing.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py",
-      "target": "capabilityproof_pricing_price_quote",
-      "confidence_score": 1.0
+      "target": "capabilityproof_pricing_price_quote"
     },
     {
       "relation": "rationale_for",
@@ -15721,9 +15731,9 @@
       "source_file": "src/capabilityproof/pricing.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_pricing_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_pricing_py"
     },
     {
       "relation": "references",
@@ -15742,9 +15752,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_provenance_git",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance_git"
     },
     {
       "relation": "contains",
@@ -15752,9 +15762,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_provenance_provenanceevidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance_provenanceevidence"
     },
     {
       "relation": "contains",
@@ -15762,9 +15772,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_provenance_safe_git_environment",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance_safe_git_environment"
     },
     {
       "relation": "contains",
@@ -15772,9 +15782,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_provenance_sanitize_remote",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance_sanitize_remote"
     },
     {
       "relation": "contains",
@@ -15782,9 +15792,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_provenance_verify_commit_blobs",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance_verify_commit_blobs"
     },
     {
       "relation": "contains",
@@ -15792,9 +15802,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_provenance_verify_git_provenance",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance_verify_git_provenance"
     },
     {
       "relation": "imports_from",
@@ -15803,9 +15813,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot"
     },
     {
       "relation": "imports",
@@ -15814,9 +15824,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_snapshot_resolve_operator_root",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_resolve_operator_root"
     },
     {
       "relation": "imports",
@@ -15825,9 +15835,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance",
-      "target": "capabilityproof_snapshot_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_snapshot"
     },
     {
       "relation": "rationale_for",
@@ -15835,9 +15845,9 @@
       "source_file": "src/capabilityproof/provenance.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_provenance_rationale_1",
-      "target": "capabilityproof_provenance",
-      "confidence_score": 1.0
+      "target": "capabilityproof_provenance"
     },
     {
       "relation": "uses",
@@ -16078,9 +16088,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L117",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_decision",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_decision"
     },
     {
       "relation": "contains",
@@ -16088,9 +16098,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_deterministic_json",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_deterministic_json"
     },
     {
       "relation": "contains",
@@ -16098,9 +16108,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L314",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_inspect_git_skill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_inspect_git_skill"
     },
     {
       "relation": "contains",
@@ -16108,9 +16118,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_inspect_skill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_inspect_skill"
     },
     {
       "relation": "contains",
@@ -16118,9 +16128,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_iso",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_iso"
     },
     {
       "relation": "contains",
@@ -16128,9 +16138,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_levels",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_levels"
     },
     {
       "relation": "contains",
@@ -16138,9 +16148,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_license_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_license_evidence"
     },
     {
       "relation": "contains",
@@ -16148,9 +16158,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_normalize_time",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_normalize_time"
     },
     {
       "relation": "contains",
@@ -16158,9 +16168,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_package_version",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_package_version"
     },
     {
       "relation": "contains",
@@ -16168,9 +16178,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_safe_claim",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_safe_claim"
     },
     {
       "relation": "contains",
@@ -16178,9 +16188,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_schema_sha256",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_schema_sha256"
     },
     {
       "relation": "contains",
@@ -16188,9 +16198,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_sha256_json",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_sha256_json"
     },
     {
       "relation": "contains",
@@ -16198,9 +16208,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L345",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "capabilityproof_receipt_verify_receipt_integrity",
-      "confidence_score": 1.0
+      "target": "capabilityproof_receipt_verify_receipt_integrity"
     },
     {
       "relation": "imports_from",
@@ -16209,9 +16219,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "target": "src_capabilityproof_receipt_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_capabilityproof_receipt_py_datetime"
     },
     {
       "relation": "imports_from",
@@ -16220,9 +16230,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py"
     },
     {
       "relation": "rationale_for",
@@ -16230,9 +16240,9 @@
       "source_file": "src/capabilityproof/receipt.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_receipt_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_receipt_py"
     },
     {
       "relation": "references",
@@ -17140,9 +17150,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_additionalproperties",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_additionalproperties"
     },
     {
       "relation": "contains",
@@ -17150,9 +17160,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L327",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_defs",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_defs"
     },
     {
       "relation": "contains",
@@ -17160,9 +17170,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_description",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_description"
     },
     {
       "relation": "contains",
@@ -17170,9 +17180,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_id",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_id"
     },
     {
       "relation": "contains",
@@ -17180,9 +17190,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_properties",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_properties"
     },
     {
       "relation": "contains",
@@ -17190,9 +17200,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_required",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_required"
     },
     {
       "relation": "contains",
@@ -17200,9 +17210,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_schema",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_schema"
     },
     {
       "relation": "contains",
@@ -17210,9 +17220,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_title",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_title"
     },
     {
       "relation": "contains",
@@ -17220,9 +17230,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_schemas_capability_receipt_schema_json",
-      "target": "schemas_capability_receipt_schema_type",
-      "confidence_score": 1.0
+      "target": "schemas_capability_receipt_schema_type"
     },
     {
       "relation": "contains",
@@ -21910,9 +21920,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_b64_decode",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_b64_decode"
     },
     {
       "relation": "contains",
@@ -21920,9 +21930,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_b64url_decode",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_b64url_decode"
     },
     {
       "relation": "contains",
@@ -21930,9 +21940,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_b64url_no_pad",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_b64url_no_pad"
     },
     {
       "relation": "contains",
@@ -21940,9 +21950,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_dsse_pae",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_dsse_pae"
     },
     {
       "relation": "contains",
@@ -21950,9 +21960,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_generate_encrypted_keypair",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_generate_encrypted_keypair"
     },
     {
       "relation": "contains",
@@ -21960,9 +21970,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L94",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_jwk_thumbprint",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_jwk_thumbprint"
     },
     {
       "relation": "contains",
@@ -21970,9 +21980,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_load_private_key",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_load_private_key"
     },
     {
       "relation": "contains",
@@ -21980,9 +21990,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_load_public_jwk",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_load_public_jwk"
     },
     {
       "relation": "contains",
@@ -21990,9 +22000,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_public_jwk",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_public_jwk"
     },
     {
       "relation": "contains",
@@ -22000,9 +22010,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_public_key_from_jwk",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_public_key_from_jwk"
     },
     {
       "relation": "contains",
@@ -22010,9 +22020,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_require_safe_regular_file",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_require_safe_regular_file"
     },
     {
       "relation": "contains",
@@ -22020,9 +22030,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L194",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_sign_dsse_payload",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_sign_dsse_payload"
     },
     {
       "relation": "contains",
@@ -22030,9 +22040,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_sign_receipt_bytes",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_sign_receipt_bytes"
     },
     {
       "relation": "contains",
@@ -22040,9 +22050,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_strict_json",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_strict_json"
     },
     {
       "relation": "contains",
@@ -22050,9 +22060,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_verify_dsse_envelope",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_verify_dsse_envelope"
     },
     {
       "relation": "contains",
@@ -22060,9 +22070,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "target": "capabilityproof_signing_verify_receipt_envelope",
-      "confidence_score": 1.0
+      "target": "capabilityproof_signing_verify_receipt_envelope"
     },
     {
       "relation": "rationale_for",
@@ -22070,9 +22080,9 @@
       "source_file": "src/capabilityproof/signing.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_signing_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py"
     },
     {
       "relation": "calls",
@@ -22878,9 +22888,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_construct_unique_mapping",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_construct_unique_mapping"
     },
     {
       "relation": "contains",
@@ -22888,9 +22898,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_extract_references",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_extract_references"
     },
     {
       "relation": "contains",
@@ -22898,9 +22908,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_finding",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_finding"
     },
     {
       "relation": "contains",
@@ -22908,9 +22918,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_normalize_link_target",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_normalize_link_target"
     },
     {
       "relation": "contains",
@@ -22918,9 +22928,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L110",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_parse_frontmatter",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_parse_frontmatter"
     },
     {
       "relation": "contains",
@@ -22928,9 +22938,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L328",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_parse_skill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_parse_skill"
     },
     {
       "relation": "contains",
@@ -22938,9 +22948,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_parsedskill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_parsedskill"
     },
     {
       "relation": "contains",
@@ -22948,9 +22958,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L216",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_sanitize_external_target",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_sanitize_external_target"
     },
     {
       "relation": "contains",
@@ -22958,9 +22968,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_uniquekeysafeloader",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_uniquekeysafeloader"
     },
     {
       "relation": "contains",
@@ -22968,9 +22978,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_validate_metadata",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_validate_metadata"
     },
     {
       "relation": "contains",
@@ -22978,9 +22988,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_skill_walk_yaml",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_walk_yaml"
     },
     {
       "relation": "imports_from",
@@ -22989,9 +22999,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot"
     },
     {
       "relation": "imports",
@@ -23000,9 +23010,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_snapshot_scanlimits",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_scanlimits"
     },
     {
       "relation": "imports",
@@ -23011,9 +23021,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill",
-      "target": "capabilityproof_snapshot_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_snapshot"
     },
     {
       "relation": "rationale_for",
@@ -23021,9 +23031,9 @@
       "source_file": "src/capabilityproof/skill.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_skill_rationale_1",
-      "target": "capabilityproof_skill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill"
     },
     {
       "relation": "imports_from",
@@ -23032,9 +23042,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_skill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill"
     },
     {
       "relation": "references",
@@ -23242,9 +23252,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_skill_parsedskill",
-      "confidence_score": 1.0
+      "target": "capabilityproof_skill_parsedskill"
     },
     {
       "relation": "uses",
@@ -23507,9 +23517,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L256",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_collect_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_collect_snapshot"
     },
     {
       "relation": "contains",
@@ -23517,9 +23527,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_entry_identity",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_entry_identity"
     },
     {
       "relation": "contains",
@@ -23527,9 +23537,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_filedata",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_filedata"
     },
     {
       "relation": "contains",
@@ -23537,9 +23547,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L242",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_inventory_signature",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_inventory_signature"
     },
     {
       "relation": "contains",
@@ -23547,9 +23557,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L101",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_is_link_or_reparse",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_is_link_or_reparse"
     },
     {
       "relation": "contains",
@@ -23557,9 +23567,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_is_relative_to",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_is_relative_to"
     },
     {
       "relation": "contains",
@@ -23567,9 +23577,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L195",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_iter_entries",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_iter_entries"
     },
     {
       "relation": "contains",
@@ -23577,9 +23587,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_resolve_allowed_path",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_resolve_allowed_path"
     },
     {
       "relation": "contains",
@@ -23587,9 +23597,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_resolve_operator_root",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_resolve_operator_root"
     },
     {
       "relation": "contains",
@@ -23597,9 +23607,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_scanlimits",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_scanlimits"
     },
     {
       "relation": "contains",
@@ -23607,9 +23617,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_snapshot"
     },
     {
       "relation": "contains",
@@ -23617,9 +23627,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_utc_iso",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_utc_iso"
     },
     {
       "relation": "contains",
@@ -23627,9 +23637,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "capabilityproof_snapshot_validate_relative_path",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_validate_relative_path"
     },
     {
       "relation": "imports_from",
@@ -23638,9 +23648,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot",
-      "target": "src_capabilityproof_snapshot_py_datetime",
-      "confidence_score": 1.0
+      "target": "src_capabilityproof_snapshot_py_datetime"
     },
     {
       "relation": "rationale_for",
@@ -23648,9 +23658,9 @@
       "source_file": "src/capabilityproof/snapshot.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_snapshot_rationale_1",
-      "target": "capabilityproof_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot"
     },
     {
       "relation": "imports_from",
@@ -23659,9 +23669,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot"
     },
     {
       "relation": "imports_from",
@@ -23670,9 +23680,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "capabilityproof_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot"
     },
     {
       "relation": "references",
@@ -23735,9 +23745,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_snapshot_scanlimits",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_scanlimits"
     },
     {
       "relation": "calls",
@@ -23860,9 +23870,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_snapshot_snapshot",
-      "confidence_score": 1.0
+      "target": "capabilityproof_snapshot_snapshot"
     },
     {
       "relation": "uses",
@@ -24281,9 +24291,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L204",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_analyze_static",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_analyze_static"
     },
     {
       "relation": "contains",
@@ -24291,9 +24301,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_decode_text",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_decode_text"
     },
     {
       "relation": "contains",
@@ -24301,9 +24311,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_dependency_records",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_dependency_records"
     },
     {
       "relation": "contains",
@@ -24311,9 +24321,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_is_text_candidate",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_is_text_candidate"
     },
     {
       "relation": "contains",
@@ -24321,9 +24331,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_redact",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_redact"
     },
     {
       "relation": "contains",
@@ -24331,9 +24341,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_rule",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_rule"
     },
     {
       "relation": "contains",
@@ -24341,9 +24351,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L194",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_signal",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_signal"
     },
     {
       "relation": "contains",
@@ -24351,9 +24361,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis",
-      "target": "capabilityproof_static_analysis_static_ruleset_sha256",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis_static_ruleset_sha256"
     },
     {
       "relation": "rationale_for",
@@ -24361,9 +24371,9 @@
       "source_file": "src/capabilityproof/static_analysis.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_static_analysis_rationale_1",
-      "target": "capabilityproof_static_analysis",
-      "confidence_score": 1.0
+      "target": "capabilityproof_static_analysis"
     },
     {
       "relation": "calls",
@@ -24524,9 +24534,9 @@
       "source_file": "tests/test_api.py",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "target": "tests_test_api_request",
-      "confidence_score": 1.0
+      "target": "tests_test_api_request"
     },
     {
       "relation": "contains",
@@ -24534,9 +24544,9 @@
       "source_file": "tests/test_api.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "target": "tests_test_api_test_health_is_non_sensitive",
-      "confidence_score": 1.0
+      "target": "tests_test_api_test_health_is_non_sensitive"
     },
     {
       "relation": "contains",
@@ -24544,9 +24554,9 @@
       "source_file": "tests/test_api.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "target": "tests_test_api_test_http_inspect_and_path_confinement",
-      "confidence_score": 1.0
+      "target": "tests_test_api_test_http_inspect_and_path_confinement"
     },
     {
       "relation": "contains",
@@ -24554,9 +24564,9 @@
       "source_file": "tests/test_api.py",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "target": "tests_test_api_test_incomplete_request_does_not_block_other_loopback_clients",
-      "confidence_score": 1.0
+      "target": "tests_test_api_test_incomplete_request_does_not_block_other_loopback_clients"
     },
     {
       "relation": "references",
@@ -24641,9 +24651,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_independent_root",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_independent_root"
     },
     {
       "relation": "contains",
@@ -24651,9 +24661,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_test_catalog_finalization_rejects_same_key_for_root_and_issuer",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_test_catalog_finalization_rejects_same_key_for_root_and_issuer"
     },
     {
       "relation": "contains",
@@ -24661,9 +24671,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_test_catalog_http_sets_connection_deadline",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_test_catalog_http_sets_connection_deadline"
     },
     {
       "relation": "contains",
@@ -24671,9 +24681,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_test_catalog_mcp_is_trusted_retrieval_only",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_test_catalog_mcp_is_trusted_retrieval_only"
     },
     {
       "relation": "contains",
@@ -24681,9 +24691,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_test_catalog_store_searches_bounded_repository_metadata_without_unsigned_lifecycle",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_test_catalog_store_searches_bounded_repository_metadata_without_unsigned_lifecycle"
     },
     {
       "relation": "contains",
@@ -24691,9 +24701,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route"
     },
     {
       "relation": "contains",
@@ -24701,9 +24711,9 @@
       "source_file": "tests/test_catalog.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_catalog_py",
-      "target": "tests_test_catalog_test_verified_catalog_persists_feed_before_first_request_and_uses_immutable_snapshot",
-      "confidence_score": 1.0
+      "target": "tests_test_catalog_test_verified_catalog_persists_feed_before_first_request_and_uses_immutable_snapshot"
     },
     {
       "relation": "references",
@@ -24819,9 +24829,19 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L9",
+      "source_location": "L27",
       "weight": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_distribution_py",
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intake",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_distribution.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "tests_test_distribution",
       "target": "tests_test_distribution_test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell",
       "confidence_score": 1.0
     },
@@ -24831,9 +24851,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_schema",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_schema"
     },
     {
       "relation": "contains",
@@ -24841,9 +24861,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_cli_stdout_matches_utf8_lf_output_bytes",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_cli_stdout_matches_utf8_lf_output_bytes"
     },
     {
       "relation": "contains",
@@ -24851,9 +24871,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L328",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_derived_evidence_is_bounded_and_reports_truncation",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_derived_evidence_is_bounded_and_reports_truncation"
     },
     {
       "relation": "contains",
@@ -24861,9 +24881,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L195",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_example_paths_are_candidates_not_broken_reference_findings",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_example_paths_are_candidates_not_broken_reference_findings"
     },
     {
       "relation": "contains",
@@ -24871,9 +24891,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_external_references_strip_credentials_and_file_uris_fail",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_external_references_strip_credentials_and_file_uris_fail"
     },
     {
       "relation": "contains",
@@ -24881,9 +24901,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_hostile_parser_shapes_fail_closed_without_crashing",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_hostile_parser_shapes_fail_closed_without_crashing"
     },
     {
       "relation": "contains",
@@ -24891,9 +24911,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_integrity_verification_detects_tampering",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_integrity_verification_detects_tampering"
     },
     {
       "relation": "contains",
@@ -24901,9 +24921,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_invalid_structure_is_a_receipt_not_an_exception",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_invalid_structure_is_a_receipt_not_an_exception"
     },
     {
       "relation": "contains",
@@ -24911,9 +24931,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_reference_dependency_lock_digest_matches_checked_in_lock",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_reference_dependency_lock_digest_matches_checked_in_lock"
     },
     {
       "relation": "contains",
@@ -24921,9 +24941,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L301",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_restricted_yaml_grammar_rejects_ambiguous_features",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_restricted_yaml_grammar_rejects_ambiguous_features"
     },
     {
       "relation": "contains",
@@ -24931,9 +24951,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_risky_skill_surfaces_seeded_rules_without_leaking_seeded_secret",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_risky_skill_surfaces_seeded_rules_without_leaking_seeded_secret"
     },
     {
       "relation": "contains",
@@ -24941,9 +24961,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L316",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_skill_md_nul_is_rejected",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_skill_md_nul_is_rejected"
     },
     {
       "relation": "contains",
@@ -24951,9 +24971,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_snapshot_rejects_hard_link_to_outside_file",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_snapshot_rejects_hard_link_to_outside_file"
     },
     {
       "relation": "contains",
@@ -24961,9 +24981,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_snapshot_rejects_size_limit",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_snapshot_rejects_size_limit"
     },
     {
       "relation": "contains",
@@ -24971,9 +24991,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_snapshot_rejects_symlink_when_platform_allows_it",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_snapshot_rejects_symlink_when_platform_allows_it"
     },
     {
       "relation": "contains",
@@ -24981,9 +25001,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_snapshot_rejects_windows_directory_junction",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_snapshot_rejects_windows_directory_junction"
     },
     {
       "relation": "contains",
@@ -24991,9 +25011,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L360",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_timestamp_near_datetime_limit_fails_closed",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_timestamp_near_datetime_limit_fails_closed"
     },
     {
       "relation": "contains",
@@ -25001,9 +25021,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_valid_skill_receipt_is_deterministic_schema_valid_and_path_private",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_valid_skill_receipt_is_deterministic_schema_valid_and_path_private"
     },
     {
       "relation": "contains",
@@ -25011,9 +25031,9 @@
       "source_file": "tests/test_inspector.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_inspector",
-      "target": "tests_test_inspector_test_valid_skill_records_dependencies_references_and_requirement_signals",
-      "confidence_score": 1.0
+      "target": "tests_test_inspector_test_valid_skill_records_dependencies_references_and_requirement_signals"
     },
     {
       "relation": "calls",
@@ -25186,9 +25206,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_documents",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_documents"
     },
     {
       "relation": "contains",
@@ -25196,9 +25216,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_feed_envelope",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_feed_envelope"
     },
     {
       "relation": "contains",
@@ -25206,9 +25226,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_record_sequence_worker",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_record_sequence_worker"
     },
     {
       "relation": "contains",
@@ -25216,9 +25236,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_test_compromised_key_revokes_every_receipt_and_stale_or_rollback_is_unknown",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_test_compromised_key_revokes_every_receipt_and_stale_or_rollback_is_unknown"
     },
     {
       "relation": "contains",
@@ -25226,9 +25246,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_test_current_expired_superseded_and_evaluator_revoked_states",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_test_current_expired_superseded_and_evaluator_revoked_states"
     },
     {
       "relation": "contains",
@@ -25236,9 +25256,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L138",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_test_highest_feed_sequence_is_persisted_and_lower_feed_cannot_restore_current",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_test_highest_feed_sequence_is_persisted_and_lower_feed_cannot_restore_current"
     },
     {
       "relation": "contains",
@@ -25246,9 +25266,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_test_sequence_store_keeps_cross_process_maximum",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_test_sequence_store_keeps_cross_process_maximum"
     },
     {
       "relation": "contains",
@@ -25256,9 +25276,9 @@
       "source_file": "tests/test_lifecycle.py",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "target": "tests_test_lifecycle_test_sequence_store_rejects_equal_sequence_equivocation",
-      "confidence_score": 1.0
+      "target": "tests_test_lifecycle_test_sequence_store_rejects_equal_sequence_equivocation"
     },
     {
       "relation": "calls",
@@ -25431,9 +25451,9 @@
       "source_file": "tests/test_mcp.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_mcp",
-      "target": "tests_test_mcp_test_mcp_registers_expected_tools_and_calls_inspector",
-      "confidence_score": 1.0
+      "target": "tests_test_mcp_test_mcp_registers_expected_tools_and_calls_inspector"
     },
     {
       "relation": "contains",
@@ -25441,9 +25461,9 @@
       "source_file": "tests/test_mcp.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_mcp",
-      "target": "tests_test_mcp_test_mcp_stdio_keeps_artifact_text_out_of_unstructured_content",
-      "confidence_score": 1.0
+      "target": "tests_test_mcp_test_mcp_stdio_keeps_artifact_text_out_of_unstructured_content"
     },
     {
       "relation": "contains",
@@ -25451,9 +25471,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_git",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_git"
     },
     {
       "relation": "contains",
@@ -25461,9 +25481,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_repository",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_repository"
     },
     {
       "relation": "contains",
@@ -25471,9 +25491,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_test_clean_git_skill_reaches_level_three_with_exact_commit",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_test_clean_git_skill_reaches_level_three_with_exact_commit"
     },
     {
       "relation": "contains",
@@ -25481,9 +25501,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_test_modified_tracked_bytes_are_not_given_provenance",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_test_modified_tracked_bytes_are_not_given_provenance"
     },
     {
       "relation": "contains",
@@ -25491,9 +25511,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_test_remote_credentials_are_not_written_to_receipt",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_test_remote_credentials_are_not_written_to_receipt"
     },
     {
       "relation": "contains",
@@ -25501,9 +25521,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_test_remote_query_credentials_are_not_written_to_receipt",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_test_remote_query_credentials_are_not_written_to_receipt"
     },
     {
       "relation": "contains",
@@ -25511,9 +25531,9 @@
       "source_file": "tests/test_provenance.py",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_provenance",
-      "target": "tests_test_provenance_test_untracked_or_changed_skill_is_not_given_provenance",
-      "confidence_score": 1.0
+      "target": "tests_test_provenance_test_untracked_or_changed_skill_is_not_given_provenance"
     },
     {
       "relation": "references",
@@ -25727,9 +25747,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "tests_test_signing_material",
-      "confidence_score": 1.0
+      "target": "tests_test_signing_material"
     },
     {
       "relation": "contains",
@@ -25737,9 +25757,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "tests_test_signing_test_dsse_pae_known_shape_and_exact_signed_bytes_round_trip",
-      "confidence_score": 1.0
+      "target": "tests_test_signing_test_dsse_pae_known_shape_and_exact_signed_bytes_round_trip"
     },
     {
       "relation": "contains",
@@ -25747,9 +25767,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "tests_test_signing_test_duplicate_envelope_keys_and_signature_count_fail_profile",
-      "confidence_score": 1.0
+      "target": "tests_test_signing_test_duplicate_envelope_keys_and_signature_count_fail_profile"
     },
     {
       "relation": "contains",
@@ -25757,9 +25777,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "tests_test_signing_test_jwk_thumbprint_is_stable_and_wrong_key_is_rejected",
-      "confidence_score": 1.0
+      "target": "tests_test_signing_test_jwk_thumbprint_is_stable_and_wrong_key_is_rejected"
     },
     {
       "relation": "contains",
@@ -25767,9 +25787,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "tests_test_signing_test_one_bit_mutations_fail_closed",
-      "confidence_score": 1.0
+      "target": "tests_test_signing_test_one_bit_mutations_fail_closed"
     },
     {
       "relation": "contains",
@@ -25777,9 +25797,9 @@
       "source_file": "tests/test_signing.py",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "target": "tests_test_signing_test_signed_but_internally_tampered_receipt_fails_after_signature",
-      "confidence_score": 1.0
+      "target": "tests_test_signing_test_signed_but_internally_tampered_receipt_fails_after_signature"
     },
     {
       "relation": "references",
@@ -25863,9 +25883,9 @@
       "source_file": "ASSUMPTIONS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_assumptions_md",
-      "target": "stage_a_alpha_assumptions_assumptions_ledger",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_assumptions_assumptions_ledger"
     },
     {
       "relation": "contains",
@@ -25923,9 +25943,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_business_plan_md",
-      "target": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_vouchspec_living_business_plan"
     },
     {
       "relation": "contains",
@@ -25933,9 +25953,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_customer_and_problem",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_customer_and_problem"
     },
     {
       "relation": "contains",
@@ -25943,9 +25963,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_differentiation_and_claims",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_differentiation_and_claims"
     },
     {
       "relation": "contains",
@@ -25953,9 +25973,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L84",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_economics_compliance_and_stop_rules",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_economics_compliance_and_stop_rules"
     },
     {
       "relation": "contains",
@@ -25963,9 +25983,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_executive_summary",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_executive_summary"
     },
     {
       "relation": "contains",
@@ -25973,9 +25993,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_external_alpha_acceptance",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_external_alpha_acceptance"
     },
     {
       "relation": "contains",
@@ -25983,9 +26003,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_pricing_hypotheses",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_pricing_hypotheses"
     },
     {
       "relation": "contains",
@@ -25993,9 +26013,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_vouchspec_living_business_plan",
-      "target": "stage_a_alpha_business_plan_product_stages",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_product_stages"
     },
     {
       "relation": "contains",
@@ -26003,9 +26023,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_product_stages",
-      "target": "stage_a_alpha_business_plan_stage_a_public_artifact_index_current",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_stage_a_public_artifact_index_current"
     },
     {
       "relation": "contains",
@@ -26013,9 +26033,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_product_stages",
-      "target": "stage_a_alpha_business_plan_stage_b_public_repository_validation_later",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_stage_b_public_repository_validation_later"
     },
     {
       "relation": "contains",
@@ -26023,9 +26043,9 @@
       "source_file": "BUSINESS_PLAN.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_business_plan_product_stages",
-      "target": "stage_a_alpha_business_plan_stage_c_private_and_arbitrary_inputs_deferred",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_business_plan_stage_c_private_and_arbitrary_inputs_deferred"
     },
     {
       "relation": "contains",
@@ -26033,8 +26053,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_changelog_md",
-      "target": "stage_a_alpha_changelog_changelog",
+      "source": "changelog",
+      "target": "changelog_changelog",
       "confidence_score": 1.0
     },
     {
@@ -26043,8 +26063,8 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "weight": 1.0,
-      "source": "stage_a_alpha_changelog_changelog",
-      "target": "stage_a_alpha_changelog_0_2_0_2026_07_13",
+      "source": "changelog_changelog",
+      "target": "changelog_0_2_0_2026_07_13",
       "confidence_score": 1.0
     },
     {
@@ -26053,9 +26073,9 @@
       "source_file": "CHARTER.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "charter",
-      "target": "charter_operating_charter",
-      "confidence_score": 1.0
+      "target": "charter_operating_charter"
     },
     {
       "relation": "contains",
@@ -26063,9 +26083,9 @@
       "source_file": "CHARTER.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "charter_operating_charter",
-      "target": "charter_owner_controls",
-      "confidence_score": 1.0
+      "target": "charter_owner_controls"
     },
     {
       "relation": "contains",
@@ -26073,9 +26093,9 @@
       "source_file": "CHARTER.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "charter_operating_charter",
-      "target": "charter_product_specific_boundaries",
-      "confidence_score": 1.0
+      "target": "charter_product_specific_boundaries"
     },
     {
       "relation": "contains",
@@ -26133,9 +26153,9 @@
       "source_file": "COPYRIGHT.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "copyright",
-      "target": "copyright_input_and_output_rights_policy_draft",
-      "confidence_score": 1.0
+      "target": "copyright_input_and_output_rights_policy_draft"
     },
     {
       "relation": "contains",
@@ -26143,9 +26163,9 @@
       "source_file": "CUSTOMER_FEEDBACK.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "customer_feedback",
-      "target": "customer_feedback_customer_feedback",
-      "confidence_score": 1.0
+      "target": "customer_feedback_customer_feedback"
     },
     {
       "relation": "contains",
@@ -26153,9 +26173,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_decisions_md",
-      "target": "stage_a_alpha_decisions_decision_log",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_decision_log"
     },
     {
       "relation": "contains",
@@ -26163,9 +26183,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519"
     },
     {
       "relation": "contains",
@@ -26173,9 +26193,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001"
     },
     {
       "relation": "contains",
@@ -26183,9 +26203,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c"
     },
     {
       "relation": "contains",
@@ -26193,9 +26213,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously"
     },
     {
       "relation": "contains",
@@ -26203,9 +26223,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence"
     },
     {
       "relation": "contains",
@@ -26213,9 +26233,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename"
     },
     {
       "relation": "contains",
@@ -26223,9 +26243,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_local_proof_is_not_an_external_service",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_local_proof_is_not_an_external_service"
     },
     {
       "relation": "contains",
@@ -26233,9 +26253,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_make_repository_checkout_bytes_deterministic",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_make_repository_checkout_bytes_deterministic"
     },
     {
       "relation": "contains",
@@ -26243,9 +26263,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_position_as_a_portable_policy_receipt",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_position_as_a_portable_policy_receipt"
     },
     {
       "relation": "contains",
@@ -26253,9 +26273,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence"
     },
     {
       "relation": "contains",
@@ -26263,9 +26283,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_prices_remain_transaction_experiments",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_prices_remain_transaction_experiments"
     },
     {
       "relation": "contains",
@@ -26273,9 +26293,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_select_the_agent_skills_exact_version_wedge",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_select_the_agent_skills_exact_version_wedge"
     },
     {
       "relation": "contains",
@@ -26283,9 +26303,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_decisions_decision_log",
-      "target": "stage_a_alpha_decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name"
     },
     {
       "relation": "contains",
@@ -26293,9 +26313,9 @@
       "source_file": "GOAL.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal",
-      "target": "goal_initial_operating_goal",
-      "confidence_score": 1.0
+      "target": "goal_initial_operating_goal"
     },
     {
       "relation": "contains",
@@ -26363,9 +26383,9 @@
       "source_file": "OFFER.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_offer_md",
-      "target": "stage_a_alpha_offer_offer_hypothesis_vouchspec_exact_byte_evidence",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_offer_offer_hypothesis_vouchspec_exact_byte_evidence"
     },
     {
       "relation": "contains",
@@ -26373,9 +26393,9 @@
       "source_file": "OFFER.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_offer_offer_hypothesis_vouchspec_exact_byte_evidence",
-      "target": "stage_a_alpha_offer_current_boundary",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_offer_current_boundary"
     },
     {
       "relation": "contains",
@@ -26383,9 +26403,9 @@
       "source_file": "OFFER.md",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_offer_offer_hypothesis_vouchspec_exact_byte_evidence",
-      "target": "stage_a_alpha_offer_defect_remedy_hypothesis",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_offer_defect_remedy_hypothesis"
     },
     {
       "relation": "contains",
@@ -26393,9 +26413,9 @@
       "source_file": "OFFER.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_offer_offer_hypothesis_vouchspec_exact_byte_evidence",
-      "target": "stage_a_alpha_offer_free_stage_a_offer",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_offer_free_stage_a_offer"
     },
     {
       "relation": "contains",
@@ -26403,9 +26423,9 @@
       "source_file": "OFFER.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "stage_a_alpha_offer_offer_hypothesis_vouchspec_exact_byte_evidence",
-      "target": "stage_a_alpha_offer_paid_machine_transaction_hypotheses",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_offer_paid_machine_transaction_hypotheses"
     },
     {
       "relation": "contains",
@@ -26413,9 +26433,9 @@
       "source_file": "PRICING.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_pricing_md",
-      "target": "stage_a_alpha_pricing_pricing_hypotheses",
-      "confidence_score": 1.0
+      "target": "stage_a_alpha_pricing_pricing_hypotheses"
     },
     {
       "relation": "contains",
@@ -26463,9 +26483,9 @@
       "source_file": "README.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_vouchspec",
-      "target": "readme_public_stage_a_distribution",
-      "confidence_score": 1.0
+      "target": "readme_public_stage_a_distribution"
     },
     {
       "relation": "contains",
@@ -26523,9 +26543,9 @@
       "source_file": "analytics/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "analytics_readme",
-      "target": "analytics_readme_analytics",
-      "confidence_score": 1.0
+      "target": "analytics_readme_analytics"
     },
     {
       "relation": "contains",
@@ -26533,9 +26553,9 @@
       "source_file": "backups/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backups_readme",
-      "target": "backups_readme_backups",
-      "confidence_score": 1.0
+      "target": "backups_readme_backups"
     },
     {
       "relation": "contains",
@@ -26553,9 +26573,9 @@
       "source_file": "distribution/verify-before-install/SKILL.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_distribution_verify_before_install_skill_md",
-      "target": "verify_before_install_skill_verify_before_install",
-      "confidence_score": 1.0
+      "target": "verify_before_install_skill_verify_before_install"
     },
     {
       "relation": "contains",
@@ -26563,9 +26583,9 @@
       "source_file": "docs/methodology.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_docs_methodology_md",
-      "target": "docs_methodology_vouchspec_static_evidence_methodology_v0_2",
-      "confidence_score": 1.0
+      "target": "docs_methodology_vouchspec_static_evidence_methodology_v0_2"
     },
     {
       "relation": "contains",
@@ -26703,9 +26723,9 @@
       "source_file": "logs/2026-07-13-initialization.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_13_initialization",
-      "target": "logs_2026_07_13_initialization_2026_07_13_initialization",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_13_initialization_2026_07_13_initialization"
     },
     {
       "relation": "contains",
@@ -26713,9 +26733,9 @@
       "source_file": "marketing/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "marketing_readme",
-      "target": "marketing_readme_marketing_artifacts",
-      "confidence_score": 1.0
+      "target": "marketing_readme_marketing_artifacts"
     },
     {
       "relation": "contains",
@@ -26723,9 +26743,9 @@
       "source_file": "product/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "product_readme",
-      "target": "product_readme_product_artifacts",
-      "confidence_score": 1.0
+      "target": "product_readme_product_artifacts"
     },
     {
       "relation": "contains",
@@ -26733,9 +26753,9 @@
       "source_file": "research/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_readme",
-      "target": "research_readme_research_evidence",
-      "confidence_score": 1.0
+      "target": "research_readme_research_evidence"
     },
     {
       "relation": "contains",
@@ -26773,9 +26793,9 @@
       "source_file": "research/market-and-competitor-evidence.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_market_and_competitor_evidence",
-      "target": "research_market_and_competitor_evidence_capabilityproof_market_competitor_and_buyer_evidence",
-      "confidence_score": 1.0
+      "target": "research_market_and_competitor_evidence_capabilityproof_market_competitor_and_buyer_evidence"
     },
     {
       "relation": "contains",
@@ -26913,9 +26933,9 @@
       "source_file": "research/mvp-threat-model.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_mvp_threat_model",
-      "target": "research_mvp_threat_model_capabilityproof_hostile_input_threat_model_and_security_acceptance_checklist",
-      "confidence_score": 1.0
+      "target": "research_mvp_threat_model_capabilityproof_hostile_input_threat_model_and_security_acceptance_checklist"
     },
     {
       "relation": "contains",
@@ -27353,9 +27373,9 @@
       "source_file": "research/standards-and-name-evidence.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "research_standards_and_name_evidence",
-      "target": "research_standards_and_name_evidence_capabilityproof_standards_and_working_name_evidence",
-      "confidence_score": 1.0
+      "target": "research_standards_and_name_evidence_capabilityproof_standards_and_working_name_evidence"
     },
     {
       "relation": "contains",
@@ -27563,9 +27583,9 @@
       "source_file": "sops/README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "sops_readme",
-      "target": "sops_readme_standard_operating_procedures",
-      "confidence_score": 1.0
+      "target": "sops_readme_standard_operating_procedures"
     },
     {
       "relation": "contains",
@@ -27573,9 +27593,9 @@
       "source_file": "sops/demand-experiment.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_sops_demand_experiment_md",
-      "target": "sops_demand_experiment_e_003_machine_native_external_alpha_sop",
-      "confidence_score": 1.0
+      "target": "sops_demand_experiment_e_003_machine_native_external_alpha_sop"
     },
     {
       "relation": "contains",
@@ -27613,9 +27633,9 @@
       "source_file": "sops/local-validation-and-delivery.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_sops_local_validation_and_delivery_md",
-      "target": "sops_local_validation_and_delivery_stage_a_catalog_build_and_evidence_delivery_sop",
-      "confidence_score": 1.0
+      "target": "sops_local_validation_and_delivery_stage_a_catalog_build_and_evidence_delivery_sop"
     },
     {
       "relation": "contains",
@@ -27689,5 +27709,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4404b7a9a2d3dc45b621ea694d2ca7ad666b9898"
+  "built_at_commit": "7bb59c60b31c16f757e51db6070909280f79bb56"
 }

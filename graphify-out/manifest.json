@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "tests/test_distribution.py": {
-    "mtime": 1784008221.5071394,
-    "ast_hash": "49ca8de20a3d1a6059efbc65a66a6d74",
+    "mtime": 1784008933.8086548,
+    "ast_hash": "0bcb6a2a5be988ea9e60d685df1ac292",
     "semantic_hash": ""
   },
   "tests/test_inspector.py": {
@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "GOAL_EVIDENCE.md": {
-    "mtime": 1784008691.2343576,
-    "ast_hash": "4f159a8bd2ce97539561ce28eb678472",
+    "mtime": 1784008982.943685,
+    "ast_hash": "108b5023b05d6c42edf3069009b929cc",
     "semantic_hash": ""
   },
   "HUMAN_ACTIONS.md": {
@@ -185,8 +185,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1784008652.8991618,
-    "ast_hash": "c97a860d11b1616edb71352571e139ae",
+    "mtime": 1784008933.8076537,
+    "ast_hash": "b1d4e4def981a351a5a375406ce2c1ec",
     "semantic_hash": ""
   },
   "RISK_REGISTER.md": {
@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "STATUS.md": {
-    "mtime": 1784008652.9001622,
-    "ast_hash": "597def98e12dfd7fb1007c0cb87bb016",
+    "mtime": 1784008982.9446845,
+    "ast_hash": "fd825f073dfbfebc08edad9cdf777d86",
     "semantic_hash": ""
   },
   "analytics/README.md": {
@@ -535,8 +535,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1784008221.3888416,
-    "ast_hash": "3b11b9d4e8e7ce994fe6c19986fc3cd4",
+    "mtime": 1784008745.358151,
+    "ast_hash": "f47b5638719319c6e6fecb8a0ae1a3f2",
     "semantic_hash": ""
   },
   "distribution/trust/issuer.jwk.json": {
@@ -552,6 +552,11 @@
   "distribution/trust/root-fingerprint.txt": {
     "mtime": 1784008586.4514003,
     "ast_hash": "d63e8e94c28b429e570561580ba51e9a",
+    "semantic_hash": ""
+  },
+  "distribution/discovery.json": {
+    "mtime": 1784008933.8076537,
+    "ast_hash": "c740d3ee1dce24c832ce170ddf8acba2",
     "semantic_hash": ""
   }
 }

@@ -32,7 +32,7 @@ traffic is not demand evidence.
 - Boundary: no uploads/private artifacts/customer content; no artifact code execution. The
   catalog distributes no original artifact files or executable payloads, but receipts contain
   bounded artifact-derived metadata and redacted excerpts.
-- Verification suite: 53 tests pass; one ordinary Windows symlink test skips because the host
+- Current main verification suite: 54 tests pass; one ordinary Windows symlink test skips because the host
   lacks symlink privilege, while Windows junction and hard-link regressions pass. Stage B
   remains blocked on Linux-equivalent and full adversarial/cross-OS coverage.
 

@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 import yaml
@@ -21,3 +22,27 @@ def test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expres
     assert binding_step["env"]["VOUCHSPEC_WORKFLOW_REF"] == "${{ github.workflow_ref }}"
     assert "receipt_sha256" in binding_step["run"]
     assert "PUBLISHER_CI_ATTESTED" not in action_path.read_text(encoding="utf-8")
+
+
+def test_machine_discovery_is_read_only_and_does_not_offer_stage_b_or_paid_intake() -> None:
+    discovery = json.loads((ROOT / "distribution" / "discovery.json").read_text(encoding="utf-8"))
+    assert discovery["service"] == "VouchSpec"
+    assert discovery["stage"] == "A_PUBLIC_ARTIFACT_INDEX"
+    assert discovery["trust"]["root_keyid"] == "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4"
+    assert discovery["mcp"]["transport"] == "stdio"
+    assert set(discovery["mcp"]["tools"]) == {
+        "search_receipts",
+        "get_receipt",
+        "get_receipt_status",
+        "get_verification_material",
+        "get_price_quote",
+    }
+    assert discovery["boundary"] == {
+        "artifact_submissions_accepted": False,
+        "private_content_accepted": False,
+        "artifact_code_executed": False,
+        "paid_orders_accepted": False,
+        "human_call_required": False,
+    }
+    assert discovery["pricing"]["fresh_validation_availability"] == "stage_b_not_orderable"
+    assert discovery["pricing"]["settlement_available"] is False
