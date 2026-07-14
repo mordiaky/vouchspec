@@ -1,51 +1,43 @@
 # Operating status
 
 - **Goal:** active and not achieved.
-- **Public product:** Stage A catalog, exact-byte HTTP retrieval, installable stdio MCP,
-  independent verification, and lifecycle metadata are live.
-- **Publisher route:** the action now preserves and exposes signed evidence for both structural
-  passes and structural failures; a complete public demo is available at
-  `https://github.com/mordiaky/vouchspec-demo`. Run `29331787790` passed both cases and all
-  four downloaded files passed independent GitHub attestation verification.
-- **External adoption:** 0 / 3 retained unrelated integrations. Two tailored proposals remain
-  open at `https://github.com/supabase/agent-skills/issues/136` and
-  `https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`; issues are outreach,
-  not adoption, and neither has a maintainer response yet. `michtio/craftcms-claude-skills#10`
-  was closed by the maintainer as not planned on 2026-07-14. The three-new-contact daily cap
-  is reached.
-- **External machine use:** 0 / 100 legitimate requests; 0 / 10 sources; 0 / 20 repeat
-  requests; 0 / 5 repeat sources.
-- **Commerce:** the first product is a USD $49 exact-version public static validation. Its
-  strict request schema and non-orderable public quote preview are implemented. Immutable
-  intake, no-egress inspection, constrained signing, idempotent event/cost accounting, and
-  signed delivery completed in a fake-provider sandbox. A loopback-only authenticated API now
-  tenant-binds quotes/orders/results, stores keyed credential digests, scopes idempotency,
-  expires/rotates/revokes delivery capabilities, enforces framing/rate/storage limits, and
-  returns only the exact digest-bound signed envelope. A pinned, expected-account-bound Stripe
-  adapter now creates authenticated tenant-bound Checkout Sessions and reconciles only
-  server-retrieved Session, PaymentIntent, Charge, and Balance Transaction state. The loopback
-  API has a dedicated exact-body webhook route, separate webhook rate-limit capacity, strict
-  signature-header handling, and non-2xx retry signaling. A real USD $49 Stripe test Session
-  was created through this HTTP path and immediately expired unpaid; all sandbox/test activity
-  remains excluded. Offline-root paid-receipt lifecycle publication provides exact coverage and
-  irreversible invalidation. Public checkout remains disabled pending managed deployment, a
-  public test webhook endpoint, kernel fetch quota, and a production signing role.
+- **Public product:** Stage A catalog/retrieval/verification is live. Stage B is a public,
+  self-service, agent-only x402 sandbox at `https://vouchspec-sandbox.plyrium.com`; it accepts
+  immutable public GitHub coordinates and has no human checkout path.
+- **Stage B payment:** exact x402 v2 payment using test USDC on Base Sepolia. The sandbox price
+  is 1.00 test USDC so faucet-funded agents can exercise the complete flow. The commercial
+  price remains an unvalidated USD $49 hypothesis. Mainnet is fail-closed.
+- **Hosted fulfillment proof:** owner-controlled order `ord_01b1e85f188649a6b68e2dd2` settled
+  on Base Sepolia in transaction
+  `0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11`, traversed the leased
+  no-egress worker and separate no-egress signer, and produced a signature-verified public
+  content-addressed receipt. It is explicitly `counts_for_goal: false`.
+- **Receipt reuse:** exact DSSE envelope bytes are public, immutable, cacheable, and shareable.
+  The live invalidation/lifecycle status is a separate no-store resource that agents must check
+  when making a new reliance decision.
+- **Fulfillment alerts:** four owner diagnostic runs failed while isolating a minimal-container
+  signer import defect. The signer was reduced to a dependency-minimal entry point and workflow
+  run `29359911240` then completed successfully. Failure email alerts remain enabled for genuine
+  operational failures.
+- **Publisher route:** the public GitHub Action and owned demo prove integration mechanics.
+  The owned demo does not count as external adoption.
+- **External adoption:** 0 / 3 retained unrelated integrations. Supabase issue `136` and K-Dense
+  issue `211` remain proposals only. `michtio/craftcms-claude-skills#10` was declined and is useful
+  ICP feedback, not adoption.
+- **External machine use:** 0 / 100 legitimate requests; 0 / 10 sources; 0 / 20 repeat requests;
+  0 / 5 repeat sources. Owner, CI, smoke, monitoring, and controlled-account traffic is excluded.
 - **Revenue:** 0 / 3 unrelated settled buyers; USD $0 / $500 settled gross; 0 repeat buyers.
-- **Economics:** USD $0 spend; USD $100 lifetime owner-funded budget remaining. No paid-order
-  margin exists yet.
-- **Autonomous run:** not started; it begins only after the first genuine settled payment.
-- **Owner action:** none currently required. Existing external Stripe credentials were
-  authorized and both test/live identities were verified without persisting secret values; the
-  live account reports charges and payouts enabled.
-- **Boundary:** public immutable sources only; no uploads, private repositories, confidential
-  content, or artifact execution.
-- **Verification:** local isolated verification passes 130 tests with one explicit Windows
-  symlink-privilege skip. Public Linux CI run `29344373148` passed at commit
-  `dc2af81ebbebebeb1dc4f6078a1172508325d6dd` with zero annotations, including package
-  installation, the full test suite, and a CLI receipt smoke test.
+  Testnet USDC is never revenue.
+- **Economics:** USD $0 owner-funded spend recorded; USD $100 lifetime budget remains. Positive
+  contribution margin is not yet proven by a genuine paid order.
+- **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
+  commercial payment.
+- **Owner action:** none currently required.
+- **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
+  confidential content, credentials, mutable refs, or artifact execution.
+- **Verification:** 136 tests pass with one explicit Windows symlink-privilege skip. The latest
+  hosted paid-flow workflow run succeeded at commit `13c65f3dc36a099c0d45aa36aa08b58b3d738371`.
 
-Next: wait on the two still-open unrelated adoption proposals without an unsolicited same-day
-follow-up, qualify the next rules-compliant publisher prospect after the daily cap resets, and
-deploy the connected Stripe-test boundary behind managed TLS with a mode-specific public webhook
-endpoint and restricted durable state. Live Checkout remains off until that deployment, the
-production signer, and kernel fetch quota are verified.
+Next: acquire unrelated agent integrations that can discover and exercise the public sandbox
+without owner involvement. Mainnet activation must preserve the same tenant,
+settlement-recovery, no-egress, signing, receipt, invalidation, and honest-accounting boundaries.

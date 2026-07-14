@@ -1,82 +1,72 @@
 # Goal evidence
 
-The goal is **not achieved**. Public Stage A is live and three tailored external adoption
-proposals have been made, but there are no qualifying external integrations, requests, buyers,
-payments, or autonomous paid-operation days. The owned demo and all operator/CI/monitoring
-traffic are explicitly excluded.
+The goal is **not achieved**. Public catalog and testnet commerce mechanics work, but there are
+no qualifying external integrations, requests, buyers, payments, repeat buyers, contribution
+margin, or autonomous paid-operation days. Owner, controlled-wallet, demo, CI, smoke, monitoring,
+and test traffic is explicitly excluded.
 
 | # | Acceptance test | Verified status |
 |---:|---|---|
-| 1 | Stage A public catalog operational | Pass: public index and receipt resources return successfully |
-| 2 | Documented HTTP and existing MCP retrieval | Pass: exact-byte static HTTP and installable stdio MCP |
-| 3 | Current machine-readable discovery | Pass: `distribution/discovery.json`; updated action/demo/price metadata |
-| 4 | Independent public signature verification | Pass: public verifier, root/issuer JWKs, and mutation tests |
-| 5 | Machine-readable lifecycle status | Pass: root-signed lifecycle feed |
-| 6 | Material public-service failure monitoring | Pass locally: active daily external monitor; no uptime-SLA claim |
-| 7 | Three retained integrations in three unrelated external repositories | Pending: 0 / 3 |
-| 8 | Each integration is genuine, external, verifiable, and retained/release-used | Pending; the owned demo and open proposal do not count |
+| 1 | Stage A public catalog operational | Pass: public index and receipt resources return exact signed bytes |
+| 2 | Documented HTTP and MCP retrieval | Pass: static HTTP, verifier, and installable stdio MCP |
+| 3 | Current machine-readable discovery | Pass: repository contract and stable managed discovery endpoint are public and consistent |
+| 4 | Independent public signature verification | Pass: public JWKs, exact-byte verifier, and mutation tests |
+| 5 | Machine-readable lifecycle/invalidation | Pass: root-signed catalog lifecycle plus separate live hosted receipt status |
+| 6 | Material public-service failure monitoring | Pass operationally: GitHub fulfillment failures alert the owner; no uptime-SLA claim |
+| 7 | Three retained integrations in unrelated repositories | Pending: 0 / 3 |
+| 8 | Integrations are genuine, external, verifiable, retained/release-used | Pending; owned demo and proposals do not count |
 | 9 | 100 legitimate external machine requests | Pending: 0 / 100 |
 | 10 | Requests from ten unrelated external sources | Pending: 0 / 10 |
 | 11 | Twenty repeat requests | Pending: 0 / 20 |
-| 12 | Repeat requests from five sources after their first real use | Pending: 0 / 5 |
-| 13 | Exclude owner, CI, monitor, tests, controlled accounts, related parties, fake repeats | Pass as accounting policy; external operation unproven |
-| 14 | One genuine machine-readable paid request completes | Pending: 0 |
-| 15 | Software can quote, price, explain, pay, receive, verify, and continue autonomously | Partial: authenticated Stripe-test quote/order/Checkout, exact-body webhook, status/result, paid lifecycle, and complete signed sandbox delivery work; managed public/live payment remains disabled |
+| 12 | Repeat requests from five sources | Pending: 0 / 5 |
+| 13 | Exclude controlled/fake traffic | Pass as accounting policy; owner E2E remains excluded |
+| 14 | One genuine machine-readable paid request completes | Pending: 0; owner Base Sepolia payment proves mechanics only |
+| 15 | Software quotes, explains, pays, delivers, verifies, and continues autonomously | Pass on public testnet; commercial mainnet remains disabled |
 | 16 | Three unrelated external buyers settle | Pending: 0 / 3 |
 | 17 | At least USD $500 settled gross external revenue | Pending: USD $0 / $500 |
-| 18 | Exclude owner/related/test/pending/reversed/refunded/simulated revenue | Pass as accounting policy; no revenue recorded |
+| 18 | Exclude owner/test/pending/reversed/refunded/simulated revenue | Pass as policy and stored `counts_for_goal`; no revenue recorded |
 | 19 | One paid buyer repeats or buys a second service | Pending: 0 |
-| 20 | Positive contribution margin after every variable cost | Pending: no paid operation |
-| 21 | Every paid operation has complete quote/payment/cost/receipt/delivery/refund fields | Partial: tenant-bound ledger, server-retrieved Stripe payment chain, exact fee/refund/dispute states, and signed-result/lifecycle delivery pass tests; no genuine paid operation |
-| 22 | Owner-funded spending within USD $100 lifetime limit | Pass: USD $0 spent; USD $100 remains |
-| 23 | Fourteen consecutive autonomous days after first settled payment | Pending: clock not started |
-| 24 | Monitoring through recovery/support/financial logging runs during that period | Pending |
-| 25 | No ordinary order requires a call, review, meeting, or manual delivery | Partial: authenticated sandbox order and result delivery were fully autonomous; no genuine order yet |
-| 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has three qualified contacts, one explicit decline, and no response/integration from the two still-open proposals |
-| 27 | One paid fulfillment process completes more than one real order | Pending: 0 |
-| 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: authenticated sandbox quote/order/result plus Stripe-test Checkout/webhook, paid lifecycle, discovery/integration/verify/operations are documented; public deployment and credential issuance remain disabled |
-| 29 | Independent goal-auditor inspects complete evidence | Pending until tests 1-28 have evidence |
-| 30 | Auditor confirms every genuineness, financial, operational, security, and claims test | Pending |
+| 20 | Positive contribution margin after variable cost | Pending: no genuine paid operation |
+| 21 | Complete quote/payment/cost/receipt/delivery/remedy fields | Pass on owner testnet proof; pending for a genuine paid operation |
+| 22 | Owner-funded spending within USD $100 lifetime limit | Pass: USD $0 recorded; USD $100 remains |
+| 23 | Fourteen autonomous days after first settled payment | Pending: clock not started |
+| 24 | Monitoring, recovery, support, and financial logging during that period | Pending |
+| 25 | No ordinary order requires human labor | Pass on testnet mechanics; unproven with genuine commercial demand |
+| 26 | One acquisition channel produces multiple qualified users/integrations | Pending: current issues are outreach only |
+| 27 | One fulfillment process completes multiple real orders | Pending: 0 genuine orders |
+| 28 | Self-serve discovery, integration, quote, purchase, verify, troubleshooting | Pass for the public testnet sandbox; mainnet remains disabled |
+| 29 | Independent goal auditor inspects complete evidence | Pending until tests 1-28 are eligible |
+| 30 | Auditor confirms every required claim | Pending |
 
-## Current non-commercial product evidence
+## Hosted owner-excluded proof
 
-- 25 signed receipts across 12 GitHub repository-owner namespaces: 19 structural passes, six
-  explicit structural failures, and no hidden catalog skips.
-- DSSE v1.0.2/Ed25519 exact-byte receipt envelopes, signed index, root-signed lifecycle, and
-  separate public trust material.
-- Public GitHub-managed TLS/CORS distribution and a public installable read-only stdio MCP.
-- Public owned demo run `29331787790` with pass/failure matrix assertions and four independently
-  verified workflow-bound attestations. It proves integration mechanics only.
-- Three public, repository-specific proposals were made to unrelated publishers: Supabase issue
-  `136` and K-Dense issue `211` remain open without maintainer response, while michtio issue
-  `10` was declined and closed as not planned. They prove outreach only.
-- One complete Stage B sandbox order: exact GitHub commit freeze, no-egress/no-host-write
-  Docker worker, constrained DSSE signing, all direct-cost fields, event reconciliation, and
-  delivery. `fulfillment/stage-b-sandbox-proof.json` marks it operator-owned,
-  nonsettling, and excluded; it proves mechanics only.
-- Authenticated sandbox API tests cover plaintext-token exclusion, tenant-scoped idempotency,
-  cross-tenant denial, capability expiry/rotation/revocation, strict HTTP framing, slow-client
-  isolation, quotas, audit events, exact signed-result delivery, and live-store refusal.
-- The pinned Stripe adapter is bound to an expected enabled account, stores no API/webhook
-  secrets or Checkout URL, and reconciles only server-retrieved Session, PaymentIntent, Charge,
-  and Balance Transaction state. The authenticated HTTP boundary now creates exact tenant-bound
-  Stripe-test Checkout Sessions and preserves raw webhook bytes with retry-safe responses. An
-  owner-authorized real USD $49 Session traversed this HTTP path and was immediately expired
-  unpaid. It is excluded from every commercial counter; see
-  `logs/2026-07-14-stripe-http-test-probe.md`.
-- Paid Stage B lifecycle tests cover exact receipt/signer coverage, offline-root publication,
-  historical state, expiry, rollback, equivocation, root replacement, supersession, evaluator
-  revocation, and irreversible retired/compromised issuer state.
-- 130 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
-  skipped for missing host privilege; Linux-container and hostile tree/archive/path tests pass.
-- Public Linux CI run `29344373148` passed at commit
-  `dc2af81ebbebebeb1dc4f6078a1172508325d6dd` with zero annotations, including package
-  installation, the full test suite, and a CLI receipt smoke test.
+- Stable base URL: `https://vouchspec-sandbox.plyrium.com`.
+- Agent-only payment: x402 v2, `exact`, Base Sepolia (`eip155:84532`), 1.00 test USDC, no
+  human checkout.
+- Order: `ord_01b1e85f188649a6b68e2dd2`.
+- Settlement transaction:
+  `0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11`.
+- Result digest: `sha256:f76d3c36a611bf304e6d87ff02331e0298282ed449a335b5704d54bedb0c0c53`.
+- Receipt ID: `cpr_2bb3259dd33d0cbadf7580dc`.
+- Issuer key ID: `PWGCY2HpACKhufnSBjbf2zwMzThqxyPTz_MAwCyJ0I0`.
+- Independent signature check passed; public content-addressed bytes exactly matched the
+  authenticated result; separate live status returned `CURRENT`.
+- Public receipt:
+  `https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/receipts/f76d3c36a611bf304e6d87ff02331e0298282ed449a335b5704d54bedb0c0c53`.
+- Public status: the receipt URL plus `/status`.
+- Accounting: `counts_for_goal: false`; no buyer, request, adoption, or revenue credit.
 
-Evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
-`CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, public CI/attestation URLs, and the
-final independent audit when eligible. Current public engineering/adoption references include
-`https://github.com/mordiaky/vouchspec/actions/runs/29344373148`,
-`https://github.com/supabase/agent-skills/issues/136`, and
-`https://github.com/K-Dense-AI/scientific-agent-skills/issues/211`, and
-`https://github.com/michtio/craftcms-claude-skills/issues/10`.
+## Operational recovery evidence
+
+Four owner-triggered workflow runs failed while diagnosing the separate signer container. Safe,
+allowlisted diagnostics reduced the fault to `isolated_signer_runtime_import`: the minimal image
+was invoking a broad CLI module whose optional imports were intentionally absent. The signer now
+invokes dependency-minimal `stage_b_signer_cli.py`. Exact-image no-egress/read-only probing passed,
+the full suite passed, and hosted workflow run
+`https://github.com/mordiaky/vouchspec/actions/runs/29359911240` completed successfully at commit
+`13c65f3dc36a099c0d45aa36aa08b58b3d738371`. The emails were valid failure alerts and remain
+enabled for future genuine incidents.
+
+Other evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
+`CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, hosted API/workflow records, public
+CI/attestation URLs, and the final independent audit when eligible.
