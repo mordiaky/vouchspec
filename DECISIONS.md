@@ -96,3 +96,30 @@
   or hiding the artifact.
 - **Result:** 25 signed receipts across 12 source organizations: 19 structural passes, six
   explicit failures, and zero skipped artifacts.
+
+## 2026-07-14 - Select Stripe first and correct fresh-validation pricing
+
+- **Decision:** Use Stripe Checkout as the primary conventional payment rail, retain x402 as
+  a later machine-native secondary rail, and test fresh public static validation at USD $49.
+- **Reason:** The prior USD $0.10 hypothesis is below Stripe's USD $0.50 minimum and cannot
+  absorb the fixed USD $0.30 fee. The revised hypothesis leaves room for a USD $5 direct-cost
+  ceiling while remaining a real market test, not a validated price.
+- **Current gate:** The strict request/quote preview, state rules, and webhook signature
+  verification are implemented, but checkout remains disabled until the Stage B worker,
+  signer, persistent order/event store, account activation, and sandbox verification exist.
+
+## 2026-07-14 - Hash-lock the publisher action runtime
+
+- **Decision:** Run the composite action only on Linux x86-64 with Python 3.11 and install its
+  complete dependency graph from a hash-locked binary-only file before using the immutable
+  VouchSpec source checkout.
+- **Reason:** An unhashed runtime dependency resolution in a workflow holding OIDC and
+  attestation permissions could undermine the evidence it produces.
+
+## 2026-07-14 - Prepare discovery listings without accepting owner-bound terms
+
+- **Decision:** Keep GitHub discovery live; defer official MCP Registry publication until a
+  supported public package exists, and defer GitHub Marketplace publication until a dedicated
+  root-action repository is eligible.
+- **Authority boundary:** The owner, not the autonomous agent, will authenticate or accept new
+  platform agreements only after all technical eligibility work is complete.

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-07-14T12:00:00Z",
+  "goal_achieved": false,
+  "publisher_integrations": {"verified": 0, "required": 3},
+  "machine_requests": {"verified": 0, "required": 100},
+  "machine_sources": {"verified": 0, "required": 10},
+  "repeat_requests": {"verified": 0, "required": 20},
+  "repeat_sources": {"verified": 0, "required": 5},
+  "settled_buyers": {"verified": 0, "required": 3},
+  "settled_gross_usd": {"verified": "0.00", "required": "500.00"},
+  "repeat_buyers": {"verified": 0, "required": 1},
+  "autonomous_days_after_first_settlement": {"verified": 0, "required": 14, "clock_started": false},
+  "owner_funded_spend_usd": {"actual": "0.00", "lifetime_limit": "100.00"},
+  "qualified_prospects": 1,
+  "contacts": 1,
+  "open_external_proposals": 1,
+  "exclusions": [
+    "owner_activity",
+    "vouchspec_ci",
+    "owned_demo",
+    "synthetic_monitoring",
+    "health_checks",
+    "smoke_tests",
+    "load_tests",
+    "subagent_synthetic_requests",
+    "vouchspec_controlled_accounts_or_wallets",
+    "related_parties",
+    "non_useful_repeat_bursts",
+    "test_pending_reversed_or_refunded_payments"
+  ]
+}

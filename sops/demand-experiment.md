@@ -1,7 +1,6 @@
 # E-003 machine-native external alpha SOP
 
-Status: blocked only until the Stage A independent P0-P2 review closes and read-only
-retrieval is deployed behind managed TLS.
+Status: active. Stage A review is closed and read-only retrieval is live behind managed TLS.
 
 ## Qualified events
 
@@ -14,10 +13,16 @@ retrieval is deployed behind managed TLS.
 
 ## Acceptance
 
-Record at least 10 legitimate external machine requests, three repeats, one external
-publisher CI integration, one settled machine-paid request, and actual compute,
-infrastructure, fee, refund, and contribution-margin evidence. Routine work must require no
-call, meeting, demo, or manual job approval.
+Record at least 100 legitimate external machine requests from ten unrelated sources, 20
+repeats from five sources, three retained unrelated external publisher integrations, three
+unrelated settled buyers, at least USD $500 settled gross, one repeat buyer, and complete
+compute, infrastructure, fee, refund, and contribution-margin evidence. Complete 14
+autonomous days after first settlement. Routine work must require no call, meeting, demo,
+review, or manual delivery.
+
+Exclude owner activity, VouchSpec CI, the owned demo, monitoring, health/smoke/load tests,
+subagent-generated inflation, controlled accounts/wallets, related parties, fake repeat
+bursts, test funds, pending funds, reversals, and refunds.
 
 ## Boundary
 

@@ -64,8 +64,8 @@ JSON. A separate recovery/root key signs receipt and issuer-key lifecycle state.
 - Public search: free.
 - Existing receipt retrieval: free or near-free.
 - Receipt comparison: USD $0.005–$0.01.
-- Fresh static validation: USD $0.05–$0.25.
-- Signed receipt issuance: USD $0.10–$0.50.
+- Fresh public static validation plus signed receipt: USD $49.00 initial hypothesis.
+- Signed receipt issuance: included in the first paid fresh-validation product.
 - Continuous artifact monitoring: USD $2–$10 monthly.
 - Independent sandbox analysis: later, priced from measured compute cost.
 
@@ -75,11 +75,14 @@ signed paid-job token may authorize one job without a conventional customer acco
 
 ## External alpha acceptance
 
-The milestone passes only when the provisional name, 25-skill/10-source-organization signed catalog,
-public verifier, live REST and MCP, one external publisher CI integration, 10 legitimate
-external machine requests including three repeats, one genuine settled machine-paid
-request, and actual cost evidence all exist. Routine jobs require no owner call, meeting,
-demo, or manual approval.
+The commercial goal passes only when every one of the 30 current tests in
+`GOAL_EVIDENCE.md` passes. Among them: three retained integrations under unrelated external
+owners; 100 legitimate machine requests from ten sources, including 20 repeats from five;
+three unrelated settled buyers; at least USD $500 settled gross; one repeat paid buyer;
+positive fully costed contribution margin; and 14 autonomous days after first settlement.
+Routine jobs require no owner call, meeting, demo, review, or manual delivery. Owned demo,
+operator CI, monitoring, tests, related parties, and synthetic or reversed payments do not
+count.
 
 ## Economics, compliance, and stop rules
 

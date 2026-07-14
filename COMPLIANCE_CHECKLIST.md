@@ -1,54 +1,53 @@
 # Compliance and trust checklist
 
-## Stage A local implementation
+## Live Stage A
 
-- [x] `VouchSpec` is recorded as provisional and not legally/trademark cleared.
-- [x] Catalog contains 25 deliberately selected public skills across 12 GitHub repository owners; publisher identity is not claimed.
-- [x] Every source uses a full immutable Git commit and exact artifact subdirectory.
-- [x] No original artifact files, archives, or executable payloads are redistributed;
-  receipts contain bounded artifact-derived metadata and static-analysis excerpts.
-- [x] Artifact content was not installed, imported, rendered, or executed.
-- [x] No upload, private-repository, or customer-confidential input route exists.
-- [x] Receipts use explicit factual labels and never a generic `VERIFIED` status.
-- [x] Six structural failures remain visible and lack `STRUCTURE_VALIDATED`.
-- [x] DSSE v1.0.2 signs exact receipt bytes with Ed25519 before JSON parsing.
-- [x] RFC 8037 public JWKs and an independent CLI verifier are included.
-- [x] Encrypted issuer/root private keys and passphrases are outside source and normal logs.
-- [x] Separate root-signed lifecycle feed supports current, superseded, expired,
-  evaluator-defect revocation, key-compromise revocation, staleness, and rollback handling.
-- [x] REST and MCP catalog surfaces are read-only; POST is rejected.
-- [x] Paid placement cannot change evidence labels, ranking, or severity.
-- [x] No spend, payment, contract, account, recurring infrastructure, or customer obligation.
-- [x] Independent P0-P2 signing/catalog/claims review closed; no remaining finding after
-  distinct-key, startup-persistence, immutable-snapshot, and process-safe sequence fixes.
+- [x] `VouchSpec` remains provisional; no legal/trademark-clearance claim.
+- [x] Public catalog uses full immutable Git commits and explicit subdirectories.
+- [x] No artifact content is installed, imported, rendered, or executed.
+- [x] No upload, private-repository, or confidential-input route exists.
+- [x] Exact receipt bytes use DSSE v1.0.2/Ed25519 and an independent verifier.
+- [x] Root/issuer trust and lifecycle state are separately machine-readable.
+- [x] Public HTTP and MCP surfaces are read-only; writes are rejected.
+- [x] Structural failures remain visible and are not labeled validated.
+- [x] Owned demo, operator CI, monitoring, smoke, load, related-party, and synthetic events
+  are excluded from adoption, usage, and commercial metrics.
 
-## Before live Stage A acceptance
+## External adoption
 
-- [x] Exact signed read-only catalog resources are live through GitHub-managed TLS/CORS;
-  writes are rejected and dynamic search is performed locally from the signed index.
-- [x] Read-only stdio MCP retrieval is publicly installable and passed a public-clone smoke.
-- [x] Public root/issuer JWKs and fingerprints are published in a separate public Gist;
-  same-account compromise remains an explicit limitation.
-- [ ] One external publisher repository emits a commit/workflow-bound CI attestation.
-- [ ] Ten legitimate external machine requests occur, including three repeats.
-- [ ] One genuine machine-initiated paid request settles after a machine-readable quote.
-- [ ] Compute, infrastructure, fees, and contribution margin are recorded.
-- [ ] No owner call, customer meeting, or routine manual fulfillment is required.
+- [x] Complete immutable-pinned publisher workflow and attested owned demo exist.
+- [x] Publisher action preserves evidence for structural pass and fail outcomes.
+- [x] First qualified repository's contribution rules were read before tailored contact.
+- [ ] Three unrelated external repositories retain and run the integration. Current: 0 / 3.
 
-## Before Stage B public-repository validation
+## Before Stage B orderability
 
-- [ ] Allowlist public source hosts; require full commit and explicit subdirectory.
-- [ ] Enforce streamed byte, individual file, count, depth, time, queue, and output limits.
-- [ ] Freeze/hash all retrieved bytes before static analysis in an isolated non-executing worker.
-- [ ] Run the full production-equivalent Linux suite across 20–50 public skills and at least
-  10 repository-owner namespaces; do not infer publisher identity or independence.
-- [ ] Cover traversal, absolute paths, symlinks, hard links, duplicate paths, case/Unicode
-  collisions, archive bombs, excessive counts/sizes, malformed metadata, recursive
-  references, hidden executables, credential requests, downloads, and permissions.
-- [ ] Verify supported cross-OS determinism and record every skipped test.
+- [x] Strict request contract requires allowlisted host, full lowercase commit, explicit safe
+  POSIX skill path, profile, buyer maximum, and opaque delivery ID.
+- [x] Quote states exact $49 price, deliverable, exclusions, limits, refunds, and disabled gates.
+- [x] Order and payment states are separate; exact-body Stripe webhook authentication is tested.
+- [ ] Fetch only allowlisted public immutable sources with streamed limits.
+- [ ] Freeze/hash bytes before analysis in an isolated, no-egress, non-executing worker.
+- [ ] Enforce file/count/depth/size/time/queue/output limits and adversarial path/archive tests.
+- [ ] Use a separate constrained signing service with no worker access to private keys.
+- [ ] Persist immutable quotes, idempotent orders, unique provider events, costs, fees, refunds,
+  disputes, receipts, and deliveries.
+- [ ] Reconcile payment server-side; never fulfill from a browser redirect.
+- [ ] Complete production-equivalent Linux and cross-OS deterministic verification.
+- [ ] Activate live payment only after the owner supplies legally controlled provider identity,
+  payout, and secrets.
+
+## Commercial evidence
+
+- [ ] 100 legitimate requests from ten unrelated sources.
+- [ ] 20 repeat requests from five sources after their initial real use.
+- [ ] Three unrelated settled buyers, at least $500 settled gross, and one repeat buyer.
+- [ ] Positive contribution margin with complete per-order variable costs.
+- [ ] Fourteen consecutive autonomous days after first settlement.
+- [ ] Repeated acquisition and paid fulfillment plus self-serve support.
+- [ ] Independent final goal audit confirms every acceptance test.
 
 ## Deferred Stage C
 
-Private storage, general authentication, tenant isolation, secure arbitrary uploads,
-deletion/retention policy, expanded terms/privacy, and incident response remain deferred
-until external demand and revenue justify them.
+Private repositories, arbitrary uploads, confidential customer content, broad authentication,
+general multi-tenant storage, and artifact execution remain out of scope.

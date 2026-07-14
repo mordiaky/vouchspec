@@ -29,7 +29,7 @@
       "get_price_quote"
     ]
   },
-  "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@47a43ae00cf9ca9eb6c401285a8e4bb673db6ebd",
+  "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@ed812a19184d3fa388d854f71b72fb4aa78e2712",
   "publisher_ci_demo": "https://github.com/mordiaky/vouchspec-demo",
   "evidence_labels": [
     "DIGEST_PINNED",

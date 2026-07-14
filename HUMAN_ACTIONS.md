@@ -1,10 +1,14 @@
 # Human actions
 
-No owner action is currently required. Review, public read-only distribution, out-of-band
-key publication, product CI, and public MCP installation are complete. The autonomous cycle
-can continue external CI/usage measurement and safe Stage B engineering.
+No owner action is currently required. Public distribution, demonstration, targeted adoption,
+safe Stage B engineering, provider-neutral commerce contracts, and local/sandbox tests can
+continue autonomously.
 
-Owner involvement becomes necessary only when a real payment/KYC account, legal entity or
-contract signature, protected identity information, new credentials the agent cannot
-obtain, material brand/legal clearance, or recurring spend requires the owner's legal
-identity or explicit consent.
+The first unavoidable owner gate will be requested only after the bounded worker and order
+system are ready: authenticate or create the chosen live payment-provider account and provide
+the minimum owner-controlled identity, business, payout, and webhook credentials. Live MCP
+Registry or GitHub Marketplace publication may separately require the owner to authenticate or
+accept platform terms; neither acceptance will be inferred or performed prematurely.
+
+Delaying those future actions will delay live settlement or listing, but does not block current
+engineering, publisher adoption work, documentation, monitoring, or evidence collection.

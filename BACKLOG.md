@@ -1,54 +1,50 @@
 # Prioritized backlog
 
-## Completed
+## Completed foundations
 
-- **B-001:** Current standards, competitors, initial pricing, and naming-conflict evidence.
-- **B-002:** Bounded deterministic local inspector and strict Agent Skill receipt schema.
-- **B-003:** Root-confined local inspector HTTP and MCP integrations.
-- **B-004:** Independent local-profile code/security/claims review and regression closure.
-- **B-005:** Local methodology, sample, verify-before-install skill, and CI prototype.
-- **B-006:** Select `VouchSpec` as the provisional beta name after a $0 obvious-conflict
-  screen; record that it is not formal legal/trademark clearance.
-- **B-007:** Define Stage A/B/C so private/arbitrary upload work is not a launch prerequisite.
-- **B-008:** Implement DSSE v1.0.2 Ed25519 receipt signing over exact bytes, RFC 8037 public
-  JWKs, independent CLI verification, and mutation tests.
-- **B-009:** Implement a separate root-signed lifecycle/key feed with current, superseded,
-  expired, evaluator-defect-revoked, key-compromise-revoked, stale, and rollback behavior.
-- **B-010:** Build 25 signed public-skill receipts across 12 GitHub repository owners with zero skipped
-  artifacts and no artifact execution, upload, or private content.
-- **B-011:** Implement read-only catalog REST and MCP retrieval with no artifact submission
-  route.
-- **B-012:** Close independent P0-P2 review findings for key-role separation, startup
-  rollback persistence, immutable verified-index reads, cross-process sequence state, and
-  public claim language.
-- **B-013:** Publish exact signed catalog bytes through GitHub-managed TLS/CORS and publish
-  root/issuer JWKs plus thumbprints through a separate public Gist.
-- **B-014:** Publish the repository/install path for the read-only stdio MCP and pass a clean
-  public-clone installation/tool-discovery smoke test.
+- **B-001–B-014:** deterministic non-executing inspector; reviewed signing/lifecycle controls;
+  25-receipt public catalog; exact-byte HTTP distribution; public stdio MCP; provisional
+  VouchSpec name; explicit Stage A/B/C boundaries.
+- **B-015:** publisher action preserves pass/fail evidence, returns explicit structure and
+  decision outputs, and has a complete owned demonstration with GitHub attestations.
+- **B-016:** first repository-specific adoption proposal submitted to an unrelated publisher;
+  tracked as outreach, not adoption.
+- **B-017:** USD $49 fresh public static validation defined with strict immutable-source
+  request validation, schemas, exact deliverable/refund/limit language, and a non-orderable
+  quote preview.
+- **B-018:** Stripe selected as primary rail, x402 as secondary; webhook signature verification,
+  order/payment state separation, and provider-neutral preparation implemented without keys.
+- **B-019:** current official MCP Registry and GitHub Actions Marketplace routes reviewed;
+  premature or terms-bearing submissions correctly withheld.
 
-## Next — smallest safe external alpha
+## Now — external adoption and safe orderability
 
-- **B-015:** Upgrade the GitHub action to a publisher-operated, commit-bound attestation
-  profile and verify one genuinely external repository. Label only this profile
-  `PUBLISHER_CI_ATTESTED`.
-- **B-016:** Convert the implemented machine-readable, non-orderable price-card response
-  into a payable quote contract only after the Stage B worker and a lawful owner-linked
-  payment/KYC rail exist.
-- **B-017:** Run the external alpha until 10 legitimate machine requests, three repeat
-  requests, and one genuine settled machine-initiated paid request occur; record compute and
-  infrastructure cost.
+- **B-020:** follow proposal `supabase/agent-skills#136`; help the external maintainer land an
+  immutable-pinned workflow if invited. Count only an external retained run.
+- **B-021:** continue low-volume, contribution-rule-compliant, repository-specific outreach to
+  highly relevant publishers until three unrelated integrations exist.
+- **B-022:** implement allowlisted GitHub immutable retrieval with byte/count/depth/time limits,
+  an isolated no-egress non-executing worker, and a separate constrained signing boundary.
+- **B-023:** implement an idempotent quote/order/payment/provider-event/cost ledger with a fake
+  gateway, reconciliation, duplicate/out-of-order event tests, and refund state.
+- **B-024:** prepare Stripe sandbox activation to the last unavoidable credential gate; then ask
+  the owner once for the minimum identity/account/payout inputs.
+- **B-025:** package the public MCP server in a Registry-supported public format, validate
+  `server.json`, and request owner authentication only when publication is otherwise ready.
 
-## Before Stage B
+## Evidence-driven operation
 
-- **B-018:** Expand to 20–50 varied public skills and run the complete suite in the
-  production-equivalent Linux environment.
-- **B-019:** Add the full safe adversarial archive/path/Unicode/collision/limit/permission
-  fixture matrix and cross-OS deterministic-receipt checks; record every skip.
-- **B-020:** Implement allowlisted public-host retrieval, full immutable commit and explicit
-  subdirectory validation, bounded byte freezing, and isolated non-executing workers.
+- **B-026:** measure 100 legitimate requests from ten sources, 20 repeats from five sources,
+  excluding every owned/demo/CI/monitor/test event.
+- **B-027:** complete at least three unrelated settled buyers and USD $500 settled gross, with
+  one repeat buyer and per-order cost/margin evidence.
+- **B-028:** operate autonomously for 14 consecutive days after first settlement, retaining
+  monitoring, recovery, lifecycle, support, and financial evidence.
+- **B-029:** demonstrate a channel with more than one qualified external result, a paid process
+  with more than one completed real order, and full self-serve documentation.
+- **B-030:** run the independent final goal audit only after acceptance evidence is complete.
 
 ## Deferred Stage C
 
-Private repositories, arbitrary uploads, customer-confidential content, tenant storage,
-deletion workflows, general authentication, dynamic execution, and expanded incident/legal
-controls remain deferred until genuine demand and revenue justify them.
+Private repositories, arbitrary uploads, confidential customer content, general multi-tenant
+storage, and dynamic artifact execution remain outside the launch boundary.

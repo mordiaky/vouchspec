@@ -1,9 +1,8 @@
 # VouchSpec
 
 VouchSpec is the provisional public-beta name for an independent evidence index for exact
-Agent Skill versions. `CapabilityProof` remains the internal package/codename during the
-transition. The name passed a $0 obvious-conflict screen; it has not received legal or
-trademark clearance.
+Agent Skill versions. The name passed a $0 obvious-conflict screen; it has not received
+formal legal or trademark clearance.
 
 The current Stage A catalog contains **25 deliberately selected public Agent Skills across
 12 GitHub repository owners**. Every entry is pinned to a full Git commit and exact directory digest,
@@ -24,7 +23,7 @@ labeled `STRUCTURE_VALIDATED`.
 
 The static distribution returns the exact checked-in signed bytes with CORS enabled and
 rejects writes. Download the signed index, filter it locally, then retrieve a receipt by ID
-from `catalog/public/receipts/`. For immutable retrieval, replace `main` with release commit
+from `catalog/public/receipts/`. For immutable retrieval, replace `main` with catalog snapshot
 `4404b7a9a2d3dc45b621ea694d2ca7ad666b9898`. The out-of-band Gist is separate from the
 repository but shares its GitHub account, so an account-level compromise still requires a
 new trusted channel.
@@ -42,6 +41,26 @@ new trusted channel.
 
 Stage C is not a prerequisite for Stage A or B. No arbitrary upload route exists in the
 Stage A server or MCP tools.
+
+## Publisher CI — complete self-service example
+
+The public [publisher-CI demo](https://github.com/mordiaky/vouchspec-demo) shows the complete
+trusted-workflow path: immutable action pins, exact-commit inspection, two GitHub artifact
+attestations, downloadable evidence, and independent `gh attestation verify` commands. The
+demo is operator-controlled and is not counted as external adoption.
+
+Use the action at its immutable evidence-preserving snapshot:
+
+```yaml
+- id: vouchspec
+  uses: mordiaky/vouchspec/distribution/github-action@ed812a19184d3fa388d854f71b72fb4aa78e2712
+  with:
+    skill-path: path/to/skill
+```
+
+The action emits a receipt draft and publisher/workflow binding for both structural passes
+and explicit structural failures. See the [full pinned workflow, permissions, verification,
+and troubleshooting guide](distribution/github-action/README.md).
 
 ## Evidence labels
 
@@ -98,6 +117,18 @@ proxy with platform ingress limits. Each process serves one fully verified immut
 snapshot; deploy a new lifecycle/index generation by restarting the process. The highest
 observed root-feed sequence and its payload digest are persisted with a cross-process lock.
 
+The price-card route reports the current paid-product hypothesis without accepting an order.
+For a strict request-specific preview:
+
+```powershell
+vouchspec quote-fresh-validation docs\examples\fresh-validation-request.json
+```
+
+The preview validates an allowlisted public host, full immutable commit, explicit skill path,
+profile, maximum price and delivery ID. It returns the exact USD $49.00 hypothesis,
+deliverable, hard limits, refund conditions and remaining gates with `orderable: false`.
+See the [payment flow](docs/payment-flow.md) and [refund policy](docs/refund-policy.md).
+
 ## Read-only catalog MCP
 
 Public install:
@@ -130,7 +161,8 @@ python -m venv .venv
 .venv\Scripts\python -m pip install -e ".[dev]"
 ```
 
-The compatibility command `capabilityproof` remains available alongside `vouchspec`.
+The compatibility command and Python package name `capabilityproof` remain available
+alongside the public `vouchspec` command.
 
 ```powershell
 vouchspec inspect C:\path\to\skill --output receipt.json

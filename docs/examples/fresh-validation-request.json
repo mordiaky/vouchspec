@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "operation": "fresh_public_static_validation",
+  "source": {
+    "host": "github.com",
+    "owner": "mordiaky",
+    "repository": "vouchspec-demo",
+    "commit": "2258eaf0fa557617de9049a5af51f235f5f6dd11",
+    "skill_path": "skills/hello-vouchspec"
+  },
+  "profile": "vouchspec-public-static-v1",
+  "max_price": {
+    "currency": "usd",
+    "amount_minor": 4900
+  },
+  "delivery_id": "demo_request_001"
+}

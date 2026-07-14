@@ -1,2 +1,2 @@
 prospect_id,organization,contact_role,source,qualification_evidence,public_business_contact,channel,status,last_contact,opt_out,notes
-
+P-001,Supabase agent-skills,repository maintainers,https://github.com/supabase/agent-skills,"Active public Agent Skill publisher with release automation and contribution rules; proposal tailored to exact-commit release evidence",https://github.com/supabase/agent-skills/issues/136,public_issue,contacted,2026-07-14T11:41:18Z,false,"Open proposal only; not an integration user request customer or endorsement"

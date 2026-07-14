@@ -1,5 +1,19 @@
 # Changelog
 
+## Unreleased
+
+- Preserve publisher receipt/binding evidence for both structural passes and explicit
+  structural failures, with separate structure/decision outputs.
+- Install the publisher action runtime from a fully resolved hash-locked Linux/Python 3.11
+  dependency set instead of dynamically resolving an unhashed tree.
+- Publish a complete attested owned demo and self-serve publisher workflow; owned evidence
+  remains excluded from external adoption.
+- Add a strict $49 fresh public static validation request contract and non-orderable quote
+  preview, exact nested schemas, duplicate-key rejection, separate order/payment states, and
+  Stripe exact-body webhook authentication.
+- Replace the old external-alpha counters with the authoritative 30-test autonomous
+  commercial goal and explicit exclusion accounting.
+
 ## 0.2.0 - 2026-07-13
 
 Stage A alpha candidate under the provisional public name `VouchSpec`.

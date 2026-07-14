@@ -2,18 +2,22 @@
 
 | ID | Risk | Severity | Control | Status |
 |---|---|---|---|---|
-| R-001 | Evidence is mistaken for a safety guarantee. | High | Explicit labels, digest, method, tested/not-tested fields, limitations, expiry, and no generic verified/safe badge. | Active |
-| R-002 | Static rules miss harmful behavior or flag benign material. | High | Rule IDs, bounded evidence, coverage, transparent issue counts, and no runtime claim. | Active |
-| R-003 | A signed receipt or lifecycle document is forged, replaced, stale, rolled back, or equivocated. | Critical | Exact-byte DSSE/Ed25519, externally configured root JWK, distinct issuer/root keys, expiring root feed, startup sequence+digest persistence, process lock, conservative compromise revocation, mutation tests. | Implemented/reviewed; separate Gist published, with same-account compromise caveat |
-| R-004 | Signing secret reaches source, logs, or the public service. | Critical | Encrypted issuer/root PKCS#8 files outside repository, restrictive ACLs, no secret CLI arguments/output, separate root role. | Implemented locally; operational review pending |
-| R-005 | `VouchSpec` conflicts with an existing name or mark. | High | Provisional low-obvious-conflict screen; no clearance claim or material brand spend. | Active |
-| R-006 | Public metadata processing or publication infringes license/privacy interests. | High | Selected public sources; no original files/archives/executables redistributed; bounded metadata/excerpts disclosed; no license interpretation. | Active |
-| R-007 | Catalog metadata is substituted even though receipt signatures remain valid. | High | Issuer-signed exact index bytes, root-authorized issuer, full index-to-receipt binding, immutable verified process snapshot, externally configured root, persistent sequence state, and managed TLS. | Implemented/reviewed; public byte-parity probes pass |
-| R-008 | Stage A accidentally grows an artifact upload or confidential-data path. | Critical | GET-only catalog API, retrieval-only MCP identifiers/search, POST returns 405, boundary tests. | Controlled locally |
-| R-009 | Git source binding is mistaken for publisher identity. | High | Receipt separates exact commit/blob evidence from publisher identity, which remains not checked. | Controlled by schema/limitations |
-| R-010 | Six structurally failing artifacts are mistaken for passing. | High | Omit `STRUCTURE_VALIDATED`; keep findings and decision in signed receipt; disclose 19 pass/6 fail. | Controlled |
-| R-011 | Built-in public HTTP server lacks TLS or production hardening. | High | Deploy behind managed TLS/proxy; expose only public immutable data; measure/rate-limit at platform boundary. | External deployment gate |
-| R-012 | Free substitutes eliminate willingness to pay. | High | Free search/retrieval, micropriced fresh/comparison/issuance tests, real settlement gate. | Demand unvalidated |
-| R-013 | Linux/cross-OS/archive security is assumed from Windows local tests. | Critical for Stage B | Stage B blocked on Linux-equivalent suite, adversarial fixture matrix, determinism, and explicit skipped-test accounting. | Stage B gate; not a Stage A retrieval gate |
-| R-014 | Dependency lock does not prove the executing runtime. | Medium | Record runtime versions and describe lock hash as reference evidence only. | Active limitation |
-| R-015 | LF conversion changes signed files. | High | Repository LF policy, catalog/schema/lock attributes, full-catalog verification tests. | Controlled |
+| R-001 | Evidence is mistaken for a safety guarantee. | High | Explicit factual labels, limitations, tested/not-tested fields, expiry; no generic safe badge. | Active |
+| R-002 | Static inspection misses harm or flags benign content. | High | Rule IDs, bounded evidence/coverage, transparent findings, no runtime claim. | Active |
+| R-003 | Signed evidence is forged, stale, rolled back, or equivocated. | Critical | Exact-byte DSSE/Ed25519, distinct root/issuer roles, expiring signed lifecycle, persistent sequence/digest, mutation tests. | Implemented/reviewed |
+| R-004 | Signing secret reaches source, logs, worker, or public service. | Critical | Encrypted keys outside repository; no-network signing role; planned constrained signing service. | Stage A implemented; Stage B gate |
+| R-005 | Provisional name conflicts with an existing mark. | High | Low-cost obvious-conflict screen; no clearance claim or material brand spend. | Active |
+| R-006 | Public metadata publication creates license/privacy risk. | High | Selected public immutable sources; no original artifact/archive/executable redistribution; bounded metadata/excerpts. | Active |
+| R-007 | Catalog metadata is substituted around valid receipts. | High | Signed exact index, full index/receipt binding, immutable verified snapshot, separate trust material, managed TLS. | Implemented/reviewed |
+| R-008 | Stage A grows an upload/private/confidential-data path. | Critical | Read-only identifiers/search, write rejection, boundary tests. | Controlled |
+| R-009 | Git source binding is mistaken for publisher identity. | High | Schema and copy separate exact commit evidence from unverified identity. | Controlled |
+| R-010 | Structural failures are mistaken for passes or lost by CI. | High | Failure receipts remain attested; `structure-status` and `decision-status` are explicit; only pass receives validation label. | Corrected; demo verification pending |
+| R-011 | Built-in server is treated as production hardened. | High | Public Stage A uses managed TLS/static hosting; dynamic worker requires bounded deployment controls. | Active gate |
+| R-012 | Free substitutes eliminate willingness to pay. | High | Free retrieval plus $49 fresh exact-version test; genuine settlement/repeat gates. | Demand unvalidated |
+| R-013 | Windows tests are generalized to Linux/cross-OS/archive safety. | Critical for Stage B | Production-equivalent Linux, adversarial path/archive matrix, deterministic checks, explicit skips. | Stage B gate |
+| R-014 | Dependency lock is mistaken for executing-runtime proof. | Medium | Record runtime versions; describe lock hash as reference evidence only. | Active limitation |
+| R-015 | Owned/demo/monitor traffic inflates commercial evidence. | Critical | Source classification, immutable exclusions, raw event ledger, acceptance queries exclude controlled sources. | Policy implemented; telemetry expansion pending |
+| R-016 | Webhook replay, duplicates, reordering, or forged redirects trigger fulfillment. | Critical | Exact raw-body HMAC/timestamp verification, event-ID uniqueness, state machine, server retrieval/reconciliation, no redirect fulfillment. | Signature/state prepared; store/provider pending |
+| R-017 | Payment, refund, fee, or cost records overstate settled revenue/margin. | Critical | Separate order/payment states; count only available unrelated funds; reconcile fees/refunds/disputes; complete per-order ledger. | Design documented; no live orders |
+| R-018 | Immutable-source retrieval causes SSRF, traversal, resource abuse, or artifact execution. | Critical | GitHub-only full commit/path contract; byte/file/depth/time limits; isolated no-egress non-executing worker. | Request validation prepared; worker gate |
+| R-019 | Marketplace/registry publication accepts owner-binding terms or publishes invalid metadata. | High | Use official requirements; prepare locally; owner authenticates/accepts terms only when eligible. | Controlled |

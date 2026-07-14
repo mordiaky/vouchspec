@@ -1,0 +1,1 @@
+order_id,buyer_id,quote_id,quoted_usd,collected_usd,payment_status,provider_fee_usd,direct_compute_usd,direct_third_party_usd,gross_contribution_usd,receipt_id,delivery_status,refund_status,settled_at,counts_for_goal,evidence_url

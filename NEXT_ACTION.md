@@ -1,7 +1,8 @@
 # Next action
 
-The independently reviewed static REST distribution, out-of-band key publication, and
-installable stdio MCP are live. Without adding uploads, private repositories, confidential
-content, or Stage C infrastructure, bind one genuine external publisher CI attestation and
-measure 10 legitimate machine requests, three repeat requests, actual cost, and one genuine
-machine-paid settlement. Operator-owned smoke traffic does not count.
+Convert the open Supabase proposal into a genuine external integration while continuing the
+same carefully targeted publisher channel. In parallel, complete the allowlisted immutable
+fetcher, isolated no-egress worker, constrained signing boundary, idempotent order ledger, and
+provider sandbox adapter required to turn the existing USD $49 quote preview into an orderable
+machine flow. Count only independently attributable external integrations, requests, and
+settled payments; owned demo, CI, monitoring, and smoke traffic remain excluded.
