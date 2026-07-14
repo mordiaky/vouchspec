@@ -1,0 +1,3 @@
+id,start_date,hypothesis,segment,offer,channel,success_metric,failure_metric,max_time,max_cash_usd,max_contacts,constraints,status,result,decision
+E-001,2026-07-13,"Level 1-3 evidence can be produced reproducibly without executing an artifact","Agent Skill publishers and operators","Deterministic Capability Receipt","Local product proof","One real public skill and all hostile fixtures yield reviewed deterministic receipts","Receipt is non-deterministic, executes content, or misses a seeded high-risk pattern","1 operating cycle",0.00,0,"Public or synthetic inputs only; no artifact execution",in_progress,,continue
+

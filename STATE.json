@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "business_stage": "selected_building_evidence_mvp",
+  "selected_business": "CapabilityProof",
+  "selected_offer": "Exact-version structural, provenance, permission, and static-risk evidence for Agent Skills",
+  "current_goal": "Reach every charter acceptance test, beginning with a reproducible real-artifact Capability Receipt",
+  "acceptance_tests": {
+    "specific_segment_and_problem": "documented_owner_selected_pending_external_validation",
+    "opportunity_supported_by_current_evidence": "in_progress",
+    "complete_offer": "provisional_pending_market_evidence",
+    "live_acquisition_path": "pending",
+    "working_sales_and_payment_path": "pending",
+    "three_unaffiliated_paying_customers": "pending",
+    "settled_gross_revenue_500": "pending",
+    "successful_delivery": "pending",
+    "delivery_quality_checks": "mvp_tests_in_progress",
+    "revenue_is_external_and_genuine": "pending",
+    "positive_contribution_margin": "pending",
+    "owner_spending_within_100": "passing",
+    "complete_material_records": "in_progress",
+    "repeatable_acquisition_process": "pending",
+    "repeatable_fulfillment_process": "in_progress",
+    "independent_audit_pass": "pending"
+  },
+  "cash_budget_remaining_usd": 100.0,
+  "owner_funded_spending_usd": 0.0,
+  "collected_revenue_usd": 0.0,
+  "pending_revenue_usd": 0.0,
+  "refund_exposure_usd": 0.0,
+  "current_customers": [],
+  "pipeline_metrics": {
+    "qualified_prospects": 0,
+    "contacted": 0,
+    "responses": 0,
+    "proposals": 0,
+    "wins": 0
+  },
+  "active_experiments": [
+    "E-001 real public Agent Skill receipt generation"
+  ],
+  "current_blockers": [],
+  "human_actions_requested": [],
+  "top_next_actions": [
+    "Verify current standards, competing products, and name conflicts from primary sources",
+    "Implement and test deterministic inspection plus receipt generation",
+    "Run the pipeline against one permitted public Agent Skill and preserve the receipt"
+  ],
+  "last_verified_external_state": "No external CapabilityProof asset has been published, no customer contacted, no payment path opened, and no money spent.",
+  "last_checkpoint_time": "2026-07-13T20:00:00-07:00",
+  "exact_resume_instruction": "Read CHARTER.md, GOAL.md, STATE.json, STATUS.md, BACKLOG.md, NEXT_ACTION.md, BUDGET.csv, REVENUE.csv, EXPERIMENTS.csv, CRM.csv, and HUMAN_ACTIONS.md. Continue E-001 without executing inspected artifacts."
+}
+

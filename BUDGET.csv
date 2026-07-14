@@ -1,0 +1,3 @@
+date,vendor,purpose,amount_usd,recurrence,experiment_or_customer,expected_benefit,approval_status,evidence,remaining_owner_budget_usd
+2026-07-13,none,Workspace initialization,0.00,one-time,E-001,Auditable operating state,within-charter,CHARTER.md,100.00
+
