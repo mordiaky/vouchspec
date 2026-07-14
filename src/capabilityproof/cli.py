@@ -29,6 +29,8 @@ from .signing import (
     verify_receipt_envelope,
 )
 from .snapshot import resolve_allowed_path
+from .stage_b import DockerNoEgressWorker, freeze_public_source
+from .stage_b_signer import sign_verified_worker_result
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -59,6 +61,38 @@ def _build_parser() -> argparse.ArgumentParser:
     quote_parser.add_argument("request", type=Path, help="JSON request file")
     quote_parser.add_argument("--quote-id", help="deterministic q_<24 hex> identifier for testing")
     quote_parser.add_argument("--generated-at", help="timezone-aware ISO 8601 timestamp for reproducible output")
+
+    freeze_parser = subparsers.add_parser(
+        "freeze-public-validation",
+        help="fetch and freeze one exact public GitHub skill without executing artifact content",
+    )
+    freeze_parser.add_argument("request", type=Path, help="strict Stage B JSON request file")
+    freeze_parser.add_argument("--output-root", type=Path, required=True)
+
+    worker_parser = subparsers.add_parser(
+        "run-frozen-validation",
+        help="inspect a verified frozen source in a pinned Docker worker with no network",
+    )
+    worker_parser.add_argument("frozen_root", type=Path)
+    worker_parser.add_argument("--output", type=Path, required=True)
+    worker_parser.add_argument(
+        "--image",
+        required=True,
+        help="immutable sha256 image ID or registry reference with @sha256 digest",
+    )
+    worker_parser.add_argument("--generated-at", help="timezone-aware ISO 8601 timestamp")
+    worker_parser.add_argument("--expires-in-days", type=int, default=7)
+
+    stage_b_sign_parser = subparsers.add_parser(
+        "sign-frozen-validation",
+        help="sign exact worker receipt bytes after re-verifying freeze and isolation evidence",
+    )
+    stage_b_sign_parser.add_argument("frozen_root", type=Path)
+    stage_b_sign_parser.add_argument("--worker-output", type=Path, required=True)
+    stage_b_sign_parser.add_argument("--private-key", type=Path, required=True)
+    stage_b_sign_parser.add_argument("--passphrase-file", type=Path)
+    stage_b_sign_parser.add_argument("--allowed-worker-image", action="append", required=True)
+    stage_b_sign_parser.add_argument("--output", type=Path, required=True)
 
     serve_parser = subparsers.add_parser("serve", help="run the root-confined loopback JSON API")
     serve_parser.add_argument("--allow-root", type=Path, required=True)
@@ -196,6 +230,47 @@ def main(argv: list[str] | None = None) -> int:
                 generated_at = datetime.fromisoformat(normalized)
             quote = build_fresh_validation_quote(request, generated_at=generated_at, quote_id=args.quote_id)
             print(json.dumps(quote, sort_keys=True, separators=(",", ":")))
+            return 0
+        if args.command == "freeze-public-validation":
+            request = load_strict_commerce_json(args.request.read_text(encoding="utf-8"))
+            frozen = freeze_public_source(
+                request,
+                args.output_root.expanduser().resolve(strict=False),
+            )
+            print(json.dumps({
+                "artifact_directory_sha256": frozen.manifest["artifact_directory_sha256"],
+                "freeze_manifest_digest": frozen.manifest["manifest_digest"],
+                "frozen_root": str(frozen.root),
+                "request_digest": frozen.manifest["request_digest"],
+            }, sort_keys=True, separators=(",", ":")))
+            return 0
+        if args.command == "run-frozen-validation":
+            result = DockerNoEgressWorker(args.image).run(
+                args.frozen_root.expanduser().resolve(strict=True),
+                args.output.expanduser().resolve(strict=False),
+                generated_at=args.generated_at,
+                expires_in_days=args.expires_in_days,
+            )
+            print(json.dumps({
+                "execution": str(result.execution_path),
+                "output_root": str(result.output_root),
+                "receipt": str(result.receipt_path),
+                "receipt_id": result.receipt["receipt_id"],
+            }, sort_keys=True, separators=(",", ":")))
+            return 0
+        if args.command == "sign-frozen-validation":
+            private_key = load_private_key(
+                args.private_key.expanduser().resolve(strict=True),
+                _passphrase(args.passphrase_file),
+            )
+            report = sign_verified_worker_result(
+                args.frozen_root.expanduser().resolve(strict=True),
+                args.worker_output.expanduser().resolve(strict=True),
+                args.output.expanduser().resolve(strict=False),
+                private_key,
+                allowed_image_references=set(args.allowed_worker_image),
+            )
+            print(json.dumps(report, sort_keys=True, separators=(",", ":")))
             return 0
         if args.command == "serve":
             server = create_server(args.allow_root, args.port)

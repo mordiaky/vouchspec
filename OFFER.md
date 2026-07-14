@@ -23,10 +23,12 @@ method. HTTP and MCP retrieval are read-only and require no account or call.
 - **Support:** machine-readable status/errors, documentation, and asynchronous GitHub issues;
   no calls or custom onboarding.
 
-The current implementation exposes a strict request validator and non-orderable quote
-preview. Checkout remains disabled until the allowlisted immutable fetcher, isolated
-no-egress worker, constrained signer, Stripe account, webhook secret, idempotent order store,
-and reconciliation loop pass their gates.
+The current implementation exposes a strict request validator and non-orderable public quote
+preview. The immutable fetcher, isolated no-egress worker, constrained signing gate,
+idempotent order/event/cost store, and full fake-provider sandbox delivery pass locally.
+Checkout remains disabled until the authenticated public API, real Stripe adapter,
+operational signing role, Stripe account, payout connection, webhook secret, and live
+reconciliation deployment pass their gates.
 
 ## Exclusions
 

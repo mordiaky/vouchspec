@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "performed_at": "2026-07-14T13:02:04Z",
+  "environment": "sandbox",
+  "source_classification": "operator_owned_demo_excluded",
+  "counts_for_goal": false,
+  "settlement_status": "sandbox_nonsettling",
+  "source": {
+    "repository": "https://github.com/mordiaky/vouchspec-demo.git",
+    "commit": "344558d51ecae7929c50b7cff94e120bfca53807",
+    "skill_path": "skills/hello-vouchspec"
+  },
+  "freeze": {
+    "profile": "vouchspec-frozen-public-git-v1",
+    "manifest_digest": "sha256:f154c652f9c91c126a0a9fc674886d19c6f1de09ee6859f2a438a225e952c969",
+    "artifact_directory_sha256": "b0b3fa6662dc6f673dc4fe274fc9a8e5d04923cbce8fc4e5f1a976c7f83163fe",
+    "file_count": 1,
+    "total_bytes": 406
+  },
+  "worker": {
+    "profile": "vouchspec-docker-no-egress-static-v1",
+    "container_image": "sha256:626627b21d4fa2dfb984342abe0028a759a47912da8954ce23daa33148338cee",
+    "network": "none",
+    "root_filesystem": "read_only",
+    "input_mount": "read_only",
+    "writable_host_mount": false,
+    "output_channel": "bounded_stdout_1000000_bytes",
+    "artifact_execution": "not_performed",
+    "duration_ms": 890
+  },
+  "delivery": {
+    "order_id": "ord_test_f9324772f96035b00f6d133e",
+    "payment_provider": "fake",
+    "payment_status": "available_sandbox_only",
+    "simulated_amount_minor": 4900,
+    "simulated_processing_fee_minor": 172,
+    "currency": "usd",
+    "receipt_id": "cpr_d7c6f31f59fc3032aed8cbf7",
+    "receipt_sha256": "7886010abd8b4050c82bb2da98d5b5a8556fa538904730d7d38cf5dcb7eddffc",
+    "envelope_sha256": "653b9cf486f9d85317c846d81f24bd168e6f0b592d50bbfe869f1d6e79d11e8c",
+    "test_signing_keyid": "lWkhqaoVMPD-k3r62OPO7M8ak2U9g1rMbZFNL9STZ50",
+    "direct_cost_categories_recorded": 10,
+    "direct_cost_minor": 0
+  },
+  "accounting": {
+    "settled_revenue_minor": 0,
+    "goal_revenue_minor": 0,
+    "goal_buyers": 0,
+    "goal_machine_requests": 0
+  },
+  "verification": {
+    "tests_passed": 102,
+    "tests_skipped": 1,
+    "skip_reason": "Windows host lacks symlink creation privilege; Linux/container path and archive regressions passed"
+  }
+}

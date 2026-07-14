@@ -5,7 +5,7 @@
 | Public search | Free | 25-entry public catalog live; external usage unmeasured |
 | Existing signed receipt retrieval | Free | Public exact-byte retrieval live; external usage unmeasured |
 | Receipt comparison | USD $0.01 | Planned machine-native rail only; not orderable |
-| Fresh public static validation | **USD $49.00** | Request/quote preview implemented; worker and payment rail not live |
+| Fresh public static validation | **USD $49.00** | Full nonsettling sandbox fulfillment proven; public/live payment rail not live |
 | Signed receipt issuance | Included in fresh validation initially | Not separately orderable |
 | Continuous public-artifact monitoring | USD $2-$25 monthly | Deferred until integration/payment/request evidence |
 

@@ -1,6 +1,7 @@
 # VouchSpec payment and reconciliation flow
 
-Status: implementation preparation; live checkout and orders remain disabled.
+Status: provider-neutral sandbox fulfillment and reconciliation are implemented; live Stripe
+checkout and public orders remain disabled.
 
 ## Provider decision
 
@@ -31,19 +32,22 @@ Current official sources (accessed 2026-07-14):
    `fresh-validation-request.schema.json`.
 2. `vouchspec quote-fresh-validation REQUEST.json` validates the allowlisted public host,
    full immutable commit, explicit skill path, profile, maximum price and delivery ID.
-3. The preview returns USD 49.00, exact deliverable, limits, expiry, refund conditions,
+3. The public preview returns USD 49.00, exact deliverable, limits, expiry, refund conditions,
    payment options and remaining live gates. It is explicitly `orderable: false` today.
-4. Once live, the service persists the immutable quote before creating a Stripe Checkout
+4. The local sandbox can persist an orderable quote using only the deterministic fake
+   provider. Every such quote/order is `sandbox_nonsettling` and `counts_for_goal: false`.
+5. Once live, the service persists the immutable quote before creating a Stripe Checkout
    Session. The stored amount—not a client-returned amount—is authoritative.
-5. The Checkout Session carries only opaque `order_id`, `quote_id` and `request_digest`
+6. The Checkout Session carries only opaque `order_id`, `quote_id` and `request_digest`
    metadata. Creation uses idempotency key `checkout:{order_id}`.
-6. The service fulfills only after an authenticated webhook and server-side retrieval of the
+7. The service fulfills only after an authenticated webhook and server-side retrieval of the
    Checkout Session and PaymentIntent confirm live mode, amount, currency, metadata and paid
    status. Browser redirects never authorize work.
-7. Duplicate or out-of-order provider events are deduplicated by immutable `event.id`.
-8. The result endpoint returns the signed receipt and verification material. The service
+8. Duplicate or out-of-order provider events are persisted, deduplicated by immutable event
+   ID, and reconciled as predecessor states arrive.
+9. The result endpoint returns the signed receipt and verification material. The service
    records direct compute, provider costs, processing fee, delivery and refund status.
-9. A daily reconciliation pass reads the charge Balance Transaction. Revenue counts as
+10. A daily reconciliation pass reads the charge Balance Transaction. Revenue counts as
    settled only when provider funds are available and remain non-refunded/non-disputed.
 
 ## Independent state dimensions
@@ -58,20 +62,27 @@ Payment: `pending -> captured -> available`, with explicit `failed`, `refund_pen
 refunded`, and `disputed` terminals.
 
 The implementation rejects every transition not explicitly listed in
-`capabilityproof.commerce`.
+`capabilityproof.commerce`. The durable SQLite implementation is in
+`capabilityproof.commerce_store`; it refuses to open one database under a different
+`sandbox`/`live` environment.
 
 ## Webhook security prepared locally
 
 `verify_stripe_webhook_signature` authenticates the exact raw request bytes, accepts key
 rotation through multiple `v1` signatures, compares in constant time, and rejects timestamps
-outside a five-minute replay window. A live listener, secret and provider event store do not
-exist yet, so no webhook route is exposed.
+outside a five-minute replay window. The event store and reordering logic exist, but only the
+fake sandbox adapter is connected. No Stripe listener or webhook route is exposed.
 
 ## Remaining live gates
 
-- Allowlisted immutable public-source fetcher with redirect/DNS/size controls.
-- Isolated no-egress, no-secret, non-executing worker with hard resource limits.
-- Separate constrained signing service.
-- Persistent idempotent quote/order/event/cost store and reconciliation job.
+- Authenticated, rate-limited HTTPS quote/order/result service with opaque delivery tokens.
+- Real Stripe Checkout creation, server-side object retrieval, webhook normalization, and
+  balance-transaction reconciliation adapter.
+- Operational no-network signing role with an owner-controlled production issuer key and
+  allowlisted production image.
 - Owner-controlled Stripe account activation, payout connection and secret provisioning.
-- End-to-end Stripe sandbox tests, then a live unrelated-party transaction.
+- End-to-end Stripe test-mode tests, then a live unrelated-party transaction.
+
+The immutable fetcher, no-egress worker, constrained signing gate, durable event/cost store,
+and sandbox end-to-end fulfillment are complete. Their limits and proof are documented in
+[Stage B operations](stage-b-operations.md).

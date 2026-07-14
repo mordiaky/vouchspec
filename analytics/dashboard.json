@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-07-14T12:00:00Z",
+  "as_of": "2026-07-14T13:02:04Z",
   "goal_achieved": false,
   "publisher_integrations": {"verified": 0, "required": 3},
   "machine_requests": {"verified": 0, "required": 100},
@@ -15,6 +15,13 @@
   "qualified_prospects": 1,
   "contacts": 1,
   "open_external_proposals": 1,
+  "stage_b_sandbox": {
+    "signed_deliveries": 1,
+    "settled_revenue_usd": "0.00",
+    "counts_for_goal": false,
+    "engineering_tests_passed": 102,
+    "engineering_tests_skipped": 1
+  },
   "exclusions": [
     "owner_activity",
     "vouchspec_ci",

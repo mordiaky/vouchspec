@@ -33,8 +33,10 @@ new trusted channel.
 - **Stage A — public artifact index (current):** selected public artifacts only; signed
   receipts and read-only REST/MCP retrieval; no uploads, private repositories, or
   customer-confidential content.
-- **Stage B — public repository validation (later):** allowlisted public host, full commit,
-  explicit subdirectory, bounded immutable retrieval, isolated worker, and signed result.
+- **Stage B — public repository validation (sandbox-ready, not public):** allowlisted public
+  host, full commit, explicit subdirectory, bounded immutable retrieval, isolated no-egress
+  worker, constrained signing, and a durable nonsettling commerce ledger. Live order intake
+  and settlement remain disabled.
 - **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
   tenant isolation, deletion policy, and expanded legal/incident controls only after
   demand and revenue justify them.
@@ -130,7 +132,9 @@ vouchspec quote-fresh-validation docs\examples\fresh-validation-request.json
 The preview validates an allowlisted public host, full immutable commit, explicit skill path,
 profile, maximum price and delivery ID. It returns the exact USD $49.00 hypothesis,
 deliverable, hard limits, refund conditions and remaining gates with `orderable: false`.
-See the [payment flow](docs/payment-flow.md) and [refund policy](docs/refund-policy.md).
+The internal sandbox can exercise an explicitly nonsettling order, but it cannot count as a
+buyer, request, or revenue. See the [Stage B operating boundary](docs/stage-b-operations.md),
+[payment flow](docs/payment-flow.md), and [refund policy](docs/refund-policy.md).
 
 ## Read-only catalog MCP
 
