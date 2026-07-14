@@ -50,6 +50,21 @@ _WORKER_ID = re.compile(r"[a-z0-9][a-z0-9._-]{7,63}")
 _ORDER_ID = re.compile(r"ord_[0-9a-f]{24}")
 _DIGEST = re.compile(r"sha256:[0-9a-f]{64}")
 _ERROR_CODE = re.compile(r"[a-z][a-z0-9_]{2,99}")
+_SAFE_SIGNER_FAILURES = {
+    ("invalid_key", "private key or passphrase is invalid"): "isolated_signer_invalid_key",
+    ("missing_passphrase", "an encrypted-key passphrase is required"): "isolated_signer_missing_passphrase",
+    ("signing_gate_failed", "worker result files are missing"): "isolated_signer_result_missing",
+    ("signing_gate_failed", "worker receipt is empty or oversized"): "isolated_signer_receipt_size",
+    ("signing_gate_failed", "worker execution report is empty or oversized"): "isolated_signer_execution_size",
+    ("signing_gate_failed", "worker result is not UTF-8"): "isolated_signer_result_encoding",
+    ("signing_gate_failed", "worker receipt integrity failed"): "isolated_signer_receipt_integrity",
+    ("signing_gate_failed", "worker execution fields are invalid"): "isolated_signer_execution_fields",
+    ("signing_gate_failed", "worker isolation evidence failed"): "isolated_signer_isolation_evidence",
+    ("signing_gate_failed", "worker timing evidence is inconsistent"): "isolated_signer_timing_evidence",
+    ("signing_gate_failed", "receipt is not bound to approved worker evidence"): "isolated_signer_receipt_binding",
+    ("signing_gate_failed", "signing self-verification changed payload bytes"): "isolated_signer_self_verification",
+    ("signing_gate_failed", "signed output could not be written"): "isolated_signer_output_write",
+}
 
 
 class HostedWorkerError(CapabilityProofError):
@@ -58,6 +73,26 @@ class HostedWorkerError(CapabilityProofError):
     def __init__(self, message: str, *, code: str, retryable: bool = False) -> None:
         super().__init__(message, code=code)
         self.retryable = retryable
+
+
+def _safe_signer_failure_code(stderr: bytes) -> str | None:
+    """Map fixed signer failures to bounded codes without exposing stderr text."""
+    if not stderr or len(stderr) > 16_384:
+        return None
+    try:
+        value = json.loads(stderr.decode("utf-8", errors="strict"))
+    except (UnicodeError, json.JSONDecodeError):
+        return None
+    if not isinstance(value, dict) or set(value) != {"error"}:
+        return None
+    error = value["error"]
+    if not isinstance(error, dict) or set(error) != {"code", "message"}:
+        return None
+    code = error["code"]
+    message = error["message"]
+    if not isinstance(code, str) or not isinstance(message, str):
+        return None
+    return _SAFE_SIGNER_FAILURES.get((code, message))
 
 
 @dataclass(frozen=True)
@@ -384,6 +419,7 @@ def _sign_no_egress(
             stdout_limit=64_000,
             code="isolated_signer_failed",
             environment=_safe_docker_environment(),
+            error_code_parser=_safe_signer_failure_code,
         )
     except CapabilityProofError as exc:
         raise HostedWorkerError(

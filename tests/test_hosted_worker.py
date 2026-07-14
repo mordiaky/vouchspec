@@ -5,9 +5,10 @@ import pytest
 from capabilityproof.hosted_worker import (
     HostedWorkerConfig,
     HostedWorkerError,
+    _load_preclaimed_job,
     _normalize_api_base_url,
     _parse_claim,
-    _load_preclaimed_job,
+    _safe_signer_failure_code,
     build_no_egress_signer_command,
 )
 from capabilityproof.stage_b import FrozenSource
@@ -40,6 +41,21 @@ def test_hosted_api_origin_is_https_only_and_redirect_free() -> None:
     ):
         with pytest.raises(HostedWorkerError):
             _normalize_api_base_url(value)
+
+
+def test_signer_diagnostics_emit_only_allowlisted_codes() -> None:
+    assert _safe_signer_failure_code(
+        b'{"error":{"code":"signing_gate_failed","message":"worker isolation evidence failed"}}'
+    ) == "isolated_signer_isolation_evidence"
+    assert _safe_signer_failure_code(
+        b'{"error":{"code":"invalid_key","message":"private key or passphrase is invalid"}}'
+    ) == "isolated_signer_invalid_key"
+    assert _safe_signer_failure_code(
+        b'{"error":{"code":"signing_gate_failed","message":"secret=/tmp/private.pem"}}'
+    ) is None
+    assert _safe_signer_failure_code(
+        b'{"error":{"code":"signing_gate_failed","message":"worker isolation evidence failed","path":"/tmp/key"}}'
+    ) is None
 
 
 def test_claim_contract_is_exact_and_lease_bound() -> None:

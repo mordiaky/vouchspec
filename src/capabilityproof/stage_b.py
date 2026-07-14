@@ -16,7 +16,7 @@ import subprocess
 import tarfile
 import threading
 import time
-from typing import Any, BinaryIO
+from typing import Any, BinaryIO, Callable
 import unicodedata
 from uuid import uuid4
 
@@ -174,6 +174,7 @@ def _run_bounded(
     stdout_limit: int,
     code: str,
     environment: dict[str, str] | None = None,
+    error_code_parser: Callable[[bytes], str | None] | None = None,
 ) -> bytes:
     try:
         process = subprocess.Popen(
@@ -216,7 +217,8 @@ def _run_bounded(
     if overflow.is_set():
         raise LimitExceeded("bounded subprocess output exceeded its limit", code=code)
     if return_code != 0:
-        raise InputRejected("bounded subprocess failed", code=code)
+        parsed_code = error_code_parser(bytes(stderr)) if error_code_parser is not None else None
+        raise InputRejected("bounded subprocess failed", code=parsed_code or code)
     return bytes(stdout)
 
 
