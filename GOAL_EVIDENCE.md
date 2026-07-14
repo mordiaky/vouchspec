@@ -59,7 +59,9 @@ and test traffic is explicitly excluded.
 ## CDP Bazaar one-call launch evidence
 
 - Connected deployment commit:
-  `f84449fbf2b825b46a08582666ea1a09f7bd1654`.
+  `fc26b09a5d391029c21d11f9cb8ee25b14aff2d7`.
+- Launch implementation merged through `mordiaky/plyrium#31`; CI runner-memory repair merged
+  through `#32`. Post-merge main CI run `29373305038` passed.
 - Direct route:
   `POST https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/validate`.
 - No tenant registration or authentication is required before payment. A successful payment
@@ -75,7 +77,7 @@ and test traffic is explicitly excluded.
   CDP-facilitated settlement.
 - The dedicated CDP server key is read-only and encrypted only in the branch-scoped Vercel
   environment. No wallet secret or private key is configured in the application.
-- Repository gates: TypeScript typecheck, 169 tests, security/release audits, production build,
+- Repository gates: TypeScript typecheck, 176 tests, security/release audits, production build,
   and production dependency audit with zero known vulnerabilities all passed.
 - Accounting: health, unpaid, invalid-signature, owner, and controlled settlement probes are
   excluded from all request, buyer, adoption, and revenue counters.

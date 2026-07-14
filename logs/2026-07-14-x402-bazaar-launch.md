@@ -3,8 +3,8 @@
 ## Outcome
 
 The agent-native one-call VouchSpec intake is deployed at
-`POST https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/validate` from Plyrium commit
-`f84449fbf2b825b46a08582666ea1a09f7bd1654`.
+`POST https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/validate` from reconciled Plyrium
+commit `fc26b09a5d391029c21d11f9cb8ee25b14aff2d7`.
 
 An agent submits one strict public immutable GitHub request. Before payment, the route returns the
 official x402 v2 HTTP 402 challenge. After a valid CDP-facilitated settlement, the same call creates
@@ -36,8 +36,11 @@ Exact payment retries recover the same capabilities. No human checkout exists.
 - Public daily rate limits run before parsing. Cross-site browser mutations are rejected. Responses
   containing capabilities are no-store.
 - `npm run check`, `npm run build`, the 13 focused VouchSpec security tests, TypeScript typecheck,
-  and `npm audit --omit=dev` passed. The full connected repository reports 169 passing tests and
+  and `npm audit --omit=dev` passed. The full connected repository reports 176 passing tests and
   zero known production dependency vulnerabilities.
+- Launch PR `mordiaky/plyrium#31` merged the agent-native sandbox. PR `#32` raised the GitHub CI
+  check-step Node heap from the default approximately 2 GB to 4 GB after an observed runner OOM;
+  post-merge main run `29373305038` passed check and production build.
 
 ## Accounting
 

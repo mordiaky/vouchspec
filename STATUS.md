@@ -10,7 +10,7 @@
   verifies and settles through Coinbase's authenticated CDP facilitator and declares the official
   x402 Bazaar extension. The commercial price remains an unvalidated USD $49 hypothesis.
   Mainnet is fail-closed.
-- **CDP/Bazaar launch:** deployment `f84449fbf2b825b46a08582666ea1a09f7bd1654` is live. Hosted
+- **CDP/Bazaar launch:** reconciled deployment `fc26b09a5d391029c21d11f9cb8ee25b14aff2d7` is live. Hosted
   health reports Bazaar readiness; a valid anonymous request returns HTTP 402 with one exact
   Base-Sepolia requirement for 1.00 test USDC, the canonical sandbox URL, and `extensions.bazaar`.
   A syntactically valid but invalid-signature probe was rejected with HTTP 402 and did not settle.
@@ -45,11 +45,12 @@
   seed Bazaar indexing, remains owner/test traffic and must stay excluded from every goal counter.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
-- **Verification:** the connected Plyrium repository passes typecheck, 169 tests, private-address,
+- **Verification:** the connected Plyrium repository passes typecheck, 176 tests, private-address,
   public-route, transaction, and migration audits, a production build, and a zero-vulnerability
-  production dependency audit. The CapabilityProof suite still has 136 passes and one explicit
-  Windows symlink-privilege skip. The latest hosted paid-flow workflow run succeeded at commit
-  `13c65f3dc36a099c0d45aa36aa08b58b3d738371`.
+  production dependency audit. VouchSpec launch PR `mordiaky/plyrium#31` and CI memory repair PR
+  `#32` are merged; post-merge main CI run `29373305038` passed. The CapabilityProof suite still
+  has 136 passes and one explicit Windows symlink-privilege skip. The latest hosted paid-flow
+  workflow run succeeded at commit `13c65f3dc36a099c0d45aa36aa08b58b3d738371`.
 
 Next: complete one explicitly excluded CDP testnet settlement to trigger Bazaar indexing, verify
 the public listing, then acquire unrelated agent integrations that discover and exercise the
