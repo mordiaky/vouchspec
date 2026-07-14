@@ -87,6 +87,6 @@
     "Build and test the bounded Stage B worker and idempotent commerce ledger",
     "Prepare payment activation to the minimum unavoidable owner credential gate"
   ],
-  "last_checkpoint_time": "2026-07-14T12:00:00Z",
+  "last_checkpoint_time": "2026-07-14T12:17:00Z",
   "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, and the latest public issue/demo runs. Preserve all exclusion rules and the no-upload/no-execution boundary."
 }

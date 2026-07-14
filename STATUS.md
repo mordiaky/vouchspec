@@ -5,7 +5,8 @@
   independent verification, and lifecycle metadata are live.
 - **Publisher route:** the action now preserves and exposes signed evidence for both structural
   passes and structural failures; a complete public demo is available at
-  `https://github.com/mordiaky/vouchspec-demo`.
+  `https://github.com/mordiaky/vouchspec-demo`. Run `29331787790` passed both cases and all
+  four downloaded files passed independent GitHub attestation verification.
 - **External adoption:** 0 / 3 retained unrelated integrations. One tailored proposal is open
   at `https://github.com/supabase/agent-skills/issues/136`; an issue is outreach, not adoption.
 - **External machine use:** 0 / 100 legitimate requests; 0 / 10 sources; 0 / 20 repeat

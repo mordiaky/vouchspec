@@ -47,7 +47,10 @@ Stage A server or MCP tools.
 The public [publisher-CI demo](https://github.com/mordiaky/vouchspec-demo) shows the complete
 trusted-workflow path: immutable action pins, exact-commit inspection, two GitHub artifact
 attestations, downloadable evidence, and independent `gh attestation verify` commands. The
-demo is operator-controlled and is not counted as external adoption.
+latest [verified matrix run](https://github.com/mordiaky/vouchspec-demo/actions/runs/29331787790)
+passes both a structural-pass case and an intentional structural-failure case. Its four
+downloaded evidence files independently verified with `gh attestation verify`. The demo is
+operator-controlled and is not counted as external adoption.
 
 Use the action at its immutable evidence-preserving snapshot:
 

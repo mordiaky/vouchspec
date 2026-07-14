@@ -1,2 +1,2 @@
 integration_id,external_owner,repository,integration_type,first_run_at,last_verified_at,evidence_url,retained,counts_for_goal,exclusion_reason
-DEMO-001,mordiaky,mordiaky/vouchspec-demo,publisher_ci,2026-07-14T11:00:00Z,2026-07-14T11:00:00Z,https://github.com/mordiaky/vouchspec-demo/actions/runs/29329608970,true,false,operator_owned_demo
+DEMO-001,mordiaky,mordiaky/vouchspec-demo,publisher_ci,2026-07-14T11:00:00Z,2026-07-14T12:15:29Z,https://github.com/mordiaky/vouchspec-demo/actions/runs/29331787790,true,false,operator_owned_demo

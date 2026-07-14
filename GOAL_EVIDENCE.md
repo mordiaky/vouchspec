@@ -45,7 +45,8 @@ traffic are explicitly excluded.
 - DSSE v1.0.2/Ed25519 exact-byte receipt envelopes, signed index, root-signed lifecycle, and
   separate public trust material.
 - Public GitHub-managed TLS/CORS distribution and a public installable read-only stdio MCP.
-- Public owned demo with workflow-bound attestations. It proves integration mechanics only.
+- Public owned demo run `29331787790` with pass/failure matrix assertions and four independently
+  verified workflow-bound attestations. It proves integration mechanics only.
 - One public, repository-specific proposal to an unrelated publisher. It proves outreach only.
 
 Evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
