@@ -104,9 +104,10 @@
 - **Reason:** The prior USD $0.10 hypothesis is below Stripe's USD $0.50 minimum and cannot
   absorb the fixed USD $0.30 fee. The revised hypothesis leaves room for a USD $5 direct-cost
   ceiling while remaining a real market test, not a validated price.
-- **Current gate:** The strict request/quote preview, state rules, and webhook signature
-  verification are implemented, but checkout remains disabled until the Stage B worker,
-  signer, persistent order/event store, account activation, and sandbox verification exist.
+- **Current gate:** The worker, store, account-bound Stripe adapter, real unpaid test Checkout,
+  and paid lifecycle now pass. Public/live Checkout remains disabled until the adapter is wired
+  to the managed authenticated HTTP/webhook boundary, kernel fetch quota exists, and the
+  production signing role is provisioned.
 
 ## 2026-07-14 - Hash-lock the publisher action runtime
 
@@ -136,5 +137,18 @@
   30 days, and immediately rotatable/revocable. Security-state changes are audited without
   recording tokens or IP addresses.
 - **Boundary:** the server is loopback and sandbox only. This does not authorize public
-  exposure or live settlement; managed TLS/ingress, secret operations, Stripe reconciliation,
-  paid-receipt lifecycle, and production signing remain launch gates.
+  exposure or live settlement; managed TLS/ingress, exact-body Stripe HTTP/webhook wiring,
+  secret operations, kernel fetch quota, and production signing remain launch gates.
+
+## 2026-07-14 - Bind Stripe credentials to explicit accounts and keep root signing offline
+
+- **Decision:** Every Stripe adapter instance must retrieve and match an expected enabled
+  account ID before creating Checkout state. Test and live accounts use separate IDs,
+  environments, and databases; live Checkout also requires an explicit activation flag.
+- **Evidence:** The owner-authorized test and live credentials authenticated to distinct enabled
+  accounts. A USD $49 test Session was created, reconciled unpaid, and expired without a charge;
+  neither secret nor Checkout URL entered SQLite.
+- **Lifecycle:** The online role may build a complete paid-receipt draft and verify/publish an
+  exact envelope, but only the offline recovery-root role signs it. Root replacement, rollback,
+  equivocation, incomplete receipt/signer coverage, and terminal-state restoration fail closed.
+- **Boundary:** This verifies the payment/lifecycle core, not a public service or settled sale.

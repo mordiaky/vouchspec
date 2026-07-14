@@ -63,6 +63,32 @@ commerce store, provider-event path, and planned public order/result boundary.
   bodies, duplicate auth headers, cross-tenant access, expiry, rotation, revocation, result
   rebinding, quota exhaustion, and live-store startup are covered by tests.
 
+### Critical — forged or cross-account Stripe state could authorize fulfillment
+
+- **Affected boundary:** Stripe Checkout, webhooks, and payment reconciliation.
+- **Exploit scenario:** a redirect, forged webhook, test/live mix-up, cross-bound object, partial
+  refund, or premature balance state could advance fulfillment or overstate settlement.
+- **Fix:** pinned official Stripe SDK/API version; expected enabled-account verification; exact
+  raw-body webhook signatures; bounded payload/signature fields; event/object allowlists;
+  immutable event ID plus payload digest; crash-recovery processing lease; server retrieval and
+  cross-binding of Session, PaymentIntent, Charge, and Balance Transaction; exact stored
+  amount/currency/account metadata; and fail-closed partial-refund/future-availability handling.
+  API keys, webhook secrets, raw webhook bodies, and Checkout URLs are not persisted.
+- **Evidence:** focused mock tests cover replay, conflict, reordering, cross-binding, account
+  mismatch, refund/dispute, fee/availability, and lease recovery. An owner-authorized real
+  Stripe test session was created, reconciled unpaid, and expired without a charge.
+
+### Critical — capability revocation did not invalidate downloaded paid receipts
+
+- **Affected boundary:** delivered Stage B receipt lifecycle.
+- **Exploit scenario:** a buyer could retain a previously downloaded receipt after an evaluator
+  defect or signer compromise while result-access revocation affected only later downloads.
+- **Fix:** root-signed exact paid-receipt coverage with a separately bound recovery root,
+  contiguous sequence, expiry, exact issuer coverage, historical publication retention, and
+  terminal supersession/evaluator-defect/key-compromise transitions. Root replacement,
+  rollback, equal-sequence equivocation, signer removal/restoration, and terminal-state reversal
+  fail closed. Online prepare/publish roles never receive root private material.
+
 ## Open launch gates
 
 ### High — authenticated API is not externally deployed or operationally provisioned
@@ -77,16 +103,17 @@ commerce store, provider-event path, and planned public order/result boundary.
   recovery. The application intentionally ignores forwarded client-IP headers; the edge must
   enforce source limits before forwarding to loopback.
 
-### High — no authenticated real Stripe adapter or server-side object retrieval
+### High — reviewed Stripe adapter is not connected to the public service boundary
 
-- **Current exposure:** none; live stores refuse quote/order creation and only fake sandbox
-  events are connected.
-- **Exploit if exposed prematurely:** forged redirect/webhook, amount or environment confusion,
-  test-mode payments counted as live, or fulfillment before provider confirmation.
-- **Required fix:** official Stripe API client, fixed API version, secret isolation, exact raw
-  webhook verification, event allowlist, server-side Checkout Session/PaymentIntent retrieval,
-  stored amount/currency/metadata comparison, and balance-transaction availability
-  reconciliation. Browser redirects never authorize work.
+- **Current exposure:** none; the authenticated HTTP listener remains loopback/sandbox-only and
+  still uses the deterministic fake provider.
+- **Exploit if connected carelessly:** a proxy could alter exact webhook bytes, return success
+  for an in-progress reconciliation, expose a Checkout URL across tenants, or let test/live
+  credentials share state.
+- **Required live fix:** connect quote/order creation and the exact-body webhook route behind
+  managed TLS/ingress, configure a mode-specific endpoint and secret, preserve separate expected
+  test/live account IDs and databases, map retryable/in-progress events to non-2xx responses,
+  and complete an unpaid-to-available test-card flow before explicit live activation.
 
 ### High — production signing role/key is not provisioned
 
@@ -94,17 +121,6 @@ commerce store, provider-event path, and planned public order/result boundary.
 - **Required fix:** encrypted owner-controlled issuer key outside source/logs, separate
   no-network signing role, immutable worker-image allowlist, rotation/revocation runbook, and
   public trust publication before any live receipt is returned.
-
-### High — paid Stage B receipt lifecycle invalidation is not published
-
-- **Current control:** order delivery capabilities can expire, rotate, or revoke immediately;
-  Stage A receipts already use the root-signed lifecycle feed.
-- **Residual scenario:** revoking result access does not tell a buyer that a previously
-  downloaded paid receipt was superseded or invalidated because of evaluator defect or key
-  compromise.
-- **Required fix:** bind paid Stage B receipt IDs to a root-authorized monotonic lifecycle
-  publication, reuse the conservative Stage A status vocabulary, and test rollback,
-  equivocation, expiry, key-compromise, and evaluator-defect invalidation before live delivery.
 
 ### Medium — networked Git scratch disk lacks a kernel quota in local proof
 

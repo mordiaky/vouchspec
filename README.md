@@ -35,9 +35,10 @@ new trusted channel.
   customer-confidential content.
 - **Stage B — public repository validation (sandbox-ready, not public):** allowlisted public
   host, full commit, explicit subdirectory, bounded immutable retrieval, isolated no-egress
-  worker, constrained signing, a durable nonsettling commerce ledger, and a loopback-only
-  authenticated tenant/order/result API with expiring revocable delivery capabilities. Live
-  deployment, order intake, and settlement remain disabled.
+  worker, constrained signing, a durable commerce ledger, an account-bound Stripe Checkout
+  adapter, offline-root paid-receipt lifecycle publication, and a loopback-only authenticated
+  tenant/order/result sandbox API. Public deployment, live order intake, and settlement remain
+  disabled.
 - **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
   tenant isolation, deletion policy, and expanded legal/incident controls only after
   demand and revenue justify them.
@@ -135,7 +136,8 @@ profile, maximum price and delivery ID. It returns the exact USD $49.00 hypothes
 deliverable, hard limits, refund conditions and remaining gates with `orderable: false`.
 The internal sandbox can exercise an explicitly nonsettling order, but it cannot count as a
 buyer, request, or revenue. See the [Stage B operating boundary](docs/stage-b-operations.md),
-[payment flow](docs/payment-flow.md), and [refund policy](docs/refund-policy.md).
+[payment flow](docs/payment-flow.md), [managed deployment boundary](deploy/README.md), and
+[refund policy](docs/refund-policy.md).
 
 The authenticated commerce boundary is runnable only in the nonsettling sandbox. It stores
 keyed credential digests, never plaintext tokens, and binds each quote and order to one
@@ -153,8 +155,8 @@ The API binds to `127.0.0.1`, has no CORS allowance, and exposes authenticated q
 status, signed-result, capability-rotation, and capability-revocation routes. Its fake payment
 rail never settles and every resulting order remains `counts_for_goal: false`. The command is
 not authorization to expose the built-in HTTP listener directly; a future external deployment
-still requires managed TLS/ingress controls, a real payment adapter, kernel fetch quota, and a
-separate production signer.
+still requires managed TLS/ingress controls, wiring the reviewed Stripe adapter to an exact-body
+webhook route, kernel fetch quota, and a separate production signer.
 
 ## Read-only catalog MCP
 

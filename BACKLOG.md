@@ -23,6 +23,12 @@
 - **B-031:** loopback sandbox quote/order/status/result API now has keyed-digest authentication,
   minimal tenant isolation, scoped idempotency, expiring/rotatable/revocable delivery
   capabilities, quotas/rate/framing controls, audit events, and exact signed-result delivery.
+- **B-024:** owner-authorized Stripe test/live credentials were found outside the repository;
+  account identity and enablement were verified read-only. The account-bound pinned adapter
+  created and expired a real unpaid test Checkout and passed server-retrieval reconciliation.
+- **B-032:** delivered paid receipts now have offline-root, exact-coverage, monotonic lifecycle
+  publication with rollback/equivocation/expiry/supersession/evaluator-defect/key-compromise
+  tests and operational prepare/publish/export commands.
 
 ## Now — external adoption and safe orderability
 
@@ -30,15 +36,14 @@
   immutable-pinned workflow if invited. Count only an external retained run.
 - **B-021:** continue low-volume, contribution-rule-compliant, repository-specific outreach to
   highly relevant publishers until three unrelated integrations exist.
-- **B-024:** prepare Stripe sandbox activation to the last unavoidable credential gate; then ask
-  the owner once for the minimum identity/account/payout inputs.
 - **B-025:** package the public MCP server in a Registry-supported public format, validate
   `server.json`, and request owner authentication only when publication is otherwise ready.
-- **B-032:** add root-authorized monotonic lifecycle status/invalidation for paid Stage B
-  receipts and test rollback, equivocation, expiry, evaluator-defect, and key-compromise paths.
 - **B-033:** prepare deployment manifests for managed TLS, trusted-edge source limits,
   kernel-quota fetch storage, secret-manager injection, restricted database permissions,
   backups, and redacted audit aggregation without exposing the sandbox listener.
+- **B-034:** connect the reviewed Stripe adapter to authenticated order creation and an
+  exact-body webhook route behind the managed edge; map retryable/in-progress processing to
+  non-2xx responses and complete one unpaid-to-available test-card flow before live activation.
 
 ## Evidence-driven operation
 

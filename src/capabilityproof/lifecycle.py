@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 import stat
 import threading
+import time
 from typing import Any
 
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
@@ -50,6 +51,20 @@ _PATH_LOCKS_GUARD = threading.Lock()
 def _shared_thread_lock(path: Path) -> threading.Lock:
     with _PATH_LOCKS_GUARD:
         return _PATH_LOCKS.setdefault(path, threading.Lock())
+
+
+def _atomic_replace(source: Path, destination: Path) -> None:
+    """Replace state, tolerating only transient Windows sharing violations."""
+
+    deadline = time.monotonic() + 1.0
+    while True:
+        try:
+            os.replace(source, destination)
+            return
+        except PermissionError:
+            if os.name != "nt" or time.monotonic() >= deadline:
+                raise
+            time.sleep(0.01)
 
 
 @contextmanager
@@ -163,7 +178,7 @@ class LifecycleSequenceStore:
                         stream.write((json.dumps(document, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8"))
                         stream.flush()
                         os.fsync(stream.fileno())
-                    os.replace(temporary, self.path)
+                    _atomic_replace(temporary, self.path)
                 finally:
                     temporary.unlink(missing_ok=True)
 

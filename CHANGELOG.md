@@ -25,6 +25,16 @@
 - Add retry-safe automatic publication of the exact signed envelope from the sandbox
   fulfillment coordinator and secret-environment CLI commands for local tenant provisioning
   and loopback service operation. Live stores and real settlement remain fail-closed.
+- Add an account-bound Stripe Checkout adapter pinned to SDK `15.3.0` and API
+  `2026-06-24.dahlia`, with hosted-session idempotency, official exact-body webhook
+  verification, crash-recoverable event deduplication, server-retrieved payment-chain
+  reconciliation, and strict refund/dispute/availability handling. A real unpaid test-mode
+  Session was created and expired; live HTTP intake remains disabled.
+- Add offline-root paid-receipt lifecycle draft, publication, evaluation, and export commands
+  with exact delivered-receipt/signer coverage, root/sequence binding, historical state, and
+  irreversible supersession/revocation/key-compromise controls.
+- Preserve the historical catalog dependency lock byte-for-byte and record Stripe's additive
+  resolved dependencies separately in `requirements-commerce.lock`.
 - Replace the old external-alpha counters with the authoritative 30-test autonomous
   commercial goal and explicit exclusion accounting.
 

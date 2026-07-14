@@ -1,0 +1,6 @@
+# Additive Stripe adapter resolution for Windows/Python 3.11 on 2026-07-14.
+# Install together with requirements.lock; shared certifi and idna pins remain in that base lock.
+charset-normalizer==3.4.9
+requests==2.34.2
+stripe==15.3.0
+urllib3==2.7.0

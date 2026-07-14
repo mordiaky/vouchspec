@@ -1,7 +1,9 @@
 # VouchSpec payment and reconciliation flow
 
-Status: provider-neutral sandbox fulfillment and reconciliation are implemented; live Stripe
-checkout and public orders remain disabled.
+Status: provider-neutral fulfillment plus an account-bound Stripe adapter are implemented and
+test-mode Checkout creation has been exercised against the authorized Stripe sandbox. The
+authenticated HTTP boundary still uses the fake nonsettling rail; live/public orders remain
+disabled.
 
 ## Provider decision
 
@@ -34,12 +36,13 @@ Current official sources (accessed 2026-07-14):
    full immutable commit, explicit skill path, profile, maximum price and delivery ID.
 3. The public preview returns USD 49.00, exact deliverable, limits, expiry, refund conditions,
    payment options and remaining live gates. It is explicitly `orderable: false` today.
-4. The local sandbox can persist an orderable quote using only the deterministic fake
-   provider. Every such quote/order is `sandbox_nonsettling` and `counts_for_goal: false`.
-5. Once live, the service persists the immutable quote before creating a Stripe Checkout
+4. The local HTTP sandbox uses only the deterministic fake provider. The separate reviewed
+   adapter can persist a Stripe test-mode quote/order. Both remain nonsettling and
+   `counts_for_goal: false`.
+5. The adapter persists the immutable quote and order before creating a Stripe Checkout
    Session. The stored amount—not a client-returned amount—is authoritative.
-6. The Checkout Session carries only opaque `order_id`, `quote_id` and `request_digest`
-   metadata. Creation uses idempotency key `checkout:{order_id}`.
+6. The Checkout Session and PaymentIntent carry only opaque `order_id`, `quote_id`, and the
+   configured Stripe account ID. Creation uses a deterministic SDK idempotency key.
 7. The service fulfills only after an authenticated webhook and server-side retrieval of the
    Checkout Session and PaymentIntent confirm live mode, amount, currency, metadata and paid
    status. Browser redirects never authorize work.
@@ -72,24 +75,47 @@ idempotency and every quote/order to one tenant, require an expiring order capab
 status/result reads, and record rotation/revocation/result-publication audit events without
 plaintext credentials. It still connects only to the fake nonsettling provider.
 
-## Webhook security prepared locally
+## Stripe adapter and webhook security
 
-`verify_stripe_webhook_signature` authenticates the exact raw request bytes, accepts key
-rotation through multiple `v1` signatures, compares in constant time, and rejects timestamps
-outside a five-minute replay window. The event store and reordering logic exist, but only the
-fake sandbox adapter is connected. No Stripe listener or webhook route is exposed.
+`StripePaymentAdapter` pins `stripe==15.3.0` and API version `2026-06-24.dahlia`, verifies the
+credential against an expected enabled account ID, creates exact hosted Checkout Sessions, and
+never persists the API key, webhook secret, or Checkout URL. Official SDK verification consumes
+the exact raw webhook bytes. Signed events are allowlisted, content-bound to immutable event IDs,
+deduplicated, and recovered through a bounded processing lease after a crash. Financial state is
+derived only after server-side retrieval and cross-binding of the Checkout Session,
+PaymentIntent, Charge, and Balance Transaction. Partial refunds, future-dated availability,
+account/environment mismatches, and ambiguous objects fail closed.
+
+On 2026-07-14 the authorized test credential passed account binding and created a USD $49.00
+`livemode=false` Checkout Session. Reconciliation found no PaymentIntent before payment; the
+session was then expired unpaid. The live credential was checked read-only and belongs to a
+separate enabled account whose configured business URL is `www.plyrium.com`. No charge or
+commercial metric resulted. No Stripe listener or public webhook route is exposed yet.
+
+## Paid receipt lifecycle
+
+Delivered Stage B receipts can be exactly covered by an unsigned online draft, transferred to
+the existing offline `sign-lifecycle` root-signing command, and atomically imported with
+`publish-paid-lifecycle`. Publication binds the recovery-root key, exact envelope, contiguous
+sequence, delivered receipt/order IDs, and exact issuer-key set. Rollback, equal-sequence
+equivocation, root replacement, signer removal, restoration of retired/compromised keys, and
+reversal of terminal receipt states are rejected. `export-paid-lifecycle` returns the exact
+latest signed envelope; the online database never receives root private material.
 
 ## Remaining live gates
 
 - Managed-HTTPS deployment of the implemented authenticated quote/order/result boundary,
   including trusted-edge source limits, secret-manager provisioning, restricted database
   permissions, and automated real-buyer credential issuance/recovery.
-- Real Stripe Checkout creation, server-side object retrieval, webhook normalization, and
-  balance-transaction reconciliation adapter.
+- Connect the reviewed Stripe adapter to authenticated quote/order creation and an exact-body
+  Stripe webhook route, provision a mode-specific webhook endpoint/secret, and complete one
+  noncommercial test-card payment through Balance Transaction reconciliation.
 - Operational no-network signing role with an owner-controlled production issuer key and
   allowlisted production image.
-- Owner-controlled Stripe account activation, payout connection and secret provisioning.
-- End-to-end Stripe test-mode tests, then a live unrelated-party transaction.
+- Managed ephemeral fetch storage with a kernel-enforced quota.
+- Only after those controls are deployed, enable live Checkout explicitly and process a genuine
+  purchase. Test, owner, related-party, pending, reversed, refunded, and disputed activity must
+  remain excluded from commercial counters.
 
 The immutable fetcher, no-egress worker, constrained signing gate, durable event/cost store,
 authenticated sandbox API, and sandbox end-to-end fulfillment are complete. Their limits and proof are documented in

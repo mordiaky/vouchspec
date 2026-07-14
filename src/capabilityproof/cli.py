@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import getpass
+import hashlib
 from importlib.resources import files
 import json
 import os
@@ -23,6 +24,7 @@ from .commerce_store import CommerceStore
 from .errors import CapabilityProofError
 from .lifecycle import LifecycleSequenceStore, evaluate_receipt_lifecycle_with_state, sign_lifecycle_feed
 from .mcp_server import run_mcp_server
+from .paid_lifecycle import PaidReceiptLifecycleStore
 from .receipt import inspect_git_skill, inspect_skill
 from .signing import (
     generate_encrypted_keypair,
@@ -31,6 +33,7 @@ from .signing import (
     load_public_jwk,
     _require_safe_regular_file,
     sign_receipt_bytes,
+    _strict_json,
     verify_receipt_envelope,
 )
 from .snapshot import resolve_allowed_path
@@ -175,6 +178,40 @@ def _build_parser() -> argparse.ArgumentParser:
     sign_lifecycle_parser.add_argument("--passphrase-file", type=Path)
     sign_lifecycle_parser.add_argument("--output", type=Path, required=True)
 
+    prepare_paid_lifecycle = subparsers.add_parser(
+        "prepare-paid-lifecycle",
+        help="build an exact unsigned lifecycle draft for delivered paid receipts",
+    )
+    prepare_paid_lifecycle.add_argument("--database", type=Path, required=True)
+    prepare_paid_lifecycle.add_argument("--environment", choices=("sandbox", "live"), required=True)
+    prepare_paid_lifecycle.add_argument(
+        "--issuer-records",
+        type=Path,
+        required=True,
+        help="strict JSON list of root-authorized issuer key records",
+    )
+    prepare_paid_lifecycle.add_argument("--changes", type=Path, help="strict JSON receipt-status changes")
+    prepare_paid_lifecycle.add_argument("--generated-at", required=True)
+    prepare_paid_lifecycle.add_argument("--expires-at", required=True)
+    prepare_paid_lifecycle.add_argument("--output", type=Path, required=True)
+
+    publish_paid_lifecycle = subparsers.add_parser(
+        "publish-paid-lifecycle",
+        help="verify and atomically import an offline-root-signed paid lifecycle envelope",
+    )
+    publish_paid_lifecycle.add_argument("--database", type=Path, required=True)
+    publish_paid_lifecycle.add_argument("--environment", choices=("sandbox", "live"), required=True)
+    publish_paid_lifecycle.add_argument("--envelope", type=Path, required=True)
+    publish_paid_lifecycle.add_argument("--root-key", type=Path, required=True)
+
+    export_paid_lifecycle = subparsers.add_parser(
+        "export-paid-lifecycle",
+        help="export the exact latest root-signed paid lifecycle envelope",
+    )
+    export_paid_lifecycle.add_argument("--database", type=Path, required=True)
+    export_paid_lifecycle.add_argument("--environment", choices=("sandbox", "live"), required=True)
+    export_paid_lifecycle.add_argument("--output", type=Path, required=True)
+
     verify_parser = subparsers.add_parser("verify", help="independently verify a signed receipt envelope")
     verify_parser.add_argument("envelope", type=Path)
     verify_parser.add_argument("--key", type=Path, required=True, help="pinned issuer public JWK")
@@ -230,6 +267,50 @@ def _write_json_file(path: Path, value: dict) -> None:
         raise CapabilityProofError("refusing to overwrite an existing output", code="output_exists")
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_bytes((json.dumps(value, sort_keys=True, separators=(",", ":")) + "\n").encode("utf-8"))
+
+
+def _write_exact_file(path: Path, value: bytes) -> Path:
+    target = path.expanduser().resolve(strict=False)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, "O_BINARY", 0)
+    flags |= getattr(os, "O_NOFOLLOW", 0)
+    try:
+        descriptor = os.open(target, flags, 0o600)
+    except FileExistsError as exc:
+        raise CapabilityProofError(
+            "refusing to overwrite an existing output",
+            code="output_exists",
+        ) from exc
+    try:
+        with os.fdopen(descriptor, "wb") as stream:
+            stream.write(value)
+            stream.flush()
+            os.fsync(stream.fileno())
+    except Exception:
+        target.unlink(missing_ok=True)
+        raise
+    return target
+
+
+def _timestamp_argument(value: str, field: str) -> datetime:
+    if not isinstance(value, str) or not 1 <= len(value) <= 64:
+        raise CapabilityProofError(f"{field} is invalid", code="invalid_timestamp")
+    normalized = value[:-1] + "+00:00" if value.endswith("Z") else value
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except (ValueError, OverflowError) as exc:
+        raise CapabilityProofError(f"{field} is invalid", code="invalid_timestamp") from exc
+    if parsed.tzinfo is None:
+        raise CapabilityProofError(f"{field} requires a timezone", code="invalid_timestamp")
+    return parsed.astimezone(timezone.utc)
+
+
+def _strict_json_file(path: Path, field: str, *, maximum_bytes: int) -> object:
+    target = path.expanduser().resolve(strict=True)
+    _require_safe_regular_file(target, field)
+    if target.stat().st_size > maximum_bytes:
+        raise CapabilityProofError(f"{field} file is too large", code="invalid_arguments")
+    return _strict_json(target.read_bytes(), code="invalid_arguments")
 
 
 def _commerce_secret(environment_name: str) -> bytes:
@@ -338,6 +419,68 @@ def main(argv: list[str] | None = None) -> int:
                 file=sys.stderr,
             )
             server.serve_forever()
+            return 0
+        if args.command == "prepare-paid-lifecycle":
+            commerce_store = CommerceStore(
+                args.database.expanduser().resolve(strict=True),
+                environment=args.environment,
+            )
+            issuer_records = _strict_json_file(
+                args.issuer_records,
+                "issuer records",
+                maximum_bytes=256_000,
+            )
+            changes = (
+                _strict_json_file(args.changes, "lifecycle changes", maximum_bytes=1_000_000)
+                if args.changes
+                else None
+            )
+            draft = PaidReceiptLifecycleStore(commerce_store).build_draft(
+                issuer_records,  # type: ignore[arg-type]
+                generated_at=_timestamp_argument(args.generated_at, "--generated-at"),
+                expires_at=_timestamp_argument(args.expires_at, "--expires-at"),
+                changes=changes,  # type: ignore[arg-type]
+            )
+            output = _write_exact_file(args.output, draft)
+            feed = json.loads(draft)
+            print(json.dumps({
+                "draft_sha256": hashlib.sha256(draft).hexdigest(),
+                "expires_at": feed["expires_at"],
+                "output": str(output),
+                "receipt_count": len(feed["receipts"]),
+                "sequence": feed["sequence"],
+            }, sort_keys=True, separators=(",", ":")))
+            return 0
+        if args.command == "publish-paid-lifecycle":
+            commerce_store = CommerceStore(
+                args.database.expanduser().resolve(strict=True),
+                environment=args.environment,
+            )
+            envelope_path = args.envelope.expanduser().resolve(strict=True)
+            _require_safe_regular_file(envelope_path, "paid lifecycle envelope")
+            if envelope_path.stat().st_size > 1_100_000:
+                raise CapabilityProofError(
+                    "paid lifecycle envelope file is too large",
+                    code="invalid_arguments",
+                )
+            root_jwk = load_public_jwk(args.root_key.expanduser().resolve(strict=True))
+            publication = PaidReceiptLifecycleStore(commerce_store).publish(
+                envelope_path.read_bytes(),
+                root_jwk,
+            )
+            print(json.dumps(publication, sort_keys=True, separators=(",", ":")))
+            return 0
+        if args.command == "export-paid-lifecycle":
+            commerce_store = CommerceStore(
+                args.database.expanduser().resolve(strict=True),
+                environment=args.environment,
+            )
+            envelope = PaidReceiptLifecycleStore(commerce_store).latest_envelope()
+            output = _write_exact_file(args.output, envelope)
+            print(json.dumps({
+                "envelope_sha256": hashlib.sha256(envelope).hexdigest(),
+                "output": str(output),
+            }, sort_keys=True, separators=(",", ":")))
             return 0
         if args.command == "serve":
             server = create_server(args.allow_root, args.port)

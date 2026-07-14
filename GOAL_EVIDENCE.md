@@ -21,20 +21,20 @@ traffic are explicitly excluded.
 | 12 | Repeat requests from five sources after their first real use | Pending: 0 / 5 |
 | 13 | Exclude owner, CI, monitor, tests, controlled accounts, related parties, fake repeats | Pass as accounting policy; external operation unproven |
 | 14 | One genuine machine-readable paid request completes | Pending: 0 |
-| 15 | Software can quote, price, explain, pay, receive, verify, and continue autonomously | Partial: authenticated quote/order/status/result and complete signed sandbox delivery work; public/live payment remains disabled |
+| 15 | Software can quote, price, explain, pay, receive, verify, and continue autonomously | Partial: authenticated quote/order/status/result, real Stripe test Checkout creation/reconciliation, paid lifecycle, and complete signed sandbox delivery work; connected public/live payment remains disabled |
 | 16 | Three unrelated external buyers settle | Pending: 0 / 3 |
 | 17 | At least USD $500 settled gross external revenue | Pending: USD $0 / $500 |
 | 18 | Exclude owner/related/test/pending/reversed/refunded/simulated revenue | Pass as accounting policy; no revenue recorded |
 | 19 | One paid buyer repeats or buys a second service | Pending: 0 |
 | 20 | Positive contribution margin after every variable cost | Pending: no paid operation |
-| 21 | Every paid operation has complete quote/payment/cost/receipt/delivery/refund fields | Partial: tenant-bound environment ledger and signed-result delivery pass sandbox reconciliation; no genuine paid operation |
+| 21 | Every paid operation has complete quote/payment/cost/receipt/delivery/refund fields | Partial: tenant-bound ledger, server-retrieved Stripe payment chain, exact fee/refund/dispute states, and signed-result/lifecycle delivery pass tests; no genuine paid operation |
 | 22 | Owner-funded spending within USD $100 lifetime limit | Pass: USD $0 spent; USD $100 remains |
 | 23 | Fourteen consecutive autonomous days after first settled payment | Pending: clock not started |
 | 24 | Monitoring through recovery/support/financial logging runs during that period | Pending |
 | 25 | No ordinary order requires a call, review, meeting, or manual delivery | Partial: authenticated sandbox order and result delivery were fully autonomous; no genuine order yet |
 | 26 | One acquisition channel produces more than one qualified external user/integration | Pending: repository-specific publisher outreach has two contacts but no response/integration |
 | 27 | One paid fulfillment process completes more than one real order | Pending: 0 |
-| 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: authenticated sandbox quote/order/result plus discovery/integration/verify/operations are documented; public payment and credential issuance remain disabled |
+| 28 | Self-serve discovery, evidence, integration, quote, purchase, verify, troubleshooting | Partial: authenticated sandbox quote/order/result, Stripe Checkout core, paid lifecycle, discovery/integration/verify/operations are documented; public payment and credential issuance remain disabled |
 | 29 | Independent goal-auditor inspects complete evidence | Pending until tests 1-28 have evidence |
 | 30 | Auditor confirms every genuineness, financial, operational, security, and claims test | Pending |
 
@@ -57,7 +57,15 @@ traffic are explicitly excluded.
 - Authenticated sandbox API tests cover plaintext-token exclusion, tenant-scoped idempotency,
   cross-tenant denial, capability expiry/rotation/revocation, strict HTTP framing, slow-client
   isolation, quotas, audit events, exact signed-result delivery, and live-store refusal.
-- 114 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
+- The pinned Stripe adapter is bound to an expected enabled account, stores no API/webhook
+  secrets or Checkout URL, and reconciles only server-retrieved Session, PaymentIntent, Charge,
+  and Balance Transaction state. An owner-authorized real USD $49 test Session was created,
+  observed unpaid without a PaymentIntent, and expired. It is excluded from every commercial
+  counter; see `logs/2026-07-14-stripe-test-probe.md`.
+- Paid Stage B lifecycle tests cover exact receipt/signer coverage, offline-root publication,
+  historical state, expiry, rollback, equivocation, root replacement, supersession, evaluator
+  revocation, and irreversible retired/compromised issuer state.
+- 128 tests pass in an isolated environment. One Windows symlink-creation test is explicitly
   skipped for missing host privilege; Linux-container and hostile tree/archive/path tests pass.
 - Public Linux CI run `29338263172` passed at commit
   `d5ed89f2630648a58531aff84006432dfd0ef5e7`, including package installation, the full test

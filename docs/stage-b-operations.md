@@ -45,6 +45,13 @@ customer-confidential content, artifact command, or custom shell instruction.
 9. Delivery capabilities are environment-specific, deterministic for retry safety, expire
    after 30 days, and can be rotated or revoked immediately. Result bytes are published only
    when their SHA-256 equals the envelope digest already committed to the delivered order.
+10. The separate Stripe adapter verifies its SDK/API version and expected enabled account,
+    creates an exact hosted Checkout Session, and reconciles only server-retrieved Session,
+    PaymentIntent, Charge, and Balance Transaction state. It is not connected to this sandbox
+    HTTP listener.
+11. Delivered paid receipts enter a complete lifecycle draft that is signed by the offline
+    recovery root. Publication is atomic, sequence-contiguous, exact-coverage, and terminal
+    revocation/key-compromise states cannot be restored.
 
 ## Authenticated sandbox API
 
@@ -122,23 +129,40 @@ vouchspec sign-frozen-validation C:\vouchspec\frozen\REQUEST_DIGEST `
 Signing keys and passphrases must remain outside the repository and worker. The signing
 command is intended for a separate no-network role.
 
+Paid receipt lifecycle publication keeps the root-signing step separate:
+
+```powershell
+vouchspec prepare-paid-lifecycle --database C:\vouchspec\commerce.db --environment sandbox `
+  --issuer-records C:\secure\issuer-records.json `
+  --generated-at 2026-07-14T12:00:00Z --expires-at 2026-07-21T12:00:00Z `
+  --output C:\transfer\paid-lifecycle-draft.json
+vouchspec sign-lifecycle C:\transfer\paid-lifecycle-draft.json `
+  --private-key C:\offline\root.private.pem --output C:\transfer\paid-lifecycle.dsse.json
+vouchspec publish-paid-lifecycle --database C:\vouchspec\commerce.db --environment sandbox `
+  --envelope C:\transfer\paid-lifecycle.dsse.json --root-key C:\vouchspec\root.public.jwk.json
+```
+
+Run `sign-lifecycle` only in the offline root role. The online prepare/publish roles receive
+public issuer/root JWKs and the signed envelope, never the root private key.
+
 ## Remaining live gates
 
 - Deploy the implemented authenticated loopback service behind managed HTTPS, source-aware
   ingress limits, request-size limits, and redacted audit aggregation. Provision the two
   application secrets through a secret manager and restrict the database file to the service
   identity. The built-in direct-peer limiter must not trust forwarded client headers.
-- Define automated credential issuance/recovery for a real buyer and the lifecycle status/
-  invalidation publication for newly paid Stage B receipts. Current capability revocation
-  blocks result access but does not itself publish a signed receipt-revocation statement.
+- Define automated credential issuance/recovery for a real buyer and expose the latest exact
+  root-signed paid lifecycle envelope alongside each delivered result.
 - Run the networked Git phase in an ephemeral deployment volume with a kernel-enforced disk
   quota; the local proof enforces its 64 MB ceiling after each Git phase but not mid-write.
-- Add and test the real Stripe Checkout/session retrieval and authenticated webhook adapter;
-  the fake provider is sandbox-only and rejected by live stores.
+- Connect the reviewed account-bound Stripe adapter to the authenticated HTTP order route and
+  an exact-body Stripe webhook route behind managed ingress. Provision a mode-specific webhook
+  endpoint and complete one unpaid-to-available test-card reconciliation.
 - Provision an operational Stage B issuer key and allowlisted production image through the
   separate signing role.
-- Complete provider account identity, payout, webhook-secret, tax/terms, and live-mode setup
-  using owner-controlled credentials only after all non-credential work is ready.
+- Preserve the already verified owner-controlled account identity/payout boundary; provision
+  the production webhook endpoint/secret and complete any provider tax/terms steps only when
+  the managed service is otherwise ready.
 - Run a genuine unrelated-party paid request, then reconcile its balance transaction to
   `available`; test, pending, reversed, refunded, disputed, owner, and related-party activity
   remains excluded.

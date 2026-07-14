@@ -20,24 +20,29 @@
   signed delivery completed in a fake-provider sandbox. A loopback-only authenticated API now
   tenant-binds quotes/orders/results, stores keyed credential digests, scopes idempotency,
   expires/rotates/revokes delivery capabilities, enforces framing/rate/storage limits, and
-  returns only the exact digest-bound signed envelope. The proof and all API traffic are
-  explicitly nonsettling and excluded. Public checkout remains disabled pending managed
-  deployment, paid-receipt lifecycle, the real Stripe adapter, production signing role, and
-  owner-controlled payment account.
+  returns only the exact digest-bound signed envelope. A pinned, expected-account-bound Stripe
+  adapter now creates hosted Checkout Sessions and reconciles only server-retrieved Session,
+  PaymentIntent, Charge, and Balance Transaction state; an owner-authorized real USD $49 test
+  Session was created, reconciled unpaid, and expired. Offline-root paid-receipt lifecycle
+  publication now provides exact coverage and irreversible invalidation. All sandbox/test
+  activity remains excluded. Public checkout remains disabled pending managed deployment,
+  exact-body HTTP/webhook wiring, kernel fetch quota, and a production signing role.
 - **Revenue:** 0 / 3 unrelated settled buyers; USD $0 / $500 settled gross; 0 repeat buyers.
 - **Economics:** USD $0 spend; USD $100 lifetime owner-funded budget remaining. No paid-order
   margin exists yet.
 - **Autonomous run:** not started; it begins only after the first genuine settled payment.
-- **Owner action:** none currently required. Live payment activation will eventually require
-  owner-controlled identity, business, payout, and provider credentials.
+- **Owner action:** none currently required. Existing external Stripe credentials were
+  authorized and both test/live identities were verified without persisting secret values; the
+  live account reports charges and payouts enabled.
 - **Boundary:** public immutable sources only; no uploads, private repositories, confidential
   content, or artifact execution.
-- **Verification:** local isolated verification passes 114 tests with one explicit Windows
+- **Verification:** local isolated verification passes 128 tests with one explicit Windows
   symlink-privilege skip. Public Linux CI run `29338263172` passed at commit
   `d5ed89f2630648a58531aff84006432dfd0ef5e7`, including package installation, the full test
   suite, and a CLI receipt smoke test.
 
 Next: follow all three unrelated adoption proposals without an unsolicited same-day follow-up,
-resume the rules-limited publisher channel after its daily cap resets,
-and implement the real Stripe adapter plus paid-receipt lifecycle and managed deployment
-preparation before requesting payment activation.
+resume the rules-limited publisher channel after its daily cap resets, and connect the reviewed
+Stripe adapter to the authenticated order and exact-body webhook boundary behind managed
+deployment controls. Live Checkout remains off until that boundary, the production signer, and
+kernel fetch quota are verified.

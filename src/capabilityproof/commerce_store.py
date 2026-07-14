@@ -1,13 +1,14 @@
 """Durable, environment-bound commerce state for constrained Stage B orders.
 
-The initial coordinator is intentionally sandbox-only. Fake-provider activity is
-persistently marked as non-commercial evidence and can never count toward revenue.
+Fake-provider and Stripe test-mode activity are persistently marked as
+non-commercial evidence and can never count toward revenue. Live Stripe quotes require
+an explicit activation acknowledgement outside the public API boundary.
 """
 
 from __future__ import annotations
 
 from contextlib import contextmanager
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import hashlib
 import json
 from pathlib import Path
@@ -27,7 +28,7 @@ from .commerce import (
 from .errors import InputRejected
 
 
-STORE_SCHEMA_VERSION = "2"
+STORE_SCHEMA_VERSION = "3"
 DIRECT_COST_CATEGORIES = (
     "compute",
     "third_party",
@@ -44,7 +45,9 @@ _ENVIRONMENTS = {"sandbox", "live"}
 _IDEMPOTENCY = re.compile(r"[A-Za-z0-9_-]{8,96}")
 _BUYER = re.compile(r"[A-Za-z0-9_.:@+-]{8,128}")
 _EVENT_ID = re.compile(r"evt_(?:test_)?[0-9a-f]{24}")
-_PAYMENT_ID = re.compile(r"pay_(?:test_)?[0-9a-f]{24}")
+_FAKE_PAYMENT_ID = re.compile(r"pay_test_[0-9a-f]{24}")
+_STRIPE_PAYMENT_ID = re.compile(r"pi_[A-Za-z0-9]{8,64}")
+_STRIPE_CHECKOUT_ID = re.compile(r"cs_(?:test|live)_[A-Za-z0-9]{8,128}")
 _SHA256 = re.compile(r"[0-9a-f]{64}")
 _KEY_ID = re.compile(r"[A-Za-z0-9_-]{43}")
 _EVENT_TYPES = {
@@ -140,6 +143,7 @@ class CommerceStore:
                     idempotency_key TEXT NOT NULL UNIQUE,
                     buyer_reference TEXT NOT NULL,
                     provider TEXT NOT NULL,
+                    provider_checkout_id TEXT,
                     provider_payment_id TEXT UNIQUE,
                     order_status TEXT NOT NULL,
                     payment_status TEXT NOT NULL,
@@ -201,11 +205,34 @@ class CommerceStore:
                 );
                 """
             )
+            order_columns = {
+                row["name"] for row in connection.execute("PRAGMA table_info(orders)").fetchall()
+            }
+            if "provider_checkout_id" not in order_columns:
+                connection.execute("ALTER TABLE orders ADD COLUMN provider_checkout_id TEXT")
+            connection.execute(
+                """CREATE UNIQUE INDEX IF NOT EXISTS orders_provider_checkout_id
+                ON orders(provider_checkout_id) WHERE provider_checkout_id IS NOT NULL"""
+            )
+            connection.execute(
+                """CREATE UNIQUE INDEX IF NOT EXISTS orders_receipt_id
+                ON orders(receipt_id) WHERE receipt_id IS NOT NULL"""
+            )
             metadata = dict(connection.execute("SELECT key, value FROM metadata").fetchall())
             if not metadata:
                 connection.executemany(
                     "INSERT INTO metadata(key, value) VALUES (?, ?)",
                     (("schema_version", STORE_SCHEMA_VERSION), ("environment", self.environment)),
+                )
+            elif metadata.get("environment") != self.environment:
+                raise InputRejected(
+                    "commerce store schema or environment does not match",
+                    code="commerce_environment_mismatch",
+                )
+            elif metadata.get("schema_version") == "2":
+                connection.execute(
+                    "UPDATE metadata SET value = ? WHERE key = 'schema_version'",
+                    (STORE_SCHEMA_VERSION,),
                 )
             elif metadata != {"schema_version": STORE_SCHEMA_VERSION, "environment": self.environment}:
                 raise InputRejected(
@@ -219,26 +246,52 @@ class CommerceStore:
         *,
         quote_id: str,
         generated_at: datetime,
+        payment_provider: str = "fake",
+        live_checkout_enabled: bool = False,
     ) -> dict[str, Any]:
-        """Create an immutable quote. Only the fake sandbox rail can be orderable."""
+        """Create an immutable provider quote behind an explicit live activation gate."""
 
-        if self.environment != "sandbox":
+        if payment_provider not in {"fake", "stripe"}:
+            raise InputRejected("unsupported payment provider", code="invalid_commerce_request")
+        if payment_provider == "fake" and self.environment != "sandbox":
+            raise InputRejected("live orderable quotes are not activated", code="commerce_live_not_enabled")
+        if self.environment == "live" and not (
+            payment_provider == "stripe" and live_checkout_enabled
+        ):
             raise InputRejected("live orderable quotes are not activated", code="commerce_live_not_enabled")
         request = parse_fresh_validation_request(request_value)
         quote = build_fresh_validation_quote(request, generated_at=generated_at, quote_id=quote_id)
         if quote["quote_status"] == "declined_max_price":
             return quote
         quote = dict(quote)
-        quote.update(
-            {
+        if payment_provider == "fake":
+            provider_fields = {
                 "quote_status": "sandbox_orderable_nonsettling",
                 "availability": "sandbox_fake_provider_only",
-                "orderable": True,
                 "settlement_available": False,
                 "payment_options": [{"provider": "fake", "status": "sandbox_only"}],
-                "counts_for_goal": False,
             }
-        )
+        elif self.environment == "sandbox":
+            quote["expires_at"] = (
+                generated_at.astimezone(timezone.utc) + timedelta(minutes=30)
+            ).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+            provider_fields = {
+                "quote_status": "stripe_test_orderable_nonsettling",
+                "availability": "stripe_test_mode_only",
+                "settlement_available": False,
+                "payment_options": [{"provider": "stripe_checkout", "status": "test_mode"}],
+            }
+        else:
+            quote["expires_at"] = (
+                generated_at.astimezone(timezone.utc) + timedelta(minutes=30)
+            ).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+            provider_fields = {
+                "quote_status": "stripe_live_orderable_activation_acknowledged",
+                "availability": "stripe_live_account_configured",
+                "settlement_available": True,
+                "payment_options": [{"provider": "stripe_checkout", "status": "live"}],
+            }
+        quote.update(provider_fields | {"orderable": True, "counts_for_goal": False})
         quote["quote_digest"] = f"sha256:{_digest({key: value for key, value in quote.items() if key != 'quote_digest'})}"
         serialized_request = _canonical(request)
         serialized_quote = _canonical(quote)
@@ -277,8 +330,6 @@ class CommerceStore:
         buyer_reference: str,
         now: datetime,
     ) -> dict[str, Any]:
-        if self.environment != "sandbox":
-            raise InputRejected("live checkout is not activated", code="commerce_live_not_enabled")
         if not _IDEMPOTENCY.fullmatch(idempotency_key):
             raise InputRejected("invalid order idempotency key", code="invalid_commerce_request")
         if not _BUYER.fullmatch(buyer_reference):
@@ -300,7 +351,21 @@ class CommerceStore:
                 raise InputRejected("quote is missing or not orderable", code="quote_not_orderable")
             if now_utc >= _parse_timestamp(quote["expires_at"]):
                 raise InputRejected("quote has expired", code="quote_expired")
-            order_id = "ord_test_" + hashlib.sha256(
+            quote_document = json.loads(quote["quote_json"])
+            payment_options = quote_document.get("payment_options")
+            provider = (
+                "fake"
+                if payment_options == [{"provider": "fake", "status": "sandbox_only"}]
+                else "stripe"
+                if isinstance(payment_options, list)
+                and len(payment_options) == 1
+                and payment_options[0].get("provider") == "stripe_checkout"
+                else None
+            )
+            if provider is None or (self.environment == "live" and provider != "stripe"):
+                raise InputRejected("quote payment provider is invalid", code="quote_not_orderable")
+            order_prefix = "ord_test_" if self.environment == "sandbox" else "ord_"
+            order_id = order_prefix + hashlib.sha256(
                 f"{quote_id}\0{idempotency_key}\0{buyer_reference}".encode("utf-8")
             ).hexdigest()[:24]
             try:
@@ -309,13 +374,14 @@ class CommerceStore:
                         order_id, environment, quote_id, idempotency_key, buyer_reference, provider,
                         order_status, payment_status, quoted_amount_minor, currency, delivery_status,
                         counts_for_goal, created_at, updated_at
-                    ) VALUES (?, ?, ?, ?, ?, 'fake', ?, ?, ?, ?, 'not_started', 0, ?, ?)""",
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'not_started', 0, ?, ?)""",
                     (
                         order_id,
                         self.environment,
                         quote_id,
                         idempotency_key,
                         buyer_reference,
+                        provider,
                         OrderStatus.CHECKOUT_PENDING.value,
                         PaymentStatus.PENDING.value,
                         quote["amount_minor"],
@@ -332,30 +398,92 @@ class CommerceStore:
             )
             return self._order_view(connection, order_id)
 
-    def attach_checkout(self, order_id: str, payment_id: str, *, occurred_at: str) -> dict[str, Any]:
-        if self.environment != "sandbox" or not _PAYMENT_ID.fullmatch(payment_id) or not payment_id.startswith("pay_test_"):
-            raise InputRejected("only sandbox fake-provider checkout is supported", code="invalid_commerce_request")
+    def attach_checkout(
+        self,
+        order_id: str,
+        checkout_id: str,
+        *,
+        occurred_at: str,
+        payment_id: str | None = None,
+    ) -> dict[str, Any]:
         _parse_timestamp(occurred_at)
         with self._connection(write=True) as connection:
             order = self._require_order(connection, order_id)
-            if order["provider_payment_id"] is not None:
-                if order["provider_payment_id"] != payment_id:
+            provider = order["provider"]
+            if provider == "fake":
+                if (
+                    self.environment != "sandbox"
+                    or not _FAKE_PAYMENT_ID.fullmatch(checkout_id)
+                    or payment_id not in {None, checkout_id}
+                ):
+                    raise InputRejected("fake checkout identity is invalid", code="invalid_commerce_request")
+                payment_id = checkout_id
+            elif provider == "stripe":
+                expected_prefix = "cs_test_" if self.environment == "sandbox" else "cs_live_"
+                if not _STRIPE_CHECKOUT_ID.fullmatch(checkout_id) or not checkout_id.startswith(expected_prefix):
+                    raise InputRejected("Stripe checkout identity is invalid", code="invalid_commerce_request")
+                if payment_id is not None and not _STRIPE_PAYMENT_ID.fullmatch(payment_id):
+                    raise InputRejected("Stripe payment identity is invalid", code="invalid_commerce_request")
+            else:
+                raise InputRejected("order payment provider is invalid", code="invalid_commerce_request")
+            if order["provider_checkout_id"] is not None:
+                if (
+                    order["provider_checkout_id"] != checkout_id
+                    or (payment_id is not None and order["provider_payment_id"] != payment_id)
+                ):
                     raise InputRejected("order already has a different payment", code="idempotency_conflict")
                 return self._order_view(connection, order_id)
             current = OrderStatus(order["order_status"])
             require_transition(current, OrderStatus.PAYMENT_PENDING)
             try:
                 connection.execute(
-                    """UPDATE orders SET provider_payment_id = ?, order_status = ?, updated_at = ?
+                    """UPDATE orders SET provider_checkout_id = ?, provider_payment_id = ?,
+                    order_status = ?, updated_at = ?
                     WHERE order_id = ?""",
-                    (payment_id, OrderStatus.PAYMENT_PENDING.value, occurred_at, order_id),
+                    (
+                        checkout_id,
+                        payment_id,
+                        OrderStatus.PAYMENT_PENDING.value,
+                        occurred_at,
+                        order_id,
+                    ),
                 )
             except sqlite3.IntegrityError as exc:
                 raise InputRejected("payment identifier is already bound", code="idempotency_conflict") from exc
             self._history(
                 connection, order_id, "order", current.value, OrderStatus.PAYMENT_PENDING.value,
-                payment_id, occurred_at,
+                checkout_id, occurred_at,
             )
+            return self._order_view(connection, order_id)
+
+    def bind_provider_payment(
+        self,
+        order_id: str,
+        payment_id: str,
+        *,
+        checkout_id: str,
+        occurred_at: str,
+    ) -> dict[str, Any]:
+        """Bind a retrieved Stripe PaymentIntent to its already-attached Checkout Session."""
+
+        if not _STRIPE_PAYMENT_ID.fullmatch(payment_id):
+            raise InputRejected("Stripe payment identity is invalid", code="invalid_commerce_request")
+        _parse_timestamp(occurred_at)
+        with self._connection(write=True) as connection:
+            order = self._require_order(connection, order_id)
+            if order["provider"] != "stripe" or order["provider_checkout_id"] != checkout_id:
+                raise InputRejected("Stripe checkout binding is invalid", code="idempotency_conflict")
+            if order["provider_payment_id"] is not None:
+                if order["provider_payment_id"] != payment_id:
+                    raise InputRejected("order already has a different payment", code="idempotency_conflict")
+                return self._order_view(connection, order_id)
+            try:
+                connection.execute(
+                    "UPDATE orders SET provider_payment_id = ?, updated_at = ? WHERE order_id = ?",
+                    (payment_id, occurred_at, order_id),
+                )
+            except sqlite3.IntegrityError as exc:
+                raise InputRejected("payment identifier is already bound", code="idempotency_conflict") from exc
             return self._order_view(connection, order_id)
 
     def ingest_provider_event(self, event_value: Any, *, received_at: str | None = None) -> dict[str, Any]:
@@ -381,10 +509,12 @@ class CommerceStore:
                     "order": self._order_view(connection, order["order_id"]),
                 }
             order = connection.execute(
-                "SELECT order_id FROM orders WHERE provider_payment_id = ?", (event["payment_id"],)
+                "SELECT order_id, provider FROM orders WHERE provider_payment_id = ?", (event["payment_id"],)
             ).fetchone()
             if order is None:
                 raise InputRejected("provider event payment is unknown", code="unknown_provider_payment")
+            if order["provider"] != event["provider"]:
+                raise InputRejected("provider event does not match the order", code="invalid_commerce_event")
             connection.execute(
                 """INSERT INTO provider_events(
                     event_id, environment, provider, provider_payment_id, event_type,
@@ -495,15 +625,18 @@ class CommerceStore:
                     raise InputRejected("delivered order cannot be rebound", code="idempotency_conflict")
                 return self._order_view(connection, order_id)
             require_transition(current, OrderStatus.DELIVERED)
-            connection.execute(
-                """UPDATE orders SET order_status = ?, receipt_id = ?, receipt_sha256 = ?,
-                    envelope_sha256 = ?, signing_keyid = ?,
-                    delivery_status = 'delivered', updated_at = ? WHERE order_id = ?""",
-                (
-                    OrderStatus.DELIVERED.value, receipt_id, receipt_sha256,
-                    envelope_sha256, signing_keyid, occurred_at, order_id,
-                ),
-            )
+            try:
+                connection.execute(
+                    """UPDATE orders SET order_status = ?, receipt_id = ?, receipt_sha256 = ?,
+                        envelope_sha256 = ?, signing_keyid = ?,
+                        delivery_status = 'delivered', updated_at = ? WHERE order_id = ?""",
+                    (
+                        OrderStatus.DELIVERED.value, receipt_id, receipt_sha256,
+                        envelope_sha256, signing_keyid, occurred_at, order_id,
+                    ),
+                )
+            except sqlite3.IntegrityError as exc:
+                raise InputRejected("receipt identifier is already bound", code="idempotency_conflict") from exc
             self._history(
                 connection, order_id, "order", current.value, OrderStatus.DELIVERED.value,
                 source_reference, occurred_at,
@@ -515,6 +648,16 @@ class CommerceStore:
             self._require_order(connection, order_id)
             return self._order_view(connection, order_id)
 
+    def get_quote(self, quote_id: str) -> dict[str, Any]:
+        with self._connection() as connection:
+            row = connection.execute(
+                "SELECT quote_json FROM quotes WHERE quote_id = ? AND environment = ?",
+                (quote_id, self.environment),
+            ).fetchone()
+            if row is None:
+                raise InputRejected("quote does not exist", code="object_not_found")
+            return json.loads(row["quote_json"])
+
     def get_order_request(self, order_id: str) -> dict[str, Any]:
         with self._connection() as connection:
             row = connection.execute(
@@ -525,6 +668,14 @@ class CommerceStore:
             if row is None:
                 raise InputRejected("order does not exist", code="unknown_order")
             return json.loads(row["request_json"])
+
+    def list_delivered_orders(self) -> list[dict[str, Any]]:
+        with self._connection() as connection:
+            rows = connection.execute(
+                "SELECT order_id FROM orders WHERE order_status = ? ORDER BY receipt_id, order_id",
+                (OrderStatus.DELIVERED.value,),
+            ).fetchall()
+            return [self._order_view(connection, row["order_id"]) for row in rows]
 
     def fail_fulfillment(
         self,
@@ -582,21 +733,26 @@ class CommerceStore:
         }
         if not isinstance(value, dict) or set(value) != keys:
             raise InputRejected("provider event fields are invalid", code="invalid_commerce_event")
+        provider = value.get("provider")
         if (
             value["schema_version"] != "1.0.0"
-            or value["provider"] != "fake"
+            or provider not in {"fake", "stripe"}
             or value["environment"] != self.environment
-            or self.environment != "sandbox"
             or not isinstance(value["event_id"], str)
             or not _EVENT_ID.fullmatch(value["event_id"])
-            or not value["event_id"].startswith("evt_test_")
             or value["type"] not in _EVENT_TYPES
             or not isinstance(value["payment_id"], str)
-            or not _PAYMENT_ID.fullmatch(value["payment_id"])
-            or not value["payment_id"].startswith("pay_test_")
             or value["currency"] != FRESH_VALIDATION_CURRENCY
         ):
             raise InputRejected("provider event identity or environment is invalid", code="invalid_commerce_event")
+        if provider == "fake" and (
+            self.environment != "sandbox"
+            or not value["event_id"].startswith("evt_test_")
+            or not _FAKE_PAYMENT_ID.fullmatch(value["payment_id"])
+        ):
+            raise InputRejected("fake provider event identity is invalid", code="invalid_commerce_event")
+        if provider == "stripe" and not _STRIPE_PAYMENT_ID.fullmatch(value["payment_id"]):
+            raise InputRejected("Stripe provider event identity is invalid", code="invalid_commerce_event")
         for field in ("amount_minor", "fee_minor"):
             amount = value[field]
             if isinstance(amount, bool) or not isinstance(amount, int) or not 0 <= amount <= 10_000_000:
@@ -814,6 +970,7 @@ class CommerceStore:
             "quote_id": order["quote_id"],
             "buyer_reference": order["buyer_reference"],
             "provider": order["provider"],
+            "provider_checkout_id": order["provider_checkout_id"],
             "provider_payment_id": order["provider_payment_id"],
             "order_status": order["order_status"],
             "payment_status": order["payment_status"],
@@ -831,7 +988,17 @@ class CommerceStore:
             "signing_keyid": order["signing_keyid"],
             "delivery_status": order["delivery_status"],
             "refund_status": refund_status,
-            "settlement_status": "sandbox_nonsettling" if self.environment == "sandbox" else "not_confirmed",
+            "settlement_status": (
+                "sandbox_nonsettling"
+                if self.environment == "sandbox"
+                else "available_not_goal_qualified"
+                if payment_status is PaymentStatus.AVAILABLE and not bool(order["counts_for_goal"])
+                else "available_goal_qualified"
+                if payment_status is PaymentStatus.AVAILABLE
+                else "pending_provider_availability"
+                if payment_status is PaymentStatus.CAPTURED
+                else "not_confirmed"
+            ),
             "pending_provider_events": [dict(row) for row in pending_events],
             "counts_for_goal": bool(order["counts_for_goal"]),
             "created_at": order["created_at"],
