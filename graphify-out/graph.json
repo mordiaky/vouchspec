@@ -390,7 +390,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_provenance_provenanceevidence",
-      "community": 2,
+      "community": 6,
       "norm_label": "provenanceevidence"
     },
     {
@@ -630,7 +630,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_path",
-      "community": 2,
+      "community": 6,
       "norm_label": "path"
     },
     {
@@ -640,7 +640,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_scanlimits",
-      "community": 2,
+      "community": 6,
       "norm_label": "scanlimits"
     },
     {
@@ -650,7 +650,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "provenanceevidence",
-      "community": 0,
+      "community": 6,
       "norm_label": "provenanceevidence"
     },
     {
@@ -660,7 +660,7 @@
       "source_location": "L287",
       "_origin": "ast",
       "id": "capabilityproof_receipt_inspect_git_skill",
-      "community": 2,
+      "community": 24,
       "norm_label": "inspect_git_skill()"
     },
     {
@@ -690,7 +690,7 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "capabilityproof_receipt_rationale_295",
-      "community": 2,
+      "community": 24,
       "norm_label": "inspect bytes and independently bind them to a clean local git commit."
     },
     {
@@ -699,7 +699,7 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "schemas_capability_receipt_schema",
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
       "community": 32,
       "norm_label": "capability-receipt.schema.json"
     },
@@ -2140,7 +2140,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_findings",
-      "community": 46,
+      "community": 27,
       "norm_label": "findings"
     },
     {
@@ -2150,7 +2150,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_type",
-      "community": 46,
+      "community": 27,
       "norm_label": "type"
     },
     {
@@ -2160,7 +2160,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_maxitems",
-      "community": 46,
+      "community": 27,
       "norm_label": "maxitems"
     },
     {
@@ -2170,7 +2170,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_items",
-      "community": 46,
+      "community": 27,
       "norm_label": "items"
     },
     {
@@ -2190,7 +2190,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_local_references",
-      "community": 49,
+      "community": 27,
       "norm_label": "local_references"
     },
     {
@@ -2200,7 +2200,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_type",
-      "community": 49,
+      "community": 27,
       "norm_label": "type"
     },
     {
@@ -2210,7 +2210,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_maxitems",
-      "community": 49,
+      "community": 27,
       "norm_label": "maxitems"
     },
     {
@@ -2220,7 +2220,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_items",
-      "community": 49,
+      "community": 27,
       "norm_label": "items"
     },
     {
@@ -2360,7 +2360,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_license_files",
-      "community": 50,
+      "community": 16,
       "norm_label": "license_files"
     },
     {
@@ -2370,7 +2370,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_license_files_type",
-      "community": 50,
+      "community": 16,
       "norm_label": "type"
     },
     {
@@ -2380,7 +2380,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_license_files_maxitems",
-      "community": 50,
+      "community": 16,
       "norm_label": "maxitems"
     },
     {
@@ -2390,7 +2390,7 @@
       "source_location": "L161",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_license_files_items",
-      "community": 50,
+      "community": 16,
       "norm_label": "items"
     },
     {
@@ -2730,7 +2730,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_dependencies",
-      "community": 27,
+      "community": 26,
       "norm_label": "dependencies"
     },
     {
@@ -2740,7 +2740,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_dependencies_type",
-      "community": 27,
+      "community": 26,
       "norm_label": "type"
     },
     {
@@ -2750,7 +2750,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_dependencies_maxitems",
-      "community": 27,
+      "community": 26,
       "norm_label": "maxitems"
     },
     {
@@ -2760,7 +2760,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_dependencies_items",
-      "community": 27,
+      "community": 26,
       "norm_label": "items"
     },
     {
@@ -2770,7 +2770,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_manifest_parse_failures",
-      "community": 27,
+      "community": 46,
       "norm_label": "manifest_parse_failures"
     },
     {
@@ -2780,7 +2780,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_type",
-      "community": 27,
+      "community": 46,
       "norm_label": "type"
     },
     {
@@ -2790,7 +2790,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_maxitems",
-      "community": 27,
+      "community": 46,
       "norm_label": "maxitems"
     },
     {
@@ -2800,7 +2800,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_items",
-      "community": 27,
+      "community": 46,
       "norm_label": "items"
     },
     {
@@ -2810,7 +2810,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_script_languages",
-      "community": 23,
+      "community": 22,
       "norm_label": "script_languages"
     },
     {
@@ -2820,7 +2820,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_script_languages_type",
-      "community": 23,
+      "community": 22,
       "norm_label": "type"
     },
     {
@@ -2830,7 +2830,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_script_languages_maxitems",
-      "community": 23,
+      "community": 22,
       "norm_label": "maxitems"
     },
     {
@@ -3030,7 +3030,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_completed_checks_items",
-      "community": 22,
+      "community": 5,
       "norm_label": "items"
     },
     {
@@ -3040,7 +3040,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_minimum",
-      "community": 22,
+      "community": 5,
       "norm_label": "minimum"
     },
     {
@@ -3050,7 +3050,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_maximum",
-      "community": 22,
+      "community": 5,
       "norm_label": "maximum"
     },
     {
@@ -3100,7 +3100,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_levels_items",
-      "community": 5,
+      "community": 27,
       "norm_label": "items"
     },
     {
@@ -3350,7 +3350,7 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_policy",
-      "community": 26,
+      "community": 17,
       "norm_label": "policy"
     },
     {
@@ -3360,7 +3360,7 @@
       "source_location": "L224",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_policy_type",
-      "community": 26,
+      "community": 17,
       "norm_label": "type"
     },
     {
@@ -3370,7 +3370,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_policy_additionalproperties",
-      "community": 26,
+      "community": 17,
       "norm_label": "additionalproperties"
     },
     {
@@ -3380,7 +3380,7 @@
       "source_location": "L226",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_policy_required",
-      "community": 26,
+      "community": 17,
       "norm_label": "required"
     },
     {
@@ -3390,7 +3390,7 @@
       "source_location": "L227",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_policy_properties",
-      "community": 26,
+      "community": 17,
       "norm_label": "properties"
     },
     {
@@ -3400,7 +3400,7 @@
       "source_location": "L228",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_profile",
-      "community": 24,
+      "community": 17,
       "norm_label": "profile"
     },
     {
@@ -3410,7 +3410,7 @@
       "source_location": "L228",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_profile_const",
-      "community": 24,
+      "community": 17,
       "norm_label": "const"
     },
     {
@@ -3420,7 +3420,7 @@
       "source_location": "L229",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_limits",
-      "community": 26,
+      "community": 17,
       "norm_label": "limits"
     },
     {
@@ -3430,7 +3430,7 @@
       "source_location": "L229",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limits_ref",
-      "community": 26,
+      "community": 17,
       "norm_label": "$ref"
     },
     {
@@ -3440,7 +3440,7 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_profile_sha256",
-      "community": 26,
+      "community": 17,
       "norm_label": "profile_sha256"
     },
     {
@@ -3450,7 +3450,7 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_profile_sha256_ref",
-      "community": 26,
+      "community": 17,
       "norm_label": "$ref"
     },
     {
@@ -3460,7 +3460,7 @@
       "source_location": "L233",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_methodology",
-      "community": 4,
+      "community": 17,
       "norm_label": "methodology"
     },
     {
@@ -3470,7 +3470,7 @@
       "source_location": "L234",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_methodology_type",
-      "community": 4,
+      "community": 17,
       "norm_label": "type"
     },
     {
@@ -3480,7 +3480,7 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_methodology_additionalproperties",
-      "community": 4,
+      "community": 17,
       "norm_label": "additionalproperties"
     },
     {
@@ -3490,7 +3490,7 @@
       "source_location": "L236",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_methodology_required",
-      "community": 4,
+      "community": 17,
       "norm_label": "required"
     },
     {
@@ -3960,7 +3960,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_integrity",
-      "community": 48,
+      "community": 17,
       "norm_label": "integrity"
     },
     {
@@ -3970,7 +3970,7 @@
       "source_location": "L268",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_type",
-      "community": 48,
+      "community": 17,
       "norm_label": "type"
     },
     {
@@ -3980,7 +3980,7 @@
       "source_location": "L269",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_additionalproperties",
-      "community": 48,
+      "community": 17,
       "norm_label": "additionalproperties"
     },
     {
@@ -3990,7 +3990,7 @@
       "source_location": "L270",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_required",
-      "community": 48,
+      "community": 17,
       "norm_label": "required"
     },
     {
@@ -4000,7 +4000,7 @@
       "source_location": "L271",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_properties",
-      "community": 24,
+      "community": 17,
       "norm_label": "properties"
     },
     {
@@ -4010,7 +4010,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_deterministic_json_profile",
-      "community": 47,
+      "community": 17,
       "norm_label": "deterministic_json_profile"
     },
     {
@@ -4020,7 +4020,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_deterministic_json_profile_type",
-      "community": 47,
+      "community": 17,
       "norm_label": "type"
     },
     {
@@ -4030,7 +4030,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_deterministic_json_profile_pattern",
-      "community": 47,
+      "community": 17,
       "norm_label": "pattern"
     },
     {
@@ -4040,7 +4040,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_deterministic_json_profile_maxlength",
-      "community": 47,
+      "community": 17,
       "norm_label": "maxlength"
     },
     {
@@ -4050,7 +4050,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_evidence_sha256",
-      "community": 24,
+      "community": 17,
       "norm_label": "evidence_sha256"
     },
     {
@@ -4060,7 +4060,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_evidence_sha256_ref",
-      "community": 24,
+      "community": 17,
       "norm_label": "$ref"
     },
     {
@@ -4160,7 +4160,7 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_replacement_warning",
-      "community": 24,
+      "community": 17,
       "norm_label": "replacement_warning"
     },
     {
@@ -4170,7 +4170,7 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_replacement_warning_type",
-      "community": 24,
+      "community": 17,
       "norm_label": "type"
     },
     {
@@ -4180,7 +4180,7 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_replacement_warning_minlength",
-      "community": 24,
+      "community": 17,
       "norm_label": "minlength"
     },
     {
@@ -4190,7 +4190,7 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_replacement_warning_maxlength",
-      "community": 24,
+      "community": 17,
       "norm_label": "maxlength"
     },
     {
@@ -5360,7 +5360,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_scanlimits",
-      "community": 0,
+      "community": 6,
       "norm_label": "scanlimits"
     },
     {
@@ -5370,7 +5370,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_scanlimits_post_init",
-      "community": 0,
+      "community": 6,
       "norm_label": ".__post_init__()"
     },
     {
@@ -5600,7 +5600,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "capabilityproof_static_analysis_static_ruleset_sha256",
-      "community": 6,
+      "community": 2,
       "norm_label": "static_ruleset_sha256()"
     },
     {
@@ -5719,8 +5719,8 @@
       "source_file": "tests/fixtures/risky-skill/scripts/danger.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scripts_danger",
-      "community": 80,
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_risky_skill_scripts_danger_py",
+      "community": 47,
       "norm_label": "danger.py"
     },
     {
@@ -5729,7 +5729,7 @@
       "source_file": "tests/fixtures/valid-skill/scripts/normalize.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scripts_normalize",
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_valid_skill_scripts_normalize_py",
       "community": 53,
       "norm_label": "normalize.py"
     },
@@ -6080,7 +6080,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_provenance",
-      "community": 2,
+      "community": 24,
       "norm_label": "test_provenance.py"
     },
     {
@@ -6090,7 +6090,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_git",
-      "community": 2,
+      "community": 24,
       "norm_label": "_git()"
     },
     {
@@ -6100,7 +6100,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_py_path",
-      "community": 2,
+      "community": 24,
       "norm_label": "path"
     },
     {
@@ -6110,7 +6110,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_provenance_repository",
-      "community": 2,
+      "community": 24,
       "norm_label": "_repository()"
     },
     {
@@ -6120,7 +6120,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_provenance_test_clean_git_skill_reaches_level_three_with_exact_commit",
-      "community": 2,
+      "community": 24,
       "norm_label": "test_clean_git_skill_reaches_level_three_with_exact_commit()"
     },
     {
@@ -6130,7 +6130,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_provenance_test_untracked_or_changed_skill_is_not_given_provenance",
-      "community": 2,
+      "community": 24,
       "norm_label": "test_untracked_or_changed_skill_is_not_given_provenance()"
     },
     {
@@ -6140,7 +6140,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_provenance_test_modified_tracked_bytes_are_not_given_provenance",
-      "community": 2,
+      "community": 24,
       "norm_label": "test_modified_tracked_bytes_are_not_given_provenance()"
     },
     {
@@ -6150,7 +6150,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_credentials_are_not_written_to_receipt",
-      "community": 2,
+      "community": 24,
       "norm_label": "test_remote_credentials_are_not_written_to_receipt()"
     },
     {
@@ -6160,7 +6160,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_query_credentials_are_not_written_to_receipt",
-      "community": 2,
+      "community": 24,
       "norm_label": "test_remote_query_credentials_are_not_written_to_receipt()"
     },
     {
@@ -6177,11 +6177,21 @@
       "label": "test_checked_in_public_receipt_matches_current_contract()",
       "file_type": "code",
       "source_file": "tests/test_public_receipt.py",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_checked_in_public_receipt_matches_current_contract",
       "community": 2,
       "norm_label": "test_checked_in_public_receipt_matches_current_contract()"
+    },
+    {
+      "label": "test_git_preserves_every_byte_hashed_into_public_receipts()",
+      "file_type": "code",
+      "source_file": "tests/test_public_receipt.py",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "tests_test_public_receipt_test_git_preserves_every_byte_hashed_into_public_receipts",
+      "community": 2,
+      "norm_label": "test_git_preserves_every_byte_hashed_into_public_receipts()"
     },
     {
       "label": "AGENTS.md",
@@ -6477,7 +6487,7 @@
       "label": "Required before any external/public artifact intake",
       "file_type": "document",
       "source_file": "COMPLIANCE_CHECKLIST.md",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "compliance_checklist_required_before_any_external_public_artifact_intake",
       "community": 42,
@@ -6622,6 +6632,16 @@
       "id": "decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously",
       "community": 28,
       "norm_label": "2026-07-13 - do not grant a public code license autonomously"
+    },
+    {
+      "label": "2026-07-13 - Make repository checkout bytes deterministic",
+      "file_type": "document",
+      "source_file": "DECISIONS.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "decisions_2026_07_13_make_repository_checkout_bytes_deterministic",
+      "community": 28,
+      "norm_label": "2026-07-13 - make repository checkout bytes deterministic"
     },
     {
       "label": "GOAL.md",
@@ -7017,7 +7037,7 @@
       "label": "Verify before install",
       "file_type": "document",
       "source_file": "distribution/verify-before-install/SKILL.md",
-      "source_location": "L8",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "verify_before_install_skill_verify_before_install",
       "community": 79,
@@ -7177,7 +7197,7 @@
       "label": "Independent-review-driven changes",
       "file_type": "document",
       "source_file": "logs/2026-07-13-e001-verification.md",
-      "source_location": "L56",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "logs_2026_07_13_e001_verification_independent_review_driven_changes",
       "community": 31,
@@ -7187,7 +7207,7 @@
       "label": "Residual boundary",
       "file_type": "document",
       "source_file": "logs/2026-07-13-e001-verification.md",
-      "source_location": "L74",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "logs_2026_07_13_e001_verification_residual_boundary",
       "community": 31,
@@ -8269,7 +8289,7 @@
       "source_file": "tests/fixtures/invalid-skill/SKILL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "invalid_skill_skill",
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_invalid_skill_skill_md",
       "community": 64,
       "norm_label": "skill.md"
     },
@@ -8289,7 +8309,7 @@
       "source_file": "tests/fixtures/risky-skill/SKILL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "risky_skill_skill",
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_risky_skill_skill_md",
       "community": 74,
       "norm_label": "skill.md"
     },
@@ -8309,7 +8329,7 @@
       "source_file": "tests/fixtures/valid-skill/SKILL.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "valid_skill_skill",
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_valid_skill_skill_md",
       "community": 78,
       "norm_label": "skill.md"
     },
@@ -8329,7 +8349,7 @@
       "source_file": "tests/fixtures/valid-skill/references/guide.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "references_guide",
+      "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_valid_skill_references_guide_md",
       "community": 71,
       "norm_label": "guide.md"
     },
@@ -11775,9 +11795,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_additionalproperties"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_additionalproperties",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11785,9 +11805,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L288",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_defs"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_defs",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11795,9 +11815,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_description"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_description",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11805,9 +11825,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_id"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_id",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11815,9 +11835,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L28",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_properties"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_properties",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11825,9 +11845,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_required"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_required",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11835,9 +11855,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_schema"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_schema",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11845,9 +11865,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_title"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_title",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11855,9 +11875,9 @@
       "source_file": "src/capabilityproof/schemas/capability-receipt.schema.json",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "schemas_capability_receipt_schema",
-      "target": "schemas_capability_receipt_schema_type"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_schemas_capability_receipt_schema_json",
+      "target": "schemas_capability_receipt_schema_type",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -18190,9 +18210,9 @@
       "source_file": "tests/fixtures/valid-skill/scripts/normalize.py",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_normalize",
-      "target": "scripts_normalize_normalize"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_valid_skill_scripts_normalize_py",
+      "target": "scripts_normalize_normalize",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -18944,6 +18964,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_public_receipt.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "tests_test_public_receipt",
+      "target": "tests_test_public_receipt_test_git_preserves_every_byte_hashed_into_public_receipts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "AGENTS.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -19227,9 +19257,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "decisions_decision_log",
-      "target": "decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously",
-      "confidence_score": 1.0
+      "target": "decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously"
     },
     {
       "relation": "contains",
@@ -19260,6 +19290,16 @@
       "confidence_score": 1.0,
       "source": "decisions_decision_log",
       "target": "decisions_2026_07_13_local_proof_is_not_an_external_service"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DECISIONS.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_make_repository_checkout_bytes_deterministic",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20657,9 +20697,9 @@
       "source_file": "tests/fixtures/invalid-skill/SKILL.md",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "invalid_skill_skill",
-      "target": "invalid_skill_skill_invalid_fixture"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_invalid_skill_skill_md",
+      "target": "invalid_skill_skill_invalid_fixture",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20667,9 +20707,9 @@
       "source_file": "tests/fixtures/risky-skill/SKILL.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "risky_skill_skill",
-      "target": "risky_skill_skill_risk_fixture"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_risky_skill_skill_md",
+      "target": "risky_skill_skill_risk_fixture",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20677,9 +20717,9 @@
       "source_file": "tests/fixtures/valid-skill/SKILL.md",
       "source_location": "L11",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "valid_skill_skill",
-      "target": "valid_skill_skill_valid_skill_fixture"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_valid_skill_skill_md",
+      "target": "valid_skill_skill_valid_skill_fixture",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -20687,11 +20727,11 @@
       "source_file": "tests/fixtures/valid-skill/references/guide.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "references_guide",
-      "target": "references_guide_guide"
+      "source": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_fixtures_valid_skill_references_guide_md",
+      "target": "references_guide_guide",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "05f0e13999150fe173cdf2c6ac6728ddabe897f0"
+  "built_at_commit": "053606f183b50c5d0d49f83c21fad1104aec1fa1"
 }

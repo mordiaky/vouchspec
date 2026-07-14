@@ -1,16 +1,16 @@
-# Graph Report - initial-mvp  (2026-07-13)
+# Graph Report - capabilityproof  (2026-07-13)
 
 ## Corpus Check
-- 63 files · ~34,021 words
+- 63 files · ~34,324 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 834 nodes · 1203 edges · 83 communities (57 shown, 26 thin omitted)
+- 836 nodes · 1205 edges · 79 communities (53 shown, 26 thin omitted)
 - Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 111 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `05f0e139`
+- Built from commit: `053606f1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,10 +62,6 @@
 - [[_COMMUNITY_Community 44|Community 44]]
 - [[_COMMUNITY_Community 45|Community 45]]
 - [[_COMMUNITY_Community 46|Community 46]]
-- [[_COMMUNITY_Community 47|Community 47]]
-- [[_COMMUNITY_Community 48|Community 48]]
-- [[_COMMUNITY_Community 49|Community 49]]
-- [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
@@ -125,19 +121,19 @@
 - 1-file cycle: `src/capabilityproof/receipt.py -> src/capabilityproof/receipt.py`
 - 1-file cycle: `src/capabilityproof/snapshot.py -> src/capabilityproof/snapshot.py`
 
-## Communities (83 total, 26 thin omitted)
+## Communities (79 total, 26 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.09
-Nodes (58): ArgumentParser, BaseHTTPRequestHandler, create_server(), make_handler(), _no_duplicate_object(), Small loopback-only JSON API around the deterministic inspector., _validate_request(), _build_parser() (+50 more)
+Nodes (56): ArgumentParser, BaseHTTPRequestHandler, create_server(), make_handler(), _no_duplicate_object(), Small loopback-only JSON API around the deterministic inspector., _validate_request(), _build_parser() (+48 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.04
 Nodes (44): 1. Input forms and immutable capture, 2. Central MVP limits, 3. ZIP, path, and filesystem rules, 4. Parser and rule-engine rules, 5. Worker containment and side-effect controls, 6. Output, evidence, logging, and privacy, A. Non-execution and containment, Assets to protect (+36 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.09
-Nodes (51): CapabilityProof exact-version Agent Skill evidence., ProvenanceEvidence, _decision(), deterministic_json(), inspect_git_skill(), inspect_skill(), _iso(), _levels() (+43 more)
+Cohesion: 0.10
+Nodes (39): CapabilityProof exact-version Agent Skill evidence., _decision(), deterministic_json(), inspect_skill(), _iso(), _levels(), _license_evidence(), _normalize_time() (+31 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.05
@@ -145,15 +141,15 @@ Nodes (40): const, additionalProperties, properties, required, type, additionalP
 
 ### Community 4 - "Community 4"
 Cohesion: 0.05
-Nodes (44): const, maxLength, minLength, type, maxLength, minLength, type, additionalProperties (+36 more)
+Nodes (40): const, maxLength, minLength, type, maxLength, minLength, type, properties (+32 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.11
-Nodes (18): maxItems, minItems, type, additionalProperties, properties, required, type, maximum (+10 more)
+Cohesion: 0.10
+Nodes (20): items, maxItems, minItems, type, additionalProperties, properties, required, type (+12 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.13
-Nodes (31): _construct_unique_mapping(), _extract_references(), _finding(), _normalize_link_target(), _parse_frontmatter(), parse_skill(), ParsedSkill, Strict, bounded parsing and structural checks for Agent Skills. (+23 more)
+Nodes (35): ProvenanceEvidence, _construct_unique_mapping(), _extract_references(), _finding(), _normalize_link_target(), _parse_frontmatter(), parse_skill(), ParsedSkill (+27 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.07
@@ -192,12 +188,12 @@ Cohesion: 0.13
 Nodes (15): format, type, format, type, maxLength, minLength, type, expires_at (+7 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.20
-Nodes (10): maxLength, type, const, additionalProperties, properties, required, type, declared_claim_untrusted (+2 more)
+Cohesion: 0.14
+Nodes (14): maxLength, type, const, additionalProperties, properties, required, type, items (+6 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.14
-Nodes (14): const, properties, integrity_assurance, receipt_id, receipt_profile, schema_sha256, schema_uri, schema_version (+6 more)
+Cohesion: 0.05
+Nodes (44): maxLength, pattern, type, $ref, additionalProperties, const, properties, required (+36 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.15
@@ -217,31 +213,31 @@ Nodes (12): maxItems, type, additionalProperties, properties, required, type, ex
 
 ### Community 22 - "Community 22"
 Cohesion: 0.31
-Nodes (10): items, items, maximum, maxLength, minimum, minLength, type, items (+2 more)
+Nodes (10): items, maxLength, minLength, type, items, script_languages, items, items (+2 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.14
-Nodes (14): $ref, const, coverage, engine, script_languages, static_analysis, summary, maxItems (+6 more)
+Cohesion: 0.18
+Nodes (11): $ref, const, coverage, engine, static_analysis, summary, additionalProperties, properties (+3 more)
 
 ### Community 24 - "Community 24"
-Cohesion: 0.22
-Nodes (9): $ref, properties, const, evidence_sha256, profile, replacement_warning, maxLength, minLength (+1 more)
+Cohesion: 0.53
+Nodes (10): inspect_git_skill(), Inspect bytes and independently bind them to a clean local Git commit., _git(), Path, _repository(), test_clean_git_skill_reaches_level_three_with_exact_commit(), test_modified_tracked_bytes_are_not_given_provenance(), test_remote_credentials_are_not_written_to_receipt() (+2 more)
 
 ### Community 25 - "Community 25"
 Cohesion: 0.13
 Nodes (15): $ref, $ref, additionalProperties, properties, required, type, $ref, $ref (+7 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.22
-Nodes (9): $ref, additionalProperties, properties, required, type, $ref, limits, policy (+1 more)
+Cohesion: 0.50
+Nodes (4): items, maxItems, type, dependencies
 
 ### Community 27 - "Community 27"
-Cohesion: 0.15
-Nodes (13): items, maxItems, type, $ref, items, maxItems, type, dependencies (+5 more)
+Cohesion: 0.14
+Nodes (14): items, maxItems, type, $ref, items, items, maxItems, type (+6 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.20
-Nodes (9): 2026-07-13 - Close independent audit findings before accepting E-001, 2026-07-13 - Do not grant a public code license autonomously, 2026-07-13 - First slice is non-executing Level 1-3 evidence, 2026-07-13 - Keep CapabilityProof as an internal codename, 2026-07-13 - Local proof is not an external service, 2026-07-13 - Position as a portable policy receipt, 2026-07-13 - Prices remain transaction experiments, 2026-07-13 - Select the Agent Skills exact-version wedge (+1 more)
+Cohesion: 0.18
+Nodes (10): 2026-07-13 - Close independent audit findings before accepting E-001, 2026-07-13 - Do not grant a public code license autonomously, 2026-07-13 - First slice is non-executing Level 1-3 evidence, 2026-07-13 - Keep CapabilityProof as an internal codename, 2026-07-13 - Local proof is not an external service, 2026-07-13 - Make repository checkout bytes deterministic, 2026-07-13 - Position as a portable policy receipt, 2026-07-13 - Prices remain transaction experiments (+2 more)
 
 ### Community 29 - "Community 29"
 Cohesion: 0.22
@@ -313,23 +309,7 @@ Nodes (4): maxLength, minLength, type, category
 
 ### Community 46 - "Community 46"
 Cohesion: 0.50
-Nodes (4): items, maxItems, type, findings
-
-### Community 47 - "Community 47"
-Cohesion: 0.50
-Nodes (4): maxLength, pattern, type, deterministic_json_profile
-
-### Community 48 - "Community 48"
-Cohesion: 0.50
-Nodes (4): additionalProperties, required, type, integrity
-
-### Community 49 - "Community 49"
-Cohesion: 0.50
-Nodes (4): items, maxItems, type, local_references
-
-### Community 50 - "Community 50"
-Cohesion: 0.50
-Nodes (4): items, maxItems, type, license_files
+Nodes (4): items, maxItems, type, manifest_parse_failures
 
 ### Community 51 - "Community 51"
 Cohesion: 0.50
@@ -348,17 +328,17 @@ Cohesion: 0.67
 Nodes (3): referenced_hosts, maxItems, type
 
 ## Knowledge Gaps
-- **415 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+410 more)
+- **416 isolated node(s):** `$schema`, `$id`, `title`, `description`, `type` (+411 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `properties` connect `Community 17` to `Community 32`, `Community 33`, `Community 3`, `Community 4`, `Community 5`, `Community 11`, `Community 15`, `Community 48`, `Community 16`, `Community 52`, `Community 21`, `Community 23`, `Community 26`?**
-  _High betweenness centrality (0.190) - this node is a cross-community bridge._
+- **Why does `properties` connect `Community 17` to `Community 32`, `Community 33`, `Community 3`, `Community 5`, `Community 11`, `Community 15`, `Community 16`, `Community 52`, `Community 21`, `Community 23`?**
+  _High betweenness centrality (0.189) - this node is a cross-community bridge._
 - **Why does `$defs` connect `Community 19` to `Community 32`, `Community 36`, `Community 37`, `Community 12`, `Community 20`, `Community 30`?**
-  _High betweenness centrality (0.085) - this node is a cross-community bridge._
+  _High betweenness centrality (0.084) - this node is a cross-community bridge._
 - **Why does `properties` connect `Community 3` to `Community 10`?**
   _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Are the 29 inferred relationships involving `ScanLimits` (e.g. with `BaseHTTPRequestHandler` and `ParsedSkill`) actually correct?**
