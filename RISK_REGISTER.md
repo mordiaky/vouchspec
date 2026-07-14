@@ -14,3 +14,4 @@
 | R-010 | External HTTP/MCP exposes host paths, tenants, or resources. | Critical | No external service; require immutable uploads, auth/TLS/object authorization, isolation, rate/queue limits, and remote MCP profile. | Launch blocker |
 | R-011 | Git provenance is mistaken for publisher identity. | High | Raw commit-blob equality is separate from publisher/ownership, which remains not checked. | Controlled by schema/limitations |
 | R-012 | Reference dependency lock does not describe actual runtime. | Medium | Record runtime package versions and state that lock digest is reference evidence, not installation proof. | Active limitation |
+| R-013 | Git line-ending conversion changes byte-addressed receipts or methodology inputs. | High | Repository-wide LF checkout policy, explicit receipt/schema/lock attributes, fixed file hashes, and regression coverage. | Controlled |

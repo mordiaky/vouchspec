@@ -17,7 +17,7 @@ payment path, and no customer delivery.
   filesystem-read, filesystem-write, and process indicators are inferred, not observed.
 - Reproducibility: two fixed-time Git/blob-bound regenerations were byte-identical.
 - Verification: strict schema and semantic integrity pass; MCP protocol `2025-11-25` smoke
-  pass; 33 tests pass, 1 ordinary Windows symlink test skips for host privilege while native
+  pass; 34 tests pass, 1 ordinary Windows symlink test skips for host privilege while native
   Windows junction and hard-link regressions pass.
 - Independent local-MVP review: pass with no remaining P0-P2 local-profile finding.
 - Integrity limit: receipt is explicitly digest-only unauthenticated and local-only.

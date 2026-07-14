@@ -55,3 +55,11 @@
   bundled skill. No public license, package publication, or distribution is authorized.
 - **Reason:** Selecting distribution terms is a material legal commitment reserved for
   owner approval by the operating charter.
+
+## 2026-07-13 - Make repository checkout bytes deterministic
+
+- **Decision:** Force LF for every detected text file and retain explicit LF rules for public
+  receipts, receipt schemas, and the reference dependency lock.
+- **Reason:** A Windows checkout converted those files to CRLF after merge, changing the
+  receipt file hash and methodology input digests. The checked-in file-hash contract must
+  survive a fresh checkout on every supported host.

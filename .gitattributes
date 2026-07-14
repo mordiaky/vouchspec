@@ -1,0 +1,9 @@
+# CapabilityProof compares exact bytes. Keep every detected text file stable across hosts.
+* text=auto eol=lf
+
+# Public receipts are byte-addressed evidence. Keep the critical bindings explicit.
+receipts/public/*.json text eol=lf
+
+# These files are hashed into every receipt's methodology record.
+requirements.lock text eol=lf
+src/capabilityproof/schemas/*.json text eol=lf

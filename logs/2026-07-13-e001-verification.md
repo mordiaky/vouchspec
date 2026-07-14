@@ -47,11 +47,17 @@ and the semantic integrity verifier.
 .venv\Scripts\python -m pip check
 ```
 
-Final test result: `33 passed, 1 skipped`; dependency check: no broken requirements. The
+Final test result: `34 passed, 1 skipped`; dependency check: no broken requirements. The
 skipped case requires Windows ordinary-symlink privilege. Native Windows junction/reparse and
 hard-link escape regressions ran and passed. Full MCP stdio initialization negotiated protocol
 revision `2025-11-25`, returned the receipt in `structuredContent`, and returned only fixed
 server text in unstructured content.
+
+A post-merge Windows checkout gate caught Git line-ending conversion changing the public
+receipt file SHA-256 and the schema/lock bytes bound into receipts. Repository attributes now
+force LF for all detected text and explicitly bind receipts, schemas, and `requirements.lock`;
+the 34th regression checks those rules. After a clean checkout, the public receipt returned to
+the recorded 16,618 bytes and `F08EE57A...347C` file SHA-256.
 
 ## Independent-review-driven changes
 
@@ -70,6 +76,8 @@ server text in unstructured content.
 - Replaced ambiguous canonical terminology with a named deterministic non-JCS profile.
 - Made receipt integrity explicitly digest-only unauthenticated and bound schema, ruleset,
   policy limits, methodology, runtime, capture mode/times/source, and limitations.
+- Forced stable LF checkout bytes and added a regression after Windows Git conversion was
+  observed changing byte-addressed evidence.
 
 ## Residual boundary
 

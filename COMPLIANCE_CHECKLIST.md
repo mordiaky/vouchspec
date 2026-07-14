@@ -8,6 +8,7 @@
 - [x] No credentials, sensitive personal data, payment, financial account, recurring service, contract, or spend.
 - [x] No public code license or package publication has been authorized; draft license declarations were removed.
 - [x] Receipt is exact about digest-only unauthenticated integrity and replacement risk.
+- [x] Git preserves LF bytes for public receipts and every schema/lock file hashed into them.
 - [x] Local snapshot rejects symlinks, Windows reparse points/junctions, hard links, and special files.
 - [x] Local HTTP is loopback/root-confined/body-bounded/threaded/timed; MCP stdio keeps artifact text out of unstructured content.
 - [x] Independent local code/security/claims review completed with no remaining P0-P2 local finding.

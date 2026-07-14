@@ -38,9 +38,14 @@ for preserving documented launch blockers.
 | Checked-in public receipt current and reproducible | Pass |
 
 Final independent result: **PASS**. Receipt/schema/integrity/file hashes are valid; restricted
-YAML and terminology checks pass; suite result is `33 passed, 1 skipped`. The single skip is
+YAML and terminology checks pass; suite result is `34 passed, 1 skipped`. The single skip is
 ordinary Windows symlink creation due host privilege; real Windows junction/reparse and
 hard-link tests ran successfully.
+
+A focused post-merge review also passed the Git checkout portability correction. An
+independent `core.autocrlf=true` clean-room checkout retained LF-only bytes and the exact
+receipt, schema, and lock SHA-256 values bound by the receipt. The added regression asserts
+the repository rules and the current schema/lock byte bindings. No P0-P2 finding remained.
 
 Remaining local-profile P0/P1/P2 findings: **none**.
 
