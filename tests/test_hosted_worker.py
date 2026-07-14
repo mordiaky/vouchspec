@@ -148,3 +148,5 @@ def test_signer_command_is_separate_no_egress_and_receives_only_read_only_inputs
     assert f"src={signed.resolve()},dst=/signed" in joined
     assert f"src={signed.resolve()},dst=/signed,readonly" not in joined
     assert "VOUCHSPEC_WORKER_TOKEN" not in joined
+    assert "from capabilityproof.stage_b_signer_cli import main" in joined
+    assert "from capabilityproof.cli import main" not in joined

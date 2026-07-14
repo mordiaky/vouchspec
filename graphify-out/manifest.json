@@ -720,18 +720,23 @@
     "semantic_hash": ""
   },
   "src/capabilityproof/hosted_worker.py": {
-    "mtime": 1784054929.2993288,
-    "ast_hash": "5c2032473b6f1cacdd6bf837d8d9ef8a",
+    "mtime": 1784055209.336486,
+    "ast_hash": "6af2baafe7d158999f90391e1453d56b",
     "semantic_hash": ""
   },
   "tests/test_hosted_worker.py": {
-    "mtime": 1784054929.3008332,
-    "ast_hash": "899d774bdd09615a9fc47c076094c9e1",
+    "mtime": 1784055216.3897607,
+    "ast_hash": "1d74087ce43972bc5beaec96a760ded2",
     "semantic_hash": ""
   },
   ".github/workflows/vouchspec-fulfillment.yml": {
     "mtime": 1784052124.6081417,
     "ast_hash": "7ac7a073bf4df3b212d0b9a7f3222813",
+    "semantic_hash": ""
+  },
+  "src/capabilityproof/stage_b_signer_cli.py": {
+    "mtime": 1784055209.335486,
+    "ast_hash": "7e03f85ffafd159502a641143d6982d1",
     "semantic_hash": ""
   }
 }
