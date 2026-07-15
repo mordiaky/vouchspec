@@ -35,6 +35,10 @@
   on the production project. Vercel deployment `dpl_58K3YWwY1vetfS3vhcgU2iPFCijr` is READY at the
   merged commit, and post-merge CI run `29414816988` passed. Commerce, fulfillment, and remedies
   remain disabled pending wallet identities and the final activation smoke.
+- **Mainnet receiving address:** the owner Agentic Wallet Base address is valid, distinct from the
+  sandbox receiver, and stored encrypted in Vercel production as
+  `VOUCHSPEC_X402_MAINNET_PAY_TO`. A decrypt-and-compare read-back matched without printing the
+  value. Commerce remains disabled and live discovery remains 503, so no charge is possible.
 - **Machine-only hostname:** Plyrium PR `#41` is merged at
   `d54196fe33e3bdde075f5c44c6ed68edbab0c957`. Vercel production deployment
   `dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr` is READY and main CI run `29418546016`
@@ -91,12 +95,11 @@
   contribution margin is not yet proven by a genuine paid order.
 - **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
   commercial payment.
-- **Owner action:** the values added to `D:\Projects\plyrium.env` were tested without disclosure.
-  The key authenticated to x402 but failed the first Wallet API account-list call even when paired
-  with the protected Wallet Secret, so it is the wrong key type; the blank local Wallet Secret did
-  not cause that read failure. Replace it with a Server Wallet API key and fill the separately
-  generated Wallet Secret under the same exact names in `HUMAN_ACTIONS.md`, then say `done`.
-  Codex will not open the portal or request SMS codes. Funding is a later separate approval.
+- **Owner action:** create one separate Server Wallet API key and Wallet Secret for the policy-bound
+  remedy account, store them under the three `CDP_REMEDY_*` names in `HUMAN_ACTIONS.md`, then say
+  `done`. Do not replace the working x402 key. Coinbase's current docs require portal generation
+  for the Wallet Secret, so this is the remaining owner-only credential step. Codex will not open
+  the portal or request SMS codes. Funding is a later separate approval.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
 - **Verification:** the connected Plyrium repository passes typecheck, 185 tests, private-address,
@@ -115,8 +118,8 @@
   Host-isolation PR `#41`, main CI run `29418546016`, and production deployment
   `dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr` are green.
 
-Next: after the single Wallet API credential action, provision the two unfunded identities through
-the official CLI, request a separate bounded funding approval, run activation smoke, and enable the
+Next: after the single Wallet API credential action, provision the one unfunded remedy identity
+through the official CLI, request a separate bounded funding approval, run activation smoke, and enable the
 mainnet API/workers. Then use the active official MCP Registry and indexed Bazaar entries to reach
 unrelated agent integrations and genuine machine buyers. Count only independently attributable
 external activity.
