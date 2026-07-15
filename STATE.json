@@ -14,7 +14,7 @@
     "structural_passes": 19,
     "structural_failures": 6,
     "hidden_skips": 0,
-    "http": "live_exact_signed_bytes_managed_tls_cors",
+    "http": "live_exact_signed_bytes_raw_github_tls_and_sandbox_issuer",
     "mcp": "live_public_installable_stdio_read_only",
     "signature": "DSSE_v1.0.2_Ed25519_exact_bytes",
     "lifecycle": "machine_readable_root_signed",
@@ -98,8 +98,8 @@
     "connected_repository_main_ci_status": "passed",
     "connected_repository_production_commit": "d54196fe33e3bdde075f5c44c6ed68edbab0c957",
     "connected_repository_production_deployment": "dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr",
-    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29414124223",
-    "public_ci_commit": "dc97c83d04d6c2045460035bb3ee9e5e33015ea6",
+    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29427544292",
+    "public_ci_commit": "cd189ab48ec12bf5ad9533c8322ddf3bed779d86",
     "public_ci_status": "passed",
     "evidence_file": "GOAL_EVIDENCE.md",
     "independent_final_audit": "pending"
@@ -121,6 +121,6 @@
     "Request explicit approval for the smallest bounded remedy float and Base gas movement only after the remedy identity is verified",
     "Complete production deployment smoke, activate commerce and the protected workers, then begin unrelated-agent acquisition"
   ],
-  "last_checkpoint_time": "2026-07-15T14:53:20Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, HUMAN_ACTIONS.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, research/agent-only-pricing-analysis-2026-07-14.md, docs/stage-b-security-review.md, logs/2026-07-14-cdp-mainnet-provisioning.md, logs/2026-07-15-commercial-launch.md, logs/2026-07-15-domain-wallet-key-followup.md, and logs/2026-07-15-mainnet-payto-configured.md. Preserve all exclusion rules and the no-upload/no-execution boundary. The owner Agentic Wallet Base receiving address is valid, distinct from sandbox, and stored encrypted in Vercel production as VOUCHSPEC_X402_MAINNET_PAY_TO. Commerce remains disabled and public discovery remains an intentional 503, so no payment can settle. All other application gates pass. The remaining wallet blocker is only a distinct policy-bound remedy identity: the existing x402 key cannot use the Server Wallet API, and official Coinbase documentation requires a Server Wallet API key plus separately generated Wallet Secret. Do not retry the same key, replace the working x402 key, open the portal, or request SMS codes. Wait for CDP_REMEDY_API_KEY_ID, CDP_REMEDY_API_KEY_SECRET, and CDP_REMEDY_WALLET_SECRET, then provision one unfunded remedy account with the official CLI. No funds move without separate explicit approval. Never count owner, controlled-wallet, testnet, CI, demo, or monitoring activity. Stripe remains regression-only."
+  "last_checkpoint_time": "2026-07-15T16:06:42Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, HUMAN_ACTIONS.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, research/agent-only-pricing-analysis-2026-07-14.md, docs/stage-b-security-review.md, logs/2026-07-14-cdp-mainnet-provisioning.md, logs/2026-07-15-commercial-launch.md, logs/2026-07-15-domain-wallet-key-followup.md, and logs/2026-07-15-mainnet-payto-configured.md. Preserve all exclusion rules and the no-upload/no-execution boundary. The authoritative Stage A exact-byte public surfaces are the raw GitHub discovery document, signed index, root-signed lifecycle feed, and raw GitHub root/issuer JWK files; each matched local SHA-256 bytes on 2026-07-15. The retired vouchspec.mordiaky.com host does not resolve and is not authoritative evidence. The owner Agentic Wallet Base receiving address is valid, distinct from sandbox, and stored encrypted in Vercel production as VOUCHSPEC_X402_MAINNET_PAY_TO. Commerce remains disabled and public discovery remains an intentional 503, so no payment can settle. All other application gates pass. The remaining wallet blocker is only a distinct policy-bound remedy identity: the existing x402 key cannot use the Server Wallet API, and official Coinbase documentation requires a Server Wallet API key plus separately generated Wallet Secret. Do not retry the same key, replace the working x402 key, open the portal, or request SMS codes. Wait for CDP_REMEDY_API_KEY_ID, CDP_REMEDY_API_KEY_SECRET, and CDP_REMEDY_WALLET_SECRET, then provision one unfunded remedy account with the official CLI. No funds move without separate explicit approval. Never count owner, controlled-wallet, testnet, CI, demo, or monitoring activity. Stripe remains regression-only."
 }

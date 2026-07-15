@@ -6,6 +6,10 @@
   self-service, agent-only x402 sandbox at `https://vouchspec-sandbox.plyrium.com`; it accepts
   immutable public GitHub coordinates and has no human checkout path. Agents can now purchase in
   one call at `POST /api/vouchspec/v1/validate` without registering or authenticating first.
+  The authoritative exact-byte Stage A surfaces are the raw GitHub discovery document, signed
+  index, root-signed lifecycle feed, and raw GitHub root/issuer JWK files; all returned HTTP 200
+  and matched local SHA-256 bytes on 2026-07-15. The retired `vouchspec.mordiaky.com` host does
+  not resolve and is not authoritative evidence.
 - **Stage B payment:** exact x402 v2 payment using test USDC on Base Sepolia. The sandbox price
   is 1.00 test USDC so faucet-funded agents can exercise the complete flow. The one-call route
   verifies and settles through Coinbase's authenticated CDP facilitator and declares the official
@@ -114,7 +118,8 @@
   Node suites with zero production dependency vulnerabilities. The latest hosted paid-flow
   workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
   PR `#39` hosted CI run `29414124330` passed, including the production build. Public PR `#15`
-  passed both CI runs and its 141-test/one-skip suite before merge.
+  passed both CI runs and its 141-test/one-skip suite before merge. The latest public main CI run
+  `29427544292` passed on commit `cd189ab48ec12bf5ad9533c8322ddf3bed779d86` with zero annotations.
   Host-isolation PR `#41`, main CI run `29418546016`, and production deployment
   `dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr` are green.
 
