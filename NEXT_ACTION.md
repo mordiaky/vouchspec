@@ -1,8 +1,14 @@
 # Next action
 
 Acquire and monitor the first unrelated agent buyer through the active official MCP Registry
-`0.3.0`, the auto-verified Agent Tools x402 listing, its healthy MCP entry, and direct machine
-discovery.
+`0.3.0`, the auto-verified Agent Tools x402 listing, its healthy MCP entry, the searchable A2A
+agent listing, and direct machine discovery.
+
+An A2A-capable agent can discover the purchase contract at
+`https://vouchspec.plyrium.com/.well-known/agent-card.json` and call the read-only
+`discover_vouchspec_validation` skill at
+`POST https://vouchspec.plyrium.com/api/vouchspec/v1/a2a`. That discovery call never pays,
+validates, or issues a receipt; it returns the exact existing x402 purchase instructions.
 
 Agents can buy now by sending a valid request to:
 
