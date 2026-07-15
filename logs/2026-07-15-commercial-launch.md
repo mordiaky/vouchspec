@@ -55,7 +55,9 @@ to x402 but cannot access Wallet API accounts. No customer payment was accepted 
 - Hosted PR CI run `29414124330` passed, including its production build.
 - Attached and verified `vouchspec.plyrium.com` on the Vercel production project. The disabled
   health and discovery surfaces return 503 as intended; the sandbox remains 200 and unchanged.
-- The post-merge production deployment and CI were still building at this checkpoint.
+- Post-merge CI run `29414816988` passed, including its production build. Vercel deployment
+  `dpl_58K3YWwY1vetfS3vhcgU2iPFCijr` reached READY at the merged commit. Disabled commercial health
+  and discovery return 503 as intended; the sandbox remains healthy at 200.
 
 ## Remaining owner-only gate
 

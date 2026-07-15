@@ -32,8 +32,9 @@
   delivery, worker, remedy, and Ed25519 signing material is stored only in Vercel and protected
   GitHub environments. The protected CDP credential passed the official `x402 supported` probe
   with 24 kinds and 3 extensions and is encrypted in Vercel. `vouchspec.plyrium.com` is verified
-  on the production project. Commerce, fulfillment, and remedies remain disabled pending wallet
-  identities and the final activation smoke.
+  on the production project. Vercel deployment `dpl_58K3YWwY1vetfS3vhcgU2iPFCijr` is READY at the
+  merged commit, and post-merge CI run `29414816988` passed. Commerce, fulfillment, and remedies
+  remain disabled pending wallet identities and the final activation smoke.
 - **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
   `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
   as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant
