@@ -105,7 +105,9 @@ def test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked() ->
     assert "schedule:" not in workflow
     assert "workflow_dispatch:" in workflow
     assert "github.ref == 'refs/heads/main'" in workflow
-    assert "vars.VOUCHSPEC_REMEDIES_ENABLED == 'false'" in workflow
+    assert "VOUCHSPEC_REMEDIES_ENABLED: ${{ vars.VOUCHSPEC_REMEDIES_ENABLED }}" in workflow
+    assert "Confirm the remedy executor remains fail-closed" in workflow
+    assert '[[ "$VOUCHSPEC_REMEDIES_ENABLED" != "false" ]]' in workflow
     assert "provision-unfunded-policy-bound-account" in workflow
     assert "environment: vouchspec-mainnet-remedies" in workflow
     assert "permissions:\n  contents: read" in workflow
