@@ -1,0 +1,12 @@
+{
+  "name": "vouchspec-remedy-provisioner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test index.test.mjs"
+  },
+  "dependencies": {
+    "@coinbase/cdp-cli": "2.0.20"
+  }
+}
