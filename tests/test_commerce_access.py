@@ -52,7 +52,12 @@ def _bound_order(commerce, access, tenant_id, *, suffix="001"):
         buyer_reference=tenant_id,
         now=NOW + timedelta(minutes=1),
     )
-    token = access.bind_order(tenant_id, order["order_id"], quote_id)
+    token = access.bind_order(
+        tenant_id,
+        order["order_id"],
+        quote_id,
+        created_at=(NOW + timedelta(minutes=1)).isoformat().replace("+00:00", "Z"),
+    )
     provider = FakePaymentProvider(commerce)
     order = provider.create_checkout(order["order_id"], occurred_at="2026-07-14T14:01:00Z")
     return order, token, provider
