@@ -1,10 +1,12 @@
 # Next action
 
-Use the now-indexed Coinbase Bazaar entry and live canonical discovery contract to reach qualified agent
-publishers and runtimes whose packaged or generated artifact bytes are not already fully covered
-by Git-native provenance. Convert genuine unrelated integrations into retained use, and count
-only independently attributable external requests. Owner, demo, CI, smoke, monitor, and
-controlled-wallet traffic remains excluded.
+Merge the validated remote MCP manifest, publish `io.github.mordiaky/vouchspec` through the
+main-only GitHub OIDC workflow, and verify the official Registry API result. Then use both that
+listing and the indexed Coinbase Bazaar entry to reach qualified agent publishers and runtimes
+whose packaged or generated artifact bytes are not already fully covered by Git-native provenance.
+Convert genuine unrelated integrations into retained use, and count only independently
+attributable external requests. Owner, demo, CI, smoke, monitor, and controlled-wallet traffic
+remains excluded.
 
 The excluded seed settlement is complete. It settled exactly 1.00 test USDC through CDP,
 fulfilled through the isolated worker and signer, produced a signature-verified immutable public

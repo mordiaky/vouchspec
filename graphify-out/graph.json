@@ -409,7 +409,7 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "remedy_provisioner_package",
+      "id": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "community": 125,
       "norm_label": "package.json"
     },
@@ -662,6 +662,126 @@
       "norm_label": "lc_all"
     },
     {
+      "label": "server.json",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "server",
+      "community": 88,
+      "norm_label": "server.json"
+    },
+    {
+      "label": "$schema",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "id": "server_schema",
+      "community": 88,
+      "norm_label": "$schema"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "server_name",
+      "community": 88,
+      "norm_label": "name"
+    },
+    {
+      "label": "title",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "server_title",
+      "community": 88,
+      "norm_label": "title"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "server_description",
+      "community": 88,
+      "norm_label": "description"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "server_version",
+      "community": 88,
+      "norm_label": "version"
+    },
+    {
+      "label": "repository",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "server_repository",
+      "community": 88,
+      "norm_label": "repository"
+    },
+    {
+      "label": "url",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "server_repository_url",
+      "community": 88,
+      "norm_label": "url"
+    },
+    {
+      "label": "source",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "server_repository_source",
+      "community": 88,
+      "norm_label": "source"
+    },
+    {
+      "label": "id",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "server_repository_id",
+      "community": 88,
+      "norm_label": "id"
+    },
+    {
+      "label": "websiteUrl",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "server_websiteurl",
+      "community": 88,
+      "norm_label": "websiteurl"
+    },
+    {
+      "label": "remotes",
+      "file_type": "code",
+      "source_file": "server.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "server_remotes",
+      "community": 88,
+      "norm_label": "remotes"
+    },
+    {
       "label": "__init__.py",
       "file_type": "code",
       "source_file": "src/capabilityproof/__init__.py",
@@ -708,7 +828,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_api_py",
-      "community": 42,
+      "community": 17,
       "norm_label": "api.py"
     },
     {
@@ -718,7 +838,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "capabilityproof_api_no_duplicate_object",
-      "community": 42,
+      "community": 17,
       "norm_label": "_no_duplicate_object()"
     },
     {
@@ -728,7 +848,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_any",
-      "community": 42,
+      "community": 17,
       "norm_label": "any"
     },
     {
@@ -738,7 +858,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "capabilityproof_api_validate_request",
-      "community": 42,
+      "community": 17,
       "norm_label": "_validate_request()"
     },
     {
@@ -748,7 +868,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "capabilityproof_api_make_handler",
-      "community": 42,
+      "community": 17,
       "norm_label": "make_handler()"
     },
     {
@@ -758,7 +878,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_path",
-      "community": 42,
+      "community": 17,
       "norm_label": "path"
     },
     {
@@ -768,7 +888,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_scanlimits",
-      "community": 42,
+      "community": 17,
       "norm_label": "scanlimits"
     },
     {
@@ -778,7 +898,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_basehttprequesthandler",
-      "community": 42,
+      "community": 17,
       "norm_label": "basehttprequesthandler"
     },
     {
@@ -788,7 +908,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "capabilityproof_api_create_server",
-      "community": 42,
+      "community": 17,
       "norm_label": "create_server()"
     },
     {
@@ -798,7 +918,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_threadinghttpserver",
-      "community": 38,
+      "community": 17,
       "norm_label": "threadinghttpserver"
     },
     {
@@ -808,7 +928,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_api_rationale_1",
-      "community": 42,
+      "community": 17,
       "norm_label": "small loopback-only json api around the deterministic inspector."
     },
     {
@@ -818,7 +938,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_py",
-      "community": 27,
+      "community": 38,
       "norm_label": "catalog.py"
     },
     {
@@ -968,7 +1088,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "capabilityproof_catalog_filter_catalog_entries",
-      "community": 27,
+      "community": 38,
       "norm_label": "filter_catalog_entries()"
     },
     {
@@ -988,7 +1108,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "capabilityproof_catalog_validate_catalog_index",
-      "community": 27,
+      "community": 38,
       "norm_label": "validate_catalog_index()"
     },
     {
@@ -998,7 +1118,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_rationale_1",
-      "community": 27,
+      "community": 38,
       "norm_label": "read-only stage a catalog storage and validation."
     },
     {
@@ -1008,7 +1128,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "capabilityproof_catalog_rationale_131",
-      "community": 27,
+      "community": 38,
       "norm_label": "filter an already validated catalog snapshot without rereading disk."
     },
     {
@@ -1018,7 +1138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_api_py",
-      "community": 38,
+      "community": 93,
       "norm_label": "catalog_api.py"
     },
     {
@@ -1028,7 +1148,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver",
-      "community": 38,
+      "community": 93,
       "norm_label": "boundedcatalogserver"
     },
     {
@@ -1038,7 +1158,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver_init",
-      "community": 38,
+      "community": 93,
       "norm_label": ".__init__()"
     },
     {
@@ -1048,7 +1168,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_api_py_any",
-      "community": 38,
+      "community": 93,
       "norm_label": "any"
     },
     {
@@ -1058,7 +1178,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver_process_request",
-      "community": 38,
+      "community": 93,
       "norm_label": ".process_request()"
     },
     {
@@ -1068,7 +1188,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_boundedcatalogserver_process_request_thread",
-      "community": 38,
+      "community": 93,
       "norm_label": ".process_request_thread()"
     },
     {
@@ -1078,7 +1198,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_make_catalog_handler",
-      "community": 38,
+      "community": 93,
       "norm_label": "make_catalog_handler()"
     },
     {
@@ -1088,7 +1208,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_api_py_path",
-      "community": 38,
+      "community": 93,
       "norm_label": "path"
     },
     {
@@ -1098,7 +1218,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_api_py_basehttprequesthandler",
-      "community": 38,
+      "community": 93,
       "norm_label": "basehttprequesthandler"
     },
     {
@@ -1108,7 +1228,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_create_catalog_server",
-      "community": 38,
+      "community": 93,
       "norm_label": "create_catalog_server()"
     },
     {
@@ -1118,7 +1238,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_api_rationale_1",
-      "community": 38,
+      "community": 93,
       "norm_label": "bounded loopback http retrieval api for the stage a catalog."
     },
     {
@@ -1228,7 +1348,7 @@
       "source_location": "L204",
       "_origin": "ast",
       "id": "capabilityproof_catalog_builder_sign_catalog_drafts",
-      "community": 27,
+      "community": 24,
       "norm_label": "sign_catalog_drafts()"
     },
     {
@@ -1278,7 +1398,7 @@
       "source_location": "L209",
       "_origin": "ast",
       "id": "capabilityproof_catalog_builder_rationale_209",
-      "community": 27,
+      "community": 24,
       "norm_label": "no-network issuer phase: validate drafts and sign exact receipt/index bytes."
     },
     {
@@ -1298,7 +1418,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_mcp_py",
-      "community": 38,
+      "community": 30,
       "norm_label": "catalog_mcp.py"
     },
     {
@@ -1308,7 +1428,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "capabilityproof_catalog_mcp_build_catalog_mcp_server",
-      "community": 38,
+      "community": 30,
       "norm_label": "build_catalog_mcp_server()"
     },
     {
@@ -1318,7 +1438,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_mcp_py_path",
-      "community": 38,
+      "community": 30,
       "norm_label": "path"
     },
     {
@@ -1328,7 +1448,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_mcp_py_fastmcp",
-      "community": 38,
+      "community": 30,
       "norm_label": "fastmcp"
     },
     {
@@ -1338,7 +1458,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "capabilityproof_catalog_mcp_run_catalog_mcp_server",
-      "community": 38,
+      "community": 30,
       "norm_label": "run_catalog_mcp_server()"
     },
     {
@@ -1348,7 +1468,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_mcp_rationale_1",
-      "community": 38,
+      "community": 30,
       "norm_label": "trusted read-only mcp retrieval surface for the stage a public catalog."
     },
     {
@@ -1358,7 +1478,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "community": 27,
+      "community": 30,
       "norm_label": "catalog_runtime.py"
     },
     {
@@ -1368,7 +1488,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog",
-      "community": 38,
+      "community": 59,
       "norm_label": "verifiedcatalog"
     },
     {
@@ -1378,7 +1498,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_init",
-      "community": 38,
+      "community": 59,
       "norm_label": ".__init__()"
     },
     {
@@ -1388,7 +1508,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_runtime_py_path",
-      "community": 38,
+      "community": 59,
       "norm_label": "path"
     },
     {
@@ -1398,7 +1518,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_runtime_py_any",
-      "community": 38,
+      "community": 59,
       "norm_label": "any"
     },
     {
@@ -1408,7 +1528,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_index_envelope_bytes",
-      "community": 38,
+      "community": 59,
       "norm_label": ".index_envelope_bytes()"
     },
     {
@@ -1418,7 +1538,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_lifecycle_envelope_bytes",
-      "community": 38,
+      "community": 59,
       "norm_label": ".lifecycle_envelope_bytes()"
     },
     {
@@ -1428,7 +1548,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_root_jwk_bytes",
-      "community": 38,
+      "community": 59,
       "norm_label": ".root_jwk_bytes()"
     },
     {
@@ -1438,7 +1558,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_issuer_jwk_bytes",
-      "community": 38,
+      "community": 59,
       "norm_label": ".issuer_jwk_bytes()"
     },
     {
@@ -1448,7 +1568,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_receipt_envelope_bytes",
-      "community": 38,
+      "community": 59,
       "norm_label": ".receipt_envelope_bytes()"
     },
     {
@@ -1458,7 +1578,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_status",
-      "community": 38,
+      "community": 59,
       "norm_label": ".status()"
     },
     {
@@ -1468,7 +1588,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_verifiedcatalog_list_entries",
-      "community": 38,
+      "community": 59,
       "norm_label": ".list_entries()"
     },
     {
@@ -1478,7 +1598,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_rationale_1",
-      "community": 27,
+      "community": 30,
       "norm_label": "trusted runtime view over a signed catalog and root-signed lifecycle feed."
     },
     {
@@ -1488,7 +1608,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_rationale_27",
-      "community": 38,
+      "community": 59,
       "norm_label": "immutable in-memory view of one fully verified on-disk catalog generation."
     },
     {
@@ -1858,7 +1978,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_src_capabilityproof_commerce_access_py",
-      "community": 20,
+      "community": 6,
       "norm_label": "commerce_access.py"
     },
     {
@@ -1868,7 +1988,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_utc_now",
-      "community": 20,
+      "community": 6,
       "norm_label": "_utc_now()"
     },
     {
@@ -1878,7 +1998,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_parse_timestamp",
-      "community": 20,
+      "community": 6,
       "norm_label": "_parse_timestamp()"
     },
     {
@@ -1888,7 +2008,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_access_py_datetime",
-      "community": 20,
+      "community": 6,
       "norm_label": "datetime"
     },
     {
@@ -1898,7 +2018,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_format_timestamp",
-      "community": 20,
+      "community": 6,
       "norm_label": "_format_timestamp()"
     },
     {
@@ -1908,7 +2028,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_token_bytes",
-      "community": 20,
+      "community": 6,
       "norm_label": "_token_bytes()"
     },
     {
@@ -1918,7 +2038,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_urlsafe",
-      "community": 20,
+      "community": 6,
       "norm_label": "_urlsafe()"
     },
     {
@@ -1928,7 +2048,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore",
-      "community": 20,
+      "community": 6,
       "norm_label": "commerceaccessstore"
     },
     {
@@ -1938,7 +2058,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_init",
-      "community": 20,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -1948,7 +2068,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_access_py_path",
-      "community": 20,
+      "community": 6,
       "norm_label": "path"
     },
     {
@@ -1958,7 +2078,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_connection",
-      "community": 20,
+      "community": 6,
       "norm_label": "._connection()"
     },
     {
@@ -1968,7 +2088,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_access_py_connection",
-      "community": 20,
+      "community": 6,
       "norm_label": "connection"
     },
     {
@@ -1978,7 +2098,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_initialize",
-      "community": 20,
+      "community": 6,
       "norm_label": "._initialize()"
     },
     {
@@ -1988,7 +2108,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_api_digest",
-      "community": 20,
+      "community": 6,
       "norm_label": "._api_digest()"
     },
     {
@@ -1998,7 +2118,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_idempotency_digest",
-      "community": 20,
+      "community": 6,
       "norm_label": "._idempotency_digest()"
     },
     {
@@ -2008,7 +2128,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_delivery_token",
-      "community": 20,
+      "community": 6,
       "norm_label": "._delivery_token()"
     },
     {
@@ -2018,7 +2138,7 @@
       "source_location": "L198",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_delivery_digest",
-      "community": 20,
+      "community": 6,
       "norm_label": "._delivery_digest()"
     },
     {
@@ -2028,7 +2148,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_provision_tenant",
-      "community": 20,
+      "community": 6,
       "norm_label": ".provision_tenant()"
     },
     {
@@ -2038,7 +2158,7 @@
       "source_location": "L223",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_authenticate_api_key",
-      "community": 20,
+      "community": 6,
       "norm_label": ".authenticate_api_key()"
     },
     {
@@ -2048,7 +2168,7 @@
       "source_location": "L240",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_rotate_api_key",
-      "community": 20,
+      "community": 6,
       "norm_label": ".rotate_api_key()"
     },
     {
@@ -2058,7 +2178,7 @@
       "source_location": "L258",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_revoke_tenant",
-      "community": 20,
+      "community": 6,
       "norm_label": ".revoke_tenant()"
     },
     {
@@ -2068,7 +2188,7 @@
       "source_location": "L271",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_derive_quote_id",
-      "community": 20,
+      "community": 6,
       "norm_label": ".derive_quote_id()"
     },
     {
@@ -2078,7 +2198,7 @@
       "source_location": "L277",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_derive_order_idempotency_key",
-      "community": 20,
+      "community": 6,
       "norm_label": ".derive_order_idempotency_key()"
     },
     {
@@ -2088,7 +2208,7 @@
       "source_location": "L285",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_bind_quote",
-      "community": 20,
+      "community": 6,
       "norm_label": ".bind_quote()"
     },
     {
@@ -2098,7 +2218,7 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_authorize_quote",
-      "community": 20,
+      "community": 6,
       "norm_label": ".authorize_quote()"
     },
     {
@@ -2108,7 +2228,7 @@
       "source_location": "L340",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_tenant_resource_counts",
-      "community": 20,
+      "community": 6,
       "norm_label": ".tenant_resource_counts()"
     },
     {
@@ -2118,7 +2238,7 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_quote_owned",
-      "community": 20,
+      "community": 6,
       "norm_label": ".quote_owned()"
     },
     {
@@ -2128,7 +2248,7 @@
       "source_location": "L363",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_order_for_quote",
-      "community": 20,
+      "community": 6,
       "norm_label": ".order_for_quote()"
     },
     {
@@ -2138,7 +2258,7 @@
       "source_location": "L373",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_bind_order",
-      "community": 20,
+      "community": 6,
       "norm_label": ".bind_order()"
     },
     {
@@ -2148,7 +2268,7 @@
       "source_location": "L434",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_authorize_order",
-      "community": 20,
+      "community": 6,
       "norm_label": ".authorize_order()"
     },
     {
@@ -2158,7 +2278,7 @@
       "source_location": "L434",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_access_py_any",
-      "community": 20,
+      "community": 6,
       "norm_label": "any"
     },
     {
@@ -2168,7 +2288,7 @@
       "source_location": "L480",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_rotate_delivery_token",
-      "community": 20,
+      "community": 6,
       "norm_label": ".rotate_delivery_token()"
     },
     {
@@ -2178,7 +2298,7 @@
       "source_location": "L521",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_revoke_delivery_token",
-      "community": 20,
+      "community": 6,
       "norm_label": ".revoke_delivery_token()"
     },
     {
@@ -2188,7 +2308,7 @@
       "source_location": "L553",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_publish_result",
-      "community": 20,
+      "community": 6,
       "norm_label": ".publish_result()"
     },
     {
@@ -2198,7 +2318,7 @@
       "source_location": "L597",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_get_result",
-      "community": 20,
+      "community": 6,
       "norm_label": ".get_result()"
     },
     {
@@ -2208,7 +2328,7 @@
       "source_location": "L616",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_audit_events",
-      "community": 20,
+      "community": 6,
       "norm_label": ".audit_events()"
     },
     {
@@ -2218,7 +2338,7 @@
       "source_location": "L630",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_audit",
-      "community": 20,
+      "community": 6,
       "norm_label": "._audit()"
     },
     {
@@ -2228,7 +2348,7 @@
       "source_location": "L648",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_commerceaccessstore_require_active_tenant",
-      "community": 20,
+      "community": 6,
       "norm_label": "._require_active_tenant()"
     },
     {
@@ -2238,7 +2358,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_rationale_1",
-      "community": 20,
+      "community": 6,
       "norm_label": "tenant and capability access controls for the constrained commerce boundary.  th"
     },
     {
@@ -2248,7 +2368,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "capabilityproof_commerce_access_rationale_66",
-      "community": 20,
+      "community": 6,
       "norm_label": "keyed-digest tenant, quote, order, and result authorization state."
     },
     {
@@ -2258,7 +2378,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stripe_http_src_capabilityproof_commerce_api_py",
-      "community": 50,
+      "community": 6,
       "norm_label": "commerce_api.py"
     },
     {
@@ -2268,7 +2388,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_commerceapilimits",
-      "community": 50,
+      "community": 6,
       "norm_label": "commerceapilimits"
     },
     {
@@ -2278,7 +2398,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_commerceapilimits_post_init",
-      "community": 50,
+      "community": 6,
       "norm_label": ".__post_init__()"
     },
     {
@@ -2288,7 +2408,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_slidingwindowratelimiter",
-      "community": 50,
+      "community": 6,
       "norm_label": "slidingwindowratelimiter"
     },
     {
@@ -2298,7 +2418,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_slidingwindowratelimiter_init",
-      "community": 50,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -2308,7 +2428,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_slidingwindowratelimiter_allow",
-      "community": 50,
+      "community": 6,
       "norm_label": ".allow()"
     },
     {
@@ -2318,7 +2438,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_boundedcommerceserver",
-      "community": 50,
+      "community": 6,
       "norm_label": "boundedcommerceserver"
     },
     {
@@ -2328,7 +2448,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_boundedcommerceserver_init",
-      "community": 50,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -2338,7 +2458,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_api_py_any",
-      "community": 50,
+      "community": 6,
       "norm_label": "any"
     },
     {
@@ -2348,7 +2468,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_boundedcommerceserver_process_request",
-      "community": 50,
+      "community": 6,
       "norm_label": ".process_request()"
     },
     {
@@ -2358,7 +2478,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_boundedcommerceserver_process_request_thread",
-      "community": 50,
+      "community": 6,
       "norm_label": ".process_request_thread()"
     },
     {
@@ -2368,7 +2488,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_timestamp",
-      "community": 50,
+      "community": 6,
       "norm_label": "_timestamp()"
     },
     {
@@ -2378,7 +2498,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_api_py_datetime",
-      "community": 50,
+      "community": 6,
       "norm_label": "datetime"
     },
     {
@@ -2388,7 +2508,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_public_order",
-      "community": 50,
+      "community": 6,
       "norm_label": "_public_order()"
     },
     {
@@ -2398,7 +2518,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_make_commerce_handler",
-      "community": 50,
+      "community": 6,
       "norm_label": "make_commerce_handler()"
     },
     {
@@ -2408,7 +2528,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_api_py_commercestore",
-      "community": 50,
+      "community": 6,
       "norm_label": "commercestore"
     },
     {
@@ -2418,7 +2538,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_api_py_commerceaccessstore",
-      "community": 50,
+      "community": 6,
       "norm_label": "commerceaccessstore"
     },
     {
@@ -2428,7 +2548,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "stripepaymentadapter",
-      "community": 50,
+      "community": 6,
       "norm_label": "stripepaymentadapter"
     },
     {
@@ -2438,7 +2558,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_api_py_basehttprequesthandler",
-      "community": 50,
+      "community": 6,
       "norm_label": "basehttprequesthandler"
     },
     {
@@ -2448,7 +2568,7 @@
       "source_location": "L548",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_create_commerce_server",
-      "community": 50,
+      "community": 6,
       "norm_label": "create_commerce_server()"
     },
     {
@@ -2458,7 +2578,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_rationale_1",
-      "community": 50,
+      "community": 6,
       "norm_label": "authenticated loopback http boundary for sandbox stage b commerce.  the server i"
     },
     {
@@ -2468,7 +2588,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "capabilityproof_commerce_api_rationale_62",
-      "community": 50,
+      "community": 6,
       "norm_label": "small single-process limiter for the loopback application boundary."
     },
     {
@@ -2848,7 +2968,7 @@
       "source_location": "L1015",
       "_origin": "ast",
       "id": "capabilityproof_commerce_store_fakepaymentprovider",
-      "community": 50,
+      "community": 6,
       "norm_label": "fakepaymentprovider"
     },
     {
@@ -2858,7 +2978,7 @@
       "source_location": "L1018",
       "_origin": "ast",
       "id": "capabilityproof_commerce_store_fakepaymentprovider_init",
-      "community": 50,
+      "community": 6,
       "norm_label": ".__init__()"
     },
     {
@@ -2878,7 +2998,7 @@
       "source_location": "L1028",
       "_origin": "ast",
       "id": "capabilityproof_commerce_store_fakepaymentprovider_event_id",
-      "community": 50,
+      "community": 6,
       "norm_label": "._event_id()"
     },
     {
@@ -2948,7 +3068,7 @@
       "source_location": "L1016",
       "_origin": "ast",
       "id": "capabilityproof_commerce_store_rationale_1016",
-      "community": 50,
+      "community": 6,
       "norm_label": "deterministic sandbox provider for replay, reordering, and reconciliation tests."
     },
     {
@@ -2958,7 +3078,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_errors_py",
-      "community": 63,
+      "community": 0,
       "norm_label": "errors.py"
     },
     {
@@ -2988,7 +3108,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_errors_inputrejected",
-      "community": 50,
+      "community": 6,
       "norm_label": "inputrejected"
     },
     {
@@ -2998,7 +3118,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "capabilityproof_errors_limitexceeded",
-      "community": 63,
+      "community": 0,
       "norm_label": "limitexceeded"
     },
     {
@@ -3008,7 +3128,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "capabilityproof_errors_pathrejected",
-      "community": 63,
+      "community": 0,
       "norm_label": "pathrejected"
     },
     {
@@ -3018,7 +3138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_errors_rationale_1",
-      "community": 63,
+      "community": 0,
       "norm_label": "public error types with stable machine-readable codes."
     },
     {
@@ -3238,7 +3358,7 @@
       "source_location": "L252",
       "_origin": "ast",
       "id": "capabilityproof_hosted_worker_noredirect",
-      "community": 63,
+      "community": 67,
       "norm_label": "_noredirect"
     },
     {
@@ -3248,7 +3368,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "httpredirecthandler",
-      "community": 63,
+      "community": 67,
       "norm_label": "httpredirecthandler"
     },
     {
@@ -3258,7 +3378,7 @@
       "source_location": "L253",
       "_origin": "ast",
       "id": "capabilityproof_hosted_worker_noredirect_redirect_request",
-      "community": 63,
+      "community": 67,
       "norm_label": ".redirect_request()"
     },
     {
@@ -3268,7 +3388,7 @@
       "source_location": "L253",
       "_origin": "ast",
       "id": "request",
-      "community": 63,
+      "community": 67,
       "norm_label": "request"
     },
     {
@@ -3548,7 +3668,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_lifecyclesequencestore",
-      "community": 81,
+      "community": 24,
       "norm_label": "lifecyclesequencestore"
     },
     {
@@ -3728,7 +3848,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_rationale_110",
-      "community": 81,
+      "community": 24,
       "norm_label": "persist the highest root-feed sequence outside mutable catalog storage."
     },
     {
@@ -3918,7 +4038,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "src_capabilityproof_paid_lifecycle_py_commercestore",
-      "community": 50,
+      "community": 43,
       "norm_label": "commercestore"
     },
     {
@@ -4128,7 +4248,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_src_capabilityproof_pricing_py",
-      "community": 38,
+      "community": 30,
       "norm_label": "pricing.py"
     },
     {
@@ -4138,7 +4258,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_pricing_price_quote",
-      "community": 38,
+      "community": 30,
       "norm_label": "price_quote()"
     },
     {
@@ -4148,7 +4268,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_capabilityproof_pricing_py_any",
-      "community": 38,
+      "community": 30,
       "norm_label": "any"
     },
     {
@@ -4158,7 +4278,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_pricing_rationale_1",
-      "community": 38,
+      "community": 30,
       "norm_label": "machine-readable stage a price hypotheses without order or payment intake."
     },
     {
@@ -4168,7 +4288,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_provenance_py",
-      "community": 63,
+      "community": 20,
       "norm_label": "provenance.py"
     },
     {
@@ -4178,7 +4298,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_provenance_provenanceevidence",
-      "community": 54,
+      "community": 20,
       "norm_label": "provenanceevidence"
     },
     {
@@ -4188,7 +4308,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "capabilityproof_provenance_safe_git_environment",
-      "community": 63,
+      "community": 20,
       "norm_label": "_safe_git_environment()"
     },
     {
@@ -4198,7 +4318,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "capabilityproof_provenance_git",
-      "community": 63,
+      "community": 20,
       "norm_label": "_git()"
     },
     {
@@ -4208,7 +4328,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_capabilityproof_provenance_py_path",
-      "community": 63,
+      "community": 20,
       "norm_label": "path"
     },
     {
@@ -4218,7 +4338,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "capabilityproof_provenance_verify_commit_blobs",
-      "community": 63,
+      "community": 20,
       "norm_label": "_verify_commit_blobs()"
     },
     {
@@ -4228,7 +4348,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "src_capabilityproof_provenance_py_snapshot",
-      "community": 63,
+      "community": 20,
       "norm_label": "snapshot"
     },
     {
@@ -4238,7 +4358,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "capabilityproof_provenance_sanitize_remote",
-      "community": 63,
+      "community": 20,
       "norm_label": "_sanitize_remote()"
     },
     {
@@ -4248,7 +4368,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "capabilityproof_provenance_verify_git_provenance",
-      "community": 63,
+      "community": 20,
       "norm_label": "verify_git_provenance()"
     },
     {
@@ -4258,7 +4378,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_provenance_rationale_1",
-      "community": 63,
+      "community": 20,
       "norm_label": "controlled local git provenance checks without fetching or executing artifact co"
     },
     {
@@ -4278,7 +4398,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "capabilityproof_receipt_deterministic_json",
-      "community": 54,
+      "community": 24,
       "norm_label": "deterministic_json()"
     },
     {
@@ -4458,7 +4578,7 @@
       "source_location": "L345",
       "_origin": "ast",
       "id": "capabilityproof_receipt_verify_receipt_integrity",
-      "community": 27,
+      "community": 54,
       "norm_label": "verify_receipt_integrity()"
     },
     {
@@ -5098,7 +5218,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_sha256",
-      "community": 100,
+      "community": 124,
       "norm_label": "sha256"
     },
     {
@@ -5108,7 +5228,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_sha256_ref",
-      "community": 100,
+      "community": 124,
       "norm_label": "$ref"
     },
     {
@@ -5268,7 +5388,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_items_properties",
-      "community": 100,
+      "community": 124,
       "norm_label": "properties"
     },
     {
@@ -5278,7 +5398,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_path",
-      "community": 100,
+      "community": 124,
       "norm_label": "path"
     },
     {
@@ -5288,7 +5408,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_size",
-      "community": 100,
+      "community": 124,
       "norm_label": "size"
     },
     {
@@ -5908,7 +6028,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_status",
-      "community": 33,
+      "community": 28,
       "norm_label": "status"
     },
     {
@@ -5918,7 +6038,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_status_enum",
-      "community": 33,
+      "community": 28,
       "norm_label": "enum"
     },
     {
@@ -6208,7 +6328,7 @@
       "source_location": "L167",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_static_analysis",
-      "community": 119,
+      "community": 52,
       "norm_label": "static_analysis"
     },
     {
@@ -6218,7 +6338,7 @@
       "source_location": "L168",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_static_analysis_type",
-      "community": 119,
+      "community": 52,
       "norm_label": "type"
     },
     {
@@ -6228,7 +6348,7 @@
       "source_location": "L169",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_static_analysis_additionalproperties",
-      "community": 119,
+      "community": 52,
       "norm_label": "additionalproperties"
     },
     {
@@ -6238,7 +6358,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_static_analysis_required",
-      "community": 119,
+      "community": 52,
       "norm_label": "required"
     },
     {
@@ -6258,7 +6378,7 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_status_const",
-      "community": 33,
+      "community": 28,
       "norm_label": "const"
     },
     {
@@ -6598,7 +6718,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_script_languages",
-      "community": 52,
+      "community": 22,
       "norm_label": "script_languages"
     },
     {
@@ -6608,7 +6728,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_script_languages_type",
-      "community": 52,
+      "community": 22,
       "norm_label": "type"
     },
     {
@@ -6618,7 +6738,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_script_languages_maxitems",
-      "community": 52,
+      "community": 22,
       "norm_label": "maxitems"
     },
     {
@@ -7568,7 +7688,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_python",
-      "community": 106,
+      "community": 126,
       "norm_label": "python"
     },
     {
@@ -7578,7 +7698,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_type",
-      "community": 106,
+      "community": 126,
       "norm_label": "type"
     },
     {
@@ -7588,7 +7708,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_minlength",
-      "community": 106,
+      "community": 126,
       "norm_label": "minlength"
     },
     {
@@ -7598,7 +7718,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_maxlength",
-      "community": 106,
+      "community": 126,
       "norm_label": "maxlength"
     },
     {
@@ -7608,7 +7728,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_pyyaml",
-      "community": 126,
+      "community": 106,
       "norm_label": "pyyaml"
     },
     {
@@ -7618,7 +7738,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_type",
-      "community": 126,
+      "community": 106,
       "norm_label": "type"
     },
     {
@@ -7628,7 +7748,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_minlength",
-      "community": 126,
+      "community": 106,
       "norm_label": "minlength"
     },
     {
@@ -7638,7 +7758,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_maxlength",
-      "community": 126,
+      "community": 106,
       "norm_label": "maxlength"
     },
     {
@@ -7968,7 +8088,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_limitations",
-      "community": 26,
+      "community": 22,
       "norm_label": "limitations"
     },
     {
@@ -7978,7 +8098,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_type",
-      "community": 26,
+      "community": 22,
       "norm_label": "type"
     },
     {
@@ -7988,7 +8108,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_minitems",
-      "community": 26,
+      "community": 22,
       "norm_label": "minitems"
     },
     {
@@ -7998,7 +8118,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_maxitems",
-      "community": 26,
+      "community": 22,
       "norm_label": "maxitems"
     },
     {
@@ -8518,7 +8638,7 @@
       "source_location": "L346",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_path_ref",
-      "community": 100,
+      "community": 124,
       "norm_label": "$ref"
     },
     {
@@ -8548,7 +8668,7 @@
       "source_location": "L352",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_defs_staticsummary",
-      "community": 88,
+      "community": 19,
       "norm_label": "staticsummary"
     },
     {
@@ -8558,7 +8678,7 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticsummary_type",
-      "community": 88,
+      "community": 19,
       "norm_label": "type"
     },
     {
@@ -8568,7 +8688,7 @@
       "source_location": "L354",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticsummary_additionalproperties",
-      "community": 88,
+      "community": 19,
       "norm_label": "additionalproperties"
     },
     {
@@ -8578,7 +8698,7 @@
       "source_location": "L355",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticsummary_required",
-      "community": 88,
+      "community": 19,
       "norm_label": "required"
     },
     {
@@ -8638,7 +8758,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_high",
-      "community": 8,
+      "community": 119,
       "norm_label": "high"
     },
     {
@@ -8648,7 +8768,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_high_type",
-      "community": 8,
+      "community": 119,
       "norm_label": "type"
     },
     {
@@ -8658,7 +8778,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_high_minimum",
-      "community": 8,
+      "community": 119,
       "norm_label": "minimum"
     },
     {
@@ -8668,7 +8788,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_high_maximum",
-      "community": 8,
+      "community": 119,
       "norm_label": "maximum"
     },
     {
@@ -8718,7 +8838,7 @@
       "source_location": "L360",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_low",
-      "community": 93,
+      "community": 8,
       "norm_label": "low"
     },
     {
@@ -8728,7 +8848,7 @@
       "source_location": "L360",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_low_type",
-      "community": 93,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -8738,7 +8858,7 @@
       "source_location": "L360",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_low_minimum",
-      "community": 93,
+      "community": 8,
       "norm_label": "minimum"
     },
     {
@@ -8748,7 +8868,7 @@
       "source_location": "L360",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_low_maximum",
-      "community": 93,
+      "community": 8,
       "norm_label": "maximum"
     },
     {
@@ -8758,7 +8878,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_total",
-      "community": 148,
+      "community": 140,
       "norm_label": "total"
     },
     {
@@ -8768,7 +8888,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_type",
-      "community": 148,
+      "community": 140,
       "norm_label": "type"
     },
     {
@@ -8778,7 +8898,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_minimum",
-      "community": 148,
+      "community": 140,
       "norm_label": "minimum"
     },
     {
@@ -8788,7 +8908,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_maximum",
-      "community": 148,
+      "community": 140,
       "norm_label": "maximum"
     },
     {
@@ -8798,7 +8918,7 @@
       "source_location": "L364",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_defs_staticfinding",
-      "community": 19,
+      "community": 115,
       "norm_label": "staticfinding"
     },
     {
@@ -8808,7 +8928,7 @@
       "source_location": "L365",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticfinding_type",
-      "community": 19,
+      "community": 115,
       "norm_label": "type"
     },
     {
@@ -8818,7 +8938,7 @@
       "source_location": "L366",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticfinding_additionalproperties",
-      "community": 19,
+      "community": 115,
       "norm_label": "additionalproperties"
     },
     {
@@ -8828,7 +8948,7 @@
       "source_location": "L367",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticfinding_required",
-      "community": 19,
+      "community": 115,
       "norm_label": "required"
     },
     {
@@ -9128,7 +9248,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_properties_amount_minor",
-      "community": 29,
+      "community": 148,
       "norm_label": "amount_minor"
     },
     {
@@ -9138,7 +9258,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_amount_minor_const",
-      "community": 29,
+      "community": 148,
       "norm_label": "const"
     },
     {
@@ -9268,7 +9388,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_properties_orderable",
-      "community": 124,
+      "community": 29,
       "norm_label": "orderable"
     },
     {
@@ -9278,7 +9398,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_orderable_const",
-      "community": 124,
+      "community": 29,
       "norm_label": "const"
     },
     {
@@ -10578,7 +10698,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_signing_py",
-      "community": 30,
+      "community": 24,
       "norm_label": "signing.py"
     },
     {
@@ -10588,7 +10708,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "capabilityproof_signing_b64url_no_pad",
-      "community": 30,
+      "community": 24,
       "norm_label": "_b64url_no_pad()"
     },
     {
@@ -10598,7 +10718,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "capabilityproof_signing_b64url_decode",
-      "community": 30,
+      "community": 24,
       "norm_label": "_b64url_decode()"
     },
     {
@@ -10608,7 +10728,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "capabilityproof_signing_b64_decode",
-      "community": 30,
+      "community": 24,
       "norm_label": "_b64_decode()"
     },
     {
@@ -10618,7 +10738,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "capabilityproof_signing_strict_json",
-      "community": 30,
+      "community": 24,
       "norm_label": "_strict_json()"
     },
     {
@@ -10628,7 +10748,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "src_capabilityproof_signing_py_any",
-      "community": 30,
+      "community": 24,
       "norm_label": "any"
     },
     {
@@ -10638,7 +10758,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "capabilityproof_signing_dsse_pae",
-      "community": 59,
+      "community": 24,
       "norm_label": "dsse_pae()"
     },
     {
@@ -10648,7 +10768,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "capabilityproof_signing_public_jwk",
-      "community": 81,
+      "community": 24,
       "norm_label": "public_jwk()"
     },
     {
@@ -10658,7 +10778,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "ed25519publickey",
-      "community": 81,
+      "community": 24,
       "norm_label": "ed25519publickey"
     },
     {
@@ -10668,7 +10788,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "capabilityproof_signing_jwk_thumbprint",
-      "community": 30,
+      "community": 24,
       "norm_label": "jwk_thumbprint()"
     },
     {
@@ -10678,7 +10798,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "capabilityproof_signing_public_key_from_jwk",
-      "community": 30,
+      "community": 24,
       "norm_label": "public_key_from_jwk()"
     },
     {
@@ -10688,7 +10808,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "capabilityproof_signing_load_public_jwk",
-      "community": 30,
+      "community": 70,
       "norm_label": "load_public_jwk()"
     },
     {
@@ -10698,7 +10818,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "src_capabilityproof_signing_py_path",
-      "community": 30,
+      "community": 70,
       "norm_label": "path"
     },
     {
@@ -10708,7 +10828,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "capabilityproof_signing_load_private_key",
-      "community": 30,
+      "community": 70,
       "norm_label": "load_private_key()"
     },
     {
@@ -10718,7 +10838,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "src_capabilityproof_signing_py_ed25519privatekey",
-      "community": 30,
+      "community": 24,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -10728,7 +10848,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "capabilityproof_signing_generate_encrypted_keypair",
-      "community": 30,
+      "community": 70,
       "norm_label": "generate_encrypted_keypair()"
     },
     {
@@ -10738,7 +10858,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "capabilityproof_signing_sign_receipt_bytes",
-      "community": 30,
+      "community": 24,
       "norm_label": "sign_receipt_bytes()"
     },
     {
@@ -10748,7 +10868,7 @@
       "source_location": "L194",
       "_origin": "ast",
       "id": "capabilityproof_signing_sign_dsse_payload",
-      "community": 30,
+      "community": 24,
       "norm_label": "sign_dsse_payload()"
     },
     {
@@ -10758,7 +10878,7 @@
       "source_location": "L214",
       "_origin": "ast",
       "id": "capabilityproof_signing_verify_receipt_envelope",
-      "community": 59,
+      "community": 24,
       "norm_label": "verify_receipt_envelope()"
     },
     {
@@ -10768,7 +10888,7 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "capabilityproof_signing_verify_dsse_envelope",
-      "community": 30,
+      "community": 24,
       "norm_label": "verify_dsse_envelope()"
     },
     {
@@ -10778,7 +10898,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "capabilityproof_signing_require_safe_regular_file",
-      "community": 30,
+      "community": 70,
       "norm_label": "_require_safe_regular_file()"
     },
     {
@@ -10788,7 +10908,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_1",
-      "community": 30,
+      "community": 24,
       "norm_label": "dsse v1 receipt envelopes signed with ed25519.  the signature covers the exact r"
     },
     {
@@ -10798,7 +10918,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_81",
-      "community": 59,
+      "community": 24,
       "norm_label": "return the dsse v1 pre-authentication encoding."
     },
     {
@@ -10808,7 +10928,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_141",
-      "community": 30,
+      "community": 70,
       "norm_label": "create a new encrypted pkcs#8 private key and rfc 8037 public jwk."
     },
     {
@@ -10818,7 +10938,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_201",
-      "community": 30,
+      "community": 24,
       "norm_label": "sign exact payload bytes using the stage a one-signature dsse profile."
     },
     {
@@ -10828,7 +10948,7 @@
       "source_location": "L215",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_215",
-      "community": 59,
+      "community": 24,
       "norm_label": "authenticate an envelope and return both parsed receipt and exact signed bytes."
     },
     {
@@ -10838,7 +10958,7 @@
       "source_location": "L237",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_237",
-      "community": 30,
+      "community": 24,
       "norm_label": "authenticate one exact dsse payload without parsing the payload itself."
     },
     {
@@ -11038,7 +11158,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_snapshot_py",
-      "community": 63,
+      "community": 0,
       "norm_label": "snapshot.py"
     },
     {
@@ -11068,7 +11188,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_filedata",
-      "community": 63,
+      "community": 0,
       "norm_label": "filedata"
     },
     {
@@ -11088,7 +11208,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_snapshot_get",
-      "community": 63,
+      "community": 87,
       "norm_label": ".get()"
     },
     {
@@ -11098,7 +11218,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_is_relative_to",
-      "community": 63,
+      "community": 0,
       "norm_label": "_is_relative_to()"
     },
     {
@@ -11108,7 +11228,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "src_capabilityproof_snapshot_py_path",
-      "community": 63,
+      "community": 0,
       "norm_label": "path"
     },
     {
@@ -11118,7 +11238,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_is_link_or_reparse",
-      "community": 63,
+      "community": 0,
       "norm_label": "_is_link_or_reparse()"
     },
     {
@@ -11128,7 +11248,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "stat_result",
-      "community": 63,
+      "community": 0,
       "norm_label": "stat_result"
     },
     {
@@ -11138,7 +11258,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_entry_identity",
-      "community": 63,
+      "community": 0,
       "norm_label": "_entry_identity()"
     },
     {
@@ -11148,7 +11268,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_validate_relative_path",
-      "community": 63,
+      "community": 0,
       "norm_label": "_validate_relative_path()"
     },
     {
@@ -11158,7 +11278,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_resolve_operator_root",
-      "community": 63,
+      "community": 0,
       "norm_label": "resolve_operator_root()"
     },
     {
@@ -11168,7 +11288,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_resolve_allowed_path",
-      "community": 63,
+      "community": 0,
       "norm_label": "resolve_allowed_path()"
     },
     {
@@ -11178,7 +11298,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_iter_entries",
-      "community": 63,
+      "community": 0,
       "norm_label": "_iter_entries()"
     },
     {
@@ -11188,7 +11308,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "direntry",
-      "community": 63,
+      "community": 0,
       "norm_label": "direntry"
     },
     {
@@ -11198,7 +11318,7 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_inventory_signature",
-      "community": 63,
+      "community": 0,
       "norm_label": "_inventory_signature()"
     },
     {
@@ -11208,7 +11328,7 @@
       "source_location": "L252",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_utc_iso",
-      "community": 63,
+      "community": 0,
       "norm_label": "_utc_iso()"
     },
     {
@@ -11218,7 +11338,7 @@
       "source_location": "L252",
       "_origin": "ast",
       "id": "src_capabilityproof_snapshot_py_datetime",
-      "community": 63,
+      "community": 0,
       "norm_label": "datetime"
     },
     {
@@ -11228,7 +11348,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_collect_snapshot",
-      "community": 63,
+      "community": 0,
       "norm_label": "collect_snapshot()"
     },
     {
@@ -11238,7 +11358,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_rationale_1",
-      "community": 63,
+      "community": 0,
       "norm_label": "bounded, non-following filesystem snapshotting for hostile artifact input."
     },
     {
@@ -11248,7 +11368,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_rationale_102",
-      "community": 63,
+      "community": 0,
       "norm_label": "return true for posix links and windows reparse points such as junctions."
     },
     {
@@ -11258,7 +11378,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_rationale_151",
-      "community": 63,
+      "community": 0,
       "norm_label": "resolve an api/mcp relative path without allowing drive or traversal escape."
     },
     {
@@ -11278,7 +11398,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_frozensource",
-      "community": 63,
+      "community": 67,
       "norm_label": "frozensource"
     },
     {
@@ -11288,7 +11408,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_workerresult",
-      "community": 63,
+      "community": 0,
       "norm_label": "workerresult"
     },
     {
@@ -11388,7 +11508,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_read_bounded",
-      "community": 63,
+      "community": 0,
       "norm_label": "_read_bounded()"
     },
     {
@@ -11398,7 +11518,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "binaryio",
-      "community": 63,
+      "community": 0,
       "norm_label": "binaryio"
     },
     {
@@ -11408,7 +11528,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "event",
-      "community": 63,
+      "community": 0,
       "norm_label": "event"
     },
     {
@@ -11418,7 +11538,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "popen",
-      "community": 63,
+      "community": 0,
       "norm_label": "popen"
     },
     {
@@ -11498,7 +11618,7 @@
       "source_location": "L434",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockerquotagitfetcher",
-      "community": 63,
+      "community": 67,
       "norm_label": "dockerquotagitfetcher"
     },
     {
@@ -11508,7 +11628,7 @@
       "source_location": "L437",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockerquotagitfetcher_init",
-      "community": 63,
+      "community": 67,
       "norm_label": ".__init__()"
     },
     {
@@ -11518,7 +11638,7 @@
       "source_location": "L443",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockerquotagitfetcher_command",
-      "community": 63,
+      "community": 67,
       "norm_label": ".command()"
     },
     {
@@ -11648,7 +11768,7 @@
       "source_location": "L435",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_435",
-      "community": 63,
+      "community": 67,
       "norm_label": "fetch immutable git objects inside a kernel-capped tmpfs container."
     },
     {
@@ -11688,7 +11808,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_src_capabilityproof_stage_b_signer_py",
-      "community": 112,
+      "community": 63,
       "norm_label": "stage_b_signer.py"
     },
     {
@@ -11698,7 +11818,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_timestamp",
-      "community": 112,
+      "community": 63,
       "norm_label": "_timestamp()"
     },
     {
@@ -11708,7 +11828,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_py_any",
-      "community": 112,
+      "community": 63,
       "norm_label": "any"
     },
     {
@@ -11718,7 +11838,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_sign_verified_worker_result",
-      "community": 112,
+      "community": 63,
       "norm_label": "sign_verified_worker_result()"
     },
     {
@@ -11728,7 +11848,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_py_path",
-      "community": 112,
+      "community": 63,
       "norm_label": "path"
     },
     {
@@ -11738,7 +11858,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_py_ed25519privatekey",
-      "community": 112,
+      "community": 63,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -11748,7 +11868,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_rationale_1",
-      "community": 112,
+      "community": 63,
       "norm_label": "constrained signing gate for receipts produced by verified stage b workers."
     },
     {
@@ -11758,7 +11878,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_rationale_83",
-      "community": 112,
+      "community": 63,
       "norm_label": "sign exact receipt bytes only after all freeze/worker constraints re-verify."
     },
     {
@@ -11838,7 +11958,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_src_capabilityproof_stage_b_worker_py",
-      "community": 54,
+      "community": 20,
       "norm_label": "stage_b_worker.py"
     },
     {
@@ -11848,7 +11968,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_worker_main",
-      "community": 54,
+      "community": 20,
       "norm_label": "main()"
     },
     {
@@ -11858,7 +11978,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_worker_rationale_1",
-      "community": 54,
+      "community": 20,
       "norm_label": "entrypoint logic executed only inside the stage b no-egress worker container."
     },
     {
@@ -11888,7 +12008,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "capabilityproof_static_analysis_static_ruleset_sha256",
-      "community": 87,
+      "community": 54,
       "norm_label": "static_ruleset_sha256()"
     },
     {
@@ -12108,7 +12228,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "pattern",
-      "community": 50,
+      "community": 6,
       "norm_label": "pattern"
     },
     {
@@ -12168,7 +12288,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_stripe_payments_py_commercestore",
-      "community": 50,
+      "community": 6,
       "norm_label": "commercestore"
     },
     {
@@ -12188,7 +12308,7 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "src_capabilityproof_stripe_payments_py_connection",
-      "community": 50,
+      "community": 6,
       "norm_label": "connection"
     },
     {
@@ -12558,7 +12678,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_tests_test_catalog_py",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_catalog.py"
     },
     {
@@ -12568,7 +12688,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_catalog_independent_root",
-      "community": 38,
+      "community": 100,
       "norm_label": "_independent_root()"
     },
     {
@@ -12578,7 +12698,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_catalog_py_path",
-      "community": 38,
+      "community": 100,
       "norm_label": "path"
     },
     {
@@ -12598,7 +12718,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_catalog_test_verified_catalog_persists_feed_before_first_request_and_uses_immutable_snapshot",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_verified_catalog_persists_feed_before_first_request_and_uses_immutable_snapshot()"
     },
     {
@@ -12608,7 +12728,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_test_catalog_test_catalog_finalization_rejects_same_key_for_root_and_issuer",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_catalog_finalization_rejects_same_key_for_root_and_issuer()"
     },
     {
@@ -12618,7 +12738,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "tests_test_catalog_test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route()"
     },
     {
@@ -12628,7 +12748,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "tests_test_catalog_test_catalog_http_sets_connection_deadline",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_catalog_http_sets_connection_deadline()"
     },
     {
@@ -12638,7 +12758,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "tests_test_catalog_test_catalog_mcp_is_trusted_retrieval_only",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_catalog_mcp_is_trusted_retrieval_only()"
     },
     {
@@ -12768,7 +12888,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_tests_test_commerce_access_py",
-      "community": 20,
+      "community": 50,
       "norm_label": "test_commerce_access.py"
     },
     {
@@ -12778,7 +12898,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_commerce_access_stores",
-      "community": 20,
+      "community": 50,
       "norm_label": "_stores()"
     },
     {
@@ -12788,7 +12908,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_commerce_access_bound_order",
-      "community": 20,
+      "community": 50,
       "norm_label": "_bound_order()"
     },
     {
@@ -12798,7 +12918,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_api_keys_are_keyed_digests_and_support_rotation_and_revocation",
-      "community": 20,
+      "community": 50,
       "norm_label": "test_api_keys_are_keyed_digests_and_support_rotation_and_revocation()"
     },
     {
@@ -12808,7 +12928,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_access_secrets_are_bounded_distinct_and_environment_bound",
-      "community": 20,
+      "community": 50,
       "norm_label": "test_access_secrets_are_bounded_distinct_and_environment_bound()"
     },
     {
@@ -12818,7 +12938,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_tenant_quote_and_order_bindings_hide_cross_tenant_objects",
-      "community": 20,
+      "community": 50,
       "norm_label": "test_tenant_quote_and_order_bindings_hide_cross_tenant_objects()"
     },
     {
@@ -12828,7 +12948,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded",
-      "community": 20,
+      "community": 50,
       "norm_label": "test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded()"
     },
     {
@@ -13182,10 +13302,20 @@
       "norm_label": "test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract()"
     },
     {
+      "label": "test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready()",
+      "file_type": "code",
+      "source_file": "tests/test_distribution.py",
+      "source_location": "L104",
+      "_origin": "ast",
+      "id": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
+      "community": 77,
+      "norm_label": "test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready()"
+    },
+    {
       "label": "test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L91",
+      "source_location": "L138",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped",
       "community": 77,
@@ -13195,7 +13325,7 @@
       "label": "test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L102",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked",
       "community": 77,
@@ -13205,7 +13335,7 @@
       "label": "test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L133",
+      "source_location": "L180",
       "_origin": "ast",
       "id": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands",
       "community": 77,
@@ -13288,7 +13418,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_test_inspector_py",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_inspector.py"
     },
     {
@@ -13298,7 +13428,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_test_inspector_schema",
-      "community": 0,
+      "community": 54,
       "norm_label": "_schema()"
     },
     {
@@ -13308,7 +13438,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_inspector_test_valid_skill_receipt_is_deterministic_schema_valid_and_path_private",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_valid_skill_receipt_is_deterministic_schema_valid_and_path_private()"
     },
     {
@@ -13318,7 +13448,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_inspector_test_cli_stdout_matches_utf8_lf_output_bytes",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_cli_stdout_matches_utf8_lf_output_bytes()"
     },
     {
@@ -13328,7 +13458,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_inspector_py_path",
-      "community": 0,
+      "community": 54,
       "norm_label": "path"
     },
     {
@@ -13368,7 +13498,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "tests_test_inspector_test_snapshot_rejects_size_limit",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_snapshot_rejects_size_limit()"
     },
     {
@@ -13378,7 +13508,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "tests_test_inspector_test_snapshot_rejects_symlink_when_platform_allows_it",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_snapshot_rejects_symlink_when_platform_allows_it()"
     },
     {
@@ -13388,7 +13518,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "tests_test_inspector_test_snapshot_rejects_windows_directory_junction",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_snapshot_rejects_windows_directory_junction()"
     },
     {
@@ -13398,7 +13528,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "tests_test_inspector_test_snapshot_rejects_hard_link_to_outside_file",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_snapshot_rejects_hard_link_to_outside_file()"
     },
     {
@@ -13418,7 +13548,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "tests_test_inspector_test_example_paths_are_candidates_not_broken_reference_findings",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_example_paths_are_candidates_not_broken_reference_findings()"
     },
     {
@@ -13428,7 +13558,7 @@
       "source_location": "L217",
       "_origin": "ast",
       "id": "tests_test_inspector_test_external_references_strip_credentials_and_file_uris_fail",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_external_references_strip_credentials_and_file_uris_fail()"
     },
     {
@@ -13438,7 +13568,7 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "tests_test_inspector_test_hostile_parser_shapes_fail_closed_without_crashing",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_hostile_parser_shapes_fail_closed_without_crashing()"
     },
     {
@@ -13448,7 +13578,7 @@
       "source_location": "L301",
       "_origin": "ast",
       "id": "tests_test_inspector_test_restricted_yaml_grammar_rejects_ambiguous_features",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_restricted_yaml_grammar_rejects_ambiguous_features()"
     },
     {
@@ -13458,7 +13588,7 @@
       "source_location": "L316",
       "_origin": "ast",
       "id": "tests_test_inspector_test_skill_md_nul_is_rejected",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_skill_md_nul_is_rejected()"
     },
     {
@@ -13468,7 +13598,7 @@
       "source_location": "L328",
       "_origin": "ast",
       "id": "tests_test_inspector_test_derived_evidence_is_bounded_and_reports_truncation",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_derived_evidence_is_bounded_and_reports_truncation()"
     },
     {
@@ -13478,7 +13608,7 @@
       "source_location": "L355",
       "_origin": "ast",
       "id": "tests_test_inspector_test_reference_dependency_lock_digest_matches_checked_in_lock",
-      "community": 0,
+      "community": 54,
       "norm_label": "test_reference_dependency_lock_digest_matches_checked_in_lock()"
     },
     {
@@ -13498,7 +13628,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_lifecycle_py",
-      "community": 81,
+      "community": 24,
       "norm_label": "test_lifecycle.py"
     },
     {
@@ -13508,7 +13638,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "tests_test_lifecycle_record_sequence_worker",
-      "community": 81,
+      "community": 24,
       "norm_label": "_record_sequence_worker()"
     },
     {
@@ -13518,7 +13648,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "tests_test_lifecycle_documents",
-      "community": 81,
+      "community": 24,
       "norm_label": "_documents()"
     },
     {
@@ -13528,7 +13658,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "tests_test_lifecycle_py_path",
-      "community": 81,
+      "community": 24,
       "norm_label": "path"
     },
     {
@@ -13538,7 +13668,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "tests_test_lifecycle_py_ed25519privatekey",
-      "community": 81,
+      "community": 24,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -13548,7 +13678,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "tests_test_lifecycle_feed_envelope",
-      "community": 81,
+      "community": 24,
       "norm_label": "_feed_envelope()"
     },
     {
@@ -13558,7 +13688,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_lifecycle_test_current_expired_superseded_and_evaluator_revoked_states",
-      "community": 81,
+      "community": 24,
       "norm_label": "test_current_expired_superseded_and_evaluator_revoked_states()"
     },
     {
@@ -13568,7 +13698,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "tests_test_lifecycle_test_compromised_key_revokes_every_receipt_and_stale_or_rollback_is_unknown",
-      "community": 81,
+      "community": 24,
       "norm_label": "test_compromised_key_revokes_every_receipt_and_stale_or_rollback_is_unknown()"
     },
     {
@@ -13578,7 +13708,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "tests_test_lifecycle_test_highest_feed_sequence_is_persisted_and_lower_feed_cannot_restore_current",
-      "community": 81,
+      "community": 24,
       "norm_label": "test_highest_feed_sequence_is_persisted_and_lower_feed_cannot_restore_current()"
     },
     {
@@ -13588,7 +13718,7 @@
       "source_location": "L154",
       "_origin": "ast",
       "id": "tests_test_lifecycle_test_sequence_store_rejects_equal_sequence_equivocation",
-      "community": 81,
+      "community": 24,
       "norm_label": "test_sequence_store_rejects_equal_sequence_equivocation()"
     },
     {
@@ -13598,7 +13728,7 @@
       "source_location": "L163",
       "_origin": "ast",
       "id": "tests_test_lifecycle_test_sequence_store_keeps_cross_process_maximum",
-      "community": 81,
+      "community": 24,
       "norm_label": "test_sequence_store_keeps_cross_process_maximum()"
     },
     {
@@ -13638,7 +13768,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stripe_lifecycle_tests_test_paid_lifecycle_py",
-      "community": 43,
+      "community": 24,
       "norm_label": "test_paid_lifecycle.py"
     },
     {
@@ -13648,7 +13778,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_receipt",
-      "community": 43,
+      "community": 24,
       "norm_label": "_receipt()"
     },
     {
@@ -13658,7 +13788,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_py_path",
-      "community": 43,
+      "community": 24,
       "norm_label": "path"
     },
     {
@@ -13668,7 +13798,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_py_ed25519privatekey",
-      "community": 43,
+      "community": 24,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -13678,7 +13808,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_deliver",
-      "community": 43,
+      "community": 24,
       "norm_label": "_deliver()"
     },
     {
@@ -13688,7 +13818,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_py_commercestore",
-      "community": 43,
+      "community": 24,
       "norm_label": "commercestore"
     },
     {
@@ -13698,7 +13828,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_keys",
-      "community": 43,
+      "community": 24,
       "norm_label": "_keys()"
     },
     {
@@ -13708,7 +13838,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_signed",
-      "community": 43,
+      "community": 24,
       "norm_label": "_signed()"
     },
     {
@@ -13718,7 +13848,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_publish_and_evaluate_exact_paid_receipt_lifecycle",
-      "community": 43,
+      "community": 24,
       "norm_label": "test_publish_and_evaluate_exact_paid_receipt_lifecycle()"
     },
     {
@@ -13728,7 +13858,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_revocation_is_terminal_and_history_remains_exact",
-      "community": 43,
+      "community": 24,
       "norm_label": "test_revocation_is_terminal_and_history_remains_exact()"
     },
     {
@@ -13738,7 +13868,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_publication_rejects_equivocation_gaps_root_change_and_issuer_restoration",
-      "community": 43,
+      "community": 24,
       "norm_label": "test_publication_rejects_equivocation_gaps_root_change_and_issuer_restoration()"
     },
     {
@@ -13748,7 +13878,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_exact_coverage_and_real_successor_are_required",
-      "community": 43,
+      "community": 24,
       "norm_label": "test_exact_coverage_and_real_successor_are_required()"
     },
     {
@@ -13758,7 +13888,7 @@
       "source_location": "L326",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_cli_keeps_root_signing_offline_and_publishes_exact_envelope",
-      "community": 43,
+      "community": 24,
       "norm_label": "test_cli_keeps_root_signing_offline_and_publishes_exact_envelope()"
     },
     {
@@ -13768,7 +13898,7 @@
       "source_location": "L326",
       "_origin": "ast",
       "id": "capturefixture",
-      "community": 50,
+      "community": 24,
       "norm_label": "capturefixture"
     },
     {
@@ -13908,7 +14038,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_signing_py",
-      "community": 59,
+      "community": 24,
       "norm_label": "test_signing.py"
     },
     {
@@ -13918,7 +14048,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_signing_material",
-      "community": 59,
+      "community": 24,
       "norm_label": "_material()"
     },
     {
@@ -13928,7 +14058,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "tests_test_signing_py_ed25519privatekey",
-      "community": 59,
+      "community": 24,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -13938,7 +14068,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_signing_test_dsse_pae_known_shape_and_exact_signed_bytes_round_trip",
-      "community": 59,
+      "community": 24,
       "norm_label": "test_dsse_pae_known_shape_and_exact_signed_bytes_round_trip()"
     },
     {
@@ -13948,7 +14078,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tests_test_signing_test_jwk_thumbprint_is_stable_and_wrong_key_is_rejected",
-      "community": 59,
+      "community": 24,
       "norm_label": "test_jwk_thumbprint_is_stable_and_wrong_key_is_rejected()"
     },
     {
@@ -13958,7 +14088,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "tests_test_signing_test_one_bit_mutations_fail_closed",
-      "community": 59,
+      "community": 24,
       "norm_label": "test_one_bit_mutations_fail_closed()"
     },
     {
@@ -13968,7 +14098,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_test_signing_test_duplicate_envelope_keys_and_signature_count_fail_profile",
-      "community": 59,
+      "community": 24,
       "norm_label": "test_duplicate_envelope_keys_and_signature_count_fail_profile()"
     },
     {
@@ -13978,7 +14108,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "tests_test_signing_test_signed_but_internally_tampered_receipt_fails_after_signature",
-      "community": 59,
+      "community": 24,
       "norm_label": "test_signed_but_internally_tampered_receipt_fails_after_signature()"
     },
     {
@@ -14505,7 +14635,7 @@
       "label": "Evidence-driven operation",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L62",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "backlog_evidence_driven_operation",
       "community": 134,
@@ -14515,7 +14645,7 @@
       "label": "Deferred Stage C",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L74",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "backlog_deferred_stage_c",
       "community": 134,
@@ -14837,7 +14967,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_decisions_md",
+      "id": "decisions",
       "community": 2,
       "norm_label": "decisions.md"
     },
@@ -14847,7 +14977,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_decision_log",
+      "id": "decisions_decision_log",
       "community": 2,
       "norm_label": "decision log"
     },
@@ -14857,7 +14987,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_select_the_agent_skills_exact_version_wedge",
+      "id": "decisions_2026_07_13_select_the_agent_skills_exact_version_wedge",
       "community": 2,
       "norm_label": "2026-07-13 - select the agent skills exact-version wedge"
     },
@@ -14867,7 +14997,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence",
+      "id": "decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence",
       "community": 2,
       "norm_label": "2026-07-13 - first slice is non-executing level 1-3 evidence"
     },
@@ -14877,7 +15007,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_position_as_a_portable_policy_receipt",
+      "id": "decisions_2026_07_13_position_as_a_portable_policy_receipt",
       "community": 2,
       "norm_label": "2026-07-13 - position as a portable policy receipt"
     },
@@ -14887,7 +15017,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_prices_remain_transaction_experiments",
+      "id": "decisions_2026_07_13_prices_remain_transaction_experiments",
       "community": 2,
       "norm_label": "2026-07-13 - prices remain transaction experiments"
     },
@@ -14897,7 +15027,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L29",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename",
+      "id": "decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename",
       "community": 2,
       "norm_label": "2026-07-13 - keep capabilityproof as an internal codename"
     },
@@ -14907,7 +15037,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_local_proof_is_not_an_external_service",
+      "id": "decisions_2026_07_13_local_proof_is_not_an_external_service",
       "community": 2,
       "norm_label": "2026-07-13 - local proof is not an external service"
     },
@@ -14917,7 +15047,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L44",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001",
+      "id": "decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001",
       "community": 2,
       "norm_label": "2026-07-13 - close independent audit findings before accepting e-001"
     },
@@ -14927,7 +15057,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L52",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously",
+      "id": "decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously",
       "community": 2,
       "norm_label": "2026-07-13 - do not grant a public code license autonomously"
     },
@@ -14937,7 +15067,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L59",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_make_repository_checkout_bytes_deterministic",
+      "id": "decisions_2026_07_13_make_repository_checkout_bytes_deterministic",
       "community": 2,
       "norm_label": "2026-07-13 - make repository checkout bytes deterministic"
     },
@@ -14947,7 +15077,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L67",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c",
+      "id": "decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c",
       "community": 2,
       "norm_label": "2026-07-13 - correct launch sequencing to stage a, b, and c"
     },
@@ -14957,7 +15087,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L75",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name",
+      "id": "decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name",
       "community": 2,
       "norm_label": "2026-07-13 - select vouchspec as the provisional beta name"
     },
@@ -14967,7 +15097,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L83",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519",
+      "id": "decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519",
       "community": 2,
       "norm_label": "2026-07-13 - authenticate exact receipt bytes with dsse and ed25519"
     },
@@ -14977,7 +15107,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L92",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence",
+      "id": "decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence",
       "community": 2,
       "norm_label": "2026-07-13 - preserve failed public artifacts as evidence"
     },
@@ -14987,7 +15117,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L100",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_select_stripe_first_and_correct_fresh_validation_pricing",
+      "id": "decisions_2026_07_14_select_stripe_first_and_correct_fresh_validation_pricing",
       "community": 2,
       "norm_label": "2026-07-14 - select stripe first and correct fresh-validation pricing"
     },
@@ -14997,7 +15127,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L112",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_hash_lock_the_publisher_action_runtime",
+      "id": "decisions_2026_07_14_hash_lock_the_publisher_action_runtime",
       "community": 2,
       "norm_label": "2026-07-14 - hash-lock the publisher action runtime"
     },
@@ -15007,7 +15137,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L120",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_prepare_discovery_listings_without_accepting_owner_bound_terms",
+      "id": "decisions_2026_07_14_prepare_discovery_listings_without_accepting_owner_bound_terms",
       "community": 2,
       "norm_label": "2026-07-14 - prepare discovery listings without accepting owner-bound terms"
     },
@@ -15017,7 +15147,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L128",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_use_minimal_tenant_isolation_and_two_part_delivery_authorization",
+      "id": "decisions_2026_07_14_use_minimal_tenant_isolation_and_two_part_delivery_authorization",
       "community": 2,
       "norm_label": "2026-07-14 - use minimal tenant isolation and two-part delivery authorization"
     },
@@ -15027,7 +15157,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L143",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_bind_stripe_credentials_to_explicit_accounts_and_keep_root_signing_offline",
+      "id": "decisions_2026_07_14_bind_stripe_credentials_to_explicit_accounts_and_keep_root_signing_offline",
       "community": 2,
       "norm_label": "2026-07-14 - bind stripe credentials to explicit accounts and keep root signing offline"
     },
@@ -15037,7 +15167,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L156",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_connect_stripe_only_in_explicit_loopback_test_mode",
+      "id": "decisions_2026_07_14_connect_stripe_only_in_explicit_loopback_test_mode",
       "community": 2,
       "norm_label": "2026-07-14 - connect stripe only in explicit loopback test mode"
     },
@@ -15047,7 +15177,7 @@
       "source_file": "DECISIONS.md",
       "source_location": "L171",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_reject_49_for_the_agent_only_market_and_set_a_0_25_usdc_launch_cohort",
+      "id": "decisions_2026_07_14_reject_49_for_the_agent_only_market_and_set_a_0_25_usdc_launch_cohort",
       "community": 2,
       "norm_label": "2026-07-14 - reject $49 for the agent-only market and set a 0.25 usdc launch cohort"
     },
@@ -15057,9 +15187,19 @@
       "source_file": "DECISIONS.md",
       "source_location": "L191",
       "_origin": "ast",
-      "id": "capabilityproof_decisions_2026_07_14_treat_bazaar_indexing_proof_as_infrastructure_not_adoption",
+      "id": "decisions_2026_07_14_treat_bazaar_indexing_proof_as_infrastructure_not_adoption",
       "community": 2,
       "norm_label": "2026-07-14 - treat bazaar indexing proof as infrastructure, not adoption"
+    },
+    {
+      "label": "2026-07-14 - Add remote MCP discovery through GitHub OIDC",
+      "file_type": "document",
+      "source_file": "DECISIONS.md",
+      "source_location": "L203",
+      "_origin": "ast",
+      "id": "decisions_2026_07_14_add_remote_mcp_discovery_through_github_oidc",
+      "community": 2,
+      "norm_label": "2026-07-14 - add remote mcp discovery through github oidc"
     },
     {
       "label": "GOAL.md",
@@ -15277,8 +15417,8 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_remedies_work_readme_md",
-      "community": 115,
+      "id": "readme",
+      "community": 81,
       "norm_label": "readme.md"
     },
     {
@@ -15287,8 +15427,8 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_vouchspec",
-      "community": 115,
+      "id": "readme_vouchspec",
+      "community": 81,
       "norm_label": "vouchspec"
     },
     {
@@ -15297,98 +15437,98 @@
       "source_file": "README.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_public_stage_a_distribution",
-      "community": 115,
+      "id": "readme_public_stage_a_distribution",
+      "community": 81,
       "norm_label": "public stage a distribution"
     },
     {
       "label": "Product stages",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_product_stages",
-      "community": 115,
+      "id": "readme_product_stages",
+      "community": 81,
       "norm_label": "product stages"
     },
     {
       "label": "Publisher CI \u2014 complete self-service example",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L52",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_publisher_ci_complete_self_service_example",
-      "community": 115,
+      "id": "readme_publisher_ci_complete_self_service_example",
+      "community": 81,
       "norm_label": "publisher ci \u2014 complete self-service example"
     },
     {
       "label": "Evidence labels",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L74",
+      "source_location": "L75",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_evidence_labels",
-      "community": 115,
+      "id": "readme_evidence_labels",
+      "community": 81,
       "norm_label": "evidence labels"
     },
     {
       "label": "Verify a public receipt independently",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L86",
+      "source_location": "L87",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_verify_a_public_receipt_independently",
-      "community": 115,
+      "id": "readme_verify_a_public_receipt_independently",
+      "community": 81,
       "norm_label": "verify a public receipt independently"
     },
     {
       "label": "Read-only catalog API",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L104",
+      "source_location": "L105",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_read_only_catalog_api",
-      "community": 115,
+      "id": "readme_read_only_catalog_api",
+      "community": 81,
       "norm_label": "read-only catalog api"
     },
     {
       "label": "Agent-only x402 sandbox",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L141",
+      "source_location": "L142",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_agent_only_x402_sandbox",
-      "community": 115,
+      "id": "readme_agent_only_x402_sandbox",
+      "community": 81,
       "norm_label": "agent-only x402 sandbox"
     },
     {
       "label": "Local commerce harness",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L168",
+      "source_location": "L169",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_local_commerce_harness",
-      "community": 115,
+      "id": "readme_local_commerce_harness",
+      "community": 81,
       "norm_label": "local commerce harness"
     },
     {
       "label": "Read-only catalog MCP",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L197",
+      "source_location": "L198",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_read_only_catalog_mcp",
-      "community": 115,
+      "id": "readme_read_only_catalog_mcp",
+      "community": 81,
       "norm_label": "read-only catalog mcp"
     },
     {
       "label": "Local inspector and builder",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L220",
+      "source_location": "L233",
       "_origin": "ast",
-      "id": "capabilityproof_remedies_work_readme_local_inspector_and_builder",
-      "community": 115,
+      "id": "readme_local_inspector_and_builder",
+      "community": 81,
       "norm_label": "local inspector and builder"
     },
     {
@@ -16312,10 +16452,20 @@
       "norm_label": "owner correction and permanent boundary"
     },
     {
-      "label": "Commercial accounting",
+      "label": "API-only implementation and final result",
       "file_type": "document",
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L49",
+      "_origin": "ast",
+      "id": "logs_2026_07_14_cdp_mainnet_provisioning_api_only_implementation_and_final_result",
+      "community": 135,
+      "norm_label": "api-only implementation and final result"
+    },
+    {
+      "label": "Commercial accounting",
+      "file_type": "document",
+      "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "logs_2026_07_14_cdp_mainnet_provisioning_commercial_accounting",
       "community": 135,
@@ -18213,9 +18363,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_callcli",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_callcli"
     },
     {
       "relation": "contains",
@@ -18356,9 +18506,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_callcli",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "calls",
@@ -18477,9 +18627,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_runprovisioning",
-      "target": "remedy_provisioner_index_callcli",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_callcli"
     },
     {
       "relation": "calls",
@@ -18552,7 +18702,7 @@
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "remedy_provisioner_package",
+      "source": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "target": "remedy_provisioner_package_dependencies"
     },
     {
@@ -18562,7 +18712,7 @@
       "source_location": "L2",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "remedy_provisioner_package",
+      "source": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "target": "remedy_provisioner_package_name"
     },
     {
@@ -18572,7 +18722,7 @@
       "source_location": "L4",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "remedy_provisioner_package",
+      "source": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "target": "remedy_provisioner_package_private"
     },
     {
@@ -18582,7 +18732,7 @@
       "source_location": "L6",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "remedy_provisioner_package",
+      "source": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "target": "remedy_provisioner_package_scripts"
     },
     {
@@ -18592,7 +18742,7 @@
       "source_location": "L5",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "remedy_provisioner_package",
+      "source": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "target": "remedy_provisioner_package_type"
     },
     {
@@ -18602,7 +18752,7 @@
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "remedy_provisioner_package",
+      "source": "c_users_mordiaky_projects_capabilityproof_cdp_api_distribution_remedy_provisioner_package_json",
       "target": "remedy_provisioner_package_version"
     },
     {
@@ -18734,6 +18884,116 @@
       "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
       "target": "stage_b_fetcher_fetch_lc_all"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_description"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_remotes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_repository"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_title"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server",
+      "target": "server_websiteurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_repository",
+      "target": "server_repository_id"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_repository",
+      "target": "server_repository_source"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_repository",
+      "target": "server_repository_url"
     },
     {
       "relation": "imports_from",
@@ -49875,6 +50135,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_distribution.py",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_hosted_worker.py",
       "source_location": "L70",
       "weight": 1.0,
@@ -52750,8 +53020,8 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_decisions_md",
-      "target": "capabilityproof_decisions_decision_log"
+      "source": "decisions",
+      "target": "decisions_decision_log"
     },
     {
       "relation": "contains",
@@ -52760,8 +53030,8 @@
       "source_location": "L83",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519"
     },
     {
       "relation": "contains",
@@ -52770,8 +53040,8 @@
       "source_location": "L44",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001"
     },
     {
       "relation": "contains",
@@ -52780,8 +53050,8 @@
       "source_location": "L67",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c"
     },
     {
       "relation": "contains",
@@ -52790,8 +53060,8 @@
       "source_location": "L52",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously"
     },
     {
       "relation": "contains",
@@ -52800,8 +53070,8 @@
       "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence"
     },
     {
       "relation": "contains",
@@ -52810,8 +53080,8 @@
       "source_location": "L29",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename"
     },
     {
       "relation": "contains",
@@ -52820,8 +53090,8 @@
       "source_location": "L36",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_local_proof_is_not_an_external_service"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_local_proof_is_not_an_external_service"
     },
     {
       "relation": "contains",
@@ -52830,8 +53100,8 @@
       "source_location": "L59",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_make_repository_checkout_bytes_deterministic"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_make_repository_checkout_bytes_deterministic"
     },
     {
       "relation": "contains",
@@ -52840,8 +53110,8 @@
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_position_as_a_portable_policy_receipt"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_position_as_a_portable_policy_receipt"
     },
     {
       "relation": "contains",
@@ -52850,8 +53120,8 @@
       "source_location": "L92",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence"
     },
     {
       "relation": "contains",
@@ -52860,8 +53130,8 @@
       "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_prices_remain_transaction_experiments"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_prices_remain_transaction_experiments"
     },
     {
       "relation": "contains",
@@ -52870,8 +53140,8 @@
       "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_select_the_agent_skills_exact_version_wedge"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_select_the_agent_skills_exact_version_wedge"
     },
     {
       "relation": "contains",
@@ -52880,8 +53150,18 @@
       "source_location": "L75",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DECISIONS.md",
+      "source_location": "L203",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_add_remote_mcp_discovery_through_github_oidc"
     },
     {
       "relation": "contains",
@@ -52890,8 +53170,8 @@
       "source_location": "L143",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_bind_stripe_credentials_to_explicit_accounts_and_keep_root_signing_offline"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_bind_stripe_credentials_to_explicit_accounts_and_keep_root_signing_offline"
     },
     {
       "relation": "contains",
@@ -52900,8 +53180,8 @@
       "source_location": "L156",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_connect_stripe_only_in_explicit_loopback_test_mode"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_connect_stripe_only_in_explicit_loopback_test_mode"
     },
     {
       "relation": "contains",
@@ -52910,8 +53190,8 @@
       "source_location": "L112",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_hash_lock_the_publisher_action_runtime"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_hash_lock_the_publisher_action_runtime"
     },
     {
       "relation": "contains",
@@ -52920,8 +53200,8 @@
       "source_location": "L120",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_prepare_discovery_listings_without_accepting_owner_bound_terms"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_prepare_discovery_listings_without_accepting_owner_bound_terms"
     },
     {
       "relation": "contains",
@@ -52930,8 +53210,8 @@
       "source_location": "L171",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_reject_49_for_the_agent_only_market_and_set_a_0_25_usdc_launch_cohort"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_reject_49_for_the_agent_only_market_and_set_a_0_25_usdc_launch_cohort"
     },
     {
       "relation": "contains",
@@ -52940,8 +53220,8 @@
       "source_location": "L100",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_select_stripe_first_and_correct_fresh_validation_pricing"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_select_stripe_first_and_correct_fresh_validation_pricing"
     },
     {
       "relation": "contains",
@@ -52950,8 +53230,8 @@
       "source_location": "L191",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_treat_bazaar_indexing_proof_as_infrastructure_not_adoption"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_treat_bazaar_indexing_proof_as_infrastructure_not_adoption"
     },
     {
       "relation": "contains",
@@ -52960,8 +53240,8 @@
       "source_location": "L128",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_decisions_decision_log",
-      "target": "capabilityproof_decisions_2026_07_14_use_minimal_tenant_isolation_and_two_part_delivery_authorization"
+      "source": "decisions_decision_log",
+      "target": "decisions_2026_07_14_use_minimal_tenant_isolation_and_two_part_delivery_authorization"
     },
     {
       "relation": "contains",
@@ -53120,58 +53400,58 @@
       "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_readme_md",
-      "target": "capabilityproof_remedies_work_readme_vouchspec"
+      "source": "readme",
+      "target": "readme_vouchspec"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L141",
+      "source_location": "L142",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_agent_only_x402_sandbox"
+      "source": "readme_vouchspec",
+      "target": "readme_agent_only_x402_sandbox"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L74",
+      "source_location": "L75",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_evidence_labels"
+      "source": "readme_vouchspec",
+      "target": "readme_evidence_labels"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L168",
+      "source_location": "L169",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_local_commerce_harness"
+      "source": "readme_vouchspec",
+      "target": "readme_local_commerce_harness"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L220",
+      "source_location": "L233",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_local_inspector_and_builder"
+      "source": "readme_vouchspec",
+      "target": "readme_local_inspector_and_builder"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_product_stages"
+      "source": "readme_vouchspec",
+      "target": "readme_product_stages"
     },
     {
       "relation": "contains",
@@ -53180,48 +53460,48 @@
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_public_stage_a_distribution"
+      "source": "readme_vouchspec",
+      "target": "readme_public_stage_a_distribution"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_publisher_ci_complete_self_service_example"
+      "source": "readme_vouchspec",
+      "target": "readme_publisher_ci_complete_self_service_example"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L104",
+      "source_location": "L105",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_read_only_catalog_api"
+      "source": "readme_vouchspec",
+      "target": "readme_read_only_catalog_api"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L197",
+      "source_location": "L198",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_read_only_catalog_mcp"
+      "source": "readme_vouchspec",
+      "target": "readme_read_only_catalog_mcp"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L86",
+      "source_location": "L87",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_verify_a_public_receipt_independently"
+      "source": "readme_vouchspec",
+      "target": "readme_verify_a_public_receipt_independently"
     },
     {
       "relation": "contains",
@@ -53942,6 +54222,16 @@
       "confidence_score": 1.0,
       "source": "logs_2026_07_14_cdp_mainnet_provisioning",
       "target": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_api_only_implementation_and_final_result"
     },
     {
       "relation": "contains",
@@ -55305,5 +55595,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c32f0127c5bce06d9e397d097d13fb0b88155953"
+  "built_at_commit": "777b52127bc719c862f01f4d2a45b60ddf173f86"
 }

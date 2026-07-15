@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "service": "VouchSpec",
   "stage": "B_PUBLIC_X402_SANDBOX",
   "provisional_name": true,
@@ -79,7 +79,20 @@
       "get_receipt_status",
       "get_verification_material",
       "get_price_quote"
-    ]
+    ],
+    "remote": {
+      "transport": "streamable-http",
+      "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp",
+      "protocol_version": "2025-11-25",
+      "response_mode": "stateless_json",
+      "anonymous_read_only": true,
+      "paid_execution_available": false,
+      "tools": [
+        "get_vouchspec_discovery"
+      ],
+      "registry_name": "io.github.mordiaky/vouchspec",
+      "registry_manifest": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/server.json"
+    }
   },
   "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@ed812a14cbc62333d59bac319f79d897f14d1b64",
   "publisher_ci_demo": "https://github.com/mordiaky/vouchspec-demo",
