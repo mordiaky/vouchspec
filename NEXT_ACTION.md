@@ -21,10 +21,22 @@ credential before payment and returns deterministic tenant and delivery capabili
 successful settlement.
 
 The mode-separated mainnet application configuration and environment-derived 0.25-USDC database
-migration are merged but not activated. Mainnet stays fail-closed until a dedicated live
-receiving wallet, CDP credentials, database, issuer/signer, monitoring, recovery/remedy path, and
-kernel-quota-enforced production worker pass the same automated gates. The researched launch
-experiment is exactly 0.25 USDC per fresh validation;
+migration are merged but not activated. Kernel-quota fetch isolation, durable settlement
+reconciliation, terminal-failure/duplicate-settlement remedies, independent Base RPC remedy
+verification, and the disabled protected-environment executor are also merged and green through
+`mordiaky/plyrium#37` and `mordiaky/vouchspec#9`.
+
+Finish the dedicated live CDP remedy identity only through documented CDP APIs or the official CDP
+CLI. The replacement API key and rotated Wallet Secret are already encrypted in the protected
+GitHub environment, and the account-scope Base-only canonical-USDC `transfer` policy already
+exists with both 250000-atomic-unit and 25-cent maximums. Retrieve that policy through the API,
+create or verify `vouchspec-remedy` with the policy attached atomically, and expose only its public
+address in logs. Do not resume portal automation, request an SMS code, fund the account, or set
+`VOUCHSPEC_REMEDIES_ENABLED=true`.
+
+Mainnet stays fail-closed until the dedicated receiver, isolated production database, issuer,
+signer, monitoring, and deployment smoke gates pass. The researched launch experiment remains
+exactly 0.25 USDC per fresh validation;
 the previous $49 hypothesis is rejected. Apply the predeclared $0.10 fallback and $0.50 escalation
 rules in `research/agent-only-pricing-analysis-2026-07-14.md` only after qualified mainnet evidence.
 No owner action is currently required.

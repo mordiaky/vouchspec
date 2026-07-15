@@ -99,6 +99,35 @@ def test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped() -> No
     assert "npm ci --ignore-scripts --prefix distribution/remedy-executor" in workflow
 
 
+def test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked() -> None:
+    workflow_path = ROOT / ".github" / "workflows" / "vouchspec-provision-remedy.yml"
+    workflow = workflow_path.read_text(encoding="utf-8")
+    assert "schedule:" not in workflow
+    assert "workflow_dispatch:" in workflow
+    assert "github.ref == 'refs/heads/main'" in workflow
+    assert "vars.VOUCHSPEC_REMEDIES_ENABLED == 'false'" in workflow
+    assert "provision-unfunded-policy-bound-account" in workflow
+    assert "environment: vouchspec-mainnet-remedies" in workflow
+    assert "permissions:\n  contents: read" in workflow
+    assert "persist-credentials: false" in workflow
+    assert "npm ci --ignore-scripts --prefix distribution/remedy-provisioner" in workflow
+    assert "CDP_KEY_ID: ${{ secrets.CDP_API_KEY_ID }}" in workflow
+    assert "CDP_NO_HISTORY: \"1\"" in workflow
+    assert "faucet" not in workflow.lower()
+    assert "send transaction" not in workflow.lower()
+
+    package = json.loads(
+        (ROOT / "distribution" / "remedy-provisioner" / "package.json").read_text(encoding="utf-8")
+    )
+    assert package["dependencies"] == {"@coinbase/cdp-cli": "2.0.20"}
+    lock = json.loads(
+        (ROOT / "distribution" / "remedy-provisioner" / "package-lock.json").read_text(
+            encoding="utf-8"
+        )
+    )
+    assert lock["packages"][""]["dependencies"] == {"@coinbase/cdp-cli": "2.0.20"}
+
+
 def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands() -> None:
     workflow_path = ROOT / ".github" / "workflows" / "vouchspec-fulfillment.yml"
     workflow = workflow_path.read_text(encoding="utf-8")

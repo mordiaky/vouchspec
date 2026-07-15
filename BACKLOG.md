@@ -29,6 +29,12 @@
 - **B-032:** delivered paid receipts now have offline-root, exact-coverage, monotonic lifecycle
   publication with rollback/equivocation/expiry/supersession/evaluator-defect/key-compromise
   tests and operational prepare/publish/export commands.
+- **B-035:** durable settlement reconciliation, duplicate-settlement and terminal-fulfillment
+  remedies, one-remedy-per-payment accounting, and independent Base RPC confirmation merged in
+  `mordiaky/plyrium#37` with 178 tests and production build passing.
+- **B-036:** a separate pinned Git fetcher now enforces non-root read-only execution, kernel-backed
+  scratch quota, bounded output/resources, remote removal, and offline finalization; the disabled
+  protected-environment CDP remedy executor merged in `mordiaky/vouchspec#9` with 139 tests passing.
 
 ## Now — external adoption and safe orderability
 
@@ -46,6 +52,12 @@
   responses pass tests and one real HTTP-path Checkout expired unpaid. Deploy this boundary
   behind the managed edge with a mode-specific test endpoint, then complete one
   unpaid-to-available test-card flow before live activation.
+- **B-037:** complete API-only provisioning of `vouchspec-remedy`. The replacement API key and
+  rotated Wallet Secret are already encrypted in the protected `vouchspec-mainnet-remedies`
+  GitHub environment, and the Base-USDC-only account policy exists. Use the documented CDP API or
+  official CLI to retrieve the policy and create or verify the policy-bound account; never resume
+  portal automation or SMS verification. Keep the workflow flag false and the account unfunded
+  until every production gate passes.
 
 ## Evidence-driven operation
 

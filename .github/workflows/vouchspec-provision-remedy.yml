@@ -1,0 +1,45 @@
+name: VouchSpec API-only remedy provisioning
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: Type provision-unfunded-policy-bound-account
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vouchspec-mainnet-remedies
+  cancel-in-progress: false
+
+jobs:
+  provision-or-verify-remedy-account:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      vars.VOUCHSPEC_REMEDIES_ENABLED == 'false' &&
+      github.event.inputs.confirmation == 'provision-unfunded-policy-bound-account'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: vouchspec-mainnet-remedies
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: distribution/remedy-provisioner/package-lock.json
+      - name: Install hash-locked official CDP CLI
+        run: npm ci --ignore-scripts --prefix distribution/remedy-provisioner
+      - name: Create or verify the unfunded policy-bound remedy account
+        env:
+          CDP_ENV: live
+          CDP_KEY_ID: ${{ secrets.CDP_API_KEY_ID }}
+          CDP_KEY_SECRET: ${{ secrets.CDP_API_KEY_SECRET }}
+          CDP_WALLET_SECRET: ${{ secrets.CDP_WALLET_SECRET }}
+          CDP_NO_HISTORY: "1"
+        run: node distribution/remedy-provisioner/index.mjs
