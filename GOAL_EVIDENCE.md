@@ -125,3 +125,25 @@ enabled for future genuine incidents.
 Other evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
 `CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, hosted API/workflow records, public
 CI/attestation URLs, and the final independent audit when eligible.
+
+## Mainnet fail-closed safety evidence
+
+- Hosted remedy/state PR `mordiaky/plyrium#37` merged as
+  `d10c9efca88b73ab057ec47759ca86e4f36d5521`; main CI run `29382823021` passed typecheck,
+  178 tests/audits, and the optimized production build.
+- Public fetcher/executor PR `mordiaky/vouchspec#9` merged as
+  `82ad5fbf526f2b2f01397899f692045ce659870d`; main CI run `29382833205` passed 139 tests with
+  one explicit Windows symlink-privilege skip.
+- The fetcher is a separate immutable image running non-root, read-only, capability-dropped, with
+  no host mount, kernel-backed bounded scratch, bounded output/resources, remote removal, and
+  offline finalization.
+- The hosted store now persists reconciliation checkpoints and remedy attempts, prevents double
+  settlement credit, converts terminal paid fulfillment failures into zero contribution and a
+  queued payer-derived remedy, and permits only one remedy per payment.
+- Remedy confirmation independently verifies the exact Base ERC-20 transfer, sender, canonical
+  USDC contract, calldata amount, transaction receipt, and Transfer log through Base RPC.
+- The CDP executor is exact-version pinned, stops before the provider's 24-hour idempotency window,
+  is guarded by a protected main-only environment, and remains disabled because
+  `VOUCHSPEC_REMEDIES_ENABLED` is not true.
+- No production wallet was funded, no mainnet order was accepted, and these controls add no buyer,
+  request, revenue, margin, repeat-use, or autonomous-day credit.

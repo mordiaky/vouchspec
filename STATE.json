@@ -3,7 +3,7 @@
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
   "goal_status": "active_not_achieved",
-  "stage": "stage_a_public_live_stage_b_agent_only_x402_cdp_bazaar_indexed",
+  "stage": "stage_a_public_live_stage_b_agent_only_x402_cdp_bazaar_indexed_mainnet_safety_merged_unprovisioned",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
     "excluded": ["arbitrary uploads", "private repositories", "confidential content", "artifact execution"]
@@ -54,8 +54,8 @@
     "secondary_provider": "none_agent_only",
     "bazaar_catalog_status": "publicly_indexed_by_excluded_cdp_settlement",
     "stripe_status": "regression_only_not_a_purchase_path",
-    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/payment/cost store", "managed TLS public sandbox", "strict tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "anonymous-before-payment one-call x402 intake", "official x402 Bazaar metadata extension", "authenticated CDP facilitator verify and settle boundary", "deterministic payment-derived tenant and delivery bootstrap", "payment replay and settlement recovery binding", "branch-scoped encrypted CDP server credential without wallet custody", "offline-root paid receipt lifecycle with monotonic invalidation", "public immutable cacheable receipt and separate no-store invalidation status", "excluded Agentic Wallet CDP settlement with isolated fulfillment and public Bazaar indexing", "merged fail-closed mode-separated mainnet configuration and environment-derived 0.25-USDC ledger migration"],
-    "remaining_gates": ["kernel-quota-enforced ephemeral network-fetch scratch volume", "mainnet duplicate-settlement and objective-failure remedy transactions", "provisioned dedicated mainnet receiver facilitator credentials database issuer and monitoring", "operational production signing role"]
+    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/payment/cost store", "managed TLS public sandbox", "strict tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "anonymous-before-payment one-call x402 intake", "official x402 Bazaar metadata extension", "authenticated CDP facilitator verify and settle boundary", "deterministic payment-derived tenant and delivery bootstrap", "payment replay and settlement recovery binding", "branch-scoped encrypted CDP server credential without wallet custody", "offline-root paid receipt lifecycle with monotonic invalidation", "public immutable cacheable receipt and separate no-store invalidation status", "excluded Agentic Wallet CDP settlement with isolated fulfillment and public Bazaar indexing", "merged fail-closed mode-separated mainnet configuration and environment-derived 0.25-USDC ledger migration", "merged kernel-quota fetcher with bounded non-root read-only scratch and offline finalization", "merged durable settlement reconciliation and one-remedy-per-payment state machine", "independent Base RPC verification of exact USDC transfer before remedy confirmation", "disabled protected-environment CDP remedy executor with 23-hour idempotency stop window"],
+    "remaining_gates": ["provisioned dedicated mainnet receiving and remedy identities with least-privilege credentials and account policy", "isolated production database issuer signer and monitoring credentials", "bounded remedy float and Base gas funding after owner-approved money movement", "verified production deployment and smoke gates before mainnet activation"]
   },
   "commercial_metrics": {
     "required_buyers": 3,
@@ -78,17 +78,17 @@
   "acceptance": {
     "tests_total": 30,
     "all_pass": false,
-    "engineering_tests_passed": 136,
+    "engineering_tests_passed": 139,
     "engineering_tests_skipped": 1,
-    "connected_repository_tests_passed": 176,
+    "connected_repository_tests_passed": 178,
     "connected_repository_production_build": "passed",
     "connected_repository_production_dependency_vulnerabilities": 0,
     "sandbox_deployment_commit": "d30577721f800a93748a2a4c55fd26972662e675",
     "sandbox_bazaar_402_probe": "passed",
-    "connected_repository_main_ci_run": "https://github.com/mordiaky/plyrium/actions/runs/29377469580",
+    "connected_repository_main_ci_run": "https://github.com/mordiaky/plyrium/actions/runs/29382823021",
     "connected_repository_main_ci_status": "passed",
-    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29344373148",
-    "public_ci_commit": "dc2af81ebbebebeb1dc4f6078a1172508325d6dd",
+    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29382833205",
+    "public_ci_commit": "82ad5fbf526f2b2f01397899f692045ce659870d",
     "public_ci_status": "passed",
     "evidence_file": "GOAL_EVIDENCE.md",
     "independent_final_audit": "pending"
@@ -97,14 +97,15 @@
     "No unrelated external repository has retained a VouchSpec integration",
     "No legitimate external machine use is recorded",
     "No genuine purchase or settled revenue exists",
-    "Mainnet settlement remains fail-closed pending remedies, environment separation, production signing, and kernel-quota gates"
+    "Mainnet settlement remains fail-closed pending credential, account-policy, production-environment, funding, and deployment gates"
   ],
   "human_actions_requested": [],
   "top_next_actions": [
     "Use the publicly indexed Coinbase Bazaar endpoint to acquire independently attributable agent requests without controlled traffic",
     "Convert one of the two still-open publisher proposals into a retained external integration or qualify the next repository-specific prospect after the daily cap resets",
-    "Prepare mainnet remedies environment separation production signing and kernel-quota fetch volume without enabling live settlement prematurely"
+    "Use only the documented CDP API or official CLI to finish the policy-bound remedy account without funding or enabling it",
+    "Provision isolated production state signing and monitoring only after credential separation is verified"
   ],
-  "last_checkpoint_time": "2026-07-15T00:02:02Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-x402-bazaar-launch.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Supabase issue 136 and K-Dense issue 211 remain open outreach only; michtio issue 10 was declined and closed as not planned. The live branch-scoped sandbox exposes POST /api/vouchspec/v1/validate and is publicly indexed in Coinbase Bazaar after an excluded Agentic Wallet settlement. Its signed receipt, immutable cache behavior, live status, fulfillment workflow, and Base-Sepolia transaction are verified. Pursue genuine unrelated agent integrations and buyers; do not count owner, controlled-wallet, testnet, CI, demo, or monitoring activity. Stripe is regression-only and must not become a human/card purchase path."
+  "last_checkpoint_time": "2026-07-15T02:12:58Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, HUMAN_ACTIONS.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, research/agent-only-pricing-analysis-2026-07-14.md, and docs/stage-b-security-review.md. Preserve all exclusion rules and the no-upload/no-execution boundary. Mainnet safety PRs mordiaky/plyrium#37 and mordiaky/vouchspec#9 are merged and green. The replacement CDP API key and rotated Wallet Secret are encrypted in the main-branch-only vouchspec-mainnet-remedies GitHub environment, the workflow is manually disabled, and VOUCHSPEC_REMEDIES_ENABLED is false. The first credential accidentally surfaced during portal validation was revoked before use. The Base-USDC-only 25-cent account policy exists. Do not resume Coinbase portal automation or request more SMS codes. Finish any remaining provisioning only through documented CDP APIs or the official CLI, leave the account unfunded, and do not activate until isolated production state, issuer, signer, monitoring, and smoke gates pass. Pursue genuine unrelated agent integrations and buyers; never count owner, controlled-wallet, testnet, CI, demo, or monitoring activity. Stripe remains regression-only."
 }
