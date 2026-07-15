@@ -34,8 +34,12 @@ function exactKeys(value, keys, code) {
 export function loadConfig(environment = process.env) {
   const values = {};
   for (const name of ["CDP_KEY_ID", "CDP_KEY_SECRET", "CDP_WALLET_SECRET"]) {
-    const value = environment[name];
-    if (typeof value !== "string" || value.length < 16 || value.length > 16_384 || value.includes("\0")) {
+    const rawValue = environment[name];
+    if (typeof rawValue !== "string" || rawValue.includes("\0")) {
+      fail("provisioner_configuration_invalid");
+    }
+    const value = rawValue.trim();
+    if (value.length < 16 || value.length > 16_384) {
       fail("provisioner_configuration_invalid");
     }
     values[name] = value;

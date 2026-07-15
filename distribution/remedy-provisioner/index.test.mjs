@@ -56,11 +56,20 @@ test("configuration requires all three headless credentials", () => {
     CDP_WALLET_SECRET: "c".repeat(32),
   };
   assert.deepEqual(loadConfig(valid), valid);
+  assert.deepEqual(loadConfig({
+    CDP_KEY_ID: ` ${valid.CDP_KEY_ID}\r\n`,
+    CDP_KEY_SECRET: `\t${valid.CDP_KEY_SECRET} `,
+    CDP_WALLET_SECRET: `${valid.CDP_WALLET_SECRET}\n`,
+  }), valid);
   for (const name of Object.keys(valid)) {
     const missing = { ...valid };
     delete missing[name];
     assert.throws(() => loadConfig(missing), RemedyProvisionerError);
   }
+  assert.throws(
+    () => loadConfig({ ...valid, CDP_WALLET_SECRET: `${valid.CDP_WALLET_SECRET}\0` }),
+    RemedyProvisionerError,
+  );
 });
 
 test("CLI runner uses headless live credentials without URL override or secret output", () => {

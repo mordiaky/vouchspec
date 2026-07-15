@@ -60,13 +60,23 @@ export function loadConfig(environment = process.env) {
   }
   let account;
   try { account = getAddress(accountAddress); } catch { throw new RemedyExecutorError("executor_configuration_invalid"); }
-  for (const name of ["CDP_API_KEY_ID", "CDP_API_KEY_SECRET", "CDP_WALLET_SECRET"]) {
-    const value = environment[name] ?? "";
+  const cdpCredentials = {};
+  for (const [name, option] of [
+    ["CDP_API_KEY_ID", "apiKeyId"],
+    ["CDP_API_KEY_SECRET", "apiKeySecret"],
+    ["CDP_WALLET_SECRET", "walletSecret"],
+  ]) {
+    const rawValue = environment[name];
+    if (typeof rawValue !== "string" || rawValue.includes("\0")) {
+      throw new RemedyExecutorError("executor_configuration_invalid");
+    }
+    const value = rawValue.trim();
     if (value.length < 16 || value.length > 16_384) {
       throw new RemedyExecutorError("executor_configuration_invalid");
     }
+    cdpCredentials[option] = value;
   }
-  return { apiBaseUrl, remedyToken, workerId, accountAddress: account };
+  return { apiBaseUrl, remedyToken, workerId, accountAddress: account, cdpCredentials };
 }
 
 async function readBoundedJson(response) {
@@ -156,7 +166,8 @@ export function parseClaim(value) {
   return { ...job, asset, destination, cdpNetwork: network.cdp };
 }
 
-export async function runOnce({ config, cdp = new CdpClient(), fetchImpl = fetch, wait = ms => new Promise(r => setTimeout(r, ms)) }) {
+export async function runOnce({ config, cdp, fetchImpl = fetch, wait = ms => new Promise(r => setTimeout(r, ms)) }) {
+  const cdpClient = cdp ?? new CdpClient(config.cdpCredentials);
   const reconciliation = await callVouchSpec(config, "/api/vouchspec/v1/internal/payments/reconcile", {
     worker_version: RECONCILIATION_VERSION,
   }, fetchImpl);
@@ -191,7 +202,7 @@ export async function runOnce({ config, cdp = new CdpClient(), fetchImpl = fetch
   });
   let sent;
   try {
-    sent = await cdp.evm.sendTransaction({
+    sent = await cdpClient.evm.sendTransaction({
       address: config.accountAddress,
       network: job.cdpNetwork,
       idempotencyKey: job.idempotency_key,

@@ -14,11 +14,24 @@ test("executor configuration is HTTPS-only and requires isolated credentials", (
     VOUCHSPEC_API_BASE_URL: "https://vouchspec.plyrium.com",
     VOUCHSPEC_REMEDY_TOKEN: TOKEN,
     CDP_REMEDY_ACCOUNT_ADDRESS: ACCOUNT,
-    CDP_API_KEY_ID: "a".repeat(16),
-    CDP_API_KEY_SECRET: "b".repeat(32),
-    CDP_WALLET_SECRET: "c".repeat(32),
+    CDP_API_KEY_ID: ` ${"a".repeat(16)}\r\n`,
+    CDP_API_KEY_SECRET: `\t${"b".repeat(32)} `,
+    CDP_WALLET_SECRET: `${"c".repeat(32)}\n`,
   });
   assert.equal(config.accountAddress, ACCOUNT);
+  assert.deepEqual(config.cdpCredentials, {
+    apiKeyId: "a".repeat(16),
+    apiKeySecret: "b".repeat(32),
+    walletSecret: "c".repeat(32),
+  });
+  assert.throws(() => loadConfig({
+    VOUCHSPEC_API_BASE_URL: "https://vouchspec.plyrium.com",
+    VOUCHSPEC_REMEDY_TOKEN: TOKEN,
+    CDP_REMEDY_ACCOUNT_ADDRESS: ACCOUNT,
+    CDP_API_KEY_ID: "a".repeat(16),
+    CDP_API_KEY_SECRET: "b".repeat(32),
+    CDP_WALLET_SECRET: `${"c".repeat(32)}\0`,
+  }), RemedyExecutorError);
 });
 
 test("claim parser binds mainnet USDC, amount, payer, and UUID idempotency", () => {
