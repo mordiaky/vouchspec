@@ -1348,7 +1348,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_src_capabilityproof_catalog_runtime_py",
-      "community": 30,
+      "community": 27,
       "norm_label": "catalog_runtime.py"
     },
     {
@@ -1468,7 +1468,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_catalog_runtime_rationale_1",
-      "community": 30,
+      "community": 27,
       "norm_label": "trusted runtime view over a signed catalog and root-signed lifecycle feed."
     },
     {
@@ -3648,7 +3648,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_verify_lifecycle_envelope",
-      "community": 59,
+      "community": 30,
       "norm_label": "verify_lifecycle_envelope()"
     },
     {
@@ -3658,7 +3658,7 @@
       "source_location": "L278",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_envelope_keyid",
-      "community": 59,
+      "community": 30,
       "norm_label": "_envelope_keyid()"
     },
     {
@@ -3668,7 +3668,7 @@
       "source_location": "L291",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_evaluate_receipt_lifecycle",
-      "community": 59,
+      "community": 30,
       "norm_label": "evaluate_receipt_lifecycle()"
     },
     {
@@ -3728,7 +3728,7 @@
       "source_location": "L299",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_rationale_299",
-      "community": 59,
+      "community": 30,
       "norm_label": "verify both signatures and conservatively derive current lifecycle state."
     },
     {
@@ -4448,7 +4448,7 @@
       "source_location": "L345",
       "_origin": "ast",
       "id": "capabilityproof_receipt_verify_receipt_integrity",
-      "community": 112,
+      "community": 27,
       "norm_label": "verify_receipt_integrity()"
     },
     {
@@ -7558,7 +7558,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_python",
-      "community": 149,
+      "community": 106,
       "norm_label": "python"
     },
     {
@@ -7568,7 +7568,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_type",
-      "community": 149,
+      "community": 106,
       "norm_label": "type"
     },
     {
@@ -7578,7 +7578,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_minlength",
-      "community": 149,
+      "community": 106,
       "norm_label": "minlength"
     },
     {
@@ -7588,7 +7588,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_maxlength",
-      "community": 149,
+      "community": 106,
       "norm_label": "maxlength"
     },
     {
@@ -7598,7 +7598,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_pyyaml",
-      "community": 106,
+      "community": 126,
       "norm_label": "pyyaml"
     },
     {
@@ -7608,7 +7608,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_type",
-      "community": 106,
+      "community": 126,
       "norm_label": "type"
     },
     {
@@ -7618,7 +7618,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_minlength",
-      "community": 106,
+      "community": 126,
       "norm_label": "minlength"
     },
     {
@@ -7628,7 +7628,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_maxlength",
-      "community": 106,
+      "community": 126,
       "norm_label": "maxlength"
     },
     {
@@ -7848,7 +7848,7 @@
       "source_location": "L291",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_signature_verification",
-      "community": 41,
+      "community": 95,
       "norm_label": "signature_verification"
     },
     {
@@ -7858,7 +7858,7 @@
       "source_location": "L292",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_signature_verification_type",
-      "community": 41,
+      "community": 95,
       "norm_label": "type"
     },
     {
@@ -7868,7 +7868,7 @@
       "source_location": "L293",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_signature_verification_additionalproperties",
-      "community": 41,
+      "community": 95,
       "norm_label": "additionalproperties"
     },
     {
@@ -7878,7 +7878,7 @@
       "source_location": "L294",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_signature_verification_required",
-      "community": 41,
+      "community": 95,
       "norm_label": "required"
     },
     {
@@ -8668,7 +8668,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_medium",
-      "community": 148,
+      "community": 8,
       "norm_label": "medium"
     },
     {
@@ -8678,7 +8678,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_type",
-      "community": 148,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -8688,7 +8688,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_minimum",
-      "community": 148,
+      "community": 8,
       "norm_label": "minimum"
     },
     {
@@ -8698,7 +8698,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_maximum",
-      "community": 148,
+      "community": 8,
       "norm_label": "maximum"
     },
     {
@@ -8748,7 +8748,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_total",
-      "community": 8,
+      "community": 148,
       "norm_label": "total"
     },
     {
@@ -8758,7 +8758,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_type",
-      "community": 8,
+      "community": 148,
       "norm_label": "type"
     },
     {
@@ -8768,7 +8768,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_minimum",
-      "community": 8,
+      "community": 148,
       "norm_label": "minimum"
     },
     {
@@ -8778,7 +8778,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_maximum",
-      "community": 8,
+      "community": 148,
       "norm_label": "maximum"
     },
     {
@@ -10608,7 +10608,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "capabilityproof_signing_strict_json",
-      "community": 59,
+      "community": 30,
       "norm_label": "_strict_json()"
     },
     {
@@ -10618,7 +10618,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "src_capabilityproof_signing_py_any",
-      "community": 59,
+      "community": 30,
       "norm_label": "any"
     },
     {
@@ -10708,7 +10708,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "src_capabilityproof_signing_py_ed25519privatekey",
-      "community": 112,
+      "community": 30,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -10728,7 +10728,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "capabilityproof_signing_sign_receipt_bytes",
-      "community": 112,
+      "community": 30,
       "norm_label": "sign_receipt_bytes()"
     },
     {
@@ -10738,7 +10738,7 @@
       "source_location": "L194",
       "_origin": "ast",
       "id": "capabilityproof_signing_sign_dsse_payload",
-      "community": 112,
+      "community": 30,
       "norm_label": "sign_dsse_payload()"
     },
     {
@@ -10748,7 +10748,7 @@
       "source_location": "L214",
       "_origin": "ast",
       "id": "capabilityproof_signing_verify_receipt_envelope",
-      "community": 59,
+      "community": 30,
       "norm_label": "verify_receipt_envelope()"
     },
     {
@@ -10758,7 +10758,7 @@
       "source_location": "L230",
       "_origin": "ast",
       "id": "capabilityproof_signing_verify_dsse_envelope",
-      "community": 59,
+      "community": 30,
       "norm_label": "verify_dsse_envelope()"
     },
     {
@@ -10808,7 +10808,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_201",
-      "community": 112,
+      "community": 30,
       "norm_label": "sign exact payload bytes using the stage a one-signature dsse profile."
     },
     {
@@ -10818,7 +10818,7 @@
       "source_location": "L215",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_215",
-      "community": 59,
+      "community": 30,
       "norm_label": "authenticate an envelope and return both parsed receipt and exact signed bytes."
     },
     {
@@ -10828,7 +10828,7 @@
       "source_location": "L237",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_237",
-      "community": 59,
+      "community": 30,
       "norm_label": "authenticate one exact dsse payload without parsing the payload itself."
     },
     {
@@ -11758,7 +11758,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_src_capabilityproof_stage_b_signer_cli_py",
-      "community": 126,
+      "community": 112,
       "norm_label": "stage_b_signer_cli.py"
     },
     {
@@ -11768,7 +11768,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_passphrase",
-      "community": 126,
+      "community": 112,
       "norm_label": "_passphrase()"
     },
     {
@@ -11778,7 +11778,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_cli_py_path",
-      "community": 126,
+      "community": 112,
       "norm_label": "path"
     },
     {
@@ -11788,7 +11788,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_parser",
-      "community": 126,
+      "community": 112,
       "norm_label": "_parser()"
     },
     {
@@ -11798,7 +11798,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_cli_py_argumentparser",
-      "community": 126,
+      "community": 112,
       "norm_label": "argumentparser"
     },
     {
@@ -11808,7 +11808,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_main",
-      "community": 126,
+      "community": 112,
       "norm_label": "main()"
     },
     {
@@ -11818,7 +11818,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_rationale_1",
-      "community": 126,
+      "community": 112,
       "norm_label": "minimal cli for the no-egress stage b receipt signer."
     },
     {
@@ -13195,7 +13195,7 @@
       "label": "test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L131",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands",
       "community": 77,
@@ -13858,7 +13858,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_tests_test_public_receipt_py",
-      "community": 59,
+      "community": 149,
       "norm_label": "test_public_receipt.py"
     },
     {
@@ -13868,7 +13868,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_checked_in_public_catalog_has_25_signed_immutable_receipts_from_12_owner_namespaces",
-      "community": 59,
+      "community": 30,
       "norm_label": "test_checked_in_public_catalog_has_25_signed_immutable_receipts_from_12_owner_namespaces()"
     },
     {
@@ -13878,7 +13878,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_public_catalog_contains_no_signing_secrets_or_private_keys",
-      "community": 59,
+      "community": 149,
       "norm_label": "test_public_catalog_contains_no_signing_secrets_or_private_keys()"
     },
     {
@@ -13888,7 +13888,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_git_preserves_every_byte_hashed_or_signed_into_public_receipts",
-      "community": 59,
+      "community": 149,
       "norm_label": "test_git_preserves_every_byte_hashed_or_signed_into_public_receipts()"
     },
     {
@@ -18113,9 +18113,9 @@
       "source_file": "distribution/remedy-executor/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_remedy_executor_package_json",
-      "target": "remedy_executor_package_dependencies",
-      "confidence_score": 1.0
+      "target": "remedy_executor_package_dependencies"
     },
     {
       "relation": "contains",
@@ -18123,9 +18123,9 @@
       "source_file": "distribution/remedy-executor/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_remedy_executor_package_json",
-      "target": "remedy_executor_package_name",
-      "confidence_score": 1.0
+      "target": "remedy_executor_package_name"
     },
     {
       "relation": "contains",
@@ -18133,9 +18133,9 @@
       "source_file": "distribution/remedy-executor/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_remedy_executor_package_json",
-      "target": "remedy_executor_package_private",
-      "confidence_score": 1.0
+      "target": "remedy_executor_package_private"
     },
     {
       "relation": "contains",
@@ -18143,9 +18143,9 @@
       "source_file": "distribution/remedy-executor/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_remedy_executor_package_json",
-      "target": "remedy_executor_package_scripts",
-      "confidence_score": 1.0
+      "target": "remedy_executor_package_scripts"
     },
     {
       "relation": "contains",
@@ -18153,9 +18153,9 @@
       "source_file": "distribution/remedy-executor/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_remedy_executor_package_json",
-      "target": "remedy_executor_package_type",
-      "confidence_score": 1.0
+      "target": "remedy_executor_package_type"
     },
     {
       "relation": "contains",
@@ -18163,9 +18163,9 @@
       "source_file": "distribution/remedy-executor/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_remedy_executor_package_json",
-      "target": "remedy_executor_package_version",
-      "confidence_score": 1.0
+      "target": "remedy_executor_package_version"
     },
     {
       "relation": "contains",
@@ -18203,9 +18203,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_createclirunner",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_createclirunner"
     },
     {
       "relation": "contains",
@@ -18213,9 +18213,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_exactkeys",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_exactkeys"
     },
     {
       "relation": "contains",
@@ -18223,9 +18223,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "contains",
@@ -18233,9 +18233,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_loadconfig",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_loadconfig"
     },
     {
       "relation": "contains",
@@ -18243,9 +18243,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L208",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_main",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_main"
     },
     {
       "relation": "contains",
@@ -18253,9 +18253,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_module_dir",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_module_dir"
     },
     {
       "relation": "contains",
@@ -18263,9 +18263,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_remedyprovisionererror",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_remedyprovisionererror"
     },
     {
       "relation": "contains",
@@ -18273,9 +18273,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_runprovisioning",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_runprovisioning"
     },
     {
       "relation": "contains",
@@ -18283,9 +18283,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_validateaccount",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_validateaccount"
     },
     {
       "relation": "contains",
@@ -18293,9 +18293,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index",
-      "target": "remedy_provisioner_index_validatepolicy",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_validatepolicy"
     },
     {
       "relation": "imports_from",
@@ -18304,9 +18304,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index"
     },
     {
       "relation": "method",
@@ -18314,9 +18314,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_remedyprovisionererror",
-      "target": "remedy_provisioner_index_remedyprovisionererror_constructor",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_remedyprovisionererror_constructor"
     },
     {
       "relation": "imports",
@@ -18325,9 +18325,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index_remedyprovisionererror",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_remedyprovisionererror"
     },
     {
       "relation": "calls",
@@ -18336,9 +18336,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_exactkeys",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "calls",
@@ -18347,9 +18347,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_loadconfig",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "calls",
@@ -18358,9 +18358,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_runprovisioning",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "calls",
@@ -18369,9 +18369,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L135",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_validateaccount",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "calls",
@@ -18380,9 +18380,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_validatepolicy",
-      "target": "remedy_provisioner_index_fail",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_fail"
     },
     {
       "relation": "calls",
@@ -18391,9 +18391,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_validatepolicy",
-      "target": "remedy_provisioner_index_exactkeys",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_exactkeys"
     },
     {
       "relation": "calls",
@@ -18402,9 +18402,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L210",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_main",
-      "target": "remedy_provisioner_index_loadconfig",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_loadconfig"
     },
     {
       "relation": "imports",
@@ -18413,9 +18413,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index_loadconfig",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_loadconfig"
     },
     {
       "relation": "calls",
@@ -18424,9 +18424,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_runprovisioning",
-      "target": "remedy_provisioner_index_validatepolicy",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_validatepolicy"
     },
     {
       "relation": "calls",
@@ -18435,9 +18435,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_runprovisioning",
-      "target": "remedy_provisioner_index_validateaccount",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_validateaccount"
     },
     {
       "relation": "calls",
@@ -18446,9 +18446,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_main",
-      "target": "remedy_provisioner_index_runprovisioning",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_runprovisioning"
     },
     {
       "relation": "imports",
@@ -18457,9 +18457,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index_runprovisioning",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_runprovisioning"
     },
     {
       "relation": "calls",
@@ -18468,9 +18468,9 @@
       "source_file": "distribution/remedy-provisioner/index.mjs",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_main",
-      "target": "remedy_provisioner_index_createclirunner",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_createclirunner"
     },
     {
       "relation": "imports",
@@ -18479,9 +18479,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index_createclirunner",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_createclirunner"
     },
     {
       "relation": "contains",
@@ -18489,9 +18489,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index_test_account",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_test_account"
     },
     {
       "relation": "contains",
@@ -18499,9 +18499,9 @@
       "source_file": "distribution/remedy-provisioner/index.test.mjs",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_index_test",
-      "target": "remedy_provisioner_index_test_policy",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_index_test_policy"
     },
     {
       "relation": "contains",
@@ -18509,9 +18509,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package",
-      "target": "remedy_provisioner_package_dependencies",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_dependencies"
     },
     {
       "relation": "contains",
@@ -18519,9 +18519,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package",
-      "target": "remedy_provisioner_package_name",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_name"
     },
     {
       "relation": "contains",
@@ -18529,9 +18529,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package",
-      "target": "remedy_provisioner_package_private",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_private"
     },
     {
       "relation": "contains",
@@ -18539,9 +18539,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package",
-      "target": "remedy_provisioner_package_scripts",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_scripts"
     },
     {
       "relation": "contains",
@@ -18549,9 +18549,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package",
-      "target": "remedy_provisioner_package_type",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_type"
     },
     {
       "relation": "contains",
@@ -18559,9 +18559,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package",
-      "target": "remedy_provisioner_package_version",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_version"
     },
     {
       "relation": "contains",
@@ -18569,9 +18569,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package_scripts",
-      "target": "remedy_provisioner_package_scripts_test",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_scripts_test"
     },
     {
       "relation": "contains",
@@ -18579,9 +18579,9 @@
       "source_file": "distribution/remedy-provisioner/package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "remedy_provisioner_package_dependencies",
-      "target": "remedy_provisioner_package_dependencies_coinbase_cdp_cli",
-      "confidence_score": 1.0
+      "target": "remedy_provisioner_package_dependencies_coinbase_cdp_cli"
     },
     {
       "relation": "contains",
@@ -18589,9 +18589,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh__entry",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh__entry"
     },
     {
       "relation": "defines",
@@ -18599,9 +18599,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_allow_protocol",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_allow_protocol"
     },
     {
       "relation": "defines",
@@ -18609,9 +18609,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_config_global",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_config_global"
     },
     {
       "relation": "defines",
@@ -18619,9 +18619,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_config_nosystem",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_config_nosystem"
     },
     {
       "relation": "defines",
@@ -18629,9 +18629,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_external_diff",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_external_diff"
     },
     {
       "relation": "defines",
@@ -18639,9 +18639,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_optional_locks",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_optional_locks"
     },
     {
       "relation": "defines",
@@ -18649,9 +18649,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_pager",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_pager"
     },
     {
       "relation": "defines",
@@ -18659,9 +18659,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_protocol_from_user",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_protocol_from_user"
     },
     {
       "relation": "defines",
@@ -18669,9 +18669,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_git_terminal_prompt",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_git_terminal_prompt"
     },
     {
       "relation": "defines",
@@ -18679,9 +18679,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_home",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_home"
     },
     {
       "relation": "defines",
@@ -18689,9 +18689,9 @@
       "source_file": "distribution/stage-b-fetcher/fetch.sh",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_distribution_stage_b_fetcher_fetch_sh",
-      "target": "stage_b_fetcher_fetch_lc_all",
-      "confidence_score": 1.0
+      "target": "stage_b_fetcher_fetch_lc_all"
     },
     {
       "relation": "imports_from",
@@ -31267,9 +31267,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py"
     },
     {
       "relation": "contains",
@@ -31277,9 +31277,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L396",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_build_no_egress_signer_command",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_build_no_egress_signer_command"
     },
     {
       "relation": "contains",
@@ -31287,9 +31287,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L370",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_claim",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_claim"
     },
     {
       "relation": "contains",
@@ -31297,9 +31297,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L500",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_complete",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_complete"
     },
     {
       "relation": "contains",
@@ -31307,9 +31307,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_exact_object",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_exact_object"
     },
     {
       "relation": "contains",
@@ -31317,9 +31317,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L490",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_fail",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_fail"
     },
     {
       "relation": "contains",
@@ -31327,9 +31327,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L477",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_failure_code",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_failure_code"
     },
     {
       "relation": "contains",
@@ -31337,9 +31337,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_hostedworkerconfig",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_hostedworkerconfig"
     },
     {
       "relation": "contains",
@@ -31347,9 +31347,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_hostedworkererror",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_hostedworkererror"
     },
     {
       "relation": "contains",
@@ -31357,9 +31357,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L382",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_load_preclaimed_job",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_load_preclaimed_job"
     },
     {
       "relation": "contains",
@@ -31367,9 +31367,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L598",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_main",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_main"
     },
     {
       "relation": "contains",
@@ -31377,9 +31377,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L391",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_mount",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_mount"
     },
     {
       "relation": "contains",
@@ -31387,9 +31387,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_noredirect",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_noredirect"
     },
     {
       "relation": "contains",
@@ -31397,9 +31397,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L257",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_normalize_api_base_url",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_normalize_api_base_url"
     },
     {
       "relation": "contains",
@@ -31407,9 +31407,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L337",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_parse_claim",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_parse_claim"
     },
     {
       "relation": "contains",
@@ -31417,9 +31417,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L282",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_post_json",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_post_json"
     },
     {
       "relation": "contains",
@@ -31427,9 +31427,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L549",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_run_once",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_run_once"
     },
     {
       "relation": "contains",
@@ -31437,9 +31437,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_safe_signer_failure_code",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_safe_signer_failure_code"
     },
     {
       "relation": "contains",
@@ -31447,9 +31447,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L437",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "target": "capabilityproof_hosted_worker_sign_no_egress",
-      "confidence_score": 1.0
+      "target": "capabilityproof_hosted_worker_sign_no_egress"
     },
     {
       "relation": "rationale_for",
@@ -31457,9 +31457,9 @@
       "source_file": "src/capabilityproof/hosted_worker.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_hosted_worker_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_hosted_worker_py"
     },
     {
       "relation": "calls",
@@ -45345,9 +45345,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_canonical",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_canonical"
     },
     {
       "relation": "contains",
@@ -45355,9 +45355,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L683",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_dockernoegressworker",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_dockernoegressworker"
     },
     {
       "relation": "contains",
@@ -45365,9 +45365,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L434",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_dockerquotagitfetcher",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_dockerquotagitfetcher"
     },
     {
       "relation": "contains",
@@ -45375,9 +45375,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_enforce_repository_disk_limit",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_enforce_repository_disk_limit"
     },
     {
       "relation": "contains",
@@ -45385,9 +45385,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L377",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_extract_git_repository_archive",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_extract_git_repository_archive"
     },
     {
       "relation": "contains",
@@ -45395,9 +45395,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L327",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_extract_verified_archive",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_extract_verified_archive"
     },
     {
       "relation": "contains",
@@ -45405,9 +45405,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L497",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_freeze_public_source",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_freeze_public_source"
     },
     {
       "relation": "contains",
@@ -45415,9 +45415,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_frozensource",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_frozensource"
     },
     {
       "relation": "contains",
@@ -45425,9 +45425,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L227",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_git",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_git"
     },
     {
       "relation": "contains",
@@ -45435,9 +45435,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L491",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_manifest_digest",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_manifest_digest"
     },
     {
       "relation": "contains",
@@ -45445,9 +45445,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L272",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_parse_tree_listing",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_parse_tree_listing"
     },
     {
       "relation": "contains",
@@ -45455,9 +45455,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_read_bounded",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_read_bounded"
     },
     {
       "relation": "contains",
@@ -45465,9 +45465,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_remove_tree",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_remove_tree"
     },
     {
       "relation": "contains",
@@ -45475,9 +45475,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_request_digest",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_request_digest"
     },
     {
       "relation": "contains",
@@ -45485,9 +45485,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_run_bounded",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_run_bounded"
     },
     {
       "relation": "contains",
@@ -45495,9 +45495,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_safe_docker_environment",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_safe_docker_environment"
     },
     {
       "relation": "contains",
@@ -45505,9 +45505,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_safe_git_environment",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_safe_git_environment"
     },
     {
       "relation": "contains",
@@ -45515,9 +45515,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_utc_now",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_utc_now"
     },
     {
       "relation": "contains",
@@ -45525,9 +45525,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L249",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_validate_artifact_relative",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_validate_artifact_relative"
     },
     {
       "relation": "contains",
@@ -45535,9 +45535,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L605",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_verify_frozen_source",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_verify_frozen_source"
     },
     {
       "relation": "contains",
@@ -45545,9 +45545,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "target": "capabilityproof_stage_b_workerresult",
-      "confidence_score": 1.0
+      "target": "capabilityproof_stage_b_workerresult"
     },
     {
       "relation": "rationale_for",
@@ -45555,9 +45555,9 @@
       "source_file": "src/capabilityproof/stage_b.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_stage_b_rationale_1",
-      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "confidence_score": 1.0
+      "target": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py"
     },
     {
       "relation": "references",
@@ -49816,9 +49816,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_distribution",
-      "target": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked"
     },
     {
       "relation": "contains",
@@ -49836,9 +49836,9 @@
       "source_file": "tests/test_hosted_worker.py",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_hosted_worker_py",
-      "target": "tests_test_hosted_worker_test_claim_contract_is_exact_and_lease_bound",
-      "confidence_score": 1.0
+      "target": "tests_test_hosted_worker_test_claim_contract_is_exact_and_lease_bound"
     },
     {
       "relation": "contains",
@@ -49846,9 +49846,9 @@
       "source_file": "tests/test_hosted_worker.py",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_hosted_worker_py",
-      "target": "tests_test_hosted_worker_test_hosted_api_origin_is_https_only_and_redirect_free",
-      "confidence_score": 1.0
+      "target": "tests_test_hosted_worker_test_hosted_api_origin_is_https_only_and_redirect_free"
     },
     {
       "relation": "contains",
@@ -49856,9 +49856,9 @@
       "source_file": "tests/test_hosted_worker.py",
       "source_location": "L90",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_hosted_worker_py",
-      "target": "tests_test_hosted_worker_test_preclaimed_job_is_revalidated_before_any_artifact_work",
-      "confidence_score": 1.0
+      "target": "tests_test_hosted_worker_test_preclaimed_job_is_revalidated_before_any_artifact_work"
     },
     {
       "relation": "contains",
@@ -49866,9 +49866,9 @@
       "source_file": "tests/test_hosted_worker.py",
       "source_location": "L113",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_hosted_worker_py",
-      "target": "tests_test_hosted_worker_test_signer_command_is_separate_no_egress_and_receives_only_read_only_inputs",
-      "confidence_score": 1.0
+      "target": "tests_test_hosted_worker_test_signer_command_is_separate_no_egress_and_receives_only_read_only_inputs"
     },
     {
       "relation": "contains",
@@ -49876,9 +49876,9 @@
       "source_file": "tests/test_hosted_worker.py",
       "source_location": "L46",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_hosted_worker_py",
-      "target": "tests_test_hosted_worker_test_signer_diagnostics_emit_only_allowlisted_codes",
-      "confidence_score": 1.0
+      "target": "tests_test_hosted_worker_test_signer_diagnostics_emit_only_allowlisted_codes"
     },
     {
       "relation": "references",
@@ -51394,9 +51394,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_git_blob",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_git_blob"
     },
     {
       "relation": "contains",
@@ -51404,9 +51404,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_make_frozen",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_make_frozen"
     },
     {
       "relation": "contains",
@@ -51414,9 +51414,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L119",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_make_worker_output",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_make_worker_output"
     },
     {
       "relation": "contains",
@@ -51424,9 +51424,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_tar",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_tar"
     },
     {
       "relation": "contains",
@@ -51434,9 +51434,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L247",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_archive_is_manually_extracted_and_bound_to_git_blobs",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_archive_is_manually_extracted_and_bound_to_git_blobs"
     },
     {
       "relation": "contains",
@@ -51444,9 +51444,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L271",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_archive_rejects_traversal_links_and_blob_mismatch",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_archive_rejects_traversal_links_and_blob_mismatch"
     },
     {
       "relation": "contains",
@@ -51454,9 +51454,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L448",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_checked_in_sandbox_proof_cannot_be_mistaken_for_commercial_evidence",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_checked_in_sandbox_proof_cannot_be_mistaken_for_commercial_evidence"
     },
     {
       "relation": "contains",
@@ -51464,9 +51464,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_fetcher_archive_accepts_only_bounded_git_metadata",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_fetcher_archive_accepts_only_bounded_git_metadata"
     },
     {
       "relation": "contains",
@@ -51474,9 +51474,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_fetcher_command_uses_kernel_capped_tmpfs_and_no_host_mount",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_fetcher_command_uses_kernel_capped_tmpfs_and_no_host_mount"
     },
     {
       "relation": "contains",
@@ -51484,9 +51484,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_frozen_source_is_rehashed_and_preserves_real_root_name",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_frozen_source_is_rehashed_and_preserves_real_root_name"
     },
     {
       "relation": "contains",
@@ -51494,9 +51494,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_git_repository_disk_ceiling_is_enforced",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_git_repository_disk_ceiling_is_enforced"
     },
     {
       "relation": "contains",
@@ -51504,9 +51504,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_git_tree_metadata_accepts_only_bounded_regular_files",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_git_tree_metadata_accepts_only_bounded_regular_files"
     },
     {
       "relation": "contains",
@@ -51514,9 +51514,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L194",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_git_tree_metadata_rejects_case_collisions",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_git_tree_metadata_rejects_case_collisions"
     },
     {
       "relation": "contains",
@@ -51524,9 +51524,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L189",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_git_tree_metadata_rejects_links_submodules_and_nonportable_paths",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_git_tree_metadata_rejects_links_submodules_and_nonportable_paths"
     },
     {
       "relation": "contains",
@@ -51534,9 +51534,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L379",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_sandbox_coordinator_completes_signed_nonsettling_delivery",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_sandbox_coordinator_completes_signed_nonsettling_delivery"
     },
     {
       "relation": "contains",
@@ -51544,9 +51544,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L344",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_signing_gate_rejects_weakened_worker_evidence",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_signing_gate_rejects_weakened_worker_evidence"
     },
     {
       "relation": "contains",
@@ -51554,9 +51554,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L364",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_signing_gate_requires_explicitly_allowlisted_immutable_image",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_signing_gate_requires_explicitly_allowlisted_immutable_image"
     },
     {
       "relation": "contains",
@@ -51564,9 +51564,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L322",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_signing_gate_reverifies_worker_and_signs_exact_receipt_bytes",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_signing_gate_reverifies_worker_and_signs_exact_receipt_bytes"
     },
     {
       "relation": "contains",
@@ -51574,9 +51574,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L297",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_worker_command_enforces_no_egress_and_least_privilege",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_worker_command_enforces_no_egress_and_least_privilege"
     },
     {
       "relation": "contains",
@@ -51584,9 +51584,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L292",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_test_worker_rejects_mutable_or_incomplete_image_references",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_test_worker_rejects_mutable_or_incomplete_image_references"
     },
     {
       "relation": "contains",
@@ -51594,9 +51594,9 @@
       "source_file": "tests/test_stage_b.py",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_tests_test_stage_b_py",
-      "target": "tests_test_stage_b_tree_record",
-      "confidence_score": 1.0
+      "target": "tests_test_stage_b_tree_record"
     },
     {
       "relation": "calls",
@@ -52407,9 +52407,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backlog",
-      "target": "backlog_prioritized_backlog",
-      "confidence_score": 1.0
+      "target": "backlog_prioritized_backlog"
     },
     {
       "relation": "contains",
@@ -52417,9 +52417,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backlog_prioritized_backlog",
-      "target": "backlog_completed_foundations",
-      "confidence_score": 1.0
+      "target": "backlog_completed_foundations"
     },
     {
       "relation": "contains",
@@ -52427,9 +52427,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backlog_prioritized_backlog",
-      "target": "backlog_deferred_stage_c",
-      "confidence_score": 1.0
+      "target": "backlog_deferred_stage_c"
     },
     {
       "relation": "contains",
@@ -52437,9 +52437,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backlog_prioritized_backlog",
-      "target": "backlog_evidence_driven_operation",
-      "confidence_score": 1.0
+      "target": "backlog_evidence_driven_operation"
     },
     {
       "relation": "contains",
@@ -52447,9 +52447,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "backlog_prioritized_backlog",
-      "target": "backlog_now_external_adoption_and_safe_orderability",
-      "confidence_score": 1.0
+      "target": "backlog_now_external_adoption_and_safe_orderability"
     },
     {
       "relation": "contains",
@@ -52937,9 +52937,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal_evidence",
-      "target": "goal_evidence_goal_evidence",
-      "confidence_score": 1.0
+      "target": "goal_evidence_goal_evidence"
     },
     {
       "relation": "contains",
@@ -52947,9 +52947,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal_evidence_goal_evidence",
-      "target": "goal_evidence_agentic_wallet_settlement_fulfillment_and_bazaar_indexing_evidence",
-      "confidence_score": 1.0
+      "target": "goal_evidence_agentic_wallet_settlement_fulfillment_and_bazaar_indexing_evidence"
     },
     {
       "relation": "contains",
@@ -52957,9 +52957,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal_evidence_goal_evidence",
-      "target": "goal_evidence_cdp_bazaar_one_call_launch_evidence",
-      "confidence_score": 1.0
+      "target": "goal_evidence_cdp_bazaar_one_call_launch_evidence"
     },
     {
       "relation": "contains",
@@ -52967,9 +52967,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal_evidence_goal_evidence",
-      "target": "goal_evidence_hosted_owner_excluded_proof",
-      "confidence_score": 1.0
+      "target": "goal_evidence_hosted_owner_excluded_proof"
     },
     {
       "relation": "contains",
@@ -52977,9 +52977,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal_evidence_goal_evidence",
-      "target": "goal_evidence_mainnet_fail_closed_safety_evidence",
-      "confidence_score": 1.0
+      "target": "goal_evidence_mainnet_fail_closed_safety_evidence"
     },
     {
       "relation": "contains",
@@ -52987,9 +52987,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "goal_evidence_goal_evidence",
-      "target": "goal_evidence_operational_recovery_evidence",
-      "confidence_score": 1.0
+      "target": "goal_evidence_operational_recovery_evidence"
     },
     {
       "relation": "contains",
@@ -52997,9 +52997,9 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "human_actions",
-      "target": "human_actions_human_actions",
-      "confidence_score": 1.0
+      "target": "human_actions_human_actions"
     },
     {
       "relation": "contains",
@@ -53077,9 +53077,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_readme_md",
-      "target": "capabilityproof_remedies_work_readme_vouchspec",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_vouchspec"
     },
     {
       "relation": "contains",
@@ -53087,9 +53087,9 @@
       "source_file": "README.md",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_agent_only_x402_sandbox",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_agent_only_x402_sandbox"
     },
     {
       "relation": "contains",
@@ -53097,9 +53097,9 @@
       "source_file": "README.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_evidence_labels",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_evidence_labels"
     },
     {
       "relation": "contains",
@@ -53107,9 +53107,9 @@
       "source_file": "README.md",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_local_commerce_harness",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_local_commerce_harness"
     },
     {
       "relation": "contains",
@@ -53117,9 +53117,9 @@
       "source_file": "README.md",
       "source_location": "L220",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_local_inspector_and_builder",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_local_inspector_and_builder"
     },
     {
       "relation": "contains",
@@ -53127,9 +53127,9 @@
       "source_file": "README.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_product_stages",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_product_stages"
     },
     {
       "relation": "contains",
@@ -53137,9 +53137,9 @@
       "source_file": "README.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_public_stage_a_distribution",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_public_stage_a_distribution"
     },
     {
       "relation": "contains",
@@ -53147,9 +53147,9 @@
       "source_file": "README.md",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_publisher_ci_complete_self_service_example",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_publisher_ci_complete_self_service_example"
     },
     {
       "relation": "contains",
@@ -53157,9 +53157,9 @@
       "source_file": "README.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_read_only_catalog_api",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_read_only_catalog_api"
     },
     {
       "relation": "contains",
@@ -53167,9 +53167,9 @@
       "source_file": "README.md",
       "source_location": "L197",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_read_only_catalog_mcp",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_read_only_catalog_mcp"
     },
     {
       "relation": "contains",
@@ -53177,9 +53177,9 @@
       "source_file": "README.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_remedies_work_readme_vouchspec",
-      "target": "capabilityproof_remedies_work_readme_verify_a_public_receipt_independently",
-      "confidence_score": 1.0
+      "target": "capabilityproof_remedies_work_readme_verify_a_public_receipt_independently"
     },
     {
       "relation": "contains",
@@ -53297,9 +53297,9 @@
       "source_file": "docs/mainnet-remedy-operations.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_docs_mainnet_remedy_operations_md",
-      "target": "docs_mainnet_remedy_operations_mainnet_remedy_operations",
-      "confidence_score": 1.0
+      "target": "docs_mainnet_remedy_operations_mainnet_remedy_operations"
     },
     {
       "relation": "contains",
@@ -53417,9 +53417,9 @@
       "source_file": "docs/payment-flow.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_docs_payment_flow_md",
-      "target": "docs_payment_flow_vouchspec_agent_only_payment_and_reconciliation_flow",
-      "confidence_score": 1.0
+      "target": "docs_payment_flow_vouchspec_agent_only_payment_and_reconciliation_flow"
     },
     {
       "relation": "contains",
@@ -53487,9 +53487,9 @@
       "source_file": "docs/refund-policy.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_docs_refund_policy_md",
-      "target": "docs_refund_policy_fresh_validation_refund_policy",
-      "confidence_score": 1.0
+      "target": "docs_refund_policy_fresh_validation_refund_policy"
     },
     {
       "relation": "contains",
@@ -53527,9 +53527,9 @@
       "source_file": "docs/stage-b-operations.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_docs_stage_b_operations_md",
-      "target": "docs_stage_b_operations_stage_b_public_repository_validation",
-      "confidence_score": 1.0
+      "target": "docs_stage_b_operations_stage_b_public_repository_validation"
     },
     {
       "relation": "contains",
@@ -53627,9 +53627,9 @@
       "source_file": "docs/stage-b-security-review.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_docs_stage_b_security_review_md",
-      "target": "docs_stage_b_security_review_stage_b_managed_x402_security_review",
-      "confidence_score": 1.0
+      "target": "docs_stage_b_security_review_stage_b_managed_x402_security_review"
     },
     {
       "relation": "contains",
@@ -53897,9 +53897,9 @@
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_14_cdp_mainnet_provisioning",
-      "target": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint"
     },
     {
       "relation": "contains",
@@ -53907,9 +53907,9 @@
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
-      "target": "logs_2026_07_14_cdp_mainnet_provisioning_commercial_accounting",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_commercial_accounting"
     },
     {
       "relation": "contains",
@@ -53917,9 +53917,9 @@
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
-      "target": "logs_2026_07_14_cdp_mainnet_provisioning_material_external_actions",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_material_external_actions"
     },
     {
       "relation": "contains",
@@ -53927,9 +53927,9 @@
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
-      "target": "logs_2026_07_14_cdp_mainnet_provisioning_owner_correction_and_permanent_boundary",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_owner_correction_and_permanent_boundary"
     },
     {
       "relation": "contains",
@@ -53937,9 +53937,9 @@
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
-      "target": "logs_2026_07_14_cdp_mainnet_provisioning_scope",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_scope"
     },
     {
       "relation": "contains",
@@ -54097,9 +54097,9 @@
       "source_file": "research/agent-only-pricing-analysis-2026-07-14.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_remedies_work_research_agent_only_pricing_analysis_2026_07_14_md",
-      "target": "research_agent_only_pricing_analysis_2026_07_14_vouchspec_agent_only_pricing_analysis",
-      "confidence_score": 1.0
+      "target": "research_agent_only_pricing_analysis_2026_07_14_vouchspec_agent_only_pricing_analysis"
     },
     {
       "relation": "contains",
@@ -55263,5 +55263,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b832deb54acca65fc1af362e99c067a373221800"
+  "built_at_commit": "30c9fc31c192eed7d9e974cca875fd8921f0675d"
 }

@@ -1,7 +1,7 @@
 # Graph Report - capabilityproof-cdp-api  (2026-07-14)
 
 ## Corpus Check
-- 155 files · ~90,106 words
+- 155 files · ~90,152 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b832deb5`
+- Built from commit: `30c9fc31`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -162,7 +162,6 @@
 - [[_COMMUNITY_Community 146|Community 146]]
 - [[_COMMUNITY_Community 147|Community 147]]
 - [[_COMMUNITY_Community 148|Community 148]]
-- [[_COMMUNITY_Community 149|Community 149]]
 - [[_COMMUNITY_Community 150|Community 150]]
 - [[_COMMUNITY_Community 151|Community 151]]
 
@@ -239,7 +238,7 @@ Nodes (22): const, const, format, type, enum, items, maxItems, type (+14 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.15
-Nodes (13): maximum, minimum, type, maximum, minimum, type, critical, low (+5 more)
+Nodes (13): maximum, minimum, type, maximum, minimum, type, maximum, minimum (+5 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.09
@@ -314,8 +313,8 @@ Cohesion: 0.14
 Nodes (14): const, properties, integrity_assurance, receipt_id, receipt_profile, schema_sha256, schema_uri, schema_version (+6 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.19
-Nodes (20): build_catalog_drafts(), _checkout(), finalize_catalog_lifecycle(), _iso(), load_source_manifest(), Separated collection, issuer-signing, and root-lifecycle build phases., Networked/keyless phase: checkout public commits and emit unsigned receipt draft, No-network issuer phase: validate drafts and sign exact receipt/index bytes. (+12 more)
+Cohesion: 0.15
+Nodes (22): build_catalog_drafts(), _checkout(), finalize_catalog_lifecycle(), _iso(), load_source_manifest(), Separated collection, issuer-signing, and root-lifecycle build phases., Networked/keyless phase: checkout public commits and emit unsigned receipt draft, No-network issuer phase: validate drafts and sign exact receipt/index bytes. (+14 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.20
@@ -326,8 +325,8 @@ Cohesion: 0.09
 Nodes (22): const, const, const, format, type, const, const, const (+14 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.22
-Nodes (14): Trusted runtime view over a signed catalog and root-signed lifecycle feed., _b64_decode(), _b64url_decode(), _b64url_no_pad(), generate_encrypted_keypair(), jwk_thumbprint(), load_private_key(), load_public_jwk() (+6 more)
+Cohesion: 0.16
+Nodes (28): _envelope_keyid(), evaluate_receipt_lifecycle(), Verify both signatures and conservatively derive current lifecycle state., verify_lifecycle_envelope(), _b64_decode(), _b64url_decode(), _b64url_no_pad(), generate_encrypted_keypair() (+20 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.25
@@ -366,8 +365,8 @@ Cohesion: 0.40
 Nodes (4): Authorized scope, Procedure, Stage A catalog build and evidence-delivery SOP, Stop conditions
 
 ### Community 41 - "Community 41"
-Cohesion: 0.15
-Nodes (13): additionalProperties, properties, required, type, authentication, public_distribution_requirement, signature_verification, maxLength (+5 more)
+Cohesion: 0.22
+Nodes (9): additionalProperties, properties, required, type, authentication, public_distribution_requirement, maxLength, minLength (+1 more)
 
 ### Community 42 - "Community 42"
 Cohesion: 0.17
@@ -422,8 +421,8 @@ Cohesion: 0.25
 Nodes (7): Accounting and remedies, Hosted proof, Independent state dimensions, Payment decision, Public machine contract, Remaining mainnet gates, VouchSpec agent-only payment and reconciliation flow
 
 ### Community 59 - "Community 59"
-Cohesion: 0.16
-Nodes (20): _envelope_keyid(), evaluate_receipt_lifecycle(), Verify both signatures and conservatively derive current lifecycle state., verify_lifecycle_envelope(), dsse_pae(), Authenticate an envelope and return both parsed receipt and exact signed bytes., Authenticate one exact DSSE payload without parsing the payload itself., Return the DSSE v1 pre-authentication encoding. (+12 more)
+Cohesion: 0.33
+Nodes (9): dsse_pae(), Return the DSSE v1 pre-authentication encoding., _material(), Ed25519PrivateKey, test_dsse_pae_known_shape_and_exact_signed_bytes_round_trip(), test_duplicate_envelope_keys_and_signature_count_fail_profile(), test_jwk_thumbprint_is_stable_and_wrong_key_is_rejected(), test_one_bit_mutations_fail_closed() (+1 more)
 
 ### Community 61 - "Community 61"
 Cohesion: 0.50
@@ -510,8 +509,8 @@ Cohesion: 0.33
 Nodes (6): items, maxItems, type, additionalProperties, required, files
 
 ### Community 95 - "Community 95"
-Cohesion: 0.15
-Nodes (14): const, const, const, command, payload_type, profile, signature, verification_order (+6 more)
+Cohesion: 0.12
+Nodes (18): const, const, const, command, payload_type, profile, signature, signature_verification (+10 more)
 
 ### Community 96 - "Community 96"
 Cohesion: 0.67
@@ -555,7 +554,7 @@ Nodes (4): maxLength, minLength, type, capture_consistency
 
 ### Community 106 - "Community 106"
 Cohesion: 0.22
-Nodes (9): maxLength, minLength, type, implementation, pyyaml, maxLength, minLength, type (+1 more)
+Nodes (9): maxLength, minLength, type, implementation, python, maxLength, minLength, type (+1 more)
 
 ### Community 107 - "Community 107"
 Cohesion: 0.50
@@ -578,8 +577,8 @@ Cohesion: 0.29
 Nodes (6): Activation checks, Mainnet remedy operations, Primary references, Required account policy, Retry and accounting behavior, Separation boundary
 
 ### Community 112 - "Community 112"
-Cohesion: 0.17
-Nodes (14): load_strict_commerce_json(), Load JSON while rejecting duplicate keys at every nesting level., verify_receipt_integrity(), Sign exact payload bytes using the Stage A one-signature DSSE profile., sign_dsse_payload(), sign_receipt_bytes(), Constrained signing gate for receipts produced by verified Stage B workers., Sign exact receipt bytes only after all freeze/worker constraints re-verify. (+6 more)
+Cohesion: 0.15
+Nodes (15): load_strict_commerce_json(), Load JSON while rejecting duplicate keys at every nesting level., main(), _parser(), _passphrase(), Minimal CLI for the no-egress Stage B receipt signer., Constrained signing gate for receipts produced by verified Stage B workers., Sign exact receipt bytes only after all freeze/worker constraints re-verify. (+7 more)
 
 ### Community 113 - "Community 113"
 Cohesion: 0.28
@@ -630,8 +629,8 @@ Cohesion: 0.22
 Nodes (8): dependencies, @coinbase/cdp-cli, name, private, scripts, test, type, version
 
 ### Community 126 - "Community 126"
-Cohesion: 0.38
-Nodes (6): main(), _parser(), _passphrase(), Minimal CLI for the no-egress Stage B receipt signer., ArgumentParser, Path
+Cohesion: 0.50
+Nodes (4): pyyaml, maxLength, minLength, type
 
 ### Community 128 - "Community 128"
 Cohesion: 0.50
@@ -683,11 +682,7 @@ Nodes (4): items, maxItems, type, manifest_parse_failures
 
 ### Community 148 - "Community 148"
 Cohesion: 0.50
-Nodes (4): maximum, minimum, type, medium
-
-### Community 149 - "Community 149"
-Cohesion: 0.50
-Nodes (4): python, maxLength, minLength, type
+Nodes (4): total, maximum, minimum, type
 
 ## Knowledge Gaps
 - **642 isolated node(s):** `USDC_BY_NETWORK`, `TRANSFER_ABI`, `name`, `version`, `private` (+637 more)
