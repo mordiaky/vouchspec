@@ -1,12 +1,16 @@
 # Next action
 
-Merge the validated remote MCP manifest, publish `io.github.mordiaky/vouchspec` through the
-main-only GitHub OIDC workflow, and verify the official Registry API result. Then use both that
-listing and the indexed Coinbase Bazaar entry to reach qualified agent publishers and runtimes
-whose packaged or generated artifact bytes are not already fully covered by Git-native provenance.
+Use the active official `io.github.mordiaky/vouchspec` Registry listing and the indexed Coinbase
+Bazaar entry to reach qualified agent publishers and runtimes whose packaged or generated
+artifact bytes are not already fully covered by Git-native provenance.
 Convert genuine unrelated integrations into retained use, and count only independently
 attributable external requests. Owner, demo, CI, smoke, monitor, and controlled-wallet traffic
 remains excluded.
+
+GitHub OIDC publication run `29388372800` passed without a portal login, phone code, or dedicated
+Registry secret. The official API returns one active version `0.2.0` record pointing to the live
+canonical Streamable HTTP endpoint. This controlled publication and smoke traffic create no
+integration, request, buyer, revenue, margin, repeat-use, or autonomy credit.
 
 The excluded seed settlement is complete. It settled exactly 1.00 test USDC through CDP,
 fulfilled through the isolated worker and signer, produced a signature-verified immutable public

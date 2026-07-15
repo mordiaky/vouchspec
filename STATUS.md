@@ -32,8 +32,10 @@
   `ba91715c8ea028ebedca56a85c614c73464bc083`; the canonical sandbox alias now serves a stateless
   Streamable HTTP endpoint at `/api/vouchspec/v1/mcp`. The official MCP client negotiated version
   `0.2.0`, listed only `get_vouchspec_discovery`, and returned the exact testnet-only public
-  contract. Hosted method/origin probes returned 405/403 as designed. The validated Registry
-  manifest and main-only GitHub OIDC workflow are prepared; official listing is still pending.
+  contract. Hosted method/origin probes returned 405/403 as designed. VouchSpec PR `#13` merged
+  the validated manifest and main-only OIDC workflow; publication run `29388372800` passed, and
+  the official Registry API returns one active `io.github.mordiaky/vouchspec` version `0.2.0`
+  record pointing to the canonical Streamable HTTP endpoint.
 - **Hosted fulfillment proof:** owner-controlled order `ord_01b1e85f188649a6b68e2dd2` settled
   on Base Sepolia in transaction
   `0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11`, traversed the leased
@@ -84,9 +86,8 @@
   Node suites with zero production dependency vulnerabilities. The latest hosted paid-flow
   workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
 
-Next: publish and verify `io.github.mordiaky/vouchspec` through the prepared GitHub OIDC workflow,
-then use the remote MCP and indexed Bazaar endpoints to reach unrelated agent integrations and
-genuine machine buyers. Continue isolated production state, signing, monitoring, and deployment
-work without funding or enabling mainnet. Count only independently attributable external activity;
-revisit the CDP identity only if an account-and-policy-capable credential becomes available through
-a documented non-interactive API path.
+Next: use the active official MCP Registry and indexed Bazaar entries to reach unrelated agent
+integrations and genuine machine buyers. Continue isolated production state, signing, monitoring,
+and deployment work without funding or enabling mainnet. Count only independently attributable
+external activity; revisit the CDP identity only if an account-and-policy-capable credential becomes
+available through a documented non-interactive API path.

@@ -6048,7 +6048,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_findings",
-      "community": 145,
+      "community": 21,
       "norm_label": "findings"
     },
     {
@@ -6058,7 +6058,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_type",
-      "community": 145,
+      "community": 21,
       "norm_label": "type"
     },
     {
@@ -6068,7 +6068,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_maxitems",
-      "community": 145,
+      "community": 21,
       "norm_label": "maxitems"
     },
     {
@@ -6078,7 +6078,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_items",
-      "community": 145,
+      "community": 21,
       "norm_label": "items"
     },
     {
@@ -6098,7 +6098,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_local_references",
-      "community": 23,
+      "community": 140,
       "norm_label": "local_references"
     },
     {
@@ -6108,7 +6108,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_type",
-      "community": 23,
+      "community": 140,
       "norm_label": "type"
     },
     {
@@ -6118,7 +6118,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_maxitems",
-      "community": 23,
+      "community": 140,
       "norm_label": "maxitems"
     },
     {
@@ -6128,7 +6128,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_local_references_items",
-      "community": 23,
+      "community": 140,
       "norm_label": "items"
     },
     {
@@ -6678,7 +6678,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_manifest_parse_failures",
-      "community": 147,
+      "community": 23,
       "norm_label": "manifest_parse_failures"
     },
     {
@@ -6688,7 +6688,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_type",
-      "community": 147,
+      "community": 23,
       "norm_label": "type"
     },
     {
@@ -6698,7 +6698,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_maxitems",
-      "community": 147,
+      "community": 23,
       "norm_label": "maxitems"
     },
     {
@@ -6708,7 +6708,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_items",
-      "community": 147,
+      "community": 23,
       "norm_label": "items"
     },
     {
@@ -7688,7 +7688,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_python",
-      "community": 126,
+      "community": 106,
       "norm_label": "python"
     },
     {
@@ -7698,7 +7698,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_type",
-      "community": 126,
+      "community": 106,
       "norm_label": "type"
     },
     {
@@ -7708,7 +7708,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_minlength",
-      "community": 126,
+      "community": 106,
       "norm_label": "minlength"
     },
     {
@@ -7718,7 +7718,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_maxlength",
-      "community": 126,
+      "community": 106,
       "norm_label": "maxlength"
     },
     {
@@ -7728,7 +7728,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_pyyaml",
-      "community": 106,
+      "community": 147,
       "norm_label": "pyyaml"
     },
     {
@@ -7738,7 +7738,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_type",
-      "community": 106,
+      "community": 147,
       "norm_label": "type"
     },
     {
@@ -7748,7 +7748,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_minlength",
-      "community": 106,
+      "community": 147,
       "norm_label": "minlength"
     },
     {
@@ -7758,7 +7758,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_pyyaml_maxlength",
-      "community": 106,
+      "community": 147,
       "norm_label": "maxlength"
     },
     {
@@ -8088,7 +8088,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_limitations",
-      "community": 22,
+      "community": 126,
       "norm_label": "limitations"
     },
     {
@@ -8098,7 +8098,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_type",
-      "community": 22,
+      "community": 126,
       "norm_label": "type"
     },
     {
@@ -8108,7 +8108,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_minitems",
-      "community": 22,
+      "community": 126,
       "norm_label": "minitems"
     },
     {
@@ -8118,7 +8118,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_limitations_maxitems",
-      "community": 22,
+      "community": 126,
       "norm_label": "maxitems"
     },
     {
@@ -8798,7 +8798,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_medium",
-      "community": 8,
+      "community": 145,
       "norm_label": "medium"
     },
     {
@@ -8808,7 +8808,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_type",
-      "community": 8,
+      "community": 145,
       "norm_label": "type"
     },
     {
@@ -8818,7 +8818,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_minimum",
-      "community": 8,
+      "community": 145,
       "norm_label": "minimum"
     },
     {
@@ -8828,7 +8828,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_maximum",
-      "community": 8,
+      "community": 145,
       "norm_label": "maximum"
     },
     {
@@ -8878,7 +8878,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_total",
-      "community": 140,
+      "community": 8,
       "norm_label": "total"
     },
     {
@@ -8888,7 +8888,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_type",
-      "community": 140,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -8898,7 +8898,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_minimum",
-      "community": 140,
+      "community": 8,
       "norm_label": "minimum"
     },
     {
@@ -8908,7 +8908,7 @@
       "source_location": "L361",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_total_maximum",
-      "community": 140,
+      "community": 8,
       "norm_label": "maximum"
     },
     {
@@ -12708,7 +12708,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_test_catalog_test_catalog_store_searches_bounded_repository_metadata_without_unsigned_lifecycle",
-      "community": 38,
+      "community": 100,
       "norm_label": "test_catalog_store_searches_bounded_repository_metadata_without_unsigned_lifecycle()"
     },
     {
@@ -13305,7 +13305,7 @@
       "label": "test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L104",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
       "community": 77,
@@ -13315,7 +13315,7 @@
       "label": "test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L138",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped",
       "community": 77,
@@ -13325,7 +13325,7 @@
       "label": "test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L149",
+      "source_location": "L154",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked",
       "community": 77,
@@ -13335,7 +13335,7 @@
       "label": "test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L180",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands",
       "community": 77,
@@ -14625,7 +14625,7 @@
       "label": "Now \u2014 external adoption and safe orderability",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L39",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "backlog_now_external_adoption_and_safe_orderability",
       "community": 134,
@@ -14635,7 +14635,7 @@
       "label": "Evidence-driven operation",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L65",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "backlog_evidence_driven_operation",
       "community": 134,
@@ -14645,7 +14645,7 @@
       "label": "Deferred Stage C",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L77",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "backlog_deferred_stage_c",
       "community": 134,
@@ -15445,7 +15445,7 @@
       "label": "Product stages",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "readme_product_stages",
       "community": 81,
@@ -15455,7 +15455,7 @@
       "label": "Publisher CI \u2014 complete self-service example",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "readme_publisher_ci_complete_self_service_example",
       "community": 81,
@@ -15465,7 +15465,7 @@
       "label": "Evidence labels",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "readme_evidence_labels",
       "community": 81,
@@ -15475,7 +15475,7 @@
       "label": "Verify a public receipt independently",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L87",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "readme_verify_a_public_receipt_independently",
       "community": 81,
@@ -15485,7 +15485,7 @@
       "label": "Read-only catalog API",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L105",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "readme_read_only_catalog_api",
       "community": 81,
@@ -15495,7 +15495,7 @@
       "label": "Agent-only x402 sandbox",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L142",
+      "source_location": "L143",
       "_origin": "ast",
       "id": "readme_agent_only_x402_sandbox",
       "community": 81,
@@ -15505,7 +15505,7 @@
       "label": "Local commerce harness",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L169",
+      "source_location": "L170",
       "_origin": "ast",
       "id": "readme_local_commerce_harness",
       "community": 81,
@@ -15515,7 +15515,7 @@
       "label": "Read-only catalog MCP",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L198",
+      "source_location": "L199",
       "_origin": "ast",
       "id": "readme_read_only_catalog_mcp",
       "community": 81,
@@ -15525,7 +15525,7 @@
       "label": "Local inspector and builder",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L233",
+      "source_location": "L234",
       "_origin": "ast",
       "id": "readme_local_inspector_and_builder",
       "community": 81,
@@ -50138,9 +50138,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_distribution",
-      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready"
     },
     {
       "relation": "contains",
@@ -55595,5 +55595,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "777b52127bc719c862f01f4d2a45b60ddf173f86"
+  "built_at_commit": "ab0ed3eae9614d31fc8e762e2491fe67839015f2"
 }
