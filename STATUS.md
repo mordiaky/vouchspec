@@ -10,7 +10,11 @@
   verifies and settles through Coinbase's authenticated CDP facilitator and declares the official
   x402 Bazaar extension. Full live-catalog and substitute research rejected the prior $49
   hypothesis; the predeclared commercial launch experiment is 0.25 USDC per fresh validation,
-  with evidence-triggered $0.10/$0.50 follow-on cohorts. Mainnet is fail-closed.
+  with evidence-triggered $0.10/$0.50 follow-on cohorts. Plyrium PR `#36` merged the
+  environment-derived price/network migration and dedicated mode-separated mainnet configuration
+  at `fed83d6f63c1b1d6ac49f4499077590b04545ad5` after 177 tests, release/security audits, an
+  optimized build, Vercel preview, and zero-vulnerability production audit passed. Mainnet remains
+  fail-closed and unprovisioned.
 - **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
   `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
   as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant

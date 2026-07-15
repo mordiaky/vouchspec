@@ -20,10 +20,11 @@ invalidation status. The direct agent purchase surface is
 credential before payment and returns deterministic tenant and delivery capabilities after a
 successful settlement.
 
-In parallel, prepare the already-proven flow for Base mainnet without adding any human/card
-checkout. Mainnet stays fail-closed until live receiving-wallet, facilitator, recovery,
-refund/remedy, cost accounting, isolated worker/signer, and public invalidation behavior pass the
-same automated gates. The researched launch experiment is exactly 0.25 USDC per fresh validation;
+The mode-separated mainnet application configuration and environment-derived 0.25-USDC database
+migration are merged but not activated. Mainnet stays fail-closed until a dedicated live
+receiving wallet, CDP credentials, database, issuer/signer, monitoring, recovery/remedy path, and
+kernel-quota-enforced production worker pass the same automated gates. The researched launch
+experiment is exactly 0.25 USDC per fresh validation;
 the previous $49 hypothesis is rejected. Apply the predeclared $0.10 fallback and $0.50 escalation
 rules in `research/agent-only-pricing-analysis-2026-07-14.md` only after qualified mainnet evidence.
 No owner action is currently required.
