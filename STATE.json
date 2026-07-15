@@ -20,6 +20,13 @@
     "lifecycle": "machine_readable_root_signed",
     "monitor": "active_daily_external_check"
   },
+  "distribution": {
+    "mcp_registry_name": "io.github.mordiaky/vouchspec",
+    "mcp_registry_version": "0.3.0",
+    "mcp_registry_status": "active_latest",
+    "mcp_registry_publish_run": "https://github.com/mordiaky/vouchspec/actions/runs/29441422704",
+    "remote_mcp_url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp"
+  },
   "publisher_adoption": {
     "required_integrations": 3,
     "verified_integrations": 0,
@@ -125,11 +132,10 @@
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Publish MCP Registry version 0.3.0 pointing to the live remote endpoint",
     "Acquire the first independently attributable agent buyer through public agent discovery channels",
     "Monitor settlement fulfillment delivery and receipt status without counting owner or controlled traffic",
     "Apply the predeclared pricing cohort rules only after qualified mainnet evidence"
   ],
-  "last_checkpoint_time": "2026-07-15T18:18:00Z",
-  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health and discovery return 200; unpaid empty and schema-valid validation requests return x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next publish MCP Registry 0.3.0, acquire unrelated external agents, and monitor genuine settlements and delivery."
+  "last_checkpoint_time": "2026-07-15T18:40:02Z",
+  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health and discovery return 200; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Official MCP Registry version 0.3.0 is active and latest at the live remote endpoint. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next acquire unrelated external agents and monitor genuine settlements and delivery."
 }

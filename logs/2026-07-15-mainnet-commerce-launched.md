@@ -29,6 +29,7 @@ unfunded and do not block sales.
 
 ## Discovery state
 
-The MCP Registry `0.3.0` live-endpoint update is prepared for publication. Coinbase Bazaar's
-mainnet entry is pending the first successful external mainnet settlement; the existing sandbox
-entry and controlled testnet settlement do not count as adoption or revenue.
+The MCP Registry `0.3.0` live-endpoint update published successfully in workflow run
+`29441422704`. The official Registry API reports it active and latest. Coinbase Bazaar's mainnet
+entry is pending the first successful external mainnet settlement; the existing sandbox entry and
+controlled testnet settlement do not count as adoption or revenue.

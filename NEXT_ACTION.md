@@ -1,7 +1,7 @@
 # Next action
 
-Publish the live VouchSpec endpoint as MCP Registry version `0.3.0`, then acquire and monitor the
-first unrelated agent buyer.
+Acquire and monitor the first unrelated agent buyer through the active official MCP Registry
+`0.3.0` live listing and direct machine discovery.
 
 Agents can buy now by sending a valid request to:
 
