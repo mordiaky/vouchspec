@@ -16,6 +16,7 @@
     "hidden_skips": 0,
     "http": "live_mainnet_x402_and_exact_signed_receipts",
     "mcp": "live_streamable_http_read_only_discovery",
+    "a2a": "live_jsonrpc_0.3_read_only_discovery",
     "signature": "DSSE_v1.0.2_Ed25519_exact_bytes",
     "lifecycle": "machine_readable_root_signed",
     "monitor": "active_daily_external_check"
@@ -32,8 +33,16 @@
     "agent_tools_mcp_slug": "vouchspec-agent-skill-evidence",
     "agent_tools_mcp_status": "provider_reported_ok_and_x402_enabled",
     "agent_tools_derived_x402_slug": "vouchspec-agent-skill-evidence-x402",
+    "a2a_agent_card_url": "https://vouchspec.plyrium.com/.well-known/agent-card.json",
+    "a2a_endpoint_url": "https://vouchspec.plyrium.com/api/vouchspec/v1/a2a",
+    "a2a_protocol_version": "0.3.0",
+    "agent_tools_a2a_slug": "vouchspec-agent-skill-evidence",
+    "agent_tools_a2a_status": "provider_reported_listed_searchable_and_x402_supported",
+    "agent_tools_a2a_view": "https://agent-tools.cloud/a2a/agents/vouchspec-agent-skill-evidence",
     "empirical_network_receipt": "audit/empirical/vouchspec-live-x402-network-receipt.json",
-    "empirical_network_receipt_sha256": "19475abb9672660e902abcee4c0c56fdd640ba42430fee503f8c3ce17409a235"
+    "empirical_network_receipt_sha256": "19475abb9672660e902abcee4c0c56fdd640ba42430fee503f8c3ce17409a235",
+    "empirical_a2a_endpoint_receipt": "audit/empirical/vouchspec-live-a2a-endpoint-receipt.json",
+    "empirical_a2a_endpoint_receipt_sha256": "3dc4efbe492dbad82a839a83eecadc2c4580661e96659f65664cb5ad83621e1d"
   },
   "publisher_adoption": {
     "required_integrations": 3,
@@ -92,6 +101,7 @@
       "production migration 20260715121500 applied and verified",
       "live health discovery and exact 0.25-USDC Base 402 probes passed",
       "public x402 well-known manifest deployed and independently directory-verified",
+      "public A2A 0.3 card and bounded read-only JSON-RPC discovery deployed and independently directory-verified",
       "scheduled fulfillment enabled and no-job worker probe passed"
     ],
     "remaining_gates": [
@@ -142,11 +152,11 @@
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Monitor the active Agent Tools x402 and MCP listings for the first independently attributable agent buyer",
+    "Monitor the active Agent Tools A2A, x402, and MCP listings for the first independently attributable agent buyer",
     "Expand only through agent-readable zero-cost channels that do not require owner contracts or human checkout",
     "Monitor settlement fulfillment delivery and receipt status without counting owner or controlled traffic",
     "Apply the predeclared pricing cohort rules only after qualified mainnet evidence"
   ],
-  "last_checkpoint_time": "2026-07-15T21:01:00Z",
-  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health, discovery, and /.well-known/x402 return 200; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Agent Tools auto-verified and listed the direct x402 service, refreshed the MCP server as healthy, and created a derived x402 service entry. The two-host empirical network receipt was independently accepted and replayed. Official MCP Registry version 0.3.0 remains active. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next monitor genuine directory-referred settlements and expand only through agent-readable channels."
+  "last_checkpoint_time": "2026-07-15T21:39:46Z",
+  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health, discovery, /.well-known/x402, and both A2A agent-card aliases are live; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Agent Tools auto-verified the direct x402 service, refreshed the MCP server as healthy, and now lists the A2A discovery agent as searchable and x402-supported. The two-host A2A endpoint premise was independently accepted and replayed with receipt SHA-256 3dc4efbe492dbad82a839a83eecadc2c4580661e96659f65664cb5ad83621e1d. Official MCP Registry version 0.3.0 remains active. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next monitor genuine directory-referred settlements and expand only through agent-readable channels."
 }
