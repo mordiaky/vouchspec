@@ -1,7 +1,8 @@
 # Next action
 
 Acquire and monitor the first unrelated agent buyer through the active official MCP Registry
-`0.3.0` live listing and direct machine discovery.
+`0.3.0`, the auto-verified Agent Tools x402 listing, its healthy MCP entry, and direct machine
+discovery.
 
 Agents can buy now by sending a valid request to:
 
@@ -13,4 +14,6 @@ returns delivery credentials. No registration or human checkout is required befo
 
 Coinbase Bazaar mainnet discovery is expected only after the first successful mainnet settlement.
 Do not self-pay, use an owner-controlled wallet, or move remedy funds to manufacture discovery or
-revenue. Direct API and MCP discovery remain valid sales channels while Bazaar is pending.
+revenue. Direct API, Agent Tools, and MCP discovery remain valid sales channels while Bazaar is
+pending. Expand only through agent-readable channels that require neither human checkout nor a new
+owner contract.
