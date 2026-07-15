@@ -42,8 +42,10 @@
   immutable-pinned workflow if invited. Count only an external retained run.
 - **B-021:** continue low-volume, contribution-rule-compliant, repository-specific outreach to
   highly relevant publishers until three unrelated integrations exist.
-- **B-025:** package the public MCP server in a Registry-supported public format, validate
-  `server.json`, and request owner authentication only when publication is otherwise ready.
+- **B-025:** the canonical public Streamable HTTP endpoint is live and passes the official MCP
+  client smoke. Merge the schema-validated `server.json` and main-only GitHub OIDC workflow,
+  publish `io.github.mordiaky/vouchspec`, and verify the official Registry API result. No owner
+  authentication, portal session, phone code, or dedicated Registry secret is required.
 - **B-033:** prepare deployment manifests for managed TLS, trusted-edge source limits,
   kernel-quota fetch storage, secret-manager injection, restricted database permissions,
   backups, and redacted audit aggregation without exposing the sandbox listener.

@@ -19,6 +19,7 @@ labeled `STRUCTURE_VALIDATED`.
 - Machine-readable discovery: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/distribution/discovery.json>
 - Managed agent API: <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/health>
 - Managed API discovery: <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/discovery>
+- Remote agent discovery (MCP): <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp>
 - Agent quickstart: <https://vouchspec-sandbox.plyrium.com/vouchspec>
 - Signed index over managed TLS: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json>
 - Root-signed lifecycle feed: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json>
@@ -195,6 +196,18 @@ Do not expose that built-in listener directly. Mainnet activation uses x402, sep
 and secrets, and the live gates in [the deployment boundary](deploy/README.md).
 
 ## Read-only catalog MCP
+
+Remote agents can discover the managed contract through the stateless Streamable HTTP endpoint
+at `https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp`. It exposes only
+`get_vouchspec_discovery`: an anonymous, read-only tool that returns public route, price, x402,
+receipt, cache, and invalidation instructions. It cannot submit artifacts, fetch repositories,
+settle payments, or read private data. Paid validation remains on the managed x402 REST route.
+
+The checked-in `server.json` describes this remote endpoint for the official MCP Registry under
+`io.github.mordiaky/vouchspec`. Publication uses GitHub OIDC from a main-only manual workflow, so
+it needs no portal login, phone code, or dedicated Registry secret.
+
+For agents that prefer a locally pinned catalog, the stdio server remains available:
 
 Public install:
 

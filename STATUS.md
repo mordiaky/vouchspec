@@ -28,6 +28,12 @@
   catalog now list the canonical validation endpoint with the exact 1.00-test-USDC Base-Sepolia
   requirement and agent-only metadata. The listing was indexed at the successful excluded
   settlement timestamp; no separate registration or human action was required.
+- **Remote MCP discovery:** Plyrium PR `#38` is merged at
+  `ba91715c8ea028ebedca56a85c614c73464bc083`; the canonical sandbox alias now serves a stateless
+  Streamable HTTP endpoint at `/api/vouchspec/v1/mcp`. The official MCP client negotiated version
+  `0.2.0`, listed only `get_vouchspec_discovery`, and returned the exact testnet-only public
+  contract. Hosted method/origin probes returned 405/403 as designed. The validated Registry
+  manifest and main-only GitHub OIDC workflow are prepared; official listing is still pending.
 - **Hosted fulfillment proof:** owner-controlled order `ord_01b1e85f188649a6b68e2dd2` settled
   on Base Sepolia in transaction
   `0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11`, traversed the leased
@@ -49,7 +55,7 @@
   run `29359911240` then completed successfully. Failure email alerts remain enabled for genuine
   operational failures.
 - **Publisher route:** the public GitHub Action and owned demo prove integration mechanics.
-  The owned demo does not count as external adoption.
+  The owned demo and the controlled remote MCP smoke do not count as external adoption.
 - **External adoption:** 0 / 3 retained unrelated integrations. Supabase issue `136` and K-Dense
   issue `211` remain proposals only. `michtio/craftcms-claude-skills#10` was declined and is useful
   ICP feedback, not adoption.
@@ -66,19 +72,21 @@
   probe and will not be retried. Mainnet remains disabled while other autonomous work continues.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
-- **Verification:** the connected Plyrium repository passes typecheck, 178 tests, private-address,
+- **Verification:** the connected Plyrium repository passes typecheck, 179 tests, private-address,
   public-route, transaction, and migration audits, a production build, and a zero-vulnerability
-  production dependency audit. The public VouchSpec repository passes 140 tests with one explicit
-  Windows symlink-privilege skip. VouchSpec launch PR `mordiaky/plyrium#31`, CI memory repair PR
-  `#32`, Agentic Wallet compatibility PRs `#33` and `#34`, and remedy PR `#37` are merged;
+  production dependency audit. The public VouchSpec repository's 142-test suite passes 141 with
+  one explicit Windows symlink-privilege skip. VouchSpec launch PR `mordiaky/plyrium#31`, CI memory repair PR
+  `#32`, Agentic Wallet compatibility PRs `#33` and `#34`, remedy PR `#37`, and remote MCP PR
+  `#38` are merged;
   post-merge main CI run `29382823021` passed. Public remedy/fetcher PR `#9` is merged and main CI
   run `29382833205` passed. API-only provisioning PRs `#10`-`#12` are merged at
   `82463543668b0abd92712004110a294aae8b0bf6`; main CI run `29385199415` passed both Python and
   Node suites with zero production dependency vulnerabilities. The latest hosted paid-flow
   workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
 
-Next: continue isolated production state, signing, monitoring, and deployment work without funding
-or enabling mainnet. Prioritize unrelated agent integrations and genuine machine buyers through the
-indexed Bazaar endpoint, counting only independently attributable external activity. Revisit the
-CDP identity only if an account-and-policy-capable credential becomes available through a
-documented non-interactive API path.
+Next: publish and verify `io.github.mordiaky/vouchspec` through the prepared GitHub OIDC workflow,
+then use the remote MCP and indexed Bazaar endpoints to reach unrelated agent integrations and
+genuine machine buyers. Continue isolated production state, signing, monitoring, and deployment
+work without funding or enabling mainnet. Count only independently attributable external activity;
+revisit the CDP identity only if an account-and-policy-capable credential becomes available through
+a documented non-interactive API path.

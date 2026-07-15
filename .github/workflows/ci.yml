@@ -24,6 +24,27 @@ jobs:
             distribution/remedy-executor/package-lock.json
             distribution/remedy-provisioner/package-lock.json
       - run: python -m pip install -e ".[dev]"
+      - name: Validate the MCP Registry manifest against the pinned official schema
+        env:
+          MCP_SCHEMA_SHA256: 3fba09590c99f61735d234822279f4223fab9e300c0a81e81c91ab62a4114de0
+        run: |
+          set -euo pipefail
+          curl --fail --location --proto '=https' --tlsv1.2 \
+            --retry 3 --retry-delay 2 --retry-all-errors --connect-timeout 10 --max-time 60 \
+            https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json \
+            --output /tmp/mcp-server.schema.json
+          echo "${MCP_SCHEMA_SHA256}  /tmp/mcp-server.schema.json" | sha256sum --check --strict
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from jsonschema.validators import validator_for
+
+          schema = json.loads(Path("/tmp/mcp-server.schema.json").read_text(encoding="utf-8"))
+          manifest = json.loads(Path("server.json").read_text(encoding="utf-8"))
+          validator = validator_for(schema)
+          validator.check_schema(schema)
+          validator(schema).validate(manifest)
+          PY
       - run: pytest
       - run: npm ci --ignore-scripts --prefix distribution/remedy-executor
       - run: npm test --prefix distribution/remedy-executor

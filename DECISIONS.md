@@ -199,3 +199,20 @@
 - **Boundary:** The public listing proves self-service discoverability and transport compatibility.
   Only unrelated, independently attributable agents and commercial funds may prove adoption or
   revenue. Testnet USDC is never revenue.
+
+## 2026-07-14 - Add remote MCP discovery through GitHub OIDC
+
+- **Decision:** Supersede the package-only Registry deferral. Publish a remote-only
+  `io.github.mordiaky/vouchspec` manifest after the canonical endpoint passes a hosted MCP client
+  smoke test. Keep the existing locally pinned stdio catalog available.
+- **Evidence:** The official 2025-12-11 Registry schema supports public Streamable HTTP remotes
+  without an npm or PyPI package. The official publisher supports GitHub OIDC from Actions with no
+  dedicated Registry secret or interactive account login. The manifest validates against the
+  exact schema, and publisher v1.8.0 plus both download checksums are pinned.
+- **Security shape:** The hosted server is stateless JSON with one anonymous read-only discovery
+  tool, canonical-origin controls, strict bounded JSON, exact protocol negotiation, and durable
+  global/peer limits. It cannot submit artifacts, fetch repositories, settle payments, spend
+  funds, open sessions, or access private data; paid validation remains on the x402 REST route.
+- **Boundary:** Registry publication is distribution infrastructure, not an external integration,
+  legitimate request, buyer, revenue, repeat use, margin, or autonomy evidence. Mainnet remains
+  disabled, and Coinbase portal/SMS access remains prohibited.

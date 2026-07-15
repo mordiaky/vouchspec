@@ -42,6 +42,7 @@ def test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expres
 
 def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() -> None:
     discovery = json.loads((ROOT / "distribution" / "discovery.json").read_text(encoding="utf-8"))
+    assert discovery["schema_version"] == "1.2.0"
     assert discovery["service"] == "VouchSpec"
     assert discovery["stage"] == "B_PUBLIC_X402_SANDBOX"
     assert discovery["internal_codename_replaced"] is True
@@ -56,6 +57,18 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
         "get_receipt_status",
         "get_verification_material",
         "get_price_quote",
+    }
+    remote_mcp = discovery["mcp"]["remote"]
+    assert remote_mcp == {
+        "transport": "streamable-http",
+        "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp",
+        "protocol_version": "2025-11-25",
+        "response_mode": "stateless_json",
+        "anonymous_read_only": True,
+        "paid_execution_available": False,
+        "tools": ["get_vouchspec_discovery"],
+        "registry_name": "io.github.mordiaky/vouchspec",
+        "registry_manifest": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/server.json",
     }
     assert discovery["api"]["base_url"] == "https://vouchspec-sandbox.plyrium.com"
     assert discovery["api"]["agent_only"] is True
@@ -86,6 +99,40 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
     assert discovery["receipts"]["invalidation_status_is_separate"] is True
     assert discovery["pricing"]["sandbox_fresh_validation_test_usdc"] == "1.00"
     assert discovery["pricing"]["commercial_fresh_validation_hypothesis_usd"] == "0.25"
+
+
+def test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready() -> None:
+    manifest = json.loads((ROOT / "server.json").read_text(encoding="utf-8"))
+    workflow = (ROOT / ".github" / "workflows" / "publish-mcp.yml").read_text(
+        encoding="utf-8"
+    )
+
+    assert manifest["$schema"] == (
+        "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json"
+    )
+    assert manifest["name"] == "io.github.mordiaky/vouchspec"
+    assert manifest["version"] == "0.2.0"
+    assert manifest["repository"] == {
+        "url": "https://github.com/mordiaky/vouchspec",
+        "source": "github",
+        "id": "1300069049",
+    }
+    assert manifest["remotes"] == [
+        {
+            "type": "streamable-http",
+            "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp",
+        }
+    ]
+    assert "workflow_dispatch:" in workflow
+    assert "github.ref == 'refs/heads/main'" in workflow
+    assert "pull_request" not in workflow
+    assert "id-token: write" in workflow
+    assert "mcp-publisher login github-oidc" in workflow
+    assert "releases/download/${MCP_PUBLISHER_VERSION}" in workflow
+    assert "MCP_PUBLISHER_VERSION: v1.8.0" in workflow
+    assert "1370446bbe74d562608e8005a6ccce02d146a661fbd78674e11cc70b9618d6cf" in workflow
+    assert "releases/latest" not in workflow
+    assert "secrets." not in workflow
 
 
 def test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped() -> None:
