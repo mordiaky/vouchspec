@@ -3,7 +3,7 @@
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
   "goal_status": "paused",
-  "stage": "commercial_mainnet_receiver_configured_fail_closed_remedy_wallet_blocked",
+  "stage": "commercial_mainnet_live_agent_only",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
     "excluded": ["arbitrary uploads", "private repositories", "confidential content", "artifact execution"]
@@ -14,8 +14,8 @@
     "structural_passes": 19,
     "structural_failures": 6,
     "hidden_skips": 0,
-    "http": "live_exact_signed_bytes_raw_github_tls_and_sandbox_issuer",
-    "mcp": "live_public_installable_stdio_read_only",
+    "http": "live_mainnet_x402_and_exact_signed_receipts",
+    "mcp": "live_streamable_http_read_only_discovery",
     "signature": "DSSE_v1.0.2_Ed25519_exact_bytes",
     "lifecycle": "machine_readable_root_signed",
     "monitor": "active_daily_external_check"
@@ -42,29 +42,46 @@
   },
   "commerce": {
     "product": "fresh_public_static_validation",
-    "price_currency": "USD",
+    "price_currency": "USDC",
     "price_amount": "0.25",
-    "price_status": "unvalidated_mainnet_launch_experiment",
+    "price_status": "active_mainnet_launch_experiment",
     "price_research": "research/agent-only-pricing-analysis-2026-07-14.md",
     "request_contract": "public_strict_one_call_agent_only_x402_bazaar_intake",
     "quote_orderable": true,
     "settlement_available": true,
-    "sandbox_fulfillment": "complete_signed_delivery_excluded_from_metrics",
     "primary_provider": "x402_cdp_facilitator",
     "secondary_provider": "none_agent_only",
-    "bazaar_catalog_status": "publicly_indexed_by_excluded_cdp_settlement",
+    "bazaar_catalog_status": "mainnet_pending_first_external_settlement_sandbox_entry_excluded",
     "stripe_status": "regression_only_not_a_purchase_path",
-    "live_facilitator_status": "authenticated_x402_supported_probe_passed_24_kinds_3_extensions",
-    "live_database_status": "scoped_opaque_key_27_live_only_rpcs_direct_and_sandbox_access_denied",
+    "live_facilitator_status": "active_x402_v2_base_mainnet",
+    "live_database_status": "scoped_opaque_key_live_only_rpcs_verified_generic_rpc_denied",
     "live_signing_status": "distinct_ed25519_identity_in_protected_environment",
-    "live_fulfillment_status": "merged_scheduled_fail_closed_disabled_pending_activation",
+    "live_fulfillment_status": "active_scheduled_and_manual_no_job_probe_passed",
+    "live_remedy_status": "disabled_unfunded_not_a_launch_blocker",
     "commercial_hostname": "https://vouchspec.plyrium.com",
-    "commercial_hostname_status": "machine_only_root_and_non_api_paths_redirect_to_discovery_live_discovery_503_fail_closed",
-    "live_receiving_address_status": "owner_agentic_wallet_base_address_validated_and_stored_in_vercel_production",
-    "live_orderable": false,
-    "live_settlement_available": false,
-    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/payment/cost store", "managed TLS public sandbox", "strict tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "anonymous-before-payment one-call x402 intake", "official x402 Bazaar metadata extension", "authenticated CDP facilitator verify and settle boundary", "deterministic payment-derived tenant and delivery bootstrap", "payment replay and settlement recovery binding", "branch-scoped encrypted CDP server credential without wallet custody", "offline-root paid receipt lifecycle with monotonic invalidation", "public immutable cacheable receipt and separate no-store invalidation status", "excluded Agentic Wallet CDP settlement with isolated fulfillment and public Bazaar indexing", "merged fail-closed mode-separated mainnet configuration and environment-derived 0.25-USDC ledger migration", "merged kernel-quota fetcher with bounded non-root read-only scratch and offline finalization", "merged durable settlement reconciliation and one-remedy-per-payment state machine", "independent Base RPC verification of exact USDC transfer before remedy confirmation", "disabled protected-environment CDP remedy executor with 23-hour idempotency stop window", "manual main-only hash-locked API-only CDP provisioner with exact policy validation and no funding or transaction commands", "applied production environment pricing and remedy migrations without changing existing row counts", "installed opaque vouchspec_live_api role with 27 live-only RPC wrappers and no direct table access", "externally probed scoped key: live RPC 200, Plyrium client table 403, sandbox RPC 403", "provisioned distinct live auth delivery worker remedy and Ed25519 signing secrets", "validated protected Coinbase x402 credential against 24 supported kinds and 3 extensions", "merged fail-closed protected mainnet fulfillment workflow", "attached and verified vouchspec.plyrium.com on the production project", "deployed live VouchSpec hostname isolation so every non-API path redirects to the machine discovery contract", "validated the owner Agentic Wallet Base receiving address and stored it as the encrypted production payTo without redeploying or enabling commerce"],
-    "remaining_gates": ["Wallet-API-capable CDP credential and Wallet Secret for one distinct policy-bound remedy identity", "bounded remedy float and Base gas funding after explicit owner-approved money movement", "activated production smoke gates after remedy wallet and funding readiness", "refresh the sandbox custom-domain preview so its root redirects instead of showing the staging password gate; the sandbox API remains healthy"]
+    "commercial_hostname_status": "live_health_200_discovery_200_unpaid_requests_402",
+    "live_receiving_address_status": "validated_and_stored_in_vercel_production",
+    "live_orderable": true,
+    "live_settlement_available": true,
+    "completed_gates": [
+      "immutable public GitHub intake",
+      "isolated no-egress no-host-write worker",
+      "constrained Ed25519 signing gate",
+      "idempotent environment-bound order payment cost and delivery state",
+      "anonymous-before-payment one-call x402 intake",
+      "authenticated CDP mainnet facilitator",
+      "tenant-isolated live-only opaque database role",
+      "public immutable cacheable receipt with separate no-store invalidation status",
+      "distinct policy-bound remedy identity provisioned but unfunded",
+      "production mainnet receiver configured",
+      "production migration 20260715121500 applied and verified",
+      "live health discovery and exact 0.25-USDC Base 402 probes passed",
+      "scheduled fulfillment enabled and no-job worker probe passed"
+    ],
+    "remaining_gates": [
+      "first unrelated external settlement for Coinbase Bazaar mainnet indexing",
+      "optional remedy float funding only if separately approved later"
+    ]
   },
   "commercial_metrics": {
     "required_buyers": 3,
@@ -75,7 +92,7 @@
     "repeat_buyers": 0,
     "owner_funded_spend_usd": 0.0,
     "owner_lifetime_limit_usd": 100.0,
-    "contribution_margin_status": "pending_no_paid_orders"
+    "contribution_margin_status": "pending_no_external_paid_orders"
   },
   "autonomy": {
     "required_days_after_first_settlement": 14,
@@ -89,18 +106,14 @@
     "all_pass": false,
     "engineering_tests_passed": 141,
     "engineering_tests_skipped": 1,
-    "connected_repository_tests_passed": 185,
     "connected_repository_production_build": "passed",
     "connected_repository_production_dependency_vulnerabilities": 0,
-    "sandbox_deployment_commit": "d30577721f800a93748a2a4c55fd26972662e675",
-    "sandbox_bazaar_402_probe": "passed",
-    "connected_repository_main_ci_run": "https://github.com/mordiaky/plyrium/actions/runs/29418546016",
-    "connected_repository_main_ci_status": "passed",
-    "connected_repository_production_commit": "d54196fe33e3bdde075f5c44c6ed68edbab0c957",
-    "connected_repository_production_deployment": "dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr",
-    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29427544292",
-    "public_ci_commit": "cd189ab48ec12bf5ad9533c8322ddf3bed779d86",
-    "public_ci_status": "passed",
+    "connected_repository_production_commit": "3bfcfb55",
+    "connected_repository_production_deployment": "dpl_5M1DiVCyj7efCgqiBHDsG6QhbfLy",
+    "public_health_probe": "passed_200",
+    "public_x402_probe": "passed_402_exact_250000_base_usdc",
+    "fulfillment_probe": "https://github.com/mordiaky/vouchspec/actions/runs/29439885033",
+    "fulfillment_probe_status": "passed_no_job",
     "evidence_file": "GOAL_EVIDENCE.md",
     "independent_final_audit": "pending"
   },
@@ -108,19 +121,15 @@
     "No unrelated external repository has retained a VouchSpec integration",
     "No legitimate external machine use is recorded",
     "No genuine purchase or settled revenue exists",
-    "The receiving address is configured, but the current x402 credential cannot create the distinct policy-bound remedy account and Coinbase requires a Server Wallet API key plus Wallet Secret for that operation",
-    "Mainnet remains fail-closed until the policy-bound remedy identity exists, bounded funding is explicitly approved, and the production activation smoke passes"
+    "Coinbase Bazaar mainnet indexing begins only after the first successful external settlement"
   ],
-  "human_actions_requested": [
-    "Create one Server Wallet API key and Wallet Secret in the CDP Portal, store them locally as CDP_REMEDY_API_KEY_ID, CDP_REMEDY_API_KEY_SECRET, and CDP_REMEDY_WALLET_SECRET, then say done; do not replace the working x402 key or paste any value into chat"
-  ],
+  "human_actions_requested": [],
   "top_next_actions": [
-    "Use the publicly indexed Coinbase Bazaar endpoint to acquire independently attributable agent requests without controlled traffic",
-    "Convert one of the two still-open publisher proposals into a retained external integration or qualify the next repository-specific prospect after the daily cap resets",
-    "After the owner supplies one Wallet-API-capable Server Wallet credential, provision the unfunded policy-bound remedy account through the official CLI without browser access",
-    "Request explicit approval for the smallest bounded remedy float and Base gas movement only after the remedy identity is verified",
-    "Complete production deployment smoke, activate commerce and the protected workers, then begin unrelated-agent acquisition"
+    "Publish MCP Registry version 0.3.0 pointing to the live remote endpoint",
+    "Acquire the first independently attributable agent buyer through public agent discovery channels",
+    "Monitor settlement fulfillment delivery and receipt status without counting owner or controlled traffic",
+    "Apply the predeclared pricing cohort rules only after qualified mainnet evidence"
   ],
-  "last_checkpoint_time": "2026-07-15T16:06:42Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, HUMAN_ACTIONS.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, research/agent-only-pricing-analysis-2026-07-14.md, docs/stage-b-security-review.md, logs/2026-07-14-cdp-mainnet-provisioning.md, logs/2026-07-15-commercial-launch.md, logs/2026-07-15-domain-wallet-key-followup.md, and logs/2026-07-15-mainnet-payto-configured.md. Preserve all exclusion rules and the no-upload/no-execution boundary. The authoritative Stage A exact-byte public surfaces are the raw GitHub discovery document, signed index, root-signed lifecycle feed, and raw GitHub root/issuer JWK files; each matched local SHA-256 bytes on 2026-07-15. The retired vouchspec.mordiaky.com host does not resolve and is not authoritative evidence. The owner Agentic Wallet Base receiving address is valid, distinct from sandbox, and stored encrypted in Vercel production as VOUCHSPEC_X402_MAINNET_PAY_TO. Commerce remains disabled and public discovery remains an intentional 503, so no payment can settle. All other application gates pass. The remaining wallet blocker is only a distinct policy-bound remedy identity: the existing x402 key cannot use the Server Wallet API, and official Coinbase documentation requires a Server Wallet API key plus separately generated Wallet Secret. Do not retry the same key, replace the working x402 key, open the portal, or request SMS codes. Wait for CDP_REMEDY_API_KEY_ID, CDP_REMEDY_API_KEY_SECRET, and CDP_REMEDY_WALLET_SECRET, then provision one unfunded remedy account with the official CLI. No funds move without separate explicit approval. Never count owner, controlled-wallet, testnet, CI, demo, or monitoring activity. Stripe remains regression-only."
+  "last_checkpoint_time": "2026-07-15T18:18:00Z",
+  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health and discovery return 200; unpaid empty and schema-valid validation requests return x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next publish MCP Registry 0.3.0, acquire unrelated external agents, and monitor genuine settlements and delivery."
 }

@@ -17,11 +17,11 @@ labeled `STRUCTURE_VALIDATED`.
 
 - Repository and install source: <https://github.com/mordiaky/vouchspec>
 - Machine-readable discovery: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/distribution/discovery.json>
-- Managed agent API: <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/health>
-- Managed API discovery: <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/discovery>
-- Remote agent discovery (MCP): <https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp>
+- Managed agent API: <https://vouchspec.plyrium.com/api/vouchspec/v1/health>
+- Managed API discovery: <https://vouchspec.plyrium.com/api/vouchspec/v1/discovery>
+- Remote agent discovery (MCP): <https://vouchspec.plyrium.com/api/vouchspec/v1/mcp>
 - Official MCP Registry API: <https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.mordiaky%2Fvouchspec>
-- Agent quickstart: <https://vouchspec-sandbox.plyrium.com/vouchspec>
+- Agent quickstart: <https://vouchspec.plyrium.com/vouchspec>
 - Signed index over managed TLS: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json>
 - Root-signed lifecycle feed: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json>
 - Out-of-band root/issuer key publication: <https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1>
@@ -38,11 +38,11 @@ new trusted channel.
 - **Stage A — public artifact index (live):** selected public artifacts only; signed
   receipts and read-only REST/MCP retrieval; no uploads, private repositories, or
   customer-confidential content.
-- **Stage B — public repository validation (public testnet sandbox):** allowlisted public
+- **Stage B — public repository validation (live mainnet plus public testnet sandbox):** allowlisted public
   host, full commit, explicit subdirectory, bounded immutable retrieval, isolated no-egress
   worker, separate no-egress signing, durable tenant/order/payment state, an authenticated
-  managed API, and exact x402 settlement using test USDC on Base Sepolia. Testnet orders are
-  self-service and fully fulfilled; mainnet settlement remains disabled.
+  managed API, and exact x402 settlement. Commercial orders are live at 0.25 USDC on Base;
+  the separate 1.00 test-USDC Base Sepolia sandbox remains available for integration testing.
 - **Stage C — private/arbitrary inputs (deferred):** private storage, authentication,
   tenant isolation, deletion policy, and expanded legal/incident controls only after
   demand and revenue justify them.
@@ -140,6 +140,17 @@ is deliberately faucet-sized at **1.00 test USDC**. Full agent-market research r
 earlier $49 idea; the commercial mainnet launch cohort is an unvalidated **0.25 USDC** per fresh
 validation, with the predeclared evidence gates in `PRICING.md`.
 
+## Agent-only x402 mainnet
+
+The commercial service at `https://vouchspec.plyrium.com` is machine-only and has no card form,
+hosted checkout, account portal, or human approval step. An agent sends the strict immutable
+public-GitHub request to `POST /api/vouchspec/v1/validate`, receives an x402 v2 challenge for
+exactly **0.25 USDC on Base**, signs it, and retries with `PAYMENT-SIGNATURE`. Successful
+settlement returns one-time delivery credentials; the scheduled isolated worker then produces
+the signed, content-addressed receipt. Discovery and health are public, and the Streamable HTTP
+MCP endpoint exposes read-only contract discovery. Remedy execution remains disabled and is not
+a prerequisite for accepting or fulfilling ordinary paid validations.
+
 ## Agent-only x402 sandbox
 
 The public service at `https://vouchspec-sandbox.plyrium.com` has no card form, hosted checkout,
@@ -198,8 +209,8 @@ and secrets, and the live gates in [the deployment boundary](deploy/README.md).
 
 ## Read-only catalog MCP
 
-Remote agents can discover the managed contract through the stateless Streamable HTTP endpoint
-at `https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp`. It exposes only
+Remote agents can discover the commercial managed contract through the stateless Streamable HTTP endpoint
+at `https://vouchspec.plyrium.com/api/vouchspec/v1/mcp`. It exposes only
 `get_vouchspec_discovery`: an anonymous, read-only tool that returns public route, price, x402,
 receipt, cache, and invalidation instructions. It cannot submit artifacts, fetch repositories,
 settle payments, or read private data. Paid validation remains on the managed x402 REST route.

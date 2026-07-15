@@ -667,8 +667,8 @@
       "source_file": "server.json",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "community": 100,
+      "id": "server",
+      "community": 59,
       "norm_label": "server.json"
     },
     {
@@ -677,8 +677,8 @@
       "source_file": "server.json",
       "source_location": "L2",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_schema",
-      "community": 100,
+      "id": "server_schema",
+      "community": 59,
       "norm_label": "$schema"
     },
     {
@@ -687,8 +687,8 @@
       "source_file": "server.json",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_name",
-      "community": 100,
+      "id": "server_name",
+      "community": 59,
       "norm_label": "name"
     },
     {
@@ -697,8 +697,8 @@
       "source_file": "server.json",
       "source_location": "L4",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_title",
-      "community": 100,
+      "id": "server_title",
+      "community": 59,
       "norm_label": "title"
     },
     {
@@ -707,8 +707,8 @@
       "source_file": "server.json",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_description",
-      "community": 100,
+      "id": "server_description",
+      "community": 59,
       "norm_label": "description"
     },
     {
@@ -717,8 +717,8 @@
       "source_file": "server.json",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_version",
-      "community": 100,
+      "id": "server_version",
+      "community": 59,
       "norm_label": "version"
     },
     {
@@ -727,8 +727,8 @@
       "source_file": "server.json",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_repository",
-      "community": 100,
+      "id": "server_repository",
+      "community": 59,
       "norm_label": "repository"
     },
     {
@@ -737,8 +737,8 @@
       "source_file": "server.json",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_repository_url",
-      "community": 100,
+      "id": "server_repository_url",
+      "community": 59,
       "norm_label": "url"
     },
     {
@@ -747,8 +747,8 @@
       "source_file": "server.json",
       "source_location": "L9",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_repository_source",
-      "community": 100,
+      "id": "server_repository_source",
+      "community": 59,
       "norm_label": "source"
     },
     {
@@ -757,8 +757,8 @@
       "source_file": "server.json",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_repository_id",
-      "community": 100,
+      "id": "server_repository_id",
+      "community": 59,
       "norm_label": "id"
     },
     {
@@ -767,8 +767,8 @@
       "source_file": "server.json",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_websiteurl",
-      "community": 100,
+      "id": "server_websiteurl",
+      "community": 59,
       "norm_label": "websiteurl"
     },
     {
@@ -777,8 +777,8 @@
       "source_file": "server.json",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_server_remotes",
-      "community": 100,
+      "id": "server_remotes",
+      "community": 59,
       "norm_label": "remotes"
     },
     {
@@ -918,7 +918,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "src_capabilityproof_api_py_threadinghttpserver",
-      "community": 17,
+      "community": 38,
       "norm_label": "threadinghttpserver"
     },
     {
@@ -2558,7 +2558,7 @@
       "source_location": "L145",
       "_origin": "ast",
       "id": "src_capabilityproof_commerce_api_py_basehttprequesthandler",
-      "community": 42,
+      "community": 2,
       "norm_label": "basehttprequesthandler"
     },
     {
@@ -3118,7 +3118,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "capabilityproof_errors_limitexceeded",
-      "community": 0,
+      "community": 6,
       "norm_label": "limitexceeded"
     },
     {
@@ -3868,7 +3868,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_mcp_server_py",
-      "community": 59,
+      "community": 54,
       "norm_label": "mcp_server.py"
     },
     {
@@ -3878,7 +3878,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_mcp_server_build_mcp_server",
-      "community": 59,
+      "community": 54,
       "norm_label": "build_mcp_server()"
     },
     {
@@ -3888,7 +3888,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_mcp_server_py_path",
-      "community": 59,
+      "community": 54,
       "norm_label": "path"
     },
     {
@@ -3898,7 +3898,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_mcp_server_py_scanlimits",
-      "community": 59,
+      "community": 54,
       "norm_label": "scanlimits"
     },
     {
@@ -3908,7 +3908,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_mcp_server_py_fastmcp",
-      "community": 59,
+      "community": 54,
       "norm_label": "fastmcp"
     },
     {
@@ -3918,7 +3918,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "capabilityproof_mcp_server_run_mcp_server",
-      "community": 59,
+      "community": 54,
       "norm_label": "run_mcp_server()"
     },
     {
@@ -3928,7 +3928,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_mcp_server_rationale_1",
-      "community": 59,
+      "community": 54,
       "norm_label": "official python sdk mcp stdio surface."
     },
     {
@@ -4298,7 +4298,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_provenance_provenanceevidence",
-      "community": 87,
+      "community": 54,
       "norm_label": "provenanceevidence"
     },
     {
@@ -4398,7 +4398,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "capabilityproof_receipt_deterministic_json",
-      "community": 63,
+      "community": 54,
       "norm_label": "deterministic_json()"
     },
     {
@@ -4538,7 +4538,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_path",
-      "community": 87,
+      "community": 54,
       "norm_label": "path"
     },
     {
@@ -4548,7 +4548,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_scanlimits",
-      "community": 87,
+      "community": 54,
       "norm_label": "scanlimits"
     },
     {
@@ -4558,7 +4558,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "provenanceevidence",
-      "community": 87,
+      "community": 54,
       "norm_label": "provenanceevidence"
     },
     {
@@ -4568,7 +4568,7 @@
       "source_location": "L314",
       "_origin": "ast",
       "id": "capabilityproof_receipt_inspect_git_skill",
-      "community": 41,
+      "community": 54,
       "norm_label": "inspect_git_skill()"
     },
     {
@@ -4598,7 +4598,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "capabilityproof_receipt_rationale_323",
-      "community": 41,
+      "community": 54,
       "norm_label": "inspect bytes and independently bind them to a clean local git commit."
     },
     {
@@ -7688,7 +7688,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_python",
-      "community": 148,
+      "community": 106,
       "norm_label": "python"
     },
     {
@@ -7698,7 +7698,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_type",
-      "community": 148,
+      "community": 106,
       "norm_label": "type"
     },
     {
@@ -7708,7 +7708,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_minlength",
-      "community": 148,
+      "community": 106,
       "norm_label": "minlength"
     },
     {
@@ -7718,7 +7718,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_maxlength",
-      "community": 148,
+      "community": 106,
       "norm_label": "maxlength"
     },
     {
@@ -7768,7 +7768,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_mcp",
-      "community": 106,
+      "community": 126,
       "norm_label": "mcp"
     },
     {
@@ -7778,7 +7778,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_mcp_type",
-      "community": 106,
+      "community": 126,
       "norm_label": "type"
     },
     {
@@ -7788,7 +7788,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_mcp_minlength",
-      "community": 106,
+      "community": 126,
       "norm_label": "minlength"
     },
     {
@@ -7798,7 +7798,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_mcp_maxlength",
-      "community": 106,
+      "community": 126,
       "norm_label": "maxlength"
     },
     {
@@ -7828,7 +7828,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_network_observation",
-      "community": 155,
+      "community": 4,
       "norm_label": "network_observation"
     },
     {
@@ -7838,7 +7838,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_network_observation_const",
-      "community": 155,
+      "community": 4,
       "norm_label": "const"
     },
     {
@@ -7848,7 +7848,7 @@
       "source_location": "L280",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_publisher_verification",
-      "community": 4,
+      "community": 153,
       "norm_label": "publisher_verification"
     },
     {
@@ -7858,7 +7858,7 @@
       "source_location": "L280",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_publisher_verification_const",
-      "community": 4,
+      "community": 153,
       "norm_label": "const"
     },
     {
@@ -11168,7 +11168,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_scanlimits",
-      "community": 87,
+      "community": 17,
       "norm_label": "scanlimits"
     },
     {
@@ -11178,7 +11178,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_scanlimits_post_init",
-      "community": 87,
+      "community": 17,
       "norm_label": ".__post_init__()"
     },
     {
@@ -11388,7 +11388,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "community": 63,
+      "community": 6,
       "norm_label": "stage_b.py"
     },
     {
@@ -11408,7 +11408,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_workerresult",
-      "community": 0,
+      "community": 6,
       "norm_label": "workerresult"
     },
     {
@@ -11418,7 +11418,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_utc_now",
-      "community": 63,
+      "community": 6,
       "norm_label": "_utc_now()"
     },
     {
@@ -11428,7 +11428,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_canonical",
-      "community": 63,
+      "community": 6,
       "norm_label": "_canonical()"
     },
     {
@@ -11438,7 +11438,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_py_any",
-      "community": 63,
+      "community": 6,
       "norm_label": "any"
     },
     {
@@ -11448,7 +11448,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_remove_tree",
-      "community": 63,
+      "community": 6,
       "norm_label": "_remove_tree()"
     },
     {
@@ -11458,7 +11458,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_py_path",
-      "community": 63,
+      "community": 6,
       "norm_label": "path"
     },
     {
@@ -11468,7 +11468,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_enforce_repository_disk_limit",
-      "community": 63,
+      "community": 6,
       "norm_label": "_enforce_repository_disk_limit()"
     },
     {
@@ -11478,7 +11478,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_request_digest",
-      "community": 63,
+      "community": 6,
       "norm_label": "request_digest()"
     },
     {
@@ -11488,7 +11488,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_safe_git_environment",
-      "community": 63,
+      "community": 6,
       "norm_label": "_safe_git_environment()"
     },
     {
@@ -11498,7 +11498,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_safe_docker_environment",
-      "community": 63,
+      "community": 6,
       "norm_label": "_safe_docker_environment()"
     },
     {
@@ -11508,7 +11508,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_read_bounded",
-      "community": 0,
+      "community": 6,
       "norm_label": "_read_bounded()"
     },
     {
@@ -11518,7 +11518,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "binaryio",
-      "community": 0,
+      "community": 6,
       "norm_label": "binaryio"
     },
     {
@@ -11528,7 +11528,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "event",
-      "community": 0,
+      "community": 6,
       "norm_label": "event"
     },
     {
@@ -11538,7 +11538,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "popen",
-      "community": 0,
+      "community": 6,
       "norm_label": "popen"
     },
     {
@@ -11548,7 +11548,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_run_bounded",
-      "community": 63,
+      "community": 6,
       "norm_label": "_run_bounded()"
     },
     {
@@ -11558,7 +11558,7 @@
       "source_location": "L227",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_git",
-      "community": 63,
+      "community": 6,
       "norm_label": "_git()"
     },
     {
@@ -11568,7 +11568,7 @@
       "source_location": "L249",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_validate_artifact_relative",
-      "community": 63,
+      "community": 6,
       "norm_label": "_validate_artifact_relative()"
     },
     {
@@ -11578,7 +11578,7 @@
       "source_location": "L249",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_py_scanlimits",
-      "community": 63,
+      "community": 6,
       "norm_label": "scanlimits"
     },
     {
@@ -11598,7 +11598,7 @@
       "source_location": "L327",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_extract_verified_archive",
-      "community": 63,
+      "community": 6,
       "norm_label": "_extract_verified_archive()"
     },
     {
@@ -11608,7 +11608,7 @@
       "source_location": "L377",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_extract_git_repository_archive",
-      "community": 63,
+      "community": 6,
       "norm_label": "_extract_git_repository_archive()"
     },
     {
@@ -11648,7 +11648,7 @@
       "source_location": "L464",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockerquotagitfetcher_fetch",
-      "community": 63,
+      "community": 6,
       "norm_label": ".fetch()"
     },
     {
@@ -11658,7 +11658,7 @@
       "source_location": "L491",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_manifest_digest",
-      "community": 63,
+      "community": 6,
       "norm_label": "_manifest_digest()"
     },
     {
@@ -11668,7 +11668,7 @@
       "source_location": "L497",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_freeze_public_source",
-      "community": 63,
+      "community": 6,
       "norm_label": "freeze_public_source()"
     },
     {
@@ -11688,7 +11688,7 @@
       "source_location": "L683",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockernoegressworker",
-      "community": 50,
+      "community": 67,
       "norm_label": "dockernoegressworker"
     },
     {
@@ -11698,7 +11698,7 @@
       "source_location": "L686",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockernoegressworker_init",
-      "community": 50,
+      "community": 67,
       "norm_label": ".__init__()"
     },
     {
@@ -11708,7 +11708,7 @@
       "source_location": "L692",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockernoegressworker_command",
-      "community": 63,
+      "community": 67,
       "norm_label": ".command()"
     },
     {
@@ -11718,7 +11718,7 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockernoegressworker_run",
-      "community": 63,
+      "community": 6,
       "norm_label": ".run()"
     },
     {
@@ -11728,7 +11728,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_1",
-      "community": 63,
+      "community": 6,
       "norm_label": "immutable public-git intake and isolated no-egress stage b worker orchestration."
     },
     {
@@ -11738,7 +11738,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_78",
-      "community": 63,
+      "community": 6,
       "norm_label": "remove a private work tree, including read-only git/docker files on windows."
     },
     {
@@ -11748,7 +11748,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_141",
-      "community": 63,
+      "community": 6,
       "norm_label": "give the docker client only connection/runtime state, never buyer or worker secr"
     },
     {
@@ -11758,7 +11758,7 @@
       "source_location": "L378",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_378",
-      "community": 63,
+      "community": 6,
       "norm_label": "extract only bounded regular git metadata emitted by the trusted fetcher image."
     },
     {
@@ -11778,7 +11778,7 @@
       "source_location": "L504",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_504",
-      "community": 63,
+      "community": 6,
       "norm_label": "fetch one immutable github subdirectory and freeze verified regular-file bytes."
     },
     {
@@ -11798,7 +11798,7 @@
       "source_location": "L684",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_684",
-      "community": 50,
+      "community": 67,
       "norm_label": "run the static inspector in a pinned, least-privilege docker container."
     },
     {
@@ -11958,7 +11958,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_src_capabilityproof_stage_b_worker_py",
-      "community": 63,
+      "community": 54,
       "norm_label": "stage_b_worker.py"
     },
     {
@@ -11968,7 +11968,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_worker_main",
-      "community": 63,
+      "community": 54,
       "norm_label": "main()"
     },
     {
@@ -11978,7 +11978,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_worker_rationale_1",
-      "community": 63,
+      "community": 54,
       "norm_label": "entrypoint logic executed only inside the stage b no-egress worker container."
     },
     {
@@ -12128,7 +12128,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stripe_http_src_capabilityproof_stripe_payments_py",
-      "community": 6,
+      "community": 2,
       "norm_label": "stripe_payments.py"
     },
     {
@@ -12138,7 +12138,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_canonical",
-      "community": 6,
+      "community": 2,
       "norm_label": "_canonical()"
     },
     {
@@ -12148,7 +12148,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "src_capabilityproof_stripe_payments_py_any",
-      "community": 6,
+      "community": 2,
       "norm_label": "any"
     },
     {
@@ -12158,7 +12158,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_utc_now",
-      "community": 6,
+      "community": 2,
       "norm_label": "_utc_now()"
     },
     {
@@ -12168,7 +12168,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_parse_time",
-      "community": 6,
+      "community": 2,
       "norm_label": "_parse_time()"
     },
     {
@@ -12178,7 +12178,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "src_capabilityproof_stripe_payments_py_datetime",
-      "community": 6,
+      "community": 2,
       "norm_label": "datetime"
     },
     {
@@ -12188,7 +12188,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_aware_datetime",
-      "community": 6,
+      "community": 2,
       "norm_label": "_aware_datetime()"
     },
     {
@@ -12198,7 +12198,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_epoch_time",
-      "community": 6,
+      "community": 2,
       "norm_label": "_epoch_time()"
     },
     {
@@ -12208,7 +12208,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_as_dict",
-      "community": 6,
+      "community": 2,
       "norm_label": "_as_dict()"
     },
     {
@@ -12218,7 +12218,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_reference_id",
-      "community": 6,
+      "community": 2,
       "norm_label": "_reference_id()"
     },
     {
@@ -12228,7 +12228,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "pattern",
-      "community": 6,
+      "community": 2,
       "norm_label": "pattern"
     },
     {
@@ -12238,7 +12238,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_bounded_int",
-      "community": 6,
+      "community": 2,
       "norm_label": "_bounded_int()"
     },
     {
@@ -12248,7 +12248,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_metadata",
-      "community": 6,
+      "community": 2,
       "norm_label": "_metadata()"
     },
     {
@@ -12258,7 +12258,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_configured_url",
-      "community": 6,
+      "community": 2,
       "norm_label": "_configured_url()"
     },
     {
@@ -12268,7 +12268,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter",
-      "community": 6,
+      "community": 2,
       "norm_label": "stripepaymentadapter"
     },
     {
@@ -12278,7 +12278,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_init",
-      "community": 6,
+      "community": 2,
       "norm_label": ".__init__()"
     },
     {
@@ -12288,7 +12288,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_stripe_payments_py_commercestore",
-      "community": 6,
+      "community": 2,
       "norm_label": "commercestore"
     },
     {
@@ -12298,7 +12298,7 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_connection",
-      "community": 6,
+      "community": 2,
       "norm_label": "._connection()"
     },
     {
@@ -12308,7 +12308,7 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "src_capabilityproof_stripe_payments_py_connection",
-      "community": 6,
+      "community": 2,
       "norm_label": "connection"
     },
     {
@@ -12318,7 +12318,7 @@
       "source_location": "L240",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_initialize_state",
-      "community": 6,
+      "community": 2,
       "norm_label": "._initialize_state()"
     },
     {
@@ -12328,7 +12328,7 @@
       "source_location": "L302",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_prepare_checkout",
-      "community": 6,
+      "community": 2,
       "norm_label": ".prepare_checkout()"
     },
     {
@@ -12338,7 +12338,7 @@
       "source_location": "L334",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_live_checkout_enabled",
-      "community": 6,
+      "community": 2,
       "norm_label": ".live_checkout_enabled()"
     },
     {
@@ -12348,7 +12348,7 @@
       "source_location": "L339",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_prepare_order_checkout",
-      "community": 6,
+      "community": 2,
       "norm_label": ".prepare_order_checkout()"
     },
     {
@@ -12358,7 +12358,7 @@
       "source_location": "L416",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_process_webhook",
-      "community": 6,
+      "community": 2,
       "norm_label": ".process_webhook()"
     },
     {
@@ -12368,7 +12368,7 @@
       "source_location": "L488",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_reconcile_order",
-      "community": 6,
+      "community": 2,
       "norm_label": ".reconcile_order()"
     },
     {
@@ -12378,7 +12378,7 @@
       "source_location": "L628",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_audit_events",
-      "community": 6,
+      "community": 2,
       "norm_label": ".audit_events()"
     },
     {
@@ -12388,7 +12388,7 @@
       "source_location": "L639",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_validate_checkout",
-      "community": 6,
+      "community": 2,
       "norm_label": "._validate_checkout()"
     },
     {
@@ -12398,7 +12398,7 @@
       "source_location": "L679",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_checkout_view",
-      "community": 6,
+      "community": 2,
       "norm_label": "._checkout_view()"
     },
     {
@@ -12408,7 +12408,7 @@
       "source_location": "L691",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_retrieve_checkout",
-      "community": 6,
+      "community": 2,
       "norm_label": "._retrieve_checkout()"
     },
     {
@@ -12418,7 +12418,7 @@
       "source_location": "L694",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_retrieve_payment",
-      "community": 6,
+      "community": 2,
       "norm_label": "._retrieve_payment()"
     },
     {
@@ -12428,7 +12428,7 @@
       "source_location": "L697",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_retrieve_charge",
-      "community": 6,
+      "community": 2,
       "norm_label": "._retrieve_charge()"
     },
     {
@@ -12438,7 +12438,7 @@
       "source_location": "L700",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_retrieve_balance",
-      "community": 6,
+      "community": 2,
       "norm_label": "._retrieve_balance()"
     },
     {
@@ -12448,7 +12448,7 @@
       "source_location": "L703",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_order_id_for_event",
-      "community": 6,
+      "community": 2,
       "norm_label": "._order_id_for_event()"
     },
     {
@@ -12458,7 +12458,7 @@
       "source_location": "L729",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_emit",
-      "community": 6,
+      "community": 2,
       "norm_label": "._emit()"
     },
     {
@@ -12468,7 +12468,7 @@
       "source_location": "L759",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_reserve_webhook",
-      "community": 6,
+      "community": 2,
       "norm_label": "._reserve_webhook()"
     },
     {
@@ -12478,7 +12478,7 @@
       "source_location": "L812",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_finish_webhook",
-      "community": 6,
+      "community": 2,
       "norm_label": "._finish_webhook()"
     },
     {
@@ -12488,7 +12488,7 @@
       "source_location": "L829",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_stripepaymentadapter_record_reconciliation",
-      "community": 6,
+      "community": 2,
       "norm_label": "._record_reconciliation()"
     },
     {
@@ -12498,7 +12498,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_1",
-      "community": 6,
+      "community": 2,
       "norm_label": "strict stripe checkout and settlement reconciliation for stage b commerce.  webh"
     },
     {
@@ -12508,7 +12508,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_138",
-      "community": 6,
+      "community": 2,
       "norm_label": "create checkout sessions and reconcile exact server-retrieved stripe state."
     },
     {
@@ -12518,7 +12518,7 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_311",
-      "community": 6,
+      "community": 2,
       "norm_label": "create an immutable quote/order and one idempotent hosted checkout session."
     },
     {
@@ -12528,7 +12528,7 @@
       "source_location": "L335",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_335",
-      "community": 6,
+      "community": 2,
       "norm_label": "return the explicit activation state without exposing any credential material."
     },
     {
@@ -12538,7 +12538,7 @@
       "source_location": "L345",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_345",
-      "community": 6,
+      "community": 2,
       "norm_label": "create or retrieve checkout for an already authenticated, tenant-bound order."
     },
     {
@@ -12548,7 +12548,7 @@
       "source_location": "L417",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_417",
-      "community": 6,
+      "community": 2,
       "norm_label": "authenticate one exact webhook body, deduplicate it, and reconcile retrieved sta"
     },
     {
@@ -12558,7 +12558,7 @@
       "source_location": "L495",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_495",
-      "community": 6,
+      "community": 2,
       "norm_label": "retrieve and cross-bind the complete stripe payment chain for one order."
     },
     {
@@ -12568,7 +12568,7 @@
       "source_location": "L629",
       "_origin": "ast",
       "id": "capabilityproof_stripe_payments_rationale_629",
-      "community": 6,
+      "community": 2,
       "norm_label": "return credential-free webhook audit state for operations and tests."
     },
     {
@@ -12618,7 +12618,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "community": 42,
+      "community": 38,
       "norm_label": "test_api.py"
     },
     {
@@ -12628,7 +12628,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_api_request",
-      "community": 42,
+      "community": 38,
       "norm_label": "_request()"
     },
     {
@@ -12638,7 +12638,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "httpconnection",
-      "community": 42,
+      "community": 38,
       "norm_label": "httpconnection"
     },
     {
@@ -12648,7 +12648,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_test_api_test_http_inspect_and_path_confinement",
-      "community": 42,
+      "community": 38,
       "norm_label": "test_http_inspect_and_path_confinement()"
     },
     {
@@ -12658,7 +12658,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "tests_test_api_test_health_is_non_sensitive",
-      "community": 42,
+      "community": 38,
       "norm_label": "test_health_is_non_sensitive()"
     },
     {
@@ -12668,7 +12668,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "tests_test_api_test_incomplete_request_does_not_block_other_loopback_clients",
-      "community": 42,
+      "community": 38,
       "norm_label": "test_incomplete_request_does_not_block_other_loopback_clients()"
     },
     {
@@ -12888,7 +12888,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "community": 2,
+      "community": 50,
       "norm_label": "test_commerce_access.py"
     },
     {
@@ -12898,7 +12898,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_commerce_access_stores",
-      "community": 2,
+      "community": 50,
       "norm_label": "_stores()"
     },
     {
@@ -12908,7 +12908,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_commerce_access_bound_order",
-      "community": 2,
+      "community": 50,
       "norm_label": "_bound_order()"
     },
     {
@@ -12918,7 +12918,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_api_keys_are_keyed_digests_and_support_rotation_and_revocation",
-      "community": 2,
+      "community": 50,
       "norm_label": "test_api_keys_are_keyed_digests_and_support_rotation_and_revocation()"
     },
     {
@@ -12928,7 +12928,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_access_secrets_are_bounded_distinct_and_environment_bound",
-      "community": 2,
+      "community": 50,
       "norm_label": "test_access_secrets_are_bounded_distinct_and_environment_bound()"
     },
     {
@@ -12938,7 +12938,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_tenant_quote_and_order_bindings_hide_cross_tenant_objects",
-      "community": 2,
+      "community": 50,
       "norm_label": "test_tenant_quote_and_order_bindings_hide_cross_tenant_objects()"
     },
     {
@@ -12948,7 +12948,7 @@
       "source_location": "L159",
       "_origin": "ast",
       "id": "tests_test_commerce_access_test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded",
-      "community": 2,
+      "community": 50,
       "norm_label": "test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded()"
     },
     {
@@ -13277,7 +13277,7 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
+      "id": "tests_test_distribution",
       "community": 77,
       "norm_label": "test_distribution.py"
     },
@@ -13292,20 +13292,20 @@
       "norm_label": "test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell()"
     },
     {
-      "label": "test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract()",
+      "label": "test_machine_discovery_exposes_agent_only_x402_mainnet_and_cache_contract()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
       "source_location": "L43",
       "_origin": "ast",
-      "id": "tests_test_distribution_test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract",
+      "id": "tests_test_distribution_test_machine_discovery_exposes_agent_only_x402_mainnet_and_cache_contract",
       "community": 77,
-      "norm_label": "test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract()"
+      "norm_label": "test_machine_discovery_exposes_agent_only_x402_mainnet_and_cache_contract()"
     },
     {
       "label": "test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L109",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
       "community": 77,
@@ -13315,7 +13315,7 @@
       "label": "test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L143",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped",
       "community": 77,
@@ -13325,7 +13325,7 @@
       "label": "test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L154",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked",
       "community": 77,
@@ -13335,7 +13335,7 @@
       "label": "test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands()",
       "file_type": "code",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L185",
+      "source_location": "L191",
       "_origin": "ast",
       "id": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands",
       "community": 77,
@@ -13738,7 +13738,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_test_mcp_py",
-      "community": 59,
+      "community": 54,
       "norm_label": "test_mcp.py"
     },
     {
@@ -13748,7 +13748,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_mcp_test_mcp_registers_expected_tools_and_calls_inspector",
-      "community": 59,
+      "community": 54,
       "norm_label": "test_mcp_registers_expected_tools_and_calls_inspector()"
     },
     {
@@ -13758,7 +13758,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_mcp_test_mcp_stdio_keeps_artifact_text_out_of_unstructured_content",
-      "community": 59,
+      "community": 54,
       "norm_label": "test_mcp_stdio_keeps_artifact_text_out_of_unstructured_content()"
     },
     {
@@ -13768,7 +13768,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stripe_lifecycle_tests_test_paid_lifecycle_py",
-      "community": 43,
+      "community": 42,
       "norm_label": "test_paid_lifecycle.py"
     },
     {
@@ -13778,7 +13778,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_receipt",
-      "community": 43,
+      "community": 42,
       "norm_label": "_receipt()"
     },
     {
@@ -13788,7 +13788,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_py_path",
-      "community": 43,
+      "community": 42,
       "norm_label": "path"
     },
     {
@@ -13798,7 +13798,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_py_ed25519privatekey",
-      "community": 43,
+      "community": 42,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -13808,7 +13808,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_deliver",
-      "community": 43,
+      "community": 42,
       "norm_label": "_deliver()"
     },
     {
@@ -13818,7 +13818,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_py_commercestore",
-      "community": 43,
+      "community": 42,
       "norm_label": "commercestore"
     },
     {
@@ -13828,7 +13828,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_keys",
-      "community": 43,
+      "community": 42,
       "norm_label": "_keys()"
     },
     {
@@ -13838,7 +13838,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_signed",
-      "community": 43,
+      "community": 42,
       "norm_label": "_signed()"
     },
     {
@@ -13848,7 +13848,7 @@
       "source_location": "L128",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_publish_and_evaluate_exact_paid_receipt_lifecycle",
-      "community": 43,
+      "community": 42,
       "norm_label": "test_publish_and_evaluate_exact_paid_receipt_lifecycle()"
     },
     {
@@ -13858,7 +13858,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_revocation_is_terminal_and_history_remains_exact",
-      "community": 43,
+      "community": 42,
       "norm_label": "test_revocation_is_terminal_and_history_remains_exact()"
     },
     {
@@ -13868,7 +13868,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_publication_rejects_equivocation_gaps_root_change_and_issuer_restoration",
-      "community": 43,
+      "community": 42,
       "norm_label": "test_publication_rejects_equivocation_gaps_root_change_and_issuer_restoration()"
     },
     {
@@ -13878,7 +13878,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_exact_coverage_and_real_successor_are_required",
-      "community": 43,
+      "community": 42,
       "norm_label": "test_exact_coverage_and_real_successor_are_required()"
     },
     {
@@ -13888,7 +13888,7 @@
       "source_location": "L326",
       "_origin": "ast",
       "id": "tests_test_paid_lifecycle_test_cli_keeps_root_signing_offline_and_publishes_exact_envelope",
-      "community": 43,
+      "community": 42,
       "norm_label": "test_cli_keeps_root_signing_offline_and_publishes_exact_envelope()"
     },
     {
@@ -13898,7 +13898,7 @@
       "source_location": "L326",
       "_origin": "ast",
       "id": "capturefixture",
-      "community": 43,
+      "community": 42,
       "norm_label": "capturefixture"
     },
     {
@@ -13908,7 +13908,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_test_provenance_py",
-      "community": 41,
+      "community": 54,
       "norm_label": "test_provenance.py"
     },
     {
@@ -13918,7 +13918,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_git",
-      "community": 41,
+      "community": 54,
       "norm_label": "_git()"
     },
     {
@@ -13928,7 +13928,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_py_path",
-      "community": 41,
+      "community": 54,
       "norm_label": "path"
     },
     {
@@ -13938,7 +13938,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_provenance_repository",
-      "community": 41,
+      "community": 54,
       "norm_label": "_repository()"
     },
     {
@@ -13948,7 +13948,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_provenance_test_clean_git_skill_reaches_level_three_with_exact_commit",
-      "community": 41,
+      "community": 54,
       "norm_label": "test_clean_git_skill_reaches_level_three_with_exact_commit()"
     },
     {
@@ -13958,7 +13958,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_provenance_test_untracked_or_changed_skill_is_not_given_provenance",
-      "community": 41,
+      "community": 54,
       "norm_label": "test_untracked_or_changed_skill_is_not_given_provenance()"
     },
     {
@@ -13968,7 +13968,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_provenance_test_modified_tracked_bytes_are_not_given_provenance",
-      "community": 41,
+      "community": 54,
       "norm_label": "test_modified_tracked_bytes_are_not_given_provenance()"
     },
     {
@@ -13978,7 +13978,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_credentials_are_not_written_to_receipt",
-      "community": 41,
+      "community": 54,
       "norm_label": "test_remote_credentials_are_not_written_to_receipt()"
     },
     {
@@ -13988,7 +13988,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_query_credentials_are_not_written_to_receipt",
-      "community": 41,
+      "community": 54,
       "norm_label": "test_remote_query_credentials_are_not_written_to_receipt()"
     },
     {
@@ -14597,8 +14597,8 @@
       "source_file": "BACKLOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_mcp_registry_backlog_md",
-      "community": 126,
+      "id": "backlog",
+      "community": 100,
       "norm_label": "backlog.md"
     },
     {
@@ -14607,49 +14607,39 @@
       "source_file": "BACKLOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "community": 126,
+      "id": "backlog_prioritized_backlog",
+      "community": 100,
       "norm_label": "prioritized backlog"
     },
     {
-      "label": "Completed foundations",
+      "label": "Live and complete",
       "file_type": "document",
       "source_file": "BACKLOG.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_backlog_completed_foundations",
-      "community": 126,
-      "norm_label": "completed foundations"
+      "id": "backlog_live_and_complete",
+      "community": 100,
+      "norm_label": "live and complete"
     },
     {
-      "label": "Now \u2014 external adoption and safe orderability",
+      "label": "Now \u2014 acquire genuine agent revenue",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L42",
+      "source_location": "L16",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_backlog_now_external_adoption_and_safe_orderability",
-      "community": 126,
-      "norm_label": "now \u2014 external adoption and safe orderability"
+      "id": "backlog_now_acquire_genuine_agent_revenue",
+      "community": 100,
+      "norm_label": "now \u2014 acquire genuine agent revenue"
     },
     {
-      "label": "Evidence-driven operation",
+      "label": "Optional, not a launch blocker",
       "file_type": "document",
       "source_file": "BACKLOG.md",
-      "source_location": "L64",
+      "source_location": "L28",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_backlog_evidence_driven_operation",
-      "community": 126,
-      "norm_label": "evidence-driven operation"
-    },
-    {
-      "label": "Deferred Stage C",
-      "file_type": "document",
-      "source_file": "BACKLOG.md",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_backlog_deferred_stage_c",
-      "community": 126,
-      "norm_label": "deferred stage c"
+      "id": "backlog_optional_not_a_launch_blocker",
+      "community": 100,
+      "norm_label": "optional, not a launch blocker"
     },
     {
       "label": "BUSINESS_PLAN.md",
@@ -14777,7 +14767,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_changelog_md",
+      "id": "changelog",
       "community": 116,
       "norm_label": "changelog.md"
     },
@@ -14787,7 +14777,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_changelog_changelog",
+      "id": "changelog_changelog",
       "community": 116,
       "norm_label": "changelog"
     },
@@ -14797,7 +14787,7 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "capabilityproof_changelog_unreleased",
+      "id": "changelog_unreleased",
       "community": 116,
       "norm_label": "unreleased"
     },
@@ -14805,9 +14795,9 @@
       "label": "0.2.0 - 2026-07-13",
       "file_type": "document",
       "source_file": "CHANGELOG.md",
-      "source_location": "L47",
+      "source_location": "L49",
       "_origin": "ast",
-      "id": "capabilityproof_changelog_0_2_0_2026_07_13",
+      "id": "changelog_0_2_0_2026_07_13",
       "community": 116,
       "norm_label": "0.2.0 - 2026-07-13"
     },
@@ -15297,8 +15287,8 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_human_actions_md",
-      "community": 152,
+      "id": "human_actions",
+      "community": 148,
       "norm_label": "human_actions.md"
     },
     {
@@ -15307,8 +15297,8 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_payto_state_human_actions_human_actions",
-      "community": 152,
+      "id": "human_actions_human_actions",
+      "community": 148,
       "norm_label": "human actions"
     },
     {
@@ -15317,8 +15307,8 @@
       "source_file": "NEXT_ACTION.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_next_action_md",
-      "community": 153,
+      "id": "next_action",
+      "community": 152,
       "norm_label": "next_action.md"
     },
     {
@@ -15327,8 +15317,8 @@
       "source_file": "NEXT_ACTION.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_payto_state_next_action_next_action",
-      "community": 153,
+      "id": "next_action_next_action",
+      "community": 152,
       "norm_label": "next action"
     },
     {
@@ -15417,8 +15407,8 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_mcp_registry_readme_md",
-      "community": 93,
+      "id": "readme",
+      "community": 41,
       "norm_label": "readme.md"
     },
     {
@@ -15427,8 +15417,8 @@
       "source_file": "README.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_vouchspec",
-      "community": 93,
+      "id": "readme_vouchspec",
+      "community": 41,
       "norm_label": "vouchspec"
     },
     {
@@ -15437,8 +15427,8 @@
       "source_file": "README.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_public_stage_a_distribution",
-      "community": 93,
+      "id": "readme_public_stage_a_distribution",
+      "community": 41,
       "norm_label": "public stage a distribution"
     },
     {
@@ -15447,8 +15437,8 @@
       "source_file": "README.md",
       "source_location": "L36",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_product_stages",
-      "community": 93,
+      "id": "readme_product_stages",
+      "community": 41,
       "norm_label": "product stages"
     },
     {
@@ -15457,8 +15447,8 @@
       "source_file": "README.md",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_publisher_ci_complete_self_service_example",
-      "community": 93,
+      "id": "readme_publisher_ci_complete_self_service_example",
+      "community": 41,
       "norm_label": "publisher ci \u2014 complete self-service example"
     },
     {
@@ -15467,8 +15457,8 @@
       "source_file": "README.md",
       "source_location": "L76",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_evidence_labels",
-      "community": 93,
+      "id": "readme_evidence_labels",
+      "community": 41,
       "norm_label": "evidence labels"
     },
     {
@@ -15477,8 +15467,8 @@
       "source_file": "README.md",
       "source_location": "L88",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_verify_a_public_receipt_independently",
-      "community": 93,
+      "id": "readme_verify_a_public_receipt_independently",
+      "community": 41,
       "norm_label": "verify a public receipt independently"
     },
     {
@@ -15487,48 +15477,58 @@
       "source_file": "README.md",
       "source_location": "L106",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_read_only_catalog_api",
-      "community": 93,
+      "id": "readme_read_only_catalog_api",
+      "community": 41,
       "norm_label": "read-only catalog api"
+    },
+    {
+      "label": "Agent-only x402 mainnet",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L143",
+      "_origin": "ast",
+      "id": "readme_agent_only_x402_mainnet",
+      "community": 41,
+      "norm_label": "agent-only x402 mainnet"
     },
     {
       "label": "Agent-only x402 sandbox",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L143",
+      "source_location": "L154",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_agent_only_x402_sandbox",
-      "community": 93,
+      "id": "readme_agent_only_x402_sandbox",
+      "community": 41,
       "norm_label": "agent-only x402 sandbox"
     },
     {
       "label": "Local commerce harness",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L170",
+      "source_location": "L181",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_local_commerce_harness",
-      "community": 93,
+      "id": "readme_local_commerce_harness",
+      "community": 41,
       "norm_label": "local commerce harness"
     },
     {
       "label": "Read-only catalog MCP",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L199",
+      "source_location": "L210",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_read_only_catalog_mcp",
-      "community": 93,
+      "id": "readme_read_only_catalog_mcp",
+      "community": 41,
       "norm_label": "read-only catalog mcp"
     },
     {
       "label": "Local inspector and builder",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L234",
+      "source_location": "L245",
       "_origin": "ast",
-      "id": "capabilityproof_mcp_registry_readme_local_inspector_and_builder",
-      "community": 93,
+      "id": "readme_local_inspector_and_builder",
+      "community": 41,
       "norm_label": "local inspector and builder"
     },
     {
@@ -15557,7 +15557,7 @@
       "source_file": "STATUS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_status_md",
+      "id": "status",
       "community": 154,
       "norm_label": "status.md"
     },
@@ -15567,7 +15567,7 @@
       "source_file": "STATUS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "capabilityproof_payto_state_status_operating_status",
+      "id": "status_operating_status",
       "community": 154,
       "norm_label": "operating status"
     },
@@ -16760,6 +16760,66 @@
       "id": "logs_2026_07_15_domain_wallet_key_followup_financial_and_acceptance_accounting",
       "community": 133,
       "norm_label": "financial and acceptance accounting"
+    },
+    {
+      "label": "2026-07-15-mainnet-commerce-launched.md",
+      "file_type": "document",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "logs_2026_07_15_mainnet_commerce_launched",
+      "community": 93,
+      "norm_label": "2026-07-15-mainnet-commerce-launched.md"
+    },
+    {
+      "label": "VouchSpec mainnet commerce launch \u2014 2026-07-15",
+      "file_type": "document",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "logs_2026_07_15_mainnet_commerce_launched_vouchspec_mainnet_commerce_launch_2026_07_15",
+      "community": 93,
+      "norm_label": "vouchspec mainnet commerce launch \u2014 2026-07-15"
+    },
+    {
+      "label": "Outcome",
+      "file_type": "document",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "logs_2026_07_15_mainnet_commerce_launched_outcome",
+      "community": 93,
+      "norm_label": "outcome"
+    },
+    {
+      "label": "Evidence",
+      "file_type": "document",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "logs_2026_07_15_mainnet_commerce_launched_evidence",
+      "community": 93,
+      "norm_label": "evidence"
+    },
+    {
+      "label": "Accounting and exclusions",
+      "file_type": "document",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "logs_2026_07_15_mainnet_commerce_launched_accounting_and_exclusions",
+      "community": 93,
+      "norm_label": "accounting and exclusions"
+    },
+    {
+      "label": "Discovery state",
+      "file_type": "document",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "logs_2026_07_15_mainnet_commerce_launched_discovery_state",
+      "community": 93,
+      "norm_label": "discovery state"
     },
     {
       "label": "2026-07-15-mainnet-payto-configured.md",
@@ -19071,9 +19131,9 @@
       "source_file": "server.json",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_description"
+      "source": "server",
+      "target": "server_description",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19081,9 +19141,9 @@
       "source_file": "server.json",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_name"
+      "source": "server",
+      "target": "server_name",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19091,9 +19151,9 @@
       "source_file": "server.json",
       "source_location": "L13",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_remotes"
+      "source": "server",
+      "target": "server_remotes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19101,9 +19161,9 @@
       "source_file": "server.json",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_repository"
+      "source": "server",
+      "target": "server_repository",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19111,9 +19171,9 @@
       "source_file": "server.json",
       "source_location": "L2",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_schema"
+      "source": "server",
+      "target": "server_schema",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19121,9 +19181,9 @@
       "source_file": "server.json",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_title"
+      "source": "server",
+      "target": "server_title",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19131,9 +19191,9 @@
       "source_file": "server.json",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_version"
+      "source": "server",
+      "target": "server_version",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19141,9 +19201,9 @@
       "source_file": "server.json",
       "source_location": "L12",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_websiteurl"
+      "source": "server",
+      "target": "server_websiteurl",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19151,9 +19211,9 @@
       "source_file": "server.json",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_server_repository",
-      "target": "capabilityproof_mcp_registry_server_repository_id"
+      "source": "server_repository",
+      "target": "server_repository_id",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19161,9 +19221,9 @@
       "source_file": "server.json",
       "source_location": "L9",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_server_repository",
-      "target": "capabilityproof_mcp_registry_server_repository_source"
+      "source": "server_repository",
+      "target": "server_repository_source",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19171,9 +19231,9 @@
       "source_file": "server.json",
       "source_location": "L8",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_server_repository",
-      "target": "capabilityproof_mcp_registry_server_repository_url"
+      "source": "server_repository",
+      "target": "server_repository_url",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -49479,9 +49539,9 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "target": "tests_test_commerce_access_bound_order",
-      "confidence_score": 1.0
+      "target": "tests_test_commerce_access_bound_order"
     },
     {
       "relation": "contains",
@@ -49489,9 +49549,9 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "target": "tests_test_commerce_access_stores",
-      "confidence_score": 1.0
+      "target": "tests_test_commerce_access_stores"
     },
     {
       "relation": "contains",
@@ -49499,9 +49559,9 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "target": "tests_test_commerce_access_test_access_secrets_are_bounded_distinct_and_environment_bound",
-      "confidence_score": 1.0
+      "target": "tests_test_commerce_access_test_access_secrets_are_bounded_distinct_and_environment_bound"
     },
     {
       "relation": "contains",
@@ -49509,9 +49569,9 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "target": "tests_test_commerce_access_test_api_keys_are_keyed_digests_and_support_rotation_and_revocation",
-      "confidence_score": 1.0
+      "target": "tests_test_commerce_access_test_api_keys_are_keyed_digests_and_support_rotation_and_revocation"
     },
     {
       "relation": "contains",
@@ -49519,9 +49579,9 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "target": "tests_test_commerce_access_test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded",
-      "confidence_score": 1.0
+      "target": "tests_test_commerce_access_test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded"
     },
     {
       "relation": "contains",
@@ -49529,9 +49589,9 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
-      "target": "tests_test_commerce_access_test_tenant_quote_and_order_bindings_hide_cross_tenant_objects",
-      "confidence_score": 1.0
+      "target": "tests_test_commerce_access_test_tenant_quote_and_order_bindings_hide_cross_tenant_objects"
     },
     {
       "relation": "calls",
@@ -50266,11 +50326,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L185",
+      "source_location": "L191",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands"
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50278,9 +50338,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract"
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_machine_discovery_exposes_agent_only_x402_mainnet_and_cache_contract",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -50288,39 +50348,39 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell"
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L154",
+      "source_location": "L160",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked"
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L143",
+      "source_location": "L149",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped"
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_distribution.py",
-      "source_location": "L109",
+      "source_location": "L115",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready"
+      "source": "tests_test_distribution",
+      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52899,9 +52959,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_backlog_md",
-      "target": "capabilityproof_mcp_registry_backlog_prioritized_backlog"
+      "source": "backlog",
+      "target": "backlog_prioritized_backlog",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -52909,39 +52969,29 @@
       "source_file": "BACKLOG.md",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_completed_foundations"
+      "source": "backlog_prioritized_backlog",
+      "target": "backlog_live_and_complete",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "BACKLOG.md",
-      "source_location": "L76",
+      "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_deferred_stage_c"
+      "source": "backlog_prioritized_backlog",
+      "target": "backlog_now_acquire_genuine_agent_revenue",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "BACKLOG.md",
-      "source_location": "L64",
+      "source_location": "L28",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_evidence_driven_operation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "BACKLOG.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_now_external_adoption_and_safe_orderability"
+      "source": "backlog_prioritized_backlog",
+      "target": "backlog_optional_not_a_launch_blocker",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53059,19 +53109,19 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_changelog_md",
-      "target": "capabilityproof_changelog_changelog"
+      "source": "changelog",
+      "target": "changelog_changelog",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CHANGELOG.md",
-      "source_location": "L47",
+      "source_location": "L49",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_changelog_changelog",
-      "target": "capabilityproof_changelog_0_2_0_2026_07_13"
+      "source": "changelog_changelog",
+      "target": "changelog_0_2_0_2026_07_13",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53079,9 +53129,9 @@
       "source_file": "CHANGELOG.md",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_changelog_changelog",
-      "target": "capabilityproof_changelog_unreleased"
+      "source": "changelog_changelog",
+      "target": "changelog_unreleased",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53499,8 +53549,8 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_human_actions_md",
-      "target": "capabilityproof_payto_state_human_actions_human_actions",
+      "source": "human_actions",
+      "target": "human_actions_human_actions",
       "confidence_score": 1.0
     },
     {
@@ -53509,8 +53559,8 @@
       "source_file": "NEXT_ACTION.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_next_action_md",
-      "target": "capabilityproof_payto_state_next_action_next_action",
+      "source": "next_action",
+      "target": "next_action_next_action",
       "confidence_score": 1.0
     },
     {
@@ -53579,9 +53629,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_readme_md",
-      "target": "capabilityproof_mcp_registry_readme_vouchspec"
+      "source": "readme",
+      "target": "readme_vouchspec",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53589,9 +53639,19 @@
       "source_file": "README.md",
       "source_location": "L143",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_agent_only_x402_sandbox"
+      "source": "readme_vouchspec",
+      "target": "readme_agent_only_x402_mainnet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "readme_vouchspec",
+      "target": "readme_agent_only_x402_sandbox",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53599,29 +53659,29 @@
       "source_file": "README.md",
       "source_location": "L76",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_evidence_labels"
+      "source": "readme_vouchspec",
+      "target": "readme_evidence_labels",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L170",
+      "source_location": "L181",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_local_commerce_harness"
+      "source": "readme_vouchspec",
+      "target": "readme_local_commerce_harness",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L234",
+      "source_location": "L245",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_local_inspector_and_builder"
+      "source": "readme_vouchspec",
+      "target": "readme_local_inspector_and_builder",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53629,9 +53689,9 @@
       "source_file": "README.md",
       "source_location": "L36",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_product_stages"
+      "source": "readme_vouchspec",
+      "target": "readme_product_stages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53639,9 +53699,9 @@
       "source_file": "README.md",
       "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_public_stage_a_distribution"
+      "source": "readme_vouchspec",
+      "target": "readme_public_stage_a_distribution",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53649,9 +53709,9 @@
       "source_file": "README.md",
       "source_location": "L53",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_publisher_ci_complete_self_service_example"
+      "source": "readme_vouchspec",
+      "target": "readme_publisher_ci_complete_self_service_example",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53659,19 +53719,19 @@
       "source_file": "README.md",
       "source_location": "L106",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_read_only_catalog_api"
+      "source": "readme_vouchspec",
+      "target": "readme_read_only_catalog_api",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L199",
+      "source_location": "L210",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_read_only_catalog_mcp"
+      "source": "readme_vouchspec",
+      "target": "readme_read_only_catalog_mcp",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53679,9 +53739,9 @@
       "source_file": "README.md",
       "source_location": "L88",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_verify_a_public_receipt_independently"
+      "source": "readme_vouchspec",
+      "target": "readme_verify_a_public_receipt_independently",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53699,8 +53759,8 @@
       "source_file": "STATUS.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_status_md",
-      "target": "capabilityproof_payto_state_status_operating_status",
+      "source": "status",
+      "target": "status_operating_status",
       "confidence_score": 1.0
     },
     {
@@ -54579,9 +54639,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_commercial_launch_md",
-      "target": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint"
     },
     {
       "relation": "contains",
@@ -54659,9 +54719,9 @@
       "source_file": "logs/2026-07-15-domain-wallet-key-followup.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_domain_wallet_key_followup_md",
-      "target": "logs_2026_07_15_domain_wallet_key_followup_domain_isolation_and_wallet_key_follow_up",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_domain_wallet_key_followup_domain_isolation_and_wallet_key_follow_up"
     },
     {
       "relation": "contains",
@@ -54696,12 +54756,62 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "logs_2026_07_15_mainnet_commerce_launched",
+      "target": "logs_2026_07_15_mainnet_commerce_launched_vouchspec_mainnet_commerce_launch_2026_07_15",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "logs_2026_07_15_mainnet_commerce_launched_vouchspec_mainnet_commerce_launch_2026_07_15",
+      "target": "logs_2026_07_15_mainnet_commerce_launched_accounting_and_exclusions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "logs_2026_07_15_mainnet_commerce_launched_vouchspec_mainnet_commerce_launch_2026_07_15",
+      "target": "logs_2026_07_15_mainnet_commerce_launched_discovery_state",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "logs_2026_07_15_mainnet_commerce_launched_vouchspec_mainnet_commerce_launch_2026_07_15",
+      "target": "logs_2026_07_15_mainnet_commerce_launched_evidence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "logs/2026-07-15-mainnet-commerce-launched.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "logs_2026_07_15_mainnet_commerce_launched_vouchspec_mainnet_commerce_launch_2026_07_15",
+      "target": "logs_2026_07_15_mainnet_commerce_launched_outcome",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "logs/2026-07-15-mainnet-payto-configured.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_mainnet_payto_configured_md",
-      "target": "logs_2026_07_15_mainnet_payto_configured_mainnet_receiving_address_configured",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_mainnet_payto_configured_mainnet_receiving_address_configured"
     },
     {
       "relation": "contains",
@@ -55925,5 +56035,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "40c0570737f1b3fa2a63cd4e1fee9f2226dd80b0"
+  "built_at_commit": "3a2cab10d2d2611cd40eccdac27a0bdd5bbccfb7"
 }
