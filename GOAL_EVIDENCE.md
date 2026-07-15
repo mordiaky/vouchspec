@@ -9,7 +9,7 @@ and test traffic is explicitly excluded.
 |---:|---|---|
 | 1 | Stage A public catalog operational | Pass: public index and receipt resources return exact signed bytes |
 | 2 | Documented HTTP and MCP retrieval | Pass: static HTTP, verifier, and installable stdio MCP |
-| 3 | Current machine-readable discovery | Pass: repository contract, stable managed discovery endpoint, and official x402 Bazaar metadata are public and consistent |
+| 3 | Current machine-readable discovery | Pass: repository contract, stable managed discovery, x402, MCP, A2A, OpenAPI, `llms.txt`, and draft/proposal ARD documents are public and consistent |
 | 4 | Independent public signature verification | Pass: public JWKs, exact-byte verifier, and mutation tests |
 | 5 | Machine-readable lifecycle/invalidation | Pass: root-signed catalog lifecycle plus separate live hosted receipt status |
 | 6 | Material public-service failure monitoring | Pass operationally: GitHub fulfillment failures alert the owner; no uptime-SLA claim |
@@ -21,7 +21,7 @@ and test traffic is explicitly excluded.
 | 12 | Repeat requests from five sources | Pending: 0 / 5 |
 | 13 | Exclude controlled/fake traffic | Pass as accounting policy; owner E2E remains excluded |
 | 14 | One genuine machine-readable paid request completes | Pending: 0; owner Base Sepolia payment proves mechanics only |
-| 15 | Software quotes, explains, pays, delivers, verifies, and continues autonomously | Pass on the public one-call testnet flow, including Agentic Wallet payment, CDP settlement, scheduled fulfillment, signature verification, caching, and lifecycle status; commercial mainnet remains disabled |
+| 15 | Software quotes, explains, pays, delivers, verifies, and continues autonomously | Pass on the public one-call testnet proof; commercial mainnet is now live and orderable, but it has no genuine paid operation yet |
 | 16 | Three unrelated external buyers settle | Pending: 0 / 3 |
 | 17 | At least USD $500 settled gross external revenue | Pending: USD $0 / $500 |
 | 18 | Exclude owner/test/pending/reversed/refunded/simulated revenue | Pass as policy and stored `counts_for_goal`; no revenue recorded |
@@ -34,7 +34,7 @@ and test traffic is explicitly excluded.
 | 25 | No ordinary order requires human labor | Pass on testnet mechanics; unproven with genuine commercial demand |
 | 26 | One acquisition channel produces multiple qualified users/integrations | Pending: current issues are outreach only |
 | 27 | One fulfillment process completes multiple real orders | Pending: 0 genuine orders |
-| 28 | Self-serve discovery, integration, quote, purchase, verify, troubleshooting | Pass for the public testnet sandbox: the canonical endpoint is indexed in Coinbase Bazaar, accepts anonymous-before-payment one-call intake, and publishes independently verifiable receipts; mainnet remains disabled |
+| 28 | Self-serve discovery, integration, quote, purchase, verify, troubleshooting | Pass for the public testnet proof and live mainnet contract: the sandbox is indexed in Coinbase Bazaar, while mainnet exposes anonymous-before-payment x402 intake plus MCP, A2A, OpenAPI, `llms.txt`, and ARD discovery; mainnet Bazaar awaits its first genuine settlement |
 | 29 | Independent goal auditor inspects complete evidence | Pending until tests 1-28 are eligible |
 | 30 | Auditor confirms every required claim | Pending |
 
@@ -125,6 +125,37 @@ enabled for future genuine incidents.
 Other evidence sources include `catalog/public/`, `distribution/discovery.json`, `analytics/`,
 `CRM.csv`, `EXPERIMENTS.csv`, `BUDGET.csv`, `REVENUE.csv`, hosted API/workflow records, public
 CI/attestation URLs, and the final independent audit when eligible.
+
+## Machine-readable acquisition expansion evidence
+
+- Plyrium PR `#47` merged as `7e49622bb9dc799ef3fdc8e276764c09865bdd68` and main CI run
+  `29455418597` passed the full check suite and production build. The production
+  `/openapi.json`, `/.well-known/openapi.json`, and `/llms.txt` surfaces returned HTTP 200,
+  their expected VouchSpec contracts, and CORS `*`.
+- Plyrium PR `#48` merged as `e2d9bd8a797599931ac1233a3922479dfec7c5d3`; main CI run
+  `29456311280` passed lint, 192 tests and all audits, and the production build.
+- `https://vouchspec.plyrium.com/.well-known/ai-catalog.json` returned HTTP 200 with JSON,
+  CORS `*`, `nosniff`, bounded public caching, and exactly two entries pointing to the real A2A
+  Agent Card and paid OpenAPI contract. GET and HEAD returned 200; OPTIONS returned 204. A scan
+  found no secret or bearer markers.
+- The ARD project's own conformance tool passed the live catalog's strict JSON Schema and semantic
+  validation with zero critical errors. It emitted one non-fatal warning because the explicit
+  `application/openapi+json` extension media type is outside its built-in standard-type list.
+  VouchSpec keeps the accurate OpenAPI label rather than mislabeling the paid API.
+- ARD is still a draft/proposal, and publication does not guarantee that a crawler will index it.
+  The official specification and publishing guidance are HTML/prose, and no compatible second
+  authoritative JSON host was available for the evidence wrapper. No receipt is claimed or
+  fabricated for that premise. Primary sources:
+  `https://agenticresourcediscovery.org/spec/`,
+  `https://agenticresourcediscovery.org/how_to_publish/`, and
+  `https://github.com/ards-project/ard-spec`.
+- The public `mordiaky/vouchspec` repository homepage now points to the commercial host and its
+  topics include the exact agent protocols and payment network. Its README links x402, MCP, A2A,
+  OpenAPI, `llms.txt`, ARD, and the Agent Tools machine listings.
+- The private aggregate commercial ledger at `2026-07-15T22:46:55Z` contained 0 live orders,
+  0 paid or delivered live orders, 0 settled payments, 0 distinct settled payers, 0 repeat
+  settled payers, and 0 goal-qualified orders. No customer identifiers were retrieved or recorded.
+  This private observation is outside the public-JSON evidence gate.
 
 ## Mainnet fail-closed safety evidence
 

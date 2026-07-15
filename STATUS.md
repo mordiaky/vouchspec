@@ -6,8 +6,10 @@
   explicitly selected skill subdirectory, delivered as an exact-byte signed receipt.
 - **Price and payment:** 0.25 USDC per validation through x402 v2 on Base mainnet
   (`eip155:8453`); there is no human or card checkout path.
-- **Public contract:** health, discovery, and `/.well-known/x402` return HTTP 200. An unpaid valid request to
-  `POST /api/vouchspec/v1/validate` returns HTTP 402 for exactly `250000` atomic USDC.
+- **Public contract:** health, canonical discovery, `/.well-known/x402`, OpenAPI 3.1,
+  `llms.txt`, A2A, and the draft/proposal ARD catalog are public machine-readable entry points.
+  An unpaid valid request to `POST /api/vouchspec/v1/validate` returns HTTP 402 for exactly
+  `250000` atomic USDC.
 - **Fulfillment:** enabled. The protected no-egress worker and separate signer are scheduled;
   manual no-order probe `29439885033` completed successfully.
 - **Production isolation:** the live application uses a dedicated opaque database key and
@@ -19,6 +21,10 @@
   auto-verified and listed the direct x402 endpoint, refreshed the MCP entry as healthy, and
   created a derived x402 service entry. VouchSpec also publishes an A2A `0.3.0` Agent Card and
   bounded read-only JSON-RPC discovery skill; Agent Tools lists it as searchable and x402-supported.
+  Standard OpenAPI and `llms.txt` documents are live, and `/.well-known/ai-catalog.json`
+  advertises the real A2A and paid OpenAPI contracts for ARD-capable crawlers. The public GitHub
+  repository now links the commercial hostname and carries x402, A2A, OpenAPI, Base, USDC, MCP,
+  Agent Skills, and ARD topics.
   Coinbase Bazaar mainnet indexing will begin after the
   first genuine successful mainnet settlement; no owner-funded or controlled payment will be
   used to force it.
@@ -35,7 +41,7 @@
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, mutable refs, or artifact execution.
 
-Next: monitor the active A2A, x402, and MCP listings, add only agent-readable zero-cost discovery channels,
-acquire the first unrelated agent buyer, and monitor genuine settlement, fulfillment, delivery,
-and repeat use. Exclude owner, CI, monitor, demo, controlled-wallet, related-party, reversed,
-refunded, and testnet activity.
+Next: monitor the active A2A, x402, MCP, OpenAPI, `llms.txt`, ARD, and repository discovery
+surfaces, acquire the first unrelated agent buyer, and monitor genuine settlement, fulfillment,
+delivery, and repeat use. Exclude owner, CI, monitor, demo, controlled-wallet, related-party,
+reversed, refunded, and testnet activity.

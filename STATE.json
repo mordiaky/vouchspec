@@ -2,7 +2,7 @@
   "schema_version": 4,
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
-  "goal_status": "paused",
+  "goal_status": "active_user_resumed",
   "stage": "commercial_mainnet_live_agent_only",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
@@ -17,6 +17,9 @@
     "http": "live_mainnet_x402_and_exact_signed_receipts",
     "mcp": "live_streamable_http_read_only_discovery",
     "a2a": "live_jsonrpc_0.3_read_only_discovery",
+    "openapi": "live_openapi_3.1_agent_purchase_contract",
+    "llms_txt": "live_llms_txt_proposal_contract_index",
+    "ard": "live_draft_proposal_ai_catalog_for_a2a_and_openapi",
     "signature": "DSSE_v1.0.2_Ed25519_exact_bytes",
     "lifecycle": "machine_readable_root_signed",
     "monitor": "active_daily_external_check"
@@ -39,6 +42,13 @@
     "agent_tools_a2a_slug": "vouchspec-agent-skill-evidence",
     "agent_tools_a2a_status": "provider_reported_listed_searchable_and_x402_supported",
     "agent_tools_a2a_view": "https://agent-tools.cloud/a2a/agents/vouchspec-agent-skill-evidence",
+    "openapi_url": "https://vouchspec.plyrium.com/openapi.json",
+    "openapi_well_known_url": "https://vouchspec.plyrium.com/.well-known/openapi.json",
+    "llms_txt_url": "https://vouchspec.plyrium.com/llms.txt",
+    "ard_catalog_url": "https://vouchspec.plyrium.com/.well-known/ai-catalog.json",
+    "ard_status": "draft_proposal_schema_and_conformance_passed",
+    "github_repository_homepage": "https://vouchspec.plyrium.com",
+    "github_repository_protocol_topics": ["agent-skills", "ai-agents", "mcp", "mcp-server", "model-context-protocol", "a2a", "agent-to-agent", "agentic-resource-discovery", "openapi", "x402", "base", "usdc"],
     "empirical_network_receipt": "audit/empirical/vouchspec-live-x402-network-receipt.json",
     "empirical_network_receipt_sha256": "19475abb9672660e902abcee4c0c56fdd640ba42430fee503f8c3ce17409a235",
     "empirical_a2a_endpoint_receipt": "audit/empirical/vouchspec-live-a2a-endpoint-receipt.json",
@@ -102,6 +112,9 @@
       "live health discovery and exact 0.25-USDC Base 402 probes passed",
       "public x402 well-known manifest deployed and independently directory-verified",
       "public A2A 0.3 card and bounded read-only JSON-RPC discovery deployed and independently directory-verified",
+      "public OpenAPI 3.1 and llms.txt agent-readable purchase contracts deployed and probed",
+      "public draft-proposal ARD well-known catalog passed the official strict schema and conformance validator",
+      "public GitHub repository links the commercial hostname and protocol topics",
       "scheduled fulfillment enabled and no-job worker probe passed"
     ],
     "remaining_gates": [
@@ -118,7 +131,12 @@
     "repeat_buyers": 0,
     "owner_funded_spend_usd": 0.0,
     "owner_lifetime_limit_usd": 100.0,
-    "contribution_margin_status": "pending_no_external_paid_orders"
+    "contribution_margin_status": "pending_no_external_paid_orders",
+    "last_private_aggregate_probe": "2026-07-15T22:46:55Z",
+    "live_orders_observed": 0,
+    "settled_payments_observed": 0,
+    "distinct_settled_payers_observed": 0,
+    "repeat_settled_payers_observed": 0
   },
   "autonomy": {
     "required_days_after_first_settlement": 14,
@@ -132,12 +150,17 @@
     "all_pass": false,
     "engineering_tests_passed": 141,
     "engineering_tests_skipped": 1,
+    "connected_repository_tests_passed": 192,
     "connected_repository_production_build": "passed",
     "connected_repository_production_dependency_vulnerabilities": 0,
-    "connected_repository_production_commit": "3bfcfb55",
-    "connected_repository_production_deployment": "dpl_5M1DiVCyj7efCgqiBHDsG6QhbfLy",
+    "connected_repository_production_commit": "e2d9bd8a797599931ac1233a3922479dfec7c5d3",
+    "connected_repository_production_run": "https://github.com/mordiaky/plyrium/actions/runs/29456311280",
+    "connected_repository_production_deployment": "production_alias_verified_after_e2d9bd8a",
     "public_health_probe": "passed_200",
     "public_x402_manifest_probe": "passed_200_public_json",
+    "public_openapi_probe": "passed_200_public_json_cors",
+    "public_llms_txt_probe": "passed_200_text_markdown_cors",
+    "public_ard_catalog_probe": "passed_200_json_cors_schema_and_conformance",
     "public_x402_probe": "passed_402_exact_250000_base_usdc",
     "fulfillment_probe": "https://github.com/mordiaky/vouchspec/actions/runs/29439885033",
     "fulfillment_probe_status": "passed_no_job",
@@ -152,11 +175,11 @@
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Monitor the active Agent Tools A2A, x402, and MCP listings for the first independently attributable agent buyer",
+    "Monitor the active A2A, x402, MCP, OpenAPI, llms.txt, ARD, and GitHub discovery surfaces for the first independently attributable agent buyer",
     "Expand only through agent-readable zero-cost channels that do not require owner contracts or human checkout",
     "Monitor settlement fulfillment delivery and receipt status without counting owner or controlled traffic",
     "Apply the predeclared pricing cohort rules only after qualified mainnet evidence"
   ],
-  "last_checkpoint_time": "2026-07-15T21:39:46Z",
-  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health, discovery, /.well-known/x402, and both A2A agent-card aliases are live; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Agent Tools auto-verified the direct x402 service, refreshed the MCP server as healthy, and now lists the A2A discovery agent as searchable and x402-supported. The two-host A2A endpoint premise was independently accepted and replayed with receipt SHA-256 3dc4efbe492dbad82a839a83eecadc2c4580661e96659f65664cb5ad83621e1d. Official MCP Registry version 0.3.0 remains active. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next monitor genuine directory-referred settlements and expand only through agent-readable channels."
+  "last_checkpoint_time": "2026-07-15T22:49:52Z",
+  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health, canonical discovery, /.well-known/x402, A2A, MCP, OpenAPI 3.1, llms.txt, and the draft/proposal ARD catalog are live machine entry points; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Plyrium main CI run 29456311280 passed at e2d9bd8a797599931ac1233a3922479dfec7c5d3, and the live ARD catalog passed the official strict schema and conformance validator with one non-fatal warning for its explicit OpenAPI extension media type. The public VouchSpec GitHub repository links the commercial hostname and exact protocol topics. Agent Tools x402/MCP/A2A and official MCP Registry 0.3.0 remain active. Private aggregate state at 2026-07-15T22:46:55Z still showed 0 live orders, 0 settled payments, 0 distinct settled payers, and 0 repeats. Fulfillment remains enabled. Remedies remain disabled and unfunded and are not a launch blocker. Do not self-pay, count owner traffic, contact humans, or move funds. Continue monitoring genuine machine-discovered settlements and add only zero-cost agent-readable channels."
 }

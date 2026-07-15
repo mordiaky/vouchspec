@@ -19,8 +19,20 @@ labeled `STRUCTURE_VALIDATED`.
 - Machine-readable discovery: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/distribution/discovery.json>
 - Managed agent API: <https://vouchspec.plyrium.com/api/vouchspec/v1/health>
 - Managed API discovery: <https://vouchspec.plyrium.com/api/vouchspec/v1/discovery>
+- OpenAPI 3.1 contract: <https://vouchspec.plyrium.com/openapi.json>
+- LLM-readable contract index: <https://vouchspec.plyrium.com/llms.txt>
+- Agentic Resource Discovery catalog (draft/proposal):
+  <https://vouchspec.plyrium.com/.well-known/ai-catalog.json>
+- A2A Agent Card: <https://vouchspec.plyrium.com/.well-known/agent-card.json>
+- A2A JSON-RPC discovery: <https://vouchspec.plyrium.com/api/vouchspec/v1/a2a>
 - Remote agent discovery (MCP): <https://vouchspec.plyrium.com/api/vouchspec/v1/mcp>
 - Official MCP Registry API: <https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.mordiaky%2Fvouchspec>
+- Agent Tools x402 listing:
+  <https://agent-tools.cloud/api/v1/services/vouchspec-plyrium-com-sub91>
+- Agent Tools MCP listing:
+  <https://agent-tools.cloud/api/v1/mcp/servers/vouchspec-agent-skill-evidence>
+- Agent Tools A2A listing:
+  <https://agent-tools.cloud/api/v1/a2a/agents/vouchspec-agent-skill-evidence>
 - Agent quickstart: <https://vouchspec.plyrium.com/vouchspec>
 - Signed index over managed TLS: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/index.dsse.json>
 - Root-signed lifecycle feed: <https://raw.githubusercontent.com/mordiaky/vouchspec/main/catalog/public/lifecycle.dsse.json>
@@ -148,8 +160,10 @@ public-GitHub request to `POST /api/vouchspec/v1/validate`, receives an x402 v2 
 exactly **0.25 USDC on Base**, signs it, and retries with `PAYMENT-SIGNATURE`. Successful
 settlement returns one-time delivery credentials; the scheduled isolated worker then produces
 the signed, content-addressed receipt. Discovery and health are public, and the Streamable HTTP
-MCP endpoint exposes read-only contract discovery. Remedy execution remains disabled and is not
-a prerequisite for accepting or fulfilling ordinary paid validations.
+MCP endpoint exposes read-only contract discovery. The same purchase contract is published as
+OpenAPI, `llms.txt`, A2A, x402, and a draft/proposal ARD catalog so agents can enter through the
+protocol they already index. Remedy execution remains disabled and is not a prerequisite for
+accepting or fulfilling ordinary paid validations.
 
 ## Agent-only x402 sandbox
 

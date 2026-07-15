@@ -16,6 +16,10 @@
 ## Now — acquire genuine agent revenue
 
 - **B-025:** completed — MCP Registry `0.3.0` is active and latest, pointing to the live remote endpoint.
+- **B-031:** completed — canonical OpenAPI 3.1 and `llms.txt` contracts are live, CORS-readable,
+  host-pinned, and linked from the existing discovery surfaces.
+- **B-032:** active — the draft/proposal ARD catalog is live at the standard well-known path and
+  advertises the real A2A and paid OpenAPI contracts. Monitor external indexing and attributable use.
 - **B-020/B-021:** continue repository-specific, low-volume external distribution and help
   qualified publishers integrate when invited. Count only unrelated retained use.
 - **B-026:** measure genuine machine requests and repeat use, excluding owner and controlled
