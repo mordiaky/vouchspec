@@ -3,7 +3,7 @@
   "business": "VouchSpec",
   "internal_package_name": "CapabilityProof",
   "goal_status": "active_not_achieved",
-  "stage": "stage_a_public_live_stage_b_agent_only_x402_cdp_bazaar_intake_live",
+  "stage": "stage_a_public_live_stage_b_agent_only_x402_cdp_bazaar_indexed",
   "product_boundary": {
     "allowed": ["selected public repositories", "full immutable commits", "explicit skill subdirectories", "static non-executing evidence"],
     "excluded": ["arbitrary uploads", "private repositories", "confidential content", "artifact execution"]
@@ -50,10 +50,10 @@
     "sandbox_fulfillment": "complete_signed_delivery_excluded_from_metrics",
     "primary_provider": "x402_cdp_facilitator",
     "secondary_provider": "none_agent_only",
-    "bazaar_catalog_status": "metadata_live_first_cdp_settlement_pending",
+    "bazaar_catalog_status": "publicly_indexed_by_excluded_cdp_settlement",
     "stripe_status": "regression_only_not_a_purchase_path",
-    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/payment/cost store", "managed TLS public sandbox", "strict tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "anonymous-before-payment one-call x402 intake", "official x402 Bazaar metadata extension", "authenticated CDP facilitator verify and settle boundary", "deterministic payment-derived tenant and delivery bootstrap", "payment replay and settlement recovery binding", "branch-scoped encrypted CDP server credential without wallet custody", "offline-root paid receipt lifecycle with monotonic invalidation", "public immutable cacheable receipt and separate no-store invalidation status"],
-    "remaining_gates": ["first excluded CDP settlement and public Bazaar indexing confirmation", "kernel-quota-enforced ephemeral network-fetch scratch volume", "mainnet duplicate-settlement and objective-failure remedy transactions", "mode-separated mainnet receiver facilitator secrets database issuer monitoring and ledger", "operational production signing role"]
+    "completed_gates": ["allowlisted exact-commit fetcher", "isolated no-egress no-host-write worker", "constrained signing gate", "idempotent environment-bound order/payment/cost store", "managed TLS public sandbox", "strict tenant-isolated quote/order/result API with expiring rotatable revocable delivery capability", "anonymous-before-payment one-call x402 intake", "official x402 Bazaar metadata extension", "authenticated CDP facilitator verify and settle boundary", "deterministic payment-derived tenant and delivery bootstrap", "payment replay and settlement recovery binding", "branch-scoped encrypted CDP server credential without wallet custody", "offline-root paid receipt lifecycle with monotonic invalidation", "public immutable cacheable receipt and separate no-store invalidation status", "excluded Agentic Wallet CDP settlement with isolated fulfillment and public Bazaar indexing"],
+    "remaining_gates": ["kernel-quota-enforced ephemeral network-fetch scratch volume", "mainnet duplicate-settlement and objective-failure remedy transactions", "mode-separated mainnet receiver facilitator secrets database issuer monitoring and ledger", "operational production signing role"]
   },
   "commercial_metrics": {
     "required_buyers": 3,
@@ -81,9 +81,9 @@
     "connected_repository_tests_passed": 176,
     "connected_repository_production_build": "passed",
     "connected_repository_production_dependency_vulnerabilities": 0,
-    "sandbox_deployment_commit": "fc26b09a5d391029c21d11f9cb8ee25b14aff2d7",
+    "sandbox_deployment_commit": "d30577721f800a93748a2a4c55fd26972662e675",
     "sandbox_bazaar_402_probe": "passed",
-    "connected_repository_main_ci_run": "https://github.com/mordiaky/plyrium/actions/runs/29373305038",
+    "connected_repository_main_ci_run": "https://github.com/mordiaky/plyrium/actions/runs/29377469580",
     "connected_repository_main_ci_status": "passed",
     "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29344373148",
     "public_ci_commit": "dc2af81ebbebebeb1dc4f6078a1172508325d6dd",
@@ -94,15 +94,15 @@
   "current_blockers": [
     "No unrelated external repository has retained a VouchSpec integration",
     "No legitimate external machine use is recorded",
-    "CDP Bazaar will not index the live endpoint until its first successful CDP-facilitated settlement",
-    "No genuine purchase or settled revenue exists"
+    "No genuine purchase or settled revenue exists",
+    "Mainnet settlement remains fail-closed pending remedies, environment separation, production signing, and kernel-quota gates"
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Complete one owner-excluded Base-Sepolia payment through the CDP-facilitated one-call route and verify Bazaar indexing",
-    "Convert one of the two still-open publisher proposals into a retained external integration or qualify the next repository-specific prospect",
+    "Use the publicly indexed Coinbase Bazaar endpoint to acquire independently attributable agent requests without controlled traffic",
+    "Convert one of the two still-open publisher proposals into a retained external integration or qualify the next repository-specific prospect after the daily cap resets",
     "Prepare mainnet remedies environment separation production signing and kernel-quota fetch volume without enabling live settlement prematurely"
   ],
-  "last_checkpoint_time": "2026-07-14T22:08:21Z",
-  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-x402-bazaar-launch.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Supabase issue 136 and K-Dense issue 211 remain open outreach only; michtio issue 10 was declined and closed as not planned. The live branch-scoped sandbox exposes POST /api/vouchspec/v1/validate with official Bazaar metadata and authenticated CDP facilitator verification. Complete one owner-excluded CDP testnet settlement to trigger indexing, verify the listing and signed receipt, then pursue genuine unrelated agent integrations. Stripe is regression-only and must not become a human/card purchase path."
+  "last_checkpoint_time": "2026-07-15T00:02:02Z",
+  "resume_instruction": "Read GOAL.md, STATE.json, STATUS.md, GOAL_EVIDENCE.md, NEXT_ACTION.md, CRM.csv, EXPERIMENTS.csv, analytics/dashboard.json, docs/stage-b-security-review.md, logs/2026-07-14-x402-bazaar-launch.md, and the latest public issue/demo/CI runs. Preserve all exclusion rules and the no-upload/no-execution boundary. Supabase issue 136 and K-Dense issue 211 remain open outreach only; michtio issue 10 was declined and closed as not planned. The live branch-scoped sandbox exposes POST /api/vouchspec/v1/validate and is publicly indexed in Coinbase Bazaar after an excluded Agentic Wallet settlement. Its signed receipt, immutable cache behavior, live status, fulfillment workflow, and Base-Sepolia transaction are verified. Pursue genuine unrelated agent integrations and buyers; do not count owner, controlled-wallet, testnet, CI, demo, or monitoring activity. Stripe is regression-only and must not become a human/card purchase path."
 }

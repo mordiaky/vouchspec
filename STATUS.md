@@ -10,17 +10,25 @@
   verifies and settles through Coinbase's authenticated CDP facilitator and declares the official
   x402 Bazaar extension. The commercial price remains an unvalidated USD $49 hypothesis.
   Mainnet is fail-closed.
-- **CDP/Bazaar launch:** reconciled deployment `fc26b09a5d391029c21d11f9cb8ee25b14aff2d7` is live. Hosted
-  health reports Bazaar readiness; a valid anonymous request returns HTTP 402 with one exact
-  Base-Sepolia requirement for 1.00 test USDC, the canonical sandbox URL, and `extensions.bazaar`.
-  A syntactically valid but invalid-signature probe was rejected with HTTP 402 and did not settle.
-  CDP's public Bazaar search does not list the endpoint yet because CDP catalogs a seller only
-  after its first successful CDP-facilitated settlement. No registration claim is made yet.
+- **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
+  `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
+  as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant
+  catalog now list the canonical validation endpoint with the exact 1.00-test-USDC Base-Sepolia
+  requirement and agent-only metadata. The listing was indexed at the successful excluded
+  settlement timestamp; no separate registration or human action was required.
 - **Hosted fulfillment proof:** owner-controlled order `ord_01b1e85f188649a6b68e2dd2` settled
   on Base Sepolia in transaction
   `0xfe4b912ace571cd533d02e474de766d7dbe19d744d5cb35420cb71d7952aea11`, traversed the leased
   no-egress worker and separate no-egress signer, and produced a signature-verified public
   content-addressed receipt. It is explicitly `counts_for_goal: false`.
+- **Agentic Wallet/CDP proof:** wallet `0x5AbA743d6e6Dc22584D9e175D0b39E972AB9918d`
+  authorized exactly 1.00 test USDC. CDP settlement transaction
+  `0xb8e841903c0b948a639a47c33dbcf5eb63ed09ee5f727004e876005bc9e23a17`
+  succeeded at `2026-07-14T23:50:30Z`; workflow run `29377467330` then claimed, isolated,
+  signed, and delivered the request. Public receipt digest
+  `sha256:da6d3b8f6d6e99390efc98c050f83e45a7a8121d736759f32400309263470bd3`
+  independently verifies under the published issuer JWK and is current. This controlled test is
+  `counts_for_goal: false` and contributes no buyer, request, revenue, margin, or autonomy credit.
 - **Receipt reuse:** exact DSSE envelope bytes are public, immutable, cacheable, and shareable.
   The live invalidation/lifecycle status is a separate no-store resource that agents must check
   when making a new reliance decision.
@@ -41,18 +49,19 @@
   contribution margin is not yet proven by a genuine paid order.
 - **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
   commercial payment.
-- **Owner action:** none currently required. The next controlled CDP settlement, if used only to
-  seed Bazaar indexing, remains owner/test traffic and must stay excluded from every goal counter.
+- **Owner action:** none currently required. Bazaar discovery and the complete agent payment path
+  are available without routine owner labor.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
 - **Verification:** the connected Plyrium repository passes typecheck, 176 tests, private-address,
   public-route, transaction, and migration audits, a production build, and a zero-vulnerability
-  production dependency audit. VouchSpec launch PR `mordiaky/plyrium#31` and CI memory repair PR
-  `#32` are merged; post-merge main CI run `29373305038` passed. The CapabilityProof suite still
+  production dependency audit. VouchSpec launch PR `mordiaky/plyrium#31`, CI memory repair PR
+  `#32`, and Agentic Wallet compatibility PRs `#33` and `#34` are merged; post-merge main CI run
+  `29377469580` passed. The CapabilityProof suite still
   has 136 passes and one explicit Windows symlink-privilege skip. The latest hosted paid-flow
-  workflow run succeeded at commit `13c65f3dc36a099c0d45aa36aa08b58b3d738371`.
+  workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
 
-Next: complete one explicitly excluded CDP testnet settlement to trigger Bazaar indexing, verify
-the public listing, then acquire unrelated agent integrations that discover and exercise the
-sandbox without owner involvement. Mainnet activation must preserve the same tenant,
+Next: acquire unrelated agent integrations and genuine machine buyers through the now-indexed
+Bazaar endpoint, counting only independently attributable external activity. Mainnet activation
+must preserve the same tenant,
 settlement-recovery, no-egress, signing, receipt, invalidation, and honest-accounting boundaries.

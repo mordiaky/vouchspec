@@ -21,7 +21,7 @@ and test traffic is explicitly excluded.
 | 12 | Repeat requests from five sources | Pending: 0 / 5 |
 | 13 | Exclude controlled/fake traffic | Pass as accounting policy; owner E2E remains excluded |
 | 14 | One genuine machine-readable paid request completes | Pending: 0; owner Base Sepolia payment proves mechanics only |
-| 15 | Software quotes, explains, pays, delivers, verifies, and continues autonomously | Pass on the registered public testnet flow; the new one-call CDP route awaits its first excluded settlement and commercial mainnet remains disabled |
+| 15 | Software quotes, explains, pays, delivers, verifies, and continues autonomously | Pass on the public one-call testnet flow, including Agentic Wallet payment, CDP settlement, scheduled fulfillment, signature verification, caching, and lifecycle status; commercial mainnet remains disabled |
 | 16 | Three unrelated external buyers settle | Pending: 0 / 3 |
 | 17 | At least USD $500 settled gross external revenue | Pending: USD $0 / $500 |
 | 18 | Exclude owner/test/pending/reversed/refunded/simulated revenue | Pass as policy and stored `counts_for_goal`; no revenue recorded |
@@ -34,7 +34,7 @@ and test traffic is explicitly excluded.
 | 25 | No ordinary order requires human labor | Pass on testnet mechanics; unproven with genuine commercial demand |
 | 26 | One acquisition channel produces multiple qualified users/integrations | Pending: current issues are outreach only |
 | 27 | One fulfillment process completes multiple real orders | Pending: 0 genuine orders |
-| 28 | Self-serve discovery, integration, quote, purchase, verify, troubleshooting | Pass for the public testnet sandbox, including anonymous-before-payment one-call intake; public Bazaar indexing awaits the first CDP settlement; mainnet remains disabled |
+| 28 | Self-serve discovery, integration, quote, purchase, verify, troubleshooting | Pass for the public testnet sandbox: the canonical endpoint is indexed in Coinbase Bazaar, accepts anonymous-before-payment one-call intake, and publishes independently verifiable receipts; mainnet remains disabled |
 | 29 | Independent goal auditor inspects complete evidence | Pending until tests 1-28 are eligible |
 | 30 | Auditor confirms every required claim | Pending |
 
@@ -72,15 +72,44 @@ and test traffic is explicitly excluded.
   route URL, and the official `bazaar` extension.
 - A syntactically valid invalid-signature request returned HTTP 402, with no payment-response
   header and no settlement.
-- CDP public hybrid search returned HTTP 200 with zero VouchSpec matches. This is expected and is
-  not counted as a listing: CDP documents that indexing begins only after the first successful
-  CDP-facilitated settlement.
+- CDP public search initially returned zero matches before settlement. After the excluded
+  successful settlement below, both semantic search for `VouchSpec` and merchant lookup by the
+  exact `payTo` address returned the canonical endpoint, description, price, network, scheme,
+  asset, and last-updated settlement timestamp.
 - The dedicated CDP server key is read-only and encrypted only in the branch-scoped Vercel
   environment. No wallet secret or private key is configured in the application.
 - Repository gates: TypeScript typecheck, 176 tests, security/release audits, production build,
   and production dependency audit with zero known vulnerabilities all passed.
 - Accounting: health, unpaid, invalid-signature, owner, and controlled settlement probes are
   excluded from all request, buyer, adoption, and revenue counters.
+
+## Agentic Wallet settlement, fulfillment, and Bazaar indexing evidence
+
+- Agentic Wallet payer: `0x5AbA743d6e6Dc22584D9e175D0b39E972AB9918d`.
+- Base-Sepolia USDC transfer: exactly `1000000` atomic test USDC in successful transaction
+  `0xb8e841903c0b948a639a47c33dbcf5eb63ed09ee5f727004e876005bc9e23a17`,
+  block `44152371`, timestamp `2026-07-14T23:50:30Z`.
+- Fulfillment workflow:
+  `https://github.com/mordiaky/vouchspec/actions/runs/29377467330`; it claimed the paid request,
+  ran the immutable no-egress worker, ran the separate no-egress signer, and delivered successfully.
+- Public envelope digest:
+  `sha256:da6d3b8f6d6e99390efc98c050f83e45a7a8121d736759f32400309263470bd3`;
+  receipt ID `cpr_00ce786d643f31303c0f6363`.
+- Two independent fetches returned identical 10,856-byte envelope bytes. Their SHA-256 matched
+  the content-addressed path, `Cache-Control` was `public, max-age=31536000, immutable`, and the
+  ETag carried the same digest.
+- The local verifier authenticated the Ed25519 DSSE signature with the public issuer JWK, exact
+  source commit `344558d51ecae7929c50b7cff94e120bfca53807`, and artifact digest
+  `b0b3fa6662dc6f673dc4fe274fc9a8e5d04923cbce8fc4e5f1a976c7f83163fe`.
+  The separate no-store status reports the receipt `current` with no replacement or invalidation.
+- Coinbase public semantic search and merchant discovery both list
+  `https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/validate`, last updated at
+  `2026-07-14T23:50:30.595Z`, with exact 1.00 test USDC on `eip155:84532`.
+- Agentic Wallet request-body/header compatibility fixes were merged through Plyrium PRs `#33`
+  and `#34`; post-merge main CI run `29377469580` passed.
+- Accounting: this owner-controlled faucet-funded test is `counts_for_goal: false`. Genuine
+  requests remain 0, buyers remain 0, settled gross revenue remains USD $0, and the 14-day clock
+  remains unstarted.
 
 ## Operational recovery evidence
 

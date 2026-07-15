@@ -83,15 +83,17 @@ Stripe/loopback launch assessment; the Stripe adapter remains regression-only.
   distinguish infrastructure faults without exposing stderr/secrets; the signer import defect was
   fixed; run `29359911240` completed successfully. Alerts remain enabled only for failed runs.
 
+### Bazaar listing and one-call compatibility
+
+- **Risk:** a formally valid 402 route could remain undiscoverable or reject an agent wallet's
+  header/body transport before payment, making the advertised self-service path unusable.
+- **Control and evidence:** bounded route-specific compatibility accepts Agentic Wallet's
+  headerless discovery and chunked paid retry while retaining strict media, length, schema, and
+  paid-body checks. One owner-controlled Base-Sepolia payment settled through CDP, fulfilled and
+  signed successfully, and both CDP semantic search and merchant discovery now return the
+  canonical endpoint. The test remains excluded from all commercial counters.
+
 ## Residual mainnet gates
-
-### Bazaar listing awaits its first CDP settlement
-
-CDP indexes a Bazaar-enabled seller only after the first successful settlement through the CDP
-facilitator. The live route's HTTP 402 response and Bazaar metadata are verified, and an invalid
-authorization is rejected without settlement, but public Bazaar search does not yet return the
-endpoint. Complete one owner-controlled Base-Sepolia settlement, exclude it from all goal and
-revenue counters, verify fulfillment and receipt status, and then verify the public listing.
 
 ### Onchain remedies are not yet executable
 

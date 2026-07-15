@@ -55,3 +55,29 @@ Complete one controlled Base-Sepolia payment through this CDP route, verify the 
 receipt and separate invalidation status, then verify that CDP public Bazaar search returns the
 canonical endpoint. Only unrelated, independently attributable agent use after that may advance
 commercial acceptance counters.
+
+## Completed excluded settlement and indexing checkpoint
+
+At `2026-07-14T23:50:30Z`, Coinbase Agentic Wallet authorized exactly 1.00 test USDC from
+`0x5AbA743d6e6Dc22584D9e175D0b39E972AB9918d`. CDP settled transaction
+`0xb8e841903c0b948a639a47c33dbcf5eb63ed09ee5f727004e876005bc9e23a17`
+successfully on Base Sepolia. No wallet credential entered the VouchSpec application.
+
+Workflow run `29377467330` claimed the paid request, completed the isolated no-egress worker and
+separate no-egress signing stages, and published immutable receipt digest
+`sha256:da6d3b8f6d6e99390efc98c050f83e45a7a8121d736759f32400309263470bd3`.
+Independent verification confirmed the signature, source commit, receipt ID, artifact digest,
+byte hash, immutable cache headers, and separate `current` lifecycle status.
+
+Coinbase's public semantic search for `VouchSpec` and public merchant lookup for the exact
+receiver now both return the canonical endpoint with the expected description, 1.00-test-USDC
+amount, exact scheme, Base-Sepolia network, and settlement timestamp. Agentic Wallet's earlier
+local CLI search miss was a pre-index cached result; the authoritative CDP catalog is positive.
+
+Plyrium PRs `#33` and `#34` added bounded Agentic Wallet discovery/paid-request transport
+compatibility. PR `#34` merged as `d93deb4647506892f88549aab4c2167d8087d01e`; post-merge main CI
+run `29377469580` passed.
+
+This entire checkpoint is owner/controlled-wallet/testnet activity and is `counts_for_goal:
+false`. External requests, sources, integrations, buyers, settled gross revenue, repeat use,
+margin proof, and autonomy days all remain zero.

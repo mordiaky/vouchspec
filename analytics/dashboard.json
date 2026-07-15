@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-07-14T16:05:27Z",
+  "as_of": "2026-07-15T00:02:02Z",
   "goal_achieved": false,
   "publisher_integrations": {"verified": 0, "required": 3},
   "machine_requests": {"verified": 0, "required": 100},
@@ -16,14 +16,22 @@
   "contacts": 3,
   "open_external_proposals": 2,
   "stage_b_sandbox": {
-    "signed_deliveries": 1,
+    "signed_deliveries": 2,
     "settled_revenue_usd": "0.00",
     "counts_for_goal": false,
-    "engineering_tests_passed": 130,
+    "engineering_tests_passed": 136,
     "engineering_tests_skipped": 1,
     "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29344373148",
     "public_ci_commit": "dc2af81ebbebebeb1dc4f6078a1172508325d6dd",
     "public_ci_status": "passed"
+  },
+  "x402_bazaar_seed": {
+    "publicly_indexed": true,
+    "test_usdc_settled": "1.000000",
+    "settlement_transaction": "0xb8e841903c0b948a639a47c33dbcf5eb63ed09ee5f727004e876005bc9e23a17",
+    "receipt_digest": "sha256:da6d3b8f6d6e99390efc98c050f83e45a7a8121d736759f32400309263470bd3",
+    "fulfillment_run": "https://github.com/mordiaky/vouchspec/actions/runs/29377467330",
+    "counts_for_goal": false
   },
   "stripe_test_probe": {
     "account_identity_verified": true,

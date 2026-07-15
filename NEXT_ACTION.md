@@ -1,15 +1,15 @@
 # Next action
 
-Complete one controlled Base-Sepolia payment through the live CDP-facilitated one-call route,
-solely to trigger Coinbase Bazaar indexing. Mark the order `counts_for_goal: false`, verify its
-signed receipt and lifecycle status, then confirm the canonical endpoint is returned by CDP's
-public Bazaar search. The payment must not create buyer, request, adoption, or revenue credit.
-
-After indexing, distribute the live canonical discovery contract only to qualified agent
+Use the now-indexed Coinbase Bazaar entry and live canonical discovery contract to reach qualified agent
 publishers and runtimes whose packaged or generated artifact bytes are not already fully covered
 by Git-native provenance. Convert genuine unrelated integrations into retained use, and count
 only independently attributable external requests. Owner, demo, CI, smoke, monitor, and
 controlled-wallet traffic remains excluded.
+
+The excluded seed settlement is complete. It settled exactly 1.00 test USDC through CDP,
+fulfilled through the isolated worker and signer, produced a signature-verified immutable public
+receipt, and caused Coinbase semantic and merchant discovery to index the canonical endpoint.
+It creates no buyer, request, adoption, revenue, margin, repeat-use, or autonomy credit.
 
 The contract is public at
 `https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/discovery`. It exposes self-service

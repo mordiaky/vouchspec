@@ -167,3 +167,15 @@
   and Checkout URL were absent from the disposable database.
 - **Boundary:** This is not a deployment or sale. Managed TLS, a mode-specific public test
   endpoint, restricted durable state, kernel fetch quota, and production signing remain gates.
+
+## 2026-07-14 - Treat Bazaar indexing proof as infrastructure, not adoption
+
+- **Decision:** Use one faucet-funded Agentic Wallet settlement to validate the public x402/CDP
+  path and seed Coinbase Bazaar, but permanently exclude it from request, buyer, revenue, repeat,
+  margin, and autonomy counters.
+- **Evidence:** Exactly 1.00 test USDC settled on Base Sepolia; the no-egress worker and separate
+  signer delivered an independently verified immutable receipt; Coinbase semantic and merchant
+  discovery then listed the canonical endpoint.
+- **Boundary:** The public listing proves self-service discoverability and transport compatibility.
+  Only unrelated, independently attributable agents and commercial funds may prove adoption or
+  revenue. Testnet USDC is never revenue.
