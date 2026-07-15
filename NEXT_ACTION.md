@@ -41,12 +41,22 @@ workflow, which remains disabled. The protected Coinbase key passed the official
 probe with 24 payment kinds and 3 extensions and was copied directly into Vercel without exposing
 its value.
 
-The only remaining identity gate is owner-only. The valid facilitator key cannot list or create
-Wallet API accounts, and Coinbase documents API-key creation/permission changes in the portal
-rather than through a non-interactive management endpoint. Wait for the owner to put one
-Wallet-API-capable key and Wallet Secret into `D:\Projects\plyrium.env` under the exact names in
+The owner supplied a replacement key under the correct local variable names. It was encrypted into
+the protected GitHub environment and tested with the already-protected Wallet Secret. The official
+`cdp x402 supported` command authenticated successfully, but the first read-only Wallet API
+account-list call failed before policy lookup or account creation. This proves the key is valid for
+x402 but is not a Server Wallet API key; the blank local Wallet Secret was not the cause of the
+read failure. Wait for the owner to replace the two key values with a Wallet-API-capable Server
+Wallet key and fill the separately generated Wallet Secret under the exact names in
 `HUMAN_ACTIONS.md`. Do not open the portal or request an SMS code. Once present, use the official
 CLI to create or verify the unfunded dedicated receiver and exact-policy remedy account.
+
+The live hostname is now correctly machine-only. Plyrium PR `#41` and production deployment
+`dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr` make the root and every non-VouchSpec path redirect to
+`/api/vouchspec/v1/discovery`; live discovery remains intentionally 503 until activation, and the
+normal Plyrium site is unchanged. The sandbox API remains 200, while its root still points at an
+older preview and returns the staging 401. Refresh that alias only from a verified testnet preview;
+never point it at the live deployment.
 
 Mainnet stays fail-closed until those identities exist, bounded remedy float/Base gas movement is
 separately approved, and the production activation smoke passes. The researched launch experiment
