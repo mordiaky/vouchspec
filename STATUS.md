@@ -15,8 +15,8 @@
   `20260715121500` is applied and verified.
 - **Remedies:** disabled and unfunded by owner direction. This does not block ordinary paid
   validation, settlement, receipt delivery, or revenue.
-- **Discovery:** the official MCP Registry listing is being updated from the testnet endpoint to
-  the live endpoint. Coinbase Bazaar mainnet indexing will begin after the first genuine
+- **Discovery:** official MCP Registry version `0.3.0` is active and latest, pointing to the live
+  endpoint. Coinbase Bazaar mainnet indexing will begin after the first genuine
   successful mainnet settlement; no owner-funded or controlled payment will be used to force it.
 - **Revenue:** 0 unrelated buyers, 0 repeat buyers, and USD $0 settled gross. The business is
   launched, but no external agent has purchased yet.
@@ -25,6 +25,6 @@
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, mutable refs, or artifact execution.
 
-Next: publish MCP Registry version `0.3.0`, expose the live contract to agent discovery channels,
-and monitor genuine settlement, fulfillment, delivery, and repeat use. Exclude owner, CI,
+Next: expose the live contract through additional agent discovery channels, acquire the first
+unrelated agent buyer, and monitor genuine settlement, fulfillment, delivery, and repeat use. Exclude owner, CI,
 monitor, demo, controlled-wallet, related-party, reversed, refunded, and testnet activity.

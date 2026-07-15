@@ -31,9 +31,10 @@
   "contacts": 3,
   "open_external_proposals": 2,
   "mcp_registry": {
-    "current_active_version": "0.2.0",
-    "live_version_prepared": "0.3.0",
-    "live_publish_status": "pending"
+    "current_active_version": "0.3.0",
+    "is_latest": true,
+    "live_publish_status": "active",
+    "publish_run": "https://github.com/mordiaky/vouchspec/actions/runs/29441422704"
   },
   "coinbase_bazaar": {
     "sandbox_entry_exists": true,

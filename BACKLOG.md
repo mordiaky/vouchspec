@@ -10,12 +10,12 @@
 - **Production isolation:** dedicated live database role, live-only RPCs, environment-bound order
   state, tenant separation, idempotency, rate limits, and delivery capabilities.
 - **Distribution:** public discovery, remote read-only MCP, signed catalog, publisher action, and
-  official MCP Registry publication workflow.
+  active official MCP Registry `0.3.0` live listing.
 - **Operations:** scheduled fulfillment enabled; no-job production probe passed.
 
 ## Now — acquire genuine agent revenue
 
-- **B-025:** publish MCP Registry `0.3.0` pointing to the live remote endpoint.
+- **B-025:** completed — MCP Registry `0.3.0` is active and latest, pointing to the live remote endpoint.
 - **B-020/B-021:** continue repository-specific, low-volume external distribution and help
   qualified publishers integrate when invited. Count only unrelated retained use.
 - **B-026:** measure genuine machine requests and repeat use, excluding owner and controlled
