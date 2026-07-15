@@ -34,6 +34,7 @@ from .receipt import deterministic_json
 from .signing import jwk_thumbprint, load_public_jwk, verify_receipt_envelope
 from .stage_b import (
     DockerNoEgressWorker,
+    DockerQuotaGitFetcher,
     FrozenSource,
     _IMAGE_REFERENCE,
     _run_bounded,
@@ -129,6 +130,7 @@ class HostedWorkerConfig:
     worker_token: str
     worker_id: str
     image_reference: str
+    fetcher_image_reference: str
     issuer_private_key: Path
     issuer_passphrase: Path
     issuer_public_key: Path
@@ -143,6 +145,7 @@ class HostedWorkerConfig:
                 "VOUCHSPEC_API_BASE_URL",
                 "VOUCHSPEC_WORKER_TOKEN",
                 "VOUCHSPEC_WORKER_IMAGE",
+                "VOUCHSPEC_FETCHER_IMAGE",
                 "VOUCHSPEC_ISSUER_PRIVATE_KEY",
                 "VOUCHSPEC_ISSUER_PASSPHRASE",
                 "VOUCHSPEC_ISSUER_PUBLIC_KEY",
@@ -160,6 +163,7 @@ class HostedWorkerConfig:
             worker_token=required["VOUCHSPEC_WORKER_TOKEN"],
             worker_id=worker_id,
             image_reference=required["VOUCHSPEC_WORKER_IMAGE"],
+            fetcher_image_reference=required["VOUCHSPEC_FETCHER_IMAGE"],
             issuer_private_key=Path(required["VOUCHSPEC_ISSUER_PRIVATE_KEY"]),
             issuer_passphrase=Path(required["VOUCHSPEC_ISSUER_PASSPHRASE"]),
             issuer_public_key=Path(required["VOUCHSPEC_ISSUER_PUBLIC_KEY"]),
@@ -187,6 +191,16 @@ class HostedWorkerConfig:
         if not _IMAGE_REFERENCE.fullmatch(self.image_reference):
             raise HostedWorkerError(
                 "hosted worker image is not immutable",
+                code="worker_configuration_invalid",
+            )
+        if not _IMAGE_REFERENCE.fullmatch(self.fetcher_image_reference):
+            raise HostedWorkerError(
+                "hosted fetcher image is not immutable",
+                code="worker_configuration_invalid",
+            )
+        if self.fetcher_image_reference == self.image_reference:
+            raise HostedWorkerError(
+                "hosted fetcher and worker images must be distinct",
                 code="worker_configuration_invalid",
             )
         for path, label in (
@@ -542,7 +556,16 @@ def run_once(config: HostedWorkerConfig) -> dict[str, Any]:
     try:
         request_path = config.work_root / "request.json"
         request_path.write_bytes(deterministic_json(job["request"]) + b"\n")
-        frozen = freeze_public_source(job["request"], config.work_root / "frozen")
+        frozen = freeze_public_source(
+            job["request"],
+            config.work_root / "frozen",
+            fetcher=DockerQuotaGitFetcher(config.fetcher_image_reference),
+        )
+        if frozen.manifest["network_phase"] != "kernel_quota_fetch_completed_before_worker":
+            raise HostedWorkerError(
+                "hosted fetch did not use kernel-capped scratch storage",
+                code="source_checkout_failed",
+            )
         if frozen.manifest["request_digest"] != job["request_digest"]:
             raise HostedWorkerError("frozen request digest changed", code="worker_claim_invalid")
         worker_output = config.work_root / "worker-output"

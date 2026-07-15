@@ -21,10 +21,13 @@ from capabilityproof.signing import public_jwk, verify_receipt_envelope
 from capabilityproof.snapshot import ScanLimits, collect_snapshot
 from capabilityproof.stage_b import (
     DockerNoEgressWorker,
+    DockerQuotaGitFetcher,
+    FETCHER_TMPFS_BYTES,
     FROZEN_SOURCE_PROFILE,
     MAX_GIT_REPOSITORY_BYTES,
     _enforce_repository_disk_limit,
     _extract_verified_archive,
+    _extract_git_repository_archive,
     _manifest_digest,
     _parse_tree_listing,
     request_digest,
@@ -206,6 +209,39 @@ def test_git_repository_disk_ceiling_is_enforced(tmp_path: Path) -> None:
         stream.write(b"x")
     with pytest.raises(InputRejected, match="64 MB"):
         _enforce_repository_disk_limit(repository)
+
+
+def test_fetcher_command_uses_kernel_capped_tmpfs_and_no_host_mount(tmp_path: Path) -> None:
+    fetcher = DockerQuotaGitFetcher("sha256:" + "c" * 64)
+    command = fetcher.command(REQUEST["source"], container_name="fetcher-test")
+    rendered = " ".join(command)
+    for required in (
+        "--network bridge", "--read-only", "--cap-drop ALL", "no-new-privileges",
+        "--pids-limit 64", "--memory 256m", "--cpus 1.0", "--user 65532:65532",
+        f"/scratch:rw,noexec,nosuid,nodev,size={FETCHER_TMPFS_BYTES}",
+    ):
+        assert required in rendered
+    assert "--mount" not in command
+    assert REQUEST["source"]["commit"] in command
+    assert REQUEST["source"]["skill_path"] in command
+
+
+def test_fetcher_archive_accepts_only_bounded_git_metadata(tmp_path: Path) -> None:
+    archive = _tar([
+        (".", b"", "directory"),
+        (".git", b"", "directory"),
+        (".git/HEAD", b"ref: refs/heads/main\n", "file"),
+        (".git/config", b"[core]\n\trepositoryformatversion = 0\n", "file"),
+    ])
+    repository = tmp_path / "repository"
+    repository.mkdir()
+    _extract_git_repository_archive(archive, repository)
+    assert (repository / ".git" / "HEAD").read_text() == "ref: refs/heads/main\n"
+
+    escaped = tmp_path / "escaped"
+    escaped.mkdir()
+    with pytest.raises(InputRejected):
+        _extract_git_repository_archive(_tar([("../outside", b"x", "file")]), escaped)
 
 
 def test_archive_is_manually_extracted_and_bound_to_git_blobs(tmp_path: Path) -> None:

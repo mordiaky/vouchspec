@@ -33,6 +33,8 @@ MAX_GIT_DIAGNOSTIC_BYTES = 16_384
 MAX_ARCHIVE_OVERHEAD_BYTES = 4_000_000
 MAX_WORKER_RECEIPT_BYTES = 1_000_000
 MAX_GIT_REPOSITORY_BYTES = 64_000_000
+FETCHER_TMPFS_BYTES = 67_108_864
+FETCHER_ARCHIVE_OVERHEAD_BYTES = 4_000_000
 _SHA256 = re.compile(r"sha256:[0-9a-f]{64}")
 _IMAGE_REFERENCE = re.compile(
     r"(?:sha256:[0-9a-f]{64}|[A-Za-z0-9][A-Za-z0-9._/:+-]{0,254}@sha256:[0-9a-f]{64})"
@@ -372,6 +374,120 @@ def _extract_verified_archive(
         raise InputRejected("archive file set did not match the verified Git tree", code="source_archive_mismatch")
 
 
+def _extract_git_repository_archive(archive: bytes, repository: Path) -> None:
+    """Extract only bounded regular Git metadata emitted by the trusted fetcher image."""
+
+    if any(repository.iterdir()):
+        raise InputRejected("Git fetch destination is not empty", code="source_checkout_failed")
+    entries = 0
+    total = 0
+    try:
+        with tarfile.open(fileobj=io.BytesIO(archive), mode="r:") as stream:
+            for member in stream:
+                name = member.name
+                if name in {".", "./"}:
+                    continue
+                while name.startswith("./"):
+                    name = name[2:]
+                if name in {"", "."}:
+                    continue
+                pure = PurePosixPath(name)
+                if (
+                    pure.is_absolute()
+                    or not pure.parts
+                    or pure.parts[0] != ".git"
+                    or any(part in {"", ".", ".."} for part in pure.parts)
+                    or len(pure.parts) > 20
+                    or len(name.encode("utf-8")) > 2_048
+                    or any(ord(character) < 32 or ord(character) == 127 for character in name)
+                ):
+                    raise InputRejected("Git fetch archive path is invalid", code="source_checkout_failed")
+                entries += 1
+                if entries > 20_000:
+                    raise LimitExceeded("Git fetch archive entry limit exceeded", code="source_checkout_failed")
+                destination = repository.joinpath(*pure.parts)
+                if member.isdir():
+                    destination.mkdir(parents=True, exist_ok=True)
+                    continue
+                if not member.isreg() or member.linkname or member.size < 0:
+                    raise InputRejected("Git fetch archive contains a special entry", code="source_checkout_failed")
+                total += member.size
+                if total > MAX_GIT_REPOSITORY_BYTES:
+                    raise LimitExceeded("Git repository metadata exceeds the 64 MB disk limit")
+                source = stream.extractfile(member)
+                if source is None:
+                    raise InputRejected("Git fetch archive file is unreadable", code="source_checkout_failed")
+                content = source.read(member.size + 1)
+                if len(content) != member.size:
+                    raise InputRejected("Git fetch archive file length changed", code="source_checkout_failed")
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                with destination.open("xb") as output:
+                    output.write(content)
+    except (tarfile.TarError, UnicodeError, OSError) as exc:
+        if isinstance(exc, (InputRejected, LimitExceeded)):
+            raise
+        raise InputRejected("Git fetch archive is invalid", code="source_checkout_failed") from exc
+    if not (repository / ".git" / "HEAD").is_file() or not (repository / ".git" / "config").is_file():
+        raise InputRejected("Git fetch archive is incomplete", code="source_checkout_failed")
+
+
+class DockerQuotaGitFetcher:
+    """Fetch immutable Git objects inside a kernel-capped tmpfs container."""
+
+    def __init__(self, image_reference: str, *, docker_binary: str = "docker") -> None:
+        if not isinstance(image_reference, str) or not _IMAGE_REFERENCE.fullmatch(image_reference):
+            raise ValueError("fetcher image must be an immutable sha256 image ID or registry digest")
+        self.image_reference = image_reference
+        self.docker_binary = docker_binary
+
+    def command(self, source: dict[str, str], *, container_name: str) -> list[str]:
+        return [
+            self.docker_binary,
+            "run", "--rm", "--pull=never", "--name", container_name,
+            "--network", "bridge",
+            "--read-only",
+            "--cap-drop", "ALL",
+            "--security-opt", "no-new-privileges",
+            "--pids-limit", "64",
+            "--memory", "256m",
+            "--cpus", "1.0",
+            "--ipc", "none",
+            "--ulimit", "nofile=128:128",
+            "--ulimit", f"fsize={FETCHER_TMPFS_BYTES}:{FETCHER_TMPFS_BYTES}",
+            "--stop-timeout", "1",
+            "--user", "65532:65532",
+            "--tmpfs", f"/scratch:rw,noexec,nosuid,nodev,size={FETCHER_TMPFS_BYTES}",
+            self.image_reference,
+            source["owner"], source["repository"], source["commit"], source["skill_path"],
+        ]
+
+    def fetch(self, source: dict[str, str], repository: Path, *, timeout_seconds: int = 120) -> None:
+        name = f"vouchspec-fetcher-{uuid4().hex[:20]}"
+        command = self.command(source, container_name=name)
+        try:
+            archive = _run_bounded(
+                command,
+                cwd=repository,
+                timeout_seconds=timeout_seconds,
+                stdout_limit=MAX_GIT_REPOSITORY_BYTES + FETCHER_ARCHIVE_OVERHEAD_BYTES,
+                code="source_checkout_failed",
+                environment=_safe_docker_environment(),
+            )
+        except Exception:
+            subprocess.run(
+                [self.docker_binary, "rm", "-f", name],
+                stdin=subprocess.DEVNULL,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                env=_safe_docker_environment(),
+                timeout=10,
+                check=False,
+            )
+            raise
+        _extract_git_repository_archive(archive, repository)
+        _enforce_repository_disk_limit(repository)
+
+
 def _manifest_digest(manifest: dict[str, Any]) -> str:
     candidate = dict(manifest)
     candidate.pop("manifest_digest", None)
@@ -383,6 +499,7 @@ def freeze_public_source(
     output_root: Path,
     *,
     limits: ScanLimits | None = None,
+    fetcher: DockerQuotaGitFetcher | None = None,
 ) -> FrozenSource:
     """Fetch one immutable GitHub subdirectory and freeze verified regular-file bytes."""
 
@@ -403,15 +520,18 @@ def freeze_public_source(
     partial.mkdir()
     repository.mkdir()
     try:
-        _git(repository, "init", "-q")
-        _git(repository, "config", "core.autocrlf", "false")
-        _git(repository, "config", "core.eol", "lf")
-        _git(repository, "remote", "add", "origin", repository_url)
-        _git(
-            repository,
-            "fetch", "--depth=1", "--no-tags", "--filter=tree:0", "origin", source["commit"],
-            timeout=90,
-        )
+        if fetcher is None:
+            _git(repository, "init", "-q")
+            _git(repository, "config", "core.autocrlf", "false")
+            _git(repository, "config", "core.eol", "lf")
+            _git(repository, "remote", "add", "origin", repository_url)
+            _git(
+                repository,
+                "fetch", "--depth=1", "--no-tags", "--filter=tree:0", "origin", source["commit"],
+                timeout=90,
+            )
+        else:
+            fetcher.fetch(source, repository)
         _enforce_repository_disk_limit(repository)
         fetched = _git(repository, "rev-parse", "FETCH_HEAD").decode("ascii", errors="strict").strip()
         if fetched != source["commit"]:
@@ -463,7 +583,10 @@ def freeze_public_source(
             "file_count": len(files),
             "total_bytes": snapshot.total_bytes,
             "files": files,
-            "network_phase": "completed_before_worker",
+            "network_phase": (
+                "kernel_quota_fetch_completed_before_worker"
+                if fetcher is not None else "completed_before_worker"
+            ),
             "artifact_execution": "not_performed",
         }
         manifest["manifest_digest"] = f"sha256:{_manifest_digest(manifest)}"
@@ -500,7 +623,9 @@ def verify_frozen_source(path: Path, *, limits: ScanLimits | None = None) -> Fro
     if (
         manifest["schema_version"] != "1.0.0"
         or manifest["profile"] != FROZEN_SOURCE_PROFILE
-        or manifest["network_phase"] != "completed_before_worker"
+        or manifest["network_phase"] not in {
+            "completed_before_worker", "kernel_quota_fetch_completed_before_worker"
+        }
         or manifest["artifact_execution"] != "not_performed"
         or not isinstance(manifest["manifest_digest"], str)
         or not _SHA256.fullmatch(manifest["manifest_digest"])

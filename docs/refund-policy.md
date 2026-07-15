@@ -20,3 +20,15 @@ passing label and never changes the receipt's findings or severity.
 
 Refunds reverse counted revenue immediately. Provider processing fees and direct work costs
 remain expenses even when the provider does not return them.
+
+## Agent-only execution
+
+x402 payments cannot be reversed in place. A qualifying remedy is a new USDC transfer to the
+verified payer address from the original signed authorization. VouchSpec fixes the Base network,
+canonical USDC contract, and exact original amount; the executor cannot select a destination or
+amount. Completion requires an independent onchain verification and removes the order from gross
+revenue and goal counters.
+
+The remedy UUID is reused as the wallet-provider idempotency key. Before every retry VouchSpec
+scans from a durable pre-send block checkpoint. If certainty is not restored before the provider's
+documented idempotency window closes, VouchSpec holds rather than risking a second transfer.
