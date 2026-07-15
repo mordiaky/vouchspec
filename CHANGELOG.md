@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Launch the agent-only commercial endpoint at 0.25 USDC on Base mainnet, activate the isolated
+  fulfillment worker, and move the official MCP Registry remote from sandbox to the live service.
 - Replace the unsupported $49/Stripe-era price card with the researched 0.25-USDC agent-only
   x402 launch cohort, timestamped full-Bazaar evidence, and predeclared $0.10/$0.50 cohort gates.
 - Preserve publisher receipt/binding evidence for both structural passes and explicit

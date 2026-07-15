@@ -1,15 +1,15 @@
 {
   "schema_version": "1.2.0",
   "service": "VouchSpec",
-  "stage": "B_PUBLIC_X402_SANDBOX",
+  "stage": "B_PUBLIC_X402_MAINNET",
   "provisional_name": true,
   "internal_codename_replaced": true,
   "repository": "https://github.com/mordiaky/vouchspec",
-  "release": "https://github.com/mordiaky/vouchspec/releases/tag/v0.2.0",
-  "documentation": "https://vouchspec-sandbox.plyrium.com/vouchspec",
+  "release": "https://github.com/mordiaky/vouchspec/releases/tag/v0.3.0",
+  "documentation": "https://vouchspec.plyrium.com/vouchspec",
   "api": {
-    "base_url": "https://vouchspec-sandbox.plyrium.com",
-    "environment": "test",
+    "base_url": "https://vouchspec.plyrium.com",
+    "environment": "live",
     "agent_only": true,
     "self_service_registration": true,
     "health": "/api/vouchspec/v1/health",
@@ -33,15 +33,15 @@
   "x402": {
     "version": 2,
     "scheme": "exact",
-    "network": "eip155:84532",
+    "network": "eip155:8453",
     "asset": "USDC",
-    "sandbox_amount": "1.00",
-    "sandbox_atomic_amount": "1000000",
+    "amount": "0.25",
+    "atomic_amount": "250000",
     "payment_required_header": "PAYMENT-REQUIRED",
     "payment_signature_header": "PAYMENT-SIGNATURE",
     "payment_response_header": "PAYMENT-RESPONSE",
     "testnet_settlement_available": true,
-    "mainnet_settlement_available": false,
+    "mainnet_settlement_available": true,
     "human_checkout": false,
     "sandbox_activity_counts_for_goal": false
   },
@@ -55,8 +55,8 @@
     "out_of_band_jwks": "https://gist.github.com/mordiaky/794e30c1c33ba1663921718cc8d530e1",
     "root_keyid": "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4",
     "catalog_issuer_keyid": "Q0EBNE_1fY4jjTLAHn8nDZKdxppYmH1DkKOpV8gukDo",
-    "sandbox_issuer_keyid": "PWGCY2HpACKhufnSBjbf2zwMzThqxyPTz_MAwCyJ0I0",
-    "sandbox_issuer_jwk": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/keys/issuer",
+    "live_issuer_keyid": "m3Vz2bX1-lZ-osJb91mHCNE_-Lehx2fFc2TvExDbbn0",
+    "live_issuer_jwk": "https://vouchspec.plyrium.com/api/vouchspec/v1/keys/issuer",
     "limitation": "The catalog Gist is separate from the repository but shares the same GitHub account. Pin trust material through an independently controlled channel for higher assurance."
   },
   "receipts": {
@@ -82,7 +82,7 @@
     ],
     "remote": {
       "transport": "streamable-http",
-      "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp",
+      "url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp",
       "protocol_version": "2025-11-25",
       "response_mode": "stateless_json",
       "anonymous_read_only": true,
@@ -110,15 +110,15 @@
     "private_content_accepted": false,
     "artifact_code_executed": false,
     "paid_testnet_orders_accepted": true,
-    "paid_mainnet_orders_accepted": false,
+    "paid_mainnet_orders_accepted": true,
     "human_call_required": false
   },
   "pricing": {
     "catalog_search_usd": "0.00",
     "receipt_retrieval_usd": "0.00",
     "sandbox_fresh_validation_test_usdc": "1.00",
-    "commercial_fresh_validation_hypothesis_usd": "0.25",
+    "commercial_fresh_validation_usdc": "0.25",
     "sandbox_orderable": true,
-    "commercial_orderable": false
+    "commercial_orderable": true
   }
 }

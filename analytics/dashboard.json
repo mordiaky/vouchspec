@@ -1,7 +1,22 @@
 {
   "schema_version": 1,
-  "as_of": "2026-07-15T16:06:42Z",
+  "as_of": "2026-07-15T18:23:50Z",
   "goal_achieved": false,
+  "commercial_launch": {
+    "live": true,
+    "agent_only": true,
+    "endpoint": "https://vouchspec.plyrium.com/api/vouchspec/v1/validate",
+    "payment_protocol": "x402_v2_exact",
+    "network": "eip155:8453",
+    "price_usdc": "0.25",
+    "atomic_amount": "250000",
+    "fulfillment_enabled": true,
+    "remedies_enabled": false,
+    "remedies_launch_blocker": false,
+    "production_deployment": "dpl_5M1DiVCyj7efCgqiBHDsG6QhbfLy",
+    "public_health": "passed_200",
+    "public_unpaid_purchase": "passed_402"
+  },
   "publisher_integrations": {"verified": 0, "required": 3},
   "machine_requests": {"verified": 0, "required": 100},
   "machine_sources": {"verified": 0, "required": 10},
@@ -15,31 +30,19 @@
   "qualified_prospects": 3,
   "contacts": 3,
   "open_external_proposals": 2,
+  "mcp_registry": {
+    "current_active_version": "0.2.0",
+    "live_version_prepared": "0.3.0",
+    "live_publish_status": "pending"
+  },
+  "coinbase_bazaar": {
+    "sandbox_entry_exists": true,
+    "mainnet_entry_status": "pending_first_external_successful_settlement",
+    "owner_seed_allowed": false
+  },
   "stage_b_sandbox": {
     "signed_deliveries": 2,
     "settled_revenue_usd": "0.00",
-    "counts_for_goal": false,
-    "engineering_tests_passed": 141,
-    "engineering_tests_skipped": 1,
-    "public_ci_run": "https://github.com/mordiaky/vouchspec/actions/runs/29427544292",
-    "public_ci_commit": "cd189ab48ec12bf5ad9533c8322ddf3bed779d86",
-    "public_ci_status": "passed"
-  },
-  "x402_bazaar_seed": {
-    "publicly_indexed": true,
-    "test_usdc_settled": "1.000000",
-    "settlement_transaction": "0xb8e841903c0b948a639a47c33dbcf5eb63ed09ee5f727004e876005bc9e23a17",
-    "receipt_digest": "sha256:da6d3b8f6d6e99390efc98c050f83e45a7a8121d736759f32400309263470bd3",
-    "fulfillment_run": "https://github.com/mordiaky/vouchspec/actions/runs/29377467330",
-    "counts_for_goal": false
-  },
-  "stripe_test_probe": {
-    "account_identity_verified": true,
-    "checkout_sessions_created": 2,
-    "checkout_sessions_expired_unpaid": 2,
-    "authenticated_http_checkout_probes": 1,
-    "exact_body_webhook_route_tested": true,
-    "charges_created": 0,
     "counts_for_goal": false
   },
   "exclusions": [

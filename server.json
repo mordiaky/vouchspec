@@ -3,17 +3,17 @@
   "name": "io.github.mordiaky/vouchspec",
   "title": "VouchSpec Agent Skill Evidence",
   "description": "Read-only discovery for exact-commit Agent Skill validation, x402 payment, and signed receipts.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": {
     "url": "https://github.com/mordiaky/vouchspec",
     "source": "github",
     "id": "1300069049"
   },
-  "websiteUrl": "https://vouchspec-sandbox.plyrium.com/vouchspec",
+  "websiteUrl": "https://vouchspec.plyrium.com/vouchspec",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp"
+      "url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp"
     }
   ]
 }

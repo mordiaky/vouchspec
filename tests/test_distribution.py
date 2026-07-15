@@ -40,14 +40,19 @@ def test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expres
     assert "PUBLISHER_CI_ATTESTED" not in action_path.read_text(encoding="utf-8")
 
 
-def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() -> None:
+def test_machine_discovery_exposes_agent_only_x402_mainnet_and_cache_contract() -> None:
     discovery = json.loads((ROOT / "distribution" / "discovery.json").read_text(encoding="utf-8"))
     assert discovery["schema_version"] == "1.2.0"
     assert discovery["service"] == "VouchSpec"
-    assert discovery["stage"] == "B_PUBLIC_X402_SANDBOX"
+    assert discovery["stage"] == "B_PUBLIC_X402_MAINNET"
     assert discovery["internal_codename_replaced"] is True
+    assert discovery["release"].endswith("/releases/tag/v0.3.0")
+    assert discovery["api"]["environment"] == "live"
     assert discovery["trust"]["root_keyid"] == "zccWAwcnMzkQQUn8MXQDnpfUeGF0oavBZgYDoYfKgs4"
-    assert discovery["trust"]["sandbox_issuer_keyid"] == "PWGCY2HpACKhufnSBjbf2zwMzThqxyPTz_MAwCyJ0I0"
+    assert discovery["trust"]["live_issuer_keyid"] == "m3Vz2bX1-lZ-osJb91mHCNE_-Lehx2fFc2TvExDbbn0"
+    assert discovery["trust"]["live_issuer_jwk"] == (
+        "https://vouchspec.plyrium.com/api/vouchspec/v1/keys/issuer"
+    )
     assert discovery["mcp"]["transport"] == "stdio"
     assert discovery["publisher_ci_action"].endswith("@ed812a14cbc62333d59bac319f79d897f14d1b64")
     assert discovery["publisher_ci_demo"] == "https://github.com/mordiaky/vouchspec-demo"
@@ -61,7 +66,7 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
     remote_mcp = discovery["mcp"]["remote"]
     assert remote_mcp == {
         "transport": "streamable-http",
-        "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp",
+        "url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp",
         "protocol_version": "2025-11-25",
         "response_mode": "stateless_json",
         "anonymous_read_only": True,
@@ -75,35 +80,36 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
             "search=io.github.mordiaky%2Fvouchspec"
         ),
     }
-    assert discovery["api"]["base_url"] == "https://vouchspec-sandbox.plyrium.com"
+    assert discovery["api"]["base_url"] == "https://vouchspec.plyrium.com"
     assert discovery["api"]["agent_only"] is True
     assert discovery["api"]["self_service_registration"] is True
     assert discovery["api"]["authentication"]["delivery_header"] == "X-VouchSpec-Delivery-Token"
     assert discovery["x402"] == {
         "version": 2,
         "scheme": "exact",
-        "network": "eip155:84532",
+        "network": "eip155:8453",
         "asset": "USDC",
-        "sandbox_amount": "1.00",
-        "sandbox_atomic_amount": "1000000",
+        "amount": "0.25",
+        "atomic_amount": "250000",
         "payment_required_header": "PAYMENT-REQUIRED",
         "payment_signature_header": "PAYMENT-SIGNATURE",
         "payment_response_header": "PAYMENT-RESPONSE",
         "testnet_settlement_available": True,
-        "mainnet_settlement_available": False,
+        "mainnet_settlement_available": True,
         "human_checkout": False,
         "sandbox_activity_counts_for_goal": False,
     }
     assert discovery["boundary"]["artifact_submissions_accepted"] is False
     assert discovery["boundary"]["public_github_coordinates_accepted"] is True
     assert discovery["boundary"]["paid_testnet_orders_accepted"] is True
-    assert discovery["boundary"]["paid_mainnet_orders_accepted"] is False
+    assert discovery["boundary"]["paid_mainnet_orders_accepted"] is True
     assert discovery["boundary"]["human_call_required"] is False
     assert discovery["receipts"]["cacheable"] is True
     assert discovery["receipts"]["shareable"] is True
     assert discovery["receipts"]["invalidation_status_is_separate"] is True
     assert discovery["pricing"]["sandbox_fresh_validation_test_usdc"] == "1.00"
-    assert discovery["pricing"]["commercial_fresh_validation_hypothesis_usd"] == "0.25"
+    assert discovery["pricing"]["commercial_fresh_validation_usdc"] == "0.25"
+    assert discovery["pricing"]["commercial_orderable"] is True
 
 
 def test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready() -> None:
@@ -116,7 +122,7 @@ def test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready(
         "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json"
     )
     assert manifest["name"] == "io.github.mordiaky/vouchspec"
-    assert manifest["version"] == "0.2.0"
+    assert manifest["version"] == "0.3.0"
     assert manifest["repository"] == {
         "url": "https://github.com/mordiaky/vouchspec",
         "source": "github",
@@ -125,7 +131,7 @@ def test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready(
     assert manifest["remotes"] == [
         {
             "type": "streamable-http",
-            "url": "https://vouchspec-sandbox.plyrium.com/api/vouchspec/v1/mcp",
+            "url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp",
         }
     ]
     assert "workflow_dispatch:" in workflow
