@@ -1,0 +1,29 @@
+{
+  "claim": {
+    "schema": "rwt6-empirical-observation-claim-v1",
+    "subject": "vouchspec.live_x402_network"
+  },
+  "policy": {
+    "agreement": "unanimous",
+    "max_body_bytes": 1048576,
+    "require_distinct_hosts": true,
+    "required_sources": 2,
+    "schema": "rwt6-empirical-evidence-policy-v1",
+    "timeout_seconds": 20
+  },
+  "schema": "rwt6-empirical-evidence-request-v1",
+  "sources": [
+    {
+      "pointer": "/endpoints/0/accepts/0/network",
+      "schema": "rwt6-empirical-json-source-v1",
+      "source_id": "vouchspec_manifest",
+      "url": "https://vouchspec.plyrium.com/.well-known/x402"
+    },
+    {
+      "pointer": "/payment/network",
+      "schema": "rwt6-empirical-json-source-v1",
+      "source_id": "agent_tools_directory",
+      "url": "https://agent-tools.cloud/api/v1/services/vouchspec-agent-skill-evidence-x402"
+    }
+  ]
+}

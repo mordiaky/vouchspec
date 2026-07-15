@@ -25,7 +25,15 @@
     "mcp_registry_version": "0.3.0",
     "mcp_registry_status": "active_latest",
     "mcp_registry_publish_run": "https://github.com/mordiaky/vouchspec/actions/runs/29441422704",
-    "remote_mcp_url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp"
+    "remote_mcp_url": "https://vouchspec.plyrium.com/api/vouchspec/v1/mcp",
+    "x402_manifest_url": "https://vouchspec.plyrium.com/.well-known/x402",
+    "agent_tools_x402_slug": "vouchspec-plyrium-com-sub91",
+    "agent_tools_x402_status": "auto_verified_listed",
+    "agent_tools_mcp_slug": "vouchspec-agent-skill-evidence",
+    "agent_tools_mcp_status": "provider_reported_ok_and_x402_enabled",
+    "agent_tools_derived_x402_slug": "vouchspec-agent-skill-evidence-x402",
+    "empirical_network_receipt": "audit/empirical/vouchspec-live-x402-network-receipt.json",
+    "empirical_network_receipt_sha256": "19475abb9672660e902abcee4c0c56fdd640ba42430fee503f8c3ce17409a235"
   },
   "publisher_adoption": {
     "required_integrations": 3,
@@ -66,7 +74,7 @@
     "live_fulfillment_status": "active_scheduled_and_manual_no_job_probe_passed",
     "live_remedy_status": "disabled_unfunded_not_a_launch_blocker",
     "commercial_hostname": "https://vouchspec.plyrium.com",
-    "commercial_hostname_status": "live_health_200_discovery_200_unpaid_requests_402",
+    "commercial_hostname_status": "live_health_200_discovery_200_x402_manifest_200_unpaid_requests_402",
     "live_receiving_address_status": "validated_and_stored_in_vercel_production",
     "live_orderable": true,
     "live_settlement_available": true,
@@ -83,6 +91,7 @@
       "production mainnet receiver configured",
       "production migration 20260715121500 applied and verified",
       "live health discovery and exact 0.25-USDC Base 402 probes passed",
+      "public x402 well-known manifest deployed and independently directory-verified",
       "scheduled fulfillment enabled and no-job worker probe passed"
     ],
     "remaining_gates": [
@@ -118,6 +127,7 @@
     "connected_repository_production_commit": "3bfcfb55",
     "connected_repository_production_deployment": "dpl_5M1DiVCyj7efCgqiBHDsG6QhbfLy",
     "public_health_probe": "passed_200",
+    "public_x402_manifest_probe": "passed_200_public_json",
     "public_x402_probe": "passed_402_exact_250000_base_usdc",
     "fulfillment_probe": "https://github.com/mordiaky/vouchspec/actions/runs/29439885033",
     "fulfillment_probe_status": "passed_no_job",
@@ -132,10 +142,11 @@
   ],
   "human_actions_requested": [],
   "top_next_actions": [
-    "Acquire the first independently attributable agent buyer through public agent discovery channels",
+    "Monitor the active Agent Tools x402 and MCP listings for the first independently attributable agent buyer",
+    "Expand only through agent-readable zero-cost channels that do not require owner contracts or human checkout",
     "Monitor settlement fulfillment delivery and receipt status without counting owner or controlled traffic",
     "Apply the predeclared pricing cohort rules only after qualified mainnet evidence"
   ],
-  "last_checkpoint_time": "2026-07-15T18:40:02Z",
-  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health and discovery return 200; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Official MCP Registry version 0.3.0 is active and latest at the live remote endpoint. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next acquire unrelated external agents and monitor genuine settlements and delivery."
+  "last_checkpoint_time": "2026-07-15T21:01:00Z",
+  "resume_instruction": "Commercial VouchSpec is live at https://vouchspec.plyrium.com. Health, discovery, and /.well-known/x402 return 200; an unpaid fully schema-valid validation request returns x402 v2 HTTP 402 for exactly 250000 atomic USDC on eip155:8453. Agent Tools auto-verified and listed the direct x402 service, refreshed the MCP server as healthy, and created a derived x402 service entry. The two-host empirical network receipt was independently accepted and replayed. Official MCP Registry version 0.3.0 remains active. Fulfillment is enabled and run 29439885033 passed with no queued order. Remedies remain disabled and unfunded by owner direction and are not a launch blocker. Do not self-pay, count owner traffic, or move funds. Next monitor genuine directory-referred settlements and expand only through agent-readable channels."
 }
