@@ -1,0 +1,39 @@
+name: VouchSpec x402 reconciliation and remedies
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vouchspec-mainnet-remedies
+  cancel-in-progress: false
+
+jobs:
+  reconcile-and-remedy-one:
+    if: vars.VOUCHSPEC_REMEDIES_ENABLED == 'true' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: vouchspec-mainnet-remedies
+    steps:
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: distribution/remedy-executor/package-lock.json
+      - name: Install hash-locked remedy executor
+        run: npm ci --ignore-scripts --prefix distribution/remedy-executor
+      - name: Reconcile one payment and execute at most one remedy
+        env:
+          VOUCHSPEC_API_BASE_URL: ${{ vars.VOUCHSPEC_API_BASE_URL }}
+          VOUCHSPEC_REMEDY_WORKER_ID: github-actions-remedy
+          VOUCHSPEC_REMEDY_TOKEN: ${{ secrets.VOUCHSPEC_REMEDY_TOKEN }}
+          CDP_REMEDY_ACCOUNT_ADDRESS: ${{ vars.CDP_REMEDY_ACCOUNT_ADDRESS }}
+          CDP_API_KEY_ID: ${{ secrets.CDP_API_KEY_ID }}
+          CDP_API_KEY_SECRET: ${{ secrets.CDP_API_KEY_SECRET }}
+          CDP_WALLET_SECRET: ${{ secrets.CDP_WALLET_SECRET }}
+        run: node distribution/remedy-executor/index.mjs

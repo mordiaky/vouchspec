@@ -85,18 +85,21 @@ cost fields, envelope/receipt identifiers, delivery state, remedy state, and con
 Only an unrelated buyer's Base mainnet settlement may become revenue, and only after exclusion
 of owner/related/test funds and any refund, reversal, dispute, or unresolved remedy.
 
-x402 does not supply a card-style refund object. Before mainnet activation VouchSpec must make
-the disclosed automatic remedy executable as an onchain return/payment operation, record its
-transaction and costs, and prevent the refunded amount from counting toward settled gross.
+x402 does not supply a card-style refund object. VouchSpec therefore models a remedy as a new,
+fixed USDC transfer from a separate balance-capped wallet to the payer proven by the original
+authorization. The durable state machine covers duplicate settlement and terminal objective
+fulfillment failure, uniquely binds settlement/remedy transactions, stops uncertain retries
+before the provider idempotency window closes, and excludes returned funds from settled gross.
+The wallet executor remains disabled until its live account policy and bounded float are verified.
 
 ## Remaining mainnet gates
 
 - Configure a separate live receiving identity, mainnet facilitator/network allowlist, live
   secrets, and isolated live database. Test and live objects must never share state.
+- Provision the separate CDP remedy account, attach its Base/USDC/amount/function policy, cap its
+  float, and pass negative policy probes before enabling its protected scheduled workflow.
 - Exercise settlement recovery against mainnet-compatible RPC/facilitator behavior without
   weakening the current fail-closed checkpoint and replay controls.
-- Implement and test the automatic onchain remedy/refund path, including duplicate settlement,
-  fulfillment failure, invalid signature, and wrong source/commit/path/digest cases.
 - Reconcile actual chain/facilitator, worker, storage, delivery, and remedy costs per order and
   refuse work that cannot retain positive contribution at the quoted price.
 - Run a genuine unrelated agent purchase, preserve its attribution evidence, and count it only

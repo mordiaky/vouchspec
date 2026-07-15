@@ -162,7 +162,8 @@ headers, network, price, trust, caching, and product-boundary fields.
 The hosted proof is owner-controlled and testnet-only, so it demonstrates mechanics but counts
 as no customer, request, buyer, or revenue. See the [Stage B operating boundary](docs/stage-b-operations.md),
 [payment flow](docs/payment-flow.md), [managed deployment boundary](deploy/README.md), and
-[refund policy](docs/refund-policy.md).
+[refund policy](docs/refund-policy.md), and
+[mainnet remedy operations](docs/mainnet-remedy-operations.md).
 
 ## Local commerce harness
 

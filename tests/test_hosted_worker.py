@@ -128,6 +128,7 @@ def test_signer_command_is_separate_no_egress_and_receives_only_read_only_inputs
         worker_token="vsw_test_" + "A" * 43,
         worker_id="github-actions-stage-b",
         image_reference="sha256:" + "b" * 64,
+        fetcher_image_reference="sha256:" + "c" * 64,
         issuer_private_key=private,
         issuer_passphrase=passphrase,
         issuer_public_key=public,

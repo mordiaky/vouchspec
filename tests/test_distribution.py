@@ -88,6 +88,17 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
     assert discovery["pricing"]["commercial_fresh_validation_hypothesis_usd"] == "0.25"
 
 
+def test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped() -> None:
+    workflow = (ROOT / ".github" / "workflows" / "vouchspec-remedies.yml").read_text(
+        encoding="utf-8"
+    )
+    assert "vars.VOUCHSPEC_REMEDIES_ENABLED == 'true'" in workflow
+    assert "github.ref == 'refs/heads/main'" in workflow
+    assert "environment: vouchspec-mainnet-remedies" in workflow
+    assert "permissions:\n  contents: read" in workflow
+    assert "npm ci --ignore-scripts --prefix distribution/remedy-executor" in workflow
+
+
 def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands() -> None:
     workflow_path = ROOT / ".github" / "workflows" / "vouchspec-fulfillment.yml"
     workflow = workflow_path.read_text(encoding="utf-8")

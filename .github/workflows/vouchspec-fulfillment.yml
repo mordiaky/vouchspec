@@ -81,6 +81,16 @@ jobs:
           image="$(docker image inspect "vouchspec-stage-b-worker:${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" --format '{{.Id}}')"
           case "$image" in sha256:????????????????????????????????????????????????????????????????) ;; *) exit 1 ;; esac
           echo "image=$image" >> "$GITHUB_OUTPUT"
+      - name: Build immutable kernel-quota fetcher image
+        if: steps.claim.outputs.has_job == 'true'
+        id: fetcher-image
+        run: |
+          set -euo pipefail
+          docker build --pull --tag "vouchspec-stage-b-fetcher:${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --file distribution/stage-b-fetcher/Dockerfile .
+          image="$(docker image inspect "vouchspec-stage-b-fetcher:${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" --format '{{.Id}}')"
+          case "$image" in sha256:????????????????????????????????????????????????????????????????) ;; *) exit 1 ;; esac
+          echo "image=$image" >> "$GITHUB_OUTPUT"
       - name: Materialize encrypted signing key
         if: steps.claim.outputs.has_job == 'true'
         env:
@@ -106,6 +116,7 @@ jobs:
           VOUCHSPEC_WORKER_TOKEN: ${{ secrets.VOUCHSPEC_WORKER_TOKEN }}
           VOUCHSPEC_WORKER_ID: github-actions-stage-b
           VOUCHSPEC_WORKER_IMAGE: ${{ steps.worker-image.outputs.image }}
+          VOUCHSPEC_FETCHER_IMAGE: ${{ steps.fetcher-image.outputs.image }}
           VOUCHSPEC_ISSUER_PRIVATE_KEY: ${{ env.VOUCHSPEC_SECRET_DIR }}/issuer-private.pem
           VOUCHSPEC_ISSUER_PASSPHRASE: ${{ env.VOUCHSPEC_SECRET_DIR }}/issuer-passphrase
           VOUCHSPEC_ISSUER_PUBLIC_KEY: ${{ github.workspace }}/distribution/trust/stage-b-issuer.jwk.json

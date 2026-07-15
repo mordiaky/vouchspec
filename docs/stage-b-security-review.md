@@ -1,8 +1,9 @@
 # Stage B managed x402 security review
 
-Reviewed 2026-07-14 against the managed tenant/quote/order/payment API, durable x402 state,
-private fulfillment lease, immutable Git intake, no-egress worker, separate no-egress signer,
-public receipt cache, and live invalidation resource. This supersedes the earlier local
+Reviewed 2026-07-15 against the managed tenant/quote/order/payment API, durable x402 state,
+private fulfillment lease, kernel-quota immutable Git intake, no-egress worker, separate
+no-egress signer, payer-derived onchain remedies, public receipt cache, and live invalidation
+resource. This supersedes the earlier local
 Stripe/loopback launch assessment; the Stripe adapter remains regression-only.
 
 ## Closed launch findings
@@ -91,28 +92,43 @@ Stripe/loopback launch assessment; the Stripe adapter remains regression-only.
   headerless discovery and chunked paid retry while retaining strict media, length, schema, and
   paid-body checks. One owner-controlled Base-Sepolia payment settled through CDP, fulfilled and
   signed successfully, and both CDP semantic search and merchant discovery now return the
-  canonical endpoint. The test remains excluded from all commercial counters.
+canonical endpoint. The test remains excluded from all commercial counters.
+
+### Networked Git expansion exhausting host storage
+
+- **Risk:** a malicious partial clone could transiently write a pack larger than the logical
+  post-fetch ceiling before the host measured it.
+- **Control and evidence:** the only networked Git process runs in a separate non-root,
+  read-only container with no host mount and a 64 MiB kernel-enforced tmpfs. It fetches one exact
+  commit, materializes only the requested tree while still inside that quota, removes the remote,
+  and emits bounded Git metadata. The host accepts only regular `.git` metadata under independent
+  entry and byte ceilings, then verifies and freezes the requested blobs offline. A real pinned
+  public commit completed after the remote had been removed.
+
+### Irreversible x402 failures or duplicate settlement
+
+- **Risk:** x402 settlement is an irreversible push payment; an unknown facilitator result or an
+  objective fulfillment failure could retain funds without delivery, and retrying a return could
+  pay twice.
+- **Control:** the database durably checkpoints settlement recovery, uniquely assigns each
+  network/settlement transaction, derives every remedy destination from the verified payer, and
+  fixes network, canonical USDC asset, and amount. A dedicated lease-bound executor can submit
+  only an ERC-20 `transfer` through an isolated CDP wallet. The web application independently
+  verifies sender, token contract, calldata, amount, successful receipt, exact Transfer log, and
+  confirmation before marking the payment refunded. The remedy ID is the provider idempotency
+  key; retries stop before the documented 24-hour replay window closes and later claims scan the
+  chain before considering a send. Returned funds are immediately excluded from revenue and goal
+  counters.
 
 ## Residual mainnet gates
-
-### Onchain remedies are not yet executable
-
-The policy promises automatic remedies for duplicate settlement and objective VouchSpec failures.
-Before mainnet, implement and test the return transaction, destination binding, idempotency,
-accounting exclusion, and recovery behavior. Testnet proof alone is not a refund mechanism.
-
-### Networked Git scratch storage lacks a mid-write kernel quota
-
-The fetch phase uses exact Git coordinates, partial fetch, process timeout, post-phase metadata
-ceilings, bounded archive/extraction, and cleanup. A maliciously large pack could transiently
-exceed the logical ceiling before the post-command check. Mainnet deployment must use disposable
-storage with a kernel-enforced quota.
 
 ### Live environment separation is unproven
 
 Mainnet requires distinct receiver policy, network/facilitator allowlist, secrets, database,
-issuer policy, credentials, monitoring, and financial ledger. Any test/live cross-binding must
-fail closed and no test object may be promoted into commercial evidence.
+issuer policy, credentials, monitoring, financial ledger, and a dedicated balance-capped remedy
+wallet with its account policy actually attached. Any test/live cross-binding must fail closed,
+the executor must remain disabled until provisioning is verified, and no test object may be
+promoted into commercial evidence.
 
 ### Positive contribution is unproven
 

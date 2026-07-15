@@ -1,10 +1,12 @@
 # Stage B public-repository validation
 
 Status: a managed public testnet service now completes authenticated registration, quote, order,
-x402 settlement, immutable retrieval, no-egress inspection, separate no-egress signing, signed
-delivery, content-addressed receipt publication, and live invalidation status without a human
-step. The stable base URL is `https://vouchspec-sandbox.plyrium.com`. Base mainnet and commercial
-accounting remain fail-closed.
+x402 settlement, kernel-quota immutable retrieval, no-egress inspection, separate no-egress
+signing, signed delivery, content-addressed receipt publication, and live invalidation status
+without a human step. Durable payer-derived onchain remedies are implemented but their separate
+wallet executor is disabled until live policy and funding are provisioned. The stable base URL is
+`https://vouchspec-sandbox.plyrium.com`. Base mainnet and commercial accounting remain
+fail-closed.
 
 ## Accepted request boundary
 
@@ -34,9 +36,10 @@ instruction, or executable upload.
    `counts_for_goal: false`.
 5. A private worker endpoint leases at most one paid job. The bearer worker credential is
    separate from buyer credentials, wallet material, delivery tokens, and signing material.
-6. The networked fetch phase initializes a credential-free Git repository with system/global
-   configuration disabled, permits HTTPS only, fetches the exact commit, and verifies
-   `FETCH_HEAD`.
+6. The networked fetch phase runs in a separate immutable, non-root container with a read-only
+   root, no host mount, and a 64 MiB kernel-enforced `/scratch` tmpfs. It disables ambient Git
+   configuration and credentials, permits HTTPS only, fetches the exact commit, materializes the
+   requested tree inside the quota, verifies `FETCH_HEAD`, and removes its remote before export.
 7. Git tree records are parsed before extraction. Only regular `100644` and `100755` blobs are
    accepted. Symlinks, submodules, special entries, traversal, control characters, non-NFC paths,
    reserved device names, and case collisions fail closed.
@@ -82,6 +85,8 @@ URLs, logs, source control, artifact input, or public receipt content.
 ## Hard ceilings
 
 - Git repository metadata after each networked phase: 64,000,000 bytes.
+- Fetcher writable storage: 64 MiB kernel-enforced tmpfs; no writable host mount.
+- Fetcher metadata stream: 68,000,000 bytes maximum and 20,000 archive entries.
 - Git command metadata output: 2,000,000 bytes.
 - Artifact: 1,000 files, 2,000 entries, 256 directories, depth 32.
 - Artifact bytes: 25,000,000 total; 2,000,000 per file; 1,000,000 for `SKILL.md`.
@@ -93,8 +98,24 @@ URLs, logs, source control, artifact input, or public receipt content.
 
 These limits are evidence about this implementation, not a universal safety guarantee. Networked
 retrieval still trusts GitHub plus HTTPS/DNS infrastructure, and static parsing does not observe
-runtime behavior. The Git phase enforces its metadata ceiling after each phase but does not yet
-have a kernel quota that interrupts a single mid-write expansion.
+runtime behavior.
+
+## Payment recovery and remedy worker
+
+An orchestration-only API token leases stale x402 reconciliation and fixed remedy jobs. Wallet
+credentials are never deployed to the web application or fulfillment worker. A separate disabled
+GitHub workflow holds the CDP credential only inside the `vouchspec-mainnet-remedies` environment.
+It first terminalizes at most one paid fulfillment that remained unclaimed for 30 minutes,
+recovers unknown settlement outcomes, then claims at most one remedy, scans from the durable
+pre-send block checkpoint, and submits at most one fixed USDC transfer using the remedy UUID as
+Coinbase's idempotency key.
+
+The application, not the wallet executor, decides the destination and amount. It accepts
+completion only after an independent Base RPC check proves the dedicated remedy account called
+canonical USDC `transfer(payer, 250000)`, emitted exactly one matching Transfer log, succeeded,
+and has a confirmation. A unique settlement-transaction index prevents one onchain payment from
+being credited twice. A 23-hour retry cutoff stops sends before Coinbase's 24-hour idempotency
+retention expires. See [mainnet remedy operations](mainnet-remedy-operations.md).
 
 ## Hosted owner-excluded proof
 
@@ -151,11 +172,11 @@ wallet credentials; payment verification/settlement and fulfillment are separate
 
 - Separate live receiving wallet, facilitator/network allowlist, secrets, state, issuer policy,
   and accounting from every testnet object.
+- Create and attach the dedicated CDP remedy-account policy, fund only the bounded operating
+  float, configure the protected workflow environment, and verify policy rejection probes before
+  enabling the schedule.
 - Preserve the existing payment recovery checkpoint and prove mainnet-compatible recovery for
   unknown facilitator outcomes without double settlement or fulfillment.
-- Implement the disclosed onchain automatic remedy/refund path and exclude returned funds from
-  settled gross.
-- Add a kernel-enforced quota to the transient networked fetch volume before commercial scale.
 - Reconcile actual chain/facilitator, worker, storage, delivery, and remedy costs per order and
   require positive contribution.
 - Complete a genuine unrelated-agent mainnet purchase and independently preserve attribution,
