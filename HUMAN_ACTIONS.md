@@ -1,11 +1,13 @@
 # Human actions
 
-One owner-only action is required to finish mainnet activation. Coinbase's documented API and
-official CLI can use wallet credentials, but Coinbase documents creation and permission changes
-only through the CDP Portal; the valid x402 credential cannot list or create Wallet API accounts.
+One owner-only action is required to finish mainnet activation. The newly supplied key was tested
+without disclosure: it authenticates to x402 but cannot perform the first read-only Wallet API
+account-list operation even when paired with the protected Wallet Secret. It is therefore the
+wrong key type. The blank local Wallet Secret did not cause that read failure.
 
-Create one new **CDP Secret API Key** with Wallet API permission to list/create EVM accounts and
-sign/send transactions, and generate its **Wallet Secret**. Store the three values in
+Create one new **Server Wallet API key** with Wallet API permission to list/create EVM accounts
+and sign/send policy-limited transactions, and separately generate its **Wallet Secret**. Replace
+the existing values and fill the blank third value in
 `D:\Projects\plyrium.env` under these exact names:
 
 ```text

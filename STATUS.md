@@ -35,6 +35,15 @@
   on the production project. Vercel deployment `dpl_58K3YWwY1vetfS3vhcgU2iPFCijr` is READY at the
   merged commit, and post-merge CI run `29414816988` passed. Commerce, fulfillment, and remedies
   remain disabled pending wallet identities and the final activation smoke.
+- **Machine-only hostname:** Plyrium PR `#41` is merged at
+  `d54196fe33e3bdde075f5c44c6ed68edbab0c957`. Vercel production deployment
+  `dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr` is READY and main CI run `29418546016`
+  passed all 185 tests, audits, and the production build. Public probes confirm that
+  `vouchspec.plyrium.com/` and stray paths such as `/pricing` return a 308 redirect to the
+  machine discovery contract; following the root ends at the intentionally disabled 503 JSON
+  response. `www.plyrium.com/` remains 200 and unchanged. The sandbox API remains healthy at
+  200, but its custom-domain root is still pinned to yesterday's preview and returns the staging
+  401 until a healthy replacement preview is available.
 - **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
   `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
   as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant
@@ -82,14 +91,15 @@
   contribution margin is not yet proven by a genuine paid order.
 - **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
   commercial payment.
-- **Owner action:** create one CDP Secret API Key with Wallet API account read/create and
-  transaction sign/send permissions plus a Wallet Secret, store the values under the exact names
-  in `D:\Projects\plyrium.env` documented in `HUMAN_ACTIONS.md`, then say `done`. Do not paste
-  credentials into chat. Codex will not open the portal or request SMS codes. Funding is a later,
-  separate explicit approval.
+- **Owner action:** the values added to `D:\Projects\plyrium.env` were tested without disclosure.
+  The key authenticated to x402 but failed the first Wallet API account-list call even when paired
+  with the protected Wallet Secret, so it is the wrong key type; the blank local Wallet Secret did
+  not cause that read failure. Replace it with a Server Wallet API key and fill the separately
+  generated Wallet Secret under the same exact names in `HUMAN_ACTIONS.md`, then say `done`.
+  Codex will not open the portal or request SMS codes. Funding is a later separate approval.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
-- **Verification:** the connected Plyrium repository passes typecheck, 180 tests, private-address,
+- **Verification:** the connected Plyrium repository passes typecheck, 185 tests, private-address,
   public-route, transaction, and migration audits, a production build, and a zero-vulnerability
   production dependency audit. The public VouchSpec repository's 142-test suite passes 141 with
   one explicit Windows symlink-privilege skip. VouchSpec launch PR `mordiaky/plyrium#31`, CI memory repair PR
@@ -102,6 +112,8 @@
   workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
   PR `#39` hosted CI run `29414124330` passed, including the production build. Public PR `#15`
   passed both CI runs and its 141-test/one-skip suite before merge.
+  Host-isolation PR `#41`, main CI run `29418546016`, and production deployment
+  `dpl_54nF5zD3eJGVShz7EqPpj8vb6Lcr` are green.
 
 Next: after the single Wallet API credential action, provision the two unfunded identities through
 the official CLI, request a separate bounded funding approval, run activation smoke, and enable the
