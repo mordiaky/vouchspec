@@ -90,6 +90,23 @@ test("CLI runner uses headless live credentials without URL override or secret o
   assert.equal(observed.options.env.CDP_URL, undefined);
 });
 
+test("API failures identify only the failed operation", () => {
+  const accountFailure = () => { throw new RemedyProvisionerError("provisioner_cdp_api_failed"); };
+  assert.throws(
+    () => runProvisioning(accountFailure),
+    (error) => error.code === "provisioner_account_list_api_failed",
+  );
+
+  const policyFailure = (args) => {
+    if (args[1] === "accounts") return { accounts: [] };
+    throw new RemedyProvisionerError("provisioner_cdp_api_failed");
+  };
+  assert.throws(
+    () => runProvisioning(policyFailure),
+    (error) => error.code === "provisioner_policy_list_api_failed",
+  );
+});
+
 test("an existing account must already carry the exact verified policy", () => {
   const calls = [];
   const cli = (args) => {
@@ -136,11 +153,14 @@ test("policy drift or ambiguity fails before account creation", () => {
   const drifted = policy();
   drifted.rules[0].criteria[2].conditions[0].params[0].value = "250001";
   const driftCli = (args) => {
+    if (args[1] === "accounts") return { accounts: [] };
     if (args[1] === "policies" && args[2] === "list") return { policies: [policy()] };
     return drifted;
   };
   assert.throws(() => runProvisioning(driftCli), RemedyProvisionerError);
 
-  const duplicateCli = () => ({ policies: [policy(), policy()] });
+  const duplicateCli = (args) => (
+    args[1] === "accounts" ? { accounts: [] } : { policies: [policy(), policy()] }
+  );
   assert.throws(() => runProvisioning(duplicateCli), RemedyProvisionerError);
 });

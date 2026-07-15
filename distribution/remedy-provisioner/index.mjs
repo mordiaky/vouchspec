@@ -140,10 +140,29 @@ function validateAccount(account, policyId) {
   };
 }
 
+function callCli(cli, args, failureCode) {
+  try {
+    return cli(args);
+  } catch (error) {
+    if (
+      error instanceof RemedyProvisionerError
+      && ["provisioner_cdp_api_failed", "provisioner_cdp_response_invalid"].includes(error.code)
+    ) fail(failureCode);
+    throw error;
+  }
+}
+
 export function runProvisioning(cli) {
-  const listedPolicies = cli([
+  const listedAccounts = callCli(
+    cli,
+    ["evm", "accounts", "list", "--paginate"],
+    "provisioner_account_list_api_failed",
+  );
+  if (!listedAccounts || !Array.isArray(listedAccounts.accounts)) fail("provisioner_account_list_invalid");
+
+  const listedPolicies = callCli(cli, [
     "policy-engine", "policies", "list", "scope==account", "--paginate",
-  ]);
+  ], "provisioner_policy_list_api_failed");
   if (!listedPolicies || !Array.isArray(listedPolicies.policies)) fail("provisioner_policy_list_invalid");
   const matches = listedPolicies.policies.filter(
     (policy) => policy?.scope === "account" && policy?.description === POLICY_DESCRIPTION,
@@ -152,19 +171,21 @@ export function runProvisioning(cli) {
     fail("provisioner_policy_not_unique");
   }
 
-  const policy = cli(["policy-engine", "policies", "get", matches[0].id]);
+  const policy = callCli(
+    cli,
+    ["policy-engine", "policies", "get", matches[0].id],
+    "provisioner_policy_get_api_failed",
+  );
   const policyId = validatePolicy(policy);
-  const listedAccounts = cli(["evm", "accounts", "list", "--paginate"]);
-  if (!listedAccounts || !Array.isArray(listedAccounts.accounts)) fail("provisioner_account_list_invalid");
   const namedAccounts = listedAccounts.accounts.filter((account) => account?.name === ACCOUNT_NAME);
   if (namedAccounts.length > 1) fail("provisioner_account_not_unique");
   if (namedAccounts.length === 1) {
     return { status: "verified", created: false, ...validateAccount(namedAccounts[0], policyId) };
   }
 
-  const created = cli([
+  const created = callCli(cli, [
     "evm", "accounts", "create", `accountPolicy=${policyId}`, `name=${ACCOUNT_NAME}`,
-  ]);
+  ], "provisioner_account_create_api_failed");
   return { status: "verified", created: true, ...validateAccount(created, policyId) };
 }
 
