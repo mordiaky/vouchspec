@@ -52,12 +52,13 @@
   responses pass tests and one real HTTP-path Checkout expired unpaid. Deploy this boundary
   behind the managed edge with a mode-specific test endpoint, then complete one
   unpaid-to-available test-card flow before live activation.
-- **B-037:** complete API-only provisioning of `vouchspec-remedy`. The replacement API key and
-  rotated Wallet Secret are already encrypted in the protected `vouchspec-mainnet-remedies`
-  GitHub environment, and the Base-USDC-only account policy exists. Use the documented CDP API or
-  official CLI to retrieve the policy and create or verify the policy-bound account; never resume
-  portal automation or SMS verification. Keep the workflow flag false and the account unfunded
-  until every production gate passes.
+- **B-037:** API-only provisioning is implemented and intentionally paused. PRs `#10`-`#12`
+  provide a manual, main-only, hash-locked official-CLI provisioner with exact policy validation,
+  no funding/send commands, and operation-scoped safe failures. Run `29385202893` failed on the
+  first read-only EVM account-list API call, before policy lookup or account creation. Do not retry
+  Coinbase or fall back to portal/SMS. Resume only if an account-and-policy-capable credential is
+  available through a documented non-interactive API path; keep the workflow flag false and all
+  remedy identities unfunded until every production gate passes.
 
 ## Evidence-driven operation
 

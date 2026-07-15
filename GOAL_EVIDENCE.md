@@ -147,3 +147,11 @@ CI/attestation URLs, and the final independent audit when eligible.
   `VOUCHSPEC_REMEDIES_ENABLED` is not true.
 - No production wallet was funded, no mainnet order was accepted, and these controls add no buyer,
   request, revenue, margin, repeat-use, or autonomous-day credit.
+- API-only provisioning PRs `mordiaky/vouchspec#10` through `#12` merged a manual protected-
+  environment official-CLI path with exact account-policy validation, no funding/send commands,
+  and secret-free operation diagnostics. Main CI run `29385199415` passed 140 Python tests with one
+  host symlink skip and both Node suites.
+- Final API-only run `29385202893` failed on its first read-only EVM account-list call and stopped
+  before policy lookup or account creation. The transaction workflow remained manually disabled,
+  `VOUCHSPEC_REMEDIES_ENABLED` remained false, no account was created or funded, and no transaction
+  occurred.

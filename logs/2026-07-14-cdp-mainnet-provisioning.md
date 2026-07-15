@@ -46,6 +46,28 @@ locally. It supports headless policy listing and atomic account creation with bo
 `accountPolicy` fields. No CDP credential was loaded for that check and no authenticated request
 was made.
 
+## API-only implementation and final result
+
+- PR `mordiaky/vouchspec#10` merged the main-only protected-environment provisioner and Node CI as
+  merge commit `30c9fc31c192eed7d9e974cca875fd8921f0675d`.
+- The first dispatch, run `29384979666`, was skipped before any step because environment-scoped
+  variables are not available in a job-level condition. No CDP request occurred.
+- PR `#11` moved the exact-false assertion into the first protected-environment step and merged as
+  `c32f0127c5bce06d9e397d097d13fb0b88155953`.
+- Run `29385077682` loaded the encrypted credentials and failed closed with a deliberately generic
+  CDP API error. No account or transaction operation was confirmed.
+- PR `#12` added safe operation-level diagnostics without logging provider response text or secret
+  material and merged as `82463543668b0abd92712004110a294aae8b0bf6`.
+- Final API-only run `29385202893` passed the protected-environment false-flag gate, installed the
+  integrity-locked official CLI, and failed on its first read-only EVM account-list call with
+  `provisioner_account_list_api_failed`. It stopped before policy lookup or account creation.
+- Post-merge main CI run `29385199415` passed 140 Python tests with one explicit host
+  symlink-privilege skip, plus both Node suites and zero-vulnerability production audits.
+
+This exhausts the current credential safely. Do not retry it, resume portal automation, or request
+SMS verification. Revisit CDP provisioning only if a credential with account and policy access
+becomes available through a documented non-interactive API path.
+
 ## Commercial accounting
 
 No production account was funded, no mainnet transaction occurred, no external buyer was created,

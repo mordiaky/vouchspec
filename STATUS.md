@@ -17,7 +17,11 @@
   fail-closed and unprovisioned. Plyrium PR `#37` and VouchSpec PR `#9` have now merged the
   durable reconciliation/remedy state machine, bounded no-root network fetcher, independent Base
   RPC remedy verification, and disabled protected-environment executor. No mainnet funds can move
-  because the executor flag remains false and the separate remedy identity is not yet provisioned.
+  because the executor flag remains false and the separate remedy identity is not provisioned.
+  VouchSpec PRs `#10`-`#12` added a manual, main-only, API-only official-CLI provisioner with exact
+  policy validation and no funding/send commands. Final run `29385202893` failed on its first
+  read-only EVM account-list call, before policy lookup or account creation, so the current
+  credential is exhausted and Coinbase work is paused without a portal fallback.
 - **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
   `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
   as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant
@@ -58,19 +62,23 @@
 - **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
   commercial payment.
 - **Owner action:** none currently requested. Coinbase portal automation is stopped; no more SMS
-  codes will be requested. Remaining credentialed work must use the documented API or official CLI.
+  codes will be requested. The current credential failed the documented API-only account-list
+  probe and will not be retried. Mainnet remains disabled while other autonomous work continues.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
 - **Verification:** the connected Plyrium repository passes typecheck, 178 tests, private-address,
   public-route, transaction, and migration audits, a production build, and a zero-vulnerability
-  production dependency audit. The public VouchSpec repository passes 139 tests with one explicit
+  production dependency audit. The public VouchSpec repository passes 140 tests with one explicit
   Windows symlink-privilege skip. VouchSpec launch PR `mordiaky/plyrium#31`, CI memory repair PR
   `#32`, Agentic Wallet compatibility PRs `#33` and `#34`, and remedy PR `#37` are merged;
   post-merge main CI run `29382823021` passed. Public remedy/fetcher PR `#9` is merged and main CI
-  run `29382833205` passed. The latest hosted paid-flow
+  run `29382833205` passed. API-only provisioning PRs `#10`-`#12` are merged at
+  `82463543668b0abd92712004110a294aae8b0bf6`; main CI run `29385199415` passed both Python and
+  Node suites with zero production dependency vulnerabilities. The latest hosted paid-flow
   workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
 
-Next: finish the separate CDP remedy identity and account-scoped policy, then provision isolated
-production state, signing, and monitoring without funding or enabling the workflow prematurely.
-In parallel, acquire unrelated agent integrations and genuine machine buyers through the indexed
-Bazaar endpoint, counting only independently attributable external activity.
+Next: continue isolated production state, signing, monitoring, and deployment work without funding
+or enabling mainnet. Prioritize unrelated agent integrations and genuine machine buyers through the
+indexed Bazaar endpoint, counting only independently attributable external activity. Revisit the
+CDP identity only if an account-and-policy-capable credential becomes available through a
+documented non-interactive API path.

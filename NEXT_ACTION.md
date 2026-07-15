@@ -26,13 +26,15 @@ reconciliation, terminal-failure/duplicate-settlement remedies, independent Base
 verification, and the disabled protected-environment executor are also merged and green through
 `mordiaky/plyrium#37` and `mordiaky/vouchspec#9`.
 
-Finish the dedicated live CDP remedy identity only through documented CDP APIs or the official CDP
-CLI. The replacement API key and rotated Wallet Secret are already encrypted in the protected
-GitHub environment, and the account-scope Base-only canonical-USDC `transfer` policy already
-exists with both 250000-atomic-unit and 25-cent maximums. Retrieve that policy through the API,
-create or verify `vouchspec-remedy` with the policy attached atomically, and expose only its public
-address in logs. Do not resume portal automation, request an SMS code, fund the account, or set
-`VOUCHSPEC_REMEDIES_ENABLED=true`.
+The dedicated live CDP remedy identity is paused at a hard API boundary. PRs `mordiaky/vouchspec#10`
+through `#12` merged a manual, main-only, hash-locked official-CLI provisioner that verifies the
+exact Base-only canonical-USDC 250000-atomic-unit/25-cent policy before atomically creating or
+verifying `vouchspec-remedy`. Its final read-only run `29385202893` failed on EVM account listing,
+before policy lookup or account creation. The stored credential therefore cannot perform the
+required API-only operation. Do not retry Coinbase, resume portal automation, request an SMS code,
+fund an account, or set `VOUCHSPEC_REMEDIES_ENABLED=true`. Revisit this gate only if an
+account-and-policy-capable credential becomes available through a documented non-interactive API
+path.
 
 Mainnet stays fail-closed until the dedicated receiver, isolated production database, issuer,
 signer, monitoring, and deployment smoke gates pass. The researched launch experiment remains
