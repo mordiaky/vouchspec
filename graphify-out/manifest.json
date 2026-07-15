@@ -1,7 +1,7 @@
 {
   "STATE.json": {
-    "mtime": 1784139648.468097,
-    "ast_hash": "6d51eb997b842e33722a8731e3275896",
+    "mtime": 1784140994.6687083,
+    "ast_hash": "95199db2a7f880ae41b25a9cd195a35d",
     "semantic_hash": ""
   },
   "src/capabilityproof/__init__.py": {
@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1784139821.7780638,
-    "ast_hash": "e044c286441016f6c2c888fe50a7508a",
+    "mtime": 1784140994.6671944,
+    "ast_hash": "b4e20979a7d129242c73e310a8c65d06",
     "semantic_hash": ""
   },
   "BUSINESS_PLAN.md": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "NEXT_ACTION.md": {
-    "mtime": 1784139821.7765532,
-    "ast_hash": "049ff7d023752c3ec32b5cecbc1c5783",
+    "mtime": 1784140994.6661923,
+    "ast_hash": "3ce341da452533607ac2cb6c3a2ad55b",
     "semantic_hash": ""
   },
   "OFFER.md": {
@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "STATUS.md": {
-    "mtime": 1784139821.7765532,
-    "ast_hash": "cdd44922af2b333aad84d6a7c614bcc5",
+    "mtime": 1784140994.6661923,
+    "ast_hash": "b4ed81f5e0ec3d316d3603400608b5d8",
     "semantic_hash": ""
   },
   "analytics/README.md": {
@@ -560,8 +560,8 @@
     "semantic_hash": ""
   },
   "analytics/dashboard.json": {
-    "mtime": 1784139872.8240068,
-    "ast_hash": "d80093390e8cdd62ac3e30d9df72b42e",
+    "mtime": 1784140994.6677017,
+    "ast_hash": "418ab3132507846f5cc47caff426e7b3",
     "semantic_hash": ""
   },
   "docs/examples/fresh-validation-request.json": {
@@ -840,8 +840,8 @@
     "semantic_hash": ""
   },
   "logs/2026-07-15-mainnet-commerce-launched.md": {
-    "mtime": 1784139872.825007,
-    "ast_hash": "e2176effd9cb5284ba7cfa39c532a7fd",
+    "mtime": 1784140994.6687083,
+    "ast_hash": "2d90c7fab6e30d294528c9935ebbcb0b",
     "semantic_hash": ""
   }
 }
