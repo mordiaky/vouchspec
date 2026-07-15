@@ -32,19 +32,25 @@ reconciliation, terminal-failure/duplicate-settlement remedies, independent Base
 verification, and the disabled protected-environment executor are also merged and green through
 `mordiaky/plyrium#37` and `mordiaky/vouchspec#9`.
 
-The dedicated live CDP remedy identity is paused at a hard API boundary. PRs `mordiaky/vouchspec#10`
-through `#12` merged a manual, main-only, hash-locked official-CLI provisioner that verifies the
-exact Base-only canonical-USDC 250000-atomic-unit/25-cent policy before atomically creating or
-verifying `vouchspec-remedy`. Its final read-only run `29385202893` failed on EVM account listing,
-before policy lookup or account creation. The stored credential therefore cannot perform the
-required API-only operation. Do not retry Coinbase, resume portal automation, request an SMS code,
-fund an account, or set `VOUCHSPEC_REMEDIES_ENABLED=true`. Revisit this gate only if an
-account-and-policy-capable credential becomes available through a documented non-interactive API
-path.
+The commercial infrastructure is now provisioned. Plyrium PR `#39` merged the opaque live database
+role and 27 environment-filtered RPC wrappers; an external key probe returned 200 for a live
+wrapper and 403 for both Plyrium client-table access and an unscoped sandbox RPC. Production has a
+distinct Ed25519 signer, auth/delivery secrets, fulfillment/remedy tokens, and the verified
+`vouchspec.plyrium.com` hostname. VouchSpec PR `#15` merged the separate mainnet fulfillment
+workflow, which remains disabled. The protected Coinbase key passed the official `x402 supported`
+probe with 24 payment kinds and 3 extensions and was copied directly into Vercel without exposing
+its value.
 
-Mainnet stays fail-closed until the dedicated receiver, isolated production database, issuer,
-signer, monitoring, and deployment smoke gates pass. The researched launch experiment remains
-exactly 0.25 USDC per fresh validation;
+The only remaining identity gate is owner-only. The valid facilitator key cannot list or create
+Wallet API accounts, and Coinbase documents API-key creation/permission changes in the portal
+rather than through a non-interactive management endpoint. Wait for the owner to put one
+Wallet-API-capable key and Wallet Secret into `D:\Projects\plyrium.env` under the exact names in
+`HUMAN_ACTIONS.md`. Do not open the portal or request an SMS code. Once present, use the official
+CLI to create or verify the unfunded dedicated receiver and exact-policy remedy account.
+
+Mainnet stays fail-closed until those identities exist, bounded remedy float/Base gas movement is
+separately approved, and the production activation smoke passes. The researched launch experiment
+remains exactly 0.25 USDC per fresh validation;
 the previous $49 hypothesis is rejected. Apply the predeclared $0.10 fallback and $0.50 escalation
 rules in `research/agent-only-pricing-analysis-2026-07-14.md` only after qualified mainnet evidence.
-No owner action is currently required.
+One owner credential-creation action is currently required; no funding approval has been requested.

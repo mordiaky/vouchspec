@@ -1,6 +1,7 @@
 # Operating status
 
-- **Goal:** active and not achieved.
+- **Goal:** paused and not achieved. This launch task is executing manually while the autonomous
+  recurring goal remains paused.
 - **Public product:** Stage A catalog/retrieval/verification is live. Stage B is a public,
   self-service, agent-only x402 sandbox at `https://vouchspec-sandbox.plyrium.com`; it accepts
   immutable public GitHub coordinates and has no human checkout path. Agents can now purchase in
@@ -22,6 +23,17 @@
   policy validation and no funding/send commands. Final run `29385202893` failed on its first
   read-only EVM account-list call, before policy lookup or account creation, so the current
   credential is exhausted and Coinbase work is paused without a portal fallback.
+- **Commercial production checkpoint:** Plyrium PR `#39` is merged at
+  `d9afdcc079653f55c6a2115eade8133a6d2db33e`; VouchSpec PR `#15` is merged at
+  `dc97c83d04d6c2045460035bb3ee9e5e33015ea6`. Production migrations through
+  `20260715120000` are applied. The opaque `vouchspec_live_api` credential can execute only 27
+  live-filtered VouchSpec RPC wrappers; an external probe returned 200 for the live receipt RPC,
+  403 for Plyrium's client table, and 403 for the unscoped receipt RPC. Distinct live auth,
+  delivery, worker, remedy, and Ed25519 signing material is stored only in Vercel and protected
+  GitHub environments. The protected CDP credential passed the official `x402 supported` probe
+  with 24 kinds and 3 extensions and is encrypted in Vercel. `vouchspec.plyrium.com` is verified
+  on the production project. Commerce, fulfillment, and remedies remain disabled pending wallet
+  identities and the final activation smoke.
 - **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
   `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
   as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant
@@ -69,12 +81,14 @@
   contribution margin is not yet proven by a genuine paid order.
 - **Autonomous run:** not started; the 14-day clock starts only after the first genuine settled
   commercial payment.
-- **Owner action:** none currently requested. Coinbase portal automation is stopped; no more SMS
-  codes will be requested. The current credential failed the documented API-only account-list
-  probe and will not be retried. Mainnet remains disabled while other autonomous work continues.
+- **Owner action:** create one CDP Secret API Key with Wallet API account read/create and
+  transaction sign/send permissions plus a Wallet Secret, store the values under the exact names
+  in `D:\Projects\plyrium.env` documented in `HUMAN_ACTIONS.md`, then say `done`. Do not paste
+  credentials into chat. Codex will not open the portal or request SMS codes. Funding is a later,
+  separate explicit approval.
 - **Boundary:** public immutable GitHub coordinates only; no uploads, private repositories,
   confidential content, credentials, mutable refs, or artifact execution.
-- **Verification:** the connected Plyrium repository passes typecheck, 179 tests, private-address,
+- **Verification:** the connected Plyrium repository passes typecheck, 180 tests, private-address,
   public-route, transaction, and migration audits, a production build, and a zero-vulnerability
   production dependency audit. The public VouchSpec repository's 142-test suite passes 141 with
   one explicit Windows symlink-privilege skip. VouchSpec launch PR `mordiaky/plyrium#31`, CI memory repair PR
@@ -85,9 +99,11 @@
   `82463543668b0abd92712004110a294aae8b0bf6`; main CI run `29385199415` passed both Python and
   Node suites with zero production dependency vulnerabilities. The latest hosted paid-flow
   workflow run `29377467330` succeeded at commit `f79dc9602849c04a482c840233933d3a701fae7b`.
+  PR `#39` hosted CI run `29414124330` passed, including the production build. Public PR `#15`
+  passed both CI runs and its 141-test/one-skip suite before merge.
 
-Next: use the active official MCP Registry and indexed Bazaar entries to reach unrelated agent
-integrations and genuine machine buyers. Continue isolated production state, signing, monitoring,
-and deployment work without funding or enabling mainnet. Count only independently attributable
-external activity; revisit the CDP identity only if an account-and-policy-capable credential becomes
-available through a documented non-interactive API path.
+Next: after the single Wallet API credential action, provision the two unfunded identities through
+the official CLI, request a separate bounded funding approval, run activation smoke, and enable the
+mainnet API/workers. Then use the active official MCP Registry and indexed Bazaar entries to reach
+unrelated agent integrations and genuine machine buyers. Count only independently attributable
+external activity.

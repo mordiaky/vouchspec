@@ -1,21 +1,27 @@
 # Human actions
 
-No owner action is currently requested. Do not request additional Coinbase SMS codes and do not
-resume Coinbase portal automation.
+One owner-only action is required to finish mainnet activation. Coinbase's documented API and
+official CLI can use wallet credentials, but Coinbase documents creation and permission changes
+only through the CDP Portal; the valid x402 credential cannot list or create Wallet API accounts.
 
-The replacement CDP API key and rotated Wallet Secret already exist as encrypted secrets in the
-main-branch-only `vouchspec-mainnet-remedies` GitHub environment. The Base-USDC-only 25-cent account
-policy also exists. The first credential accidentally surfaced during portal validation was
-revoked immediately before use and was never stored. The replacement remedy workflow remains
-manually disabled and `VOUCHSPEC_REMEDIES_ENABLED=false`.
+Create one new **CDP Secret API Key** with Wallet API permission to list/create EVM accounts and
+sign/send transactions, and generate its **Wallet Secret**. Store the three values in
+`D:\Projects\plyrium.env` under these exact names:
 
-Continue only through documented CDP APIs or the official CDP CLI. If a future operation truly
-requires an owner-only financial-account action, prepare it fully and ask once; do not trigger
-repeated authentication messages.
+```text
+CDP_WALLET_API_KEY_ID=
+CDP_WALLET_API_KEY_SECRET=
+CDP_WALLET_SECRET=
+```
 
-The API-only provisioner is now merged and verified, but run `29385202893` failed on the first
-read-only EVM account-list call. No policy lookup, account creation, funding, signing, or transaction
-occurred. Do not retry with the current credential and do not ask the owner to repair it through the
-portal. Mainnet remains disabled while autonomous work continues on non-Coinbase launch gates.
+Then tell Codex only `done`. Do not paste any credential into chat. Codex will not open the
+Coinbase portal, request a phone code, or read values back into chat.
 
-Stripe remains regression-only and is not a customer purchase path.
+After that, Codex will use the official API/CLI to create or verify the unfunded dedicated revenue
+and policy-bound remedy identities. Funding remains a separate explicit approval: no USDC, ETH,
+or other money will move merely because the credentials exist.
+
+Everything else is already autonomous and fail-closed: the production database, live-only API
+role, app secrets, Ed25519 signer, fulfillment worker, x402 facilitator credential, commercial
+hostname, and deployment configuration are provisioned. Stripe remains regression-only and is
+not a customer purchase path.
