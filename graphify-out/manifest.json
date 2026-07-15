@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "tests/test_distribution.py": {
-    "mtime": 1784088374.8615205,
-    "ast_hash": "b0500ac1c988ddc046f88ff305704e9d",
+    "mtime": 1784088759.3931706,
+    "ast_hash": "97dd98c7bc6e8d3411a128f1e8280567",
     "semantic_hash": ""
   },
   "tests/test_inspector.py": {
@@ -120,8 +120,8 @@
     "semantic_hash": ""
   },
   "BACKLOG.md": {
-    "mtime": 1784088585.7642603,
-    "ast_hash": "809a0104ab5ab5ad0c18b599c4f3f90b",
+    "mtime": 1784088759.3901706,
+    "ast_hash": "12ec03ca64b6023a18a3fcad52989574",
     "semantic_hash": ""
   },
   "BUSINESS_PLAN.md": {
@@ -150,8 +150,8 @@
     "semantic_hash": ""
   },
   "DECISIONS.md": {
-    "mtime": 1784088277.9631283,
-    "ast_hash": "887033c25dcb3920365510d403ab4212",
+    "mtime": 1784088759.3941708,
+    "ast_hash": "6963a2ae72570f9160ccf0c87d6e3482",
     "semantic_hash": ""
   },
   "GOAL.md": {
@@ -170,8 +170,8 @@
     "semantic_hash": ""
   },
   "NEXT_ACTION.md": {
-    "mtime": 1784088585.7652588,
-    "ast_hash": "cfa179f4e8d6812522da844077025342",
+    "mtime": 1784088773.7223315,
+    "ast_hash": "d0fec2da29612be6c34d885d45e70fb4",
     "semantic_hash": ""
   },
   "OFFER.md": {
@@ -185,8 +185,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1784087459.7429152,
-    "ast_hash": "b9aa84b1d99bde86274a19184e7759c9",
+    "mtime": 1784088759.3921702,
+    "ast_hash": "4f4cf6a8730149aa669587beb1ca16c8",
     "semantic_hash": ""
   },
   "RISK_REGISTER.md": {
@@ -195,8 +195,8 @@
     "semantic_hash": ""
   },
   "STATUS.md": {
-    "mtime": 1784088592.498919,
-    "ast_hash": "5a9beb502c10c55fc24701bead4fd5ed",
+    "mtime": 1784088759.3911703,
+    "ast_hash": "ed7e6e8e371c3eec37a123ad47ce45ad",
     "semantic_hash": ""
   },
   "analytics/README.md": {
@@ -555,8 +555,8 @@
     "semantic_hash": ""
   },
   "distribution/discovery.json": {
-    "mtime": 1784088277.9611218,
-    "ast_hash": "2425811c933dc04a94d3985366bac368",
+    "mtime": 1784088759.3931706,
+    "ast_hash": "ae353db904cb7c7a3db41d6bd66a2db8",
     "semantic_hash": ""
   },
   "analytics/dashboard.json": {

@@ -208,7 +208,9 @@
 - **Evidence:** The official 2025-12-11 Registry schema supports public Streamable HTTP remotes
   without an npm or PyPI package. The official publisher supports GitHub OIDC from Actions with no
   dedicated Registry secret or interactive account login. The manifest validates against the
-  exact schema, and publisher v1.8.0 plus both download checksums are pinned.
+  exact schema, and publisher v1.8.0 plus both download checksums are pinned. Publication run
+  `29388372800` passed; the official Registry API returns one active version `0.2.0` record with
+  the exact canonical remote URL.
 - **Security shape:** The hosted server is stateless JSON with one anonymous read-only discovery
   tool, canonical-origin controls, strict bounded JSON, exact protocol negotiation, and durable
   global/peer limits. It cannot submit artifacts, fetch repositories, settle payments, spend

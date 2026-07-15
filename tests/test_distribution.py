@@ -69,6 +69,11 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
         "tools": ["get_vouchspec_discovery"],
         "registry_name": "io.github.mordiaky/vouchspec",
         "registry_manifest": "https://raw.githubusercontent.com/mordiaky/vouchspec/main/server.json",
+        "registry_status": "active",
+        "registry_api": (
+            "https://registry.modelcontextprotocol.io/v0.1/servers?"
+            "search=io.github.mordiaky%2Fvouchspec"
+        ),
     }
     assert discovery["api"]["base_url"] == "https://vouchspec-sandbox.plyrium.com"
     assert discovery["api"]["agent_only"] is True

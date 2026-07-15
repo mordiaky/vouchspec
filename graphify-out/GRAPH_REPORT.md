@@ -1,7 +1,7 @@
 # Graph Report - capabilityproof-mcp-registry  (2026-07-14)
 
 ## Corpus Check
-- 156 files · ~91,589 words
+- 156 files · ~91,655 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `777b5212`
+- Built from commit: `ab0ed3ea`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -181,12 +181,12 @@
   tests/test_signing.py → src/capabilityproof/errors.py
 - `Path` --uses--> `CatalogStore`  [INFERRED]
   tests/test_catalog.py → src/capabilityproof/catalog.py
+- `test_catalog_store_searches_bounded_repository_metadata_without_unsigned_lifecycle()` --calls--> `CatalogStore`  [EXTRACTED]
+  tests/test_catalog.py → src/capabilityproof/catalog.py
 - `Path` --uses--> `VerifiedCatalog`  [INFERRED]
   tests/test_catalog.py → src/capabilityproof/catalog_runtime.py
 - `test_cli_provisions_sandbox_key_from_secret_environment_without_persisting_it()` --calls--> `main()`  [EXTRACTED]
   tests/test_commerce_api.py → src/capabilityproof/cli.py
-- `test_quote_cli_emits_machine_readable_preview()` --calls--> `main()`  [EXTRACTED]
-  tests/test_commerce.py → src/capabilityproof/cli.py
 
 ## Import Cycles
 - 1-file cycle: `src/capabilityproof/receipt.py -> src/capabilityproof/receipt.py`
@@ -237,7 +237,7 @@ Nodes (22): const, const, format, type, enum, items, maxItems, type (+14 more)
 
 ### Community 8 - "Community 8"
 Cohesion: 0.15
-Nodes (13): maximum, minimum, type, maximum, minimum, type, maximum, minimum (+5 more)
+Nodes (13): maximum, minimum, type, maximum, minimum, type, critical, low (+5 more)
 
 ### Community 9 - "Community 9"
 Cohesion: 0.09
@@ -288,12 +288,12 @@ Cohesion: 0.27
 Nodes (11): _git(), ProvenanceEvidence, Controlled local Git provenance checks without fetching or executing artifact co, _safe_git_environment(), _sanitize_remote(), _verify_commit_blobs(), verify_git_provenance(), main() (+3 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.17
-Nodes (12): maxItems, type, additionalProperties, properties, required, type, external_references_untrusted, format_validation (+4 more)
+Cohesion: 0.12
+Nodes (16): maxItems, type, items, maxItems, type, additionalProperties, properties, required (+8 more)
 
 ### Community 22 - "Community 22"
-Cohesion: 0.20
-Nodes (14): items, maxLength, minLength, type, items, maxItems, minItems, type (+6 more)
+Cohesion: 0.31
+Nodes (10): items, maxLength, minLength, type, items, script_languages, items, items (+2 more)
 
 ### Community 23 - "Community 23"
 Cohesion: 0.14
@@ -352,8 +352,8 @@ Cohesion: 0.20
 Nodes (13): _adapter(), _Endpoint, _event_body(), _FakeStripeClient, _signature(), test_configuration_fails_closed_for_mode_and_live_activation(), test_cross_binding_partial_refund_and_future_availability_fail_closed(), test_full_refund_and_dispute_are_terminal_negative_or_nonsettled_states() (+5 more)
 
 ### Community 38 - "Community 38"
-Cohesion: 0.19
-Nodes (9): CatalogStore, filter_catalog_entries(), Read-only Stage A catalog storage and validation., Filter an already validated catalog snapshot without rereading disk., validate_catalog_index(), validate_receipt_id(), Any, Path (+1 more)
+Cohesion: 0.21
+Nodes (8): CatalogStore, filter_catalog_entries(), Read-only Stage A catalog storage and validation., Filter an already validated catalog snapshot without rereading disk., validate_catalog_index(), validate_receipt_id(), Any, Path
 
 ### Community 39 - "Community 39"
 Cohesion: 0.13
@@ -532,8 +532,8 @@ Cohesion: 0.67
 Nodes (3): request_digest, pattern, type
 
 ### Community 100 - "Community 100"
-Cohesion: 0.57
-Nodes (7): _independent_root(), Path, test_catalog_finalization_rejects_same_key_for_root_and_issuer(), test_catalog_http_sets_connection_deadline(), test_catalog_mcp_is_trusted_retrieval_only(), test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route(), test_verified_catalog_persists_feed_before_first_request_and_uses_immutable_snapshot()
+Cohesion: 0.47
+Nodes (8): _independent_root(), Path, test_catalog_finalization_rejects_same_key_for_root_and_issuer(), test_catalog_http_sets_connection_deadline(), test_catalog_mcp_is_trusted_retrieval_only(), test_catalog_store_searches_bounded_repository_metadata_without_unsigned_lifecycle(), test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route(), test_verified_catalog_persists_feed_before_first_request_and_uses_immutable_snapshot()
 
 ### Community 101 - "Community 101"
 Cohesion: 0.17
@@ -557,7 +557,7 @@ Nodes (4): maxLength, minLength, type, capture_consistency
 
 ### Community 106 - "Community 106"
 Cohesion: 0.22
-Nodes (9): maxLength, minLength, type, implementation, pyyaml, maxLength, minLength, type (+1 more)
+Nodes (9): maxLength, minLength, type, implementation, python, maxLength, minLength, type (+1 more)
 
 ### Community 107 - "Community 107"
 Cohesion: 0.50
@@ -633,7 +633,7 @@ Nodes (8): dependencies, @coinbase/cdp-cli, name, private, scripts, test, type, 
 
 ### Community 126 - "Community 126"
 Cohesion: 0.50
-Nodes (4): python, maxLength, minLength, type
+Nodes (4): maxItems, minItems, type, limitations
 
 ### Community 128 - "Community 128"
 Cohesion: 0.50
@@ -669,7 +669,7 @@ Nodes (4): runtime, additionalProperties, required, type
 
 ### Community 140 - "Community 140"
 Cohesion: 0.50
-Nodes (4): total, maximum, minimum, type
+Nodes (4): items, maxItems, type, local_references
 
 ### Community 144 - "Community 144"
 Cohesion: 0.67
@@ -677,11 +677,11 @@ Nodes (3): format, type, capture_completed_at
 
 ### Community 145 - "Community 145"
 Cohesion: 0.50
-Nodes (4): items, maxItems, type, findings
+Nodes (4): maximum, minimum, type, medium
 
 ### Community 147 - "Community 147"
 Cohesion: 0.50
-Nodes (4): items, maxItems, type, manifest_parse_failures
+Nodes (4): pyyaml, maxLength, minLength, type
 
 ## Knowledge Gaps
 - **654 isolated node(s):** `USDC_BY_NETWORK`, `TRANSFER_ABI`, `name`, `version`, `private` (+649 more)
@@ -693,7 +693,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `InputRejected` connect `Community 6` to `Community 0`, `Community 17`, `Community 20`, `Community 24`, `Community 27`, `Community 30`, `Community 37`, `Community 38`, `Community 42`, `Community 43`, `Community 46`, `Community 50`, `Community 54`, `Community 59`, `Community 63`, `Community 67`, `Community 70`, `Community 87`, `Community 93`, `Community 100`, `Community 104`?**
   _High betweenness centrality (0.131) - this node is a cross-community bridge._
-- **Why does `properties` connect `Community 26` to `Community 32`, `Community 33`, `Community 3`, `Community 131`, `Community 5`, `Community 41`, `Community 11`, `Community 15`, `Community 16`, `Community 49`, `Community 48`, `Community 52`, `Community 21`, `Community 22`, `Community 91`?**
+- **Why does `properties` connect `Community 26` to `Community 32`, `Community 33`, `Community 3`, `Community 131`, `Community 5`, `Community 41`, `Community 11`, `Community 15`, `Community 16`, `Community 49`, `Community 48`, `Community 52`, `Community 21`, `Community 91`, `Community 126`?**
   _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Why does `main()` connect `Community 70` to `Community 0`, `Community 6`, `Community 104`, `Community 42`, `Community 43`, `Community 46`, `Community 17`, `Community 50`, `Community 54`, `Community 24`, `Community 27`, `Community 93`, `Community 30`, `Community 63`?**
   _High betweenness centrality (0.017) - this node is a cross-community bridge._

@@ -16,6 +16,9 @@
   order/payment state separation, and provider-neutral preparation implemented without keys.
 - **B-019:** current official MCP Registry and GitHub Actions Marketplace routes reviewed;
   premature or terms-bearing submissions correctly withheld.
+- **B-025:** public Streamable HTTP discovery is live, the dated-schema `server.json` is merged,
+  and GitHub OIDC publication run `29388372800` created active official Registry record
+  `io.github.mordiaky/vouchspec` without a portal session, phone code, or dedicated secret.
 - **B-022:** GitHub-only immutable retrieval, complete tree/blob/archive verification, bounded
   no-egress/no-host-write worker, and constrained signing boundary are sandbox-proven.
 - **B-023:** environment-bound quote/order/payment/event/cost/refund/delivery ledger and fake
@@ -42,10 +45,6 @@
   immutable-pinned workflow if invited. Count only an external retained run.
 - **B-021:** continue low-volume, contribution-rule-compliant, repository-specific outreach to
   highly relevant publishers until three unrelated integrations exist.
-- **B-025:** the canonical public Streamable HTTP endpoint is live and passes the official MCP
-  client smoke. Merge the schema-validated `server.json` and main-only GitHub OIDC workflow,
-  publish `io.github.mordiaky/vouchspec`, and verify the official Registry API result. No owner
-  authentication, portal session, phone code, or dedicated Registry secret is required.
 - **B-033:** prepare deployment manifests for managed TLS, trusted-edge source limits,
   kernel-quota fetch storage, secret-manager injection, restricted database permissions,
   backups, and redacted audit aggregation without exposing the sandbox listener.
