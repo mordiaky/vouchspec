@@ -87,7 +87,7 @@
       "label": "readBoundedJson()",
       "file_type": "code",
       "source_file": "distribution/remedy-executor/index.mjs",
-      "source_location": "L72",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "remedy_executor_index_readboundedjson",
       "community": 82,
@@ -97,7 +97,7 @@
       "label": "callVouchSpec()",
       "file_type": "code",
       "source_file": "distribution/remedy-executor/index.mjs",
-      "source_location": "L99",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "remedy_executor_index_callvouchspec",
       "community": 82,
@@ -107,7 +107,7 @@
       "label": "parseClaim()",
       "file_type": "code",
       "source_file": "distribution/remedy-executor/index.mjs",
-      "source_location": "L129",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "remedy_executor_index_parseclaim",
       "community": 82,
@@ -117,7 +117,7 @@
       "label": "runOnce()",
       "file_type": "code",
       "source_file": "distribution/remedy-executor/index.mjs",
-      "source_location": "L159",
+      "source_location": "L169",
       "_origin": "ast",
       "id": "remedy_executor_index_runonce",
       "community": 82,
@@ -127,7 +127,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "distribution/remedy-executor/index.mjs",
-      "source_location": "L224",
+      "source_location": "L235",
       "_origin": "ast",
       "id": "remedy_executor_index_main",
       "community": 82,
@@ -317,7 +317,7 @@
       "label": "validatePolicy()",
       "file_type": "code",
       "source_file": "distribution/remedy-provisioner/index.mjs",
-      "source_location": "L46",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "remedy_provisioner_index_validatepolicy",
       "community": 113,
@@ -327,7 +327,7 @@
       "label": "validateAccount()",
       "file_type": "code",
       "source_file": "distribution/remedy-provisioner/index.mjs",
-      "source_location": "L127",
+      "source_location": "L131",
       "_origin": "ast",
       "id": "remedy_provisioner_index_validateaccount",
       "community": 113,
@@ -337,7 +337,7 @@
       "label": "callCli()",
       "file_type": "code",
       "source_file": "distribution/remedy-provisioner/index.mjs",
-      "source_location": "L143",
+      "source_location": "L147",
       "_origin": "ast",
       "id": "remedy_provisioner_index_callcli",
       "community": 113,
@@ -347,7 +347,7 @@
       "label": "runProvisioning()",
       "file_type": "code",
       "source_file": "distribution/remedy-provisioner/index.mjs",
-      "source_location": "L155",
+      "source_location": "L159",
       "_origin": "ast",
       "id": "remedy_provisioner_index_runprovisioning",
       "community": 113,
@@ -357,7 +357,7 @@
       "label": "createCliRunner()",
       "file_type": "code",
       "source_file": "distribution/remedy-provisioner/index.mjs",
-      "source_location": "L192",
+      "source_location": "L196",
       "_origin": "ast",
       "id": "remedy_provisioner_index_createclirunner",
       "community": 113,
@@ -367,7 +367,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "distribution/remedy-provisioner/index.mjs",
-      "source_location": "L229",
+      "source_location": "L233",
       "_origin": "ast",
       "id": "remedy_provisioner_index_main",
       "community": 113,
@@ -958,7 +958,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "capabilityproof_catalog_catalogstore_init",
-      "community": 0,
+      "community": 38,
       "norm_label": ".__init__()"
     },
     {
@@ -968,7 +968,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_capabilityproof_catalog_py_path",
-      "community": 0,
+      "community": 38,
       "norm_label": "path"
     },
     {
@@ -3078,7 +3078,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_errors_py",
-      "community": 20,
+      "community": 0,
       "norm_label": "errors.py"
     },
     {
@@ -3088,7 +3088,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "capabilityproof_errors_capabilityprooferror",
-      "community": 42,
+      "community": 70,
       "norm_label": "capabilityprooferror"
     },
     {
@@ -3098,7 +3098,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "capabilityproof_errors_capabilityprooferror_init",
-      "community": 42,
+      "community": 70,
       "norm_label": ".__init__()"
     },
     {
@@ -3108,7 +3108,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_errors_inputrejected",
-      "community": 20,
+      "community": 2,
       "norm_label": "inputrejected"
     },
     {
@@ -3138,7 +3138,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_errors_rationale_1",
-      "community": 20,
+      "community": 0,
       "norm_label": "public error types with stable machine-readable codes."
     },
     {
@@ -3148,7 +3148,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "capabilityproof_errors_rationale_5",
-      "community": 42,
+      "community": 70,
       "norm_label": "base class for an expected, non-secret operational error."
     },
     {
@@ -3668,7 +3668,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_lifecyclesequencestore",
-      "community": 88,
+      "community": 24,
       "norm_label": "lifecyclesequencestore"
     },
     {
@@ -3748,7 +3748,7 @@
       "source_location": "L199",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_validate_lifecycle_feed",
-      "community": 24,
+      "community": 27,
       "norm_label": "validate_lifecycle_feed()"
     },
     {
@@ -3758,7 +3758,7 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_sign_lifecycle_feed",
-      "community": 24,
+      "community": 27,
       "norm_label": "sign_lifecycle_feed()"
     },
     {
@@ -3768,7 +3768,7 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "src_capabilityproof_lifecycle_py_ed25519privatekey",
-      "community": 24,
+      "community": 27,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -3778,7 +3778,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_verify_lifecycle_envelope",
-      "community": 24,
+      "community": 27,
       "norm_label": "verify_lifecycle_envelope()"
     },
     {
@@ -3848,7 +3848,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "capabilityproof_lifecycle_rationale_110",
-      "community": 88,
+      "community": 24,
       "norm_label": "persist the highest root-feed sequence outside mutable catalog storage."
     },
     {
@@ -3868,7 +3868,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_src_capabilityproof_mcp_server_py",
-      "community": 17,
+      "community": 59,
       "norm_label": "mcp_server.py"
     },
     {
@@ -3878,7 +3878,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_mcp_server_build_mcp_server",
-      "community": 17,
+      "community": 59,
       "norm_label": "build_mcp_server()"
     },
     {
@@ -3888,7 +3888,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_mcp_server_py_path",
-      "community": 17,
+      "community": 59,
       "norm_label": "path"
     },
     {
@@ -3898,7 +3898,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_mcp_server_py_scanlimits",
-      "community": 17,
+      "community": 59,
       "norm_label": "scanlimits"
     },
     {
@@ -3908,7 +3908,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_mcp_server_py_fastmcp",
-      "community": 17,
+      "community": 59,
       "norm_label": "fastmcp"
     },
     {
@@ -3918,7 +3918,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "capabilityproof_mcp_server_run_mcp_server",
-      "community": 17,
+      "community": 59,
       "norm_label": "run_mcp_server()"
     },
     {
@@ -3928,7 +3928,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_mcp_server_rationale_1",
-      "community": 17,
+      "community": 59,
       "norm_label": "official python sdk mcp stdio surface."
     },
     {
@@ -4248,7 +4248,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_src_capabilityproof_pricing_py",
-      "community": 38,
+      "community": 2,
       "norm_label": "pricing.py"
     },
     {
@@ -4258,7 +4258,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_pricing_price_quote",
-      "community": 38,
+      "community": 2,
       "norm_label": "price_quote()"
     },
     {
@@ -4268,7 +4268,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_capabilityproof_pricing_py_any",
-      "community": 38,
+      "community": 2,
       "norm_label": "any"
     },
     {
@@ -4278,7 +4278,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_pricing_rationale_1",
-      "community": 38,
+      "community": 2,
       "norm_label": "machine-readable stage a price hypotheses without order or payment intake."
     },
     {
@@ -4298,7 +4298,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "capabilityproof_provenance_provenanceevidence",
-      "community": 20,
+      "community": 87,
       "norm_label": "provenanceevidence"
     },
     {
@@ -4398,7 +4398,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "capabilityproof_receipt_deterministic_json",
-      "community": 43,
+      "community": 63,
       "norm_label": "deterministic_json()"
     },
     {
@@ -4538,7 +4538,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_path",
-      "community": 20,
+      "community": 87,
       "norm_label": "path"
     },
     {
@@ -4548,7 +4548,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "src_capabilityproof_receipt_py_scanlimits",
-      "community": 20,
+      "community": 87,
       "norm_label": "scanlimits"
     },
     {
@@ -4558,7 +4558,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "provenanceevidence",
-      "community": 20,
+      "community": 87,
       "norm_label": "provenanceevidence"
     },
     {
@@ -4568,7 +4568,7 @@
       "source_location": "L314",
       "_origin": "ast",
       "id": "capabilityproof_receipt_inspect_git_skill",
-      "community": 54,
+      "community": 41,
       "norm_label": "inspect_git_skill()"
     },
     {
@@ -4578,7 +4578,7 @@
       "source_location": "L345",
       "_origin": "ast",
       "id": "capabilityproof_receipt_verify_receipt_integrity",
-      "community": 107,
+      "community": 54,
       "norm_label": "verify_receipt_integrity()"
     },
     {
@@ -4598,7 +4598,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "capabilityproof_receipt_rationale_323",
-      "community": 54,
+      "community": 41,
       "norm_label": "inspect bytes and independently bind them to a clean local git commit."
     },
     {
@@ -4868,7 +4868,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_artifact_properties",
-      "community": 3,
+      "community": 121,
       "norm_label": "properties"
     },
     {
@@ -4878,7 +4878,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_type",
-      "community": 3,
+      "community": 121,
       "norm_label": "type"
     },
     {
@@ -4888,7 +4888,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_type_const",
-      "community": 3,
+      "community": 121,
       "norm_label": "const"
     },
     {
@@ -4938,7 +4938,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_claims_untrusted",
-      "community": 10,
+      "community": 107,
       "norm_label": "claims_untrusted"
     },
     {
@@ -4948,7 +4948,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_claims_untrusted_type",
-      "community": 10,
+      "community": 107,
       "norm_label": "type"
     },
     {
@@ -4958,7 +4958,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_claims_untrusted_additionalproperties",
-      "community": 10,
+      "community": 107,
       "norm_label": "additionalproperties"
     },
     {
@@ -4968,7 +4968,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_claims_untrusted_required",
-      "community": 10,
+      "community": 107,
       "norm_label": "required"
     },
     {
@@ -5238,7 +5238,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_file_count",
-      "community": 3,
+      "community": 128,
       "norm_label": "file_count"
     },
     {
@@ -5248,7 +5248,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_file_count_type",
-      "community": 3,
+      "community": 128,
       "norm_label": "type"
     },
     {
@@ -5258,7 +5258,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_file_count_minimum",
-      "community": 3,
+      "community": 128,
       "norm_label": "minimum"
     },
     {
@@ -5268,7 +5268,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_file_count_maximum",
-      "community": 3,
+      "community": 128,
       "norm_label": "maximum"
     },
     {
@@ -5508,7 +5508,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_capture_consistency",
-      "community": 105,
+      "community": 7,
       "norm_label": "capture_consistency"
     },
     {
@@ -5518,7 +5518,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_capture_consistency_type",
-      "community": 105,
+      "community": 7,
       "norm_label": "type"
     },
     {
@@ -5528,7 +5528,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_capture_consistency_minlength",
-      "community": 105,
+      "community": 7,
       "norm_label": "minlength"
     },
     {
@@ -5538,7 +5538,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_capture_consistency_maxlength",
-      "community": 105,
+      "community": 7,
       "norm_label": "maxlength"
     },
     {
@@ -5578,7 +5578,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_capture_completed_at",
-      "community": 144,
+      "community": 7,
       "norm_label": "capture_completed_at"
     },
     {
@@ -5588,7 +5588,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_capture_completed_at_type",
-      "community": 144,
+      "community": 7,
       "norm_label": "type"
     },
     {
@@ -5598,7 +5598,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_capture_completed_at_format",
-      "community": 144,
+      "community": 7,
       "norm_label": "format"
     },
     {
@@ -5748,7 +5748,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_provenance",
-      "community": 11,
+      "community": 145,
       "norm_label": "provenance"
     },
     {
@@ -5758,7 +5758,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_provenance_type",
-      "community": 11,
+      "community": 145,
       "norm_label": "type"
     },
     {
@@ -5768,7 +5768,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_provenance_additionalproperties",
-      "community": 11,
+      "community": 145,
       "norm_label": "additionalproperties"
     },
     {
@@ -5778,7 +5778,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_provenance_required",
-      "community": 11,
+      "community": 145,
       "norm_label": "required"
     },
     {
@@ -6028,7 +6028,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_status",
-      "community": 33,
+      "community": 28,
       "norm_label": "status"
     },
     {
@@ -6038,7 +6038,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_status_enum",
-      "community": 33,
+      "community": 28,
       "norm_label": "enum"
     },
     {
@@ -6048,7 +6048,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_findings",
-      "community": 21,
+      "community": 130,
       "norm_label": "findings"
     },
     {
@@ -6058,7 +6058,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_type",
-      "community": 21,
+      "community": 130,
       "norm_label": "type"
     },
     {
@@ -6068,7 +6068,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_maxitems",
-      "community": 21,
+      "community": 130,
       "norm_label": "maxitems"
     },
     {
@@ -6078,7 +6078,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_findings_items",
-      "community": 21,
+      "community": 130,
       "norm_label": "items"
     },
     {
@@ -6378,7 +6378,7 @@
       "source_location": "L172",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_status_const",
-      "community": 33,
+      "community": 28,
       "norm_label": "const"
     },
     {
@@ -6678,7 +6678,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_manifest_parse_failures",
-      "community": 23,
+      "community": 144,
       "norm_label": "manifest_parse_failures"
     },
     {
@@ -6688,7 +6688,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_type",
-      "community": 23,
+      "community": 144,
       "norm_label": "type"
     },
     {
@@ -6698,7 +6698,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_maxitems",
-      "community": 23,
+      "community": 144,
       "norm_label": "maxitems"
     },
     {
@@ -6708,7 +6708,7 @@
       "source_location": "L191",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_manifest_parse_failures_items",
-      "community": 23,
+      "community": 144,
       "norm_label": "items"
     },
     {
@@ -7178,7 +7178,7 @@
       "source_location": "L232",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_validity",
-      "community": 15,
+      "community": 150,
       "norm_label": "validity"
     },
     {
@@ -7188,7 +7188,7 @@
       "source_location": "L233",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_validity_type",
-      "community": 15,
+      "community": 150,
       "norm_label": "type"
     },
     {
@@ -7198,7 +7198,7 @@
       "source_location": "L234",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_validity_additionalproperties",
-      "community": 15,
+      "community": 150,
       "norm_label": "additionalproperties"
     },
     {
@@ -7208,7 +7208,7 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_validity_required",
-      "community": 15,
+      "community": 150,
       "norm_label": "required"
     },
     {
@@ -7688,7 +7688,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_python",
-      "community": 106,
+      "community": 148,
       "norm_label": "python"
     },
     {
@@ -7698,7 +7698,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_type",
-      "community": 106,
+      "community": 148,
       "norm_label": "type"
     },
     {
@@ -7708,7 +7708,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_minlength",
-      "community": 106,
+      "community": 148,
       "norm_label": "minlength"
     },
     {
@@ -7718,7 +7718,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_python_maxlength",
-      "community": 106,
+      "community": 148,
       "norm_label": "maxlength"
     },
     {
@@ -7768,7 +7768,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_mcp",
-      "community": 128,
+      "community": 106,
       "norm_label": "mcp"
     },
     {
@@ -7778,7 +7778,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_mcp_type",
-      "community": 128,
+      "community": 106,
       "norm_label": "type"
     },
     {
@@ -7788,7 +7788,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_mcp_minlength",
-      "community": 128,
+      "community": 106,
       "norm_label": "minlength"
     },
     {
@@ -7798,7 +7798,7 @@
       "source_location": "L275",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_mcp_maxlength",
-      "community": 128,
+      "community": 106,
       "norm_label": "maxlength"
     },
     {
@@ -7828,7 +7828,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_network_observation",
-      "community": 4,
+      "community": 155,
       "norm_label": "network_observation"
     },
     {
@@ -7838,7 +7838,7 @@
       "source_location": "L279",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_network_observation_const",
-      "community": 4,
+      "community": 155,
       "norm_label": "const"
     },
     {
@@ -7888,7 +7888,7 @@
       "source_location": "L285",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_authentication",
-      "community": 41,
+      "community": 95,
       "norm_label": "authentication"
     },
     {
@@ -7898,7 +7898,7 @@
       "source_location": "L286",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_authentication_type",
-      "community": 41,
+      "community": 95,
       "norm_label": "type"
     },
     {
@@ -7908,7 +7908,7 @@
       "source_location": "L287",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_authentication_additionalproperties",
-      "community": 41,
+      "community": 95,
       "norm_label": "additionalproperties"
     },
     {
@@ -7918,7 +7918,7 @@
       "source_location": "L288",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_authentication_required",
-      "community": 41,
+      "community": 95,
       "norm_label": "required"
     },
     {
@@ -7928,7 +7928,7 @@
       "source_location": "L289",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_authentication_properties",
-      "community": 41,
+      "community": 95,
       "norm_label": "properties"
     },
     {
@@ -7938,7 +7938,7 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_public_distribution_requirement",
-      "community": 41,
+      "community": 95,
       "norm_label": "public_distribution_requirement"
     },
     {
@@ -7948,7 +7948,7 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_public_distribution_requirement_type",
-      "community": 41,
+      "community": 95,
       "norm_label": "type"
     },
     {
@@ -7958,7 +7958,7 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_public_distribution_requirement_minlength",
-      "community": 41,
+      "community": 95,
       "norm_label": "minlength"
     },
     {
@@ -7968,7 +7968,7 @@
       "source_location": "L290",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_public_distribution_requirement_maxlength",
-      "community": 41,
+      "community": 95,
       "norm_label": "maxlength"
     },
     {
@@ -8138,7 +8138,7 @@
       "source_location": "L305",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_integrity",
-      "community": 91,
+      "community": 95,
       "norm_label": "integrity"
     },
     {
@@ -8148,7 +8148,7 @@
       "source_location": "L306",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_type",
-      "community": 91,
+      "community": 95,
       "norm_label": "type"
     },
     {
@@ -8158,7 +8158,7 @@
       "source_location": "L307",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_additionalproperties",
-      "community": 91,
+      "community": 95,
       "norm_label": "additionalproperties"
     },
     {
@@ -8168,7 +8168,7 @@
       "source_location": "L308",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_required",
-      "community": 91,
+      "community": 95,
       "norm_label": "required"
     },
     {
@@ -8178,7 +8178,7 @@
       "source_location": "L309",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_integrity_properties",
-      "community": 91,
+      "community": 95,
       "norm_label": "properties"
     },
     {
@@ -8188,7 +8188,7 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_deterministic_json_profile",
-      "community": 91,
+      "community": 95,
       "norm_label": "deterministic_json_profile"
     },
     {
@@ -8198,7 +8198,7 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_deterministic_json_profile_type",
-      "community": 91,
+      "community": 95,
       "norm_label": "type"
     },
     {
@@ -8208,7 +8208,7 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_deterministic_json_profile_pattern",
-      "community": 91,
+      "community": 95,
       "norm_label": "pattern"
     },
     {
@@ -8218,7 +8218,7 @@
       "source_location": "L311",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_deterministic_json_profile_maxlength",
-      "community": 91,
+      "community": 95,
       "norm_label": "maxlength"
     },
     {
@@ -8228,7 +8228,7 @@
       "source_location": "L312",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_evidence_sha256",
-      "community": 91,
+      "community": 95,
       "norm_label": "evidence_sha256"
     },
     {
@@ -8238,7 +8238,7 @@
       "source_location": "L312",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_evidence_sha256_ref",
-      "community": 91,
+      "community": 95,
       "norm_label": "$ref"
     },
     {
@@ -8298,7 +8298,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_replacement_warning",
-      "community": 91,
+      "community": 95,
       "norm_label": "replacement_warning"
     },
     {
@@ -8308,7 +8308,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_replacement_warning_type",
-      "community": 91,
+      "community": 95,
       "norm_label": "type"
     },
     {
@@ -8318,7 +8318,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_replacement_warning_minlength",
-      "community": 91,
+      "community": 95,
       "norm_label": "minlength"
     },
     {
@@ -8328,7 +8328,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_replacement_warning_maxlength",
-      "community": 91,
+      "community": 95,
       "norm_label": "maxlength"
     },
     {
@@ -8418,7 +8418,7 @@
       "source_location": "L330",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_defs_structuralfinding",
-      "community": 19,
+      "community": 117,
       "norm_label": "structuralfinding"
     },
     {
@@ -8428,7 +8428,7 @@
       "source_location": "L331",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_structuralfinding_type",
-      "community": 19,
+      "community": 117,
       "norm_label": "type"
     },
     {
@@ -8438,7 +8438,7 @@
       "source_location": "L332",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_structuralfinding_additionalproperties",
-      "community": 19,
+      "community": 117,
       "norm_label": "additionalproperties"
     },
     {
@@ -8448,7 +8448,7 @@
       "source_location": "L333",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_structuralfinding_required",
-      "community": 19,
+      "community": 117,
       "norm_label": "required"
     },
     {
@@ -8668,7 +8668,7 @@
       "source_location": "L352",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_defs_staticsummary",
-      "community": 140,
+      "community": 19,
       "norm_label": "staticsummary"
     },
     {
@@ -8678,7 +8678,7 @@
       "source_location": "L353",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticsummary_type",
-      "community": 140,
+      "community": 19,
       "norm_label": "type"
     },
     {
@@ -8688,7 +8688,7 @@
       "source_location": "L354",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticsummary_additionalproperties",
-      "community": 140,
+      "community": 19,
       "norm_label": "additionalproperties"
     },
     {
@@ -8698,7 +8698,7 @@
       "source_location": "L355",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_staticsummary_required",
-      "community": 140,
+      "community": 19,
       "norm_label": "required"
     },
     {
@@ -8758,7 +8758,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_high",
-      "community": 8,
+      "community": 140,
       "norm_label": "high"
     },
     {
@@ -8768,7 +8768,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_high_type",
-      "community": 8,
+      "community": 140,
       "norm_label": "type"
     },
     {
@@ -8778,7 +8778,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_high_minimum",
-      "community": 8,
+      "community": 140,
       "norm_label": "minimum"
     },
     {
@@ -8788,7 +8788,7 @@
       "source_location": "L358",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_high_maximum",
-      "community": 8,
+      "community": 140,
       "norm_label": "maximum"
     },
     {
@@ -8798,7 +8798,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_properties_medium",
-      "community": 145,
+      "community": 8,
       "norm_label": "medium"
     },
     {
@@ -8808,7 +8808,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_type",
-      "community": 145,
+      "community": 8,
       "norm_label": "type"
     },
     {
@@ -8818,7 +8818,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_minimum",
-      "community": 145,
+      "community": 8,
       "norm_label": "minimum"
     },
     {
@@ -8828,7 +8828,7 @@
       "source_location": "L359",
       "_origin": "ast",
       "id": "schemas_capability_receipt_schema_medium_maximum",
-      "community": 145,
+      "community": 8,
       "norm_label": "maximum"
     },
     {
@@ -9248,7 +9248,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_properties_amount_minor",
-      "community": 148,
+      "community": 29,
       "norm_label": "amount_minor"
     },
     {
@@ -9258,7 +9258,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_amount_minor_const",
-      "community": 148,
+      "community": 29,
       "norm_label": "const"
     },
     {
@@ -9318,7 +9318,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_properties_expires_at",
-      "community": 29,
+      "community": 151,
       "norm_label": "expires_at"
     },
     {
@@ -9328,7 +9328,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_expires_at_type",
-      "community": 29,
+      "community": 151,
       "norm_label": "type"
     },
     {
@@ -9338,7 +9338,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "schemas_fresh_validation_quote_schema_expires_at_format",
-      "community": 29,
+      "community": 151,
       "norm_label": "format"
     },
     {
@@ -10738,7 +10738,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "capabilityproof_signing_strict_json",
-      "community": 81,
+      "community": 27,
       "norm_label": "_strict_json()"
     },
     {
@@ -10778,7 +10778,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "ed25519publickey",
-      "community": 88,
+      "community": 81,
       "norm_label": "ed25519publickey"
     },
     {
@@ -10808,7 +10808,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "capabilityproof_signing_load_public_jwk",
-      "community": 70,
+      "community": 81,
       "norm_label": "load_public_jwk()"
     },
     {
@@ -10818,7 +10818,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "src_capabilityproof_signing_py_path",
-      "community": 70,
+      "community": 81,
       "norm_label": "path"
     },
     {
@@ -10828,7 +10828,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "capabilityproof_signing_load_private_key",
-      "community": 70,
+      "community": 81,
       "norm_label": "load_private_key()"
     },
     {
@@ -10848,7 +10848,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "capabilityproof_signing_generate_encrypted_keypair",
-      "community": 70,
+      "community": 81,
       "norm_label": "generate_encrypted_keypair()"
     },
     {
@@ -10898,7 +10898,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "capabilityproof_signing_require_safe_regular_file",
-      "community": 70,
+      "community": 81,
       "norm_label": "_require_safe_regular_file()"
     },
     {
@@ -10928,7 +10928,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "capabilityproof_signing_rationale_141",
-      "community": 70,
+      "community": 81,
       "norm_label": "create a new encrypted pkcs#8 private key and rfc 8037 public jwk."
     },
     {
@@ -11168,7 +11168,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_scanlimits",
-      "community": 17,
+      "community": 87,
       "norm_label": "scanlimits"
     },
     {
@@ -11178,7 +11178,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_scanlimits_post_init",
-      "community": 17,
+      "community": 87,
       "norm_label": ".__post_init__()"
     },
     {
@@ -11208,7 +11208,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "capabilityproof_snapshot_snapshot_get",
-      "community": 0,
+      "community": 87,
       "norm_label": ".get()"
     },
     {
@@ -11388,7 +11388,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_remedies_work_src_capabilityproof_stage_b_py",
-      "community": 59,
+      "community": 63,
       "norm_label": "stage_b.py"
     },
     {
@@ -11408,7 +11408,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_workerresult",
-      "community": 59,
+      "community": 0,
       "norm_label": "workerresult"
     },
     {
@@ -11418,7 +11418,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_utc_now",
-      "community": 59,
+      "community": 63,
       "norm_label": "_utc_now()"
     },
     {
@@ -11448,7 +11448,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_remove_tree",
-      "community": 59,
+      "community": 63,
       "norm_label": "_remove_tree()"
     },
     {
@@ -11458,7 +11458,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_py_path",
-      "community": 59,
+      "community": 63,
       "norm_label": "path"
     },
     {
@@ -11468,7 +11468,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_enforce_repository_disk_limit",
-      "community": 59,
+      "community": 63,
       "norm_label": "_enforce_repository_disk_limit()"
     },
     {
@@ -11488,7 +11488,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_safe_git_environment",
-      "community": 59,
+      "community": 63,
       "norm_label": "_safe_git_environment()"
     },
     {
@@ -11498,7 +11498,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_safe_docker_environment",
-      "community": 59,
+      "community": 63,
       "norm_label": "_safe_docker_environment()"
     },
     {
@@ -11548,7 +11548,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_run_bounded",
-      "community": 59,
+      "community": 63,
       "norm_label": "_run_bounded()"
     },
     {
@@ -11558,7 +11558,7 @@
       "source_location": "L227",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_git",
-      "community": 59,
+      "community": 63,
       "norm_label": "_git()"
     },
     {
@@ -11568,7 +11568,7 @@
       "source_location": "L249",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_validate_artifact_relative",
-      "community": 59,
+      "community": 63,
       "norm_label": "_validate_artifact_relative()"
     },
     {
@@ -11578,7 +11578,7 @@
       "source_location": "L249",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_py_scanlimits",
-      "community": 59,
+      "community": 63,
       "norm_label": "scanlimits"
     },
     {
@@ -11598,7 +11598,7 @@
       "source_location": "L327",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_extract_verified_archive",
-      "community": 59,
+      "community": 63,
       "norm_label": "_extract_verified_archive()"
     },
     {
@@ -11608,7 +11608,7 @@
       "source_location": "L377",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_extract_git_repository_archive",
-      "community": 59,
+      "community": 63,
       "norm_label": "_extract_git_repository_archive()"
     },
     {
@@ -11648,7 +11648,7 @@
       "source_location": "L464",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockerquotagitfetcher_fetch",
-      "community": 59,
+      "community": 63,
       "norm_label": ".fetch()"
     },
     {
@@ -11668,7 +11668,7 @@
       "source_location": "L497",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_freeze_public_source",
-      "community": 59,
+      "community": 63,
       "norm_label": "freeze_public_source()"
     },
     {
@@ -11708,7 +11708,7 @@
       "source_location": "L692",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockernoegressworker_command",
-      "community": 59,
+      "community": 63,
       "norm_label": ".command()"
     },
     {
@@ -11718,7 +11718,7 @@
       "source_location": "L723",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_dockernoegressworker_run",
-      "community": 59,
+      "community": 63,
       "norm_label": ".run()"
     },
     {
@@ -11728,7 +11728,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_1",
-      "community": 59,
+      "community": 63,
       "norm_label": "immutable public-git intake and isolated no-egress stage b worker orchestration."
     },
     {
@@ -11738,7 +11738,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_78",
-      "community": 59,
+      "community": 63,
       "norm_label": "remove a private work tree, including read-only git/docker files on windows."
     },
     {
@@ -11748,7 +11748,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_141",
-      "community": 59,
+      "community": 63,
       "norm_label": "give the docker client only connection/runtime state, never buyer or worker secr"
     },
     {
@@ -11758,7 +11758,7 @@
       "source_location": "L378",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_378",
-      "community": 59,
+      "community": 63,
       "norm_label": "extract only bounded regular git metadata emitted by the trusted fetcher image."
     },
     {
@@ -11778,7 +11778,7 @@
       "source_location": "L504",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_rationale_504",
-      "community": 59,
+      "community": 63,
       "norm_label": "fetch one immutable github subdirectory and freeze verified regular-file bytes."
     },
     {
@@ -11808,7 +11808,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_src_capabilityproof_stage_b_signer_py",
-      "community": 107,
+      "community": 63,
       "norm_label": "stage_b_signer.py"
     },
     {
@@ -11818,7 +11818,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_timestamp",
-      "community": 107,
+      "community": 63,
       "norm_label": "_timestamp()"
     },
     {
@@ -11828,7 +11828,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_py_any",
-      "community": 107,
+      "community": 63,
       "norm_label": "any"
     },
     {
@@ -11838,7 +11838,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_sign_verified_worker_result",
-      "community": 107,
+      "community": 63,
       "norm_label": "sign_verified_worker_result()"
     },
     {
@@ -11848,7 +11848,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_py_path",
-      "community": 107,
+      "community": 63,
       "norm_label": "path"
     },
     {
@@ -11858,7 +11858,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_py_ed25519privatekey",
-      "community": 107,
+      "community": 63,
       "norm_label": "ed25519privatekey"
     },
     {
@@ -11868,7 +11868,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_rationale_1",
-      "community": 107,
+      "community": 63,
       "norm_label": "constrained signing gate for receipts produced by verified stage b workers."
     },
     {
@@ -11878,7 +11878,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_rationale_83",
-      "community": 107,
+      "community": 63,
       "norm_label": "sign exact receipt bytes only after all freeze/worker constraints re-verify."
     },
     {
@@ -11888,7 +11888,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_src_capabilityproof_stage_b_signer_cli_py",
-      "community": 42,
+      "community": 91,
       "norm_label": "stage_b_signer_cli.py"
     },
     {
@@ -11898,7 +11898,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_passphrase",
-      "community": 42,
+      "community": 91,
       "norm_label": "_passphrase()"
     },
     {
@@ -11908,7 +11908,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_cli_py_path",
-      "community": 42,
+      "community": 91,
       "norm_label": "path"
     },
     {
@@ -11918,7 +11918,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_parser",
-      "community": 42,
+      "community": 91,
       "norm_label": "_parser()"
     },
     {
@@ -11928,7 +11928,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_capabilityproof_stage_b_signer_cli_py_argumentparser",
-      "community": 42,
+      "community": 91,
       "norm_label": "argumentparser"
     },
     {
@@ -11938,7 +11938,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_main",
-      "community": 42,
+      "community": 91,
       "norm_label": "main()"
     },
     {
@@ -11948,7 +11948,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_signer_cli_rationale_1",
-      "community": 42,
+      "community": 91,
       "norm_label": "minimal cli for the no-egress stage b receipt signer."
     },
     {
@@ -11958,7 +11958,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_stage_b_src_capabilityproof_stage_b_worker_py",
-      "community": 20,
+      "community": 63,
       "norm_label": "stage_b_worker.py"
     },
     {
@@ -11968,7 +11968,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_worker_main",
-      "community": 20,
+      "community": 63,
       "norm_label": "main()"
     },
     {
@@ -11978,7 +11978,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "capabilityproof_stage_b_worker_rationale_1",
-      "community": 20,
+      "community": 63,
       "norm_label": "entrypoint logic executed only inside the stage b no-egress worker container."
     },
     {
@@ -12618,7 +12618,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_stage_a_alpha_tests_test_api_py",
-      "community": 38,
+      "community": 42,
       "norm_label": "test_api.py"
     },
     {
@@ -12628,7 +12628,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_api_request",
-      "community": 38,
+      "community": 42,
       "norm_label": "_request()"
     },
     {
@@ -12638,7 +12638,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "httpconnection",
-      "community": 38,
+      "community": 42,
       "norm_label": "httpconnection"
     },
     {
@@ -12648,7 +12648,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_test_api_test_http_inspect_and_path_confinement",
-      "community": 38,
+      "community": 42,
       "norm_label": "test_http_inspect_and_path_confinement()"
     },
     {
@@ -12658,7 +12658,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "tests_test_api_test_health_is_non_sensitive",
-      "community": 38,
+      "community": 42,
       "norm_label": "test_health_is_non_sensitive()"
     },
     {
@@ -12668,7 +12668,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "tests_test_api_test_incomplete_request_does_not_block_other_loopback_clients",
-      "community": 38,
+      "community": 42,
       "norm_label": "test_incomplete_request_does_not_block_other_loopback_clients()"
     },
     {
@@ -12887,7 +12887,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tests_test_commerce_access",
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "community": 2,
       "norm_label": "test_commerce_access.py"
     },
@@ -13738,7 +13738,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_test_mcp_py",
-      "community": 17,
+      "community": 59,
       "norm_label": "test_mcp.py"
     },
     {
@@ -13748,7 +13748,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "tests_test_mcp_test_mcp_registers_expected_tools_and_calls_inspector",
-      "community": 17,
+      "community": 59,
       "norm_label": "test_mcp_registers_expected_tools_and_calls_inspector()"
     },
     {
@@ -13758,7 +13758,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "tests_test_mcp_test_mcp_stdio_keeps_artifact_text_out_of_unstructured_content",
-      "community": 17,
+      "community": 59,
       "norm_label": "test_mcp_stdio_keeps_artifact_text_out_of_unstructured_content()"
     },
     {
@@ -13908,7 +13908,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_worktrees_initial_mvp_tests_test_provenance_py",
-      "community": 54,
+      "community": 41,
       "norm_label": "test_provenance.py"
     },
     {
@@ -13918,7 +13918,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_git",
-      "community": 54,
+      "community": 41,
       "norm_label": "_git()"
     },
     {
@@ -13928,7 +13928,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "tests_test_provenance_py_path",
-      "community": 54,
+      "community": 41,
       "norm_label": "path"
     },
     {
@@ -13938,7 +13938,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "tests_test_provenance_repository",
-      "community": 54,
+      "community": 41,
       "norm_label": "_repository()"
     },
     {
@@ -13948,7 +13948,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "tests_test_provenance_test_clean_git_skill_reaches_level_three_with_exact_commit",
-      "community": 54,
+      "community": 41,
       "norm_label": "test_clean_git_skill_reaches_level_three_with_exact_commit()"
     },
     {
@@ -13958,7 +13958,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "tests_test_provenance_test_untracked_or_changed_skill_is_not_given_provenance",
-      "community": 54,
+      "community": 41,
       "norm_label": "test_untracked_or_changed_skill_is_not_given_provenance()"
     },
     {
@@ -13968,7 +13968,7 @@
       "source_location": "L65",
       "_origin": "ast",
       "id": "tests_test_provenance_test_modified_tracked_bytes_are_not_given_provenance",
-      "community": 54,
+      "community": 41,
       "norm_label": "test_modified_tracked_bytes_are_not_given_provenance()"
     },
     {
@@ -13978,7 +13978,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_credentials_are_not_written_to_receipt",
-      "community": 54,
+      "community": 41,
       "norm_label": "test_remote_credentials_are_not_written_to_receipt()"
     },
     {
@@ -13988,7 +13988,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_provenance_test_remote_query_credentials_are_not_written_to_receipt",
-      "community": 54,
+      "community": 41,
       "norm_label": "test_remote_query_credentials_are_not_written_to_receipt()"
     },
     {
@@ -13998,7 +13998,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "c_users_mordiaky_projects_capabilityproof_tests_test_public_receipt_py",
-      "community": 24,
+      "community": 105,
       "norm_label": "test_public_receipt.py"
     },
     {
@@ -14008,7 +14008,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_checked_in_public_catalog_has_25_signed_immutable_receipts_from_12_owner_namespaces",
-      "community": 24,
+      "community": 105,
       "norm_label": "test_checked_in_public_catalog_has_25_signed_immutable_receipts_from_12_owner_namespaces()"
     },
     {
@@ -14018,7 +14018,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_public_catalog_contains_no_signing_secrets_or_private_keys",
-      "community": 24,
+      "community": 105,
       "norm_label": "test_public_catalog_contains_no_signing_secrets_or_private_keys()"
     },
     {
@@ -14028,7 +14028,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "tests_test_public_receipt_test_git_preserves_every_byte_hashed_or_signed_into_public_receipts",
-      "community": 24,
+      "community": 105,
       "norm_label": "test_git_preserves_every_byte_hashed_or_signed_into_public_receipts()"
     },
     {
@@ -15297,8 +15297,8 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "human_actions",
-      "community": 150,
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_human_actions_md",
+      "community": 152,
       "norm_label": "human_actions.md"
     },
     {
@@ -15307,8 +15307,8 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "human_actions_human_actions",
-      "community": 150,
+      "id": "capabilityproof_payto_state_human_actions_human_actions",
+      "community": 152,
       "norm_label": "human actions"
     },
     {
@@ -15317,8 +15317,8 @@
       "source_file": "NEXT_ACTION.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "next_action",
-      "community": 130,
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_next_action_md",
+      "community": 153,
       "norm_label": "next_action.md"
     },
     {
@@ -15327,8 +15327,8 @@
       "source_file": "NEXT_ACTION.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "next_action_next_action",
-      "community": 130,
+      "id": "capabilityproof_payto_state_next_action_next_action",
+      "community": 153,
       "norm_label": "next action"
     },
     {
@@ -15557,8 +15557,8 @@
       "source_file": "STATUS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "status",
-      "community": 117,
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_status_md",
+      "community": 154,
       "norm_label": "status.md"
     },
     {
@@ -15567,8 +15567,8 @@
       "source_file": "STATUS.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "status_operating_status",
-      "community": 117,
+      "id": "capabilityproof_payto_state_status_operating_status",
+      "community": 154,
       "norm_label": "operating status"
     },
     {
@@ -16627,7 +16627,7 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "logs_2026_07_15_commercial_launch",
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_commercial_launch_md",
       "community": 112,
       "norm_label": "2026-07-15-commercial-launch.md"
     },
@@ -16717,7 +16717,7 @@
       "source_file": "logs/2026-07-15-domain-wallet-key-followup.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "logs_2026_07_15_domain_wallet_key_followup",
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_domain_wallet_key_followup_md",
       "community": 133,
       "norm_label": "2026-07-15-domain-wallet-key-followup.md"
     },
@@ -16767,7 +16767,7 @@
       "source_file": "logs/2026-07-15-mainnet-payto-configured.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "logs_2026_07_15_mainnet_payto_configured",
+      "id": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_mainnet_payto_configured_md",
       "community": 134,
       "norm_label": "2026-07-15-mainnet-payto-configured.md"
     },
@@ -19071,9 +19071,9 @@
       "source_file": "server.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_description",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_description"
     },
     {
       "relation": "contains",
@@ -19081,9 +19081,9 @@
       "source_file": "server.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_name",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_name"
     },
     {
       "relation": "contains",
@@ -19091,9 +19091,9 @@
       "source_file": "server.json",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_remotes",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_remotes"
     },
     {
       "relation": "contains",
@@ -19101,9 +19101,9 @@
       "source_file": "server.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_repository",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_repository"
     },
     {
       "relation": "contains",
@@ -19111,9 +19111,9 @@
       "source_file": "server.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_schema",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_schema"
     },
     {
       "relation": "contains",
@@ -19121,9 +19121,9 @@
       "source_file": "server.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_title",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_title"
     },
     {
       "relation": "contains",
@@ -19131,9 +19131,9 @@
       "source_file": "server.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_version",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_version"
     },
     {
       "relation": "contains",
@@ -19141,9 +19141,9 @@
       "source_file": "server.json",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_server_json",
-      "target": "capabilityproof_mcp_registry_server_websiteurl",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_websiteurl"
     },
     {
       "relation": "contains",
@@ -19151,9 +19151,9 @@
       "source_file": "server.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_server_repository",
-      "target": "capabilityproof_mcp_registry_server_repository_id",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_repository_id"
     },
     {
       "relation": "contains",
@@ -19161,9 +19161,9 @@
       "source_file": "server.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_server_repository",
-      "target": "capabilityproof_mcp_registry_server_repository_source",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_repository_source"
     },
     {
       "relation": "contains",
@@ -19171,9 +19171,9 @@
       "source_file": "server.json",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_server_repository",
-      "target": "capabilityproof_mcp_registry_server_repository_url",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_server_repository_url"
     },
     {
       "relation": "imports_from",
@@ -49479,7 +49479,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L44",
       "weight": 1.0,
-      "source": "tests_test_commerce_access",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "target": "tests_test_commerce_access_bound_order",
       "confidence_score": 1.0
     },
@@ -49489,7 +49489,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L32",
       "weight": 1.0,
-      "source": "tests_test_commerce_access",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "target": "tests_test_commerce_access_stores",
       "confidence_score": 1.0
     },
@@ -49499,7 +49499,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L85",
       "weight": 1.0,
-      "source": "tests_test_commerce_access",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "target": "tests_test_commerce_access_test_access_secrets_are_bounded_distinct_and_environment_bound",
       "confidence_score": 1.0
     },
@@ -49509,7 +49509,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L66",
       "weight": 1.0,
-      "source": "tests_test_commerce_access",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "target": "tests_test_commerce_access_test_api_keys_are_keyed_digests_and_support_rotation_and_revocation",
       "confidence_score": 1.0
     },
@@ -49519,7 +49519,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L159",
       "weight": 1.0,
-      "source": "tests_test_commerce_access",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "target": "tests_test_commerce_access_test_signed_result_bytes_are_digest_bound_immutable_and_capability_guarded",
       "confidence_score": 1.0
     },
@@ -49529,7 +49529,7 @@
       "source_file": "tests/test_commerce_access.py",
       "source_location": "L124",
       "weight": 1.0,
-      "source": "tests_test_commerce_access",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_tests_test_commerce_access_py",
       "target": "tests_test_commerce_access_test_tenant_quote_and_order_bindings_hide_cross_tenant_objects",
       "confidence_score": 1.0
     },
@@ -50268,9 +50268,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L185",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands"
     },
     {
       "relation": "contains",
@@ -50278,9 +50278,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract"
     },
     {
       "relation": "contains",
@@ -50288,9 +50288,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_publisher_ci_action_binds_exact_git_and_workflow_context_without_expression_in_shell"
     },
     {
       "relation": "contains",
@@ -50298,9 +50298,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_remedy_provisioning_is_manual_api_only_fail_closed_and_hash_locked"
     },
     {
       "relation": "contains",
@@ -50308,9 +50308,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_remedy_workflow_is_disabled_branch_bound_and_environment_scoped"
     },
     {
       "relation": "contains",
@@ -50318,9 +50318,9 @@
       "source_file": "tests/test_distribution.py",
       "source_location": "L109",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_tests_test_distribution_py",
-      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready",
-      "confidence_score": 1.0
+      "target": "tests_test_distribution_test_remote_mcp_registry_manifest_is_exact_read_only_and_oidc_publish_ready"
     },
     {
       "relation": "contains",
@@ -52899,9 +52899,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_backlog_md",
-      "target": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_backlog_prioritized_backlog"
     },
     {
       "relation": "contains",
@@ -52909,9 +52909,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_completed_foundations",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_backlog_completed_foundations"
     },
     {
       "relation": "contains",
@@ -52919,9 +52919,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_deferred_stage_c",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_backlog_deferred_stage_c"
     },
     {
       "relation": "contains",
@@ -52929,9 +52929,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L64",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_evidence_driven_operation",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_backlog_evidence_driven_operation"
     },
     {
       "relation": "contains",
@@ -52939,9 +52939,9 @@
       "source_file": "BACKLOG.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_backlog_prioritized_backlog",
-      "target": "capabilityproof_mcp_registry_backlog_now_external_adoption_and_safe_orderability",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_backlog_now_external_adoption_and_safe_orderability"
     },
     {
       "relation": "contains",
@@ -53199,9 +53199,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_decisions_md",
-      "target": "capabilityproof_mcp_registry_decisions_decision_log",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_decision_log"
     },
     {
       "relation": "contains",
@@ -53209,9 +53209,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_authenticate_exact_receipt_bytes_with_dsse_and_ed25519"
     },
     {
       "relation": "contains",
@@ -53219,9 +53219,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_close_independent_audit_findings_before_accepting_e_001"
     },
     {
       "relation": "contains",
@@ -53229,9 +53229,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_correct_launch_sequencing_to_stage_a_b_and_c"
     },
     {
       "relation": "contains",
@@ -53239,9 +53239,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_do_not_grant_a_public_code_license_autonomously"
     },
     {
       "relation": "contains",
@@ -53249,9 +53249,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_first_slice_is_non_executing_level_1_3_evidence"
     },
     {
       "relation": "contains",
@@ -53259,9 +53259,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_keep_capabilityproof_as_an_internal_codename"
     },
     {
       "relation": "contains",
@@ -53269,9 +53269,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_local_proof_is_not_an_external_service",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_local_proof_is_not_an_external_service"
     },
     {
       "relation": "contains",
@@ -53279,9 +53279,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_make_repository_checkout_bytes_deterministic",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_make_repository_checkout_bytes_deterministic"
     },
     {
       "relation": "contains",
@@ -53289,9 +53289,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_position_as_a_portable_policy_receipt",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_position_as_a_portable_policy_receipt"
     },
     {
       "relation": "contains",
@@ -53299,9 +53299,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_preserve_failed_public_artifacts_as_evidence"
     },
     {
       "relation": "contains",
@@ -53309,9 +53309,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_prices_remain_transaction_experiments",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_prices_remain_transaction_experiments"
     },
     {
       "relation": "contains",
@@ -53319,9 +53319,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_select_the_agent_skills_exact_version_wedge",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_select_the_agent_skills_exact_version_wedge"
     },
     {
       "relation": "contains",
@@ -53329,9 +53329,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L75",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_13_select_vouchspec_as_the_provisional_beta_name"
     },
     {
       "relation": "contains",
@@ -53339,9 +53339,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_add_remote_mcp_discovery_through_github_oidc",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_add_remote_mcp_discovery_through_github_oidc"
     },
     {
       "relation": "contains",
@@ -53349,9 +53349,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_bind_stripe_credentials_to_explicit_accounts_and_keep_root_signing_offline",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_bind_stripe_credentials_to_explicit_accounts_and_keep_root_signing_offline"
     },
     {
       "relation": "contains",
@@ -53359,9 +53359,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L156",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_connect_stripe_only_in_explicit_loopback_test_mode",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_connect_stripe_only_in_explicit_loopback_test_mode"
     },
     {
       "relation": "contains",
@@ -53369,9 +53369,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L112",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_hash_lock_the_publisher_action_runtime",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_hash_lock_the_publisher_action_runtime"
     },
     {
       "relation": "contains",
@@ -53379,9 +53379,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_prepare_discovery_listings_without_accepting_owner_bound_terms",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_prepare_discovery_listings_without_accepting_owner_bound_terms"
     },
     {
       "relation": "contains",
@@ -53389,9 +53389,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_reject_49_for_the_agent_only_market_and_set_a_0_25_usdc_launch_cohort",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_reject_49_for_the_agent_only_market_and_set_a_0_25_usdc_launch_cohort"
     },
     {
       "relation": "contains",
@@ -53399,9 +53399,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L100",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_select_stripe_first_and_correct_fresh_validation_pricing",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_select_stripe_first_and_correct_fresh_validation_pricing"
     },
     {
       "relation": "contains",
@@ -53409,9 +53409,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_treat_bazaar_indexing_proof_as_infrastructure_not_adoption",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_treat_bazaar_indexing_proof_as_infrastructure_not_adoption"
     },
     {
       "relation": "contains",
@@ -53419,9 +53419,9 @@
       "source_file": "DECISIONS.md",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_decisions_decision_log",
-      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_use_minimal_tenant_isolation_and_two_part_delivery_authorization",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_decisions_2026_07_14_use_minimal_tenant_isolation_and_two_part_delivery_authorization"
     },
     {
       "relation": "contains",
@@ -53439,9 +53439,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_goal_evidence_md",
-      "target": "capabilityproof_mcp_registry_goal_evidence_goal_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_goal_evidence_goal_evidence"
     },
     {
       "relation": "contains",
@@ -53449,9 +53449,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L86",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_goal_evidence_goal_evidence",
-      "target": "capabilityproof_mcp_registry_goal_evidence_agentic_wallet_settlement_fulfillment_and_bazaar_indexing_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_goal_evidence_agentic_wallet_settlement_fulfillment_and_bazaar_indexing_evidence"
     },
     {
       "relation": "contains",
@@ -53459,9 +53459,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_goal_evidence_goal_evidence",
-      "target": "capabilityproof_mcp_registry_goal_evidence_cdp_bazaar_one_call_launch_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_goal_evidence_cdp_bazaar_one_call_launch_evidence"
     },
     {
       "relation": "contains",
@@ -53469,9 +53469,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_goal_evidence_goal_evidence",
-      "target": "capabilityproof_mcp_registry_goal_evidence_hosted_owner_excluded_proof",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_goal_evidence_hosted_owner_excluded_proof"
     },
     {
       "relation": "contains",
@@ -53479,9 +53479,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_goal_evidence_goal_evidence",
-      "target": "capabilityproof_mcp_registry_goal_evidence_mainnet_fail_closed_safety_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_goal_evidence_mainnet_fail_closed_safety_evidence"
     },
     {
       "relation": "contains",
@@ -53489,9 +53489,9 @@
       "source_file": "GOAL_EVIDENCE.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_goal_evidence_goal_evidence",
-      "target": "capabilityproof_mcp_registry_goal_evidence_operational_recovery_evidence",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_goal_evidence_operational_recovery_evidence"
     },
     {
       "relation": "contains",
@@ -53499,9 +53499,9 @@
       "source_file": "HUMAN_ACTIONS.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "human_actions",
-      "target": "human_actions_human_actions"
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_human_actions_md",
+      "target": "capabilityproof_payto_state_human_actions_human_actions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53509,9 +53509,9 @@
       "source_file": "NEXT_ACTION.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "next_action",
-      "target": "next_action_next_action"
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_next_action_md",
+      "target": "capabilityproof_payto_state_next_action_next_action",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -53579,9 +53579,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_readme_md",
-      "target": "capabilityproof_mcp_registry_readme_vouchspec",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_vouchspec"
     },
     {
       "relation": "contains",
@@ -53589,9 +53589,9 @@
       "source_file": "README.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_agent_only_x402_sandbox",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_agent_only_x402_sandbox"
     },
     {
       "relation": "contains",
@@ -53599,9 +53599,9 @@
       "source_file": "README.md",
       "source_location": "L76",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_evidence_labels",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_evidence_labels"
     },
     {
       "relation": "contains",
@@ -53609,9 +53609,9 @@
       "source_file": "README.md",
       "source_location": "L170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_local_commerce_harness",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_local_commerce_harness"
     },
     {
       "relation": "contains",
@@ -53619,9 +53619,9 @@
       "source_file": "README.md",
       "source_location": "L234",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_local_inspector_and_builder",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_local_inspector_and_builder"
     },
     {
       "relation": "contains",
@@ -53629,9 +53629,9 @@
       "source_file": "README.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_product_stages",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_product_stages"
     },
     {
       "relation": "contains",
@@ -53639,9 +53639,9 @@
       "source_file": "README.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_public_stage_a_distribution",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_public_stage_a_distribution"
     },
     {
       "relation": "contains",
@@ -53649,9 +53649,9 @@
       "source_file": "README.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_publisher_ci_complete_self_service_example",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_publisher_ci_complete_self_service_example"
     },
     {
       "relation": "contains",
@@ -53659,9 +53659,9 @@
       "source_file": "README.md",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_read_only_catalog_api",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_read_only_catalog_api"
     },
     {
       "relation": "contains",
@@ -53669,9 +53669,9 @@
       "source_file": "README.md",
       "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_read_only_catalog_mcp",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_read_only_catalog_mcp"
     },
     {
       "relation": "contains",
@@ -53679,9 +53679,9 @@
       "source_file": "README.md",
       "source_location": "L88",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "capabilityproof_mcp_registry_readme_vouchspec",
-      "target": "capabilityproof_mcp_registry_readme_verify_a_public_receipt_independently",
-      "confidence_score": 1.0
+      "target": "capabilityproof_mcp_registry_readme_verify_a_public_receipt_independently"
     },
     {
       "relation": "contains",
@@ -53699,9 +53699,9 @@
       "source_file": "STATUS.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "status",
-      "target": "status_operating_status"
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_status_md",
+      "target": "capabilityproof_payto_state_status_operating_status",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -54399,9 +54399,9 @@
       "source_file": "logs/2026-07-14-cdp-mainnet-provisioning.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "c_users_mordiaky_projects_capabilityproof_mcp_registry_logs_2026_07_14_cdp_mainnet_provisioning_md",
-      "target": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_14_cdp_mainnet_provisioning_cdp_mainnet_provisioning_checkpoint"
     },
     {
       "relation": "contains",
@@ -54579,7 +54579,7 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "logs_2026_07_15_commercial_launch",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_commercial_launch_md",
       "target": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
       "confidence_score": 1.0
     },
@@ -54589,9 +54589,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_application_and_deployment",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_application_and_deployment"
     },
     {
       "relation": "contains",
@@ -54599,9 +54599,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_coinbase_x402_credential",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_coinbase_x402_credential"
     },
     {
       "relation": "contains",
@@ -54609,9 +54609,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_commercial_accounting",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_commercial_accounting"
     },
     {
       "relation": "contains",
@@ -54619,9 +54619,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_database_isolation",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_database_isolation"
     },
     {
       "relation": "contains",
@@ -54629,9 +54629,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_outcome",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_outcome"
     },
     {
       "relation": "contains",
@@ -54639,9 +54639,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_remaining_owner_only_gate",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_remaining_owner_only_gate"
     },
     {
       "relation": "contains",
@@ -54649,9 +54649,9 @@
       "source_file": "logs/2026-07-15-commercial-launch.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_commercial_launch_commercial_launch_checkpoint",
-      "target": "logs_2026_07_15_commercial_launch_runtime_identity_and_workers",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_commercial_launch_runtime_identity_and_workers"
     },
     {
       "relation": "contains",
@@ -54659,7 +54659,7 @@
       "source_file": "logs/2026-07-15-domain-wallet-key-followup.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "logs_2026_07_15_domain_wallet_key_followup",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_domain_wallet_key_followup_md",
       "target": "logs_2026_07_15_domain_wallet_key_followup_domain_isolation_and_wallet_key_follow_up",
       "confidence_score": 1.0
     },
@@ -54669,9 +54669,9 @@
       "source_file": "logs/2026-07-15-domain-wallet-key-followup.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_domain_wallet_key_followup_domain_isolation_and_wallet_key_follow_up",
-      "target": "logs_2026_07_15_domain_wallet_key_followup_financial_and_acceptance_accounting",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_domain_wallet_key_followup_financial_and_acceptance_accounting"
     },
     {
       "relation": "contains",
@@ -54679,9 +54679,9 @@
       "source_file": "logs/2026-07-15-domain-wallet-key-followup.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_domain_wallet_key_followup_domain_isolation_and_wallet_key_follow_up",
-      "target": "logs_2026_07_15_domain_wallet_key_followup_live_hostname_outcome",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_domain_wallet_key_followup_live_hostname_outcome"
     },
     {
       "relation": "contains",
@@ -54689,9 +54689,9 @@
       "source_file": "logs/2026-07-15-domain-wallet-key-followup.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_domain_wallet_key_followup_domain_isolation_and_wallet_key_follow_up",
-      "target": "logs_2026_07_15_domain_wallet_key_followup_owner_supplied_coinbase_credential_outcome",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_domain_wallet_key_followup_owner_supplied_coinbase_credential_outcome"
     },
     {
       "relation": "contains",
@@ -54699,7 +54699,7 @@
       "source_file": "logs/2026-07-15-mainnet-payto-configured.md",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "logs_2026_07_15_mainnet_payto_configured",
+      "source": "c_users_mordiaky_projects_capabilityproof_payto_state_logs_2026_07_15_mainnet_payto_configured_md",
       "target": "logs_2026_07_15_mainnet_payto_configured_mainnet_receiving_address_configured",
       "confidence_score": 1.0
     },
@@ -54709,9 +54709,9 @@
       "source_file": "logs/2026-07-15-mainnet-payto-configured.md",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_mainnet_payto_configured_mainnet_receiving_address_configured",
-      "target": "logs_2026_07_15_mainnet_payto_configured_evidence",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_mainnet_payto_configured_evidence"
     },
     {
       "relation": "contains",
@@ -54719,9 +54719,9 @@
       "source_file": "logs/2026-07-15-mainnet-payto-configured.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "logs_2026_07_15_mainnet_payto_configured_mainnet_receiving_address_configured",
-      "target": "logs_2026_07_15_mainnet_payto_configured_remaining_gate",
-      "confidence_score": 1.0
+      "target": "logs_2026_07_15_mainnet_payto_configured_remaining_gate"
     },
     {
       "relation": "contains",
@@ -55925,5 +55925,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e94fce2f47390abf620370256c1d73025910ff89"
+  "built_at_commit": "40c0570737f1b3fa2a63cd4e1fee9f2226dd80b0"
 }
