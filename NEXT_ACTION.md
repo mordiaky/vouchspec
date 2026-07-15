@@ -23,4 +23,7 @@ successful settlement.
 In parallel, prepare the already-proven flow for Base mainnet without adding any human/card
 checkout. Mainnet stays fail-closed until live receiving-wallet, facilitator, recovery,
 refund/remedy, cost accounting, isolated worker/signer, and public invalidation behavior pass the
-same automated gates. No owner action is currently required.
+same automated gates. The researched launch experiment is exactly 0.25 USDC per fresh validation;
+the previous $49 hypothesis is rejected. Apply the predeclared $0.10 fallback and $0.50 escalation
+rules in `research/agent-only-pricing-analysis-2026-07-14.md` only after qualified mainnet evidence.
+No owner action is currently required.

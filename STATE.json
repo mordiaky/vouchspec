@@ -43,7 +43,9 @@
   "commerce": {
     "product": "fresh_public_static_validation",
     "price_currency": "USD",
-    "price_amount": "49.00",
+    "price_amount": "0.25",
+    "price_status": "unvalidated_mainnet_launch_experiment",
+    "price_research": "research/agent-only-pricing-analysis-2026-07-14.md",
     "request_contract": "public_strict_one_call_agent_only_x402_bazaar_intake",
     "quote_orderable": true,
     "settlement_available": true,

@@ -102,7 +102,7 @@
     "catalog_search_usd": "0.00",
     "receipt_retrieval_usd": "0.00",
     "sandbox_fresh_validation_test_usdc": "1.00",
-    "commercial_fresh_validation_hypothesis_usd": "49.00",
+    "commercial_fresh_validation_hypothesis_usd": "0.25",
     "sandbox_orderable": true,
     "commercial_orderable": false
   }

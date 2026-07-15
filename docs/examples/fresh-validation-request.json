@@ -11,7 +11,7 @@
   "profile": "vouchspec-public-static-v1",
   "max_price": {
     "currency": "usd",
-    "amount_minor": 4900
+    "amount_minor": 25
   },
   "delivery_id": "demo_request_001"
 }

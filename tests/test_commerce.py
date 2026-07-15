@@ -54,7 +54,7 @@ def test_fresh_validation_request_and_quote_are_strict_and_schema_valid() -> Non
     Draft202012Validator(
         _schema("fresh-validation-quote.schema.json"), format_checker=FormatChecker()
     ).validate(quote)
-    assert quote["amount_minor"] == 4_900
+    assert quote["amount_minor"] == 25
     assert quote["orderable"] is False
     assert quote["deliverable"]["source"]["commit"] == "a" * 40
     assert quote["expires_at"] == "2026-07-14T12:15:00Z"
@@ -74,7 +74,7 @@ def test_request_digest_is_deterministic_and_maximum_is_respected() -> None:
     )
     assert first["request_digest"] == second["request_digest"]
     below = json.loads(json.dumps(REQUEST))
-    below["max_price"]["amount_minor"] = 4_899
+    below["max_price"]["amount_minor"] = 24
     declined = build_fresh_validation_quote(
         below,
         generated_at=datetime(2026, 7, 14, tzinfo=timezone.utc),
@@ -129,7 +129,7 @@ def test_quote_schema_rejects_weakened_nested_contracts() -> None:
     empty_deliverable["deliverable"] = {}
     mutations.append(empty_deliverable)
     duplicate_provider = json.loads(json.dumps(quote))
-    duplicate_provider["payment_options"][1] = duplicate_provider["payment_options"][0]
+    duplicate_provider["payment_options"].append(duplicate_provider["payment_options"][0])
     mutations.append(duplicate_provider)
     empty_limits = json.loads(json.dumps(quote))
     empty_limits["hard_limits"] = {}

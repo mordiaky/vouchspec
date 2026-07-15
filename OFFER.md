@@ -17,8 +17,9 @@ checks the current invalidation status. No account, call, or human approval is r
   public content-addressed receipt/status URLs.
 - **Public sandbox:** 1.00 test USDC through x402 v2 on Base Sepolia; self-service and
   `counts_for_goal: false`.
-- **Commercial hypothesis:** USD $49.00-equivalent USDC per accepted mainnet request; not yet
-  enabled or validated.
+- **Commercial launch experiment:** exactly 0.25 USDC per accepted mainnet request; not yet
+  enabled or validated. The evidence and predeclared $0.10/$0.50 follow-on rules are in
+  `research/agent-only-pricing-analysis-2026-07-14.md`.
 - **Delivery objective:** within 10 minutes of verified payment for an in-policy request;
   objective service failures follow the automatic remedy below.
 - **Acceptance:** the signature verifies, the receipt binds the requested repository, commit,

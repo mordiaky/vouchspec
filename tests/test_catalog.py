@@ -93,8 +93,8 @@ def test_read_only_catalog_http_uses_external_trust_state_and_no_upload_route(tm
         response = connection.getresponse()
         quote = json.loads(response.read())
         assert response.status == 200
-        assert quote["amount"] == "49.00"
-        assert quote["amount_minor"] == 4900
+        assert quote["amount"] == "0.25"
+        assert quote["amount_minor"] == 25
         assert quote["availability"] == "stage_b_not_orderable"
         assert quote["orders_accepted"] is False
         assert quote["settlement_available"] is False

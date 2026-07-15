@@ -16,35 +16,26 @@
     "operation": {"const": "fresh_public_static_validation"},
     "request_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
     "currency": {"const": "usd"},
-    "amount_minor": {"const": 4900},
-    "amount": {"const": "49.00"},
+    "amount_minor": {"const": 25},
+    "amount": {"const": "0.25"},
     "generated_at": {"type": "string", "format": "date-time"},
     "expires_at": {"type": "string", "format": "date-time"},
-    "quote_status": {"enum": ["preview_account_and_worker_not_live", "declined_max_price"]},
-    "availability": {"const": "stage_b_worker_and_payment_activation_required"},
+    "quote_status": {"enum": ["preview_mainnet_not_live", "declined_max_price"]},
+    "availability": {"const": "stage_b_mainnet_activation_required"},
     "orderable": {"const": false},
     "settlement_available": {"const": false},
     "payment_options": {
       "type": "array",
-      "minItems": 2,
-      "maxItems": 2,
+      "minItems": 1,
+      "maxItems": 1,
       "prefixItems": [
         {
           "type": "object",
           "additionalProperties": false,
           "required": ["provider", "status"],
           "properties": {
-            "provider": {"const": "stripe_checkout"},
-            "status": {"const": "account_activation_required"}
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["provider", "status"],
-          "properties": {
             "provider": {"const": "x402"},
-            "status": {"const": "secondary_not_enabled"}
+            "status": {"const": "mainnet_not_enabled"}
           }
         }
       ],
@@ -123,7 +114,7 @@
       "prefixItems": [
         {"const": "allowlisted immutable fetcher and isolated no-egress worker"},
         {"const": "separate constrained signing service"},
-        {"const": "activated payment account and verified webhook secret"},
+        {"const": "exact x402 mainnet settlement and automated remedy controls"},
         {"const": "idempotent order store and provider reconciliation"}
       ],
       "items": false

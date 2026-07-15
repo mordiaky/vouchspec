@@ -2,13 +2,15 @@
 
 ## Unreleased
 
+- Replace the unsupported $49/Stripe-era price card with the researched 0.25-USDC agent-only
+  x402 launch cohort, timestamped full-Bazaar evidence, and predeclared $0.10/$0.50 cohort gates.
 - Preserve publisher receipt/binding evidence for both structural passes and explicit
   structural failures, with separate structure/decision outputs.
 - Install the publisher action runtime from a fully resolved hash-locked Linux/Python 3.11
   dependency set instead of dynamically resolving an unhashed tree.
 - Publish a complete attested owned demo and self-serve publisher workflow; owned evidence
   remains excluded from external adoption.
-- Add a strict $49 fresh public static validation request contract and non-orderable quote
+- Add the original, now-superseded $49 fresh public static validation request contract and non-orderable quote
   preview, exact nested schemas, duplicate-key rejection, separate order/payment states, and
   Stripe exact-body webhook authentication.
 - Add GitHub-only exact-commit/subdirectory freezing with Git blob verification, hostile path

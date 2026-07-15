@@ -13,7 +13,7 @@
 | R-009 | Git source binding is mistaken for publisher identity. | High | Schema and copy separate exact commit evidence from unverified identity. | Controlled |
 | R-010 | Structural failures are mistaken for passes or lost by CI. | High | Failure receipts remain attested; `structure-status` and `decision-status` are explicit; only pass receives validation label. | Corrected; demo independently verified |
 | R-011 | Built-in server is treated as production hardened. | High | Public Stage A uses managed TLS/static hosting; dynamic worker requires bounded deployment controls. | Active gate |
-| R-012 | Free substitutes eliminate willingness to pay. | High | Free retrieval plus $49 fresh exact-version test; genuine settlement/repeat gates. | Demand unvalidated |
+| R-012 | Free substitutes eliminate willingness to pay. | High | Free retrieval plus researched 0.25-USDC fresh-validation cohort; predeclared $0.10/$0.50 tests; genuine settlement/repeat gates. | Demand unvalidated |
 | R-013 | Windows tests are generalized to Linux/cross-OS/archive safety. | Critical for Stage B | Linux container proof, adversarial tree/archive/path matrix, deterministic checks, explicit skip. | 130 pass; 1 Windows symlink-privilege skip; public CI refresh pending |
 | R-014 | Dependency lock is mistaken for executing-runtime proof. | Medium | Record runtime versions; describe lock hash as reference evidence only. | Active limitation |
 | R-015 | Owned/demo/monitor traffic inflates commercial evidence. | Critical | Source classification, immutable exclusions, raw event ledger, acceptance queries exclude controlled sources. | Policy implemented; telemetry expansion pending |

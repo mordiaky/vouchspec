@@ -1,0 +1,90 @@
+{
+  "source": "https://api.cdp.coinbase.com/platform/v2/x402/discovery/resources",
+  "documentation": "https://docs.cdp.coinbase.com/x402/bazaar",
+  "sampled_at": "2026-07-15T00:28:22.8941149Z",
+  "method": {
+    "catalog_pages": 27,
+    "page_limit": 1000,
+    "reported_catalog_items": 26623,
+    "network": "eip155:8453",
+    "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "asset_decimals": 6,
+    "deduplication_key": ["resource", "scheme", "usd_price"]
+  },
+  "base_mainnet_usdc_unique_accepts": 12360,
+  "percentiles_usd": {
+    "minimum": 0.0,
+    "p25": 0.003,
+    "median": 0.01,
+    "p75": 0.07,
+    "p90": 0.15,
+    "p95": 0.30,
+    "p99": 2.10,
+    "maximum": 3208.88
+  },
+  "price_bands": [
+    {"minimum": 0.0, "maximum_exclusive": 0.01, "entries": 4709},
+    {"minimum": 0.01, "maximum_exclusive": 0.10, "entries": 5102},
+    {"minimum": 0.10, "maximum_exclusive": 1.0, "entries": 2233},
+    {"minimum": 1.0, "maximum_exclusive": 5.0, "entries": 228},
+    {"minimum": 5.0, "maximum_exclusive": 20.0, "entries": 69},
+    {"minimum": 20.0, "maximum_exclusive": 50.0, "entries": 6},
+    {"minimum": 50.0, "maximum_exclusive": null, "entries": 13}
+  ],
+  "semantic_comparables": [
+    {
+      "query": "agent skill security validation",
+      "resource": "https://x402-endpoints.onrender.com/agent/content-scan",
+      "price_usd": 0.10,
+      "observation": "Untrusted Agent Skill/content injection scan"
+    },
+    {
+      "query": "code security audit",
+      "resource": "https://api.24klabs.ai/api/v1/code-review",
+      "price_usd": 0.40,
+      "observation": "Security, performance, and architecture code review"
+    },
+    {
+      "query": "code security audit",
+      "resource": "https://oracles-production.up.railway.app/v1/depaudit/check",
+      "price_usd": 0.50,
+      "observation": "Dependency risk audit with advisories and recommendation"
+    },
+    {
+      "query": "code security audit",
+      "resource": "https://api.24klabs.ai/api/v1/security-audit",
+      "price_usd": 1.0,
+      "observation": "Comprehensive code security audit"
+    },
+    {
+      "query": "static analysis signed receipt",
+      "resource": "https://hermesplant.com/api/agent-services/assurance/attest",
+      "price_usd": 0.05,
+      "observation": "Signed receipt for one agent action"
+    },
+    {
+      "query": "software supply chain provenance attestation",
+      "resource": "https://api.agentstools.dev/notarize",
+      "price_usd": 0.008,
+      "observation": "Signed public URL snapshot and attestation"
+    },
+    {
+      "query": "software supply chain provenance attestation",
+      "resource": "https://www.stratalize.com/api/x402/data-freshness-attestation",
+      "price_usd": 1.0,
+      "observation": "Signed data-freshness attestation"
+    },
+    {
+      "query": "code security audit",
+      "resource": "https://mudko.com/api/x402/audit",
+      "price_usd": 5.0,
+      "observation": "Broad 22-check site quality, accessibility, and security audit"
+    }
+  ],
+  "limitations": [
+    "Listed supply prices do not establish willingness to pay or transaction conversion.",
+    "Seller descriptions and quality claims were not independently verified.",
+    "The catalog changes continuously; this is a timestamped observation.",
+    "Multiple schemes or prices for one resource remain distinct when their deduplication key differs."
+  ]
+}

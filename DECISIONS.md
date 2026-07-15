@@ -168,6 +168,26 @@
 - **Boundary:** This is not a deployment or sale. Managed TLS, a mode-specific public test
   endpoint, restricted durable state, kernel fetch quota, and production signing remain gates.
 
+## 2026-07-14 - Reject $49 for the agent-only market and set a 0.25 USDC launch cohort
+
+- **Decision:** Supersede the Stripe-era $49 hypothesis. Launch Base-mainnet agent-only fresh
+  validation at exactly 0.25 USDC only after the remaining safety gates pass.
+- **Evidence:** A complete Coinbase CDP Bazaar catalog observation found 12,360 unique
+  Base-mainnet USDC resource/scheme/price entries: median $0.01, 95th percentile $0.30, and 99th
+  percentile $2.10. Closest code/security operations were $0.10-$1.00. Only 0.15% of observed
+  entries cost $20 or more. Free Cisco, NVIDIA, GitHub, Tessl, Snyk, and Socket substitutes
+  compress the value of a generic scan. Coinbase wallet spending controls further penalize a
+  $49 autonomous call.
+- **Economics:** The completed isolated fulfillment used 34 seconds of a Linux runner; the
+  published one-minute floor is about $0.006. A conservative $0.05 variable-cost reserve leaves
+  $0.20 contribution, or 80%, at 0.25 USDC.
+- **Experiment:** Fall to 0.10 USDC only after zero settlements with qualified exposure; test
+  0.50 USDC only after three unrelated buyers, one repeat buyer, positive contribution, and a
+  low remedy rate. Never personalize price by wallet or buyer.
+- **Research:** `research/agent-only-pricing-analysis-2026-07-14.md`.
+- **Boundary:** This changes only the unvalidated launch cohort. Mainnet stays fail-closed until
+  the separate production payment, worker, signer, remedy, monitoring, and ledger gates pass.
+
 ## 2026-07-14 - Treat Bazaar indexing proof as infrastructure, not adoption
 
 - **Decision:** Use one faucet-funded Agentic Wallet settlement to validate the public x402/CDP

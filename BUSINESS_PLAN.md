@@ -64,7 +64,8 @@ JSON. A separate recovery/root key signs receipt and issuer-key lifecycle state.
 - Public search: free.
 - Existing receipt retrieval: free or near-free.
 - Receipt comparison: USD $0.005–$0.01.
-- Fresh public static validation plus signed receipt: USD $49.00 initial hypothesis.
+- Fresh public static validation plus signed receipt: 0.25 USDC researched launch cohort;
+  unvalidated until genuine unrelated settlement and repeat-use evidence exists.
 - Signed receipt issuance: included in the first paid fresh-validation product.
 - Continuous artifact monitoring: USD $2–$10 monthly.
 - Independent sandbox analysis: later, priced from measured compute cost.

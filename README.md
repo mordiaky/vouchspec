@@ -134,8 +134,9 @@ vouchspec quote-fresh-validation docs\examples\fresh-validation-request.json
 ```
 
 The preview validates the same request shape used by the managed API. The public sandbox price
-is deliberately faucet-sized at **1.00 test USDC**; the commercial mainnet price remains an
-unvalidated **USD $49.00 hypothesis**.
+is deliberately faucet-sized at **1.00 test USDC**. Full agent-market research rejected the
+earlier $49 idea; the commercial mainnet launch cohort is an unvalidated **0.25 USDC** per fresh
+validation, with the predeclared evidence gates in `PRICING.md`.
 
 ## Agent-only x402 sandbox
 

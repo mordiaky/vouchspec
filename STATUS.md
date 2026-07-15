@@ -8,8 +8,9 @@
 - **Stage B payment:** exact x402 v2 payment using test USDC on Base Sepolia. The sandbox price
   is 1.00 test USDC so faucet-funded agents can exercise the complete flow. The one-call route
   verifies and settles through Coinbase's authenticated CDP facilitator and declares the official
-  x402 Bazaar extension. The commercial price remains an unvalidated USD $49 hypothesis.
-  Mainnet is fail-closed.
+  x402 Bazaar extension. Full live-catalog and substitute research rejected the prior $49
+  hypothesis; the predeclared commercial launch experiment is 0.25 USDC per fresh validation,
+  with evidence-triggered $0.10/$0.50 follow-on cohorts. Mainnet is fail-closed.
 - **CDP/Bazaar launch:** Agentic Wallet compatibility deployment
   `d30577721f800a93748a2a4c55fd26972662e675` is live; PR `mordiaky/plyrium#34` merged it to main
   as `d93deb4647506892f88549aab4c2167d8087d01e`. Coinbase's public semantic search and merchant

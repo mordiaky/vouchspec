@@ -19,7 +19,8 @@ from typing import Any
 from .errors import InputRejected
 
 
-FRESH_VALIDATION_AMOUNT_MINOR = 4_900
+FRESH_VALIDATION_AMOUNT_MINOR = 25
+LEGACY_STRIPE_AMOUNT_MINOR = 4_900
 FRESH_VALIDATION_CURRENCY = "usd"
 FRESH_VALIDATION_PROFILE = "vouchspec-public-static-v1"
 QUOTE_TTL_MINUTES = 15
@@ -192,6 +193,7 @@ def build_fresh_validation_quote(
     *,
     generated_at: datetime | None = None,
     quote_id: str | None = None,
+    legacy_stripe_adapter: bool = False,
 ) -> dict[str, Any]:
     """Build a precise non-orderable quote preview while live settlement remains disabled."""
 
@@ -201,7 +203,23 @@ def build_fresh_validation_quote(
     if not _QUOTE_ID.fullmatch(identifier):
         raise ValueError("quote_id must match q_ followed by 24 lowercase hex characters")
     request_digest = hashlib.sha256(_canonical_bytes(request)).hexdigest()
-    within_maximum = request["max_price"]["amount_minor"] >= FRESH_VALIDATION_AMOUNT_MINOR
+    amount_minor = LEGACY_STRIPE_AMOUNT_MINOR if legacy_stripe_adapter else FRESH_VALIDATION_AMOUNT_MINOR
+    within_maximum = request["max_price"]["amount_minor"] >= amount_minor
+    if legacy_stripe_adapter:
+        amount = "49.00"
+        quote_status = "preview_account_and_worker_not_live"
+        availability = "stage_b_worker_and_payment_activation_required"
+        payment_options = [
+            {"provider": "stripe_checkout", "status": "account_activation_required"},
+            {"provider": "x402", "status": "secondary_not_enabled"},
+        ]
+        payment_gate = "activated payment account and verified webhook secret"
+    else:
+        amount = "0.25"
+        quote_status = "preview_mainnet_not_live"
+        availability = "stage_b_mainnet_activation_required"
+        payment_options = [{"provider": "x402", "status": "mainnet_not_enabled"}]
+        payment_gate = "exact x402 mainnet settlement and automated remedy controls"
     quote: dict[str, Any] = {
         "schema_version": "1.0.0",
         "service": "VouchSpec",
@@ -209,18 +227,15 @@ def build_fresh_validation_quote(
         "operation": "fresh_public_static_validation",
         "request_digest": f"sha256:{request_digest}",
         "currency": FRESH_VALIDATION_CURRENCY,
-        "amount_minor": FRESH_VALIDATION_AMOUNT_MINOR,
-        "amount": "49.00",
+        "amount_minor": amount_minor,
+        "amount": amount,
         "generated_at": _timestamp(now),
         "expires_at": _timestamp(now + timedelta(minutes=QUOTE_TTL_MINUTES)),
-        "quote_status": "preview_account_and_worker_not_live" if within_maximum else "declined_max_price",
-        "availability": "stage_b_worker_and_payment_activation_required",
+        "quote_status": quote_status if within_maximum else "declined_max_price",
+        "availability": availability,
         "orderable": False,
         "settlement_available": False,
-        "payment_options": [
-            {"provider": "stripe_checkout", "status": "account_activation_required"},
-            {"provider": "x402", "status": "secondary_not_enabled"},
-        ],
+        "payment_options": payment_options,
         "deliverable": {
             "type": "signed_exact_version_static_receipt",
             "source": request["source"],
@@ -241,7 +256,7 @@ def build_fresh_validation_quote(
         "live_gates": [
             "allowlisted immutable fetcher and isolated no-egress worker",
             "separate constrained signing service",
-            "activated payment account and verified webhook secret",
+            payment_gate,
             "idempotent order store and provider reconciliation",
         ],
     }

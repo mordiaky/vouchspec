@@ -30,7 +30,7 @@ Base URL: `https://vouchspec-sandbox.plyrium.com`
    `github.com`, repository owner/name, a full lowercase commit, exact portable skill path,
    fixed profile, maximum price, and opaque delivery ID.
 3. The sandbox quote is exactly 1.00 test USDC and is explicitly non-revenue. The separate
-   commercial hypothesis is USD $49 equivalent USDC; it is not mainnet-orderable today.
+   researched commercial launch experiment is 0.25 USDC; it is not mainnet-orderable today.
 4. `POST /api/vouchspec/v1/orders` with the quote ID and a new tenant-scoped idempotency key.
    The response returns the order, a one-time order delivery token, and its purchase path.
 5. `GET` the purchase path with the bearer key and `X-VouchSpec-Delivery-Token`. Without a

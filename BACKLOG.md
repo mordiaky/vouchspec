@@ -9,9 +9,9 @@
   decision outputs, and has a complete owned demonstration with GitHub attestations.
 - **B-016:** first repository-specific adoption proposal submitted to an unrelated publisher;
   tracked as outreach, not adoption.
-- **B-017:** USD $49 fresh public static validation defined with strict immutable-source
-  request validation, schemas, exact deliverable/refund/limit language, and a non-orderable
-  quote preview.
+- **B-017:** the original USD $49 fresh-validation hypothesis was encoded with strict
+  immutable-source request validation and a non-orderable quote preview. The price and
+  Stripe-era payment metadata are now superseded by the researched 0.25-USDC x402 cohort.
 - **B-018:** Stripe selected as primary rail, x402 as secondary; webhook signature verification,
   order/payment state separation, and provider-neutral preparation implemented without keys.
 - **B-019:** current official MCP Registry and GitHub Actions Marketplace routes reviewed;

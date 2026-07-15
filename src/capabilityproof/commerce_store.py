@@ -17,7 +17,6 @@ import sqlite3
 from typing import Any, Iterator
 
 from .commerce import (
-    FRESH_VALIDATION_AMOUNT_MINOR,
     FRESH_VALIDATION_CURRENCY,
     OrderStatus,
     PaymentStatus,
@@ -260,7 +259,14 @@ class CommerceStore:
         ):
             raise InputRejected("live orderable quotes are not activated", code="commerce_live_not_enabled")
         request = parse_fresh_validation_request(request_value)
-        quote = build_fresh_validation_quote(request, generated_at=generated_at, quote_id=quote_id)
+        # This SQLite adapter is retained only as historical Stripe/test evidence.
+        # The active agent-only x402 launch surface uses the 0.25-USDC public quote.
+        quote = build_fresh_validation_quote(
+            request,
+            generated_at=generated_at,
+            quote_id=quote_id,
+            legacy_stripe_adapter=True,
+        )
         if quote["quote_status"] == "declined_max_price":
             return quote
         quote = dict(quote)

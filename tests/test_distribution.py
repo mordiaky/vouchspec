@@ -85,7 +85,7 @@ def test_machine_discovery_exposes_agent_only_x402_sandbox_and_cache_contract() 
     assert discovery["receipts"]["shareable"] is True
     assert discovery["receipts"]["invalidation_status_is_separate"] is True
     assert discovery["pricing"]["sandbox_fresh_validation_test_usdc"] == "1.00"
-    assert discovery["pricing"]["commercial_fresh_validation_hypothesis_usd"] == "49.00"
+    assert discovery["pricing"]["commercial_fresh_validation_hypothesis_usd"] == "0.25"
 
 
 def test_hosted_fulfillment_workflow_keeps_secrets_out_of_networked_artifact_commands() -> None:

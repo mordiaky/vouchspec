@@ -24,7 +24,8 @@
 
 - [x] Strict request contract requires allowlisted host, full lowercase commit, explicit safe
   POSIX skill path, profile, buyer maximum, and opaque delivery ID.
-- [x] Quote states exact $49 price, deliverable, exclusions, limits, refunds, and disabled gates.
+- [x] Quote states the exact 0.25-USDC launch price, deliverable, exclusions, limits, remedies,
+  and disabled mainnet gates.
 - [x] Order and payment states are separate; exact-body Stripe webhook authentication is tested.
 - [x] Fetch only allowlisted public immutable sources with streamed limits.
 - [x] Freeze/hash bytes before analysis in an isolated, no-egress, non-executing worker.
