@@ -1,0 +1,29 @@
+{
+  "claim": {
+    "schema": "rwt6-empirical-observation-claim-v1",
+    "subject": "well_known_skills.primary_file_name"
+  },
+  "policy": {
+    "agreement": "unanimous",
+    "max_body_bytes": 1048576,
+    "require_distinct_hosts": true,
+    "required_sources": 2,
+    "schema": "rwt6-empirical-evidence-policy-v1",
+    "timeout_seconds": 20
+  },
+  "schema": "rwt6-empirical-evidence-request-v1",
+  "sources": [
+    {
+      "pointer": "/skills/0/files/0",
+      "schema": "rwt6-empirical-json-source-v1",
+      "source_id": "mintlify_skills_index",
+      "url": "https://www.mintlify.com/docs/.well-known/skills/index.json"
+    },
+    {
+      "pointer": "/skills/0/files/0",
+      "schema": "rwt6-empirical-json-source-v1",
+      "source_id": "mastra_skills_index",
+      "url": "https://mastra.ai/.well-known/skills/index.json"
+    }
+  ]
+}

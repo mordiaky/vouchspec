@@ -1,0 +1,8 @@
+{
+  "skills": [
+    {
+      "name": "vouchspec-verify-before-install",
+      "path": "skills/vouchspec-verify-before-install"
+    }
+  ]
+}
