@@ -157,6 +157,38 @@ CI/attestation URLs, and the final independent audit when eligible.
   settled payers, and 0 goal-qualified orders. No customer identifiers were retrieved or recorded.
   This private observation is outside the public-JSON evidence gate.
 
+## Installable Agent Skill acquisition evidence
+
+- Public VouchSpec PR `#26` merged the installable
+  `skills/vouchspec-verify-before-install/SKILL.md` and `skills.sh.json` at
+  `7940f61a994dafa294f3632c533dcc675638ef1a`. Main CI run `29465188819` passed, and a clean
+  `DISABLE_TELEMETRY=1 npx skills@latest add mordiaky/vouchspec --list` discovered exactly
+  `vouchspec-verify-before-install` without installing the skill or creating a payment.
+- Plyrium PR `#49` merged at `9c31e1dd98c36aee2b5cce02ca2cea73ba634461`; production deployment
+  `dpl_FhA8dG6RDbBuRSERVASRCUsg77B4` reached Ready and main CI run `29465793030` passed.
+  Production now serves `/.well-known/skills/index.json` plus
+  `/.well-known/skills/vouchspec-verify-before-install/SKILL.md` and cross-links them from
+  discovery, `llms.txt`, and `/.well-known/x402`.
+- Direct live probes returned HTTP 200 for both skill paths. A bodyless `POST` to
+  `/api/vouchspec/v1/validate` returned HTTP 402 plus `PAYMENT-REQUIRED`; `{}` correctly returned
+  422 because it is a malformed validation request, not a payment-discovery probe.
+- The evidence wrapper's two-host `well_known_skills.primary_file_name` receipt independently
+  replayed with `premise_accepted: true`, value `SKILL.md`, and receipt SHA-256
+  `e287b8f80d63e95756d5e7e15bdaa94e6fced580bac0f84c21500712531ef32e`. Original JSON sources:
+  `https://www.mintlify.com/docs/.well-known/skills/index.json` and
+  `https://mastra.ai/.well-known/skills/index.json`.
+- Agent Tools' service JSON still reported `health: down` from its `2026-07-16T00:33:26Z`
+  scheduled check while the live VouchSpec health JSON reported `status: ok`. The preserved
+  two-host receipt is therefore `DISPUTED`, `premise_accepted: false`, SHA-256
+  `a016dd43645f5f3fee58458d771804a49c746c6b8fc007f396e0515d5de7fd8e`. Agent Tools' public
+  timer runs its directory health probe every six hours and exposes no immediate public refresh
+  for an already-listed service. No single availability premise is admitted until the JSON
+  sources agree.
+- The private aggregate at `2026-07-16T02:17:02Z` contained 0 live orders, 0 paid or delivered
+  live orders, 0 paid minor units, 0 settled payments, 0 distinct or repeat settled payers, and
+  0 goal-qualified orders. No customer identifiers were retrieved. This private observation is
+  outside the public-JSON evidence gate.
+
 ## Mainnet fail-closed safety evidence
 
 - Hosted remedy/state PR `mordiaky/plyrium#37` merged as
