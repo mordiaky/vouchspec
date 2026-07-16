@@ -14,6 +14,8 @@
     "self_service_registration": true,
     "health": "/api/vouchspec/v1/health",
     "discovery": "/api/vouchspec/v1/discovery",
+    "agent_skill_index": "/.well-known/skills/index.json",
+    "agent_skill": "/.well-known/skills/vouchspec-verify-before-install/SKILL.md",
     "registration": "/api/vouchspec/v1/tenants",
     "quotes": "/api/vouchspec/v1/quotes",
     "orders": "/api/vouchspec/v1/orders",
@@ -95,6 +97,15 @@
       "registry_status": "active",
       "registry_api": "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.mordiaky%2Fvouchspec"
     }
+  },
+  "agent_skill": {
+    "name": "vouchspec-verify-before-install",
+    "repository_path": "skills/vouchspec-verify-before-install/SKILL.md",
+    "well_known_index": "https://vouchspec.plyrium.com/.well-known/skills/index.json",
+    "well_known_skill": "https://vouchspec.plyrium.com/.well-known/skills/vouchspec-verify-before-install/SKILL.md",
+    "install": "npx skills add mordiaky/vouchspec --skill vouchspec-verify-before-install",
+    "human_handoff_required": false,
+    "wallet_required_only_for_fresh_paid_validation": true
   },
   "publisher_ci_action": "mordiaky/vouchspec/distribution/github-action@ed812a14cbc62333d59bac319f79d897f14d1b64",
   "publisher_ci_demo": "https://github.com/mordiaky/vouchspec-demo",

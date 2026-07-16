@@ -21,6 +21,9 @@ labeled `STRUCTURE_VALIDATED`.
 - Managed API discovery: <https://vouchspec.plyrium.com/api/vouchspec/v1/discovery>
 - OpenAPI 3.1 contract: <https://vouchspec.plyrium.com/openapi.json>
 - LLM-readable contract index: <https://vouchspec.plyrium.com/llms.txt>
+- Installable Agent Skill index: <https://vouchspec.plyrium.com/.well-known/skills/index.json>
+- Verify-before-install Agent Skill:
+  <https://vouchspec.plyrium.com/.well-known/skills/vouchspec-verify-before-install/SKILL.md>
 - Agentic Resource Discovery catalog (draft/proposal):
   <https://vouchspec.plyrium.com/.well-known/ai-catalog.json>
 - A2A Agent Card: <https://vouchspec.plyrium.com/.well-known/agent-card.json>
@@ -228,6 +231,18 @@ at `https://vouchspec.plyrium.com/api/vouchspec/v1/mcp`. It exposes only
 `get_vouchspec_discovery`: an anonymous, read-only tool that returns public route, price, x402,
 receipt, cache, and invalidation instructions. It cannot submit artifacts, fetch repositories,
 settle payments, or read private data. Paid validation remains on the managed x402 REST route.
+
+Agents that support the open Agent Skills format can add the repository's exact
+verify-before-install workflow directly:
+
+```powershell
+npx skills add mordiaky/vouchspec --skill vouchspec-verify-before-install
+```
+
+The skill is also published through the well-known machine endpoint above. It discovers the live
+contract before acting, checks existing signed evidence first, and purchases a fresh 0.25 USDC
+validation only when the calling agent already has an x402 wallet and explicit spending authority.
+If either is absent it returns `payment_required`; there is no human checkout or human handoff.
 
 The checked-in `server.json` describes this remote endpoint for the official MCP Registry under
 the active name `io.github.mordiaky/vouchspec`. Publication uses GitHub OIDC from a main-only
